@@ -1,0 +1,186 @@
+.preloader {
+	position: relative;
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+	width: 100%;
+	&__section {
+		position: fixed;
+		display: flex;
+		justify-content: flex-start;
+		align-items: flex-start;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		height: 100vh;
+		z-index: 99999;
+		&.no-active {
+			.preloader__animation {
+				transition: all 0.3s;
+				opacity: 0;
+				visibility: hidden;
+			}
+			.preloader__picture  {
+				transition: all 0.3s;
+				opacity: 0;
+				visibility: hidden;
+			}
+
+		}
+		.container {
+			height: 100%;
+			max-width: 100%;
+			@include max(md) {
+				max-width: 100%;
+			}
+		}
+		.layout--five {
+			position: relative;
+			display: flex;
+			width: 100%;
+			flex-flow: row nowrap;
+			height: 100%;
+			align-items: stretch;
+			&__col {
+				align-items: center;
+				flex: 1 0 20%;
+				max-width: 20%;
+				padding: 0;
+				margin: 0	;
+				background: $blueLight;
+				&:nth-child(1) {
+					animation: heightCol 1s ease 2.5s 1 normal forwards;
+					
+				}
+				&:nth-child(2) {
+					animation: heightCol 1s ease 2.4s 1 normal forwards;
+
+				}
+				&:nth-child(3) {
+					animation: heightCol 1s ease 2.3s 1 normal forwards;
+
+				}
+				&:nth-child(4) {
+					animation: heightCol 1s ease 2.2s 1 normal forwards;
+				}
+				&:nth-child(5) {
+					animation: heightCol 1s ease 2.1s 1 normal forwards;
+				}
+
+				// @include max(md) {
+				// 	display: none;
+				// }
+			}
+
+		}
+	}
+	&__animation {
+		position: absolute;
+		display: flex;
+		align-items: flex-start;
+		justify-content: flex-start;
+		top: vw(800);
+		left: 0;
+		width: 100vw;
+		height: vw(50);
+		z-index: 99999;
+		overflow: hidden;
+		transition: all 0.3s;
+			img {
+				position: relative;
+				display: block;
+				left: 0;
+				top: 0;
+				width: 100vw;
+				height: vw(50);
+				object-fit: contain;
+				object-position: left center;
+			}
+		&__2 {
+			width: 100vw;
+			animation: myAnim 2.5s ease 0s 1 normal forwards;
+		}
+		// &::before {
+		// 	position: absolute;
+		// 	content: '';
+		// 	display: block;
+		// 	top: 0;
+		// 	left: 0;
+		// 	width: 100vw;
+		// 	height: vw(15);
+		// 	animation: myAnim 1.5s ease 0s 1 normal forwards;
+		// }
+	}
+	&__picture  {
+		position: relative;
+		display: flex;
+		justify-content: flex-start;
+		align-items: flex-start;
+		width: vw(171);
+		transition: all 0.3s;
+		&__wrap {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		&::before {
+				position: relative;
+				content: "";
+				width: 100%;
+				padding-top: 89.47%;
+		}
+		picture, img {
+				position: absolute;
+				display: block;
+				width: 100%;
+				object-fit: contain;
+				object-position: center center;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				width: 100%;
+		}
+}
+
+}
+
+@keyframes myAnim {
+	0% {
+		width: 0;
+	}
+
+	100% {
+		width: 100vw;
+	}
+}
+@keyframes heightCol {
+	0% {
+		height: 100vh;
+	}
+
+	100% {
+		height: 0vh;
+	}
+}
+.puff-out-center {
+	animation: puff-out-center 1s cubic-bezier(0.165, 0.840, 0.440, 1.000) both;
+}
+@keyframes puff-out-center {
+  0% {
+    transform: scale(1);
+    filter: blur(0px);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(2);
+    filter: blur(4px);
+    opacity: 0;
+  }
+}

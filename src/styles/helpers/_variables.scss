@@ -1,0 +1,24 @@
+/* media */
+$media-list: (
+		'xxs': 375,
+		'xs': 560, 
+		'sm': 699 ,
+		'md': 992,  
+		'lg': 1024,
+		'xl': 1599,
+		'xxl': 1920
+);
+
+/* шрифты */
+$mainFont: 'Commissioner', sans-serif;
+
+/* цвета */
+$blue: #2879B1;
+$blueLight: #44C8F5;
+$white: #fff;
+$red: #E46E6C;
+$orange: #BF774E;
+$grey: rgba(7, 23, 29, 0.2);
+$black: #151312;
+$fontBlack: #151312;
+$greyBlack: #242E40;;

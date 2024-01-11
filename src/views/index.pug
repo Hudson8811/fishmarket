@@ -1,0 +1,370 @@
+extends layouts/default
+include helpers/mixins
+
+block variables
+	- const title = "SkyFish home page"
+
+block content
+	.scroll-page
+		.animation__section.section
+			.start__section.section 
+				.swiper-container.start__slider.js-start__slider
+					.swiper-wrapper
+						.start__slide.swiper-slide
+							.start__slide__desc
+								.start__slide__title.title__82
+									!="Черная пятница на море"
+								.start__slide__text.title__32
+									!="Вышли в море и наловили для всех несколько кораблей крабов"
+							a(href="#").btn--box.start__slide__btn
+								.btn.btn--circle
+									<svg xmlns="http://www.w3.org/2000/svg" width="11" height="8" viewBox="0 0 11 8" fill="none">
+									<path d="M10.0999 4.21591L1.22221 4.11643M6.42527 1.06079L10.0999 4.21591L6.42527 1.06079ZM10.0999 4.21591L6.86969 7.29365L10.0999 4.21591Z" stroke="#07171D" stroke-width="1.33502" stroke-linecap="round" stroke-linejoin="round"/>
+									</svg>
+								.btn--box__text Подробнее
+							.start__slide__picture 
+								picture 
+									source(media="(max-width: 992px )", srcset="../img/start__slide--1.png")
+									img(src="../img/start__slide--1.png", alt="", srcset="../img/start__slide--1.png 2x")
+						.start__slide.swiper-slide
+							.start__slide__desc
+								.start__slide__title.title__82
+									!="Черная пятница на море"
+								.start__slide__text.title__32
+									!="Вышли в море и наловили для всех несколько кораблей крабов"
+							a(href="#").btn--box.start__slide__btn
+								.btn.btn--circle
+									<svg xmlns="http://www.w3.org/2000/svg" width="11" height="8" viewBox="0 0 11 8" fill="none">
+									<path d="M10.0999 4.21591L1.22221 4.11643M6.42527 1.06079L10.0999 4.21591L6.42527 1.06079ZM10.0999 4.21591L6.86969 7.29365L10.0999 4.21591Z" stroke="#07171D" stroke-width="1.33502" stroke-linecap="round" stroke-linejoin="round"/>
+									</svg>
+								.btn--box__text Подробнее
+							.start__slide__picture 
+								picture 
+									source(media="(max-width: 992px )", srcset="../img/start__slide--2.png")
+									img(src="../img/start__slide--2.png", alt="", srcset="../img/start__slide--2.png 2x")
+						.start__slide.swiper-slide
+							.start__slide__desc
+								.start__slide__title.title__82
+									!="Черная пятница на море"
+								.start__slide__text.title__32
+									!="Вышли в море и наловили для всех несколько кораблей крабов"
+							a(href="#").btn--box.start__slide__btn
+								.btn.btn--circle
+									<svg xmlns="http://www.w3.org/2000/svg" width="11" height="8" viewBox="0 0 11 8" fill="none">
+									<path d="M10.0999 4.21591L1.22221 4.11643M6.42527 1.06079L10.0999 4.21591L6.42527 1.06079ZM10.0999 4.21591L6.86969 7.29365L10.0999 4.21591Z" stroke="#07171D" stroke-width="1.33502" stroke-linecap="round" stroke-linejoin="round"/>
+									</svg>
+								.btn--box__text Подробнее
+							.start__slide__picture 
+								picture 
+									source(media="(max-width: 992px )", srcset="../img/start__slide--1.png")
+									img(src="../img/start__slide--1.png", alt="", srcset="../img/start__slide--1.png 2x")
+						.start__slide.swiper-slide
+							.start__slide__desc
+								.start__slide__title.title__82
+									!="Черная пятница на море"
+								.start__slide__text.title__32
+									!="Вышли в море и наловили для всех несколько кораблей крабов"
+							a(href="#").btn--box.start__slide__btn
+								.btn.btn--circle
+									<svg xmlns="http://www.w3.org/2000/svg" width="11" height="8" viewBox="0 0 11 8" fill="none">
+									<path d="M10.0999 4.21591L1.22221 4.11643M6.42527 1.06079L10.0999 4.21591L6.42527 1.06079ZM10.0999 4.21591L6.86969 7.29365L10.0999 4.21591Z" stroke="#07171D" stroke-width="1.33502" stroke-linecap="round" stroke-linejoin="round"/>
+									</svg>
+								.btn--box__text Подробнее
+							.start__slide__picture 
+								picture 
+									source(media="(max-width: 992px )", srcset="../img/start__slide--2.png")
+									img(src="../img/start__slide--2.png", alt="", srcset="../img/start__slide--2.png 2x")
+
+					
+					.swiper-buttons.start__swiper-buttons
+						.swiper-button-prev
+							<svg xmlns="http://www.w3.org/2000/svg" width="11" height="8" viewBox="0 0 11 8" fill="none">
+							<path d="M0.900076 4.21591L9.77779 4.11643M4.57473 1.06079L0.900076 4.21591L4.57473 1.06079ZM0.900076 4.21591L4.13031 7.29365L0.900076 4.21591Z" stroke="#07171D" stroke-width="1.33502" stroke-linecap="round" stroke-linejoin="round"/>
+							</svg>
+						.swiper-button-next
+							<svg xmlns="http://www.w3.org/2000/svg" width="11" height="8" viewBox="0 0 11 8" fill="none">
+							<path d="M10.0999 4.21591L1.22221 4.11643M6.42527 1.06079L10.0999 4.21591L6.42527 1.06079ZM10.0999 4.21591L6.86969 7.29365L10.0999 4.21591Z" stroke="#07171D" stroke-width="1.33502" stroke-linecap="round" stroke-linejoin="round"/>
+							</svg>
+
+		.section.assortment__section
+			.container
+				.layout--trio
+					.layout--trio__col.js-assortment__col--1
+						.assortment__title.title__82
+							!='Наш ассортимент'
+						a(href="#").btn--box.assortment__btn
+							.btn.btn--circle
+								<svg xmlns="http://www.w3.org/2000/svg" width="11" height="8" viewBox="0 0 11 8" fill="none">
+								<path d="M10.0999 4.21591L1.22221 4.11643M6.42527 1.06079L10.0999 4.21591L6.42527 1.06079ZM10.0999 4.21591L6.86969 7.29365L10.0999 4.21591Z" stroke="#07171D" stroke-width="1.33502" stroke-linecap="round" stroke-linejoin="round"/>
+								</svg>
+							.btn--box__text Подробнее
+					.layout--trio__col.js-assortment__col--2
+						a(href="#").card.card--full-picture
+							.card__title.title__32
+								!='Рыба охлажденная <br> <span class="text__12">10 товаров</span>'
+							.card__picture 
+								img(src="img/card__picture__1.png", alt="")
+							.card__bottom
+								//- .card__bottom__text.text__16
+								//- 	!="Для организации автономных мест курения внутри зданий без необходимости выделять отдельное помещение"
+								.btn.btn--circle.btn--circle__black
+									<svg xmlns="http://www.w3.org/2000/svg" width="11" height="8" viewBox="0 0 11 8" fill="none">
+									<path d="M10.0999 4.21591L1.22221 4.11643M6.42527 1.06079L10.0999 4.21591L6.42527 1.06079ZM10.0999 4.21591L6.86969 7.29365L10.0999 4.21591Z" stroke="#07171D" stroke-width="1.33502" stroke-linecap="round" stroke-linejoin="round"/>
+									</svg>							
+						a(href="#").card.card--full-picture
+							.card__title.title__32
+								!='Филе охлажденное <br> <span class="text__12">10 товаров</span>'
+							.card__picture 
+								img(src="img/card__picture__1.png", alt="")
+							.card__bottom
+								//- .card__bottom__text.text__16
+								//- 	!="Для организации автономных мест курения внутри зданий без необходимости выделять отдельное помещение"
+								.btn.btn--circle.btn--circle__black
+									<svg xmlns="http://www.w3.org/2000/svg" width="11" height="8" viewBox="0 0 11 8" fill="none">
+									<path d="M10.0999 4.21591L1.22221 4.11643M6.42527 1.06079L10.0999 4.21591L6.42527 1.06079ZM10.0999 4.21591L6.86969 7.29365L10.0999 4.21591Z" stroke="#07171D" stroke-width="1.33502" stroke-linecap="round" stroke-linejoin="round"/>
+									</svg>							
+						a(href="#").card.card--full-picture
+							.card__title.title__32
+								!='морепродукты <br> <span class="text__12">10 товаров</span>'
+							.card__picture 
+								img(src="img/card__picture__1.png", alt="")
+							.card__bottom
+								//- .card__bottom__text.text__16
+								//- 	!="Для организации автономных мест курения внутри зданий без необходимости выделять отдельное помещение"
+								.btn.btn--circle.btn--circle__black
+									<svg xmlns="http://www.w3.org/2000/svg" width="11" height="8" viewBox="0 0 11 8" fill="none">
+									<path d="M10.0999 4.21591L1.22221 4.11643M6.42527 1.06079L10.0999 4.21591L6.42527 1.06079ZM10.0999 4.21591L6.86969 7.29365L10.0999 4.21591Z" stroke="#07171D" stroke-width="1.33502" stroke-linecap="round" stroke-linejoin="round"/>
+									</svg>							
+					
+					.layout--trio__col.js-assortment__col--3
+						a(href="#").card.card--full-picture
+							.card__title.title__32
+								!='Рыба свежемороженая <br> <span class="text__12">10 товаров</span>'
+							.card__picture 
+								img(src="img/card__picture__1.png", alt="")
+							.card__bottom
+								//- .card__bottom__text.text__16
+								//- 	!="Для организации автономных мест курения внутри зданий без необходимости выделять отдельное помещение"
+								.btn.btn--circle.btn--circle__black
+									<svg xmlns="http://www.w3.org/2000/svg" width="11" height="8" viewBox="0 0 11 8" fill="none">
+									<path d="M10.0999 4.21591L1.22221 4.11643M6.42527 1.06079L10.0999 4.21591L6.42527 1.06079ZM10.0999 4.21591L6.86969 7.29365L10.0999 4.21591Z" stroke="#07171D" stroke-width="1.33502" stroke-linecap="round" stroke-linejoin="round"/>
+									</svg>							
+						a(href="#").card.card--full-picture
+							.card__title.title__32
+								!='Филе свежемороженое <br> <span class="text__12">10 товаров</span>'
+							.card__picture 
+								img(src="img/card__picture__1.png", alt="")
+							.card__bottom
+								//- .card__bottom__text.text__16
+								//- 	!="Для организации автономных мест курения внутри зданий без необходимости выделять отдельное помещение"
+								.btn.btn--circle.btn--circle__black
+									<svg xmlns="http://www.w3.org/2000/svg" width="11" height="8" viewBox="0 0 11 8" fill="none">
+									<path d="M10.0999 4.21591L1.22221 4.11643M6.42527 1.06079L10.0999 4.21591L6.42527 1.06079ZM10.0999 4.21591L6.86969 7.29365L10.0999 4.21591Z" stroke="#07171D" stroke-width="1.33502" stroke-linecap="round" stroke-linejoin="round"/>
+									</svg>							
+						a(href="#").card.card--full-picture
+							.card__title.title__32
+								!='субпродукты <br> <span class="text__12">10 товаров</span>'
+							.card__picture 
+								img(src="img/card__picture__1.png", alt="")
+							.card__bottom
+								//- .card__bottom__text.text__16
+								//- 	!="Для организации автономных мест курения внутри зданий без необходимости выделять отдельное помещение"
+								.btn.btn--circle.btn--circle__black
+									<svg xmlns="http://www.w3.org/2000/svg" width="11" height="8" viewBox="0 0 11 8" fill="none">
+									<path d="M10.0999 4.21591L1.22221 4.11643M6.42527 1.06079L10.0999 4.21591L6.42527 1.06079ZM10.0999 4.21591L6.86969 7.29365L10.0999 4.21591Z" stroke="#07171D" stroke-width="1.33502" stroke-linecap="round" stroke-linejoin="round"/>
+									</svg>					
+		.section.hear__section
+			.hear__title.title__170 Решаем задачи, слышим людей
+			.hear__video
+				video(autoplay muted loop)
+					<source src="../video/hear__video.mp4" type="video/mp4">
+			a(href="#").btn--box.hear__btn
+				.btn.btn--circle
+					<svg xmlns="http://www.w3.org/2000/svg" width="11" height="8" viewBox="0 0 11 8" fill="none">
+					<path d="M10.0999 4.21591L1.22221 4.11643M6.42527 1.06079L10.0999 4.21591L6.42527 1.06079ZM10.0999 4.21591L6.86969 7.29365L10.0999 4.21591Z" stroke="#07171D" stroke-width="1.33502" stroke-linecap="round" stroke-linejoin="round"/>
+					</svg>
+				.btn--box__text Подробнее
+		.section.news__section
+			.news__bg 
+				img(src="../img/news__bg.png", alt="")
+			.advantages
+				.layout--trio
+					.layout--trio__col.js-advantage__col--1
+						.advantage
+							.advantage__num 1
+							.advantage__desc
+								.advantage__title.title__32 Кто мы?
+								.advantage__text.text__18 
+									!="Группа компаний, поставляющая рыбу и морепродукты на российский рынок из 11 стран, осуществляющая производственный комплекс по переработке и фасовке рыбы, активно реализующая продукцию от Калининграда до любого города Российской Федерации."
+					
+					.layout--trio__col.js-advantage__col--2
+						.advantage
+							.advantage__num 2
+							.advantage__desc
+								.advantage__title.title__32 С кем работаем?
+								.advantage__text.text__18 
+									!="С реализаторами, переработчиками, рестораторами из крупных агломераций страны и физическими лицами (условия продажи, пожалуйста, уточняйте)"
+					
+					.layout--trio__col.js-advantage__col--3
+						.advantage
+							.advantage__num 3
+							.advantage__desc
+								.advantage__title.title__32 В чем наше преимущество?
+								.advantage__text.text__18 
+									!="В сервисном отношении к своим клиентам. Мы понимаем и слышим своих партнеров."							
+			.container
+				.layout--trio__news
+					.layout--trio
+						.layout--trio__col.js-news__col--1
+							.news__title.title__82
+								!='Наши <br>новости'
+							a(href="#").btn--box.news__btn
+								.btn.btn--circle
+									<svg xmlns="http://www.w3.org/2000/svg" width="11" height="8" viewBox="0 0 11 8" fill="none">
+									<path d="M10.0999 4.21591L1.22221 4.11643M6.42527 1.06079L10.0999 4.21591L6.42527 1.06079ZM10.0999 4.21591L6.86969 7.29365L10.0999 4.21591Z" stroke="#07171D" stroke-width="1.33502" stroke-linecap="round" stroke-linejoin="round"/>
+									</svg>
+								.btn--box__text читать еще
+						.layout--trio__col.js-news__col--2
+							a(href="#").card.card--news
+								.card__picture 
+									img(src="img/card-news__picture__1.png", alt="")
+								.card__title.title__32
+									!='ТУНЕЦ ВЬЕТНАМ'
+								.card__text.text__18
+									!='В сервисном отношении к своим клиентам. Мы понимаем и слышим своих партнеров.'
+								.card__bottom
+									.card__date.text__12 
+										!="1 ноября 2023"
+									.btn.btn--circle.btn--circle__black
+										<svg xmlns="http://www.w3.org/2000/svg" width="11" height="8" viewBox="0 0 11 8" fill="none">
+										<path d="M10.0999 4.21591L1.22221 4.11643M6.42527 1.06079L10.0999 4.21591L6.42527 1.06079ZM10.0999 4.21591L6.86969 7.29365L10.0999 4.21591Z" stroke="#07171D" stroke-width="1.33502" stroke-linecap="round" stroke-linejoin="round"/>
+										</svg>							
+							a(href="#").card.card--news
+								.card__picture 
+									img(src="img/card-news__picture__2.png", alt="")
+								.card__title.title__32
+									!='ТУНЕЦ ВЬЕТНАМ'
+								.card__text.text__18
+									!='В сервисном отношении к своим клиентам. Мы понимаем и слышим своих партнеров.'
+								.card__bottom
+									.card__date.text__12 
+										!="1 ноября 2023"
+									.btn.btn--circle.btn--circle__black
+										<svg xmlns="http://www.w3.org/2000/svg" width="11" height="8" viewBox="0 0 11 8" fill="none">
+										<path d="M10.0999 4.21591L1.22221 4.11643M6.42527 1.06079L10.0999 4.21591L6.42527 1.06079ZM10.0999 4.21591L6.86969 7.29365L10.0999 4.21591Z" stroke="#07171D" stroke-width="1.33502" stroke-linecap="round" stroke-linejoin="round"/>
+										</svg>							
+							a(href="#").card.card--news
+								.card__picture 
+									img(src="img/card-news__picture__3.png", alt="")
+								.card__title.title__32
+									!='ТУНЕЦ ВЬЕТНАМ'
+								.card__text.text__18
+									!='В сервисном отношении к своим клиентам. Мы понимаем и слышим своих партнеров.'
+								.card__bottom
+									.card__date.text__12 
+										!="1 ноября 2023"
+									.btn.btn--circle.btn--circle__black
+										<svg xmlns="http://www.w3.org/2000/svg" width="11" height="8" viewBox="0 0 11 8" fill="none">
+										<path d="M10.0999 4.21591L1.22221 4.11643M6.42527 1.06079L10.0999 4.21591L6.42527 1.06079ZM10.0999 4.21591L6.86969 7.29365L10.0999 4.21591Z" stroke="#07171D" stroke-width="1.33502" stroke-linecap="round" stroke-linejoin="round"/>
+										</svg>		
+						.layout--trio__col.js-news__col--3
+							a(href="#").card.card--news
+								.card__picture 
+									img(src="img/card-news__picture__1.png", alt="")
+								.card__title.title__32
+									!='ТУНЕЦ ВЬЕТНАМ'
+								.card__text.text__18
+									!='В сервисном отношении к своим клиентам. Мы понимаем и слышим своих партнеров.'
+								.card__bottom
+									.card__date.text__12 
+										!="1 ноября 2023"
+									.btn.btn--circle.btn--circle__black
+										<svg xmlns="http://www.w3.org/2000/svg" width="11" height="8" viewBox="0 0 11 8" fill="none">
+										<path d="M10.0999 4.21591L1.22221 4.11643M6.42527 1.06079L10.0999 4.21591L6.42527 1.06079ZM10.0999 4.21591L6.86969 7.29365L10.0999 4.21591Z" stroke="#07171D" stroke-width="1.33502" stroke-linecap="round" stroke-linejoin="round"/>
+										</svg>							
+							a(href="#").card.card--news
+								.card__picture 
+									img(src="img/card-news__picture__2.png", alt="")
+								.card__title.title__32
+									!='ТУНЕЦ ВЬЕТНАМ'
+								.card__text.text__18
+									!='В сервисном отношении к своим клиентам. Мы понимаем и слышим своих партнеров.'
+								.card__bottom
+									.card__date.text__12 
+										!="1 ноября 2023"
+									.btn.btn--circle.btn--circle__black
+										<svg xmlns="http://www.w3.org/2000/svg" width="11" height="8" viewBox="0 0 11 8" fill="none">
+										<path d="M10.0999 4.21591L1.22221 4.11643M6.42527 1.06079L10.0999 4.21591L6.42527 1.06079ZM10.0999 4.21591L6.86969 7.29365L10.0999 4.21591Z" stroke="#07171D" stroke-width="1.33502" stroke-linecap="round" stroke-linejoin="round"/>
+										</svg>							
+							a(href="#").card.card--news
+								.card__picture 
+									img(src="img/card-news__picture__3.png", alt="")
+								.card__title.title__32
+									!='ТУНЕЦ ВЬЕТНАМ'
+								.card__text.text__18
+									!='В сервисном отношении к своим клиентам. Мы понимаем и слышим своих партнеров.'
+								.card__bottom
+									.card__date.text__12 
+										!="1 ноября 2023"
+									.btn.btn--circle.btn--circle__black
+										<svg xmlns="http://www.w3.org/2000/svg" width="11" height="8" viewBox="0 0 11 8" fill="none">
+										<path d="M10.0999 4.21591L1.22221 4.11643M6.42527 1.06079L10.0999 4.21591L6.42527 1.06079ZM10.0999 4.21591L6.86969 7.29365L10.0999 4.21591Z" stroke="#07171D" stroke-width="1.33502" stroke-linecap="round" stroke-linejoin="round"/>
+										</svg> 		
+		
+		
+		.footer.footer__animation
+			.footer__title.title__170 
+				!="Понимаем море,слышим людей"
+			a(href="#").btn--box.footer__btn
+				.btn.btn--circle
+					<svg xmlns="http://www.w3.org/2000/svg" width="11" height="8" viewBox="0 0 11 8" fill="none">
+					<path d="M10.0999 4.21591L1.22221 4.11643M6.42527 1.06079L10.0999 4.21591L6.42527 1.06079ZM10.0999 4.21591L6.86969 7.29365L10.0999 4.21591Z" stroke="#07171D" stroke-width="1.33502" stroke-linecap="round" stroke-linejoin="round"/>
+					</svg>
+				.btn--box__text Подробнее
+			.footer__bg
+				img(src="../img/footer__bg.png", alt="")
+			.footer__agreement
+				.footer__agreement__date.text__12 © 2023 — 2024
+				a(href="#").footer__agreement__text.text__12 
+					!="Пользовательское <br>соглашение"
+			.footer__logo 
+				img(src="../img/logo__white.png", alt="")
+			.footer__menu 
+				ul.footer__menu__list
+					li.footer__menu__list__title Каталог
+					li.footer__menu__list__item
+						a(href="#") Рыба охлажденная
+					li.footer__menu__list__item
+						a(href="#") Рыба свежемороженая
+					li.footer__menu__list__item
+						a(href="#") Филе охлажденное
+					li.footer__menu__list__item
+						a(href="#") Филе свежемороженое
+					li.footer__menu__list__item
+						a(href="#") Морепродукты
+					li.footer__menu__list__item
+						a(href="#") Субпродукты
+				ul.footer__menu__list
+					li.footer__menu__list__title О компании
+					li.footer__menu__list__item
+						a(href="#") Производство
+					li.footer__menu__list__item
+						a(href="#") Склад и логистика
+					li.footer__menu__list__item
+						a(href="#") мы в социуме
+					li.footer__menu__list__item
+						a(href="#") карьера в skyfish
+					li.footer__menu__list__item
+						a(href="#") наша команда
+				ul.footer__menu__list
+					li.footer__menu__list__title А и еще...
+					li.footer__menu__list__item
+						a(href="#") контакты
+					li.footer__menu__list__item
+						a(href="#") Личный кабинет
+					li.footer__menu__list__item
+						a(href="#") Документы
+					li.footer__menu__list__item
+						a(href="#") Новости
+					li.footer__menu__list__item
+						a(href="#") Вопросы и ответы (FAQ)
