@@ -28,8 +28,8 @@ include ../../../blocks/modules/preloader/preloader
 							//- 	<svg xmlns="http://www.w3.org/2000/svg" width="16" height="14" viewBox="0 0 16 14" fill="none">
 							//- 	<path d="M12 0H4C1.6 0 0 1.23529 0 4.11765V9.88235C0 12.7647 1.6 14 4 14H12C14.4 14 16 12.7647 16 9.88235V4.11765C16 1.23529 14.4 0 12 0ZM12.376 5.01529L9.872 7.07412C9.344 7.51059 8.672 7.72471 8 7.72471C7.328 7.72471 6.648 7.51059 6.128 7.07412L3.624 5.01529C3.368 4.80118 3.328 4.40588 3.528 4.14235C3.736 3.87882 4.112 3.82941 4.368 4.04353L6.872 6.10235C7.48 6.60471 8.512 6.60471 9.12 6.10235L11.624 4.04353C11.88 3.82941 12.264 3.87059 12.464 4.14235C12.672 4.40588 12.632 4.80118 12.376 5.01529Z" fill="#25CA6A"/>
 							//- 	</svg>
-							a(href="mailto:info@kk-dialog.ru") 
-								!="info@kk-dialog.ru"
+							a(href="mailto:info@skyfish.ru") 
+								!="info@skyfish.ru"
 								.header__menu__item__arrow.js-row
 									img(src="img/svg/header__menu__item__arrow.svg", alt="")
 						ul.header__menu__list
@@ -40,7 +40,7 @@ include ../../../blocks/modules/preloader/preloader
 					.header__other__item.header__other__fone.header__other__fone--desc
 						.header__other__top
 							a(href="tel:+74922521233")
-								!="+74922521233"
+								!="+7 (4922) 52-12-33"
 								.header__menu__item__arrow.js-row
 									img(src="img/svg/header__menu__item__arrow.svg", alt="")
 						ul.header__menu__list
@@ -84,14 +84,25 @@ include ../../../blocks/modules/preloader/preloader
 								.search__inter 
 									input(type="text", placeholder="поиск")
 									.search__select 
-										.contacts__form__input-block.no-border
-											select.contacts__form__select.js-search__select(name="" preloader="каталог")
-												option 
-												option по всему сайту
-												.localities-centers__select-arrow
-													<svg xmlns="http://www.w3.org/2000/svg" width="20" height="12" viewBox="0 0 20 12" fill="none">
-													<path d="M2 2L10.1667 10.1667L18.3333 2" stroke="#2A2A2A" stroke-width="2" stroke-linecap="square"/>
-													</svg>
+										.header__other__item.header__other__fone.header__other__fone--desc
+											.header__other__top
+												a(href="#")
+													!="по каталогу"
+													.header__menu__item__arrow.js-row
+														img(src="img/svg/header__menu__item__arrow.svg", alt="")
+											ul.header__menu__list
+												li.header__menu__list__item
+													a(href="#") по каталогу
+												li.header__menu__list__item 
+													a(href="#") по сайту
+										//- .contacts__form__input-block.no-border
+										//- 	select.contacts__form__select.js-search__select(name="" preloader="каталог")
+										//- 		option 
+										//- 		option по всему сайту
+										//- 		.localities-centers__select-arrow
+										//- 			<svg xmlns="http://www.w3.org/2000/svg" width="20" height="12" viewBox="0 0 20 12" fill="none">
+										//- 			<path d="M2 2L10.1667 10.1667L18.3333 2" stroke="#2A2A2A" stroke-width="2" stroke-linecap="square"/>
+										//- 			</svg>
 								.search__btn.js-search__btn-find
 									.search__btn__text Найти
 									.search__btn__row

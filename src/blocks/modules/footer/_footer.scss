@@ -45,6 +45,7 @@
 		padding: vw(47) vw(37);
 		padding-bottom: vw(25);
 		background: #fff;
+		z-index: 900;
 		&__list {
 			position: relative;
 			display: flex;
@@ -78,7 +79,7 @@
 					cursor: pointer;
 					&:hover {
 						transition: all 0.3s;
-						color:rgba(7, 23, 29, 0.2);
+						color:$blueHover;
 					}
 										
 				}

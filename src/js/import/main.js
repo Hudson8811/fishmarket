@@ -1,15 +1,5 @@
-jQuery(function () { 
-
-  // new Skroll()
-  // .add(".start__title", {
-  //     animation: "fadeInUp",
-  //     delay: 850,
-  //     duration: 750
-  // })
-  // .init();
+document.addEventListener("DOMContentLoaded", () => {
 	
-
-
 var startSlider
 $('.js-start__slider').each(function(){
   var slider=$(this)
@@ -52,10 +42,10 @@ $(".js-mob-menu__city__select").select2({
   placeholder: "Выбрать город",
   allowClear: true
 });
-$(".js-search__select").select2({
-  placeholder: "каталог",
-  allowClear: true
-});
+// $(".js-search__select").select2({
+//   placeholder: "по каталогу",
+//   allowClear: true
+// });
 $('.contacts__form__input').on('input', function (e) {
 	var state = e.target.value;
 	if (state.length > 0) {
@@ -367,13 +357,6 @@ function initScrollAnimationMobile(){
 
 $('.js-mask-phone').mask('+7(000)000-00-00');
 
-
-
-
-});
-
-
-
 function bodyNoScroll() {
 	let bodyBodymotionless = document.querySelector('body')
 	bodyBodymotionless.classList.add("Bodymotionless")
@@ -383,3 +366,8 @@ function bodyYesScroll() {
 	let bodyBodymotionless = document.querySelector('body')
 	bodyBodymotionless.classList.remove("Bodymotionless")	
 }
+
+
+
+});
+

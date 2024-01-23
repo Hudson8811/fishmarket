@@ -1138,6 +1138,7 @@ a, button {
     &--full-picture {
         padding: 0;
         .card {
+
             &__title {
                 position: absolute;
                 top: vw(33);
@@ -1170,6 +1171,7 @@ a, button {
                 padding-left: vw(33);
                 padding-right: vw(33);
             }
+
         }
         &:hover {
             .card__picture {
@@ -1254,7 +1256,12 @@ a, button {
     //     min-width: vw(576);
     // }
 }
-
+.card--full-picture.active {
+    .card__picture {
+        opacity: 1;
+        transition: all 0.5s;
+    }
+}
 .form {
     position: relative;
     width: 100%;

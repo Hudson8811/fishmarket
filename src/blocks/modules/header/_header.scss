@@ -192,19 +192,20 @@
 		}
 		&__list {
 			position: absolute;
-			top: calc(100% - vw(20));
+			top: calc(100% - 1px);
 			left: 0px;
 			display: flex;
 			visibility: hidden;
 			justify-content: flex-start;
 			align-items: flex-start;
-			padding: vw(10) vw(15);
-			background:  #fff;
-			border-radius: vw(8);
-			width: 	auto;
+			padding: vw(27);
+			width: auto;
+			min-width: 100%;
 			flex-flow: column nowrap;
 			opacity: 0;
 			transition: all .3s;
+			border-top: 3px solid $blueHover;
+			background: #fff;
 			&.active {
 				display: flex;
 				opacity: 1;
@@ -218,15 +219,12 @@
 				align-items: flex-start;
 				color: #212A39;
 				text-align: center;
-				font-size: vw(13);
+				color: #07171D;
+				font-size: vw(18);
 				font-style: normal;
-				font-weight: 500;
-				line-height: normal;
-				letter-spacing: vw(0.325);
-				text-transform: uppercase;
-				padding-bottom: vw(9);
-				margin-bottom: vw(9);
-				border-bottom: 1px solid  rgba(0, 0, 0, 0.2);
+				font-weight: 400;
+				line-height: 140.625%;
+				margin-bottom: vw(17);
 				text-transform: none;
 				width: 100%;
 				&:last-child {
@@ -241,17 +239,16 @@
 					align-items: flex-start;
 					color: #212A39;
 					text-align: center;
-					font-size: vw(13);
+					color: #07171D;
+					font-size: vw(18);
 					font-style: normal;
-					font-weight: 500;
-					line-height: normal;
-					letter-spacing: vw(0.325);
-					text-transform: uppercase;
+					font-weight: 400;
+					line-height: 140.625%;
 					text-decoration: none;
-					transition: all .3s;
+					transition: all 0.3s;
 					&:hover {
-						transition: all .3s;
-						color: $blue;
+						transition: all 0.3s;
+						color: $blueHover;
 
 					}
 				}
@@ -718,6 +715,14 @@
 		justify-content: flex-end;
 		align-items: center;
 		padding-right:vw(22);
+		z-index: 9999;
+		.header__other__item {
+			height: 100%;
+			.header__menu__list {
+				top: 100%;
+				z-index: 9999;
+			}
+		}
 	}
 	&__btn {
 		position: relative;
@@ -752,7 +757,7 @@
 		justify-content: flex-start;
 		align-items: flex-start;
 		background: #fff;
-		z-index: 9999;
+		z-index: 9995;
 		flex-flow: column;
 		&__item {
 			position: relative;

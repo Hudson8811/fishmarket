@@ -4256,6 +4256,11 @@ button {
   transition: all 0.3s;
 }
 
+.card--full-picture.active .card__picture {
+  opacity: 1;
+  transition: all 0.5s;
+}
+
 .form {
   position: relative;
   width: 100%;
@@ -4919,19 +4924,20 @@ button {
 
 .header__menu__list {
   position: absolute;
-  top: calc(100% - 1.0416666667vw);
+  top: calc(100% - 1px);
   left: 0px;
   display: flex;
   visibility: hidden;
   justify-content: flex-start;
   align-items: flex-start;
-  padding: 0.5208333333vw 0.78125vw;
-  background: #fff;
-  border-radius: 0.4166666667vw;
+  padding: 1.40625vw;
   width: auto;
+  min-width: 100%;
   flex-flow: column nowrap;
   opacity: 0;
   transition: all 0.3s;
+  border-top: 3px solid #2BAEDA;
+  background: #fff;
 }
 
 .header__menu__list.active {
@@ -4948,15 +4954,12 @@ button {
   align-items: flex-start;
   color: #212A39;
   text-align: center;
-  font-size: 0.6770833333vw;
+  color: #07171D;
+  font-size: 0.9375vw;
   font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-  letter-spacing: 0.0169270833vw;
-  text-transform: uppercase;
-  padding-bottom: 0.46875vw;
-  margin-bottom: 0.46875vw;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  font-weight: 400;
+  line-height: 140.625%;
+  margin-bottom: 0.8854166667vw;
   text-transform: none;
   width: 100%;
 }
@@ -4974,19 +4977,18 @@ button {
   align-items: flex-start;
   color: #212A39;
   text-align: center;
-  font-size: 0.6770833333vw;
+  color: #07171D;
+  font-size: 0.9375vw;
   font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-  letter-spacing: 0.0169270833vw;
-  text-transform: uppercase;
+  font-weight: 400;
+  line-height: 140.625%;
   text-decoration: none;
   transition: all 0.3s;
 }
 
 .header__menu__list__item a:hover {
   transition: all 0.3s;
-  color: #2879B1;
+  color: #2BAEDA;
 }
 
 .header__menu--all-menu {
@@ -5471,6 +5473,16 @@ button {
   justify-content: flex-end;
   align-items: center;
   padding-right: 1.1458333333vw;
+  z-index: 9999;
+}
+
+.search__select .header__other__item {
+  height: 100%;
+}
+
+.search__select .header__other__item .header__menu__list {
+  top: 100%;
+  z-index: 9999;
 }
 
 .search__btn {
@@ -5509,7 +5521,7 @@ button {
   justify-content: flex-start;
   align-items: flex-start;
   background: #fff;
-  z-index: 9999;
+  z-index: 9995;
   flex-flow: column;
 }
 
@@ -6329,6 +6341,7 @@ button {
   padding: 2.4479166667vw 1.9270833333vw;
   padding-bottom: 1.3020833333vw;
   background: #fff;
+  z-index: 900;
 }
 
 .footer__menu__list {
@@ -6370,7 +6383,7 @@ button {
 
 .footer__menu__list__item a:hover {
   transition: all 0.3s;
-  color: rgba(7, 23, 29, 0.2);
+  color: #2BAEDA;
 }
 
 .footer__menu__list__title {
