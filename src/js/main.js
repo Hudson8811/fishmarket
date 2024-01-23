@@ -9,6 +9,7 @@
 @@include("./libs/jquery.mask.min.js")
 @@include("./libs/jq-ui.min.js")
 @@include("./libs/jq-ui-touch-punch.min.js")
+@@include("./libs/select2.min.js")
 //my files
 @@include("./import/main.js")
 @@include("./import/components.js")

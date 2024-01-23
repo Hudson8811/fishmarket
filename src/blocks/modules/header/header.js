@@ -12,18 +12,24 @@ $( ".header__other__item" ).mouseleave(function () {
 
 
 let overlayBg = document.querySelector(".mob-menu--overlay");
-let mobMenu = document.querySelector(".mob-menu__section");
+let mobMenu = document.querySelector(".js-mob-menu__section");
+let mobMenuCity = document.querySelector(".js-mob-menu__section-city");
+let mobMenuCityClose = document.querySelector(".mob-menu__city__top__close");
+let mobMenuCityOverlay = document.querySelector(".js-mob-menu__city__top__overlay");
+let mobMenuQuestion = document.querySelector(".js-mob-menu__section-question");
+let mobMenuQuestionClose = document.querySelector(".mob-menu__question__top__close");
+let mobMenuQuestionOverlay = document.querySelector(".js-mob-menu__question--overlay");
+let buttonQuestion = document.querySelector(".js-button__question");
 let humb = document.querySelector(".hamburger");
+let searchBtn = document.querySelector(".js-search__btn");
+let search = document.querySelector(".search");
+let searchOverlay = document.querySelector(".search--overlay");
 
 var hamburger = $(".hamburger");
 hamburger.on("click", function(e) {
   hamburger.toggleClass("is-active");
 });
-var search = $(".header__other__search");
-search.click( function(e) {
-  $(this).children(".header__other__search__input").addClass("active"); 
 
-});
 $(document).mouseup(function (e){ 
   var search = $(".header__other__search");
   if (!search.is(e.target) 
@@ -31,10 +37,38 @@ $(document).mouseup(function (e){
         search.children(".header__other__search__input").removeClass("active"); 
   }
 });
-
+searchBtn.addEventListener("click", function () {
+  search.classList.add("active");
+  bodyNoScroll()
+});
+searchOverlay.addEventListener("click", function () {
+  console.log(search)
+  search.classList.remove("active");
+  bodyYesScroll()
+});
 overlayBg.addEventListener("click", function () {
   mobMenu.classList.remove("active");
   humb.classList.remove("is-active");
+  bodyYesScroll()
+});
+mobMenuCityClose.addEventListener("click", function () {
+  mobMenuCity.classList.remove("active");
+  bodyYesScroll()
+});
+mobMenuCityOverlay.addEventListener("click", function () {
+  mobMenuCity.classList.remove("active");
+  bodyYesScroll()
+});
+buttonQuestion.addEventListener("click", function () {
+  mobMenuQuestion.classList.add("active");
+  bodyNoScroll()
+});
+mobMenuQuestionClose.addEventListener("click", function () {
+  mobMenuQuestion.classList.remove("active");
+  bodyYesScroll()
+});
+mobMenuQuestionOverlay.addEventListener("click", function () {
+  mobMenuQuestion.classList.remove("active");
   bodyYesScroll()
 });
 humb.addEventListener("click", function () {

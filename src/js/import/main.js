@@ -44,7 +44,28 @@ $('.js-start__slider').each(function(){
   });
 
 })
+$(".js-contacts__form__select").select2({
+  placeholder: "Список товаров",
+  allowClear: true
+});
+$(".js-mob-menu__city__select").select2({
+  placeholder: "Выбрать город",
+  allowClear: true
+});
+$(".js-search__select").select2({
+  placeholder: "каталог",
+  allowClear: true
+});
+$('.contacts__form__input').on('input', function (e) {
+	var state = e.target.value;
+	if (state.length > 0) {
+		$(this).addClass( "value" );
+	} else {
+		$(this).removeClass( "value" );
+	}
+});
 
+$('.js-mask-phone').mask('+7(000)000-00-00');
 
 
 
@@ -198,6 +219,13 @@ function initScrollAnimationDesktop(){
 		onComplete: function () {
 				$('.fullPageOverlay').removeClass('active');
 				$('body').addClass('active');
+		}
+	});
+  gsap.to(".js-mob-menu__section-city", {
+		duration: 0.5,
+    delay: 5,
+		onComplete: function () {
+			$('.js-mob-menu__section-city').addClass('active');
 		}
 	});
 
