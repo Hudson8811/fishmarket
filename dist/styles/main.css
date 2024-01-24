@@ -3246,13 +3246,6 @@ button {
   text-decoration: none;
 }
 
-.site-main {
-  flex: 1 0 auto;
-  overflow: hidden;
-  background: #07171D;
-  width: 100%;
-}
-
 .site-footer {
   flex: 0 0 auto;
 }

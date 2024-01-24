@@ -32,14 +32,14 @@ a, button {
     cursor: pointer;
     text-decoration: none;
 }
-.site-main {
-	flex: 1 0 auto;
-    overflow: hidden;
-    background: #07171D;
-    width: 100%;
-    @include max(mdHeader) {
-    }
-}
+// .site-main {
+// 	flex: 1 0 auto;
+//     overflow: hidden;
+//     background: #07171D;
+//     width: 100%;
+//     @include max(mdHeader) {
+//     }
+// }
 .site-footer{
 	flex: 0 0 auto;
 }

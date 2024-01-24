@@ -203,10 +203,10 @@ let s3Width, b1Width, b2Width, b3Width, b4Width;
 let b1Height, b2Height, b3Height, b4Height, b5Height, b6Height, b7Height;
 
 
-let urlParams = new URLSearchParams(window.location.search);
-let yValue = urlParams.get('y');
+// let urlParams = new URLSearchParams(window.location.search);
+// let yValue = urlParams.get('y');
 
-let animationSection = $('.animation__section')
+let animationSection = $('.scroll-page')
 function initAnimation(){
 	scHeight = $('.site-main').innerHeight();
 	b1Height =  $('.assortment__section').innerHeight();
@@ -274,7 +274,8 @@ function reInit(){
 	tl1.clear();
 	tl2.clear();
 	tl3.clear();
-	gsap.set(".section__header, .start__slide__desc, .start__astronaut, .start__slide__btn, .start__swiper-buttons, .js-assortment__col--2, .js-assortment__col--3", {clearProps:"all"});
+	gsap.set(".section__header, .start__slide__desc, .start__astronaut, .start__slide__btn, .start__swiper-buttons, .js-assortment__col--2, .js-assortment__col--3" +
+	".assortment__section,.js-assortment__col--2,.hear__section,.hear__title,.news__section,.js-advantage__col--1,.js-advantage__col--2,.js-advantage__col--3,.js-news__col--2,.footer__animation,.footer__menu,.footer__title" , {clearProps:"all"});
 }
 function initScrollAnimationDesktop(){
   gsap.to(".section__header", {
@@ -463,6 +464,11 @@ function initScrollAnimationMobile(){
 
 $('.js-mask-phone').mask('+7(000)000-00-00');
 
+
+
+
+});
+
 function bodyNoScroll() {
 	let bodyBodymotionless = document.querySelector('body')
 	bodyBodymotionless.classList.add("Bodymotionless")
@@ -472,11 +478,6 @@ function bodyYesScroll() {
 	let bodyBodymotionless = document.querySelector('body')
 	bodyBodymotionless.classList.remove("Bodymotionless")	
 }
-
-
-
-});
-
 
 // // var fabrication;
 // $('.js-fabrication').each(function(){
@@ -586,16 +587,16 @@ humb.addEventListener("click", function () {
   }
 });
 
-$(window).scroll(function() {
-	var height = $(window).scrollTop();
-	 /*Если сделали скролл на 100px задаём новый класс для header*/
-	if(height > 10){
-		$('.section__header').addClass('bg__white');
-	} else{
-	/*Если меньше 100px удаляем класс для header*/
-		$('.section__header').removeClass('bg__white');
-	}
-});
+// $(window).scroll(function() {
+// 	var height = $(window).scrollTop();
+// 	 /*Если сделали скролл на 100px задаём новый класс для header*/
+// 	if(height > 10){
+// 		$('.section__header').addClass('bg__white');
+// 	} else{
+// 	/*Если меньше 100px удаляем класс для header*/
+// 		$('.section__header').removeClass('bg__white');
+// 	}
+// });
 
 let preloaderSection = document.querySelector(".preloader__section")
 if(preloaderSection !== null ) {
