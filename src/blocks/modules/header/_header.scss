@@ -107,6 +107,7 @@
 			width: vw(97);
 			height: 100%;
 			border-right: 1px solid $grey;
+			cursor: pointer;
 			img {
 				position: relative;
 				display: block;
@@ -401,8 +402,23 @@
 					justify-content: center;
 					align-items: center;
 					margin-right: vw(18);
+					transition: all 0.3s ;
 					&:last-child {
 						margin-right: 0;
+					}
+					svg {
+						path {
+							transition: all 0.3s ;
+						}
+					}
+					&:hover {
+						transition: all 0.3s ;
+						svg {
+							path {
+								fill: $blueHover;
+								transition: all 0.3s ;
+							}
+						}
 					}
 				}
 			}
@@ -423,6 +439,21 @@
 				padding-left: 0;
 				padding-right: 0;
 				justify-content: center;
+				transition: all 0.3s ;
+				svg {
+					path {
+						transition: all 0.3s ;
+					}
+				}
+				&:hover {
+					transition: all 0.3s ;
+					svg {
+						path {
+							fill: $blueHover;
+							transition: all 0.3s ;
+						}
+					}
+				}
 			}
 			&--cart {
 				position: relative;
@@ -431,6 +462,20 @@
 				padding-left: 0;
 				padding-right: 0;
 				justify-content: center;
+				svg {
+					path {
+						transition: all 0.3s ;
+					}
+				}
+				&:hover {
+					transition: all 0.3s ;
+					svg {
+						path {
+							fill: $blueHover;
+							transition: all 0.3s ;
+						}
+					}
+				}
 				&__icon {
 					position: relative;
 					display: inline-block;
@@ -477,7 +522,22 @@
 					justify-content: center;
 					align-items: center;
 					cursor: pointer;
+					svg {
+						path {
+							transition: all 0.3s ;
+						}
+					}
+					&:hover {
+						transition: all 0.3s ;
+						svg {
+							path {
+								stroke: $blueHover;
+								transition: all 0.3s ;
+							}
+						}
+					}
 				}
+
 			}
 			&:hover {
 				color: $blue;
@@ -856,6 +916,20 @@
 	background: #fff;
 	height: calc(100vh - vw(90));
 	overflow-y: auto;
+	&::-webkit-scrollbar {
+		width: 10px;
+		background-color: #fff;
+	}
+	
+	&::-webkit-scrollbar-thumb {
+		border-radius: 0px;
+		background-color: rgba(205, 209, 210, 0.21);
+	}
+	
+	&::-webkit-scrollbar-track {
+		border-radius: 0px;
+		background-color: #fff;
+	}
 	&__section {
 		position: fixed;
 		top: vw(90);
@@ -1133,6 +1207,7 @@
 				justify-content: center;
 				align-items: center;
 				transition: all .3s;
+				cursor: pointer;
 				&:hover {
 					transition: all .3s;
 					background: $blueHover;
@@ -1232,6 +1307,7 @@
 				justify-content: center;
 				align-items: center;
 				transition: all .3s;
+				cursor: pointer;
 				&:hover {
 					transition: all .3s;
 					background: $blueHover;
@@ -1249,6 +1325,8 @@
 			padding-left: vw(30);
 			padding-right: vw(30);
 			transition: all .3s;
+			cursor: pointer;
+			cursor: pointer;
 			&:hover {
 				transition: all .3s;
 				background: $blueHover;

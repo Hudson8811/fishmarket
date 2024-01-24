@@ -132,5 +132,12 @@
 			color: rgba(255, 255, 255, 0.2);
 			margin-bottom: vw(14);
 		}
+		&__text {
+			transition: all 0.3s;
+			&:hover {
+				transition: all 0.3s;
+				color: $blueHover;
+			}
+		}
 	}
 }

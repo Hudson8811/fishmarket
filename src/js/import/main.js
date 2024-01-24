@@ -228,7 +228,7 @@ function initScrollAnimationDesktop(){
 		y: "-100%",
 		duration: 3,
 		ease: "none",
-	}, ">");
+	}, "0");
 	tl1.fromTo(".js-assortment__col--2", {
 		y: "100%",
 		top: "100%",

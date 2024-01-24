@@ -15,7 +15,7 @@ include ../../../blocks/modules/preloader/preloader
 						a(href="") 
 			
 				.header__other
-					.header__other__item.header__other__item--place
+					.header__other__item.header__other__item--place.js-header__other__item--place
 						.header__other__top
 							.header__menu__item__icon
 								<svg xmlns="http://www.w3.org/2000/svg" width="10" height="13" viewBox="0 0 10 13" fill="none">
@@ -170,9 +170,9 @@ include ../../../blocks/modules/preloader/preloader
 									img(src="img/svg/header__menu__item__arrow.svg", alt="")
 						ul.header__menu__list
 							li.header__menu__list__item
-								a(href="#")  EN
+								a(href="#")  En
 							li.header__menu__list__item 
-								a(href="#") RU	
+								a(href="#") Ru	
 
 .mob-menu__section.js-mob-menu__section
 	.mob-menu--overlay
@@ -268,15 +268,15 @@ include ../../../blocks/modules/preloader/preloader
 			.contacts__form__input-block.error
 				input(type="text", name="").contacts__form__input.text__13
 				.contacts__form__input-block__name 	Имя*
-				.contacts__form__input-block__error 
+				.contacts__form__input-block__error Не правильное имя
 			.contacts__form__input-block
 				input(type="tel", name="").contacts__form__input.js-mask-phone
 				.contacts__form__input-block__name Телефон
-				.contacts__form__input-block__error
+				.contacts__form__input-block__error Не правильный номер телефона
 			.contacts__form__input-block
 				input(type="email", name="").contacts__form__input.text__13
 				.contacts__form__input-block__name Почта
-				.contacts__form__input-block__error 					
+				.contacts__form__input-block__error Не правильная почта					
 			.contacts__form__input-block
 				select.contacts__form__select.js-contacts__form__select(name="")
 					option Товар 1
@@ -290,19 +290,19 @@ include ../../../blocks/modules/preloader/preloader
 						<path d="M2 2L10.1667 10.1667L18.3333 2" stroke="#2A2A2A" stroke-width="2" stroke-linecap="square"/>
 						</svg>
 			
-			.contacts__form__delivery
-				.contacts__form__delivery__title Способ доставки
-				.contacts__form__delivery__row
-					.contacts__form__delivery__item 
-						<div class="checkbox">
-							<input class="custom-checkbox" type="checkbox" id="delivery__item-1" name="delivery__item-1" value="indigo">
-							<label for="delivery__item-1">Самовывоз</label>
-						</div>
-					.contacts__form__delivery__item 
-						<div class="checkbox">
-							<input class="custom-checkbox" type="checkbox" id="delivery__item-2" name="delivery__item-2" value="indigo">
-							<label for="delivery__item-2">Служба доставки SkyFish</label>
-						</div>
+			//- .contacts__form__delivery
+			//- 	.contacts__form__delivery__title Способ доставки
+			//- 	.contacts__form__delivery__row
+			//- 		.contacts__form__delivery__item 
+			//- 			<div class="checkbox">
+			//- 				<input class="custom-checkbox" type="checkbox" id="delivery__item-1" name="delivery__item-1" value="indigo">
+			//- 				<label for="delivery__item-1">Самовывоз</label>
+			//- 			</div>
+			//- 		.contacts__form__delivery__item 
+			//- 			<div class="checkbox">
+			//- 				<input class="custom-checkbox" type="checkbox" id="delivery__item-2" name="delivery__item-2" value="indigo">
+			//- 				<label for="delivery__item-2">Служба доставки SkyFish</label>
+			//- 			</div>
 				
 			.contacts__form__input-block
 				input(type="email", name="").contacts__form__input.text__13
@@ -314,7 +314,7 @@ include ../../../blocks/modules/preloader/preloader
 					<label for="personal-data ">Согласие на обработку персональных данных </label>
 				</div>
 		.mob-menu__question__bottom
-			.mob-menu__question__bottom__text Откликнуться
+			.mob-menu__question__bottom__text Отправить
 			.mob-menu__question__bottom__row
 				<svg xmlns="http://www.w3.org/2000/svg" width="14" height="10" viewBox="0 0 14 10" fill="none">
 				<path d="M12.6892 5.02344L1.28544 4.89898M7.96897 1.07606L12.6892 5.02344L7.96897 1.07606ZM12.6892 5.02344L8.53984 8.87402L12.6892 5.02344Z" stroke="white" stroke-width="1.33502" stroke-linecap="round" stroke-linejoin="round"/>

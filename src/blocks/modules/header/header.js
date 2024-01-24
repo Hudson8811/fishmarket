@@ -14,6 +14,7 @@ $( ".header__other__item" ).mouseleave(function () {
 let overlayBg = document.querySelector(".mob-menu--overlay");
 let mobMenu = document.querySelector(".js-mob-menu__section");
 let mobMenuCity = document.querySelector(".js-mob-menu__section-city");
+let mobMenuCityButton = document.querySelector(".js-header__other__item--place");
 let mobMenuCityClose = document.querySelector(".mob-menu__city__top__close");
 let mobMenuCityOverlay = document.querySelector(".js-mob-menu__city__top__overlay");
 let mobMenuQuestion = document.querySelector(".js-mob-menu__section-question");
@@ -50,6 +51,10 @@ overlayBg.addEventListener("click", function () {
   mobMenu.classList.remove("active");
   humb.classList.remove("is-active");
   bodyYesScroll()
+});
+mobMenuCityButton.addEventListener("click", function () {
+  mobMenuCity.classList.add("active");
+  bodyNoScroll()
 });
 mobMenuCityClose.addEventListener("click", function () {
   mobMenuCity.classList.remove("active");

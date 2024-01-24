@@ -49,7 +49,7 @@
             <div class="header__menu__humb hamburger"><img src="img/svg/hamburger.svg" alt=""></div>
             <div class="header__menu__place"><a href=""> </a></div>
             <div class="header__other">
-              <div class="header__other__item header__other__item--place">
+              <div class="header__other__item header__other__item--place js-header__other__item--place">
                 <div class="header__other__top">
                   <div class="header__menu__item__icon"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="13" viewBox="0 0 10 13" fill="none">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M10 5.44361C10 8.31503 5.82496 12.2405 5.34886 12.6785C5.1521 12.8599 4.84884 12.8589 4.65322 12.6764C4.17504 12.2405 0 8.31498 0 5.44356C0 2.43711 2.23853 0 4.99997 0C7.76126 0 10 2.43724 10 5.44361ZM7.27274 5.10721C7.27274 6.38927 6.25519 7.42864 5.00003 7.42864C3.74486 7.42864 2.72731 6.38927 2.72731 5.10721C2.72731 3.82514 3.74486 2.78577 5.00003 2.78577C6.25519 2.78577 7.27274 3.82514 7.27274 5.10721Z" fill="#44C8F5"/>
@@ -186,8 +186,8 @@
                 <div class="header__other__top"><a href="#"> En
                     <div class="header__menu__item__arrow js-row"><img src="img/svg/header__menu__item__arrow.svg" alt=""></div></a></div>
                 <ul class="header__menu__list">
-                  <li class="header__menu__list__item"><a href="#"> EN</a></li>
-                  <li class="header__menu__list__item"> <a href="#">RU	</a></li>
+                  <li class="header__menu__list__item"><a href="#"> En</a></li>
+                  <li class="header__menu__list__item"> <a href="#">Ru	</a></li>
                 </ul>
               </div>
             </div>
@@ -252,17 +252,17 @@
           <div class="contacts__form__input-block error">
             <input class="contacts__form__input text__13" type="text" name="">
             <div class="contacts__form__input-block__name">	Имя*</div>
-            <div class="contacts__form__input-block__error"> </div>
+            <div class="contacts__form__input-block__error">Не правильное имя</div>
           </div>
           <div class="contacts__form__input-block">
             <input class="contacts__form__input js-mask-phone" type="tel" name="">
             <div class="contacts__form__input-block__name">Телефон</div>
-            <div class="contacts__form__input-block__error"></div>
+            <div class="contacts__form__input-block__error">Не правильный номер телефона</div>
           </div>
           <div class="contacts__form__input-block">
             <input class="contacts__form__input text__13" type="email" name="">
             <div class="contacts__form__input-block__name">Почта</div>
-            <div class="contacts__form__input-block__error">					</div>
+            <div class="contacts__form__input-block__error">Не правильная почта					</div>
           </div>
           <div class="contacts__form__input-block">
             <select class="contacts__form__select js-contacts__form__select" name="">
@@ -278,23 +278,6 @@
               </div>
             </select>
           </div>
-          <div class="contacts__form__delivery">
-            <div class="contacts__form__delivery__title">Способ доставки</div>
-            <div class="contacts__form__delivery__row">
-              <div class="contacts__form__delivery__item">
-                 <div class="checkbox">
-<input class="custom-checkbox" type="checkbox" id="delivery__item-1" name="delivery__item-1" value="indigo">
-<label for="delivery__item-1">Самовывоз</label>
-</div>
-              </div>
-              <div class="contacts__form__delivery__item">
-                 <div class="checkbox">
-<input class="custom-checkbox" type="checkbox" id="delivery__item-2" name="delivery__item-2" value="indigo">
-<label for="delivery__item-2">Служба доставки SkyFish</label>
-</div>
-              </div>
-            </div>
-          </div>
           <div class="contacts__form__input-block">
             <input class="contacts__form__input text__13" type="email" name="">
             <div class="contacts__form__input-block__name">Комментарий</div>
@@ -308,7 +291,7 @@
           </div>
         </form>
         <div class="mob-menu__question__bottom">
-          <div class="mob-menu__question__bottom__text">Откликнуться</div>
+          <div class="mob-menu__question__bottom__text">Отправить</div>
           <div class="mob-menu__question__bottom__row"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="10" viewBox="0 0 14 10" fill="none">
 <path d="M12.6892 5.02344L1.28544 4.89898M7.96897 1.07606L12.6892 5.02344L7.96897 1.07606ZM12.6892 5.02344L8.53984 8.87402L12.6892 5.02344Z" stroke="white" stroke-width="1.33502" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
@@ -333,6 +316,7 @@
 </svg>
                   </div>
                   <div class="btn--box__text">Подробнее</div></a>
+                <div class="start__bg"> <img src="img/start__section__bg.png" alt=""></div>
                 <div class="start__slide__picture"> 
                   <picture> 
                     <source media="(max-width: 992px )" srcset="img/start__slide--1.jpg"><img src="img/start__slide--1.jpg" alt="" srcset="img/start__slide--1.jpg 2x">
@@ -351,6 +335,7 @@
 </svg>
                   </div>
                   <div class="btn--box__text">Подробнее</div></a>
+                <div class="start__bg"> <img src="img/start__section__bg.png" alt=""></div>
                 <div class="start__slide__video">
                   <video autoplay muted loop><source src="video/start__slide__video--2.mp4" type="video/mp4"></video>
                 </div>
@@ -367,6 +352,7 @@
 </svg>
                   </div>
                   <div class="btn--box__text">Подробнее</div></a>
+                <div class="start__bg"> <img src="img/start__section__bg.png" alt=""></div>
                 <div class="start__slide__picture"> 
                   <picture> 
                     <source media="(max-width: 992px )" srcset="img/start__slide--3.jpg"><img src="img/start__slide--3.jpg" alt="" srcset="img/start__slide--3.jpg 2x">
@@ -374,11 +360,13 @@
                 </div>
               </div>
               <div class="start__slide swiper-slide">
+                <div class="start__bg"> <img src="img/start__section__bg.png" alt=""></div>
                 <div class="start__slide__video">
                   <video autoplay muted loop><source src="video/start__slide__video--1.mp4" type="video/mp4"></video>
                 </div>
               </div>
               <div class="start__slide swiper-slide">
+                <div class="start__bg"> <img src="img/start__section__bg.png" alt=""></div>
                 <div class="start__slide__picture"> 
                   <picture> 
                     <source media="(max-width: 992px )" srcset="img/start__slide--5.jpg"><img src="img/start__slide--5.jpg" alt="" srcset="img/start__slide--5.jpg 2x">
@@ -386,6 +374,7 @@
                 </div>
               </div>
               <div class="start__slide swiper-slide">
+                <div class="start__bg"> <img src="img/start__section__bg.png" alt=""></div>
                 <div class="start__slide__picture"> 
                   <picture> 
                     <source media="(max-width: 992px )" srcset="img/start__slide--6.jpg"><img src="img/start__slide--6.jpg" alt="" srcset="img/start__slide--6.jpg 2x">
@@ -393,6 +382,7 @@
                 </div>
               </div>
               <div class="start__slide swiper-slide">
+                <div class="start__bg"> <img src="img/start__section__bg.png" alt=""></div>
                 <div class="start__slide__picture"> 
                   <picture> 
                     <source media="(max-width: 992px )" srcset="img/start__slide--7.jpg"><img src="img/start__slide--7.jpg" alt="" srcset="img/start__slide--7.jpg 2x">
@@ -400,6 +390,7 @@
                 </div>
               </div>
               <div class="start__slide swiper-slide">
+                <div class="start__bg"> <img src="img/start__section__bg.png" alt=""></div>
                 <div class="start__slide__picture"> 
                   <picture> 
                     <source media="(max-width: 992px )" srcset="img/start__slide--8.jpg"><img src="img/start__slide--8.jpg" alt="" srcset="img/start__slide--8.jpg 2x">
@@ -407,6 +398,7 @@
                 </div>
               </div>
               <div class="start__slide swiper-slide">
+                <div class="start__bg"> <img src="img/start__section__bg.png" alt=""></div>
                 <div class="start__slide__picture"> 
                   <picture> 
                     <source media="(max-width: 992px )" srcset="img/start__slide--9.jpg"><img src="img/start__slide--9.jpg" alt="" srcset="img/start__slide--9.jpg 2x">
@@ -436,10 +428,10 @@
 <path d="M10.0999 4.21591L1.22221 4.11643M6.42527 1.06079L10.0999 4.21591L6.42527 1.06079ZM10.0999 4.21591L6.86969 7.29365L10.0999 4.21591Z" stroke="#07171D" stroke-width="1.33502" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
                   </div>
-                  <div class="btn--box__text">Подробнее</div></a>
+                  <div class="btn--box__text">Перейти в каталог</div></a>
               </div>
               <div class="layout--trio__col js-assortment__col--2"><a class="card card--full-picture active" href="#">
-                  <div class="card__title title__32">Рыба охлажденная <br> <span class="text__12">10 товаров</span>
+                  <div class="card__title title__32">Рыба охлажденная <br> <span class="text__12">14&ensp;товаров</span>
                   </div>
                   <div class="card__picture"> <img src="img/card__picture__1.png" alt=""></div>
                   <div class="card__bottom">
@@ -448,7 +440,7 @@
 </svg>							
                     </div>
                   </div></a><a class="card card--full-picture" href="#">
-                  <div class="card__title title__32">Филе охлажденное <br> <span class="text__12">10 товаров</span>
+                  <div class="card__title title__32">Филе охлажденное <br> <span class="text__12">3&ensp;товаров</span>
                   </div>
                   <div class="card__picture"> <img src="img/card__picture__2.png" alt=""></div>
                   <div class="card__bottom">
@@ -457,7 +449,7 @@
 </svg>							
                     </div>
                   </div></a><a class="card card--full-picture" href="#">
-                  <div class="card__title title__32">морепродукты <br> <span class="text__12">10 товаров</span>
+                  <div class="card__title title__32">морепродукты <br> <span class="text__12">26&ensp;товаров</span>
                   </div>
                   <div class="card__picture"> <img src="img/card__picture__3.png" alt=""></div>
                   <div class="card__bottom">
@@ -467,7 +459,7 @@
                     </div>
                   </div></a></div>
               <div class="layout--trio__col js-assortment__col--3"><a class="card card--full-picture" href="#">
-                  <div class="card__title title__32">Рыба свежемороженая <br> <span class="text__12">10 товаров</span>
+                  <div class="card__title title__32">Рыба свежемороженая <br> <span class="text__12">35&ensp;товаров</span>
                   </div>
                   <div class="card__picture"> <img src="img/card__picture__4.png" alt=""></div>
                   <div class="card__bottom">
@@ -476,7 +468,7 @@
 </svg>							
                     </div>
                   </div></a><a class="card card--full-picture" href="#">
-                  <div class="card__title title__32">Филе свежемороженое <br> <span class="text__12">10 товаров</span>
+                  <div class="card__title title__32">Филе свежемороженое <br> <span class="text__12">3&ensp;товаров</span>
                   </div>
                   <div class="card__picture"> <img src="img/card__picture__5.png" alt=""></div>
                   <div class="card__bottom">
@@ -485,7 +477,7 @@
 </svg>							
                     </div>
                   </div></a><a class="card card--full-picture" href="#">
-                  <div class="card__title title__32">субпродукты <br> <span class="text__12">10 товаров</span>
+                  <div class="card__title title__32">субпродукты <br> <span class="text__12">3&ensp;товаров</span>
                   </div>
                   <div class="card__picture"> <img src="img/card__picture__6.png" alt=""></div>
                   <div class="card__bottom">
@@ -498,7 +490,7 @@
           </div>
         </div>
         <div class="section hear__section">
-          <div class="hear__title title__170">Решаем задачи, слышим людей</div>
+          <div class="hear__title title__170">Понимаем море,слышим людей</div>
           <div class="hear__video">
             <video autoplay muted loop><source src="video/hear__video.mp4" type="video/mp4"></video>
           </div><a class="btn--box hear__btn" href="#">
