@@ -3827,6 +3827,24 @@ button {
   width: 100%;
 }
 
+.start__slide__video {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.start__slide__video video {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center center;
+}
+
 .start__slide__desc {
   position: absolute;
   top: 5.8333333333vw;
@@ -4679,24 +4697,9 @@ button {
   height: 1.3541666667vw;
   min-width: 1.3541666667vw;
   min-height: 1.3541666667vw;
-  border-radius: 4px;
+  border-radius: 0.2083333333vw;
   border: 1px solid rgba(0, 0, 0, 0.2);
   margin-right: 0.625vw;
-}
-
-.custom-checkbox + label::after {
-  content: "";
-  position: absolute;
-  display: none;
-  top: 0.3125vw;
-  left: 0.3125vw;
-  background-color: #44C8F5;
-  border-radius: 2px;
-  width: 0.78125vw;
-  height: 0.78125vw;
-  min-width: 0.78125vw;
-  min-height: 0.78125vw;
-  border-radius: 0.1041666667vw;
 }
 
 /* стили при наведении курсора на checkbox */
@@ -4712,23 +4715,29 @@ button {
   border-color: #44C8F5;
 }
 
-/* стили для чекбокса, находящегося в фокусе */
+/* стили для радиокнопки, находящейся в фокусе */
 
-/* стили для чекбокса, находящегося в фокусе и не находящегося в состоянии checked */
-
-.custom-checkbox:focus:not(:checked) + label::before {
-  border-color: #44C8F5;
+.custom-radio:focus + label::before {
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
 }
 
-/* стили для чекбокса, находящегося в состоянии checked */
+/* стили для радиокнопки, находящейся в фокусе и не находящейся в состоянии checked */
 
-.custom-checkbox:checked + label::after {
-  display: flex;
+.custom-radio:focus:not(:checked) + label::before {
+  border-color: #80bdff;
 }
 
-/* стили для чекбокса, находящегося в состоянии disabled */
+/* стили для радиокнопки, находящейся в состоянии checked */
 
-.custom-checkbox:disabled + label::before {
+.custom-radio:checked + label::before {
+  border-color: #0b76ef;
+  background-color: #0b76ef;
+  background-image: url(../img/);
+}
+
+/* стили для радиокнопки, находящейся в состоянии disabled */
+
+.custom-radio:disabled + label::before {
   background-color: #e9ecef;
 }
 
