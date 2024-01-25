@@ -5,8 +5,8 @@ include ../../../blocks/modules/preloader/preloader
 			.layout__col
 				a(href="index.html").header__logo 
 					img(src="img/svg/logo.svg", alt="logo")
-				.header__menu__humb.hamburger
-					img(src="img/svg/hamburger.svg", alt="")
+				.header__menu__humb.js-hamburger
+					//- img(src="img/svg/hamburger.svg", alt="")
 					//- <svg xmlns="http://www.w3.org/2000/svg" width="43" height="9" viewBox="0 0 43 9" fill="none">
 					//- <rect width="43" height="3" fill="#07171D"/>
 					//- <rect x="17.5508" y="6" width="25.449" height="3" fill="#07171D"/>
@@ -35,19 +35,21 @@ include ../../../blocks/modules/preloader/preloader
 						ul.header__menu__list
 							li.header__menu__list__item
 								a(href="mailto:info@skyfish.ru")  info@skyfish.ru
+							li.header__menu__list__item
+								a(href="mailto:info@skyfish.ru")  sales@fishmarket.ru
 							li.header__menu__list__item 
-								a(href="mailto:info@skyfish.ru") info@skyfish.ru
+								a(href="mailto:info@skyfish.ru") purchase@fishmarket.ru
 					.header__other__item.header__other__fone.header__other__fone--desc
 						.header__other__top
-							a(href="tel:+74922521233")
-								!="+7 (4922) 52-12-33"
+							a(href="tel:+749578685")
+								!="+7 (495) 748-86-85"
 								.header__menu__item__arrow.js-row
 									img(src="img/svg/header__menu__item__arrow.svg", alt="")
 						ul.header__menu__list
 							li.header__menu__list__item
-								a(href="tel:+74922521233") +7 (4922) 52-12-33
+								a(href="tel:+749578685") +7 (495) 748-86-85
 							li.header__menu__list__item 
-								a(href="tel:+74922521233") +7 (4922) 52-12-33
+								a(href="tel:+74957488685") +7 (495) 748-86-85 (доб. 136)
 
 						
 					.header__other__fone.header__other__fone--mob.header__menu__item
@@ -170,9 +172,9 @@ include ../../../blocks/modules/preloader/preloader
 									img(src="img/svg/header__menu__item__arrow.svg", alt="")
 						ul.header__menu__list
 							li.header__menu__list__item
-								a(href="#")  En
+								a(href="#")  EN
 							li.header__menu__list__item 
-								a(href="#") Ru	
+								a(href="#") RU	
 
 .mob-menu__section.js-mob-menu__section
 	.mob-menu--overlay
@@ -225,7 +227,7 @@ include ../../../blocks/modules/preloader/preloader
 		//- 			.soc__item__picture 
 		//- 				img(src="img/svg/message.svg", alt="logo")
 		//- 			.soc__item__text instagram
-.mob-menu__section.js-mob-menu__section-city
+.mob-menu__section.mob-menu__city__section.js-mob-menu__city__section
 	.mob-menu--overlay.js-mob-menu__city__top__overlay
 	.mob-menu__city
 		.mob-menu__city__top 
@@ -265,10 +267,10 @@ include ../../../blocks/modules/preloader/preloader
 				</svg>
 		
 		form(action="").contacts__form  
-			.contacts__form__input-block.error
+			.contacts__form__input-block
 				input(type="text", name="").contacts__form__input.text__13
 				.contacts__form__input-block__name 	Имя*
-				.contacts__form__input-block__error Не правильное имя
+				.contacts__form__input-block__error Некорректное имя
 			.contacts__form__input-block
 				input(type="tel", name="").contacts__form__input.js-mask-phone
 				.contacts__form__input-block__name Телефон
@@ -277,18 +279,18 @@ include ../../../blocks/modules/preloader/preloader
 				input(type="email", name="").contacts__form__input.text__13
 				.contacts__form__input-block__name Почта
 				.contacts__form__input-block__error Не правильная почта					
-			.contacts__form__input-block
-				select.contacts__form__select.js-contacts__form__select(name="")
-					option Товар 1
-					option Товар 2
-					option Товар 3
-					option Товар 4
-					option Товар 5
-					option Товар 6
-					.localities-centers__select-arrow
-						<svg xmlns="http://www.w3.org/2000/svg" width="20" height="12" viewBox="0 0 20 12" fill="none">
-						<path d="M2 2L10.1667 10.1667L18.3333 2" stroke="#2A2A2A" stroke-width="2" stroke-linecap="square"/>
-						</svg>
+			//- .contacts__form__input-block
+			//- 	select.contacts__form__select.js-contacts__form__select(name="")
+			//- 		option Товар 1
+			//- 		option Товар 2
+			//- 		option Товар 3
+			//- 		option Товар 4
+			//- 		option Товар 5
+			//- 		option Товар 6
+			//- 		.localities-centers__select-arrow
+			//- 			<svg xmlns="http://www.w3.org/2000/svg" width="20" height="12" viewBox="0 0 20 12" fill="none">
+			//- 			<path d="M2 2L10.1667 10.1667L18.3333 2" stroke="#2A2A2A" stroke-width="2" stroke-linecap="square"/>
+			//- 			</svg>
 			
 			//- .contacts__form__delivery
 			//- 	.contacts__form__delivery__title Способ доставки

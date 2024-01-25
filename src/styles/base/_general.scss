@@ -637,6 +637,12 @@ a, button {
         width: 100%;
         display: block;
         z-index: 10;
+        img{
+            display: block;
+            width: 100%;
+            object-fit: cover;
+            object-position: center center;
+        }
     }
     @include max(sm) {
     }
@@ -848,7 +854,25 @@ a, button {
         @include max(md) {
             height: auto;
             min-height: auto;
-        }  
+        }
+        &__bg {
+            position: absolute;
+            left: vw(-30);
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            top: vw(787);
+            width: vw(728);
+            height: vw(283);
+            opacity: 0.2;
+            img {
+                position: relative;
+                width: 100%;
+                display: block;
+                object-fit: left top;
+                object-position: center center;
+            }
+        }
         .layout--trio {
             &__col {
                 flex-flow: column nowrap;
@@ -878,8 +902,24 @@ a, button {
     }
     &__btn {
         position: absolute;
-        bottom: vw(33);
-        left: 0;
+        bottom: -100vh;
+        top: auto;
+        left: vw(25);
+        z-index: 26;
+        &--start {
+            &.active {
+                display: none;
+            }
+        }
+        &--finish {
+            display: none;
+            bottom: 1.71875vw;
+            left: vw(0);
+            &.active {
+                display: flex;
+            }
+        }
+
     }
 }
 .hear {
@@ -929,10 +969,9 @@ a, button {
 }
 .news {
     &__title {
-      position: absolute;
-      top: vw(25);
-      left: vw(0);
+      position: relative;
       color: #07171D;
+      margin-bottom: vw(45);
       width: 110%;
       span {
         color: rgba(255, 255, 255, 0.30);
@@ -985,12 +1024,23 @@ a, button {
         }
     }
     &__btn {
-        position: absolute;
-        bottom: vw(33);
-        left: 0;
+        position: relative;
+       
     }
     &__bg {
         margin-bottom: vw(337);
+        position: relative;
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        img {
+            position: relative;
+            display: block;
+            width: 100%;
+            object-fit: cover;
+            object-position: top left;
+        }
     }
 }
 .advantages {
@@ -1057,7 +1107,7 @@ a, button {
             max-width: vw(357);
         }
         &__desc{
-            max-width: vw(367);
+            max-width: vw(393);
         }
     }
 }

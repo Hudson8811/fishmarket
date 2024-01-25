@@ -108,10 +108,20 @@
 			height: 100%;
 			border-right: 1px solid $grey;
 			cursor: pointer;
+			background-image: url(../img/svg/hamburger.svg);
+			background-position: center center;
+			background-size: 50% 50%;
+			background-repeat: no-repeat;
+			transition: all 0.3s ;
 			img {
 				position: relative;
 				display: block;
 				width: vw(47);
+			}
+
+			&:hover {
+				transition: all 0.3s ;
+				background-image: url(../img/svg/hamburger--blue.svg);
 			}
 		}
 		&__item {
@@ -923,7 +933,7 @@
 	
 	&::-webkit-scrollbar-thumb {
 		border-radius: 0px;
-		background-color: rgba(205, 209, 210, 0.21);
+		background-color: rgba(205, 209, 210, 0.23);
 	}
 	
 	&::-webkit-scrollbar-track {
@@ -1235,6 +1245,7 @@
 			padding-left: vw(24);
 			padding-right: vw(24);
 			transition: all .3s;
+			cursor: pointer;
 			&:hover {
 				transition: all .3s;
 				background: $blueHover;
@@ -1246,6 +1257,12 @@
 				font-weight: 600;
 				line-height: normal;
 				text-transform: uppercase;
+			}
+		}
+		&__section {
+			transition: all 1s;
+			&.active {
+				transition: all 1s;
 			}
 		}
 	}

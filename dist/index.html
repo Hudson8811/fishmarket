@@ -46,7 +46,7 @@
       <div class="container">
         <div class="layout">
           <div class="layout__col"><a class="header__logo" href="index.html"> <img src="img/svg/logo.svg" alt="logo"></a>
-            <div class="header__menu__humb hamburger"><img src="img/svg/hamburger.svg" alt=""></div>
+            <div class="header__menu__humb js-hamburger"></div>
             <div class="header__menu__place"><a href=""> </a></div>
             <div class="header__other">
               <div class="header__other__item header__other__item--place js-header__other__item--place">
@@ -63,15 +63,16 @@
                     <div class="header__menu__item__arrow js-row"><img src="img/svg/header__menu__item__arrow.svg" alt=""></div></a></div>
                 <ul class="header__menu__list">
                   <li class="header__menu__list__item"><a href="mailto:info@skyfish.ru"> info@skyfish.ru</a></li>
-                  <li class="header__menu__list__item"> <a href="mailto:info@skyfish.ru">info@skyfish.ru</a></li>
+                  <li class="header__menu__list__item"><a href="mailto:info@skyfish.ru"> sales@fishmarket.ru</a></li>
+                  <li class="header__menu__list__item"> <a href="mailto:info@skyfish.ru">purchase@fishmarket.ru</a></li>
                 </ul>
               </div>
               <div class="header__other__item header__other__fone header__other__fone--desc">
-                <div class="header__other__top"><a href="tel:+74922521233">+7 (4922) 52-12-33
+                <div class="header__other__top"><a href="tel:+749578685">+7 (495) 748-86-85
                     <div class="header__menu__item__arrow js-row"><img src="img/svg/header__menu__item__arrow.svg" alt=""></div></a></div>
                 <ul class="header__menu__list">
-                  <li class="header__menu__list__item"><a href="tel:+74922521233">+7 (4922) 52-12-33</a></li>
-                  <li class="header__menu__list__item"> <a href="tel:+74922521233">+7 (4922) 52-12-33</a></li>
+                  <li class="header__menu__list__item"><a href="tel:+749578685">+7 (495) 748-86-85</a></li>
+                  <li class="header__menu__list__item"> <a href="tel:+74957488685">+7 (495) 748-86-85 (доб. 136)</a></li>
                 </ul>
               </div>
               <div class="header__other__fone header__other__fone--mob header__menu__item">
@@ -186,8 +187,8 @@
                 <div class="header__other__top"><a href="#"> En
                     <div class="header__menu__item__arrow js-row"><img src="img/svg/header__menu__item__arrow.svg" alt=""></div></a></div>
                 <ul class="header__menu__list">
-                  <li class="header__menu__list__item"><a href="#"> En</a></li>
-                  <li class="header__menu__list__item"> <a href="#">Ru	</a></li>
+                  <li class="header__menu__list__item"><a href="#"> EN</a></li>
+                  <li class="header__menu__list__item"> <a href="#">RU	</a></li>
                 </ul>
               </div>
             </div>
@@ -202,7 +203,7 @@
         <div class="mob-menu__list"><a class="mob-menu__list__item" href="#">Производство</a><a class="mob-menu__list__item" href="#">Склад и логистика</a><a class="mob-menu__list__item" href="#">Мы в социуме</a><a class="mob-menu__list__item" href="#">Карьера в SkyFish</a><a class="mob-menu__list__item" href="#">Наша команда</a></div><a class="mob-menu__link" href="#"> </a><a class="mob-menu__link" href="#">Контакты</a><a class="mob-menu__link" href="#">Личный кабинет</a><a class="mob-menu__link" href="#">Документы</a><a class="mob-menu__link" href="#">Новости</a><a class="mob-menu__link" href="#">Вопросы и ответы (FAQ)</a>
       </div>
     </div>
-    <div class="mob-menu__section js-mob-menu__section-city">
+    <div class="mob-menu__section mob-menu__city__section js-mob-menu__city__section">
       <div class="mob-menu--overlay js-mob-menu__city__top__overlay"></div>
       <div class="mob-menu__city">
         <div class="mob-menu__city__top"> 
@@ -249,10 +250,10 @@
           </div>
         </div>
         <form class="contacts__form" action=""> 
-          <div class="contacts__form__input-block error">
+          <div class="contacts__form__input-block">
             <input class="contacts__form__input text__13" type="text" name="">
             <div class="contacts__form__input-block__name">	Имя*</div>
-            <div class="contacts__form__input-block__error">Не правильное имя</div>
+            <div class="contacts__form__input-block__error">Некорректное имя</div>
           </div>
           <div class="contacts__form__input-block">
             <input class="contacts__form__input js-mask-phone" type="tel" name="">
@@ -263,20 +264,6 @@
             <input class="contacts__form__input text__13" type="email" name="">
             <div class="contacts__form__input-block__name">Почта</div>
             <div class="contacts__form__input-block__error">Не правильная почта					</div>
-          </div>
-          <div class="contacts__form__input-block">
-            <select class="contacts__form__select js-contacts__form__select" name="">
-              <option>Товар 1</option>
-              <option>Товар 2</option>
-              <option>Товар 3</option>
-              <option>Товар 4</option>
-              <option>Товар 5</option>
-              <option>Товар 6</option>
-              <div class="localities-centers__select-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="12" viewBox="0 0 20 12" fill="none">
-<path d="M2 2L10.1667 10.1667L18.3333 2" stroke="#2A2A2A" stroke-width="2" stroke-linecap="square"/>
-</svg>
-              </div>
-            </select>
           </div>
           <div class="contacts__form__input-block">
             <input class="contacts__form__input text__13" type="email" name="">
@@ -417,13 +404,19 @@
               </div>
             </div>
           </div>
-        </div>
+        </div><a class="btn--box assortment__btn assortment__btn--start" href="#">
+          <div class="btn btn--circle"><svg xmlns="http://www.w3.org/2000/svg" width="11" height="8" viewBox="0 0 11 8" fill="none">
+<path d="M10.0999 4.21591L1.22221 4.11643M6.42527 1.06079L10.0999 4.21591L6.42527 1.06079ZM10.0999 4.21591L6.86969 7.29365L10.0999 4.21591Z" stroke="#07171D" stroke-width="1.33502" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+          </div>
+          <div class="btn--box__text">Перейти в каталог</div></a>
         <div class="section assortment__section">
           <div class="container">
+            <div class="assortment__section__bg"><img src="img/assortment__section__bg.png" alt=""></div>
             <div class="layout--trio">
               <div class="layout--trio__col js-assortment__col--1">
                 <div class="assortment__title title__82">Наш ассортимент
-                </div><a class="btn--box assortment__btn" href="#">
+                </div><a class="btn--box assortment__btn assortment__btn--finish" href="#">
                   <div class="btn btn--circle"><svg xmlns="http://www.w3.org/2000/svg" width="11" height="8" viewBox="0 0 11 8" fill="none">
 <path d="M10.0999 4.21591L1.22221 4.11643M6.42527 1.06079L10.0999 4.21591L6.42527 1.06079ZM10.0999 4.21591L6.86969 7.29365L10.0999 4.21591Z" stroke="#07171D" stroke-width="1.33502" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
@@ -440,7 +433,7 @@
 </svg>							
                     </div>
                   </div></a><a class="card card--full-picture" href="#">
-                  <div class="card__title title__32">Филе охлажденное <br> <span class="text__12">3&ensp;товаров</span>
+                  <div class="card__title title__32">Филе охлажденное <br> <span class="text__12">3&ensp;товара</span>
                   </div>
                   <div class="card__picture"> <img src="img/card__picture__2.png" alt=""></div>
                   <div class="card__bottom">
@@ -468,7 +461,7 @@
 </svg>							
                     </div>
                   </div></a><a class="card card--full-picture" href="#">
-                  <div class="card__title title__32">Филе свежемороженое <br> <span class="text__12">3&ensp;товаров</span>
+                  <div class="card__title title__32">Филе свежемороженое <br> <span class="text__12">3&ensp;товара</span>
                   </div>
                   <div class="card__picture"> <img src="img/card__picture__5.png" alt=""></div>
                   <div class="card__bottom">
@@ -477,7 +470,7 @@
 </svg>							
                     </div>
                   </div></a><a class="card card--full-picture" href="#">
-                  <div class="card__title title__32">субпродукты <br> <span class="text__12">3&ensp;товаров</span>
+                  <div class="card__title title__32">субпродукты <br> <span class="text__12">3&ensp;товара</span>
                   </div>
                   <div class="card__picture"> <img src="img/card__picture__6.png" alt=""></div>
                   <div class="card__bottom">
@@ -490,7 +483,7 @@
           </div>
         </div>
         <div class="section hear__section">
-          <div class="hear__title title__170">Понимаем море,слышим людей</div>
+          <div class="hear__title title__170">Понимаем море, слышим людей</div>
           <div class="hear__video">
             <video autoplay muted loop><source src="video/hear__video.mp4" type="video/mp4"></video>
           </div><a class="btn--box hear__btn" href="#">
@@ -633,7 +626,7 @@
           </div>
         </div>
         <div class="footer footer__animation">
-          <div class="footer__title title__170"> Понимаем море,слышим людей
+          <div class="footer__title title__170"> Понимаем море, слышим людей
           </div><a class="btn--box footer__btn" href="#">
             <div class="btn btn--circle"><svg xmlns="http://www.w3.org/2000/svg" width="11" height="8" viewBox="0 0 11 8" fill="none">
 <path d="M10.0999 4.21591L1.22221 4.11643M6.42527 1.06079L10.0999 4.21591L6.42527 1.06079ZM10.0999 4.21591L6.86969 7.29365L10.0999 4.21591Z" stroke="#07171D" stroke-width="1.33502" stroke-linecap="round" stroke-linejoin="round"/>

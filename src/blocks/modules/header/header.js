@@ -13,7 +13,7 @@ $( ".header__other__item" ).mouseleave(function () {
 
 let overlayBg = document.querySelector(".mob-menu--overlay");
 let mobMenu = document.querySelector(".js-mob-menu__section");
-let mobMenuCity = document.querySelector(".js-mob-menu__section-city");
+let mobMenuCity = document.querySelector(".js-mob-menu__city__section");
 let mobMenuCityButton = document.querySelector(".js-header__other__item--place");
 let mobMenuCityClose = document.querySelector(".mob-menu__city__top__close");
 let mobMenuCityOverlay = document.querySelector(".js-mob-menu__city__top__overlay");
@@ -21,15 +21,12 @@ let mobMenuQuestion = document.querySelector(".js-mob-menu__section-question");
 let mobMenuQuestionClose = document.querySelector(".mob-menu__question__top__close");
 let mobMenuQuestionOverlay = document.querySelector(".js-mob-menu__question--overlay");
 let buttonQuestion = document.querySelector(".js-button__question");
-let humb = document.querySelector(".hamburger");
+let humb = document.querySelector(".js-hamburger");
 let searchBtn = document.querySelector(".js-search__btn");
 let search = document.querySelector(".search");
 let searchOverlay = document.querySelector(".search--overlay");
 
-var hamburger = $(".hamburger");
-hamburger.on("click", function(e) {
-  hamburger.toggleClass("is-active");
-});
+
 
 $(document).mouseup(function (e){ 
   var search = $(".header__other__search");
@@ -76,16 +73,20 @@ mobMenuQuestionOverlay.addEventListener("click", function () {
   mobMenuQuestion.classList.remove("active");
   bodyYesScroll()
 });
-humb.addEventListener("click", function () {
-  let kye = mobMenu.classList.contains("active");
-  if (kye == false) {
-    mobMenu.classList.add("active");
-    bodyNoScroll()
-  }else {
-    mobMenu.classList.remove("active");
-    bodyYesScroll()
-  }
+humb.addEventListener("mousemove", function () {
+  mobMenu.classList.add("active");
+  bodyNoScroll()
 });
+// humb.addEventListener("click", function () {
+//   let kye = mobMenu.classList.contains("active");
+//   if (kye == false) {
+//     mobMenu.classList.add("active");
+//     bodyNoScroll()
+//   }else {
+//     mobMenu.classList.remove("active");
+//     bodyYesScroll()
+//   }
+// });
 
 // $(window).scroll(function() {
 // 	var height = $(window).scrollTop();
