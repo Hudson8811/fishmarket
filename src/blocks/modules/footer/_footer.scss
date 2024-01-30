@@ -4,13 +4,20 @@
 	justify-content: flex-start;
 	align-items: flex-start;
 	width: 100vw;
-	height: 100vh;
-	// height: calc(100vh - vw(90));
+	// height: 100vh;
+	height: calc(100vh - vw(90));
 	background: #07171D;
 	z-index: 30;
 	&__animation {
 		position: absolute;
-		top: 0;
+		top: vw(90);
+		@include max(md) {
+			position: relative;
+			flex-flow: column nowrap;
+			width: 100vw;
+			height: auto;
+			height: 100%;
+	}
 	}
 	&__bg  {
 		position: absolute;
@@ -18,6 +25,9 @@
 		bottom: 0;
 		z-index: 5;
 		width: vw(1456);
+		@include max(md) {
+			display: none;
+		}
 		img {
 			position: relative;
 			display: block;
@@ -31,13 +41,28 @@
 		white-space: nowrap;
 		z-index: 10;
 		color: rgba(255, 255, 255, 0.2);
+		@include max(md) {
+			position: relative;
+			top: auto;
+			left: auto;
+			white-space: wrap;
+			width: 100%;
+			max-width: 95%;
+			font-size: vw2(50);
+			font-style: normal;
+			font-weight: 500;
+			line-height: 1.2; 
+			margin-bottom: vw2(40);
+			margin-right: vw2(20);
+			margin-left: vw2(20);
+		}
 	}
 	&__menu {
 		position: absolute;
 		top: 0;
 		right: -100%;
 		width: vw(473);
-		height: 100vh;
+		height: calc(100vh - vw(90));
 		display: flex;
 		justify-content: flex-start;
 		align-items: flex-start;
@@ -46,6 +71,21 @@
 		padding-bottom: vw(25);
 		background: #fff;
 		z-index: 900;
+		@include max(md) {
+			position: relative;
+			top: 0;
+			right: auto;
+			width: 100%;
+			height: auto;
+			display: flex;
+			justify-content: flex-start;
+			align-items: flex-start;
+			flex-flow: column nowrap;
+			padding: vw2(20);
+			margin-bottom: vw2(40);
+			height: 100%;
+			background: transparent;
+		}
 		&__list {
 			position: relative;
 			display: flex;
@@ -66,6 +106,12 @@
 				line-height: normal;
 				text-transform: uppercase;
 				margin-bottom: vw(19);
+				@include max(md) {
+					font-size: vw2(24);
+					font-style: normal;
+					line-height: 1.2;
+					color: #fff;
+				}
 				a {
 					position: relative;
 					text-decoration: none;
@@ -77,6 +123,12 @@
 					text-transform: uppercase;
 					transition: all 0.3s;
 					cursor: pointer;
+					@include max(md) {
+						font-size: vw2(24);
+						font-style: normal;
+						line-height: 1.2;
+						color: #fff;
+					}
 					&:hover {
 						transition: all 0.3s;
 						color:$blueHover;
@@ -94,7 +146,17 @@
 				font-weight: 600;
 				line-height: normal;
 				text-transform: uppercase;
-				margin-bottom: vw(19);				
+				margin-bottom: vw(19);
+				@include max(md) {
+					position: relative;
+					top: auto;
+					right: auto;
+					font-size: vw2(24);
+					font-style: normal;
+					line-height: 1.2;
+					color: rgba(255, 255, 255, 0.2);
+					margin-bottom: vw2(20);
+				}			
 			}
 		}
 	}
@@ -103,7 +165,15 @@
 		bottom: vw(33);
 		left: vw(25);
 		z-index:  20;
-
+		@include max(md) {
+			position: relative;
+			top: auto;
+			left: auto;
+			bottom: auto;
+			left: auto;
+			margin-right: vw2(20);
+			margin-left: vw2(20);
+		}
 	}
 	&__logo  {
 		position: absolute;
@@ -111,6 +181,13 @@
 		left: vw(20);
 		display: block;
 		width: vw(153);
+		@include max(md) {
+			position: relative;
+			margin-bottom: vw2(60);
+			top: vw2(20);
+			left: vw2(20);
+			width: vw2(220);
+	}
 		img {
 			position: relative;
 			display: block;
@@ -128,12 +205,31 @@
 		justify-content: flex-start;
 		align-items: flex-end;
 		text-align: right;
+		@include max(md) {
+			position: relative;
+			top: auto;
+			left: auto;
+			bottom: auto;
+			right: auto;
+			width: 100%;
+			justify-content: center;
+			align-items: center;
+			margin-top: vw2(40);
+			margin-bottom: vw2(40);
+		}
 		&__date {
 			color: rgba(255, 255, 255, 0.2);
 			margin-bottom: vw(14);
+			@include max(md) {
+				margin-bottom: vw2(10);
+				text-align: center;
+			}
 		}
 		&__text {
 			transition: all 0.3s;
+			@include max(md) {
+				text-align: center;
+			}
 			&:hover {
 				transition: all 0.3s;
 				color: $blueHover;

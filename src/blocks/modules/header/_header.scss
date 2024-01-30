@@ -16,6 +16,7 @@
 		height: vw2(70);
 	}
 
+
 	.layout {
 		position: relative;
 		display: flex;
@@ -39,6 +40,12 @@
 				max-width: 100%;
 				flex: 1 0 auto;
 				border: none;
+				@include max(md) {
+					max-width: 100%;
+					flex: 1 0 auto;
+					justify-content: space-between;
+				}
+
 			}
 			&:nth-child(2) {
 				width: auto;
@@ -46,6 +53,10 @@
 				flex: 0 0 auto;
 				border: none;
 				justify-content: flex-end;
+				@include max(md) {
+					display: none;
+				}
+
 			}
 		}
 	}
@@ -78,7 +89,11 @@
 		background: $blueLight;
 		height: 100%;
 		@include max(md) {	
+			width: auto;
+			min-width: auto;
+			padding: vw2(10) vw2(20);
 		}
+
 		img {
 			transition: all 0.3s;
 			position: relative;
@@ -86,7 +101,9 @@
 			width: vw(153);
 			object-fit: contain;
 			@include max(md) {
+				width: vw2(153);
 			}
+
 		}
 		
 	
@@ -113,10 +130,17 @@
 			background-size: 50% 50%;
 			background-repeat: no-repeat;
 			transition: all 0.3s ;
+			@include max(md) {
+				width: vw2(90);
+				border-right: none;
+   		}
 			img {
 				position: relative;
 				display: block;
 				width: vw(47);
+				@include max(md) {
+					width: vw2(90);
+				}
 			}
 
 			&:hover {
@@ -398,6 +422,12 @@
 			transition: all .3s;
 			padding-left: vw(24);
 			cursor: pointer;
+			@include max(md) {
+				font-size: vw2(20);
+				font-style: normal;
+				line-height: 1.2;
+				margin-right: vw(20);
+			} 
 			svg {
 				position: relative;
 				width: vw(20);
@@ -508,6 +538,12 @@
 					font-weight: 600;
 					line-height: 1;
 					text-transform: uppercase;
+					@include max(md) {
+						font-size: vw2(20);
+						font-style: normal;
+						line-height: 1.2;
+						margin-right: vw(20);
+					} 
 				}
 				
 			}
@@ -601,6 +637,12 @@
 				text-transform: uppercase;
 				text-decoration: none;
 				transition: all .3s;
+				@include max(md) {
+					font-size: vw2(20);
+					font-style: normal;
+					line-height: 1.2;
+					margin-right: vw(20);
+			} 
 				&:hover {
 					transition: all .3s;
 					color: $blue;
@@ -633,23 +675,23 @@
 			font-weight: 600;
 			line-height: normal;
 			text-transform: uppercase;
-			width: vw(195);
+			width:	100%;
 			border-right: 1px solid $grey;
 			border-left: 1px solid $grey;
 			background: transparent;
 			transition: all 0.3s;
+			@include max(md) {
+				font-size: vw2(20);
+				font-style: normal;
+				line-height: 1.2;
+				margin-right: vw(20);
+		} 
 			&:hover {
 				color: #fff;
 				background: $blueLight;
 				transition: all 0.3s;
 				border-right: 1px solid $blueLight;
 				border-left: 1px solid $blueLight;
-			}
-	
-			@include max(md) {
-				justify-content: space-between;
-				align-items: center;
-				border-bottom: none;
 			}
 			.btn {
 				@include max(md) {
@@ -747,6 +789,12 @@
 			cursor: pointer;
 			border: 0px solid #44C8F5;
 			transition: all 0.3s;
+			@include max(md) {
+				font-size: vw2(20);
+				font-style: normal;
+				line-height: 1.2;
+				margin-right: vw(20);
+		} 
 			&::placeholder {
 				color: #07171D;
 				font-size: vw(12);
@@ -754,6 +802,12 @@
 				font-weight: 600;
 				line-height: normal;
 				text-transform: uppercase;
+				@include max(md) {
+					font-size: vw2(20);
+					font-style: normal;
+					line-height: 1.2;
+					margin-right: vw(20);
+			} 
 			}
 			&:hover {       
 					border: none; 
@@ -816,6 +870,12 @@
 			font-weight: 600;
 			line-height: normal;
 			text-transform: uppercase;
+			@include max(md) {
+				font-size: vw2(20);
+				font-style: normal;
+				line-height: 1.2;
+				margin-right: vw(20);
+		} 
 		}
 	}
 	&__result {
@@ -892,7 +952,13 @@
 				font-style: normal;
 				font-weight: 600;
 				line-height: normal;
-				text-transform: uppercase;				
+				text-transform: uppercase;
+				@include max(md) {
+					font-size: vw2(20);
+					font-style: normal;
+					line-height: 1.2;
+					margin-right: vw(20);
+			} 			
 			}
 		}
 		&__btn {
@@ -926,6 +992,16 @@
 	background: #fff;
 	height: calc(100vh - vw(90));
 	overflow-y: auto;
+	@include max(md) {
+		max-width: 90%;
+		padding:  vw2(20);
+		flex-flow: column nowrap;
+		justify-content: flex-start;
+		align-items: flex-start;
+		z-index: 9999;
+		background: #fff;
+		height: calc(100vh - vw2(70));
+	}
 	&::-webkit-scrollbar {
 		width: 10px;
 		background-color: #fff;
@@ -942,8 +1018,7 @@
 	}
 	&__section {
 		position: fixed;
-		top: vw(90);
-		
+		top: vw(90);	
 		left: -100vw;
 		width: 0vw;
 		height: 100vh;
@@ -953,6 +1028,11 @@
 		overflow: hidden;
 		transition: all .5s;
 		z-index: 999;
+		@include max(md) {
+			top: vw2(70);	
+			height: calc(100vh - vw2(70));
+		}
+
 		&.active {
 			transition: all .5s;
 			width: 100vw;
@@ -972,6 +1052,11 @@
 		text-transform: uppercase;
 		transition: all .3s;
 		cursor: pointer;
+    @include max(md) {
+			font-size: vw2(32);
+			font-style: normal;
+			line-height: 1.2;
+		}
 		&:hover {
 			transition: all .3s;
 			color: $blueHover;
@@ -1005,6 +1090,10 @@
 		margin-bottom: vw(28);
 		padding-left: vw(8);
 		cursor: pointer;
+		@include max(md) {
+			margin-bottom: vw2(20);
+			padding-left: vw2(15);
+		}
 		&:hover {
 			transition: all .3s;
 			color: $blueHover;
@@ -1022,6 +1111,12 @@
 			text-decoration: none;
 			transition: all .3s;
 			cursor: pointer;
+			@include max(md) {
+				font-size: vw2(20);
+				font-style: normal;
+				line-height: 1.2;
+				margin-right: vw(20);
+		} 
 			&:hover {
 				transition: all .3s;
 				color: $blueHover;
@@ -1190,6 +1285,11 @@
 		width: vw(457);
 		padding-top: vw(24);
 		z-index: 991;
+		@include max(md) {
+			width: 100%;
+			max-width: 100%;
+			padding-top: vw2(20);     
+	}
 		&__top {
 			position: relative;
 			display: flex;
@@ -1199,13 +1299,23 @@
 			margin-bottom: vw(67);
 			padding-left: vw(24);
 			padding-right: vw(24);
+			@include max(md) {
+				margin-bottom: vw2(67);
+				padding-left: vw2(20);
+				padding-right: vw2(20);  
+			}
 			&__title {
 				color: #07171D;
 				font-size: vw(32);
 				font-style: normal;
 				font-weight: 500;
 				line-height: 106%; /* 33.92px */
-				text-transform: uppercase;	
+				text-transform: uppercase;
+				@include max(md) {
+					font-size: vw2(28);
+					font-style: normal;
+					line-height: 1.2;
+			}
 			}
 			&__close {
 				position: relative;
@@ -1218,6 +1328,10 @@
 				align-items: center;
 				transition: all .3s;
 				cursor: pointer;
+				@include max(md) {
+					width: vw2(40);
+					height: vw2(40);
+				}
 				&:hover {
 					transition: all .3s;
 					background: $blueHover;
@@ -1233,6 +1347,11 @@
 			margin-bottom: vw(28);
 			padding-left: vw(24);
 			padding-right: vw(24);
+			@include max(md) {
+				margin-bottom: vw2(20);
+				padding-left: vw2(20);
+				padding-right: vw2(20);
+			}
 		}
 		&__bottom {
 			position: relative;
@@ -1246,6 +1365,11 @@
 			padding-right: vw(24);
 			transition: all .3s;
 			cursor: pointer;
+			@include max(md) {
+				min-height: vw2(65);
+				padding-left: vw2(20);
+				padding-right: vw2(20);
+			}
 			&:hover {
 				transition: all .3s;
 				background: $blueHover;
@@ -1257,6 +1381,12 @@
 				font-weight: 600;
 				line-height: normal;
 				text-transform: uppercase;
+				@include max(md) {
+					font-size: vw2(20);
+					font-style: normal;
+					line-height: 1.2;
+					margin-right: vw(20);
+			} 
 			}
 		}
 		&__section {
@@ -1355,6 +1485,12 @@
 				font-weight: 600;
 				line-height: normal;
 				text-transform: uppercase;
+				@include max(md) {
+					font-size: vw2(20);
+					font-style: normal;
+					line-height: 1.2;
+					margin-right: vw(20);
+			} 
 			}
 		}
 	}

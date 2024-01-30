@@ -12,7 +12,8 @@ $( ".header__other__item" ).mouseleave(function () {
 
 
 let overlayBg = document.querySelector(".mob-menu--overlay");
-let mobMenu = document.querySelector(".js-mob-menu__section");
+let mobMenuSection = document.querySelector(".js-mob-menu__section");
+let mobMenu = document.querySelector(".mob-menu");
 let mobMenuCity = document.querySelector(".js-mob-menu__city__section");
 let mobMenuCityButton = document.querySelector(".js-header__other__item--place");
 let mobMenuCityClose = document.querySelector(".mob-menu__city__top__close");
@@ -45,7 +46,7 @@ searchOverlay.addEventListener("click", function () {
   bodyYesScroll()
 });
 overlayBg.addEventListener("click", function () {
-  mobMenu.classList.remove("active");
+  mobMenuSection.classList.remove("active");
   humb.classList.remove("is-active");
   bodyYesScroll()
 });
@@ -74,16 +75,24 @@ mobMenuQuestionOverlay.addEventListener("click", function () {
   bodyYesScroll()
 });
 humb.addEventListener("mousemove", function () {
-  mobMenu.classList.add("active");
+  mobMenuSection.classList.add("active");
   bodyNoScroll()
 });
+humb.addEventListener("mousemove", function () {
+  mobMenuSection.classList.add("active");
+  bodyNoScroll()
+});
+overlayBg.addEventListener("mousemove", function () {
+  mobMenuSection.classList.remove("active");
+  bodyYesScroll()
+});
 // humb.addEventListener("click", function () {
-//   let kye = mobMenu.classList.contains("active");
+//   let kye = mobMenuSection.classList.contains("active");
 //   if (kye == false) {
-//     mobMenu.classList.add("active");
+//     mobMenuSection.classList.add("active");
 //     bodyNoScroll()
 //   }else {
-//     mobMenu.classList.remove("active");
+//     mobMenuSection.classList.remove("active");
 //     bodyYesScroll()
 //   }
 // });
