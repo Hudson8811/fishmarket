@@ -442,9 +442,9 @@ function initScrollAnimationDesktop(){
 		y: "0%",
 		// top: "0%",
 		y: -1 * (footerHeight - scHeight),
-		duration: 1,
+		duration: 0.5,
 		ease: "none",
-	}, "<-=0.2");
+	}, "<+=0.3");
 	tl1.fromTo(".footer__menu", {
 		right: "-100%",
 	}, {
