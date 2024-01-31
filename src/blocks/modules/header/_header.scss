@@ -1461,6 +1461,28 @@
 				}
 			}
 		}
+		&__content {
+			position: relative;
+			display: flex;
+			justify-content: flex-start;
+			align-items: flex-start;
+			width: 100%;
+			height: 100%;
+		}
+		&__answer {
+			position: relative;
+			display: flex;
+			width: 100%;
+			height: 100%;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+			max-width: vw(485);
+			color: #07171D;
+			text-transform: uppercase;
+			margin-left: auto;
+			margin-right: auto;
+		}
 		&__bottom {
 			position: relative;
 			display: flex;
@@ -1472,7 +1494,6 @@
 			padding-left: vw(30);
 			padding-right: vw(30);
 			transition: all .3s;
-			cursor: pointer;
 			cursor: pointer;
 			&:hover {
 				transition: all .3s;

@@ -1,0 +1,10 @@
+extends ../layouts/default
+include ../helpers/mixins
+
+block variables
+	- const title = "Catalog categories Page"
+
+block content
+	.scroll-page
+		include ../../blocks/components/assortment/assortment.pug
+		include ../../blocks/modules/footer/footer

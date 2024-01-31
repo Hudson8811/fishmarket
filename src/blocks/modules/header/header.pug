@@ -238,7 +238,7 @@ include ../../../blocks/modules/preloader/preloader
 				<svg xmlns="http://www.w3.org/2000/svg" width="14" height="10" viewBox="0 0 14 10" fill="none">
 				<path d="M12.6892 5.02344L1.28544 4.89898M7.96897 1.07606L12.6892 5.02344L7.96897 1.07606ZM12.6892 5.02344L8.53984 8.87402L12.6892 5.02344Z" stroke="white" stroke-width="1.33502" stroke-linecap="round" stroke-linejoin="round"/>
 				</svg>
-.mob-menu__section.mob-menu__question__section.js-mob-menu__section-question
+.mob-menu__section.mob-menu__question__section.js-mob-menu__section__question
 	.mob-menu--overlay.js-mob-menu__question--overlay
 	.mob-menu__question
 		.mob-menu__question__top 
@@ -302,6 +302,103 @@ include ../../../blocks/modules/preloader/preloader
 				.contacts__form__input-block__error обязательно нужно согласиться
 		.mob-menu__question__bottom
 			.mob-menu__question__bottom__text Отправить
+			.mob-menu__question__bottom__row
+				<svg xmlns="http://www.w3.org/2000/svg" width="14" height="10" viewBox="0 0 14 10" fill="none">
+				<path d="M12.6892 5.02344L1.28544 4.89898M7.96897 1.07606L12.6892 5.02344L7.96897 1.07606ZM12.6892 5.02344L8.53984 8.87402L12.6892 5.02344Z" stroke="white" stroke-width="1.33502" stroke-linecap="round" stroke-linejoin="round"/>
+				</svg>
+.mob-menu__section.mob-menu__question__section.js-pop-up__command
+	.mob-menu--overlay.js-pop-up__command--overlay
+	.mob-menu__question
+		.mob-menu__question__top 
+			.mob-menu__question__top__title
+				!="Стать частью команды SkyFish"
+			.mob-menu__question__top__close.js-pop-up__command--close
+				<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path fill-rule="evenodd" clip-rule="evenodd" d="M10.0291 8.98114L6.31035 5.26244C6.03029 4.98237 5.57622 4.98237 5.29616 5.26244C5.0161 5.5425 5.0161 5.99657 5.29616 6.27663L10.0291 11.0095L14.7619 6.27663C15.042 5.99657 15.042 5.5425 14.7619 5.26243C14.4819 4.98237 14.0278 4.98237 13.7478 5.26244L10.0291 8.98114Z" fill="white"/>
+				<path fill-rule="evenodd" clip-rule="evenodd" d="M10.0256 11.0423L13.7443 14.761C14.0244 15.0411 14.4785 15.0411 14.7585 14.761C15.0386 14.4809 15.0386 14.0269 14.7585 13.7468L10.0256 9.01392L5.29274 13.7468C5.01268 14.0269 5.01268 14.4809 5.29274 14.761C5.5728 15.0411 6.02687 15.0411 6.30693 14.761L10.0256 11.0423Z" fill="white"/>
+				</svg>
+		
+		form(action="").contacts__form  
+			.contacts__form__input-block
+				input(type="text", name="").contacts__form__input.js-mask-name.text__13
+				.contacts__form__input-block__name 	Имя*
+				.contacts__form__input-block__error Некорректное имя
+			.contacts__form__input-block
+				input(type="tel", name="").contacts__form__input.js-mask-phone
+				.contacts__form__input-block__name Телефон
+				.contacts__form__input-block__error Некорректный телефон
+			.contacts__form__input-block
+				input(type="email", name="").contacts__form__input.text__13
+				.contacts__form__input-block__name Почта
+				.contacts__form__input-block__error Некорректная почта					
+			//- .contacts__form__input-block
+			//- 	select.contacts__form__select.js-contacts__form__select(name="")
+			//- 		option Товар 1
+			//- 		option Товар 2
+			//- 		option Товар 3
+			//- 		option Товар 4
+			//- 		option Товар 5
+			//- 		option Товар 6
+			//- 		.localities-centers__select-arrow
+			//- 			<svg xmlns="http://www.w3.org/2000/svg" width="20" height="12" viewBox="0 0 20 12" fill="none">
+			//- 			<path d="M2 2L10.1667 10.1667L18.3333 2" stroke="#2A2A2A" stroke-width="2" stroke-linecap="square"/>
+			//- 			</svg>
+			
+			//- .contacts__form__delivery
+			//- 	.contacts__form__delivery__title Способ доставки
+			//- 	.contacts__form__delivery__row
+			//- 		.contacts__form__delivery__item 
+			//- 			<div class="checkbox">
+			//- 				<input class="custom-checkbox" type="checkbox" id="delivery__item-1" name="delivery__item-1" value="indigo">
+			//- 				<label for="delivery__item-1">Самовывоз</label>
+			//- 			</div>
+			//- 		.contacts__form__delivery__item 
+			//- 			<div class="checkbox">
+			//- 				<input class="custom-checkbox" type="checkbox" id="delivery__item-2" name="delivery__item-2" value="indigo">
+			//- 				<label for="delivery__item-2">Служба доставки SkyFish</label>
+			//- 			</div>
+				
+			.contacts__form__input-block
+				textarea(name="").contacts__form__input.text__13
+				.contacts__form__input-block__name Комментарий / Сопроводительное письмо
+				.contacts__form__input-block__error
+			.contacts__form__input-block
+				<div class="input-file-row">
+					<label class="input-file">
+							<input type="file" name="file[]" multiple>		
+							<span>Выберите файл</span>
+					</label>
+					<div class="input-file-list"></div>  
+				</div>  
+			.contacts__form__personal-data.contacts__form__input-block.error 
+				<div class="checkbox">
+					<input class="custom-checkbox" type="checkbox" id="personal-data " name="personal-data " value="indigo">
+					<label for="personal-data ">Согласие на обработку персональных данных </label>
+				</div>
+				.contacts__form__input-block__error обязательно нужно согласиться
+		.mob-menu__question__bottom
+			.mob-menu__question__bottom__text Отправить
+			.mob-menu__question__bottom__row
+				<svg xmlns="http://www.w3.org/2000/svg" width="14" height="10" viewBox="0 0 14 10" fill="none">
+				<path d="M12.6892 5.02344L1.28544 4.89898M7.96897 1.07606L12.6892 5.02344L7.96897 1.07606ZM12.6892 5.02344L8.53984 8.87402L12.6892 5.02344Z" stroke="white" stroke-width="1.33502" stroke-linecap="round" stroke-linejoin="round"/>
+				</svg>
+.mob-menu__section.mob-menu__question__section.js-pop-up__thanks
+	.mob-menu--overlay.js-pop-up__thanks--overlay
+	.mob-menu__question
+		.mob-menu__question__top 
+			.mob-menu__question__top__title
+				!=""
+			.mob-menu__question__top__close.js-pop-up__thanks--close
+				<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path fill-rule="evenodd" clip-rule="evenodd" d="M10.0291 8.98114L6.31035 5.26244C6.03029 4.98237 5.57622 4.98237 5.29616 5.26244C5.0161 5.5425 5.0161 5.99657 5.29616 6.27663L10.0291 11.0095L14.7619 6.27663C15.042 5.99657 15.042 5.5425 14.7619 5.26243C14.4819 4.98237 14.0278 4.98237 13.7478 5.26244L10.0291 8.98114Z" fill="white"/>
+				<path fill-rule="evenodd" clip-rule="evenodd" d="M10.0256 11.0423L13.7443 14.761C14.0244 15.0411 14.4785 15.0411 14.7585 14.761C15.0386 14.4809 15.0386 14.0269 14.7585 13.7468L10.0256 9.01392L5.29274 13.7468C5.01268 14.0269 5.01268 14.4809 5.29274 14.761C5.5728 15.0411 6.02687 15.0411 6.30693 14.761L10.0256 11.0423Z" fill="white"/>
+				</svg>
+		
+		.mob-menu__question__content
+			.mob-menu__question__answer.title__32
+				!="спасибо Ваша заявка отправлена"
+		a(href="#").mob-menu__question__bottom
+			.mob-menu__question__bottom__text На главную
 			.mob-menu__question__bottom__row
 				<svg xmlns="http://www.w3.org/2000/svg" width="14" height="10" viewBox="0 0 14 10" fill="none">
 				<path d="M12.6892 5.02344L1.28544 4.89898M7.96897 1.07606L12.6892 5.02344L7.96897 1.07606ZM12.6892 5.02344L8.53984 8.87402L12.6892 5.02344Z" stroke="white" stroke-width="1.33502" stroke-linecap="round" stroke-linejoin="round"/>
