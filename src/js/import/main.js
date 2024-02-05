@@ -331,6 +331,7 @@ function initScrollAnimationDesktop(){
 		duration: 0.5,
 		ease: "none",
 		// ease: "power1.out",
+		// ease: "circ.out",
 	}, "<+=0.6");
 	tl1.fromTo(".js-news__col--2", {
 		y: "10%",
@@ -351,7 +352,7 @@ function initScrollAnimationDesktop(){
 		y: -1 * (footerHeight - scHeight),
 		duration: 0.5,
 		ease: "none",
-	}, "<+=0.3");
+	}, "<+=0.2");
 	tl1.fromTo(".footer__menu", {
 		right: "-100%",
 	}, {
@@ -359,7 +360,7 @@ function initScrollAnimationDesktop(){
 		// y: -1 * (footerHeight - scHeight),
 		duration: 1,
 		ease: "none",
-	}, ">-=0.4");
+	}, ">-=1");
 	tl1.fromTo(".footer__title", {
 		left: "40%",
 	}, {
@@ -367,7 +368,7 @@ function initScrollAnimationDesktop(){
 		// y: -1 * (footerHeight - scHeight),
 		duration: 1,
 		ease: "none",
-	}, "<+=0.7");
+	}, "<+=0.5");
 
 
 
