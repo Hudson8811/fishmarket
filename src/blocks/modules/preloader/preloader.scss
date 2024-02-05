@@ -48,6 +48,7 @@
 				padding: 0;
 				margin: 0	;
 				background: $blueLight;
+				border: vw(5) solid $blueLight;
 				&:nth-child(1) {
 					animation: heightCol 1s ease 2.5s 1 normal forwards;
 					
@@ -67,9 +68,9 @@
 					animation: heightCol 1s ease 2.1s 1 normal forwards;
 				}
 
-				// @include max(md) {
-				// 	display: none;
-				// }
+				@include max(md) {
+					border: vw2(5) solid $blueLight;
+				}
 			}
 
 		}
@@ -90,7 +91,7 @@
 			top: auto;
 			bottom: 20vh;
 			height: vw2(40);
-			width: 100%;
+			width: 100vw;
 		}
 			img {
 				position: relative;
@@ -102,7 +103,7 @@
 				object-fit: cover;
 				object-position: left center;
 				@include max(md) {
-					height: vw2(40);
+
 				}
 			}
 		&__2 {
@@ -131,7 +132,7 @@
 		width: vw(171);
 		transition: all 0.3s;
 		@include max(md) {
-			width: vw2(240);
+			width: vw2(150);
 	}
 		&__wrap {
 			position: absolute;

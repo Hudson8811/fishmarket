@@ -347,13 +347,13 @@ function initScrollAnimationDesktop(){
 		ease: "none",
 	}, ">-=0.4");
 	tl1.fromTo(".footer__title", {
-		left: "100%",
+		left: "40%",
 	}, {
 		left: "-100%",
 		// y: -1 * (footerHeight - scHeight),
 		duration: 1,
 		ease: "none",
-	}, "<+=0.8");
+	}, "<+=0.7");
 
 
 

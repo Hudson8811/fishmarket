@@ -168,14 +168,9 @@ a, button {
         text-decoration: none;
         transition: all 0.3s;
         @include max(md) {
-            width: auto;
-            min-width: vw(250);
-            height: auto;
-            min-height: vw2(50);
+            width: vw2(260);
+            height: vw2(140);
             padding: vw2(20);
-            flex-flow: row-reverse nowrap;
-            justify-content: space-between;
-            align-items: center;
         }
 
         &:hover {
@@ -203,10 +198,9 @@ a, button {
             width: 100%;
             text-align: left; 
             @include max(md) {
-                font-size: vw2(24);
+                font-size: vw2(22);
                 font-style: normal;
                 line-height: 1.2;
-                margin-right: vw2(25);
             }           
         }
     }
@@ -590,7 +584,7 @@ a, button {
         @include max(sm) {
             max-width: 100%;
             margin-top: vw2(24);
-            font-size: vw2(12);
+            font-size: vw2(14);
             padding-left: vw2(10);
             padding-right: vw2(10);
         }
@@ -619,12 +613,14 @@ a, button {
         }
     }
     @include max(sm) {
+
     }
     &__section {
         z-index: 5;
 		@include max(md) {
 			margin-top: vw2(70);	
 			height: calc(100vh - vw2(70));
+            max-height: vw2(600);
 		}
     }
     &__slider {
@@ -759,9 +755,14 @@ a, button {
         background: #07171D;
         @include max(md) {
             position: relative;
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-start;
+            flex-flow: column nowrap;
             top: auto;
             left: auto;
-            height: calc(100vh - vw2(70));
+            height: 60vh;
+            padding-bottom: vw2(20);
         }
     }
     &__title {
@@ -771,15 +772,17 @@ a, button {
         white-space: nowrap;
         z-index: 10;
         @include max(md) {
-            top: vw2(20);
-            left: vw2(20);
-            white-space: wrap;
+            position: relative;
             width: 100%;
+            left: auto;
+            white-space: wrap;
             max-width: 95%;
             font-size: vw2(50);
             font-style: normal;
             font-weight: 500;
-            line-height: 1.2; 
+            line-height: 1.2;
+            left: vw2(20);
+            margin-bottom: vw2(30);
         }
     }
     &__subtitle{
@@ -789,11 +792,11 @@ a, button {
         max-width: vw(390);
         z-index: 10;
         @include max(md) {
-            top: auto;
-            right: auto;
+            position: relative;
             left: vw2(20);
-            bottom: vw2(140);
-            max-width: vw2(390);
+            top: auto;
+            max-width: 80%;
+            margin-bottom: vw2(30);
         }
     }
     &__btn {
@@ -802,8 +805,9 @@ a, button {
         left: vw(25);
         z-index:  20;
         @include max(md) {
-            bottom: vw2(20);
-            left: vw2(20);
+            position: relative;
+            left: vw2(20); 
+            bottom: auto;
         }
 
     }
@@ -814,6 +818,11 @@ a, button {
         display: flex;
         justify-content: flex-start;
         align-items: flex-start;
+        @include max(md) {
+            position: absolute;
+            top:0;
+            left: 0;
+        }
         video {
             position: relative;
             width: 100%;
@@ -834,6 +843,7 @@ a, button {
         color: rgba(255, 255, 255, 0.30);
       }
       @include max(md) {
+        width: 100%;
       }
     }
     &__section {
@@ -864,9 +874,9 @@ a, button {
                         padding-bottom: 0;
                     }
                     &:nth-child(1) {
-                        @include max(md) {
-                            display: none;
-                        }
+                        // @include max(md) {
+                        //     display: none;
+                        // }
                     }
                     &:nth-child(2) {
 
@@ -888,15 +898,17 @@ a, button {
         }
     }
     &__btn {
-        position: relative;
-       
-    }
-    &__btn {
         position: absolute;
         bottom: -100vh;
         top: auto;
         left: vw(25);
         z-index: 26;
+        @include max(md) {
+            position: relative;
+            bottom: auto;
+            top: auto;
+            left:auto;
+        } 
         &--start {
             &.active {
                 display: none;
@@ -980,8 +992,10 @@ a, button {
         background: #07171D;
         padding: vw(30) vw(40);
         @include max(md) {
+            justify-content: flex-start;
             padding: vw2(20);
             min-height: vw2(440);
+            padding-bottom: vw2(50);
         }  
         &__num {
             color: #fff;
@@ -993,6 +1007,7 @@ a, button {
             @include max(md) {
                 font-size: vw2(95);
                 line-height: 1.2;  /* 98.163% */
+                margin-bottom: vw2(40);
             }              
         }
         &__desc{
@@ -1241,15 +1256,22 @@ a, button {
                 } 
                 span {
                     color: $fontBlack;
+                    @include max(md) {
+                       font-size: vw2(16);
+                    } 
                 }
             }
             &__picture {
                 opacity: 0;
                 transition: all 0.5s;
+                @include max(md) {
+                    opacity: 1;
+                } 
                 &::before {
                     padding-top: 79.49%;
                     @include max(md) {
                         padding-top: 79.49%;
+                        opacity: 1;
                     } 
                 }
                 img {
@@ -1505,6 +1527,7 @@ a, button {
     z-index: 0;
     padding-left: vw(30);
     padding-right: vw(30);
+    margin-bottom: vw(30);
     &__input-block {
         position: relative;
         display: flex;
@@ -1630,6 +1653,8 @@ a, button {
     textarea {
         max-width: 100%;
         min-width: 100%;
+        min-height: vw(180);
+        padding-top: vw(20);
         &::-webkit-scrollbar {
             width: 10px;
             background-color: #fff;
@@ -1690,10 +1715,10 @@ a, button {
 }
 .contacts__form__input-block.contacts__form__personal-data {
     &.error {
-        .custom-checkbox:checked+label::before {
-            border-color: rgba(0, 0, 0, 0.2);
+        .custom-checkbox+label::before {
+            border-color: $red;
             background-color: #fff;
-            background-image: url(../img/custom-checkbox--red.png);
+            
         }
         .contacts__form__input-block__error {
             padding-left: vw(39);
