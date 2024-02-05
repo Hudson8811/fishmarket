@@ -343,7 +343,6 @@ function initScrollAnimationDesktop(){
 		duration: 0.8,
 		ease: "none",
 		onReverseComplete: function () {
-			console.log("onComplete")
 			$('.assortment__btn').removeClass('active');
 		},
 	}, ">");
@@ -397,6 +396,10 @@ function initScrollAnimationDesktop(){
 		// y: -1 * (b4Height - scHeight),
 		duration: 2,
 		ease: "none",
+		onStart: function () {
+			console.log("onStart")
+			$('.news__btn').addClass('active');
+		},
 	}, "<+=0.6");
 	tl1.fromTo(".js-advantage__col--1", {
 		y: "0%",
@@ -425,6 +428,17 @@ function initScrollAnimationDesktop(){
 		duration: 1,
 		ease: "none",
 	}, "<");
+	tl1.fromTo(".js-news__btn", {
+		// top: "0%",
+		marginTop: 0,
+	}, {
+		marginTop: "180%",
+		// y: -1 * (b2Height - scHeight),
+		// y: "-20%",
+		duration: 0.5,
+		ease: "none",
+		// ease: "power1.out",
+	}, "<+=0.6");
 	tl1.fromTo(".js-news__col--2", {
 		y: "10%",
 		top: "10%",

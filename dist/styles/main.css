@@ -3376,7 +3376,7 @@ button {
   display: inline-block;
   transition: all 0.3s;
   color: #FFF;
-  font-size: 0.625vw;
+  font-size: 0.7291666667vw;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
@@ -3604,7 +3604,7 @@ button {
 
 .text__12 {
   color: #FFF;
-  font-size: 0.625vw;
+  font-size: 0.7291666667vw;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
@@ -3864,6 +3864,10 @@ button {
   padding-bottom: 7.2395833333vw;
 }
 
+.news__section .layout--trio__news .layout--trio__col:nth-child(1) {
+  padding-bottom: 1.5625vw;
+}
+
 .news__section .container {
   z-index: 5;
 }
@@ -3882,12 +3886,13 @@ button {
 
 .news__btn--finish {
   display: none;
-  bottom: 1.71875vw;
   left: 0vw;
+  top: 0;
 }
 
 .news__btn--finish.active {
   display: flex;
+  position: relative;
 }
 
 .news__bg {
@@ -4653,7 +4658,7 @@ button {
   align-items: center;
   justify-content: flex-start;
   color: #07171D;
-  font-size: 0.625vw;
+  font-size: 0.7291666667vw;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
@@ -4677,7 +4682,7 @@ button {
 
 .contacts__form__input-block.no-border .select2-container--default .select2-selection--single .select2-selection__placeholder {
   color: #07171D;
-  font-size: 0.625vw;
+  font-size: 0.7291666667vw;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
@@ -6673,7 +6678,7 @@ button {
 .footer__menu__list__item {
   position: relative;
   color: #07171D;
-  font-size: 0.625vw;
+  font-size: 0.7291666667vw;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
@@ -6685,7 +6690,7 @@ button {
   position: relative;
   text-decoration: none;
   color: #07171D;
-  font-size: 0.625vw;
+  font-size: 0.7291666667vw;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
@@ -6704,7 +6709,7 @@ button {
   top: 1.3541666667vw;
   right: 0vw;
   color: rgba(7, 23, 29, 0.2);
-  font-size: 0.625vw;
+  font-size: 0.7291666667vw;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
@@ -7089,6 +7094,10 @@ button {
   }
 
   .news__section .layout--trio__news .layout--trio__col {
+    padding-bottom: 0;
+  }
+
+  .news__section .layout--trio__news .layout--trio__col:nth-child(1) {
     padding-bottom: 0;
   }
 

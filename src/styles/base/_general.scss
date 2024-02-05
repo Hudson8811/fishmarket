@@ -190,7 +190,7 @@ a, button {
             display: inline-block;
             transition: all 0.3s;
             color: #FFF;
-            font-size: vw(12);
+            font-size: vw(14);
             font-style: normal;
             font-weight: 600;
             line-height: normal;
@@ -507,7 +507,7 @@ a, button {
 }
 .text__12 {
     color: #FFF;
-    font-size: vw(12);
+    font-size: vw(14);
     font-style: normal;
     font-weight: 600;
     line-height: normal;
@@ -874,9 +874,10 @@ a, button {
                         padding-bottom: 0;
                     }
                     &:nth-child(1) {
-                        // @include max(md) {
-                        //     display: none;
-                        // }
+                        padding-bottom: vw(30);
+                        @include max(md) {
+                            padding-bottom: 0;
+                        }
                     }
                     &:nth-child(2) {
 
@@ -916,10 +917,13 @@ a, button {
         }
         &--finish {
             display: none;
-            bottom: 1.71875vw;
+            // bottom: 1.71875vw;
             left: vw(0);
+            top: 0;
             &.active {
                 display: flex;
+                position: relative;
+
             }
         }
 
@@ -1835,7 +1839,7 @@ a, button {
             align-items: center;
             justify-content: flex-start;
             color: #07171D;
-			font-size: vw(12);
+			font-size: vw(14);
 			font-style: normal;
 			font-weight: 600;
 			line-height: normal;
@@ -1862,7 +1866,7 @@ a, button {
         }
         .select2-container--default .select2-selection--single .select2-selection__placeholder {
             color: #07171D;
-            font-size: vw(12);
+            font-size: vw(14);
             font-style: normal;
             font-weight: 600;
             line-height: normal;
