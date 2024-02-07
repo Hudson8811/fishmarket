@@ -33,8 +33,10 @@ let sectionCommand = document.querySelector(".js-pop-up__command");
 let sectionCommandOverlay = document.querySelector(".js-pop-up__command--overlay");
 let sectionCommandClose = document.querySelector(".js-pop-up__command--close");
 let sectionCommandButton = document.querySelector(".js-pop-up__button--command");
+// console.log("sectionCommandButton")
 if(sectionCommand.length > 0 && sectionCommandButton.length > 0) {
   sectionCommandButton.addEventListener("click", function () {
+   
     sectionCommand.classList.add("active");
     bodyNoScroll()
   });

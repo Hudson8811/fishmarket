@@ -17,7 +17,33 @@
 			width: 100vw;
 			height: auto;
 			height: 100%;
-	}
+		}
+		&--personally {
+			top: auto;
+			height: calc(100vh - vw(00));
+			// padding-top: vw(90);
+			position: relative;
+			flex-flow: column nowrap;
+			width: 100vw;
+			@include max(md) {
+				position: relative;
+				flex-flow: column nowrap;
+				width: 100vw;
+				height: auto;
+				height: 100%;
+			}
+			.footer__menu {
+				height: calc(100vh - vw(00));
+				padding-top: vw(137);
+				@include max(md) {
+					padding: vw2(20);
+					height: 100%;
+				}
+			}
+			.footer__logo {
+				top: vw(137);
+			}
+		}
 	}
 	&__bg  {
 		position: absolute;
