@@ -137,7 +137,7 @@ include ../../../blocks/modules/preloader/preloader
 							<path d="M19.5365 0H21.4238V8.5591H19.0196V3.58232H17V1.9835L17.1923 1.97148C17.8415 1.93141 18.3544 1.76311 18.7311 1.46659C19.1077 1.16205 19.3762 0.673187 19.5365 0Z" fill="white"/>
 							</svg>
 						.header__other__item--cart__value 1
-					.header__other__item--personal.header__other__item
+					.header__other__item--personal.header__other__item.js-pop-up__button--login-register
 						a(href="#") 
 							<svg xmlns="http://www.w3.org/2000/svg" width="25" height="22" viewBox="0 0 25 22" fill="none">
 							<path d="M24.6474 12.8491C24.6474 6.30371 19.3222 0.978516 12.7768 0.978516C6.23144 0.978516 0.90625 6.30371 0.90625 12.8491C0.90625 15.9897 2.15846 19.0069 4.36152 21.2222C4.57433 19.6361 5.75272 18.2549 7.43248 17.693L10.9628 16.511C11.0294 16.489 11.1013 16.4913 11.1661 16.5176C12.2075 16.9443 13.3462 16.9443 14.3876 16.5176C14.4523 16.4913 14.5246 16.489 14.5909 16.511L18.1212 17.693C19.8009 18.2549 20.9793 19.6361 21.1921 21.2222C23.3952 19.0068 24.6474 15.9896 24.6474 12.8491ZM14.6435 15.265C14.0461 15.5636 13.4181 15.715 12.7768 15.715C12.1356 15.715 11.5075 15.5636 10.9102 15.265C9.08312 14.3514 7.80717 12.1558 7.80717 9.92568C7.80717 6.94413 10.0365 4.51861 12.7768 4.51861C15.5172 4.51861 17.7465 6.94413 17.7465 9.92568C17.7465 12.1558 16.4705 14.3514 14.6435 15.265Z" fill="#07171D"/>
@@ -308,6 +308,84 @@ include ../../../blocks/modules/preloader/preloader
 				<svg xmlns="http://www.w3.org/2000/svg" width="14" height="10" viewBox="0 0 14 10" fill="none">
 				<path d="M12.6892 5.02344L1.28544 4.89898M7.96897 1.07606L12.6892 5.02344L7.96897 1.07606ZM12.6892 5.02344L8.53984 8.87402L12.6892 5.02344Z" stroke="white" stroke-width="1.33502" stroke-linecap="round" stroke-linejoin="round"/>
 				</svg>
+.mob-menu__section.mob-menu__question__section.js-pop-up__login-register
+	.mob-menu--overlay.js-pop-up__login-register--overlay
+	.mob-menu__question
+		.mob-menu__question__top 
+			.mob-menu__question__top__tabs.nav-tabs
+				a(href="#" data-tab="1").nav-tab.active Tab 1
+			.mob-menu__question__top__close.js-pop-up__login-register--close
+				<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path fill-rule="evenodd" clip-rule="evenodd" d="M10.0291 8.98114L6.31035 5.26244C6.03029 4.98237 5.57622 4.98237 5.29616 5.26244C5.0161 5.5425 5.0161 5.99657 5.29616 6.27663L10.0291 11.0095L14.7619 6.27663C15.042 5.99657 15.042 5.5425 14.7619 5.26243C14.4819 4.98237 14.0278 4.98237 13.7478 5.26244L10.0291 8.98114Z" fill="white"/>
+				<path fill-rule="evenodd" clip-rule="evenodd" d="M10.0256 11.0423L13.7443 14.761C14.0244 15.0411 14.4785 15.0411 14.7585 14.761C15.0386 14.4809 15.0386 14.0269 14.7585 13.7468L10.0256 9.01392L5.29274 13.7468C5.01268 14.0269 5.01268 14.4809 5.29274 14.761C5.5728 15.0411 6.02687 15.0411 6.30693 14.761L10.0256 11.0423Z" fill="white"/>
+				</svg>
+		
+		form(action="").contacts__form  
+			.contacts__form__input-block
+				input(type="text", name="").contacts__form__input.js-mask-name.text__13
+				.contacts__form__input-block__name 	Имя*
+				.contacts__form__input-block__error Некорректное имя
+			.contacts__form__input-block
+				input(type="tel", name="").contacts__form__input.js-mask-phone
+				.contacts__form__input-block__name Телефон
+				.contacts__form__input-block__error Некорректный телефон
+			.contacts__form__input-block
+				input(type="email", name="").contacts__form__input.text__13
+				.contacts__form__input-block__name Почта
+				.contacts__form__input-block__error Некорректная почта					
+			//- .contacts__form__input-block
+			//- 	select.contacts__form__select.js-contacts__form__select(name="")
+			//- 		option Товар 1
+			//- 		option Товар 2
+			//- 		option Товар 3
+			//- 		option Товар 4
+			//- 		option Товар 5
+			//- 		option Товар 6
+			//- 		.localities-centers__select-arrow
+			//- 			<svg xmlns="http://www.w3.org/2000/svg" width="20" height="12" viewBox="0 0 20 12" fill="none">
+			//- 			<path d="M2 2L10.1667 10.1667L18.3333 2" stroke="#2A2A2A" stroke-width="2" stroke-linecap="square"/>
+			//- 			</svg>
+			
+			//- .contacts__form__delivery
+			//- 	.contacts__form__delivery__title Способ доставки
+			//- 	.contacts__form__delivery__row
+			//- 		.contacts__form__delivery__item 
+			//- 			<div class="checkbox">
+			//- 				<input class="custom-checkbox" type="checkbox" id="delivery__item-1" name="delivery__item-1" value="indigo">
+			//- 				<label for="delivery__item-1">Самовывоз</label>
+			//- 			</div>
+			//- 		.contacts__form__delivery__item 
+			//- 			<div class="checkbox">
+			//- 				<input class="custom-checkbox" type="checkbox" id="delivery__item-2" name="delivery__item-2" value="indigo">
+			//- 				<label for="delivery__item-2">Служба доставки SkyFish</label>
+			//- 			</div>
+				
+			.contacts__form__input-block
+				textarea(name="").contacts__form__input.text__13
+				.contacts__form__input-block__name Комментарий / Сопроводительное письмо
+				.contacts__form__input-block__error
+			.contacts__form__input-block
+				<div class="input-file-row">
+					<label class="input-file">
+							<input type="file" name="file[]" multiple>		
+							<span>Выберите файл</span>
+					</label>
+					<div class="input-file-list"></div>  
+				</div>  
+			.contacts__form__personal-data.contacts__form__input-block.error 
+				<div class="checkbox">
+					<input class="custom-checkbox" type="checkbox" id="personal-data " name="personal-data " value="indigo">
+					<label for="personal-data ">Согласие на обработку персональных данных </label>
+				</div>
+				.contacts__form__input-block__error обязательно нужно согласиться
+		.mob-menu__question__bottom
+			.mob-menu__question__bottom__text Отправить
+			.mob-menu__question__bottom__row
+				<svg xmlns="http://www.w3.org/2000/svg" width="14" height="10" viewBox="0 0 14 10" fill="none">
+				<path d="M12.6892 5.02344L1.28544 4.89898M7.96897 1.07606L12.6892 5.02344L7.96897 1.07606ZM12.6892 5.02344L8.53984 8.87402L12.6892 5.02344Z" stroke="white" stroke-width="1.33502" stroke-linecap="round" stroke-linejoin="round"/>
+				</svg>
+
+//- На отдельной странице pop-up
 .mob-menu__section.mob-menu__question__section.js-pop-up__command
 	.mob-menu--overlay.js-pop-up__command--overlay
 	.mob-menu__question

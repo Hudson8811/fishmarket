@@ -164,7 +164,7 @@
                 </div>
                 <div class="header__other__item--cart__value">1</div>
               </div>
-              <div class="header__other__item--personal header__other__item"><a href="#">
+              <div class="header__other__item--personal header__other__item js-pop-up__button--login-register"><a href="#">
                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="22" viewBox="0 0 25 22" fill="none">
 <path d="M24.6474 12.8491C24.6474 6.30371 19.3222 0.978516 12.7768 0.978516C6.23144 0.978516 0.90625 6.30371 0.90625 12.8491C0.90625 15.9897 2.15846 19.0069 4.36152 21.2222C4.57433 19.6361 5.75272 18.2549 7.43248 17.693L10.9628 16.511C11.0294 16.489 11.1013 16.4913 11.1661 16.5176C12.2075 16.9443 13.3462 16.9443 14.3876 16.5176C14.4523 16.4913 14.5246 16.489 14.5909 16.511L18.1212 17.693C19.8009 18.2549 20.9793 19.6361 21.1921 21.2222C23.3952 19.0068 24.6474 15.9896 24.6474 12.8491ZM14.6435 15.265C14.0461 15.5636 13.4181 15.715 12.7768 15.715C12.1356 15.715 11.5075 15.5636 10.9102 15.265C9.08312 14.3514 7.80717 12.1558 7.80717 9.92568C7.80717 6.94413 10.0365 4.51861 12.7768 4.51861C15.5172 4.51861 17.7465 6.94413 17.7465 9.92568C17.7465 12.1558 16.4705 14.3514 14.6435 15.265Z" fill="#07171D"/>
 </svg></a></div>
@@ -277,6 +277,63 @@
         </div>
       </div>
     </div>
+    <div class="mob-menu__section mob-menu__question__section js-pop-up__login-register">
+      <div class="mob-menu--overlay js-pop-up__login-register--overlay"></div>
+      <div class="mob-menu__question">
+        <div class="mob-menu__question__top"> 
+          <div class="mob-menu__question__top__tabs nav-tabs"><a class="nav-tab active" href="#" data-tab="1">Tab 1</a></div>
+          <div class="mob-menu__question__top__close js-pop-up__login-register--close"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M10.0291 8.98114L6.31035 5.26244C6.03029 4.98237 5.57622 4.98237 5.29616 5.26244C5.0161 5.5425 5.0161 5.99657 5.29616 6.27663L10.0291 11.0095L14.7619 6.27663C15.042 5.99657 15.042 5.5425 14.7619 5.26243C14.4819 4.98237 14.0278 4.98237 13.7478 5.26244L10.0291 8.98114Z" fill="white"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M10.0256 11.0423L13.7443 14.761C14.0244 15.0411 14.4785 15.0411 14.7585 14.761C15.0386 14.4809 15.0386 14.0269 14.7585 13.7468L10.0256 9.01392L5.29274 13.7468C5.01268 14.0269 5.01268 14.4809 5.29274 14.761C5.5728 15.0411 6.02687 15.0411 6.30693 14.761L10.0256 11.0423Z" fill="white"/>
+</svg>
+          </div>
+        </div>
+        <form class="contacts__form" action=""> 
+          <div class="contacts__form__input-block">
+            <input class="contacts__form__input js-mask-name text__13" type="text" name="">
+            <div class="contacts__form__input-block__name">	Имя*</div>
+            <div class="contacts__form__input-block__error">Некорректное имя</div>
+          </div>
+          <div class="contacts__form__input-block">
+            <input class="contacts__form__input js-mask-phone" type="tel" name="">
+            <div class="contacts__form__input-block__name">Телефон</div>
+            <div class="contacts__form__input-block__error">Некорректный телефон</div>
+          </div>
+          <div class="contacts__form__input-block">
+            <input class="contacts__form__input text__13" type="email" name="">
+            <div class="contacts__form__input-block__name">Почта</div>
+            <div class="contacts__form__input-block__error">Некорректная почта					</div>
+          </div>
+          <div class="contacts__form__input-block">
+            <textarea class="contacts__form__input text__13" name=""></textarea>
+            <div class="contacts__form__input-block__name">Комментарий / Сопроводительное письмо</div>
+            <div class="contacts__form__input-block__error"></div>
+          </div>
+          <div class="contacts__form__input-block"><div class="input-file-row">
+<label class="input-file">
+<input type="file" name="file[]" multiple>		
+<span>Выберите файл</span>
+</label>
+<div class="input-file-list"></div>  
+</div>  
+          </div>
+          <div class="contacts__form__personal-data contacts__form__input-block error">
+             <div class="checkbox">
+<input class="custom-checkbox" type="checkbox" id="personal-data " name="personal-data " value="indigo">
+<label for="personal-data ">Согласие на обработку персональных данных </label>
+</div>
+            <div class="contacts__form__input-block__error">обязательно нужно согласиться</div>
+          </div>
+        </form>
+        <div class="mob-menu__question__bottom">
+          <div class="mob-menu__question__bottom__text">Отправить</div>
+          <div class="mob-menu__question__bottom__row"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="10" viewBox="0 0 14 10" fill="none">
+<path d="M12.6892 5.02344L1.28544 4.89898M7.96897 1.07606L12.6892 5.02344L7.96897 1.07606ZM12.6892 5.02344L8.53984 8.87402L12.6892 5.02344Z" stroke="white" stroke-width="1.33502" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="mob-menu__section mob-menu__question__section js-pop-up__command">
       <div class="mob-menu--overlay js-pop-up__command--overlay"></div>
       <div class="mob-menu__question">
@@ -360,13 +417,83 @@
     </div>
     <main class="site-main">
       <div class="scroll-page">
-        <div class="section section--first vacancy__section">
+        <div class="section section--first section__white vacancy__section">
           <div class="container">
             <div class="layout">
               <div class="layout__col">
-                <div class="vacancy__section__title title__52">Менеджер по продажам
+                <div class="vacancy">
+                  <div class="vacancy__title title__52">Менеджер по продажам
+                  </div>
+                  <div class="vacancy__description">
+                    <div class="vacancy__cost title__24">от 100 000 ₽ на руки</div>
+                    <div class="vacancy__location">
+                      <div class="vacancy__location__icon">
+                         <svg xmlns="http://www.w3.org/2000/svg" width="21" height="27" viewBox="0 0 21 27" fill="none">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M21 11.306C21 17.2697 12.2324 25.4226 11.2326 26.3323C10.8182 26.71 10.1838 26.7081 9.77177 26.3278C8.76759 25.4225 0 17.2696 0 11.3059C0 5.06168 4.70092 0 10.4999 0C16.2986 0 21 5.06196 21 11.306ZM15.2728 10.6073C15.2728 13.27 13.1359 15.4287 10.5001 15.4287C7.86421 15.4287 5.72735 13.27 5.72735 10.6073C5.72735 7.94452 7.86421 5.78584 10.5001 5.78584C13.1359 5.78584 15.2728 7.94452 15.2728 10.6073Z" fill="#44C8F5"/>
+</svg>
+                      </div>
+                      <div class="vacancy__location__text text__18">Москва</div>
+                    </div>
+                    <div class="vacancy__row"> 
+                      <div class="vacancy__experience">
+                        <div class="vacancy__experience__title text__12">Опыт работы:</div>
+                        <div class="vacancy__experience__text text__12">не требуется</div>
+                      </div>
+                      <div class="vacancy__schedule">
+                        <div class="vacancy__schedule__title text__12">График работы:</div>
+                        <div class="vacancy__schedule__text text__12">понедельник- пятница с 9:00 до 18:00</div>
+                      </div>
+                    </div>
+                    <div class="vacancy__list">
+                      <div class="vacancy__list__title title__24">Обязанности</div>
+                      <ul> 
+                        <li>Выстраивание долгосрочных отношений с клиентами</li>
+                        <li>Развитие активной клиентской базы: работа с действующими и поиск новых клиентов (действенные инструменты есть!)</li>
+                        <li>Проводить переговоры на уровне первых лиц компании</li>
+                        <li>Обеспечивать полный цикл работы с клиентами</li>
+                        <li>Вести отчетность в CRM системе и внутренний документооборот</li>
+                      </ul>
+                    </div>
+                    <div class="vacancy__list">
+                      <div class="vacancy__list__title title__24">Требования:</div>
+                      <ul> 
+                        <li>Высокий уровень самоорганизации и нацеленность на результат</li>
+                        <li>Практический опыт продаж приветствуется</li>
+                        <li>Навыки в поиске и привлечении новых клиентов приветствуется</li>
+                        <li>Навыки работы в CRM приветствуется (1С, Битрикс 24)</li>
+                        <li>Личные качества: отличные коммуникативные навыки (устные и письменные)</li>
+                      </ul>
+                    </div>
+                    <div class="vacancy__list">
+                      <div class="vacancy__list__title title__24">Условия:</div>
+                      <ul> 
+                        <li> Высокий уровень самоорганизации и нацеленность на результат</li>
+                        <li>Практический опыт продаж приветствуется</li>
+                        <li>Навыки в поиске и привлечении новых клиентов приветствуется</li>
+                        <li>Навыки работы в CRM приветствуется (1С, Битрикс 24)</li>
+                        <li>Личные качества: отличные коммуникативные навыки (устные и письменные)</li>
+                      </ul>
+                    </div>
+                    <div class="vacancy__skills">
+                      <div class="vacancy__skills__title title__24">Ключевые навыки</div>
+                      <div class="vacancy__skills__list">
+                        <div class="vacancy__skills__list__item text__18">Активные продажи</div>
+                        <div class="vacancy__skills__list__item text__18">Поиск и привлечение клиентов</div>
+                        <div class="vacancy__skills__list__item text__18">Деловое общение</div>
+                        <div class="vacancy__skills__list__item text__18">Стрессоустойчивость</div>
+                        <div class="vacancy__skills__list__item text__18">Коммуникабельность</div>
+                        <div class="vacancy__skills__list__item text__18">Работа с большим объемом информации</div>
+                      </div>
+                    </div>
+                    <div class="vacancy__contacts">
+                      <div class="vacancy__contacts__title title__24">Контактная информация:</div><a class="vacancy__contacts__link text__18" href="tel:+88000000000"> тел.: 8 800 000-00-00</a><a class="vacancy__contacts__link text__18" href="mailto:">e-mail: info@skyfish.ru</a>
+                    </div>
+                    <div class="vacancy__adress"> 
+                      <div class="vacancy__adress__title title__24">Адрес: </div>
+                      <div class="vacancy__adress__text text__18">Москва, Новомосковский административный округ, Киевское шоссе, 21-й километр, 3с1</div>
+                    </div>
+                  </div>
                 </div>
-                <div class="vacancy"></div>
               </div>
               <div class="layout__col">
                 <div class="phone-call">
@@ -381,9 +508,9 @@
               </div>
             </div>
           </div>
-          <div class="contacts__map">
-            <div class="contacts__map__item" id="js-map"></div>
-          </div>
+        </div>
+        <div class="contacts__map">
+          <div class="contacts__map__item" id="js-map"></div>
         </div>
         <footer class="footer footer__animation footer__animation--personally js-footer__animation">
           <div class="footer__logo"> <img src="img/logo__white.png" alt=""></div>

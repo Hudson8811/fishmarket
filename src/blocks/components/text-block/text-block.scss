@@ -6,163 +6,141 @@
     margin-bottom: 0px;
   }
   h1 {
-    color: $black;
-    font-size: vw(95);
+    color: $fontBlack;
+    font-size: vw(82);
     font-style: normal;
     font-weight: 500;
-    line-height: vw(90.03); /* 98.163% */
-    letter-spacing: vw(-3.859);
+    line-height: 97.228%; /* 79.796px */
+    text-transform: uppercase;
     @include max(md) {
-      font-size: vw2(45);
-      font-style: normal;
-      font-weight: 500;
-      line-height: 1.2;  /* 98.163% */
-      letter-spacing: vw2(-3.859);  
-    }
-    span {
-        color: #B3B4B7;
-        &.green {
-            color: #25CA6A;
-        }
-    }
+        font-size: vw2(50);
+        font-style: normal;
+        font-weight: 500;
+        line-height: 1.2;  /* 98.163% */
+    } 
   }
   h2 {
-    color: $black;
-    font-size: vw(80);
+    color: $fontBlack;
+    font-size: vw(52);
     font-style: normal;
     font-weight: 500;
-    line-height: vw(78.53); /* 98.163% */
-    letter-spacing: vw(-3.859);
-    span {
-        color: #B3B4B7;
-        &.green {
-            color: #25CA6A;
-        }
-    }
-    @include max(md) {
-        font-size: vw2(40);
-        font-style: normal;
-        font-weight: 500;
-        line-height: 1.2; /* 98.163% */
-        letter-spacing: vw2(-3.859);  
-    }
-  }
-  h3 {
-    color: $black;
-    font-size: vw(59);
-    font-style: normal;
-    font-weight: 500;
-    line-height: vw(66.17); /* 98.163% */
-    letter-spacing: vw(-0.908);
-    span {
-        color: #B3B4B7;
-        &.green {
-            color: #25CA6A;
-        }
-    }
-
-    @include max(md) {
-        font-size: vw2(35);
-        font-style: normal;
-        font-weight: 500;
-        line-height: 1.2; /* 98.163% */
-        letter-spacing: vw2(-0.908);
-    }
-  }
-  h4 {
-    color: $black;
-    font-size: vw(40);
-    font-style: normal;
-    font-weight: 500;
-    line-height: vw(42); /* 102.926% */
-    letter-spacing: vw(-1.408);
-    span {
-        color: #B3B4B7;
-        &.green {
-            color: #25CA6A;
-        }
-    }
-
+    line-height: 97.228%; /* 50.559px */
+    text-transform: uppercase;
+    
     @include max(md) {
         font-size: vw2(32);
         font-style: normal;
-        line-height: 1.2; /* 98.163% */
-        letter-spacing: vw2(-1.408);
+        font-weight: 500;
+        line-height: 1.2;  /* 98.163% */
+    } 
+  }
+  h3 {
+    color: $fontBlack;
+    font-size: vw(32);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+    @include max(md) {
+        font-size: vw2(32);
+        line-height: 1.2;  /* 98.163% */
+    }
+
+
+  }
+  h4 {
+    color: $fontBlack;
+    font-size: vw(24);
+    font-style: normal;
+    font-weight: 500;
+    line-height: 97.228%;
+    @include max(md) {
+        font-size: vw2(24);
+        font-style: normal;
+        line-height: 1.2;  /* 98.163% */
     }
   }
   p {
-    color: $black;
-    font-size: vw(20);
+    font-size: vw(18);
     font-style: normal;
     font-weight: 400;
-    line-height: vw(27); /* 131.25% */ 
+    color: $fontBlack;
+    line-height: 140.625%;
     @include max(md) {
-        font-size: vw2(22);
+        font-size: vw2(24);
         font-style: normal;
-        line-height: 1.2; /* 98.163% */
-    }  
+        line-height: 1.2;  /* 98.163% */
+    }
     &:last-child {
       margin-bottom: 0;
     }
   }
   ul {
-		position: relative;
-		display: block;
-		width: 100%;
-		padding-left: vw(15);
-		padding-top: 0;
-		margin-top: 0;
-    color: $black;
-    font-size: vw(20);
+    position: relative;
+    display: block;
+    width: 100%;
+    padding-left: vw(34);
+    padding-right: vw(20);
+    padding-top: 0;
+    margin-top: 0;
+    font-size: vw(18);
     font-style: normal;
     font-weight: 400;
-    line-height: vw(27); /* 131.25% */ 
+    color: $fontBlack;
+    line-height: 140.625%;
     @include max(md) {
-        font-size: vw2(22);
+        font-size: vw2(24);
         font-style: normal;
-        line-height: 1.2; /* 98.163% */
-        margin-bottom: vw(10);
-    }  
-		li {
-			position: relative;
-			list-style-type: none;
-      color: #0C2448;
-      font-size: vw(20);
-      font-style: normal;
-      font-weight: 400;
-      line-height: vw(27); /* 131.25% */ 
-      @include max(md) {
-          font-size: vw2(22);
-          font-style: normal;
-          line-height: 1.2; /* 98.163% */
-      }  
-			&::before {
-				content: '';
-				display: block;
-				height: 1px;
-				width: vw(6);
-				-webkit-border-radius: 50%;
-				-moz-border-radius: 50%;
-				border-radius: 50%;
-				background-color: $black;
-				left: vw(-15);
-				top: vw(14);
-				position: absolute;
-			}
-		}
-	}
+        line-height: 1.2;  /* 98.163% */
+        padding-left: vw2(25);
+        padding-right: vw2(10);
+    } 
+    li {
+        position: relative;
+        list-style-type: none;
+        font-size: vw(18);
+        font-style: normal;
+        font-weight: 400;
+        color: $fontBlack;
+        line-height: 140.625%;
+        margin-bottom: vw(7);
+        @include max(md) {
+            font-size: vw2(24);
+            font-style: normal;
+            line-height: 1.2;  /* 98.163% */
+            margin-bottom: vw2(15);
+        }
+        &::before {
+            content: '';
+            display: block;
+            height: vw(12);
+            width: vw(12);
+            border-radius: 50%;
+            background-color: #44C8F5;
+            left: vw(-27);
+            top: vw(7);
+            position: absolute;
+            @include max(md) {
+                height: vw2(8);
+                width: vw2(8);
+                left: vw2(-15);
+                top: vw2(10);
+            }
+        }
+    }
+  }
   a {
     cursor: pointer;
-    color: $black;
-    font-size: vw(20);
+    color: $fontBlack;
+    font-size: vw(18);
     font-style: normal;
     font-weight: 400;
-    line-height: vw(27); /* 131.25% */ 
+    color: $fontBlack;
+    line-height: 140.625%;
     @include max(md) {
-        font-size: vw2(22);
+        font-size: vw2(24);
         font-style: normal;
-        line-height: 1.2; /* 98.163% */
-    }  
+        line-height: 1.2;  /* 98.163% */
+    }
     text-decoration: underline;
     transition: all .3s;
     &:hover {
@@ -294,45 +272,5 @@
       object-fit: contain;
       object-position: center center;
     }
-  }
-  &.blue {
-    h1 {
-      color: #0C2448;
-    }
-    h2 {
-      color: #0C2448;
-    }
-    h3 {
-      color: #0C2448;
-
-    }
-    h4 {
-      color: #0C2448;
-    }
-    p {
-      color: #0C2448;
-    }
-    ul {
-      color: #0C2448;
-      li {
-        color: #0C2448;
-      }
-    }
-    a {
-      color: #0C2448;
-      
-    }
-    table {
-      th {
-        color: #0C2448;
-
-      }
-      td {
-        color: #0C2448;
-
-      }
-  
-    }
-   
   }
 }

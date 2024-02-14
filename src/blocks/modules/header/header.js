@@ -27,14 +27,69 @@ let searchBtn = document.querySelector(".js-search__btn");
 let search = document.querySelector(".search");
 let searchOverlay = document.querySelector(".search--overlay");
 
+	///tabs
+  function tabAllClick(navs, panes) {
+    var tabNavs = navs;
+    var tabPanes = panes;
+    // var tabNavs = document.querySelectorAll(".nav-tab");
+    // var tabPanes = document.querySelectorAll(".tab-pane");
+    if(tabNavs !==null & tabPanes !==null) {
+      tabClick() 
+    }
+    function tabClick() {
+      for (var i = 0; i < tabNavs.length; i++) {
+  
+        tabNavs[i].addEventListener("click", function(e){
+          e.preventDefault();
+          var activeTabAttr = e.target.getAttribute("data-tab");
+    
+          for (var j = 0; j < tabNavs.length; j++) {
+            var contentAttr = tabPanes[j].getAttribute("data-tab-content");
+    
+            if (activeTabAttr === contentAttr) {
+              tabNavs[j].classList.add("active");
+              tabPanes[j].classList.add("active"); 
+            } else {
+              tabNavs[j].classList.remove("active");
+              tabPanes[j].classList.remove("active");
+            }
+          };
+        });
+      }
+    }
+  }
 
+	///tabs
+//Pop-up login-register
+let loginRegister = document.querySelector(".js-pop-up__login-register");
+let loginRegisterOverlay = document.querySelector(".js-pop-up__login-register--overlay");
+let loginRegisterClose = document.querySelector(".js-pop-up__login-register--close");
+let loginRegisterButton = document.querySelector(".js-pop-up__button--login-register");
+if( loginRegisterButton !== null) {
+  loginRegisterButton.addEventListener("click", function () {
+   
+    loginRegister.classList.add("active");
+    bodyNoScroll()
+  });
+  loginRegisterClose.addEventListener("click", function () {
+    loginRegister.classList.remove("active");
+    bodyYesScroll()
+  });
+  loginRegisterOverlay.addEventListener("click", function () {
+    loginRegister.classList.remove("active");
+    bodyYesScroll()
+  });
+}
+
+
+//Pop-up login-register
 //Pop-up Command
 let sectionCommand = document.querySelector(".js-pop-up__command");
 let sectionCommandOverlay = document.querySelector(".js-pop-up__command--overlay");
 let sectionCommandClose = document.querySelector(".js-pop-up__command--close");
 let sectionCommandButton = document.querySelector(".js-pop-up__button--command");
 // console.log("sectionCommandButton")
-if(sectionCommand.length > 0 && sectionCommandButton.length > 0) {
+if( sectionCommandButton !== null) {
   sectionCommandButton.addEventListener("click", function () {
    
     sectionCommand.classList.add("active");
@@ -49,15 +104,15 @@ if(sectionCommand.length > 0 && sectionCommandButton.length > 0) {
     bodyYesScroll()
   });
 }
-
 //Pop-up Command
+
 //Pop-up thanks
 let sectionThanks = document.querySelector(".js-pop-up__thanks");
 let sectionThanksOverlay = document.querySelector(".js-pop-up__thanks--overlay");
 let sectionThanksClose = document.querySelector(".js-pop-up__thanks--close");
 let sectionThanksButton = document.querySelector(".js-pop-up__button--thanks");
 
-if(sectionThanks.length > 0 && sectionThanksButton.length > 0) {
+if(sectionThanksButton !== null) {
   sectionThanksButton.addEventListener("click", function () {
     sectionThanks.classList.add("active");
     bodyNoScroll()
