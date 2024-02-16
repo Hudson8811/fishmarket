@@ -14,13 +14,14 @@ mixin product-card(props = defaultProductCardProps)
         let typeClass = checkProps.type === "card" ? "product-card--card" : "product-card--row"
 
     .product-card(class= typeClass + " " + checkProps.classes)
-        .product-card__title Семга (лосось) потр.с/г 2-3 ord охлажденная
-        .product-card__vcode Арт.: 6425642-S
-        .product-card__photo
-            img(src="img/product_card_salmon.png" alt="Семга (лосось) потр.с/г 2-3 ord охлажденная")
-        .product-card__controls
-            .product-card__price 500 Р
-            .product-card__counter - 1 +
+        .product-card__container
+            .product-card__title Семга (лосось) потр.с/г 2-3 ord охлажденная
+            .product-card__vcode Арт.: 6425642-S
+            .product-card__photo
+                img(src="img/product_card_salmon.png" alt="Семга (лосось) потр.с/г 2-3 ord охлажденная")
+            .product-card__controls
+                .product-card__price 500 Р
+                .product-card__counter - 1 +
         .product-card__info.card-info
             .card-info__row
                 .card-info__param Страна происхождения
@@ -31,6 +32,33 @@ mixin product-card(props = defaultProductCardProps)
             .card-info__row
                 .card-info__param Спецификация
                 .card-info__value потр., с/г, ord, охл.
+        .product-card__btns
+            +new-btn({
+                classes: 'product-card__offer',
+                tag: 'button',
+                vMode: 'small',
+                text: 'Получить предложение',
+                icon: 'true',
+                iconName: 'arrow_btn',
+                cMode: 'black',
+            })
+            +new-btn({
+                classes: 'product-card__cart',
+                tag: 'button',
+                vMode: 'icon',
+                icon: 'true',
+                iconName: 'cart',
+                cMode: 'blue',
+            })
+            +new-btn({
+                classes: 'product-card__more',
+                tag: 'button',
+                vMode: 'small',
+                text: 'Подробнее',
+                icon: 'true',
+                iconName: 'arrow_btn',
+                cMode: 'white',
+            })
 
 
 

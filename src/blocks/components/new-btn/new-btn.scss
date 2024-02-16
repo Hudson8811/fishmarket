@@ -42,9 +42,10 @@
     &--small {
         width: 100%;
         display: flex;
-        padding: vw(27) vw(29) vw(29) vw(22);
+        padding: vw(30) vw(25) vw(30) vw(18);
         align-items: center;
         justify-content: space-between;
+        transition: all $tr-time linear;
         .new-btn__icon {
             display: flex;
             justify-content: center;
@@ -57,46 +58,49 @@
                 width: vw(12);
                 height: vw(8);
             }
-            svg use {
-                //stroke: $c-white;
-            }
         }
     }
     &--blue {
-        //background-color: $c-accent-btn;
-        //color: $c-white;
+        background-color: $blueLight;
+        color: $white;
         &:hover {
-            //background-color: $c-accent-btn-hover;
+            background-color: $blueHover;
         }
     }
     &--black {
-        //background-color: $c-dark-bg;
-        //color: $c-white;
+        background-color: $fontBlack;
+        color: $white;
         .new-btn__icon {
-            //background-color: $c-accent-btn;
+            svg {
+                stroke: $white;
+                fill: none;
+            }
         }
         &:hover {
-            //background-color: $c-accent-btn-hover;
-            .btn__icon {
-                //background-color: $c-white;
-            }
+            background-color: $blueHover;
         }
     }
     &--white {
-        //background-color: $c-white;
-        ///color: $c-accent-btn;
+        background-color: $white;
+        color: $black;
         .new-btn__icon {
-            //background-color: $c-accent-btn;
+            svg {
+                stroke: $fontBlack;
+                fill: none;
+            }
         }
         &:hover {
-            //background-color: $c-accent-btn-hover;
-            //color: $c-white;
-            .btn__icon {
-                //background-color: $c-white;
+            background-color: $blueHover;
+            color: $white;
+            .new-btn__icon {
+                svg {
+                    stroke: $white;
+                    fill: none;
+                }
             }
         }
     }
-    
+
     &--transparent {
         background-color: transparent;
     }

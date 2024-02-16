@@ -1,5 +1,34 @@
 .product-card {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid $greyLight;
+    position: relative;
+    background-color: $white;
+    &__container {
+        margin: vw(21) vw(20) 0;
+        display: flex;
+        flex-direction: column;
+        flex-basis: auto;
+        flex-shrink: 1;
+        flex-grow: 1;
+    }
+    &__title {
+        font-size: vw(24);
+        font-weight: 500;
+        line-height: 0.958;
+        color: $fontBlack;
+    }
+    &__vcode {
+        margin: vw(11) 0 vw(5);
+        font-size: vw(12);
+        font-weight: 600;
+        line-height: 1.22;
+        color: $black;
+
+    }
     &__photo {
+        margin: auto 0 vw(5);
+        height: vw(395);
         width: 100%;
         height: auto;
         img {
@@ -8,4 +37,86 @@
             object-fit: contain;
         }
     }
+    &__controls {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__price {
+        padding: vw(12) vw(26) vw(16);
+        font-size: vw(24);
+        font-weight: 600;
+        line-height: 1.22;
+        color: $fontBlack; 
+        border: 1px solid $greyLight;
+    }
+    &__info {
+        margin-top: vw(17);
+        .card-info__row {
+            display: flex;
+            justify-content: space-between;
+            padding: vw(3) vw(18);
+            font-size: vw(12);
+            font-weight: 600;
+            line-height: 1.25;
+            text-transform: uppercase;
+            color: $black;
+            &__param {
+                opacity: 0.4;
+            }
+        }
+        .card-info__row:nth-child(odd) {
+            background-color: $greyBg;
+        }
+    }
+
+    &__btns {
+        border: 1px solid $greyLight;
+        border-top-width: 0px;
+        position: absolute;
+        left: 0;
+        top: 100%;
+        width: 100%;
+        display: grid;
+        grid-template-columns: auto vw(75);
+        grid-template-areas: 'a b'
+                            'c c';
+        
+        z-index: -1;
+        opacity: 0;
+        transition: all $tr-time linear;
+    }
+    &__offer.new-btn {
+        grid-area: a;
+    }
+    &__cart.new-btn {
+        grid-area: b;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 0;
+        width: auto;
+        height: auto;
+        .new-btn__icon {
+            width: vw(24);
+            height: vw(23);
+            svg, svg use {
+                width: vw(24);
+                height: vw(23);
+                fill: inherit;
+                stroke: inherit;  
+            }
+        }
+    }
+    &__more.new-btn {
+        grid-area: c;
+    }
+
+    &:hover {
+        .product-card__btns {
+            z-index: 5;
+            opacity: 1;
+        }
+    }
+
 }

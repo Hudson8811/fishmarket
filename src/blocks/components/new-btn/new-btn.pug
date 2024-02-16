@@ -33,7 +33,7 @@ mixin new-btn(props = defaultNewBtnProps)
             if (checkProps.vMode !== 'icon')
                 span.new-btn__text= checkProps.text
             if (checkProps.icon === 'true')
-                span.new-btn
+                span.new-btn__icon
                     svg
                         use(xlink:href=`img/sprites/sprite.svg#${checkProps.iconName}`)
     else if (checkProps.tag === 'link')

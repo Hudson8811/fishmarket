@@ -1,15 +1,34 @@
 .category-intro {
     padding-top: vw(286);
+    padding-bottom: vw(38);
     &__title {
         color: $fontBlack;
-    }
-    &__list {
-        
     }
     &__controls {
         display: flex;
         justify-content: flex-end;
         gap: vw(16);
+    }
+    &__mode-btn.new-btn {
+        width: vw(28);
+        height: vw(28);
+        .new-btn__icon {
+            width: vw(28);
+            height: vw(28);
+            svg {
+                width: vw(28);
+                height: vw(28);
+                use {
+                    fill: $greyLight;
+                    stroke: none;
+                }
+            }
+        }
+        &:hover, &.active {
+            .new-btn__icon svg use {
+                fill: $fontBlack;
+            }
+        }
     }
     &__cards {
         display: grid;
@@ -17,5 +36,8 @@
         row-gap: vw(39);
         column-gap: vw(34);
         margin-top: 30px;
+    }
+    &__pagination {
+        margin-top: vw(152);
     }
 }

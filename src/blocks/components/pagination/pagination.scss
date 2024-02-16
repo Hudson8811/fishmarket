@@ -1,0 +1,31 @@
+.pagination {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    gap: vw(11);
+    &__page {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: vw(75);
+        height: vw(75);
+        background-color: $white;
+        border: 1px solid $greyLight;
+        color: $fontBlack;
+        font-size: vw(24);
+        font-weight: 600;
+        line-height: 1.2;
+        transition: $tr-time; 
+        &.active, &:hover {
+            background-color: $blueHover;
+            color: $white;
+        }
+    }
+    &__btn {
+        width: vw(75);
+        height: vw(75);
+        border-radius: 0;
+    }
+}

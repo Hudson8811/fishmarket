@@ -1,5 +1,6 @@
 include ../../../../components/title/title.pug
 include ../../../../components/new-btn/new-btn.pug
+include ../../../../components/pagination/pagination.pug
 include ../../../../components/product-card/product-card.pug
 
 section.category-intro 
@@ -8,14 +9,14 @@ section.category-intro
         .category-intro__list
             .category-intro__controls
                 +new-btn({
-                    classes: '.category-intro__mode-btn',
+                    classes: 'category-intro__mode-btn active',
                     tag: 'button',
                     vMode: 'icon',
                     iconName: 'cards_mode',
                     cMode: 'transparent',
                 })
                 +new-btn({
-                    classes: '.category-intro__mode-btn',
+                    classes: 'category-intro__mode-btn',
                     tag: 'button',
                     vMode: 'icon',
                     iconName: 'rows_mode',
@@ -34,3 +35,9 @@ section.category-intro
                 +product-card("category-intro__card")
                 +product-card("category-intro__card")
                 +product-card("category-intro__card")
+
+            +pagination({
+                classes: "category-intro__pagination"
+            })
+
+
