@@ -1,0 +1,21 @@
+.category-intro {
+    padding-top: vw(286);
+    &__title {
+        color: $fontBlack;
+    }
+    &__list {
+        
+    }
+    &__controls {
+        display: flex;
+        justify-content: flex-end;
+        gap: vw(16);
+    }
+    &__cards {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        row-gap: vw(39);
+        column-gap: vw(34);
+        margin-top: 30px;
+    }
+}

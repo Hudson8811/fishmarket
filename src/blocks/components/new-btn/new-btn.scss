@@ -1,0 +1,131 @@
+.new-btn {
+    font-family: 'Commissioner', sans-serif;
+    font-size: vw(12);
+    text-transform: uppercase;
+    font-weight: 600;
+    line-height: 1.225;
+    border: none;
+    transition: all $tr-time linear;
+    text-decoration: none;
+    cursor: pointer;
+    &--link {
+        //color: $c-accent;
+        background-color: transparent;
+        &:hover {
+            //color: $c-accent-btn-hover;
+        }
+    }
+    &--big {
+        width: vw(411);
+        display: flex;
+        padding: vw(20) vw(20) vw(22);
+        align-items: flex-end;
+        justify-content: space-between;
+        .new-btn__icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: vw(59);
+            height: vw(59);
+            background-color: $white;
+            border-radius: 100%;
+            margin-bottom: vw(120);
+            svg {
+                width: vw(11);
+                height: vw(8);
+            }
+            svg use {
+                //stroke: $c-dark-bg;
+            }
+        }
+    }
+    &--small {
+        width: 100%;
+        display: flex;
+        padding: vw(27) vw(29) vw(29) vw(22);
+        align-items: center;
+        justify-content: space-between;
+        .new-btn__icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: vw(12);
+            height: vw(8);
+            background-color: transparent;
+            margin-bottom: 0;
+            svg {
+                width: vw(12);
+                height: vw(8);
+            }
+            svg use {
+                //stroke: $c-white;
+            }
+        }
+    }
+    &--blue {
+        //background-color: $c-accent-btn;
+        //color: $c-white;
+        &:hover {
+            //background-color: $c-accent-btn-hover;
+        }
+    }
+    &--black {
+        //background-color: $c-dark-bg;
+        //color: $c-white;
+        .new-btn__icon {
+            //background-color: $c-accent-btn;
+        }
+        &:hover {
+            //background-color: $c-accent-btn-hover;
+            .btn__icon {
+                //background-color: $c-white;
+            }
+        }
+    }
+    &--white {
+        //background-color: $c-white;
+        ///color: $c-accent-btn;
+        .new-btn__icon {
+            //background-color: $c-accent-btn;
+        }
+        &:hover {
+            //background-color: $c-accent-btn-hover;
+            //color: $c-white;
+            .btn__icon {
+                //background-color: $c-white;
+            }
+        }
+    }
+    
+    &--transparent {
+        background-color: transparent;
+    }
+
+    &--icon {
+        display: block;
+        width: vw(59);
+        height: vw(59);
+        border-radius: 100%;
+        padding: 0;
+        &:hover {
+            .btn__icon {
+                background-color: transparent;
+            }
+        }
+        .new-btn__icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: vw(59);
+            height: vw(59);
+            background-color: transparent;
+            svg {
+                width: vw(11);
+                height: vw(8);
+            }
+            svg use {
+                stroke: $fontBlack;
+            }
+        }
+    }
+}

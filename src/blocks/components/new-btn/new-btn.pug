@@ -1,0 +1,46 @@
+-
+    const defaultNewBtnProps = {
+        classes: '',
+        tag: 'link',
+        link: 'javascript:void(0);',
+        buttonType: 'button',
+        vMode: 'icon',
+        text: 'Кнопка',
+        icon: 'true',
+        iconName: 'arrow_btn',
+        cMode: 'blue',
+    }
+
+mixin new-btn(props = defaultNewBtnProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultNewBtnProps.classes,
+            tag: props.tag ? props.tag : defaultNewBtnProps.tag,
+            link: props.link ? props.link : defaultNewBtnProps.link,
+            buttonType: props.buttonType ? props.buttonType : defaultNewBtnProps.buttonType,
+            vMode: props.vMode ? props.vMode : defaultNewBtnProps.vMode,
+            text: props.text ? props.text : defaultNewBtnProps.text,
+            icon: props.icon ? props.icon : defaultNewBtnProps.icon,
+            iconName: props.iconName ? props.iconName : defaultNewBtnProps.iconName,
+            cMode: props.cMode ? props.cMode : defaultNewBtnProps.cMode,
+        }
+
+        let vModeClass = 'new-btn--' + checkProps.vMode
+        let cModeClass = 'new-btn--' + checkProps.cMode
+
+    if (checkProps.tag === 'button')
+        button.new-btn(type=checkProps.buttonType class=vModeClass + ' ' + cModeClass + ' ' + checkProps.classes)&attributes(attributes)
+            if (checkProps.vMode !== 'icon')
+                span.new-btn__text= checkProps.text
+            if (checkProps.icon === 'true')
+                span.new-btn
+                    svg
+                        use(xlink:href=`img/sprites/sprite.svg#${checkProps.iconName}`)
+    else if (checkProps.tag === 'link')
+        a.new-btn(href=checkProps.link class=vModeClass + ' ' + cModeClass + ' ' + checkProps.classes)&attributes(attributes)
+            if (checkProps.vMode !== 'icon')
+                span.new-btn__text= checkProps.text
+            if (checkProps.icon === 'true')
+                span.new-btn__icon
+                    svg
+                        use(xlink:href=`img/sprites/sprite.svg#${checkProps.iconName}`)
