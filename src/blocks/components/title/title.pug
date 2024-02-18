@@ -1,8 +1,8 @@
 mixin title(tag="h2", text="Заголовок", classes)
     case tag
         when 'h1'
-            div(class=classes)
+            .text-block(class=classes)
                 h1!= text
         when 'h2'
-            div(class=classes)
+            .text-block(class=classes)
                 h2!= text

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Catalog categories Page</title>
+    <title>Catalog category Page</title>
     <meta name="theme-color" content="#fff">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -417,119 +417,658 @@
     </div>
     <main class="site-main">
       <div class="scroll-page">
-        <div class="section section--first assortment__section assortment__section--no-animation bg-white">
-          <div class="container">
-            <div class="assortment__section__bg"><img src="img/assortment__section__bg.png" alt=""></div>
-            <div class="layout--trio">
-              <div class="layout--trio__col">
-                <div class="assortment__title title__82">Категории <br>каталога
-                </div><a class="btn--box assortment__btn" href="#">
-                  <div class="btn btn--circle"><svg xmlns="http://www.w3.org/2000/svg" width="11" height="8" viewBox="0 0 11 8" fill="none">
-<path d="M10.0999 4.21591L1.22221 4.11643M6.42527 1.06079L10.0999 4.21591L6.42527 1.06079ZM10.0999 4.21591L6.86969 7.29365L10.0999 4.21591Z" stroke="#07171D" stroke-width="1.33502" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
-                  </div>
-                  <div class="btn--box__text">Перейти в каталог</div></a>
-              </div>
-              <div class="layout--trio__col"><a class="card card--full-picture active" href="#">
-                  <div class="card__title title__32">Рыба охлажденная <br> <span class="text__12">14&ensp;товаров</span>
-                  </div>
-                  <div class="card__picture"> <img src="img/card__picture__1.png" alt=""></div>
-                  <div class="card__bottom">
-                    <div class="btn btn--circle btn--circle__black"><svg xmlns="http://www.w3.org/2000/svg" width="11" height="8" viewBox="0 0 11 8" fill="none">
-<path d="M10.0999 4.21591L1.22221 4.11643M6.42527 1.06079L10.0999 4.21591L6.42527 1.06079ZM10.0999 4.21591L6.86969 7.29365L10.0999 4.21591Z" stroke="#07171D" stroke-width="1.33502" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>							
+              <section class="category-intro category-intro--rows">
+                <div class="container">
+                        <div class="text-block category-intro__title">
+                          <h1>Рыба <br>охлажденная</h1>
+                        </div>
+                  <div class="category-intro__list">
+                    <div class="category-intro__controls">
+                            <button class="new-btn new-btn--icon new-btn--transparent category-intro__mode-btn active" type="button"><span class="new-btn__icon">
+                                <svg>
+                                  <use xlink:href="img/sprites/sprite.svg#cards_mode"></use>
+                                </svg></span>
+                            </button>
+                            <button class="new-btn new-btn--icon new-btn--transparent category-intro__mode-btn" type="button"><span class="new-btn__icon">
+                                <svg>
+                                  <use xlink:href="img/sprites/sprite.svg#rows_mode"></use>
+                                </svg></span>
+                            </button>
                     </div>
-                  </div></a><a class="card card--full-picture" href="#">
-                  <div class="card__title title__32">Филе охлажденное <br> <span class="text__12">3&ensp;товара</span>
-                  </div>
-                  <div class="card__picture"> <img src="img/card__picture__2.png" alt=""></div>
-                  <div class="card__bottom">
-                    <div class="btn btn--circle btn--circle__black"><svg xmlns="http://www.w3.org/2000/svg" width="11" height="8" viewBox="0 0 11 8" fill="none">
-<path d="M10.0999 4.21591L1.22221 4.11643M6.42527 1.06079L10.0999 4.21591L6.42527 1.06079ZM10.0999 4.21591L6.86969 7.29365L10.0999 4.21591Z" stroke="#07171D" stroke-width="1.33502" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>							
+                    <div class="category-intro__cards">
+                            <div class="product-card product-card--row category-intro__card">
+                              <div class="product-card__container">
+                                <div class="product-card__title">Семга (лосось) потр.с/г 2-3 ord охлажденная</div>
+                                <div class="product-card__vcode">Арт.: 6425642-S</div>
+                                <div class="product-card__photo"><img src="img/product_card_salmon.png" alt="Семга (лосось) потр.с/г 2-3 ord охлажденная"></div>
+                                <div class="product-card__controls">
+                                  <div class="product-card__price">500 Р</div>
+                                  <div class="amount-input" data-js="amountInput"><span class="amount-input__change amount-input__minus min">
+                                      <svg> 
+                                        <use xlink:href="img/sprites/sprite.svg#minus"></use>
+                                      </svg></span>
+                                    <input class="amount-input__value" type="number" name="amount" value="1" autocomplete="off"><span class="amount-input__change amount-input__plus"> 
+                                      <svg> 
+                                        <use xlink:href="img/sprites/sprite.svg#plus"></use>
+                                      </svg></span>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="product-card__info card-info">
+                                <div class="card-info__row">
+                                  <div class="card-info__param">Страна происхождения</div>
+                                  <div class="card-info__value">Россия</div>
+                                </div>
+                                <div class="card-info__row">
+                                  <div class="card-info__param">Размер</div>
+                                  <div class="card-info__value">2-3</div>
+                                </div>
+                                <div class="card-info__row">
+                                  <div class="card-info__param">Спецификация</div>
+                                  <div class="card-info__value">потр., с/г, ord, охл.</div>
+                                </div>
+                              </div>
+                              <div class="product-card__btns">
+                                      <button class="new-btn new-btn--small new-btn--black product-card__offer" type="button"><span class="new-btn__text">Получить предложение</span><span class="new-btn__icon">
+                                          <svg>
+                                            <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
+                                          </svg></span>
+                                      </button>
+                                      <button class="new-btn new-btn--icon new-btn--blue product-card__cart" type="button"><span class="new-btn__icon">
+                                          <svg>
+                                            <use xlink:href="img/sprites/sprite.svg#cart"></use>
+                                          </svg></span>
+                                      </button>
+                                      <button class="new-btn new-btn--small new-btn--white product-card__more" type="button"><span class="new-btn__text">Подробнее</span><span class="new-btn__icon">
+                                          <svg>
+                                            <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
+                                          </svg></span>
+                                      </button>
+                              </div>
+                            </div>
+                            <div class="product-card product-card--row category-intro__card">
+                              <div class="product-card__container">
+                                <div class="product-card__title">Семга (лосось) потр.с/г 2-3 ord охлажденная</div>
+                                <div class="product-card__vcode">Арт.: 6425642-S</div>
+                                <div class="product-card__photo"><img src="img/product_card_salmon.png" alt="Семга (лосось) потр.с/г 2-3 ord охлажденная"></div>
+                                <div class="product-card__controls">
+                                  <div class="product-card__price">500 Р</div>
+                                  <div class="amount-input" data-js="amountInput"><span class="amount-input__change amount-input__minus min">
+                                      <svg> 
+                                        <use xlink:href="img/sprites/sprite.svg#minus"></use>
+                                      </svg></span>
+                                    <input class="amount-input__value" type="number" name="amount" value="1" autocomplete="off"><span class="amount-input__change amount-input__plus"> 
+                                      <svg> 
+                                        <use xlink:href="img/sprites/sprite.svg#plus"></use>
+                                      </svg></span>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="product-card__info card-info">
+                                <div class="card-info__row">
+                                  <div class="card-info__param">Страна происхождения</div>
+                                  <div class="card-info__value">Россия</div>
+                                </div>
+                                <div class="card-info__row">
+                                  <div class="card-info__param">Размер</div>
+                                  <div class="card-info__value">2-3</div>
+                                </div>
+                                <div class="card-info__row">
+                                  <div class="card-info__param">Спецификация</div>
+                                  <div class="card-info__value">потр., с/г, ord, охл.</div>
+                                </div>
+                              </div>
+                              <div class="product-card__btns">
+                                      <button class="new-btn new-btn--small new-btn--black product-card__offer" type="button"><span class="new-btn__text">Получить предложение</span><span class="new-btn__icon">
+                                          <svg>
+                                            <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
+                                          </svg></span>
+                                      </button>
+                                      <button class="new-btn new-btn--icon new-btn--blue product-card__cart" type="button"><span class="new-btn__icon">
+                                          <svg>
+                                            <use xlink:href="img/sprites/sprite.svg#cart"></use>
+                                          </svg></span>
+                                      </button>
+                                      <button class="new-btn new-btn--small new-btn--white product-card__more" type="button"><span class="new-btn__text">Подробнее</span><span class="new-btn__icon">
+                                          <svg>
+                                            <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
+                                          </svg></span>
+                                      </button>
+                              </div>
+                            </div>
+                            <div class="product-card product-card--row category-intro__card">
+                              <div class="product-card__container">
+                                <div class="product-card__title">Семга (лосось) потр.с/г 2-3 ord охлажденная</div>
+                                <div class="product-card__vcode">Арт.: 6425642-S</div>
+                                <div class="product-card__photo"><img src="img/product_card_salmon.png" alt="Семга (лосось) потр.с/г 2-3 ord охлажденная"></div>
+                                <div class="product-card__controls">
+                                  <div class="product-card__price">500 Р</div>
+                                  <div class="amount-input" data-js="amountInput"><span class="amount-input__change amount-input__minus min">
+                                      <svg> 
+                                        <use xlink:href="img/sprites/sprite.svg#minus"></use>
+                                      </svg></span>
+                                    <input class="amount-input__value" type="number" name="amount" value="1" autocomplete="off"><span class="amount-input__change amount-input__plus"> 
+                                      <svg> 
+                                        <use xlink:href="img/sprites/sprite.svg#plus"></use>
+                                      </svg></span>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="product-card__info card-info">
+                                <div class="card-info__row">
+                                  <div class="card-info__param">Страна происхождения</div>
+                                  <div class="card-info__value">Россия</div>
+                                </div>
+                                <div class="card-info__row">
+                                  <div class="card-info__param">Размер</div>
+                                  <div class="card-info__value">2-3</div>
+                                </div>
+                                <div class="card-info__row">
+                                  <div class="card-info__param">Спецификация</div>
+                                  <div class="card-info__value">потр., с/г, ord, охл.</div>
+                                </div>
+                              </div>
+                              <div class="product-card__btns">
+                                      <button class="new-btn new-btn--small new-btn--black product-card__offer" type="button"><span class="new-btn__text">Получить предложение</span><span class="new-btn__icon">
+                                          <svg>
+                                            <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
+                                          </svg></span>
+                                      </button>
+                                      <button class="new-btn new-btn--icon new-btn--blue product-card__cart" type="button"><span class="new-btn__icon">
+                                          <svg>
+                                            <use xlink:href="img/sprites/sprite.svg#cart"></use>
+                                          </svg></span>
+                                      </button>
+                                      <button class="new-btn new-btn--small new-btn--white product-card__more" type="button"><span class="new-btn__text">Подробнее</span><span class="new-btn__icon">
+                                          <svg>
+                                            <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
+                                          </svg></span>
+                                      </button>
+                              </div>
+                            </div>
+                            <div class="product-card product-card--row category-intro__card">
+                              <div class="product-card__container">
+                                <div class="product-card__title">Семга (лосось) потр.с/г 2-3 ord охлажденная</div>
+                                <div class="product-card__vcode">Арт.: 6425642-S</div>
+                                <div class="product-card__photo"><img src="img/product_card_salmon.png" alt="Семга (лосось) потр.с/г 2-3 ord охлажденная"></div>
+                                <div class="product-card__controls">
+                                  <div class="product-card__price">500 Р</div>
+                                  <div class="amount-input" data-js="amountInput"><span class="amount-input__change amount-input__minus min">
+                                      <svg> 
+                                        <use xlink:href="img/sprites/sprite.svg#minus"></use>
+                                      </svg></span>
+                                    <input class="amount-input__value" type="number" name="amount" value="1" autocomplete="off"><span class="amount-input__change amount-input__plus"> 
+                                      <svg> 
+                                        <use xlink:href="img/sprites/sprite.svg#plus"></use>
+                                      </svg></span>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="product-card__info card-info">
+                                <div class="card-info__row">
+                                  <div class="card-info__param">Страна происхождения</div>
+                                  <div class="card-info__value">Россия</div>
+                                </div>
+                                <div class="card-info__row">
+                                  <div class="card-info__param">Размер</div>
+                                  <div class="card-info__value">2-3</div>
+                                </div>
+                                <div class="card-info__row">
+                                  <div class="card-info__param">Спецификация</div>
+                                  <div class="card-info__value">потр., с/г, ord, охл.</div>
+                                </div>
+                              </div>
+                              <div class="product-card__btns">
+                                      <button class="new-btn new-btn--small new-btn--black product-card__offer" type="button"><span class="new-btn__text">Получить предложение</span><span class="new-btn__icon">
+                                          <svg>
+                                            <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
+                                          </svg></span>
+                                      </button>
+                                      <button class="new-btn new-btn--icon new-btn--blue product-card__cart" type="button"><span class="new-btn__icon">
+                                          <svg>
+                                            <use xlink:href="img/sprites/sprite.svg#cart"></use>
+                                          </svg></span>
+                                      </button>
+                                      <button class="new-btn new-btn--small new-btn--white product-card__more" type="button"><span class="new-btn__text">Подробнее</span><span class="new-btn__icon">
+                                          <svg>
+                                            <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
+                                          </svg></span>
+                                      </button>
+                              </div>
+                            </div>
+                            <div class="product-card product-card--row category-intro__card">
+                              <div class="product-card__container">
+                                <div class="product-card__title">Семга (лосось) потр.с/г 2-3 ord охлажденная</div>
+                                <div class="product-card__vcode">Арт.: 6425642-S</div>
+                                <div class="product-card__photo"><img src="img/product_card_salmon.png" alt="Семга (лосось) потр.с/г 2-3 ord охлажденная"></div>
+                                <div class="product-card__controls">
+                                  <div class="product-card__price">500 Р</div>
+                                  <div class="amount-input" data-js="amountInput"><span class="amount-input__change amount-input__minus min">
+                                      <svg> 
+                                        <use xlink:href="img/sprites/sprite.svg#minus"></use>
+                                      </svg></span>
+                                    <input class="amount-input__value" type="number" name="amount" value="1" autocomplete="off"><span class="amount-input__change amount-input__plus"> 
+                                      <svg> 
+                                        <use xlink:href="img/sprites/sprite.svg#plus"></use>
+                                      </svg></span>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="product-card__info card-info">
+                                <div class="card-info__row">
+                                  <div class="card-info__param">Страна происхождения</div>
+                                  <div class="card-info__value">Россия</div>
+                                </div>
+                                <div class="card-info__row">
+                                  <div class="card-info__param">Размер</div>
+                                  <div class="card-info__value">2-3</div>
+                                </div>
+                                <div class="card-info__row">
+                                  <div class="card-info__param">Спецификация</div>
+                                  <div class="card-info__value">потр., с/г, ord, охл.</div>
+                                </div>
+                              </div>
+                              <div class="product-card__btns">
+                                      <button class="new-btn new-btn--small new-btn--black product-card__offer" type="button"><span class="new-btn__text">Получить предложение</span><span class="new-btn__icon">
+                                          <svg>
+                                            <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
+                                          </svg></span>
+                                      </button>
+                                      <button class="new-btn new-btn--icon new-btn--blue product-card__cart" type="button"><span class="new-btn__icon">
+                                          <svg>
+                                            <use xlink:href="img/sprites/sprite.svg#cart"></use>
+                                          </svg></span>
+                                      </button>
+                                      <button class="new-btn new-btn--small new-btn--white product-card__more" type="button"><span class="new-btn__text">Подробнее</span><span class="new-btn__icon">
+                                          <svg>
+                                            <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
+                                          </svg></span>
+                                      </button>
+                              </div>
+                            </div>
+                            <div class="product-card product-card--row category-intro__card">
+                              <div class="product-card__container">
+                                <div class="product-card__title">Семга (лосось) потр.с/г 2-3 ord охлажденная</div>
+                                <div class="product-card__vcode">Арт.: 6425642-S</div>
+                                <div class="product-card__photo"><img src="img/product_card_salmon.png" alt="Семга (лосось) потр.с/г 2-3 ord охлажденная"></div>
+                                <div class="product-card__controls">
+                                  <div class="product-card__price">500 Р</div>
+                                  <div class="amount-input" data-js="amountInput"><span class="amount-input__change amount-input__minus min">
+                                      <svg> 
+                                        <use xlink:href="img/sprites/sprite.svg#minus"></use>
+                                      </svg></span>
+                                    <input class="amount-input__value" type="number" name="amount" value="1" autocomplete="off"><span class="amount-input__change amount-input__plus"> 
+                                      <svg> 
+                                        <use xlink:href="img/sprites/sprite.svg#plus"></use>
+                                      </svg></span>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="product-card__info card-info">
+                                <div class="card-info__row">
+                                  <div class="card-info__param">Страна происхождения</div>
+                                  <div class="card-info__value">Россия</div>
+                                </div>
+                                <div class="card-info__row">
+                                  <div class="card-info__param">Размер</div>
+                                  <div class="card-info__value">2-3</div>
+                                </div>
+                                <div class="card-info__row">
+                                  <div class="card-info__param">Спецификация</div>
+                                  <div class="card-info__value">потр., с/г, ord, охл.</div>
+                                </div>
+                              </div>
+                              <div class="product-card__btns">
+                                      <button class="new-btn new-btn--small new-btn--black product-card__offer" type="button"><span class="new-btn__text">Получить предложение</span><span class="new-btn__icon">
+                                          <svg>
+                                            <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
+                                          </svg></span>
+                                      </button>
+                                      <button class="new-btn new-btn--icon new-btn--blue product-card__cart" type="button"><span class="new-btn__icon">
+                                          <svg>
+                                            <use xlink:href="img/sprites/sprite.svg#cart"></use>
+                                          </svg></span>
+                                      </button>
+                                      <button class="new-btn new-btn--small new-btn--white product-card__more" type="button"><span class="new-btn__text">Подробнее</span><span class="new-btn__icon">
+                                          <svg>
+                                            <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
+                                          </svg></span>
+                                      </button>
+                              </div>
+                            </div>
+                            <div class="product-card product-card--row category-intro__card">
+                              <div class="product-card__container">
+                                <div class="product-card__title">Семга (лосось) потр.с/г 2-3 ord охлажденная</div>
+                                <div class="product-card__vcode">Арт.: 6425642-S</div>
+                                <div class="product-card__photo"><img src="img/product_card_salmon.png" alt="Семга (лосось) потр.с/г 2-3 ord охлажденная"></div>
+                                <div class="product-card__controls">
+                                  <div class="product-card__price">500 Р</div>
+                                  <div class="amount-input" data-js="amountInput"><span class="amount-input__change amount-input__minus min">
+                                      <svg> 
+                                        <use xlink:href="img/sprites/sprite.svg#minus"></use>
+                                      </svg></span>
+                                    <input class="amount-input__value" type="number" name="amount" value="1" autocomplete="off"><span class="amount-input__change amount-input__plus"> 
+                                      <svg> 
+                                        <use xlink:href="img/sprites/sprite.svg#plus"></use>
+                                      </svg></span>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="product-card__info card-info">
+                                <div class="card-info__row">
+                                  <div class="card-info__param">Страна происхождения</div>
+                                  <div class="card-info__value">Россия</div>
+                                </div>
+                                <div class="card-info__row">
+                                  <div class="card-info__param">Размер</div>
+                                  <div class="card-info__value">2-3</div>
+                                </div>
+                                <div class="card-info__row">
+                                  <div class="card-info__param">Спецификация</div>
+                                  <div class="card-info__value">потр., с/г, ord, охл.</div>
+                                </div>
+                              </div>
+                              <div class="product-card__btns">
+                                      <button class="new-btn new-btn--small new-btn--black product-card__offer" type="button"><span class="new-btn__text">Получить предложение</span><span class="new-btn__icon">
+                                          <svg>
+                                            <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
+                                          </svg></span>
+                                      </button>
+                                      <button class="new-btn new-btn--icon new-btn--blue product-card__cart" type="button"><span class="new-btn__icon">
+                                          <svg>
+                                            <use xlink:href="img/sprites/sprite.svg#cart"></use>
+                                          </svg></span>
+                                      </button>
+                                      <button class="new-btn new-btn--small new-btn--white product-card__more" type="button"><span class="new-btn__text">Подробнее</span><span class="new-btn__icon">
+                                          <svg>
+                                            <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
+                                          </svg></span>
+                                      </button>
+                              </div>
+                            </div>
+                            <div class="product-card product-card--row category-intro__card">
+                              <div class="product-card__container">
+                                <div class="product-card__title">Семга (лосось) потр.с/г 2-3 ord охлажденная</div>
+                                <div class="product-card__vcode">Арт.: 6425642-S</div>
+                                <div class="product-card__photo"><img src="img/product_card_salmon.png" alt="Семга (лосось) потр.с/г 2-3 ord охлажденная"></div>
+                                <div class="product-card__controls">
+                                  <div class="product-card__price">500 Р</div>
+                                  <div class="amount-input" data-js="amountInput"><span class="amount-input__change amount-input__minus min">
+                                      <svg> 
+                                        <use xlink:href="img/sprites/sprite.svg#minus"></use>
+                                      </svg></span>
+                                    <input class="amount-input__value" type="number" name="amount" value="1" autocomplete="off"><span class="amount-input__change amount-input__plus"> 
+                                      <svg> 
+                                        <use xlink:href="img/sprites/sprite.svg#plus"></use>
+                                      </svg></span>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="product-card__info card-info">
+                                <div class="card-info__row">
+                                  <div class="card-info__param">Страна происхождения</div>
+                                  <div class="card-info__value">Россия</div>
+                                </div>
+                                <div class="card-info__row">
+                                  <div class="card-info__param">Размер</div>
+                                  <div class="card-info__value">2-3</div>
+                                </div>
+                                <div class="card-info__row">
+                                  <div class="card-info__param">Спецификация</div>
+                                  <div class="card-info__value">потр., с/г, ord, охл.</div>
+                                </div>
+                              </div>
+                              <div class="product-card__btns">
+                                      <button class="new-btn new-btn--small new-btn--black product-card__offer" type="button"><span class="new-btn__text">Получить предложение</span><span class="new-btn__icon">
+                                          <svg>
+                                            <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
+                                          </svg></span>
+                                      </button>
+                                      <button class="new-btn new-btn--icon new-btn--blue product-card__cart" type="button"><span class="new-btn__icon">
+                                          <svg>
+                                            <use xlink:href="img/sprites/sprite.svg#cart"></use>
+                                          </svg></span>
+                                      </button>
+                                      <button class="new-btn new-btn--small new-btn--white product-card__more" type="button"><span class="new-btn__text">Подробнее</span><span class="new-btn__icon">
+                                          <svg>
+                                            <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
+                                          </svg></span>
+                                      </button>
+                              </div>
+                            </div>
+                            <div class="product-card product-card--row category-intro__card">
+                              <div class="product-card__container">
+                                <div class="product-card__title">Семга (лосось) потр.с/г 2-3 ord охлажденная</div>
+                                <div class="product-card__vcode">Арт.: 6425642-S</div>
+                                <div class="product-card__photo"><img src="img/product_card_salmon.png" alt="Семга (лосось) потр.с/г 2-3 ord охлажденная"></div>
+                                <div class="product-card__controls">
+                                  <div class="product-card__price">500 Р</div>
+                                  <div class="amount-input" data-js="amountInput"><span class="amount-input__change amount-input__minus min">
+                                      <svg> 
+                                        <use xlink:href="img/sprites/sprite.svg#minus"></use>
+                                      </svg></span>
+                                    <input class="amount-input__value" type="number" name="amount" value="1" autocomplete="off"><span class="amount-input__change amount-input__plus"> 
+                                      <svg> 
+                                        <use xlink:href="img/sprites/sprite.svg#plus"></use>
+                                      </svg></span>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="product-card__info card-info">
+                                <div class="card-info__row">
+                                  <div class="card-info__param">Страна происхождения</div>
+                                  <div class="card-info__value">Россия</div>
+                                </div>
+                                <div class="card-info__row">
+                                  <div class="card-info__param">Размер</div>
+                                  <div class="card-info__value">2-3</div>
+                                </div>
+                                <div class="card-info__row">
+                                  <div class="card-info__param">Спецификация</div>
+                                  <div class="card-info__value">потр., с/г, ord, охл.</div>
+                                </div>
+                              </div>
+                              <div class="product-card__btns">
+                                      <button class="new-btn new-btn--small new-btn--black product-card__offer" type="button"><span class="new-btn__text">Получить предложение</span><span class="new-btn__icon">
+                                          <svg>
+                                            <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
+                                          </svg></span>
+                                      </button>
+                                      <button class="new-btn new-btn--icon new-btn--blue product-card__cart" type="button"><span class="new-btn__icon">
+                                          <svg>
+                                            <use xlink:href="img/sprites/sprite.svg#cart"></use>
+                                          </svg></span>
+                                      </button>
+                                      <button class="new-btn new-btn--small new-btn--white product-card__more" type="button"><span class="new-btn__text">Подробнее</span><span class="new-btn__icon">
+                                          <svg>
+                                            <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
+                                          </svg></span>
+                                      </button>
+                              </div>
+                            </div>
+                            <div class="product-card product-card--row category-intro__card">
+                              <div class="product-card__container">
+                                <div class="product-card__title">Семга (лосось) потр.с/г 2-3 ord охлажденная</div>
+                                <div class="product-card__vcode">Арт.: 6425642-S</div>
+                                <div class="product-card__photo"><img src="img/product_card_salmon.png" alt="Семга (лосось) потр.с/г 2-3 ord охлажденная"></div>
+                                <div class="product-card__controls">
+                                  <div class="product-card__price">500 Р</div>
+                                  <div class="amount-input" data-js="amountInput"><span class="amount-input__change amount-input__minus min">
+                                      <svg> 
+                                        <use xlink:href="img/sprites/sprite.svg#minus"></use>
+                                      </svg></span>
+                                    <input class="amount-input__value" type="number" name="amount" value="1" autocomplete="off"><span class="amount-input__change amount-input__plus"> 
+                                      <svg> 
+                                        <use xlink:href="img/sprites/sprite.svg#plus"></use>
+                                      </svg></span>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="product-card__info card-info">
+                                <div class="card-info__row">
+                                  <div class="card-info__param">Страна происхождения</div>
+                                  <div class="card-info__value">Россия</div>
+                                </div>
+                                <div class="card-info__row">
+                                  <div class="card-info__param">Размер</div>
+                                  <div class="card-info__value">2-3</div>
+                                </div>
+                                <div class="card-info__row">
+                                  <div class="card-info__param">Спецификация</div>
+                                  <div class="card-info__value">потр., с/г, ord, охл.</div>
+                                </div>
+                              </div>
+                              <div class="product-card__btns">
+                                      <button class="new-btn new-btn--small new-btn--black product-card__offer" type="button"><span class="new-btn__text">Получить предложение</span><span class="new-btn__icon">
+                                          <svg>
+                                            <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
+                                          </svg></span>
+                                      </button>
+                                      <button class="new-btn new-btn--icon new-btn--blue product-card__cart" type="button"><span class="new-btn__icon">
+                                          <svg>
+                                            <use xlink:href="img/sprites/sprite.svg#cart"></use>
+                                          </svg></span>
+                                      </button>
+                                      <button class="new-btn new-btn--small new-btn--white product-card__more" type="button"><span class="new-btn__text">Подробнее</span><span class="new-btn__icon">
+                                          <svg>
+                                            <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
+                                          </svg></span>
+                                      </button>
+                              </div>
+                            </div>
+                            <div class="product-card product-card--row category-intro__card">
+                              <div class="product-card__container">
+                                <div class="product-card__title">Семга (лосось) потр.с/г 2-3 ord охлажденная</div>
+                                <div class="product-card__vcode">Арт.: 6425642-S</div>
+                                <div class="product-card__photo"><img src="img/product_card_salmon.png" alt="Семга (лосось) потр.с/г 2-3 ord охлажденная"></div>
+                                <div class="product-card__controls">
+                                  <div class="product-card__price">500 Р</div>
+                                  <div class="amount-input" data-js="amountInput"><span class="amount-input__change amount-input__minus min">
+                                      <svg> 
+                                        <use xlink:href="img/sprites/sprite.svg#minus"></use>
+                                      </svg></span>
+                                    <input class="amount-input__value" type="number" name="amount" value="1" autocomplete="off"><span class="amount-input__change amount-input__plus"> 
+                                      <svg> 
+                                        <use xlink:href="img/sprites/sprite.svg#plus"></use>
+                                      </svg></span>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="product-card__info card-info">
+                                <div class="card-info__row">
+                                  <div class="card-info__param">Страна происхождения</div>
+                                  <div class="card-info__value">Россия</div>
+                                </div>
+                                <div class="card-info__row">
+                                  <div class="card-info__param">Размер</div>
+                                  <div class="card-info__value">2-3</div>
+                                </div>
+                                <div class="card-info__row">
+                                  <div class="card-info__param">Спецификация</div>
+                                  <div class="card-info__value">потр., с/г, ord, охл.</div>
+                                </div>
+                              </div>
+                              <div class="product-card__btns">
+                                      <button class="new-btn new-btn--small new-btn--black product-card__offer" type="button"><span class="new-btn__text">Получить предложение</span><span class="new-btn__icon">
+                                          <svg>
+                                            <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
+                                          </svg></span>
+                                      </button>
+                                      <button class="new-btn new-btn--icon new-btn--blue product-card__cart" type="button"><span class="new-btn__icon">
+                                          <svg>
+                                            <use xlink:href="img/sprites/sprite.svg#cart"></use>
+                                          </svg></span>
+                                      </button>
+                                      <button class="new-btn new-btn--small new-btn--white product-card__more" type="button"><span class="new-btn__text">Подробнее</span><span class="new-btn__icon">
+                                          <svg>
+                                            <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
+                                          </svg></span>
+                                      </button>
+                              </div>
+                            </div>
+                            <div class="product-card product-card--row category-intro__card">
+                              <div class="product-card__container">
+                                <div class="product-card__title">Семга (лосось) потр.с/г 2-3 ord охлажденная</div>
+                                <div class="product-card__vcode">Арт.: 6425642-S</div>
+                                <div class="product-card__photo"><img src="img/product_card_salmon.png" alt="Семга (лосось) потр.с/г 2-3 ord охлажденная"></div>
+                                <div class="product-card__controls">
+                                  <div class="product-card__price">500 Р</div>
+                                  <div class="amount-input" data-js="amountInput"><span class="amount-input__change amount-input__minus min">
+                                      <svg> 
+                                        <use xlink:href="img/sprites/sprite.svg#minus"></use>
+                                      </svg></span>
+                                    <input class="amount-input__value" type="number" name="amount" value="1" autocomplete="off"><span class="amount-input__change amount-input__plus"> 
+                                      <svg> 
+                                        <use xlink:href="img/sprites/sprite.svg#plus"></use>
+                                      </svg></span>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="product-card__info card-info">
+                                <div class="card-info__row">
+                                  <div class="card-info__param">Страна происхождения</div>
+                                  <div class="card-info__value">Россия</div>
+                                </div>
+                                <div class="card-info__row">
+                                  <div class="card-info__param">Размер</div>
+                                  <div class="card-info__value">2-3</div>
+                                </div>
+                                <div class="card-info__row">
+                                  <div class="card-info__param">Спецификация</div>
+                                  <div class="card-info__value">потр., с/г, ord, охл.</div>
+                                </div>
+                              </div>
+                              <div class="product-card__btns">
+                                      <button class="new-btn new-btn--small new-btn--black product-card__offer" type="button"><span class="new-btn__text">Получить предложение</span><span class="new-btn__icon">
+                                          <svg>
+                                            <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
+                                          </svg></span>
+                                      </button>
+                                      <button class="new-btn new-btn--icon new-btn--blue product-card__cart" type="button"><span class="new-btn__icon">
+                                          <svg>
+                                            <use xlink:href="img/sprites/sprite.svg#cart"></use>
+                                          </svg></span>
+                                      </button>
+                                      <button class="new-btn new-btn--small new-btn--white product-card__more" type="button"><span class="new-btn__text">Подробнее</span><span class="new-btn__icon">
+                                          <svg>
+                                            <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
+                                          </svg></span>
+                                      </button>
+                              </div>
+                            </div>
                     </div>
-                  </div></a><a class="card card--full-picture" href="#">
-                  <div class="card__title title__32">морепродукты <br> <span class="text__12">26&ensp;товаров</span>
+                          <div class="pagination pagination--start category-intro__pagination">
+                                  <button class="new-btn new-btn--icon new-btn--white pagination__btn pagination__prev" type="button"><span class="new-btn__icon">
+                                      <svg>
+                                        <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
+                                      </svg></span>
+                                  </button><a class="pagination__page active" href="javascript:void(0);">1</a><a class="pagination__page" href="javascript:void(0);">2</a><a class="pagination__page" href="javascript:void(0);">3</a><a class="pagination__page" href="javascript:void(0);">4</a><a class="pagination__page" href="javascript:void(0);">5</a><a class="pagination__page" href="javascript:void(0);">6</a>
+                                  <button class="new-btn new-btn--icon new-btn--white pagination__btn pagination__next" type="button"><span class="new-btn__icon">
+                                      <svg>
+                                        <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
+                                      </svg></span>
+                                  </button>
+                          </div>
                   </div>
-                  <div class="card__picture"> <img src="img/card__picture__3.png" alt=""></div>
-                  <div class="card__bottom">
-                    <div class="btn btn--circle btn--circle__black"><svg xmlns="http://www.w3.org/2000/svg" width="11" height="8" viewBox="0 0 11 8" fill="none">
-<path d="M10.0999 4.21591L1.22221 4.11643M6.42527 1.06079L10.0999 4.21591L6.42527 1.06079ZM10.0999 4.21591L6.86969 7.29365L10.0999 4.21591Z" stroke="#07171D" stroke-width="1.33502" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>							
-                    </div>
-                  </div></a></div>
-              <div class="layout--trio__col"><a class="card card--full-picture" href="#">
-                  <div class="card__title title__32">Рыба свежемороженая <br> <span class="text__12">35&ensp;товаров</span>
-                  </div>
-                  <div class="card__picture"> <img src="img/card__picture__4.png" alt=""></div>
-                  <div class="card__bottom">
-                    <div class="btn btn--circle btn--circle__black"><svg xmlns="http://www.w3.org/2000/svg" width="11" height="8" viewBox="0 0 11 8" fill="none">
-<path d="M10.0999 4.21591L1.22221 4.11643M6.42527 1.06079L10.0999 4.21591L6.42527 1.06079ZM10.0999 4.21591L6.86969 7.29365L10.0999 4.21591Z" stroke="#07171D" stroke-width="1.33502" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>							
-                    </div>
-                  </div></a><a class="card card--full-picture" href="#">
-                  <div class="card__title title__32">Филе свежемороженое <br> <span class="text__12">3&ensp;товара</span>
-                  </div>
-                  <div class="card__picture"> <img src="img/card__picture__5.png" alt=""></div>
-                  <div class="card__bottom">
-                    <div class="btn btn--circle btn--circle__black"><svg xmlns="http://www.w3.org/2000/svg" width="11" height="8" viewBox="0 0 11 8" fill="none">
-<path d="M10.0999 4.21591L1.22221 4.11643M6.42527 1.06079L10.0999 4.21591L6.42527 1.06079ZM10.0999 4.21591L6.86969 7.29365L10.0999 4.21591Z" stroke="#07171D" stroke-width="1.33502" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>							
-                    </div>
-                  </div></a><a class="card card--full-picture" href="#">
-                  <div class="card__title title__32">субпродукты <br> <span class="text__12">3&ensp;товара</span>
-                  </div>
-                  <div class="card__picture"> <img src="img/card__picture__6.png" alt=""></div>
-                  <div class="card__bottom">
-                    <div class="btn btn--circle btn--circle__black"><svg xmlns="http://www.w3.org/2000/svg" width="11" height="8" viewBox="0 0 11 8" fill="none">
-<path d="M10.0999 4.21591L1.22221 4.11643M6.42527 1.06079L10.0999 4.21591L6.42527 1.06079ZM10.0999 4.21591L6.86969 7.29365L10.0999 4.21591Z" stroke="#07171D" stroke-width="1.33502" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
-                    </div>
-                  </div></a></div>
+                </div>
+              </section>
+        <section class="category-desc">
+          <div class="container category-desc__container">
+            <div class="category-desc__title">
+              <h2>Продажа свежей рыбы высочайшего качества - идеальный выбор для гурманов!</h2>
+            </div>
+            <div class="category-desc__text text-block">
+              <p>Добро пожаловать в наш магазин, где мы предлагаем широкий ассортимент свежей и качественной рыбы для истинных гурманов.  Мы заботимся о том, чтобы каждый наш клиент получил только лучшую продукцию, поэтому мы работаем только с проверенными поставщиками и следим за свежестью товара.</p>
+              <p>В нашем каталоге вы найдете:</p>
+              <ul> 
+                <li>лосось</li>
+                <li>сибас</li>
+                <li>крабы</li>
+                <li>осьминоги</li>
+              </ul>
             </div>
           </div>
-        </div>
-        <footer class="footer footer__animation footer__animation--personally js-footer__animation">
-          <div class="footer__logo"> <img src="img/logo__white.png" alt=""></div>
-          <div class="footer__title title__170"> Понимаем море, слышим людей
-          </div>
-          <div class="footer__menu"> 
-            <ul class="footer__menu__list">
-              <li class="footer__menu__list__title">Каталог</li>
-              <li class="footer__menu__list__item"><a href="#">Рыба охлажденная</a></li>
-              <li class="footer__menu__list__item"><a href="#">Рыба свежемороженая</a></li>
-              <li class="footer__menu__list__item"><a href="#">Филе охлажденное</a></li>
-              <li class="footer__menu__list__item"><a href="#">Филе свежемороженое</a></li>
-              <li class="footer__menu__list__item"><a href="#">Морепродукты</a></li>
-              <li class="footer__menu__list__item"><a href="#">Субпродукты</a></li>
-            </ul>
-            <ul class="footer__menu__list">
-              <li class="footer__menu__list__title">О компании</li>
-              <li class="footer__menu__list__item"><a href="#">Производство</a></li>
-              <li class="footer__menu__list__item"><a href="#">Склад и логистика</a></li>
-              <li class="footer__menu__list__item"><a href="#">мы в социуме</a></li>
-              <li class="footer__menu__list__item"><a href="#">карьера в skyfish</a></li>
-              <li class="footer__menu__list__item"><a href="#">наша команда</a></li>
-            </ul>
-            <ul class="footer__menu__list">
-              <li class="footer__menu__list__title">А и еще...</li>
-              <li class="footer__menu__list__item"><a href="#">контакты</a></li>
-              <li class="footer__menu__list__item"><a href="#">Личный кабинет</a></li>
-              <li class="footer__menu__list__item"><a href="#">Документы</a></li>
-              <li class="footer__menu__list__item"><a href="#">Новости</a></li>
-              <li class="footer__menu__list__item"><a href="#">Вопросы и ответы (FAQ)</a></li>
-            </ul>
-          </div><a class="btn--box footer__btn" href="#">
-            <div class="btn btn--circle"><svg xmlns="http://www.w3.org/2000/svg" width="11" height="8" viewBox="0 0 11 8" fill="none">
-<path d="M10.0999 4.21591L1.22221 4.11643M6.42527 1.06079L10.0999 4.21591L6.42527 1.06079ZM10.0999 4.21591L6.86969 7.29365L10.0999 4.21591Z" stroke="#07171D" stroke-width="1.33502" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
-            </div>
-            <div class="btn--box__text">Подробнее</div></a>
-          <div class="footer__bg"><img src="img/footer__bg.png" alt=""></div>
-          <div class="footer__agreement">
-            <div class="footer__agreement__date text__12">© 2023 — 2024</div><a class="footer__agreement__text text__12" href="#"> Пользовательское <br>соглашение</a>
-          </div>
-        </footer>
+        </section>
       </div>
     </main>
     <script src="js/main.min.js"></script><script src="https://api-maps.yandex.ru/2.1/?apikey=d30e0023-10b4-4a5c-a8fd-7e8d66094730&lang=ru_RU&onload=MapInit"></script>

@@ -74,9 +74,9 @@
         border: 1px solid $greyLight;
         border-top-width: 0px;
         position: absolute;
-        left: 0;
+        left: -1.5px;
         top: 100%;
-        width: 100%;
+        width: calc(100% + 3px);
         display: grid;
         grid-template-columns: auto vw(75);
         grid-template-areas: 'a b'

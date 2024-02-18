@@ -21,7 +21,7 @@ mixin product-card(props = defaultProductCardProps)
                 img(src="img/product_card_salmon.png" alt="Семга (лосось) потр.с/г 2-3 ord охлажденная")
             .product-card__controls
                 .product-card__price 500 Р
-                .product-card__counter - 1 +
+                include ../amount-input/amount-input.pug
         .product-card__info.card-info
             .card-info__row
                 .card-info__param Страна происхождения

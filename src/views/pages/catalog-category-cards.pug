@@ -5,7 +5,8 @@ block variables
 	- const title = "Catalog category Page"
 
 block content
+	include ../../blocks/modules/pages/catalog-category/category-intro/category-intro.pug
 
 	.scroll-page
-		include ../../blocks/modules/pages/catalog-category-cards/category-intro/category-intro.pug
-		include ../../blocks/modules/pages/catalog-category-cards/category-desc/category-desc.pug
+		+category-intro("card")
+		include ../../blocks/modules/pages/catalog-category/category-desc/category-desc.pug

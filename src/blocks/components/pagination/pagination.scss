@@ -24,8 +24,39 @@
         }
     }
     &__btn {
+        border: 1px solid $greyLight;
         width: vw(75);
         height: vw(75);
         border-radius: 0;
+        .new-btn__icon, svg, use {
+            width: vw(75);
+            height: vw(75);
+        }
+
+        &:hover {
+            .new-btn__icon svg use {
+                stroke: $white;
+            }
+        }
+
+        &.pagination__prev {
+            .new-btn__icon svg {
+                transform: rotate(180deg);
+            }
+        }
+    }
+
+    &--start {
+        .pagination__prev {
+            pointer-events: none;
+            opacity: 0.5;
+        }
+    }
+
+    &--end {
+        .pagination__next {
+            pointer-events: none;
+            opacity: 0.5;
+        }
     }
 }

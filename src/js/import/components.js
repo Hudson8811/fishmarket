@@ -1,1 +1,5 @@
-// @@include("../../blocks/components/fabrication/fabrication.js")
+@@include("../../blocks/components/amount-input/amount-input.js")
+
+document.addEventListener("DOMContentLoaded", () => {
+    amountInput()
+})

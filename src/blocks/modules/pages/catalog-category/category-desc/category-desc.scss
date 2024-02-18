@@ -1,0 +1,31 @@
+.category-desc {
+    padding: vw(35) 0 vw(262);
+    background-color: $greyBg;
+    &__container {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__title {
+        max-width: vw(575);
+        font-size: vw(32);
+        font-weight: 500;
+        line-height: 1.28;
+        color: $fontBlack;
+    }
+    &__text {
+        max-width: vw(756);
+        p+p {
+            margin-top: vw(27);
+        }
+        ul {
+            list-style-type: none;
+            padding-left: 0 !important;
+            li {
+                margin-bottom: 0 !important;
+                &::before {
+                    content: none !important;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,60 @@
+.amount-input{
+    display: flex;
+    align-items: center;
+    width: vw(174);
+    height: vw(57);
+    border: 1px solid $greyLight;
+
+    &__change {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-basis: vw(57);
+        flex-shrink: 0;
+        flex-grow: 0;
+        height: 100%;
+        cursor: pointer;
+        &.min {
+            pointer-events: none;
+            color: $grey;
+            opacity: 0.5;
+        }
+        &:hover {
+            background-color: $greyHover;
+        }
+        svg, use {
+            width: vw(10);
+        }
+        
+    }
+
+    &__value {
+        display: block;
+        flex-basis: vw(60);
+        flex-shrink: 1;
+        flex-grow: 1;
+        max-width: calc(100% - vw(114));
+        height: 100%;
+        font-family: $mainFont;
+        text-align: center;
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 1.22;
+        color: $fontBlack;
+        outline: none;
+        border: none;
+        background: none;
+    }
+
+    input[type="number"]::-webkit-outer-spin-button,
+    input[type="number"]::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+    }
+
+    input[type='number'],
+    input[type="number"]:hover,
+    input[type="number"]:focus {
+        appearance: none;
+        -moz-appearance: textfield;
+    }
+}
