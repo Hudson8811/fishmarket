@@ -9,7 +9,7 @@
         justify-content: space-between;
         @include max(md) {
             flex-direction: column;
-            gap: vw2(24px);
+            gap: vw2(24);
         }
     }
     &__title {
@@ -30,6 +30,9 @@
         }
         p+p {
             margin-top: vw(27);
+            @include max(md) {
+                margin-top: vw2(27);
+            }
         }
         ul {
             list-style-type: none;

@@ -13,7 +13,7 @@
         justify-content: flex-end;
         gap: vw(16);
         @include max(md) {
-            gap: vw2(16);
+            display: none;
         } 
     }
     &__mode-btn.new-btn {
@@ -69,21 +69,12 @@
 
 .category-intro--rows {
     padding-bottom: vw(60);
-    @include max(md) {
-        padding-bottom: vw2(40);
-    } 
     .category-intro__cards {
         display: flex;
         flex-direction: column;
         column-gap: vw(24);
-        @include max(md) {
-            column-gap: vw2(24);
-        } 
     }
     .category-intro__pagination {
         margin-top: vw(178);
-        @include max(md) {
-            margin-top: vw2(178);
-        } 
     }
 }
