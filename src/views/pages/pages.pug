@@ -1,0 +1,18 @@
+extends ../layouts/default
+
+block variables
+	- const title = "Pages page";
+
+block content
+	.pages-page
+		.container
+			.pages-page__title Страницы
+			.pages-page__links
+				a.pages-page__link(href="index.html") Главная
+				a.pages-page__link(href="catalog-categories.html") Категории каталога
+				a.pages-page__link(href="catalog-category-cards.html") Категория каталога (карточки)
+				a.pages-page__link(href="catalog-category-rows.html") Категория каталога (строки)
+				a.pages-page__link(href="documents.html") Документы для сделок
+				a.pages-page__link(href="faq.html") FAQ
+				a.pages-page__link(href="vacancy.html") Вакансия
+				a.pages-page__link(href="404.html") 404

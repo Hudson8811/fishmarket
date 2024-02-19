@@ -2990,3 +2990,33 @@ background-color: #e9ecef;
 		transform: rotate(0deg);
 	}
 }
+
+
+/*Страница со списком страниц*/
+.pages-page {
+    min-height: 100vh;
+    padding-top: vw(150);
+
+    &__title {
+        font-size: vw(82);
+        line-height: 1.22;
+        color: $fontBlack;
+    }
+
+    &__links {
+        display: grid;
+        justify-items: start;
+        grid-gap: vw(20);
+        margin-top: vw(70);
+    }
+
+    &__link {
+        font-size: vw(32);
+        text-decoration: none;
+        color: $fontBlack;
+        transition: color $tr-time linear;
+        &:hover {
+            color: $blueHover;
+        }
+    }
+}
