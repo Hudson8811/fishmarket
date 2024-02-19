@@ -35,9 +35,21 @@
         grid-template-columns: repeat(4, minmax(0, 1fr));
         row-gap: vw(39);
         column-gap: vw(34);
-        margin-top: 30px;
+        margin-top: vw(30);
     }
     &__pagination {
         margin-top: vw(152);
+    }
+}
+
+.category-intro--rows {
+    padding-bottom: vw(60);
+    .category-intro__cards {
+        display: flex;
+        flex-direction: column;
+        column-gap: vw(24);
+    }
+    .category-intro__pagination {
+        margin-top: vw(178);
     }
 }

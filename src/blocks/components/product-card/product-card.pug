@@ -14,24 +14,25 @@ mixin product-card(props = defaultProductCardProps)
         let typeClass = checkProps.type === "card" ? "product-card--card" : "product-card--row"
 
     .product-card(class= typeClass + " " + checkProps.classes)
-        .product-card__container
-            .product-card__title Семга (лосось) потр.с/г 2-3 ord охлажденная
-            .product-card__vcode Арт.: 6425642-S
+        a.product-card__link(href="#")
+            .product-card__header
+                .product-card__title Семга (лосось) потр.с/г 2-3 ord охлажденная
+                .product-card__vcode Арт.: 6425642-S
             .product-card__photo
                 img(src="img/product_card_salmon.png" alt="Семга (лосось) потр.с/г 2-3 ord охлажденная")
             .product-card__controls
                 .product-card__price 500 Р
                 include ../amount-input/amount-input.pug
-        .product-card__info.card-info
-            .card-info__row
-                .card-info__param Страна происхождения
-                .card-info__value Россия
-            .card-info__row
-                .card-info__param Размер
-                .card-info__value 2-3
-            .card-info__row
-                .card-info__param Спецификация
-                .card-info__value потр., с/г, ord, охл.
+            .product-card__info.card-info
+                .card-info__row
+                    .card-info__param Страна происхождения
+                    .card-info__value Россия
+                .card-info__row
+                    .card-info__param Размер
+                    .card-info__value 2-3
+                .card-info__row
+                    .card-info__param Спецификация
+                    .card-info__value потр., с/г, ord, охл.
         .product-card__btns
             +new-btn({
                 classes: 'product-card__offer',

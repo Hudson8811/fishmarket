@@ -1,16 +1,14 @@
 .product-card {
-    display: flex;
-    flex-direction: column;
     border: 1px solid $greyLight;
     position: relative;
     background-color: $white;
-    &__container {
-        margin: vw(21) vw(20) 0;
+    &__link {
         display: flex;
         flex-direction: column;
-        flex-basis: auto;
-        flex-shrink: 1;
-        flex-grow: 1;
+        height: 100%;
+    }
+    &__header {
+        margin: vw(21) vw(20) 0;
     }
     &__title {
         font-size: vw(24);
@@ -41,6 +39,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        margin: vw(5) vw(20) 0;
     }
     &__price {
         padding: vw(12) vw(26) vw(16);
@@ -119,4 +118,59 @@
         }
     }
 
+}
+
+.product-card--row {
+    display: flex;
+    align-items: center;
+    padding: 0 vw(20) vw(11) vw(10);
+    .product-card__link {
+        flex-basis: auto;
+        flex-shrink: 1;
+        flex-grow: 1;
+        flex-direction: row;
+        align-items: center;
+        gap: vw(47);
+    }
+    .product-card__photo {
+        order: 0;
+        flex-basis: vw(129);
+        flex-shrink: 0;
+        flex-grow: 0;
+        margin-right: vw(12);
+    }
+    .product-card__header {
+        order: 1;
+        min-width: vw(374);
+        flex-basis: vw(374);
+        margin: 0;
+    }
+    .product-card__info {
+        order: 2;
+        min-width: vw(330);
+        flex-basis: vw(330);
+        margin-top: 0;
+    }
+    .product-card__controls {
+        order: 3;
+        min-width: vw(308);
+        flex-basis: vw(308);
+        gap: vw(17);
+        margin: 0;
+    }
+    .product-card__price {
+        white-space: nowrap;
+    }
+    .product-card__btns {
+        grid-template-areas: 'a b';
+        flex-basis: vw(443);
+        flex-shrink: 0;
+        flex-grow: 0;
+        position: relative;
+        z-index: 1;
+        opacity: 1;
+    }
+    .product-card__more.new-btn {
+        display: none;
+    }
 }
