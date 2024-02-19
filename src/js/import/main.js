@@ -113,7 +113,7 @@ $('.contacts__form__input').on('input', function (e) {
 
 $('.js-mask-phone').mask('+7(000)000-00-00');
 $('.js-mask-name').mask("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", {'translation': {
-	A: {pattern: /[а-яА-ЯёЁa-zA-Z]/, },
+	A: {pattern: /[а-яА-ЯёЁa-zA-Z\s]/, },
 }
 });
 
