@@ -67,14 +67,16 @@
     }
 }
 
-.category-intro--rows {
-    padding-bottom: vw(60);
-    .category-intro__cards {
-        display: flex;
-        flex-direction: column;
-        column-gap: vw(24);
-    }
-    .category-intro__pagination {
-        margin-top: vw(178);
+@include min(md) {
+    .category-intro--rows {
+        padding-bottom: vw(60);
+        .category-intro__cards {
+            display: flex;
+            flex-direction: column;
+            column-gap: vw(24);
+        }
+        .category-intro__pagination {
+            margin-top: vw(178);
+        }
     }
 }

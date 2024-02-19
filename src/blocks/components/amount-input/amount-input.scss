@@ -31,8 +31,10 @@
         }
         svg, use {
             width: vw(10);
+            height: vw(10);
             @include max(md) {
                 width: vw2(10);
+                height: vw(10);
             } 
         }
         

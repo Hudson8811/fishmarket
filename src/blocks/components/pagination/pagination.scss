@@ -1,7 +1,9 @@
 .pagination {
     width: fit-content;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
+    justify-content: center;
     margin-left: auto;
     margin-right: auto;
     gap: vw(11);
@@ -40,9 +42,9 @@
             width: vw2(50);
             height: vw2(50);
         }
-        .new-btn__icon, svg, use {
-            width: vw(50);
-            height: vw(50);
+        .new-btn__icon, svg {
+            width: vw(75);
+            height: vw(75);
             @include max(md) {
                 width: vw2(50);
                 height: vw2(50);
