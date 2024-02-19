@@ -4,6 +4,10 @@
     width: vw(174);
     height: vw(57);
     border: 1px solid $greyLight;
+    @include max(md) {
+        width: vw2(174);
+        height: vw2(57);
+    } 
 
     &__change {
         display: flex;
@@ -14,6 +18,9 @@
         flex-grow: 0;
         height: 100%;
         cursor: pointer;
+        @include max(md) {
+            flex-basis: vw2(57);
+        } 
         &.min {
             pointer-events: none;
             color: $grey;
@@ -24,6 +31,9 @@
         }
         svg, use {
             width: vw(10);
+            @include max(md) {
+                width: vw2(10);
+            } 
         }
         
     }
@@ -37,13 +47,18 @@
         height: 100%;
         font-family: $mainFont;
         text-align: center;
-        font-size: 24px;
+        font-size: vw(24);
         font-weight: 600;
         line-height: 1.22;
         color: $fontBlack;
         outline: none;
         border: none;
         background: none;
+        @include max(md) {
+            flex-basis: vw2(60);
+            max-width: calc(100% - vw2(114));
+            font-size: vw2(24);
+        } 
     }
 
     input[type="number"]::-webkit-outer-spin-button,

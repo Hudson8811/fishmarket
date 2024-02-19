@@ -1,6 +1,10 @@
 .category-intro {
     padding-top: vw(286);
-    padding-bottom: vw(38);
+    padding-bottom: vw(40);
+    @include max(md) {
+        padding-top: vw2(150);
+        padding-bottom: vw2(40);
+    } 
     &__title {
         color: $fontBlack;
     }
@@ -8,6 +12,9 @@
         display: flex;
         justify-content: flex-end;
         gap: vw(16);
+        @include max(md) {
+            gap: vw2(16);
+        } 
     }
     &__mode-btn.new-btn {
         width: vw(28);
@@ -29,6 +36,18 @@
                 fill: $fontBlack;
             }
         }
+        @include max(md) {
+            width: vw2(28);
+            height: vw2(28);
+            .new-btn__icon {
+                width: vw2(28);
+                height: vw2(28);
+                svg {
+                    width: vw2(28);
+                    height: vw2(28);
+                }
+            }
+        } 
     }
     &__cards {
         display: grid;
@@ -36,6 +55,12 @@
         row-gap: vw(39);
         column-gap: vw(34);
         margin-top: vw(30);
+        @include max(md) {
+            grid-template-columns: 1fr;
+            row-gap: vw2(24);
+            column-gap: vw2(24);
+            margin-top: vw2(30);
+        }
     }
     &__pagination {
         margin-top: vw(152);
@@ -44,12 +69,21 @@
 
 .category-intro--rows {
     padding-bottom: vw(60);
+    @include max(md) {
+        padding-bottom: vw2(40);
+    } 
     .category-intro__cards {
         display: flex;
         flex-direction: column;
         column-gap: vw(24);
+        @include max(md) {
+            column-gap: vw2(24);
+        } 
     }
     .category-intro__pagination {
         margin-top: vw(178);
+        @include max(md) {
+            margin-top: vw2(178);
+        } 
     }
 }

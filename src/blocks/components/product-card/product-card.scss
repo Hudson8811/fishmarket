@@ -6,23 +6,34 @@
         display: flex;
         flex-direction: column;
         height: 100%;
+        @include max(md) {
+            height: auto;
+        }
     }
     &__header {
         margin: vw(21) vw(20) 0;
+        @include max(md) {
+            margin: vw2(21) vw2(20) 0;
+        } 
     }
     &__title {
         font-size: vw(24);
         font-weight: 500;
         line-height: 0.958;
         color: $fontBlack;
+        @include max(md) {
+            font-size: vw2(30);
+        } 
     }
     &__vcode {
         margin: vw(11) 0 vw(5);
-        font-size: vw(12);
+        font-size: vw(14);
         font-weight: 600;
         line-height: 1.22;
         color: $black;
-
+        @include max(md) {
+            font-size: vw2(14);
+        }
     }
     &__photo {
         margin: auto 0 vw(5);
@@ -34,12 +45,18 @@
             height: 100%;
             object-fit: contain;
         }
+        @include max(md) {
+            height: vw2(420);
+        } 
     }
     &__controls {
         display: flex;
         justify-content: space-between;
         align-items: center;
         margin: vw(5) vw(20) 0;
+        @include max(md) {
+            margin: vw2(5) vw2(20) 0;
+        } 
     }
     &__price {
         padding: vw(12) vw(26) vw(16);
@@ -48,18 +65,29 @@
         line-height: 1.22;
         color: $fontBlack; 
         border: 1px solid $greyLight;
+        @include max(md) {
+            padding: vw2(12) vw2(26) vw2(16);
+            font-size: vw2(24);
+        } 
     }
     &__info {
         margin-top: vw(17);
+        @include max(md) {
+            margin-top: vw2(17);
+        }
         .card-info__row {
             display: flex;
             justify-content: space-between;
             padding: vw(3) vw(18);
-            font-size: vw(12);
+            font-size: vw(14);
             font-weight: 600;
             line-height: 1.25;
             text-transform: uppercase;
             color: $black;
+            @include max(md) {
+                padding: vw2(3) vw2(18);
+                font-size: vw2(14);
+            } 
             &__param {
                 opacity: 0.4;
             }
@@ -80,10 +108,19 @@
         grid-template-columns: auto vw(75);
         grid-template-areas: 'a b'
                             'c c';
-        
         z-index: -1;
         opacity: 0;
         transition: all $tr-time linear;
+        @include max(md) {
+            position: relative;
+            left: 0;
+            top: 0;
+            width: 100%;
+            border: none;
+            grid-template-columns: auto vw2(75);
+            z-index: 1;
+            opacity: 1;
+        } 
     }
     &__offer.new-btn {
         grid-area: a;
@@ -99,9 +136,15 @@
         .new-btn__icon {
             width: vw(24);
             height: vw(23);
+            @include max(md) {
+                width: vw2(24);
+                height: vw2(23);
+            }
             svg, svg use {
-                width: vw(24);
-                height: vw(23);
+                @include max(md) {
+                    width: vw2(24);
+                    height: vw2(23);
+                }
                 fill: inherit;
                 stroke: inherit;  
             }
@@ -124,13 +167,18 @@
     display: flex;
     align-items: center;
     padding: 0 vw(20) vw(11) vw(10);
+    gap: vw(50);
+    @include max(md) {
+        padding: 0 vw2(20) vw2(11) vw2(10);
+        gap: vw2(50);
+    }
     .product-card__link {
         flex-basis: auto;
         flex-shrink: 1;
         flex-grow: 1;
         flex-direction: row;
         align-items: center;
-        gap: vw(47);
+        justify-content: space-between;
     }
     .product-card__photo {
         order: 0;
@@ -138,25 +186,42 @@
         flex-shrink: 0;
         flex-grow: 0;
         margin-right: vw(12);
+        @include max(md) {
+            flex-basis: vw2(129);
+            margin-right: vw2(12);
+        }
     }
     .product-card__header {
         order: 1;
         min-width: vw(374);
         flex-basis: vw(374);
-        margin: 0;
+        margin: 0 0 0 vw(47);
+        @include max(md) {
+            min-width: vw2(374);
+            flex-basis: vw2(374);
+            margin: 0 0 0 vw2(47);
+        }
     }
     .product-card__info {
         order: 2;
         min-width: vw(330);
         flex-basis: vw(330);
-        margin-top: 0;
+        margin: 0 0 0 vw(47);
+        @include max(md) {
+            min-width: vw2(330);
+            flex-basis: vw2(330);
+            margin: 0 0 0 vw2(47);
+        }
     }
     .product-card__controls {
         order: 3;
         min-width: vw(308);
-        flex-basis: vw(308);
+        flex-basis: auto;
         gap: vw(17);
-        margin: 0;
+        margin: 0 0 0 auto;
+        @include max(md) {
+            min-width: vw2(308);
+        }
     }
     .product-card__price {
         white-space: nowrap;
@@ -169,6 +234,9 @@
         position: relative;
         z-index: 1;
         opacity: 1;
+        @include max(md) {
+            flex-basis: vw2(443);
+        }
     }
     .product-card__more.new-btn {
         display: none;

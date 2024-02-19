@@ -8,6 +8,9 @@
     transition: all $tr-time linear;
     text-decoration: none;
     cursor: pointer;
+    @include max(md) {
+        font-size: vw2(12);
+    }
     &--link {
         //color: $c-accent;
         background-color: transparent;
@@ -21,6 +24,10 @@
         padding: vw(20) vw(20) vw(22);
         align-items: flex-end;
         justify-content: space-between;
+        @include max(md) {
+            width: vw2(411);
+            padding: vw2(20) vw2(20) vw2(22);
+        }
         .new-btn__icon {
             display: flex;
             justify-content: center;
@@ -46,6 +53,9 @@
         align-items: center;
         justify-content: space-between;
         transition: all $tr-time linear;
+        @include max(md) {
+            padding: vw2(30) vw2(25) vw2(30) vw2(18);
+        }
         .new-btn__icon {
             display: flex;
             justify-content: center;
@@ -54,9 +64,17 @@
             height: vw(8);
             background-color: transparent;
             margin-bottom: 0;
+            @include max(md) {
+                width: vw2(12);
+                height: vw2(8);
+            }
             svg {
                 width: vw(12);
                 height: vw(8);
+                @include max(md) {
+                    width: vw2(12);
+                    height: vw2(8);
+                }
             }
         }
     }
@@ -111,6 +129,10 @@
         height: vw(59);
         border-radius: 100%;
         padding: 0;
+        @include max(md) {
+            width: vw2(59);
+            height: vw2(59);
+        }
         &:hover {
             .btn__icon {
                 background-color: transparent;
@@ -123,9 +145,17 @@
             width: vw(59);
             height: vw(59);
             background-color: transparent;
+            @include max(md) {
+                width: vw2(59);
+                height: vw2(59);
+            }
             svg {
                 width: vw(11);
                 height: vw(8);
+                @include max(md) {
+                    width: vw2(11);
+                    height: vw2(8);
+                }
             }
             svg use {
                 stroke: $fontBlack;
