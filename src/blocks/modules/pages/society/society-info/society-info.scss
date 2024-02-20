@@ -1,6 +1,6 @@
 .society-info {
     display: flex;
-    min-height: vw(1024);
+    min-height: 100vh;
     @include max(md) {
         min-height: auto;
     } 
@@ -9,7 +9,7 @@
         flex-direction: column;
         justify-content: space-between;
         gap: vw(40);
-        padding: vw(34) vw(30) vw(42);
+        padding: vw(34) vw(170) vw(42) vw(30);
         flex-basis: 50%;
         flex-grow: 0;
         flex-shrink: 0;
@@ -18,25 +18,23 @@
         @include max(md) {
             flex-basis: auto;
             gap: vw2(30);
-            padding: vw2(34) vw2(70) vw2(42) vw2(30);
+            padding: vw2(34) vw(30) vw2(42);
             background-size: 50% auto;
         } 
     }
     &__title {
-        font-size: vw(72);
+        font-size: vw(65);
     }
     &__img {
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
         flex-basis: 50%;
         flex-grow: 0;
         flex-shrink: 0;
         @include max(md) {
             flex-basis: vw2(600);
         } 
-        img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
     }
 }
 
@@ -48,7 +46,7 @@
     } 
     .society-info__content {
         background-image: url("../img/society_info_bg_black.svg");
-        background-position: bottom vw(95) right 0;
+        background-position: bottom vw(105) right 0;
         @include max(md) {
             background-position: bottom vw2(30) right 0;
         } 
@@ -71,7 +69,7 @@
     } 
     .society-info__content {
         background-image: url("../img/society_info_bg_white.svg");
-        background-position: bottom vw(95) left 0;
+        background-position: bottom vw(105) left 0;
         @include max(md) {
             background-position: bottom vw2(30) right 0;
         } 

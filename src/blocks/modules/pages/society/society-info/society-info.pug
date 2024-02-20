@@ -17,12 +17,13 @@ mixin society-info(props = defaultSocietyInfoProps)
             image: props.image ? props.image : defaultSocietyInfoProps.image,
         }
 
+        let bgImage = 'background-image: url(' + checkProps.image +')' 
+
     section.society-info(class= checkProps.classes + ' society-info--' + checkProps.type)
         .society-info__content
             +title("h2", checkProps.title, "society-info__title")
             if(checkProps.text)
                 .society-info__text.text-block
                     p!= checkProps.text
-        .society-info__img
-            img(src=checkProps.image alt=checkProps.title)
+        .society-info__img(style= bgImage)
 
