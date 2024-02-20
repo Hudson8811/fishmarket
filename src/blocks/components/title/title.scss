@@ -1,11 +1,4 @@
 .title {
-    h1, h2 {
-        color: inherit;
-        line-height: inherit;
-        font-size: inherit;
-        letter-spacing: inherit;
-        font-weight: inherit;
-    }
     &--h1 {
         color: $fontBlack;
         font-size: vw(82);

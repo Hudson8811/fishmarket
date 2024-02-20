@@ -2,6 +2,13 @@ h1, h2, h3, h4, h5, h6, ul {
     margin: 0;
     padding: 0;
 }
+h1, h2 {
+    color: inherit;
+    line-height: inherit;
+    font-size: inherit;
+    letter-spacing: inherit;
+    font-weight: inherit;
+}
 html {
 	font-family: $mainFont;
 	font-weight: 500;
@@ -1079,6 +1086,7 @@ a, button {
         &__title {
             margin-bottom: vw(37);
             max-width: vw(357);
+            text-transform: uppercase;
             @include max(md) {
                 font-size: vw2(50);
                 width: 100%;
@@ -2317,8 +2325,7 @@ a, button {
     justify-content: space-between;
     align-items: flex-start;
     flex-flow: column nowrap;
-    padding: vw(30) vw(25);
-    padding-top: vw(90);
+    padding: vw(43) vw(25) vw(30);
     @include max(md) {
         padding: vw2(20);
         padding-top: vw2(70);
