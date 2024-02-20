@@ -2996,11 +2996,17 @@ background-color: #e9ecef;
 .pages-page {
     min-height: 100vh;
     padding-top: vw(150);
+    @include max(md) {
+        padding-top: vw2(150); 
+    }
 
     &__title {
         font-size: vw(82);
         line-height: 1.22;
         color: $fontBlack;
+        @include max(md) {
+            font-size: vw2(50); 
+        }
     }
 
     &__links {
@@ -3008,6 +3014,10 @@ background-color: #e9ecef;
         justify-items: start;
         grid-gap: vw(20);
         margin-top: vw(70);
+        @include max(md) {
+            grid-gap: vw2(15);
+            margin-top: vw2(40); 
+        }
     }
 
     &__link {
@@ -3015,6 +3025,9 @@ background-color: #e9ecef;
         text-decoration: none;
         color: $fontBlack;
         transition: color $tr-time linear;
+        @include max(md) {
+            font-size: vw2(20); 
+        }
         &:hover {
             color: $blueHover;
         }

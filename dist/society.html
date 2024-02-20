@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Pages page</title>
+    <title>Catalog category Page</title>
     <meta name="theme-color" content="#fff">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -416,11 +416,85 @@
       </div>
     </div>
     <main class="site-main">
-      <div class="pages-page">
-        <div class="container">
-          <div class="pages-page__title">Страницы</div>
-          <div class="pages-page__links"><a class="pages-page__link" href="index.html">Главная</a><a class="pages-page__link" href="catalog-categories.html">Категории каталога</a><a class="pages-page__link" href="catalog-category-cards.html">Категория каталога (карточки)</a><a class="pages-page__link" href="catalog-category-rows.html">Категория каталога (строки)</a><a class="pages-page__link" href="society.html">Мы в социуме</a><a class="pages-page__link" href="documents.html">Документы для сделок</a><a class="pages-page__link" href="faq.html">FAQ</a><a class="pages-page__link" href="vacancy.html">Вакансия</a><a class="pages-page__link" href="404.html">404</a></div>
-        </div>
+      <!--mixins-->
+      <div class="scroll-page">
+        <section class="society-intro">
+          <div class="container">
+                    <div class="title title--h1 society-intro__title">
+                      <h1>Мы в социуме</h1>
+                    </div>
+          </div>
+        </section>
+              <section class="society-info  society-info--white">
+                <div class="society-info__content">
+                          <div class="title title--h2 society-info__title">
+                            <h2>участник «Ассоциации производственных и торговых предприятий рыбного рынка», «Рыбного Союза»</h2>
+                          </div>
+                </div>
+                <div class="society-info__img"><img src="../../../../../img/society_info_1.png" alt="участник «Ассоциации производственных и торговых предприятий рыбного рынка», «Рыбного Союза»"></div>
+              </section>
+              <section class="society-info  society-info--black">
+                <div class="society-info__content">
+                          <div class="title title--h2 society-info__title">
+                            <h2>Партнер фонда  “Спорт начинается с детей”</h2>
+                          </div>
+                  <div class="society-info__text text-block">
+                    <p>Если мы поможем хотя бы одному<br>ребёнку — мы уже победили!</p>
+                  </div>
+                </div>
+                <div class="society-info__img"><img src="../../../../../img/society_info_2.png" alt="Партнер фонда  “Спорт начинается с детей”"></div>
+              </section>
+        <section class="society-awards">
+          <div class="container">
+                    <div class="title title--h2 society-awards__title">
+                      <h2>Дипломы и награды</h2>
+                    </div>
+            <div class="society-awards__slider" data-js="societyAwardsSlider">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide society-awards__slide"><a class="society-awards__img" href="img/society_awards_slide_1_2x.png" data-fancybox="societyAwards" data-caption="Название мероприятия, какое место и тд"><img src="../../../../../img/society_awards_slide_1.png" alt="слайд 1"></a>
+                  <div class="society-awards__text text-block"> 
+                    <p>Название мероприятия, какое место и тд</p>
+                  </div>
+                </div>
+                <div class="swiper-slide society-awards__slide"><a class="society-awards__img" href="img/society_awards_slide_2_2x.png" data-fancybox="societyAwards" data-caption="Название мероприятия, какое место и тд"><img src="../../../../../img/society_awards_slide_2.png" alt="слайд 2"></a>
+                  <div class="society-awards__text text-block"> 
+                    <p>Название мероприятия, какое место и тд</p>
+                  </div>
+                </div>
+                <div class="swiper-slide society-awards__slide"><a class="society-awards__img" href="img/society_awards_slide_3_2x.png" data-fancybox="societyAwards" data-caption="Название мероприятия, какое место и тд"><img src="../../../../../img/society_awards_slide_3.png" alt="слайд 3"></a>
+                  <div class="society-awards__text text-block"> 
+                    <p>Название мероприятия, какое место и тд</p>
+                  </div>
+                </div>
+                <div class="swiper-slide society-awards__slide"><a class="society-awards__img" href="img/society_awards_slide_4.png" data-fancybox="societyAwards" data-caption="Название мероприятия, какое место и тд"><img src="../../../../../img/society_awards_slide_4.png" alt="слайд 4"></a>
+                  <div class="society-awards__text text-block"> 
+                    <p>Название мероприятия, какое место и тд</p>
+                  </div>
+                </div>
+                <div class="swiper-slide society-awards__slide"><a class="society-awards__img" href="img/society_awards_slide_1_2x.png" data-fancybox="societyAwards" data-caption="Название мероприятия, какое место и тд"><img src="../../../../../img/society_awards_slide_1.png" alt="слайд 5"></a>
+                  <div class="society-awards__text text-block"> 
+                    <p>Название мероприятия, какое место и тд</p>
+                  </div>
+                </div>
+                <div class="swiper-slide society-awards__slide"><a class="society-awards__img" href="img/society_awards_slide_2_2x.png" data-fancybox="societyAwards" data-caption="Название мероприятия, какое место и тд"><img src="../../../../../img/society_awards_slide_2.png" alt="слайд 6"></a>
+                  <div class="society-awards__text text-block"> 
+                    <p>Название мероприятия, какое место и тд</p>
+                  </div>
+                </div>
+              </div>
+              <div class="society-awards__btn swiper-button-prev">
+                <svg>
+                  <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
+                </svg>
+              </div>
+              <div class="society-awards__btn swiper-button-next">
+                <svg>
+                  <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
     </main>
     <script src="js/main.min.js"></script><script src="https://api-maps.yandex.ru/2.1/?apikey=d30e0023-10b4-4a5c-a8fd-7e8d66094730&lang=ru_RU&onload=MapInit"></script>

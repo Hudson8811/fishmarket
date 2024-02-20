@@ -18,6 +18,7 @@
         font-weight: 500;
         line-height: 1.28;
         color: $fontBlack;
+        text-transform: none;
         @include max(md) {
             max-width: 100%;
             font-size: vw2(32);

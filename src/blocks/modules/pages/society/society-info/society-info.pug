@@ -1,0 +1,28 @@
+-
+    const defaultSocietyInfoProps = {
+        classes: '',
+        type: 'black',
+        title: 'Партнер фонда  “Спорт начинается с детей”',
+        text: '',
+        image: '../../../../../img/society_info_2.png'
+    }
+
+mixin society-info(props = defaultSocietyInfoProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultSocietyInfoProps.classes,
+            type: props.type ? props.type : defaultSocietyInfoProps.type,
+            title: props.title ? props.title : defaultSocietyInfoProps.title,
+            text: props.text ? props.text : defaultSocietyInfoProps.text,
+            image: props.image ? props.image : defaultSocietyInfoProps.image,
+        }
+
+    section.society-info(class= checkProps.classes + ' society-info--' + checkProps.type)
+        .society-info__content
+            +title("h2", checkProps.title, "society-info__title")
+            if(checkProps.text)
+                .society-info__text.text-block
+                    p!= checkProps.text
+        .society-info__img
+            img(src=checkProps.image alt=checkProps.title)
+

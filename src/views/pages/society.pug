@@ -1,0 +1,22 @@
+extends ../layouts/default
+include ../helpers/mixins
+
+block variables
+	- const title = "Catalog category Page"
+
+block content
+	//mixins
+	include ../../blocks/modules/pages/society/society-info/society-info.pug
+
+	.scroll-page
+		include ../../blocks/modules/pages/society/society-intro/society-intro.pug
+		+society-info({
+			type: 'white',
+			title: 'участник «Ассоциации производственных и торговых предприятий рыбного рынка», «Рыбного Союза»',
+			image: '../../../../../img/society_info_1.png'
+		})
+		+society-info({
+			text: 'Если мы поможем хотя бы одному<br>ребёнку — мы уже победили!',
+		})
+		include ../../blocks/modules/pages/society/society-awards/society-awards.pug
+

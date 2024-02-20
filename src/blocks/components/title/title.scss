@@ -1,7 +1,38 @@
-h1, h2 {
-    color: inherit;
-    line-height: inherit;
-    font-size: inherit;
-    letter-spacing: inherit;
-    font-weight: inherit;
+.title {
+    h1, h2 {
+        color: inherit;
+        line-height: inherit;
+        font-size: inherit;
+        letter-spacing: inherit;
+        font-weight: inherit;
+    }
+    &--h1 {
+        color: $fontBlack;
+        font-size: vw(82);
+        font-style: normal;
+        font-weight: 500;
+        line-height: 97.228%;
+        text-transform: uppercase;
+        @include max(md) {
+            font-size: vw2(50);
+            font-style: normal;
+            font-weight: 500;
+            line-height: 1.2;
+        } 
+    }  
+
+    &--h2 {
+        color: $fontBlack;
+        font-size: vw(52);
+        font-style: normal;
+        font-weight: 500;
+        line-height: 97.228%;
+        text-transform: uppercase;
+        @include max(md) {
+            font-size: vw2(32);
+            font-style: normal;
+            font-weight: 500;
+            line-height: 1.2;
+        }
+    } 
 }
