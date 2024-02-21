@@ -1,49 +1,51 @@
 include ../../../../components/title/title.pug
 include ../../../../components/new-btn/new-btn.pug
-
 include ../../../../components/breadcrumbs/breadcrumbs.pug
+include ../../../../components/product-table/product-table.pug
+
 
 .product-intro
-	.container
-		.product-intro__content
-			.product-intro__photos
-				+breadcrumbs()
-				.product-intro__slider(data-js="productIntroSlider")
-					.swiper-wrapper
-						.swiper-slide.product-intro__slide
-							a.society-awards__img(href="img/product-photo_1.png" data-fancybox="productPhoto" data-caption="Короткое описание 1")
-								img(src="img/product-photo_1.png" alt="слайд 1")
-						.swiper-slide.product-intro__slide
-							a.society-awards__img(href="img/product-photo_2.png" data-fancybox="productPhoto" data-caption="Короткое описание 2")
-								img(src="img/product-photo_2.png" alt="слайд 2")
-						.swiper-slide.product-intro__slide
-							a.society-awards__img(href="img/product-photo_3.png" data-fancybox="productPhoto" data-caption="Короткое описание 3")
-								img(src="img/product-photo_3.png" alt="слайд 3")
-						.product-intro__btn.swiper-button-prev
-							svg
-								use(xlink:href=`img/sprites/sprite.svg#arrow_btn`)
-						.product-intro__btn.swiper-button-next
-							svg
-								use(xlink:href=`img/sprites/sprite.svg#arrow_btn`)
+    .container
+        .product-intro__content
+            .product-intro__photos
+                +breadcrumbs()
+                .product-intro__slider(data-js="productIntroSlider")
+                    .swiper-wrapper
+                        .swiper-slide.product-intro__slide
+                            a.product-intro__img(href="img/product_photo_1.png" data-fancybox="productPhoto" data-caption="Короткое описание 1")
+                                img(src="img/product_photo_1.png" alt="слайд 1")
+                        .swiper-slide.product-intro__slide
+                            a.product-intro__img(href="img/product_photo_2.png" data-fancybox="productPhoto" data-caption="Короткое описание 2")
+                                img(src="img/product_photo_2.png" alt="слайд 2")
+                        .swiper-slide.product-intro__slide
+                            a.product-intro__img(href="img/product_photo_3.png" data-fancybox="productPhoto" data-caption="Короткое описание 3")
+                                img(src="img/product_photo_3.png" alt="слайд 3")
+                        .swiper-slide.product-intro__slide
+                            a.product-intro__img(href="img/product_photo_1.png" data-fancybox="productPhoto" data-caption="Короткое описание 1")
+                                img(src="img/product_photo_1.png" alt="слайд 1")
+                        .swiper-slide.product-intro__slide
+                            a.product-intro__img(href="img/product_photo_2.png" data-fancybox="productPhoto" data-caption="Короткое описание 2")
+                                img(src="img/product_photo_2.png" alt="слайд 2")
+                        .swiper-slide.product-intro__slide
+                            a.product-intro__img(href="img/product_photo_3.png" data-fancybox="productPhoto" data-caption="Короткое описание 3")
+                                img(src="img/product_photo_3.png" alt="слайд 3")
+                        .product-intro__btn.swiper-button-prev
+                            svg
+                                use(xlink:href=`img/sprites/sprite.svg#arrow_btn`)
+                        .product-intro__btn.swiper-button-next
+                            svg
+                                use(xlink:href=`img/sprites/sprite.svg#arrow_btn`)
 
-			.product-intro__info
-				.product-intro__title Лосось охлажденный
-				.product-intro__vcode Артикул: 999999999
-				.product-intro__table.product-table
-					.product-table__row
-						.product-table__param Страна происхождения
-						.product-table__value Россия
-					.product-table__row
-						.product-table__param Размер
-						.product-table__value 2-3
-					.product-table__row
-						.product-table__param Спецификация
-						.product-table__value потр., с/г, ord, охл.
-				.product-intro__controls 
-					.product-intro__price 9 999 999 ₽
-					include ../../../../components/amount-input/amount-input.pug
-				.product-intro__subtitle Описание
-				.product-intro__text.text-block красная рыба из рода лососей и семейства лососевых. Форель подразделяют на тихоокеанскую, атлантическую и гольца. В свою очередь эти группы делятся на виды, для каждого из которых присущи свои отличительные особенности. Она имеет богатый состав полезных для здоровья веществ и вкусное нежное мясо, которое употребляют даже в сыром виде.
+            .product-intro__info
+                +title('h1', 'Лосось охлажденный', 'product-intro__title')
+                .product-intro__vcode Артикул: 999999999
+                +product-table("product-intro__table")
+                .product-intro__controls 
+                    .product-intro__price 9 999 999 ₽
+                    include ../../../../components/amount-input/amount-input.pug
+                .product-intro__subtitle Описание
+                .product-intro__text.text-block 
+                    p Красная рыба из рода лососей и семейства лососевых. Форель подразделяют на тихоокеанскую, атлантическую и гольца. В свою очередь эти группы делятся на виды, для каждого из которых присущи свои отличительные особенности. Она имеет богатый состав полезных для здоровья веществ и вкусное нежное мясо, которое употребляют даже в сыром виде.
 
 
 

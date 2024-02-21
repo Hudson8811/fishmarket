@@ -5,6 +5,7 @@
     }
 
 mixin product-card(props = defaultProductCardProps)
+    include ../product-table/product-table.pug
     -
         const checkProps = {
             classes: props.classes ? props.classes : defaultProductCardProps.classes,
@@ -23,16 +24,7 @@ mixin product-card(props = defaultProductCardProps)
             .product-card__controls
                 .product-card__price 500 Р
                 include ../amount-input/amount-input.pug
-            .product-card__info.card-info
-                .card-info__row
-                    .card-info__param Страна происхождения
-                    .card-info__value Россия
-                .card-info__row
-                    .card-info__param Размер
-                    .card-info__value 2-3
-                .card-info__row
-                    .card-info__param Спецификация
-                    .card-info__value потр., с/г, ord, охл.
+            +product-table("product-card__info")
         .product-card__btns
             +new-btn({
                 classes: 'product-card__offer',

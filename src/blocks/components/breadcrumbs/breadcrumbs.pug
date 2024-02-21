@@ -29,11 +29,10 @@ mixin breadcrumbs(props = defaultBreadCrumbsProps)
         let colorModeClass = 'breadcrumbs--' + checkProps.colorMode
 
     .breadcrumbs(class=checkProps.classes + ' ' + colorModeClass)
-        .container
-            ul.breadcrumbs__list.list-reset
-                each val, index in checkProps.items
-                    li.breadcrumbs__item(class= (index === checkProps.items.length - 1) ? "breadcrumbs__item--current" : "")
-                        if index === checkProps.items.length - 1
-                            span= val.name
-                        else
-                            a(href=`${val.link}`)= val.name + " /"
+        ul.breadcrumbs__list.list-reset
+            each val, index in checkProps.items
+                li.breadcrumbs__item(class= (index === checkProps.items.length - 1) ? "breadcrumbs__item--current" : "")
+                    if index === checkProps.items.length - 1
+                        span= val.name
+                    else
+                        a(href=`${val.link}`)= val.name + " /"

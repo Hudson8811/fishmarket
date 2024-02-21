@@ -1,6 +1,6 @@
 .society-info {
     display: flex;
-    min-height: 100vh;
+    min-height: vw(830);
     @include max(md) {
         min-height: auto;
     } 

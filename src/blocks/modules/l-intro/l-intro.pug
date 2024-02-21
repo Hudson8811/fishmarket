@@ -1,0 +1,46 @@
+-
+    const defaultLIntroProps = {
+        classes: '',
+        breadcrumbs: {
+            classes: 'l-intro__breadcrumbs',
+            colorMode: 'light',
+            items: [
+                {
+                    name: 'Главная',
+                    link: '#'
+                },
+                {
+                    name: 'Мы в социуме',
+                    link: '#'
+                }
+            ]
+        },
+        title: 'Мы в социуме',
+        text: '',
+        image: 'img/society-intro.png'
+    }
+
+mixin l-intro(props = defaultLIntroProps)
+    include ../../components/breadcrumbs/breadcrumbs.pug
+    include ../../components/title/title.pug
+
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultLIntroProps.classes,
+            breadcrumbs: props.breadcrumbs ? props.breadcrumbs : defaultLIntroProps.breadcrumbs,
+            title: props.title ? props.title : defaultLIntroProps.title,
+            text: props.text ? props.text : defaultLIntroProps.text,
+            image: props.image ? props.image : defaultLIntroProps.image,
+        };
+
+        let bgImage = 'background-image: url(' + checkProps.image +')';
+
+    section.l-intro(class=checkProps.classes, style=bgImage)
+        .container
+            .l-intro__content
+                +breadcrumbs(checkProps.breadcrumbs)
+                +title("h1", checkProps.title, "l-intro__title")
+                if(checkProps.text)
+                    .l-intro__text.text-block
+                        p!= checkProps.text
+

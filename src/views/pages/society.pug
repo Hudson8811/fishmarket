@@ -7,9 +7,10 @@ block variables
 block content
 	//mixins
 	include ../../blocks/modules/pages/society/society-info/society-info.pug
+	include ../../blocks/modules/l-intro/l-intro.pug
 
 	.scroll-page
-		include ../../blocks/modules/pages/society/society-intro/society-intro.pug
+		+l-intro()
 		+society-info({
 			type: 'white',
 			title: 'участник «Ассоциации производственных и торговых предприятий рыбного рынка», «Рыбного Союза»',

@@ -1,14 +1,18 @@
-.society-intro {
-    padding-top: vw(131);
-    padding-bottom: vw(727);
-    background-image: url("../img/society-intro.png");
+.l-intro {
+    padding-top: vw(115);
+    min-height: 100vh;
     background-size: cover;
     background-position: center;
-
     @include max(md) {
-        padding-top: vw2(150);
-        padding-bottom: vw2(600);
+        padding-top: vw2(100);
     } 
+
+    &__breadcrumbs {
+        padding-left: vw(20);
+        @include max(md) {
+            padding-left: vw2(10);
+        } 
+    }
 
     &__title {
         color: $white;
