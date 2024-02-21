@@ -1,0 +1,39 @@
+-
+    const defaultBreadCrumbsProps = {
+        classes: '',
+        colorMode: 'dark',
+        items: [
+            {
+                name: 'Главная',
+                link: '#'
+            },
+            {
+                name: 'Каталог',
+                link: '#'
+            },
+            {
+                name: 'Лосось охлажденный',
+                link: '#'
+            }
+        ]
+    }
+
+mixin breadcrumbs(props = defaultBreadCrumbsProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultBreadCrumbsProps.classes,
+            colorMode: props.colorMode ? props.colorMode : defaultBreadCrumbsProps.colorMode,
+            items: props.items ? props.items : defaultBreadCrumbsProps.items,
+        }
+
+        let colorModeClass = 'breadcrumbs--' + checkProps.colorMode
+
+    .breadcrumbs(class=checkProps.classes + ' ' + colorModeClass)
+        .container
+            ul.breadcrumbs__list.list-reset
+                each val, index in checkProps.items
+                    li.breadcrumbs__item(class= (index === checkProps.items.length - 1) ? "breadcrumbs__item--current" : "")
+                        if index === checkProps.items.length - 1
+                            span= val.name
+                        else
+                            a(href=`${val.link}`)= val.name + " /"

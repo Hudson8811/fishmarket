@@ -167,10 +167,13 @@ mobMenuCityOverlay.addEventListener("click", function () {
   bodyYesScroll()
 });
 mobMenuCityOk.addEventListener("click", function () {
-  let currentCity = mobMenuCitySelect.getAttribute("data-value")
-  console.log(document.cookie.split(';'))
-  document.cookie= encodeURIComponent("user_city") + '=' + encodeURIComponent(currentCity);
-  console.log(document.cookie)
+  let currentCity = mobMenuCitySelect.value
+  if(currentCity.length > 0) {
+    document.cookie= encodeURIComponent("user_city") + '=' + encodeURIComponent(currentCity);
+    mobMenuCityButton.querySelector("[data-js='cityTextValue']").innerHTML = currentCity;
+    mobMenuCity.classList.remove("active");
+    bodyYesScroll()
+  }
 });
 buttonQuestion.addEventListener("click", function () {
   mobMenuQuestion.classList.add("active");

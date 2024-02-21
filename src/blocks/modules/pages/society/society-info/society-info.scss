@@ -18,7 +18,7 @@
         @include max(md) {
             flex-basis: auto;
             gap: vw2(30);
-            padding: vw2(34) vw(30) vw2(42);
+            padding: vw2(34) vw2(20) vw2(42);
             background-size: 50% auto;
         } 
     }

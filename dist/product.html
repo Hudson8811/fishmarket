@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Pages page</title>
+    <title>Product Details Page</title>
     <meta name="theme-color" content="#fff">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -416,10 +416,76 @@
       </div>
     </div>
     <main class="site-main">
-      <div class="pages-page">
-        <div class="container">
-          <div class="pages-page__title">Страницы</div>
-          <div class="pages-page__links"><a class="pages-page__link" href="index.html">Главная</a><a class="pages-page__link" href="catalog-categories.html">Категории каталога</a><a class="pages-page__link" href="catalog-category-cards.html">Категория каталога (карточки)</a><a class="pages-page__link" href="catalog-category-rows.html">Категория каталога (строки)</a><a class="pages-page__link" href="product.html">Детальная карточка товара</a><a class="pages-page__link" href="society.html">Мы в социуме</a><a class="pages-page__link" href="documents.html">Документы для сделок</a><a class="pages-page__link" href="faq.html">FAQ</a><a class="pages-page__link" href="vacancy.html">Вакансия</a><a class="pages-page__link" href="404.html">404</a></div>
+      <!--mixins-->
+      <div class="scroll-page">
+        <div class="product-intro">
+          <div class="container">
+            <div class="product-intro__content">
+              <div class="product-intro__photos">
+                        <div class="breadcrumbs  breadcrumbs--dark">
+                          <div class="container">
+                            <ul class="breadcrumbs__list list-reset">
+                              <li class="breadcrumbs__item"><a href="#">Главная /</a>
+                              </li>
+                              <li class="breadcrumbs__item"><a href="#">Каталог /</a>
+                              </li>
+                              <li class="breadcrumbs__item breadcrumbs__item--current"><span>Лосось охлажденный</span>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                <div class="product-intro__slider" data-js="productIntroSlider">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide product-intro__slide"><a class="society-awards__img" href="img/product-photo_1.png" data-fancybox="productPhoto" data-caption="Короткое описание 1"><img src="img/product-photo_1.png" alt="слайд 1"></a></div>
+                    <div class="swiper-slide product-intro__slide"><a class="society-awards__img" href="img/product-photo_2.png" data-fancybox="productPhoto" data-caption="Короткое описание 2"><img src="img/product-photo_2.png" alt="слайд 2"></a></div>
+                    <div class="swiper-slide product-intro__slide"><a class="society-awards__img" href="img/product-photo_3.png" data-fancybox="productPhoto" data-caption="Короткое описание 3"><img src="img/product-photo_3.png" alt="слайд 3"></a></div>
+                    <div class="product-intro__btn swiper-button-prev">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
+                      </svg>
+                    </div>
+                    <div class="product-intro__btn swiper-button-next">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="product-intro__info">
+                <div class="product-intro__title">Лосось охлажденный</div>
+                <div class="product-intro__vcode">Артикул: 999999999</div>
+                <div class="product-intro__table product-table">
+                  <div class="product-table__row">
+                    <div class="product-table__param">Страна происхождения</div>
+                    <div class="product-table__value">Россия</div>
+                  </div>
+                  <div class="product-table__row">
+                    <div class="product-table__param">Размер</div>
+                    <div class="product-table__value">2-3</div>
+                  </div>
+                  <div class="product-table__row">
+                    <div class="product-table__param">Спецификация</div>
+                    <div class="product-table__value">потр., с/г, ord, охл.</div>
+                  </div>
+                </div>
+                <div class="product-intro__controls"> 
+                  <div class="product-intro__price">9 999 999 ₽</div>
+                  <div class="amount-input" data-js="amountInput"><span class="amount-input__change amount-input__minus min">
+                      <svg> 
+                        <use xlink:href="img/sprites/sprite.svg#minus"></use>
+                      </svg></span>
+                    <input class="amount-input__value" type="number" name="amount" value="1" autocomplete="off"><span class="amount-input__change amount-input__plus"> 
+                      <svg> 
+                        <use xlink:href="img/sprites/sprite.svg#plus"></use>
+                      </svg></span>
+                  </div>
+                </div>
+                <div class="product-intro__subtitle">Описание</div>
+                <div class="product-intro__text text-block">красная рыба из рода лососей и семейства лососевых. Форель подразделяют на тихоокеанскую, атлантическую и гольца. В свою очередь эти группы делятся на виды, для каждого из которых присущи свои отличительные особенности. Она имеет богатый состав полезных для здоровья веществ и вкусное нежное мясо, которое употребляют даже в сыром виде.</div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </main>
