@@ -12,8 +12,9 @@ include ../../../../components/slider-photo/slider-photo.pug
                 +breadcrumbs()
                 +slider-photo('product-intro__slider')
             .product-intro__info
-                +title('h1', 'Лосось охлажденный', 'product-intro__title')
-                .product-intro__vcode Артикул: 999999999
+                .product-intro__header
+                    +title('h1', 'Лосось охлажденный', 'product-intro__title')
+                    .product-intro__vcode Артикул: 999999999
                 +product-table("product-intro__table")
                 .product-intro__controls 
                     .product-intro__price 9 999 999 ₽

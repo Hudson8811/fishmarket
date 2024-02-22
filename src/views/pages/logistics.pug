@@ -1,0 +1,34 @@
+extends ../layouts/default
+include ../helpers/mixins
+
+block variables
+	- const title = "Logistics Page"
+
+block content
+	//mixins
+	include ../../blocks/modules/l-intro/l-intro.pug
+
+	.scroll-page
+		+l-intro({
+			classes: '',
+			breadcrumbs: {
+				classes: 'logistics__breadcrumbs',
+				colorMode: 'light',
+				items: [
+					{
+						name: 'Главная',
+						link: '#'
+					},
+					{
+						name: 'Наша логистика',
+						link: '#'
+					}
+				]
+			},
+			title: 'Наша логистика',
+			text: '',
+			image: 'img/society-intro.png'
+		})
+
+		include ../../blocks/modules/footer/footer
+

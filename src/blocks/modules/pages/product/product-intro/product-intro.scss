@@ -1,27 +1,54 @@
 .product-intro {
     padding-top: vw(110);
     padding-bottom: vw(40);
+    @include max(md) {
+        padding-top: vw2(90);
+        padding-bottom: vw2(40);
+    }
     &__content {
         display: flex;
         justify-content: space-between;
         gap: vw(20);
+        @include max(md) {
+            flex-direction: column;
+            gap: vw2(20);
+        }
     }
     &__photos {
         flex-basis: auto;
         padding-top: vw(6);
+        @include max(md) {
+            display: contents;
+        }
     }
     &__slider {
         margin-top: vw(40);
         max-width: vw(900);
+        @include max(md) {
+            order: 2;
+            margin-top: vw2(40);
+            max-width: 100%;
+        }
     }
     &__info {
         flex-basis: vw(917);
         flex-shrink: 0;
         flex-grow: 0;
+        @include max(md) {
+            display: contents;
+        }
+    }
+    &__header {
+        @include max(md) {
+            order: 1;
+        }
     }
     &__title {
         font-size: vw(40);
         text-transform: none;
+        @include max(md) {
+            font-size: vw2(36);
+        }
     }
     &__vcode {
         font-size: vw(14);
@@ -29,10 +56,17 @@
         line-height: 1.2;
         margin-top: vw(15);
         color: $fontBlack;
+        @include max(md) {
+            font-size: vw2(12);
+        }
     }
     &__table {
         margin-top: vw(71);
         max-width: vw(442);
+        @include max(md) {
+            order: 2;
+            max-width: 100%;
+        }
     }
     &__controls {
         display: flex;
@@ -41,12 +75,19 @@
         margin-top: vw(25);
         padding: vw(21) vw(20) vw(44) vw(26);
         border: 1px solid $greyBorder;
+        @include max(md) {
+            order: 2;
+            padding: vw2(11) vw2(10) vw2(22) vw2(13);
+        }
     }
     &__price {
         font-size: vw(40);
         font-weight: 500;
         line-height: 0.97;
         color: $fontBlack;
+        @include max(md) {
+            font-size: vw2(32);
+        }
     }
     &__subtitle {
         margin-top: vw(38);
@@ -54,6 +95,10 @@
         font-weight: 500;
         line-height: 0.97;
         color: $fontBlack;
+        @include max(md) {
+            order: 2;
+            font-size: vw2(32);
+        }
     }
 
     &__text {
@@ -63,6 +108,12 @@
         }
         p, li, a {
             font-size: vw(24);
+            @include max(md) {
+                font-size: vw2(18);
+            }
+        }
+        @include max(md) {
+            order: 2;
         }
     }
 }
