@@ -2,10 +2,28 @@ include ../../../../components/title/title.pug
 include ../../../../components/new-btn/new-btn.pug
 include ../../../../components/pagination/pagination.pug
 include ../../../../components/product-card/product-card.pug
+include ../../../../components/breadcrumbs/breadcrumbs.pug
 
 mixin category-intro(cardsType="card") 
 	section.category-intro(class= cardsType==="row" ? "category-intro--rows" : "")
 		.container
+			+breadcrumbs({
+				classes: 'category-intro__breadcrumbs',
+				items: [
+					{
+						name: 'Главная',
+						link: '#'
+					},
+					{
+						name: 'Каталог',
+						link: '#'
+					},
+					{
+						name: 'Рыба охлажденная',
+						link: '#'
+					},
+				]
+			})
 			+title("h1", "Рыба <br>охлажденная", "category-intro__title")
 			.category-intro__list
 				.category-intro__controls

@@ -3,7 +3,9 @@
 	display: flex;
 	justify-content: flex-start;
 	align-items: flex-start;
-	width: 100vw;
+	width: 100%;
+	max-width: 100%;
+	overflow-x: hidden;
 	// height: 100vh;
 	height: calc(100vh - vw(90));
 	background: #07171D;
@@ -21,7 +23,6 @@
 		&--personally {
 			top: auto;
 			height: calc(100vh - vw(00));
-			// padding-top: vw(90);
 			position: relative;
 			flex-flow: column nowrap;
 			width: 100vw;

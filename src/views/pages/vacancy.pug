@@ -2,13 +2,32 @@ extends ../layouts/default
 include ../helpers/mixins
 
 block variables
-	- const title = "FUQ Page"
+	- const title = "Vacancy Page"
 
 
 block content
+	include ../../blocks/components/breadcrumbs/breadcrumbs.pug
+
 	.scroll-page
 		.section.section--first.section__white.vacancy__section
 			.container
+				+breadcrumbs({
+					classes: 'vacancy__breadcrumbs',
+					items: [
+						{
+							name: 'Главная',
+							link: '#'
+						},
+						{
+							name: 'Вакансии',
+							link: '#'
+						},
+						{
+							name: 'Сортировщик',
+							link: '#'
+						}
+					]
+				})
 				.layout
 					.layout__col
 						.vacancy
@@ -84,7 +103,9 @@ block content
 			#js-map.contacts__map__item
 				//- <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Aebeaff5254b284c038cedd4e4eace9ceb6df9e58d1e143167db02be7b369ebb9&amp;source=constructor" width="100%" height="100%" frameborder="0"></iframe>		
 
-		footer.footer.footer__animation.footer__animation--personally.js-footer__animation
+		include ../../blocks/modules/footer/footer
+
+		//footer.footer.footer__animation.footer__animation--personally.js-footer__animation
 			.footer__logo 
 				img(src="img/logo__white.png" alt="")
 			.footer__title.title__170 

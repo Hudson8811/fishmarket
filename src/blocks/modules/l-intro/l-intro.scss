@@ -5,12 +5,13 @@
     background-position: center;
     @include max(md) {
         padding-top: vw2(100);
+        min-height: vw2(650);
     } 
 
     &__breadcrumbs {
         padding-left: vw(20);
         @include max(md) {
-            padding-left: vw2(10);
+            padding-left: vw2(5);
         } 
     }
 

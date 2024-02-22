@@ -1,5 +1,6 @@
 .product-intro {
     padding-top: vw(110);
+    padding-bottom: vw(40);
     &__content {
         display: flex;
         justify-content: space-between;
@@ -10,17 +11,9 @@
         padding-top: vw(6);
     }
     &__slider {
-        overflow-x: hidden;
-        margin-top: vw(51);
+        margin-top: vw(40);
         max-width: vw(900);
     }
-    &__slide {
-        max-width: 100%;
-        //display: flex;
-        //align-items: flex-start;
-        //-content: center;
-    }
-
     &__info {
         flex-basis: vw(917);
         flex-shrink: 0;

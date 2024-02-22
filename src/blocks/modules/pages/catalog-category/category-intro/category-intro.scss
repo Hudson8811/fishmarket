@@ -1,12 +1,19 @@
 .category-intro {
-    padding-top: vw(286);
+    padding-top: vw(114);
     padding-bottom: vw(40);
     @include max(md) {
-        padding-top: vw2(150);
+        padding-top: vw2(90);
         padding-bottom: vw2(40);
     } 
+    &__breadcrumbs {
+		padding-left: vw(8);
+	}
     &__title {
         color: $fontBlack;
+        margin-top: vw(156);
+        @include max(md) {
+            margin-top: vw2(50);
+        } 
     }
     &__controls {
         display: flex;

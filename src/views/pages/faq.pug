@@ -2,13 +2,28 @@ extends ../layouts/default
 include ../helpers/mixins
 
 block variables
-	- const title = "FUQ Page"
+	- const title = "FAQ Page"
 
 
 block content
+	include ../../blocks/components/breadcrumbs/breadcrumbs.pug
+
 	.scroll-page
 		.section.section--first.questions__section
 			.container
+				+breadcrumbs({
+					classes: 'questions__breadcrumbs',
+					items: [
+						{
+							name: 'Главная',
+							link: '#'
+						},
+						{
+							name: 'FAQ',
+							link: '#'
+						}
+					]
+				})
 				.questions__section__title.title__52
 					h1 FAQ
 				.layout
@@ -68,7 +83,8 @@ block content
 									</svg>
 								.btn--box__text Заказать звонок
 
-		footer.footer.footer__animation.footer__animation--personally.js-footer__animation
+		include ../../blocks/modules/footer/footer
+		//footer.footer.footer__animation.footer__animation--personally.js-footer__animation
 			.footer__logo 
 				img(src="img/logo__white.png" alt="")
 			.footer__title.title__170 

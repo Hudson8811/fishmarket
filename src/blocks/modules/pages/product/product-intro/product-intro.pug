@@ -2,6 +2,7 @@ include ../../../../components/title/title.pug
 include ../../../../components/new-btn/new-btn.pug
 include ../../../../components/breadcrumbs/breadcrumbs.pug
 include ../../../../components/product-table/product-table.pug
+include ../../../../components/slider-photo/slider-photo.pug
 
 
 .product-intro
@@ -9,33 +10,7 @@ include ../../../../components/product-table/product-table.pug
         .product-intro__content
             .product-intro__photos
                 +breadcrumbs()
-                .product-intro__slider(data-js="productIntroSlider")
-                    .swiper-wrapper
-                        .swiper-slide.product-intro__slide
-                            a.product-intro__img(href="img/product_photo_1.png" data-fancybox="productPhoto" data-caption="Короткое описание 1")
-                                img(src="img/product_photo_1.png" alt="слайд 1")
-                        .swiper-slide.product-intro__slide
-                            a.product-intro__img(href="img/product_photo_2.png" data-fancybox="productPhoto" data-caption="Короткое описание 2")
-                                img(src="img/product_photo_2.png" alt="слайд 2")
-                        .swiper-slide.product-intro__slide
-                            a.product-intro__img(href="img/product_photo_3.png" data-fancybox="productPhoto" data-caption="Короткое описание 3")
-                                img(src="img/product_photo_3.png" alt="слайд 3")
-                        .swiper-slide.product-intro__slide
-                            a.product-intro__img(href="img/product_photo_1.png" data-fancybox="productPhoto" data-caption="Короткое описание 1")
-                                img(src="img/product_photo_1.png" alt="слайд 1")
-                        .swiper-slide.product-intro__slide
-                            a.product-intro__img(href="img/product_photo_2.png" data-fancybox="productPhoto" data-caption="Короткое описание 2")
-                                img(src="img/product_photo_2.png" alt="слайд 2")
-                        .swiper-slide.product-intro__slide
-                            a.product-intro__img(href="img/product_photo_3.png" data-fancybox="productPhoto" data-caption="Короткое описание 3")
-                                img(src="img/product_photo_3.png" alt="слайд 3")
-                        .product-intro__btn.swiper-button-prev
-                            svg
-                                use(xlink:href=`img/sprites/sprite.svg#arrow_btn`)
-                        .product-intro__btn.swiper-button-next
-                            svg
-                                use(xlink:href=`img/sprites/sprite.svg#arrow_btn`)
-
+                +slider-photo('product-intro__slider')
             .product-intro__info
                 +title('h1', 'Лосось охлажденный', 'product-intro__title')
                 .product-intro__vcode Артикул: 999999999

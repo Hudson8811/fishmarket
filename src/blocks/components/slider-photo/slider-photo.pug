@@ -1,0 +1,59 @@
+mixin slider-photo(classes="")
+
+    .slider-photo(class= classes data-js="sliderPhotoWrapper")
+        .slider-photo__slider(data-js="sliderPhotoSlider")
+            .swiper-wrapper
+                .swiper-slide.slider-photo__slide
+                    a.slider-photo__img(href="img/product_photo_1.png" data-fancybox="productPhoto" data-caption="Короткое описание 1")
+                        img(src="img/product_photo_1.png" alt="слайд 1")
+                .swiper-slide.slider-photo__slide
+                    a.slider-photo__img(href="img/product_photo_2.png" data-fancybox="productPhoto" data-caption="Короткое описание 2")
+                        img(src="img/product_photo_2.png" alt="слайд 2")
+                .swiper-slide.slider-photo__slide
+                    a.slider-photo__img(href="img/product_photo_3.png" data-fancybox="productPhoto" data-caption="Короткое описание 3")
+                        img(src="img/product_photo_3.png" alt="слайд 3")
+                .swiper-slide.slider-photo__slide
+                    a.slider-photo__img(href="img/product_photo_1.png" data-fancybox="productPhoto" data-caption="Короткое описание 4")
+                        img(src="img/product_photo_1.png" alt="слайд 4")
+                .swiper-slide.slider-photo__slide
+                    a.slider-photo__img(href="img/product_photo_2.png" data-fancybox="productPhoto" data-caption="Короткое описание 5")
+                        img(src="img/product_photo_2.png" alt="слайд 5")
+                .swiper-slide.slider-photo__slide
+                    a.slider-photo__img(href="img/product_photo_3.png" data-fancybox="productPhoto" data-caption="Короткое описание 6")
+                        img(src="img/product_photo_3.png" alt="слайд 6")
+                .swiper-slide.slider-photo__slide
+                    a.slider-photo__img(href="img/product_photo_1.png" data-fancybox="productPhoto" data-caption="Короткое описание 7")
+                        img(src="img/product_photo_1.png" alt="слайд 7")
+                .swiper-slide.slider-photo__slide
+                    a.slider-photo__img(href="img/product_photo_2.png" data-fancybox="productPhoto" data-caption="Короткое описание 8")
+                        img(src="img/product_photo_2.png" alt="слайд 8")
+                .swiper-slide.slider-photo__slide
+                    a.slider-photo__img(href="img/product_photo_3.png" data-fancybox="productPhoto" data-caption="Короткое описание 9")
+                        img(src="img/product_photo_3.png" alt="слайд 9")                
+
+        .slider-photo__thumbs(data-js="sliderPhotoThumbs")
+            .swiper-wrapper
+                .swiper-slide.slider-photo__thumb
+                    img(src="img/product_photo_1.png" alt="слайд 1")
+                .swiper-slide.slider-photo__thumb
+                    img(src="img/product_photo_2.png" alt="слайд 2")
+                .swiper-slide.slider-photo__thumb
+                    img(src="img/product_photo_3.png" alt="слайд 3")
+                .swiper-slide.slider-photo__thumb
+                    img(src="img/product_photo_1.png" alt="слайд 4")
+                .swiper-slide.slider-photo__thumb
+                    img(src="img/product_photo_2.png" alt="слайд 5")
+                .swiper-slide.slider-photo__thumb
+                    img(src="img/product_photo_3.png" alt="слайд 6")
+                .swiper-slide.slider-photo__thumb
+                    img(src="img/product_photo_1.png" alt="слайд 7")
+                .swiper-slide.slider-photo__thumb
+                    img(src="img/product_photo_2.png" alt="слайд 8")
+                .swiper-slide.slider-photo__thumb
+                    img(src="img/product_photo_3.png" alt="слайд 9")
+            .slider-photo__btn.swiper-button-prev
+                svg
+                    use(xlink:href=`img/sprites/sprite.svg#arrow_btn`)
+            .slider-photo__btn.swiper-button-next
+                svg
+                    use(xlink:href=`img/sprites/sprite.svg#arrow_btn`)

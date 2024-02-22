@@ -51,6 +51,10 @@ a, button {
 	flex: 0 0 auto;
 }
 
+.pin-spacer {
+    max-width: 100%;
+}
+
 .container {
     position: relative;
 	box-sizing: border-box;
@@ -938,8 +942,9 @@ a, button {
                         }
                     }
                     &:nth-child(2) {
-
+                        right: -1px;
                         @include max(md) {
+                            right: 0;
                         }
                         
                     }
@@ -1135,6 +1140,9 @@ a, button {
             margin-bottom: vw2(30);
         }
     }
+    &__breadcrumbs {
+		padding-left: vw(8);
+	}
     &__section {
         position: relative;
         display: flex;
@@ -1142,11 +1150,11 @@ a, button {
         align-items: flex-start;
         flex-flow: column nowrap;
         width: 100%;
-        margin-top: vw(143);
+        padding-top: vw(114);
         padding-bottom: vw(124);
         @include max(md) {
             padding-bottom: vw2(60);
-            margin-top: vw(0);
+            padding-top: vw2(90);
         }
         &__title {
             color: #07171D;
@@ -1156,6 +1164,7 @@ a, button {
             }
         }
         .layout {
+            margin-top: vw(143);
             &__col {
                 flex-flow: column nowrap;
                 &:nth-child(1) {
@@ -1335,17 +1344,24 @@ a, button {
     justify-content: flex-start;
     align-items: flex-start;
     width: 100%;
+    &__breadcrumbs {
+		padding-left: vw(3);
+	}
     &__section {
         background: #fff;
         padding-bottom: vw(124);
+        padding-top: vw(114);
         @include max(md) {
+            padding-top: vw2(90);
             padding-bottom: vw2(60);
         }
         &__title {
             color: #07171D;
             margin-bottom: vw(47);
+            margin-top: vw(21);
             @include max(md) {
                 margin-bottom: vw2(40);
+                margin-top: vw2(21);
             }
         }
         &__subtitle {
@@ -1588,8 +1604,19 @@ a, button {
     align-items: flex-start;
     width: 100%;
     flex-flow: column nowrap;
+    &__breadcrumbs {
+		padding-left: vw(8);
+	}
     &__section {
+        padding-top: vw(114);
+        @include max(md) {
+            padding-top: vw2(90);
+        } 
         .layout {
+            margin-top: vw(143);
+            @include max(md) {
+                margin-top: vw2(90);
+            }
             &__col {
 
                 &:nth-child(1) {
@@ -2320,7 +2347,7 @@ a, button {
     position: relative;
     display: flex;
     overflow: hidden;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     justify-content: space-between;
     align-items: flex-start;

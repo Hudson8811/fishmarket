@@ -1,4 +1,7 @@
 .assortment {
+	&__breadcrumbs {
+		padding-left: vw(8);
+	}
 	&__title {
 		position: absolute;
 		top: vw(25);
@@ -60,10 +63,7 @@
 							padding-bottom: vw(249);
 
 							&:nth-child(1) {
-									padding-top: vw(30);
-									// @include max(md) {
-									//     display: none;
-									// }
+									padding-top: vw(24);
 							}
 							&:nth-child(2) {
 									@include max(md) {
@@ -86,12 +86,12 @@
 			}
 			&--no-animation {
 				position: relative;
-				padding-top: vw(90);
+				padding-top: vw(114);
 				left: auto;
 				height: auto;
 				@include max(md) {
-          padding-top: vw2(70);
-      	} 
+					padding-top: vw2(90);
+				} 
 				&.bg-white {
 					background: #fff;
 					.assortment__title {
