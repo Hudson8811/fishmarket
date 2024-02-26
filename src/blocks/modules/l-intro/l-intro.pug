@@ -16,7 +16,8 @@
             ]
         },
         title: 'Мы в социуме',
-        text: '',
+        textTop: '',
+        textBottom: '',
         image: 'img/society-intro.png'
     }
 
@@ -29,18 +30,22 @@ mixin l-intro(props = defaultLIntroProps)
             classes: props.classes ? props.classes : defaultLIntroProps.classes,
             breadcrumbs: props.breadcrumbs ? props.breadcrumbs : defaultLIntroProps.breadcrumbs,
             title: props.title ? props.title : defaultLIntroProps.title,
-            text: props.text ? props.text : defaultLIntroProps.text,
+            textTop: props.textTop ? props.textTop : defaultLIntroProps.textTop,
+            textBottom: props.textBottom ? props.textBottom : defaultLIntroProps.textBottom,
             image: props.image ? props.image : defaultLIntroProps.image,
         };
 
         let bgImage = 'background-image: url(' + checkProps.image +')';
 
     section.l-intro(class=checkProps.classes, style=bgImage)
-        .container
+        .container.l-intro__container
             .l-intro__content
                 +breadcrumbs(checkProps.breadcrumbs)
                 +title("h1", checkProps.title, "l-intro__title")
-                if(checkProps.text)
-                    .l-intro__text.text-block
-                        p!= checkProps.text
+                if(checkProps.textTop)
+                    .l-intro__text.text-block.l-intro__text--top
+                        p!= checkProps.textTop
+                if(checkProps.textBottom)
+                    .l-intro__text.text-block.l-intro__text--bottom
+                        p!= checkProps.textBottom
 

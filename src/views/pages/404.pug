@@ -15,9 +15,8 @@ block content
 				.error-page__subtitle.title__32 Такой страницы нет. Возможно ошибка в адресе
 			a(href="#").btn--box.error-page__btn
 				.btn.btn--circle
-					<svg xmlns="http://www.w3.org/2000/svg" width="11" height="8" viewBox="0 0 11 8" fill="none">
-					<path d="M10.0999 4.21591L1.22221 4.11643M6.42527 1.06079L10.0999 4.21591L6.42527 1.06079ZM10.0999 4.21591L6.86969 7.29365L10.0999 4.21591Z" stroke="#07171D" stroke-width="1.33502" stroke-linecap="round" stroke-linejoin="round"/>
-					</svg>
+					svg
+						use(xlink:href=`img/sprites/sprite.svg#arrow_btn`)
 				.btn--box__text На главную
 		include ../../blocks/modules/footer/footer
 		//footer.footer.footer__animation.footer__animation--personally.js-footer__animation
@@ -66,9 +65,8 @@ block content
 						a(href="#") Вопросы и ответы (FAQ)
 			a(href="#").btn--box.footer__btn
 				.btn.btn--circle
-					<svg xmlns="http://www.w3.org/2000/svg" width="11" height="8" viewBox="0 0 11 8" fill="none">
-					<path d="M10.0999 4.21591L1.22221 4.11643M6.42527 1.06079L10.0999 4.21591L6.42527 1.06079ZM10.0999 4.21591L6.86969 7.29365L10.0999 4.21591Z" stroke="#07171D" stroke-width="1.33502" stroke-linecap="round" stroke-linejoin="round"/>
-					</svg>
+					svg
+						use(xlink:href=`img/sprites/sprite.svg#arrow_btn`)
 				.btn--box__text Подробнее
 			.footer__bg
 				img(src="img/footer__bg.png" alt="")

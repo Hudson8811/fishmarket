@@ -37,9 +37,8 @@ block content
 								.vacancy__cost.title__24 от 100 000 ₽ на руки
 								.vacancy__location
 									.vacancy__location__icon 
-										<svg xmlns="http://www.w3.org/2000/svg" width="21" height="27" viewBox="0 0 21 27" fill="none">
-										<path fill-rule="evenodd" clip-rule="evenodd" d="M21 11.306C21 17.2697 12.2324 25.4226 11.2326 26.3323C10.8182 26.71 10.1838 26.7081 9.77177 26.3278C8.76759 25.4225 0 17.2696 0 11.3059C0 5.06168 4.70092 0 10.4999 0C16.2986 0 21 5.06196 21 11.306ZM15.2728 10.6073C15.2728 13.27 13.1359 15.4287 10.5001 15.4287C7.86421 15.4287 5.72735 13.27 5.72735 10.6073C5.72735 7.94452 7.86421 5.78584 10.5001 5.78584C13.1359 5.78584 15.2728 7.94452 15.2728 10.6073Z" fill="#44C8F5"/>
-										</svg>
+										svg
+											use(xlink:href=`img/sprites/sprite.svg#header_position`)
 									.vacancy__location__text.text__18 Москва
 								.vacancy__row 
 									.vacancy__experience
@@ -95,9 +94,8 @@ block content
 								!="ОСТАЛИСЬ ВОПРОСЫ? <br> НАПИШИТЕ ИЛИ ЗАКАЖИТЕ <br> ЗВОНОК"
 							a(href="#").btn--box.phone-call__btn.js-phone-call__btn
 								.btn.btn--circle
-									<svg xmlns="http://www.w3.org/2000/svg" width="11" height="8" viewBox="0 0 11 8" fill="none">
-									<path d="M10.0999 4.21591L1.22221 4.11643M6.42527 1.06079L10.0999 4.21591L6.42527 1.06079ZM10.0999 4.21591L6.86969 7.29365L10.0999 4.21591Z" stroke="#07171D" stroke-width="1.33502" stroke-linecap="round" stroke-linejoin="round"/>
-									</svg>
+									svg
+										use(xlink:href=`img/sprites/sprite.svg#arrow_btn`)
 								.btn--box__text Заказать звонок
 		.contacts__map
 			#js-map.contacts__map__item
@@ -151,9 +149,8 @@ block content
 						a(href="#") Вопросы и ответы (FAQ)
 			a(href="#").btn--box.footer__btn
 				.btn.btn--circle
-					<svg xmlns="http://www.w3.org/2000/svg" width="11" height="8" viewBox="0 0 11 8" fill="none">
-					<path d="M10.0999 4.21591L1.22221 4.11643M6.42527 1.06079L10.0999 4.21591L6.42527 1.06079ZM10.0999 4.21591L6.86969 7.29365L10.0999 4.21591Z" stroke="#07171D" stroke-width="1.33502" stroke-linecap="round" stroke-linejoin="round"/>
-					</svg>
+					svg
+						use(xlink:href=`img/sprites/sprite.svg#arrow_btn`)
 				.btn--box__text Подробнее
 			.footer__bg
 				img(src="img/footer__bg.png" alt="")

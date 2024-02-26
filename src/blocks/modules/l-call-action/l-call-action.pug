@@ -1,0 +1,12 @@
+include ../../components/title/title.pug
+include ../../components/new-btn/new-btn.pug
+
+section.l-call-action
+	.container.l-call-action__container
+		+title('h2', 'ОСТАЛИСЬ ВОПРОСЫ? НАПИШИТЕ ИЛИ ЗАКАЖИТЕ ЗВОНОК', 'l-call-action__title')
+		+new-btn({        
+			text: 'Заказать звонок',
+			cMode: 'white',
+			vMode: 'big'
+		})
+

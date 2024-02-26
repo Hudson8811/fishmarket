@@ -130,35 +130,44 @@ a, button {
             min-height: vw2(50);          
         }
         svg {
-            width: vw(12);
+            width: vw(11);
+            height: vw(9);
+            use {
+                stroke: $fontBlack;
+                width: 100%;
+                height: 100%;
+            }
             @include max(md) {
-                width: 25%;              
-            }             
+                width: vw2(11);
+                height: vw2(9);              
+            }         
         }
         &:hover {
             background: $blueLight;
             transition: all 0.3s;
+            svg use {
+                stroke: $white;
+            }
         }
         &__blue {
             background: $blueLight;
-            svg {
-                fill: #fff;
-                path {
-                    stroke: #fff;  
-                }
+            svg use {
+                stroke: $white;
             }
             &:hover {
                 background: $black;
                 transition: all 0.3s;
+                svg use {
+                    stroke: $white;
+                }
             }
         }
         &__download {
             transform: rotate(90deg);
             background: $blueLight;
             svg {
-                fill: #fff;
-                path {
-                    stroke: #fff;  
+                use {
+                    stroke: $white;  
                 }
             }
             &:hover {
@@ -168,11 +177,8 @@ a, button {
         }
         &__black {
             background: $black;
-            svg {
-                fill: #fff;
-                path {
-                    stroke: #fff;  
-                }
+            svg use {
+                stroke: $white
             }
             &:hover {
                 background: $blueLight;
@@ -380,14 +386,26 @@ a, button {
             top: calc(50% - vw2(5));        
         }
         svg {
-            width: vw(12);
+            width: vw(14);
+            height: vw(12);
+            use {
+                width: 100%;
+                height: 100%;
+                stroke: $fontBlack;
+            }
             @include max(md) {
-                width: 25%;              
+                width: vw(14);
+                height: vw(12);             
             }            
         }
         &:hover {
             background: $blueLight;
             transition: all 0.3s;
+            svg {
+                use {
+                    stroke: $white;
+                }           
+            }
         }
         &.swiper-button-disabled {
             opacity: 0.2;
@@ -406,6 +424,9 @@ a, button {
     }
     .swiper-button-prev {
        left: 0;
+       svg {
+        transform: rotate(180deg);
+       }
   
     }
     .swiper-button-next {
@@ -1208,7 +1229,6 @@ a, button {
         }
         &__name {
             color: #07171D;
-            text-transform: uppercase;
         }
     }
     &__size {
@@ -1224,7 +1244,6 @@ a, button {
         }
         &__name {
             color: #07171D;
-            text-transform: uppercase;
         }
     }
 }
@@ -1468,8 +1487,15 @@ a, button {
                     animation-timing-function: linear;
                     animation-fill-mode: forwards;
                     width: vw(12);
+                    height: vw(12);
+                    use {
+                        width: 100%;
+                        height: 100%;
+                        fill: $white;
+                    }
                     @include max(md) {
-                        width: 25%;              
+                        width: vw2(12);
+                        height: vw2(12);              
                     }   
                 }
     
