@@ -346,7 +346,6 @@ a, button {
     width: 100%;
     max-width: vw(132);
     top: auto;
-    bottom: 0;
     right: vw(22);
     bottom: vw(27);
     overflow: visible;
@@ -720,13 +719,6 @@ a, button {
             align-items: flex-start;
             width: 100%;
             height: 100vh;
-            // &::before {
-            //     position: relative;
-            //     display: block;
-            //     content: "";
-            //     width: 100%;
-            //     padding-top: 48.59%;
-            // }
             picture, img {
                 position: absolute;
                 display: block;
@@ -738,7 +730,6 @@ a, button {
                 left: 0;
                 right: 0;
                 bottom: 0;
-                width: 100%;
             }
         }
         &__video {
@@ -759,7 +750,6 @@ a, button {
         }
         &__desc {
             position: absolute;
-            // top: vw(22);
             top: vw(112);
             left: vw(25);
             z-index:  10;
@@ -767,8 +757,8 @@ a, button {
             @include max(md) {
                 top: vw2(20);
                 left: vw2(20);
+                opacity: 1;
             }
-
         }
         &__btn {
             position: absolute;
@@ -779,6 +769,7 @@ a, button {
             @include max(md) {
                 bottom: vw2(20);
                 left: vw2(20);
+                opacity: 1;
             }
         }
         
