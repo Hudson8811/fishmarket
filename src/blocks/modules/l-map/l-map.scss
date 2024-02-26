@@ -1,0 +1,102 @@
+.l-map {
+    position: relative;
+    height: vw(899);
+    padding: vw(32) vw(25);
+    display: flex;
+    justify-content: space-between;
+    gap: vw(50);
+    &__cities {
+        position: relative;
+        z-index: 5;
+        display: flex;
+        align-items: stretch;
+        flex-wrap: wrap;
+        height: vw(91);
+    }
+    &__city {
+        font-size: vw(14);
+        color: $fontBlack;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: fit-content;
+        min-width: vw(166);
+        &.active {
+            background-color: $blueLight;
+            color: $white;
+        }
+    }
+    &__map {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+    }
+    &__addresses {
+        position: relative;
+        z-index: 5;
+        flex-basis: vw(603);
+        flex-grow: 0;
+        flex-shrink: 0;
+        display: none;
+        &.active {
+            display: block;
+        }
+    }
+    &__address:not(:last-child) {
+        border-bottom: 1px solid rgba(0,0,0,0.2);
+    }
+    .map-address {
+        padding: vw(20) vw(20) vw(20) vw(24);
+        background-color: $white;
+        color: $fontBlack;
+        transition: all $tr-time linear;
+        cursor: pointer;
+        &__header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: vw(43);
+        }
+        &__title {
+            margin-top: vw(4);
+            font-size: vw(32);
+            font-weight: 500;
+            line-height: 1.09;
+            text-transform: uppercase;
+        }
+        &__icon {
+            width: vw(28);
+            height: vw(35);
+            svg, svg use {
+                width: vw(28);
+                height: vw(35);  
+            }
+        }
+        &__item {
+            margin-top: vw(25);
+        }
+        &__subtitle {
+            margin-bottom: vw(10);
+            font-size: vw(14);
+            font-weight: 600;
+            line-height: 1.25;
+            text-transform: uppercase;
+        }
+        &__text {
+            font-size: vw(18);
+            font-weight: 400;
+            line-height: 1.4;
+        }
+
+        &.active, &:hover {
+            background-color: $blueLight;
+            color: $white;
+        }
+        &.active {
+            pointer-events: none;
+        }
+    }
+
+}

@@ -423,7 +423,7 @@
       </div>
     </div>
     <main class="site-main">
-      <div class="scroll-page" data-animation="">
+      <div class="scroll-page" data-animation="homepage">
         <div class="start__section section"> 
           <div class="swiper-container start__slider js-start__slider">
             <div class="swiper-wrapper">
@@ -774,8 +774,7 @@
             </div>
           </div>
         </div>
-        <!--include ../blocks/modules/footer/footer-->
-        <div class="footer footer__animation js-footer__animation">
+        <footer class="footer footer__animation footer__animation--personally js-footer__animation">
           <div class="footer__logo"> <img src="img/logo__white.png" alt=""></div>
           <div class="footer__title title__170"> Понимаем море, слышим людей
           </div>
@@ -797,6 +796,13 @@
               <li class="footer__menu__list__item"><a href="#">карьера в skyfish</a></li>
               <li class="footer__menu__list__item"><a href="#">наша команда</a></li>
             </ul>
+            <!--ul.footer__menu__list
+            li.footer__menu__list__title Документы
+            li.footer__menu__list__item
+            	a(href="#") Документы
+            li.footer__menu__list__item
+            	a(href="#") Прайсы
+            -->
             <ul class="footer__menu__list">
               <li class="footer__menu__list__title">А еще...</li>
               <li class="footer__menu__list__item"><a href="#">контакты</a></li>
@@ -816,13 +822,14 @@
           <div class="footer__agreement">
             <div class="footer__agreement__date text__12">© 2023 — 2024</div><a class="footer__agreement__text text__12" href="#"> Пользовательское <br>соглашение</a>
           </div>
-        </div>
+        </footer>
       </div>
     </main>
     <!--block footer
     include ../../blocks/modules/footer/footer
     
     -->
-    <script src="js/main.min.js"></script><script src="https://api-maps.yandex.ru/2.1/?apikey=d30e0023-10b4-4a5c-a8fd-7e8d66094730&lang=ru_RU&onload=MapInit"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=d30e0023-10b4-4a5c-a8fd-7e8d66094730&amp;lang=ru_RU"></script>
+    <script src="js/main.min.js"></script>
   </body>
 </html>

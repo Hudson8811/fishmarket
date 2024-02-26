@@ -1,51 +1,57 @@
 //map
 function MapInit() {
 	if ($('.contacts__map').length > 0) {
-		const map = new ymaps.Map('js-map', {
-			center: [55.672925, 37.625181],
-			zoom:13,
-			// type: 'yandex#satellite',
-			// Карта будет создана без
-			// элементов управления.
-			controls: []
-		});
-		myPlacemark2 = new ymaps.Placemark([55.672925, 37.625181],{},{
-			iconLayout: 'default#image',
-			iconImageHref: '/img/svg/predstvo_act.svg',
-			iconImageSize: [30, 36],
-			iconImageOffset: [-15, -18]
-		});
-
-		// Добавляем метку на карту.
-		map.geoObjects.add(myPlacemark2);
-		$(".contacts__office").on("click", function () {
-			$('.contacts__office').each(function() {
-				var office = $(this);
-				office.removeClass( "active" )
+		ymaps.ready(() => {
+			const map = new ymaps.Map('js-map', {
+				center: [55.672925, 37.625181],
+				zoom:13,
+				// type: 'yandex#satellite',
+				// Карта будет создана без
+				// элементов управления.
+				controls: []
 			});
-			$(this).addClass( "active" );
-			var coor = $(this).attr('data-coords');
-			console.log (coor)
-			var a = coor;
-			var xy = a.split(',');
-			var x = parseFloat(xy[0]);
-			var y = parseFloat(xy[1]);
-
-
-			myPlacemark2 = new ymaps.Placemark([x, y],{},{
-				iconLayout: 'default#image',
-				iconImageHref: '../img/svg/predstvo_act.svg',
-				iconImageSize: [26, 26],
-				iconImageOffset: [-13, -13]
+			myPlacemark2 = new ymaps.Placemark([55.672925, 37.625181],{},{
+					iconLayout: 'default#image',
+					iconImageHref: '/img/svg/predstvo_act.svg',
+					iconImageSize: [30, 36],
+					iconImageOffset: [-15, -18]
 			});
-
+	
 			// Добавляем метку на карту.
 			map.geoObjects.add(myPlacemark2);
-			map.setCenter([x, y]);
-
+			$(".contacts__office").on("click", function () {
+					$('.contacts__office').each(function() {
+						var office = $(this);
+						office.removeClass( "active" )
+					});
+					$(this).addClass( "active" );
+					var coor = $(this).attr('data-coords');
+					console.log (coor)
+					var a = coor;
+					var xy = a.split(',');
+					var x = parseFloat(xy[0]);
+					var y = parseFloat(xy[1]);
+		
+		
+					
+					myPlacemark2 = new ymaps.Placemark([x, y],{},{
+							iconLayout: 'default#image',
+							iconImageHref: '../img/svg/predstvo_act.svg',
+							iconImageSize: [26, 26],
+							iconImageOffset: [-13, -13]
+					});
+		
+					// Добавляем метку на карту.
+					map.geoObjects.add(myPlacemark2);
+					map.setCenter([x, y]);
+		
+			}) 
 		})
-	}
+	
+	}	
 }
+	MapInit()
+	
 //map
 
 document.addEventListener("DOMContentLoaded", () => {

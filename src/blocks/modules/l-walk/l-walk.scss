@@ -21,7 +21,7 @@
     }
     &__slider {
         position: relative;
-        margin-top: vw(166);
+        margin-top: vw(100);
         &:hover {
             .l-walk__control {
                 opacity: 1;
@@ -33,7 +33,7 @@
     }
     &__slide {
         width: fit-content;
-        max-width: vw(544);
+        max-width: vw(534);
         @include max(md) {
             max-width: vw2(536);
         } 
@@ -41,8 +41,8 @@
     &__img {
         display: block;
         position: relative;
-        max-height: vw(539);
-        max-width: vw(544);
+        max-height: vw(700);
+        max-width: vw(534);
         @include max(md) {
             max-height: vw2(530);
             width: auto;
@@ -70,8 +70,8 @@
         img {
             width: 100%;
             height: 100%;
-            max-height: vw(539);
-            max-width: vw(544);
+            max-height: vw(700);
+            max-width: vw(534);
             object-fit: contain;
             @include max(md) {
                 max-height: vw2(530);
