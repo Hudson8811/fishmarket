@@ -1,12 +1,23 @@
 .l-intro {
     padding-top: vw(115);
     min-height: 100vh;
+    display: flex;
     background-size: cover;
     background-position: center;
     @include max(md) {
         padding-top: vw2(100);
         min-height: vw2(650);
     } 
+
+    &__container {
+        min-height: 100%;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        min-height: 100%;
+    }
 
     &__breadcrumbs {
         padding-left: vw(20);
@@ -22,5 +33,21 @@
         @include max(md) {
             font-size: vw2(50)
         } 
+    }
+
+    &__text {
+        * {
+            color: $white !important;
+        }
+        p {
+            margin-bottom: 1em;
+        }
+        &--top {
+            margin-top: vw(29);
+            max-width: vw(643);
+        }
+        &--bottom {
+            margin-top: auto;
+        }
     }
 }

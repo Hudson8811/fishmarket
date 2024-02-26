@@ -1,0 +1,53 @@
+-
+	const defaultLWalkProps = {
+		classes: '',
+		title: 'Виртуальная прогулка<br>по складскому помещению и автопарку',
+	}
+
+mixin l-walk(props = defaultLWalkProps)
+	include ../../components/title/title.pug
+	include ../../components/new-btn/new-btn.pug
+
+	-
+		const checkProps = {
+			classes: props.classes ? props.classes : defaultLIntroProps.classes,
+			title: props.title ? props.title : defaultLWalkProps.title,
+		};
+
+	section.l-walk
+		.container
+			.l-walk__header
+				+title("h2", checkProps.title, "l-walk__title")
+				+new-btn({
+					classes: 'l-walk__btn',        
+					text: 'показать еще',
+					cMode: 'blue',
+					vMode: 'big'
+				})
+			.l-walk__slider(data-js="lWalkSlider")
+				.swiper-wrapper
+					.swiper-slide.l-walk__slide
+						a.l-walk__img(href="img/society_awards_slide_1_2x.png" data-fancybox="societyAwards" data-caption="Короткое описание 1")
+							img(src="img/society_awards_slide_1.png" alt="слайд 1")
+					.swiper-slide.l-walk__slide
+						a.l-walk__img(href="img/society_awards_slide_2_2x.png" data-fancybox="societyAwards" data-caption="Короткое описание 2")
+							img(src="img/society_awards_slide_2.png" alt="слайд 2")
+					.swiper-slide.l-walk__slide
+						a.l-walk__img(href="img/society_awards_slide_3_2x.png" data-fancybox="societyAwards" data-caption="Короткое описание 3")
+							img(src="img/society_awards_slide_3.png" alt="слайд 3")
+					.swiper-slide.l-walk__slide
+						a.l-walk__img(href="img/society_awards_slide_4.png" data-fancybox="societyAwards" data-caption="Короткое описание 4")
+							img(src="img/society_awards_slide_4.png" alt="слайд 4")
+					.swiper-slide.l-walk__slide
+						a.l-walk__img(href="img/society_awards_slide_1_2x.png" data-fancybox="societyAwards" data-caption="Короткое описание 5")
+							img(src="img/society_awards_slide_1.png" alt="слайд 5")
+					.swiper-slide.l-walk__slide
+						a.l-walk__img(href="img/society_awards_slide_2_2x.png" data-fancybox="societyAwards" data-caption="Короткое описание 6")
+							img(src="img/society_awards_slide_2.png" alt="слайд 6")
+				.l-walk__control.swiper-button-prev
+					svg
+						use(xlink:href=`img/sprites/sprite.svg#arrow_btn`)
+				.l-walk__control.swiper-button-next
+					svg
+						use(xlink:href=`img/sprites/sprite.svg#arrow_btn`)
+

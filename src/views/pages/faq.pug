@@ -2,141 +2,135 @@ extends ../layouts/default
 include ../helpers/mixins
 
 block variables
-	- const title = "FAQ Page"
+    - const title = "FAQ Page"
 
 
 block content
-	include ../../blocks/components/breadcrumbs/breadcrumbs.pug
+    include ../../blocks/components/breadcrumbs/breadcrumbs.pug
 
-	.scroll-page
-		.section.section--first.questions__section
-			.container
-				+breadcrumbs({
-					classes: 'questions__breadcrumbs',
-					items: [
-						{
-							name: 'Главная',
-							link: '#'
-						},
-						{
-							name: 'FAQ',
-							link: '#'
-						}
-					]
-				})
-				.questions__section__title.title__52
-					h1 FAQ
-				.layout
-					.layout__col
-						.questions__section__subtitle.text__18
-							!="Мы объединили здесь всю необходимую информацию, чтобы избавить Вас от необходимости искать ее по разным источникам. От простых вопросов до более сложных – у нас есть решение для каждого!"
-						.questions
-							.accordions
-								.accordion
-									.accordion__intro
-										p.title__24 Какие гарантии качества поставляемой продукции?
-										.accordion__intro__img 
-											<svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11" fill="none">
-											<path d="M10.8346 8.91231L9.09571 10.6512L5.71276 7.26826L2.21915 10.7619L0.527669 9.07039L4.02128 5.57678L0.622518 2.17802L2.36142 0.439118L5.76018 3.83788L9.23798 0.360077L10.9295 2.05155L7.45166 5.52936L10.8346 8.91231Z" fill="white"/>
-											</svg>
-									.accordion__content
-										include ../../blocks/components/text-block/text-block
+    .scroll-page
+        .section.section--first.questions__section
+            .container
+                +breadcrumbs({
+                    classes: 'questions__breadcrumbs',
+                    items: [
+                        {
+                            name: 'Главная',
+                            link: '#'
+                        },
+                        {
+                            name: 'FAQ',
+                            link: '#'
+                        }
+                    ]
+                })
+                .questions__section__title.title__52
+                    h1 FAQ
+                .layout
+                    .layout__col
+                        .questions__section__subtitle.text__18
+                            !="Мы объединили здесь всю необходимую информацию, чтобы избавить Вас от необходимости искать ее по разным источникам. От простых вопросов до более сложных – у нас есть решение для каждого!"
+                        .questions
+                            .accordions
+                                .accordion
+                                    .accordion__intro
+                                        p.title__24 Какие гарантии качества поставляемой продукции?
+                                        .accordion__intro__img 
+                                            svg
+                                                use(xlink:href=`img/sprites/sprite.svg#plus_accordeon`)
+                                    .accordion__content
+                                        include ../../blocks/components/text-block/text-block
 
-								.accordion
-									.accordion__intro
-										p.title__24 Какие требования к минимальному заказу?
-										.accordion__intro__img 
-											<svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11" fill="none">
-											<path d="M10.8346 8.91231L9.09571 10.6512L5.71276 7.26826L2.21915 10.7619L0.527669 9.07039L4.02128 5.57678L0.622518 2.17802L2.36142 0.439118L5.76018 3.83788L9.23798 0.360077L10.9295 2.05155L7.45166 5.52936L10.8346 8.91231Z" fill="white"/>
-											</svg>
-									.accordion__content
-										include ../../blocks/components/text-block/text-block
+                                .accordion
+                                    .accordion__intro
+                                        p.title__24 Какие требования к минимальному заказу?
+                                        .accordion__intro__img 
+                                            svg
+                                                use(xlink:href=`img/sprites/sprite.svg#plus_accordeon`)
+                                    .accordion__content
+                                        include ../../blocks/components/text-block/text-block
 
-								.accordion
-									.accordion__intro
-										p.title__24 Какие условия оплаты?
-										.accordion__intro__img 
-											<svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11" fill="none">
-											<path d="M10.8346 8.91231L9.09571 10.6512L5.71276 7.26826L2.21915 10.7619L0.527669 9.07039L4.02128 5.57678L0.622518 2.17802L2.36142 0.439118L5.76018 3.83788L9.23798 0.360077L10.9295 2.05155L7.45166 5.52936L10.8346 8.91231Z" fill="white"/>
-											</svg>
-									.accordion__content
-										include ../../blocks/components/text-block/text-block
+                                .accordion
+                                    .accordion__intro
+                                        p.title__24 Какие условия оплаты?
+                                        .accordion__intro__img 
+                                            svg
+                                                use(xlink:href=`img/sprites/sprite.svg#plus_accordeon`)
+                                    .accordion__content
+                                        include ../../blocks/components/text-block/text-block
 
-								.accordion
-									.accordion__intro
-										p.title__24 Заказ доставляете?
-										.accordion__intro__img 
-											<svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11" fill="none">
-											<path d="M10.8346 8.91231L9.09571 10.6512L5.71276 7.26826L2.21915 10.7619L0.527669 9.07039L4.02128 5.57678L0.622518 2.17802L2.36142 0.439118L5.76018 3.83788L9.23798 0.360077L10.9295 2.05155L7.45166 5.52936L10.8346 8.91231Z" fill="white"/>
-											</svg>
-									.accordion__content
-										include ../../blocks/components/text-block/text-block
+                                .accordion
+                                    .accordion__intro
+                                        p.title__24 Заказ доставляете?
+                                        .accordion__intro__img 
+                                            svg
+                                                use(xlink:href=`img/sprites/sprite.svg#plus_accordeon`)
+                                    .accordion__content
+                                        include ../../blocks/components/text-block/text-block
 
-					.layout__col
-						.phone-call
-							.phone-call__title.title__32 
-								!="ОСТАЛИСЬ ВОПРОСЫ? <br> НАПИШИТЕ ИЛИ ЗАКАЖИТЕ <br> ЗВОНОК"
-							a(href="#").btn--box.phone-call__btn.js-phone-call__btn
-								.btn.btn--circle
-									<svg xmlns="http://www.w3.org/2000/svg" width="11" height="8" viewBox="0 0 11 8" fill="none">
-									<path d="M10.0999 4.21591L1.22221 4.11643M6.42527 1.06079L10.0999 4.21591L6.42527 1.06079ZM10.0999 4.21591L6.86969 7.29365L10.0999 4.21591Z" stroke="#07171D" stroke-width="1.33502" stroke-linecap="round" stroke-linejoin="round"/>
-									</svg>
-								.btn--box__text Заказать звонок
+                    .layout__col
+                        .phone-call
+                            .phone-call__title.title__32 
+                                !="ОСТАЛИСЬ ВОПРОСЫ? <br> НАПИШИТЕ ИЛИ ЗАКАЖИТЕ <br> ЗВОНОК"
+                            a(href="#").btn--box.phone-call__btn.js-phone-call__btn
+                                .btn.btn--circle
+                                    svg
+                                        use(xlink:href=`img/sprites/sprite.svg#arrow_btn`)
+                                .btn--box__text Заказать звонок
 
-		include ../../blocks/modules/footer/footer
-		//footer.footer.footer__animation.footer__animation--personally.js-footer__animation
-			.footer__logo 
-				img(src="img/logo__white.png" alt="")
-			.footer__title.title__170 
-				!="Понимаем море, слышим людей"
-			.footer__menu 
-				ul.footer__menu__list
-					li.footer__menu__list__title Каталог
-					li.footer__menu__list__item
-						a(href="#") Рыба охлажденная
-					li.footer__menu__list__item
-						a(href="#") Рыба свежемороженая
-					li.footer__menu__list__item
-						a(href="#") Филе охлажденное
-					li.footer__menu__list__item
-						a(href="#") Филе свежемороженое
-					li.footer__menu__list__item
-						a(href="#") Морепродукты
-					li.footer__menu__list__item
-						a(href="#") Субпродукты
-				ul.footer__menu__list
-					li.footer__menu__list__title О компании
-					li.footer__menu__list__item
-						a(href="#") Производство
-					li.footer__menu__list__item
-						a(href="#") Склад и логистика
-					li.footer__menu__list__item
-						a(href="#") мы в социуме
-					li.footer__menu__list__item
-						a(href="#") карьера в skyfish
-					li.footer__menu__list__item
-						a(href="#") наша команда
-				ul.footer__menu__list
-					li.footer__menu__list__title А и еще...
-					li.footer__menu__list__item
-						a(href="#") контакты
-					li.footer__menu__list__item
-						a(href="#") Личный кабинет
-					li.footer__menu__list__item
-						a(href="#") Документы
-					li.footer__menu__list__item
-						a(href="#") Новости
-					li.footer__menu__list__item
-						a(href="#") Вопросы и ответы (FAQ)
-			a(href="#").btn--box.footer__btn
-				.btn.btn--circle
-					<svg xmlns="http://www.w3.org/2000/svg" width="11" height="8" viewBox="0 0 11 8" fill="none">
-					<path d="M10.0999 4.21591L1.22221 4.11643M6.42527 1.06079L10.0999 4.21591L6.42527 1.06079ZM10.0999 4.21591L6.86969 7.29365L10.0999 4.21591Z" stroke="#07171D" stroke-width="1.33502" stroke-linecap="round" stroke-linejoin="round"/>
-					</svg>
-				.btn--box__text Подробнее
-			.footer__bg
-				img(src="img/footer__bg.png" alt="")
-			.footer__agreement
-				.footer__agreement__date.title__24 © 2023 — 2024
-				a(href="#").footer__agreement__text.title__24 
-					!="Пользовательское <br>соглашение"
+        include ../../blocks/modules/footer/footer
+        //footer.footer.footer__animation.footer__animation--personally.js-footer__animation
+            .footer__logo 
+                img(src="img/logo__white.png" alt="")
+            .footer__title.title__170 
+                !="Понимаем море, слышим людей"
+            .footer__menu 
+                ul.footer__menu__list
+                    li.footer__menu__list__title Каталог
+                    li.footer__menu__list__item
+                        a(href="#") Рыба охлажденная
+                    li.footer__menu__list__item
+                        a(href="#") Рыба свежемороженая
+                    li.footer__menu__list__item
+                        a(href="#") Филе охлажденное
+                    li.footer__menu__list__item
+                        a(href="#") Филе свежемороженое
+                    li.footer__menu__list__item
+                        a(href="#") Морепродукты
+                    li.footer__menu__list__item
+                        a(href="#") Субпродукты
+                ul.footer__menu__list
+                    li.footer__menu__list__title О компании
+                    li.footer__menu__list__item
+                        a(href="#") Производство
+                    li.footer__menu__list__item
+                        a(href="#") Склад и логистика
+                    li.footer__menu__list__item
+                        a(href="#") мы в социуме
+                    li.footer__menu__list__item
+                        a(href="#") карьера в skyfish
+                    li.footer__menu__list__item
+                        a(href="#") наша команда
+                ul.footer__menu__list
+                    li.footer__menu__list__title А и еще...
+                    li.footer__menu__list__item
+                        a(href="#") контакты
+                    li.footer__menu__list__item
+                        a(href="#") Личный кабинет
+                    li.footer__menu__list__item
+                        a(href="#") Документы
+                    li.footer__menu__list__item
+                        a(href="#") Новости
+                    li.footer__menu__list__item
+                        a(href="#") Вопросы и ответы (FAQ)
+            a(href="#").btn--box.footer__btn
+                .btn.btn--circle
+                    svg
+                        use(xlink:href=`img/sprites/sprite.svg#arrow_btn`)
+                .btn--box__text Подробнее
+            .footer__bg
+                img(src="img/footer__bg.png" alt="")
+            .footer__agreement
+                .footer__agreement__date.title__24 © 2023 — 2024
+                a(href="#").footer__agreement__text.title__24 
+                    !="Пользовательское <br>соглашение"

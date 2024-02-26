@@ -7,6 +7,7 @@ block variables
 block content
 	//mixins
 	include ../../blocks/modules/l-intro/l-intro.pug
+	include ../../blocks/modules/l-walk/l-walk.pug
 
 	.scroll-page
 		+l-intro({
@@ -25,10 +26,14 @@ block content
 					}
 				]
 			},
-			title: 'Наша логистика',
-			text: '',
-			image: 'img/society-intro.png'
+			title: 'Наша<br>логистика',
+			textTop: `<p>Наши складские комплексы расположены в Москве, Калужской и Калининградской областях. Склады оснащены необходимыми морозильными камерами и погрузочно-разгрузочной техникой.</p>
+			<p>Доставка заказа осуществляется собственным автотранспортом, оборудованным рефрижераторными установками. Также доставим заказ в любой регион РФ проверенной логистической компанией.</p>
+			<p>Возможен самовывоз со складов компании в согласованное удобное время.</p>`,
+			image: 'img/logistics_intro.png'
 		})
+		+l-walk()
+		include ../../blocks/modules/l-call-action/l-call-action.pug
 
 		include ../../blocks/modules/footer/footer
 

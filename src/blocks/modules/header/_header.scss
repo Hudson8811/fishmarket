@@ -447,14 +447,15 @@
 						margin-right: 0;
 					}
 					svg {
-						path {
+						use {
 							transition: all 0.3s ;
+							fill: $fontBlack;
 						}
 					}
 					&:hover {
 						transition: all 0.3s ;
 						svg {
-							path {
+							use {
 								fill: $blueHover;
 								transition: all 0.3s ;
 							}
@@ -481,14 +482,14 @@
 				justify-content: center;
 				transition: all 0.3s ;
 				svg {
-					path {
+					use {
 						transition: all 0.3s ;
 					}
 				}
 				&:hover {
-					transition: all 0.3s ;
+					fill: $fontBlack;
 					svg {
-						path {
+						use {
 							fill: $blueHover;
 							transition: all 0.3s ;
 						}
@@ -503,14 +504,15 @@
 				padding-right: 0;
 				justify-content: center;
 				svg {
-					path {
+					use {
 						transition: all 0.3s ;
+						fill: $fontBlack;
 					}
 				}
 				&:hover {
 					transition: all 0.3s ;
 					svg {
-						path {
+						use {
 							fill: $blueHover;
 							transition: all 0.3s ;
 						}
@@ -569,14 +571,16 @@
 					align-items: center;
 					cursor: pointer;
 					svg {
-						path {
+						use {
 							transition: all 0.3s ;
+							stroke: $fontBlack;
+							stroke-width: 2;
 						}
 					}
 					&:hover {
 						transition: all 0.3s ;
 						svg {
-							path {
+							use {
 								stroke: $blueHover;
 								transition: all 0.3s ;
 							}
@@ -862,6 +866,17 @@
 		&:hover {
 			transition: all .3s;
 			background: $blueHover;
+		}
+		&__row {
+			svg {
+				width: vw(26);
+				height: vw(18);
+				use {
+					width: 100%;
+					height: 100%;
+					stroke: $white;
+				}
+			}
 		}
 		&__text {
 			color: #fff;
@@ -1342,6 +1357,15 @@
 					transition: all .3s;
 					background: $blueHover;
 				}
+				svg {
+					width: vw(20);
+					height: vw(20);
+					use {
+						width: 100%;
+						height: 100%;
+						fill: $white;
+					}
+				}
 			}
 		}
 		&__select {
@@ -1379,6 +1403,17 @@
 			&:hover {
 				transition: all .3s;
 				background: $blueHover;
+			}
+			&__row {
+				svg {
+					width: vw(14);
+					height: vw(12);
+					use {
+						width: 100%;
+						height: 100%;
+						stroke: $white;
+					}
+				}
 			}
 			&__text {
 				color: #fff;
@@ -1462,6 +1497,15 @@
 				align-items: center;
 				transition: all .3s;
 				cursor: pointer;
+				svg {
+					width: vw(20);
+					height: vw(20);
+					use {
+						width: 100%;
+						height: 100%;
+						fill: $white;
+					}
+				}
 				&:hover {
 					transition: all .3s;
 					background: $blueHover;
@@ -1505,6 +1549,17 @@
 			&:hover {
 				transition: all .3s;
 				background: $blueHover;
+			}
+			&__row {
+				svg {
+					width: vw(14);
+					height: vw(12);
+					use {
+						width: 100%;
+						height: 100%;
+						stroke: $white;
+					}
+				}
 			}
 			&__text {
 				color: #fff;

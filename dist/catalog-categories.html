@@ -50,9 +50,10 @@
             <div class="header__other">
               <div class="header__other__item header__other__item--place js-header__other__item--place">
                 <div class="header__other__top">
-                  <div class="header__menu__item__icon"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="13" viewBox="0 0 10 13" fill="none">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M10 5.44361C10 8.31503 5.82496 12.2405 5.34886 12.6785C5.1521 12.8599 4.84884 12.8589 4.65322 12.6764C4.17504 12.2405 0 8.31498 0 5.44356C0 2.43711 2.23853 0 4.99997 0C7.76126 0 10 2.43724 10 5.44361ZM7.27274 5.10721C7.27274 6.38927 6.25519 7.42864 5.00003 7.42864C3.74486 7.42864 2.72731 6.38927 2.72731 5.10721C2.72731 3.82514 3.74486 2.78577 5.00003 2.78577C6.25519 2.78577 7.27274 3.82514 7.27274 5.10721Z" fill="#44C8F5"/>
-</svg>
+                  <div class="header__menu__item__icon">
+                    <svg>
+                      <use xlink:href="img/sprites/sprite.svg#header_position"></use>
+                    </svg>
                   </div>
                   <div class="header__menu__item__text" data-js="cityTextValue">город</div>
                 </div>
@@ -78,18 +79,18 @@
           </div>
           <div class="layout__col">
             <div class="header__other">
-              <div class="header__other__item--soc header__other__item"><a class="header__other__item--soc__item" href="#">
-                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-<path d="M10 0C4.48 0 0 4.48 0 10C0 15.52 4.48 20 10 20C15.52 20 20 15.52 20 10C20 4.48 15.52 0 10 0ZM14.64 6.8C14.49 8.38 13.84 12.22 13.51 13.99C13.37 14.74 13.09 14.99 12.83 15.02C12.25 15.07 11.81 14.64 11.25 14.27C10.37 13.69 9.87 13.33 9.02 12.77C8.03 12.12 8.67 11.76 9.24 11.18C9.39 11.03 11.95 8.7 12 8.49C12.0069 8.45819 12.006 8.42517 11.9973 8.3938C11.9886 8.36244 11.9724 8.33367 11.95 8.31C11.89 8.26 11.81 8.28 11.74 8.29C11.65 8.31 10.25 9.24 7.52 11.08C7.12 11.35 6.76 11.49 6.44 11.48C6.08 11.47 5.4 11.28 4.89 11.11C4.26 10.91 3.77 10.8 3.81 10.45C3.83 10.27 4.08 10.09 4.55 9.9C7.47 8.63 9.41 7.79 10.38 7.39C13.16 6.23 13.73 6.03 14.11 6.03C14.19 6.03 14.38 6.05 14.5 6.15C14.6 6.23 14.63 6.34 14.64 6.42C14.63 6.48 14.65 6.66 14.64 6.8Z" fill="#07171D"/>
-</svg></a><a class="header__other__item--soc__item" href="#">
-                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-<path d="M13.073 0H6.937C1.333 0 0 1.333 0 6.927V13.063C0 18.666 1.323 20 6.927 20H13.063C18.666 20 20 18.677 20 13.073V6.937C20 1.333 18.677 0 13.073 0ZM16.146 14.27H14.687C14.135 14.27 13.969 13.823 12.979 12.833C12.115 12 11.75 11.896 11.531 11.896C11.229 11.896 11.146 11.979 11.146 12.396V13.708C11.146 14.063 11.031 14.271 10.104 14.271C9.20434 14.2105 8.33192 13.9372 7.5586 13.4735C6.78527 13.0098 6.13317 12.3691 5.656 11.604C4.52317 10.194 3.73494 8.53913 3.354 6.771C3.354 6.552 3.437 6.354 3.854 6.354H5.312C5.687 6.354 5.822 6.521 5.969 6.906C6.677 8.99 7.885 10.802 8.375 10.802C8.563 10.802 8.645 10.719 8.645 10.25V8.104C8.583 7.125 8.063 7.042 8.063 6.688C8.06968 6.59463 8.11247 6.50753 8.18229 6.44518C8.25211 6.38283 8.34347 6.35012 8.437 6.354H10.729C11.042 6.354 11.146 6.51 11.146 6.885V9.781C11.146 10.094 11.281 10.198 11.375 10.198C11.563 10.198 11.708 10.094 12.052 9.75C12.7909 8.84895 13.3945 7.84508 13.844 6.77C13.8899 6.64086 13.9769 6.5303 14.0915 6.45519C14.2062 6.38008 14.3423 6.34454 14.479 6.354H15.938C16.375 6.354 16.468 6.573 16.375 6.885C15.8445 8.07343 15.1881 9.20155 14.417 10.25C14.26 10.49 14.197 10.615 14.417 10.896C14.562 11.115 15.073 11.542 15.417 11.948C15.9169 12.4466 16.332 13.0236 16.646 13.656C16.771 14.062 16.562 14.27 16.146 14.27Z" fill="#07171D"/>
-</svg></a></div>
+              <div class="header__other__item--soc header__other__item"><a class="header__other__item--soc__item" href="#"> 
+                  <svg>
+                    <use xlink:href="img/sprites/sprite.svg#header_tg"></use>
+                  </svg></a><a class="header__other__item--soc__item" href="#"> 
+                  <svg>
+                    <use xlink:href="img/sprites/sprite.svg#header_vk"></use>
+                  </svg></a></div>
               <div class="header__other__item--search header__other__item">
-                <div class="header__other__item--search__btn js-search__btn"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="19" viewBox="0 0 18 19" fill="none">
-<path d="M16.0008 8.56094C16.0008 12.6202 12.7101 15.9109 8.65078 15.9109C4.59149 15.9109 1.30078 12.6202 1.30078 8.56094C1.30078 4.50165 4.59149 1.21094 8.65078 1.21094C12.7101 1.21094 16.0008 4.50165 16.0008 8.56094Z" stroke="#07171D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M17.0001 17.7891L15.2422 16.0312" stroke="#07171D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
+                <div class="header__other__item--search__btn js-search__btn">
+                  <svg>
+                    <use xlink:href="img/sprites/sprite.svg#header_search"></use>
+                  </svg>
                 </div>
                 <div class="search">
                   <div class="search--overlay"></div>
@@ -109,9 +110,10 @@
                     </div>
                     <div class="search__btn js-search__btn-find">
                       <div class="search__btn__text">Найти</div>
-                      <div class="search__btn__row"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="10" viewBox="0 0 14 10" fill="none">
-<path d="M12.6892 5.02344L1.28544 4.89898M7.96897 1.07606L12.6892 5.02344L7.96897 1.07606ZM12.6892 5.02344L8.53984 8.87402L12.6892 5.02344Z" stroke="white" stroke-width="1.33502" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
+                      <div class="search__btn__row">
+                        <svg>
+                          <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
+                        </svg>
                       </div>
                     </div>
                   </div>
@@ -156,18 +158,17 @@
                 </div>
               </div>
               <div class="header__other__item--cart header__other__item">
-                <div class="header__other__item--cart__icon"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="23" viewBox="0 0 22 23" fill="none">
-<path d="M17.2015 3.43538C16.9144 2.57415 16.1159 2 15.2099 2H7.33322C6.42713 2 5.62871 2.57415 5.34163 3.43538L3.90625 7.70563H5.80813L7.04614 4.00953C7.091 3.88394 7.19865 3.8032 7.33322 3.8032H15.2099C15.3355 3.8032 15.4521 3.88394 15.4969 4.00953L16.726 7.70563H18.6279L17.2015 3.43538Z" fill="#07171D"/>
-<path d="M21.1851 9.50781H1.35888C1.02695 9.50781 0.757812 9.77695 0.757812 10.1089V13.1142C0.757812 13.4461 1.02695 13.7153 1.35888 13.7153H2.39056L3.61063 21.7085C3.70034 22.2917 4.20272 22.7312 4.79482 22.7312H17.7491C18.3412 22.7312 18.8436 22.3006 18.9333 21.7085L20.1534 13.7153H21.1851C21.517 13.7153 21.7861 13.4461 21.7861 13.1142V10.1089C21.7861 9.77695 21.517 9.50781 21.1851 9.50781ZM7.96162 19.4209C7.96162 19.9143 7.55792 20.318 7.06451 20.318C6.5711 20.318 6.1674 19.9143 6.1674 19.4209V15.5185C6.1674 15.0251 6.5711 14.6214 7.06451 14.6214C7.55792 14.6214 7.96162 15.0251 7.96162 15.5185V19.4209ZM12.1691 19.4209C12.1691 19.9143 11.7654 20.318 11.272 20.318C10.7786 20.318 10.3749 19.9143 10.3749 19.4209V15.5185C10.3749 15.0251 10.7786 14.6214 11.272 14.6214C11.7654 14.6214 12.1691 15.0251 12.1691 15.5185V19.4209ZM16.3765 19.4209C16.3765 19.9143 15.9728 20.318 15.4794 20.318C14.986 20.318 14.5823 19.9143 14.5823 19.4209V15.5185C14.5823 15.0251 14.986 14.6214 15.4794 14.6214C15.9728 14.6214 16.3765 15.0251 16.3765 15.5185V19.4209Z" fill="#07171D"/>
-<path d="M19.5365 0H21.4238V8.5591H19.0196V3.58232H17V1.9835L17.1923 1.97148C17.8415 1.93141 18.3544 1.76311 18.7311 1.46659C19.1077 1.16205 19.3762 0.673187 19.5365 0Z" fill="white"/>
-</svg>
+                <div class="header__other__item--cart__icon">
+                  <svg>
+                    <use xlink:href="img/sprites/sprite.svg#header_cart"></use>
+                  </svg>
                 </div>
                 <div class="header__other__item--cart__value">1</div>
               </div>
-              <div class="header__other__item--personal header__other__item js-pop-up__button--login-register"><a href="#">
-                   <svg xmlns="http://www.w3.org/2000/svg" width="25" height="22" viewBox="0 0 25 22" fill="none">
-<path d="M24.6474 12.8491C24.6474 6.30371 19.3222 0.978516 12.7768 0.978516C6.23144 0.978516 0.90625 6.30371 0.90625 12.8491C0.90625 15.9897 2.15846 19.0069 4.36152 21.2222C4.57433 19.6361 5.75272 18.2549 7.43248 17.693L10.9628 16.511C11.0294 16.489 11.1013 16.4913 11.1661 16.5176C12.2075 16.9443 13.3462 16.9443 14.3876 16.5176C14.4523 16.4913 14.5246 16.489 14.5909 16.511L18.1212 17.693C19.8009 18.2549 20.9793 19.6361 21.1921 21.2222C23.3952 19.0068 24.6474 15.9896 24.6474 12.8491ZM14.6435 15.265C14.0461 15.5636 13.4181 15.715 12.7768 15.715C12.1356 15.715 11.5075 15.5636 10.9102 15.265C9.08312 14.3514 7.80717 12.1558 7.80717 9.92568C7.80717 6.94413 10.0365 4.51861 12.7768 4.51861C15.5172 4.51861 17.7465 6.94413 17.7465 9.92568C17.7465 12.1558 16.4705 14.3514 14.6435 15.265Z" fill="#07171D"/>
-</svg></a></div>
+              <div class="header__other__item--personal header__other__item js-pop-up__button--login-register"><a href="#"> 
+                  <svg>
+                    <use xlink:href="img/sprites/sprite.svg#header_login"></use>
+                  </svg></a></div>
               <div class="header__other__item--button header__other__item">
                 <button class="header__other__button btn js-button__question" type="submit">заказать звонок</button>
               </div>
@@ -199,10 +200,10 @@
         <div class="mob-menu__city__top"> 
           <div class="mob-menu__city__top__title">Не выбран <br>регион
           </div>
-          <div class="mob-menu__city__top__close"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M10.0291 8.98114L6.31035 5.26244C6.03029 4.98237 5.57622 4.98237 5.29616 5.26244C5.0161 5.5425 5.0161 5.99657 5.29616 6.27663L10.0291 11.0095L14.7619 6.27663C15.042 5.99657 15.042 5.5425 14.7619 5.26243C14.4819 4.98237 14.0278 4.98237 13.7478 5.26244L10.0291 8.98114Z" fill="white"/>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M10.0256 11.0423L13.7443 14.761C14.0244 15.0411 14.4785 15.0411 14.7585 14.761C15.0386 14.4809 15.0386 14.0269 14.7585 13.7468L10.0256 9.01392L5.29274 13.7468C5.01268 14.0269 5.01268 14.4809 5.29274 14.761C5.5728 15.0411 6.02687 15.0411 6.30693 14.761L10.0256 11.0423Z" fill="white"/>
-</svg>
+          <div class="mob-menu__city__top__close">
+            <svg>
+              <use xlink:href="img/sprites/sprite.svg#header_close"></use>
+            </svg>
           </div>
         </div>
         <div class="mob-menu__city__select">
@@ -211,18 +212,20 @@
               <option> </option>
               <option>Москва</option>
               <option>Калининград </option>
-              <div class="localities-centers__select-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="12" viewBox="0 0 20 12" fill="none">
-<path d="M2 2L10.1667 10.1667L18.3333 2" stroke="#2A2A2A" stroke-width="2" stroke-linecap="square"/>
-</svg>
+              <div class="localities-centers__select-arrow">
+                <svg>
+                  <use xlink:href="img/sprites/sprite.svg#select_arrow"></use>
+                </svg>
               </div>
             </select>
           </div>
         </div>
         <div class="mob-menu__city__bottom js-mob-menu__city__ok">
           <div class="mob-menu__city__bottom__text">ok</div>
-          <div class="mob-menu__city__bottom__row"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="10" viewBox="0 0 14 10" fill="none">
-<path d="M12.6892 5.02344L1.28544 4.89898M7.96897 1.07606L12.6892 5.02344L7.96897 1.07606ZM12.6892 5.02344L8.53984 8.87402L12.6892 5.02344Z" stroke="white" stroke-width="1.33502" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
+          <div class="mob-menu__city__bottom__row">
+            <svg>
+              <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
+            </svg>
           </div>
         </div>
       </div>
@@ -233,10 +236,10 @@
         <div class="mob-menu__question__top"> 
           <div class="mob-menu__question__top__title">ОСТАЛИСЬ ВОПРОСЫ? НАПИШИТЕ ИЛИ ЗАКАЖИТЕ ЗВОНОК
           </div>
-          <div class="mob-menu__question__top__close"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M10.0291 8.98114L6.31035 5.26244C6.03029 4.98237 5.57622 4.98237 5.29616 5.26244C5.0161 5.5425 5.0161 5.99657 5.29616 6.27663L10.0291 11.0095L14.7619 6.27663C15.042 5.99657 15.042 5.5425 14.7619 5.26243C14.4819 4.98237 14.0278 4.98237 13.7478 5.26244L10.0291 8.98114Z" fill="white"/>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M10.0256 11.0423L13.7443 14.761C14.0244 15.0411 14.4785 15.0411 14.7585 14.761C15.0386 14.4809 15.0386 14.0269 14.7585 13.7468L10.0256 9.01392L5.29274 13.7468C5.01268 14.0269 5.01268 14.4809 5.29274 14.761C5.5728 15.0411 6.02687 15.0411 6.30693 14.761L10.0256 11.0423Z" fill="white"/>
-</svg>
+          <div class="mob-menu__question__top__close">
+            <svg>
+              <use xlink:href="img/sprites/sprite.svg#header_close"></use>
+            </svg>
           </div>
         </div>
         <form class="contacts__form" action=""> 
@@ -253,7 +256,7 @@
           <div class="contacts__form__input-block error">
             <input class="contacts__form__input text__13" type="email" name="">
             <div class="contacts__form__input-block__name">Почта</div>
-            <div class="contacts__form__input-block__error">Некорректная почта					</div>
+            <div class="contacts__form__input-block__error">Некорректная почта</div>
           </div>
           <div class="contacts__form__input-block">
             <textarea class="contacts__form__input text__13" name=""></textarea>
@@ -270,9 +273,10 @@
         </form>
         <div class="mob-menu__question__bottom">
           <div class="mob-menu__question__bottom__text">Отправить</div>
-          <div class="mob-menu__question__bottom__row"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="10" viewBox="0 0 14 10" fill="none">
-<path d="M12.6892 5.02344L1.28544 4.89898M7.96897 1.07606L12.6892 5.02344L7.96897 1.07606ZM12.6892 5.02344L8.53984 8.87402L12.6892 5.02344Z" stroke="white" stroke-width="1.33502" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
+          <div class="mob-menu__question__bottom__row">
+            <svg>
+              <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
+            </svg>
           </div>
         </div>
       </div>
@@ -282,10 +286,10 @@
       <div class="mob-menu__question">
         <div class="mob-menu__question__top"> 
           <div class="mob-menu__question__top__tabs nav-tabs"><a class="nav-tab active" href="#" data-tab="1">Tab 1</a></div>
-          <div class="mob-menu__question__top__close js-pop-up__login-register--close"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M10.0291 8.98114L6.31035 5.26244C6.03029 4.98237 5.57622 4.98237 5.29616 5.26244C5.0161 5.5425 5.0161 5.99657 5.29616 6.27663L10.0291 11.0095L14.7619 6.27663C15.042 5.99657 15.042 5.5425 14.7619 5.26243C14.4819 4.98237 14.0278 4.98237 13.7478 5.26244L10.0291 8.98114Z" fill="white"/>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M10.0256 11.0423L13.7443 14.761C14.0244 15.0411 14.4785 15.0411 14.7585 14.761C15.0386 14.4809 15.0386 14.0269 14.7585 13.7468L10.0256 9.01392L5.29274 13.7468C5.01268 14.0269 5.01268 14.4809 5.29274 14.761C5.5728 15.0411 6.02687 15.0411 6.30693 14.761L10.0256 11.0423Z" fill="white"/>
-</svg>
+          <div class="mob-menu__question__top__close js-pop-up__login-register--close">
+            <svg>
+              <use xlink:href="img/sprites/sprite.svg#header_close"></use>
+            </svg>
           </div>
         </div>
         <form class="contacts__form" action=""> 
@@ -327,9 +331,10 @@
         </form>
         <div class="mob-menu__question__bottom">
           <div class="mob-menu__question__bottom__text">Отправить</div>
-          <div class="mob-menu__question__bottom__row"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="10" viewBox="0 0 14 10" fill="none">
-<path d="M12.6892 5.02344L1.28544 4.89898M7.96897 1.07606L12.6892 5.02344L7.96897 1.07606ZM12.6892 5.02344L8.53984 8.87402L12.6892 5.02344Z" stroke="white" stroke-width="1.33502" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
+          <div class="mob-menu__question__bottom__row">
+            <svg>
+              <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
+            </svg>
           </div>
         </div>
       </div>
@@ -340,10 +345,10 @@
         <div class="mob-menu__question__top"> 
           <div class="mob-menu__question__top__title">Стать частью команды SkyFish
           </div>
-          <div class="mob-menu__question__top__close js-pop-up__command--close"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M10.0291 8.98114L6.31035 5.26244C6.03029 4.98237 5.57622 4.98237 5.29616 5.26244C5.0161 5.5425 5.0161 5.99657 5.29616 6.27663L10.0291 11.0095L14.7619 6.27663C15.042 5.99657 15.042 5.5425 14.7619 5.26243C14.4819 4.98237 14.0278 4.98237 13.7478 5.26244L10.0291 8.98114Z" fill="white"/>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M10.0256 11.0423L13.7443 14.761C14.0244 15.0411 14.4785 15.0411 14.7585 14.761C15.0386 14.4809 15.0386 14.0269 14.7585 13.7468L10.0256 9.01392L5.29274 13.7468C5.01268 14.0269 5.01268 14.4809 5.29274 14.761C5.5728 15.0411 6.02687 15.0411 6.30693 14.761L10.0256 11.0423Z" fill="white"/>
-</svg>
+          <div class="mob-menu__question__top__close js-pop-up__command--close">
+            <svg>
+              <use xlink:href="img/sprites/sprite.svg#header_close"></use>
+            </svg>
           </div>
         </div>
         <form class="contacts__form" action=""> 
@@ -385,9 +390,10 @@
         </form>
         <div class="mob-menu__question__bottom">
           <div class="mob-menu__question__bottom__text">Отправить</div>
-          <div class="mob-menu__question__bottom__row"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="10" viewBox="0 0 14 10" fill="none">
-<path d="M12.6892 5.02344L1.28544 4.89898M7.96897 1.07606L12.6892 5.02344L7.96897 1.07606ZM12.6892 5.02344L8.53984 8.87402L12.6892 5.02344Z" stroke="white" stroke-width="1.33502" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
+          <div class="mob-menu__question__bottom__row">
+            <svg>
+              <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
+            </svg>
           </div>
         </div>
       </div>
@@ -398,10 +404,10 @@
         <div class="mob-menu__question__top"> 
           <div class="mob-menu__question__top__title">
           </div>
-          <div class="mob-menu__question__top__close js-pop-up__thanks--close"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M10.0291 8.98114L6.31035 5.26244C6.03029 4.98237 5.57622 4.98237 5.29616 5.26244C5.0161 5.5425 5.0161 5.99657 5.29616 6.27663L10.0291 11.0095L14.7619 6.27663C15.042 5.99657 15.042 5.5425 14.7619 5.26243C14.4819 4.98237 14.0278 4.98237 13.7478 5.26244L10.0291 8.98114Z" fill="white"/>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M10.0256 11.0423L13.7443 14.761C14.0244 15.0411 14.4785 15.0411 14.7585 14.761C15.0386 14.4809 15.0386 14.0269 14.7585 13.7468L10.0256 9.01392L5.29274 13.7468C5.01268 14.0269 5.01268 14.4809 5.29274 14.761C5.5728 15.0411 6.02687 15.0411 6.30693 14.761L10.0256 11.0423Z" fill="white"/>
-</svg>
+          <div class="mob-menu__question__top__close js-pop-up__thanks--close">
+            <svg>
+              <use xlink:href="img/sprites/sprite.svg#header_close"></use>
+            </svg>
           </div>
         </div>
         <div class="mob-menu__question__content">
@@ -409,9 +415,10 @@
           </div>
         </div><a class="mob-menu__question__bottom" href="#">
           <div class="mob-menu__question__bottom__text">На главную</div>
-          <div class="mob-menu__question__bottom__row"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="10" viewBox="0 0 14 10" fill="none">
-<path d="M12.6892 5.02344L1.28544 4.89898M7.96897 1.07606L12.6892 5.02344L7.96897 1.07606ZM12.6892 5.02344L8.53984 8.87402L12.6892 5.02344Z" stroke="white" stroke-width="1.33502" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
+          <div class="mob-menu__question__bottom__row">
+            <svg>
+              <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
+            </svg>
           </div></a>
       </div>
     </div>
@@ -433,9 +440,10 @@
                 <div class="assortment__title title__82">
                   <h1>Категории <br>каталога</h1>
                 </div><a class="btn--box assortment__btn" href="#">
-                  <div class="btn btn--circle"><svg xmlns="http://www.w3.org/2000/svg" width="11" height="8" viewBox="0 0 11 8" fill="none">
-<path d="M10.0999 4.21591L1.22221 4.11643M6.42527 1.06079L10.0999 4.21591L6.42527 1.06079ZM10.0999 4.21591L6.86969 7.29365L10.0999 4.21591Z" stroke="#07171D" stroke-width="1.33502" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
+                  <div class="btn btn--circle">
+                    <svg>
+                      <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
+                    </svg>
                   </div>
                   <div class="btn--box__text">Перейти в каталог</div></a>
               </div>
@@ -444,27 +452,30 @@
                   </div>
                   <div class="card__picture"> <img src="img/card__picture__1.png" alt=""></div>
                   <div class="card__bottom">
-                    <div class="btn btn--circle btn--circle__black"><svg xmlns="http://www.w3.org/2000/svg" width="11" height="8" viewBox="0 0 11 8" fill="none">
-<path d="M10.0999 4.21591L1.22221 4.11643M6.42527 1.06079L10.0999 4.21591L6.42527 1.06079ZM10.0999 4.21591L6.86969 7.29365L10.0999 4.21591Z" stroke="#07171D" stroke-width="1.33502" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>							
+                    <div class="btn btn--circle btn--circle__black">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
+                      </svg>
                     </div>
                   </div></a><a class="card card--full-picture" href="#">
                   <div class="card__title title__32">Филе охлажденное <br> <span class="text__12">3&ensp;товара</span>
                   </div>
                   <div class="card__picture"> <img src="img/card__picture__2.png" alt=""></div>
                   <div class="card__bottom">
-                    <div class="btn btn--circle btn--circle__black"><svg xmlns="http://www.w3.org/2000/svg" width="11" height="8" viewBox="0 0 11 8" fill="none">
-<path d="M10.0999 4.21591L1.22221 4.11643M6.42527 1.06079L10.0999 4.21591L6.42527 1.06079ZM10.0999 4.21591L6.86969 7.29365L10.0999 4.21591Z" stroke="#07171D" stroke-width="1.33502" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>							
+                    <div class="btn btn--circle btn--circle__black">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
+                      </svg>
                     </div>
                   </div></a><a class="card card--full-picture" href="#">
                   <div class="card__title title__32">морепродукты <br> <span class="text__12">26&ensp;товаров</span>
                   </div>
                   <div class="card__picture"> <img src="img/card__picture__3.png" alt=""></div>
                   <div class="card__bottom">
-                    <div class="btn btn--circle btn--circle__black"><svg xmlns="http://www.w3.org/2000/svg" width="11" height="8" viewBox="0 0 11 8" fill="none">
-<path d="M10.0999 4.21591L1.22221 4.11643M6.42527 1.06079L10.0999 4.21591L6.42527 1.06079ZM10.0999 4.21591L6.86969 7.29365L10.0999 4.21591Z" stroke="#07171D" stroke-width="1.33502" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>							
+                    <div class="btn btn--circle btn--circle__black">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
+                      </svg>
                     </div>
                   </div></a></div>
               <div class="layout--trio__col"><a class="card card--full-picture" href="#">
@@ -472,27 +483,30 @@
                   </div>
                   <div class="card__picture"> <img src="img/card__picture__4.png" alt=""></div>
                   <div class="card__bottom">
-                    <div class="btn btn--circle btn--circle__black"><svg xmlns="http://www.w3.org/2000/svg" width="11" height="8" viewBox="0 0 11 8" fill="none">
-<path d="M10.0999 4.21591L1.22221 4.11643M6.42527 1.06079L10.0999 4.21591L6.42527 1.06079ZM10.0999 4.21591L6.86969 7.29365L10.0999 4.21591Z" stroke="#07171D" stroke-width="1.33502" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>							
+                    <div class="btn btn--circle btn--circle__black">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
+                      </svg>
                     </div>
                   </div></a><a class="card card--full-picture" href="#">
                   <div class="card__title title__32">Филе свежемороженое <br> <span class="text__12">3&ensp;товара</span>
                   </div>
                   <div class="card__picture"> <img src="img/card__picture__5.png" alt=""></div>
                   <div class="card__bottom">
-                    <div class="btn btn--circle btn--circle__black"><svg xmlns="http://www.w3.org/2000/svg" width="11" height="8" viewBox="0 0 11 8" fill="none">
-<path d="M10.0999 4.21591L1.22221 4.11643M6.42527 1.06079L10.0999 4.21591L6.42527 1.06079ZM10.0999 4.21591L6.86969 7.29365L10.0999 4.21591Z" stroke="#07171D" stroke-width="1.33502" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>							
+                    <div class="btn btn--circle btn--circle__black">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
+                      </svg>
                     </div>
                   </div></a><a class="card card--full-picture" href="#">
                   <div class="card__title title__32">субпродукты <br> <span class="text__12">3&ensp;товара</span>
                   </div>
                   <div class="card__picture"> <img src="img/card__picture__6.png" alt=""></div>
                   <div class="card__bottom">
-                    <div class="btn btn--circle btn--circle__black"><svg xmlns="http://www.w3.org/2000/svg" width="11" height="8" viewBox="0 0 11 8" fill="none">
-<path d="M10.0999 4.21591L1.22221 4.11643M6.42527 1.06079L10.0999 4.21591L6.42527 1.06079ZM10.0999 4.21591L6.86969 7.29365L10.0999 4.21591Z" stroke="#07171D" stroke-width="1.33502" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
+                    <div class="btn btn--circle btn--circle__black">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
+                      </svg>
                     </div>
                   </div></a></div>
             </div>
@@ -536,9 +550,10 @@
               <li class="footer__menu__list__item"><a href="#">Вопросы и ответы (FAQ)</a></li>
             </ul>
           </div><a class="btn--box footer__btn" href="#">
-            <div class="btn btn--circle"><svg xmlns="http://www.w3.org/2000/svg" width="11" height="8" viewBox="0 0 11 8" fill="none">
-<path d="M10.0999 4.21591L1.22221 4.11643M6.42527 1.06079L10.0999 4.21591L6.42527 1.06079ZM10.0999 4.21591L6.86969 7.29365L10.0999 4.21591Z" stroke="#07171D" stroke-width="1.33502" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
+            <div class="btn btn--circle">
+              <svg>
+                <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
+              </svg>
             </div>
             <div class="btn--box__text">Подробнее</div></a>
           <div class="footer__bg"><img src="img/footer__bg.png" alt=""></div>
@@ -593,9 +608,8 @@
         				a(href="#") Вопросы и ответы (FAQ)
         	a(href="#").btn--box.footer__btn
         		.btn.btn--circle
-        			<svg xmlns="http://www.w3.org/2000/svg" width="11" height="8" viewBox="0 0 11 8" fill="none">
-        			<path d="M10.0999 4.21591L1.22221 4.11643M6.42527 1.06079L10.0999 4.21591L6.42527 1.06079ZM10.0999 4.21591L6.86969 7.29365L10.0999 4.21591Z" stroke="#07171D" stroke-width="1.33502" stroke-linecap="round" stroke-linejoin="round"/>
-        			</svg>
+        			svg
+        				use(xlink:href=`img/sprites/sprite.svg#arrow_btn`)
         		.btn--box__text Подробнее
         	.footer__bg
         		img(src="img/footer__bg.png" alt="")

@@ -62,7 +62,7 @@
             align-items: center;
             width: vw(12);
             height: vw(8);
-            background-color: transparent;
+            background-color: transparent !important;
             margin-bottom: 0;
             @include max(md) {
                 width: vw2(12);
@@ -77,10 +77,53 @@
                 }
             }
         }
+
+        &.new-btn--white {
+            .new-btn__icon {
+                svg {
+                    use {
+                        stroke: $fontBlack;
+                        fill: none;
+                    }
+                }
+            }
+            &:hover {
+                .new-btn__icon {
+                    svg {
+                        use {
+                            stroke: $white;
+                            fill: none;
+                        }
+                    }
+                }
+            }
+        }
+
+        &.new-btn--black:hover {
+            .new-btn__icon {
+                svg {
+                    use {
+                        stroke: $white;
+                        fill: none;
+                    }
+                }
+            }
+        }
     }
     &--blue {
-        background-color: $blueLight;
+        background-color: $blueNtn;
         color: $white;
+        .new-btn__icon {
+            background-color: $white;
+            transition: all $tr-time linear;
+            svg {
+                use {
+                    transition: all $tr-time linear;
+                    stroke: $fontBlack;
+                    fill: none;
+                }
+            }
+        }
         &:hover {
             background-color: $blueHover;
         }
@@ -96,24 +139,41 @@
         }
         &:hover {
             background-color: $blueHover;
+            .new-btn__icon {
+                background-color: $white;
+                svg {
+                    use {
+                        stroke: $fontBlack;
+                        fill: none;
+                    }
+                }
+            }
         }
     }
     &--white {
         background-color: $white;
         color: $black;
         .new-btn__icon {
+            background-color: $blueNtn;
+            transition: all $tr-time linear;
             svg {
-                stroke: $fontBlack;
-                fill: none;
+                use {
+                    transition: all $tr-time linear;
+                    stroke: $white;
+                    fill: none;
+                }
             }
         }
         &:hover {
             background-color: $blueHover;
             color: $white;
             .new-btn__icon {
+                background-color: $white;
                 svg {
-                    stroke: $white;
-                    fill: none;
+                    use {
+                        stroke: $fontBlack;
+                        fill: none;
+                    }
                 }
             }
         }
@@ -134,7 +194,7 @@
             height: vw2(59);
         }
         &:hover {
-            .btn__icon {
+            .new-btn__icon {
                 background-color: transparent;
             }
         }

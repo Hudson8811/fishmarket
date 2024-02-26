@@ -1,0 +1,21 @@
+.l-call-action {
+    min-height: vw(599);
+    background-color: $blueLight;
+    background-image: url("../img/l_call_action_vawes.png");
+    background-repeat: no-repeat;
+    background-size: vw(861) auto;
+    background-position: right vw(-34) top vw(170);
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        padding: vw(20) 0;
+    }
+    &__title {
+        max-width: vw(960);
+        font-size: vw(82);
+        font-weight: 500;
+        line-height: 0.97;
+        text-transform: uppercase;
+        color: $white;
+    }
+}
