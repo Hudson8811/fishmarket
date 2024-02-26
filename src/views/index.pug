@@ -5,7 +5,7 @@ block variables
 	- const title = "SkyFish home page"
 
 block content
-	.scroll-page(data-animation="")
+	.scroll-page(data-animation="homepage")
 		.start__section.section 
 			.swiper-container.start__slider.js-start__slider
 				.swiper-wrapper
@@ -237,9 +237,9 @@ block content
 									.btn.btn--circle.btn--circle__blue
 										svg
 											use(xlink:href=`img/sprites/sprite.svg#arrow_btn`)
-		//include ../blocks/modules/footer/footer
+		include ../blocks/modules/footer/footer
 
-		.footer.footer__animation.js-footer__animation
+		//-.footer.footer__animation.js-footer__animation
 			.footer__logo 
 				img(src="img/logo__white.png" alt="")
 			.footer__title.title__170 
