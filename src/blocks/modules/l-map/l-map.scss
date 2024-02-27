@@ -1,6 +1,6 @@
 .l-map {
     position: relative;
-    height: vw(900);
+    height: vw(800);
     padding: vw(32) vw(25);
     display: flex;
     overflow: hidden;
@@ -17,7 +17,7 @@
         display: flex;
         align-items: stretch;
         flex-wrap: wrap;
-        height: vw(91);
+        height: vw(80);
         @include max(md) {
             height: vw2(45);
         }
@@ -56,7 +56,7 @@
         overflow-y: auto;
 
         scrollbar-width: thin;
-        scrollbar-color: $blueLight rgba(0, 0, 0, 0);
+        scrollbar-color: #F3F4F5 rgba(0, 0, 0, 0);
         &::-webkit-scrollbar {
             height: 2px;
             width: 2px;
@@ -65,7 +65,7 @@
             background: rgba(0, 0, 0, 0);
         }
         &::-webkit-scrollbar-thumb {
-            background-color: $blueLight;
+            background-color: #F3F4F5;
             border-radius: 10px;
             border: none;
         }
@@ -81,7 +81,7 @@
         border-bottom: 1px solid rgba(0,0,0,0.2);
     }
     .map-address {
-        padding: vw(20) vw(20) vw(20) vw(24);
+        padding: vw(15) vw(20) vw(15) vw(24);
         background-color: $white;
         color: $fontBlack;
         transition: all $tr-time linear;
@@ -93,14 +93,14 @@
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
-            margin-bottom: vw(43);
+            margin-bottom: vw(30);
             @include max(md) {
                 margin-bottom: vw2(21);
             }
         }
         &__title {
             margin-top: vw(4);
-            font-size: vw(32);
+            font-size: vw(30);
             font-weight: 500;
             line-height: 1.09;
             text-transform: uppercase;
@@ -135,7 +135,7 @@
             }
         }
         &__subtitle {
-            margin-bottom: vw(10);
+            margin-bottom: vw(5);
             font-size: vw(14);
             font-weight: 600;
             line-height: 1.25;
