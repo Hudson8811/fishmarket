@@ -462,12 +462,15 @@
 						}
 					}
 				}
-			}
+			} 
 			&--place {
 				min-width: vw(167);
 				padding-left: vw(26);
 				padding-right: vw(31);
 				border-right: 1px solid $grey;
+				.header__menu__item__icon svg use {
+					fill: $blueLight;
+				}
 			}
 			&--button {
 				padding-left: 0;

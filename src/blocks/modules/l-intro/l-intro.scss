@@ -1,11 +1,11 @@
 .l-intro {
-    padding-top: vw(115);
+    padding: vw(115) 0 vw(25);
     min-height: 100vh;
     display: flex;
     background-size: cover;
     background-position: center;
     @include max(md) {
-        padding-top: vw2(100);
+        padding: vw2(100) 0 vw2(30);
         min-height: vw2(650);
     } 
 
@@ -45,6 +45,10 @@
         &--top {
             margin-top: vw(29);
             max-width: vw(643);
+            @include max(md) {
+                margin-top: vw2(29);
+                max-width: 100%;
+            } 
         }
         &--bottom {
             margin-top: auto;

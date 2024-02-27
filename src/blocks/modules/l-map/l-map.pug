@@ -17,7 +17,7 @@ section.l-map
             cMode: 'white',
         })(data-city="kaliningrad")
     .l-map__addresses.active(data-js="lMapAddresses" data-city="moscow")
-        .l-map__address.map-address(data-js='moscowStock1')
+        .l-map__address.map-address(data-id='moscowStock1' data-js='lMapAddress')
             .map-address__header
                 .map-address__title Склад
                 .map-address__icon 
@@ -30,7 +30,7 @@ section.l-map
                 .map-address__subtitle контакты:
                 .map-address__text 8 800 000-00-00
                 .map-address__text info@fish.ru
-        .l-map__address.map-address(data-js='moscowStock2')
+        .l-map__address.map-address(data-id='moscowStock2' data-js='lMapAddress')
             .map-address__header
                 .map-address__title Склад
                 .map-address__icon 
@@ -43,7 +43,7 @@ section.l-map
                 .map-address__subtitle контакты:
                 .map-address__text 8 800 000-00-00
                 .map-address__text info@fish.ru
-        .l-map__address.map-address.active(data-js='moscowOffice1')
+        .l-map__address.map-address.active(data-id='moscowOffice1' data-js='lMapAddress')
             .map-address__header
                 .map-address__title Офис
                 .map-address__icon 
@@ -58,7 +58,7 @@ section.l-map
                 .map-address__text info@fish.ru
 
     .l-map__addresses(data-js="lMapAddresses" data-city="kaliningrad")
-        .l-map__address.map-address(data-js='kaliningradStock1')
+        .l-map__address.map-address(data-id='kaliningradStock1' data-js='lMapAddress')
             .map-address__header
                 .map-address__title Склад
                 .map-address__icon 
@@ -71,7 +71,7 @@ section.l-map
                 .map-address__subtitle контакты:
                 .map-address__text 8 800 000-00-00
                 .map-address__text info@fish.ru
-        .l-map__address.map-address.active(data-js='kaliningradOffice1')
+        .l-map__address.map-address.active(data-id='kaliningradOffice1' data-js='lMapAddress')
             .map-address__header
                 .map-address__title Офис
                 .map-address__icon 

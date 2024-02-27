@@ -15,7 +15,7 @@ function lMapInit() {
             {   
                 coords: [55.891693, 37.542141],
                 id: 'moscowStock1'
-            },
+            }, 
             {   
                 coords: [55.672935, 37.725873],
                 id: 'moscowStock2'
@@ -39,7 +39,7 @@ function lMapInit() {
         placemarks.forEach((placemark, index) => {
             let myPlacemark = new ymaps.Placemark(placemark.coords,{},{
                 iconLayout: 'default#image',
-                iconImageHref: '/img/svg/predstvo_act.svg',
+                iconImageHref: '../img/svg/predstvo_act.svg',
                 iconImageSize: [30, 36],
                 iconImageOffset: [-15, -18]
             });
@@ -50,7 +50,7 @@ function lMapInit() {
         //переключение городов
         const cities = document.querySelector('[data-js="cities"]');
         const cityBtnArr = cities.querySelectorAll(".l-map__city");
-        const adressesBlocksArr = document.querySelectorAll('[data-js="lMapAddresses"]');
+        const addressesBlocksArr = document.querySelectorAll('[data-js="lMapAddresses"]');
 
         cities.addEventListener('click', (e)=> {
             let targetBtn = e.target.closest('.l-map__city');
@@ -66,7 +66,7 @@ function lMapInit() {
                 duration: 1000
             })
 
-            adressesBlocksArr.forEach(item => {
+            addressesBlocksArr.forEach(item => {
                 item.classList.remove("active")
                 if(item.dataset.city == targetCity) {
                     item.classList.add("active")
@@ -75,7 +75,27 @@ function lMapInit() {
         })
 
         //переключение адресов в рамках города
+        const addrressesBtnArr = document.querySelectorAll("[data-js='lMapAddress']");
+        addrressesBtnArr.forEach(item => {
+            item.addEventListener('click', function(e) {
+                let targetId = this.dataset.id;
+                let targetAdressesBlock = this.closest("[data-js='lMapAddresses']");
+                let innerAddresses = targetAdressesBlock.querySelectorAll('[data-js="lMapAddress"]');
+                let targetAddressCoords = placemarks.find(placemark => placemark.id === targetId).coords;
 
+                lMapEx.setCenter(targetAddressCoords, 13, {
+                    duration: 500
+                })
+                
+                innerAddresses.forEach(function(innerAddress) {
+                    innerAddress.classList.remove("active");
+                    if(innerAddress.dataset.id == targetId) {
+                        innerAddress.classList.add("active")
+                    }
+                })
+
+            })
+        })
     }
 
 }

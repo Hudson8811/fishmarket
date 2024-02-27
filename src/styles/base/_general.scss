@@ -215,6 +215,9 @@ a, button {
                 transition: all 0.3s;
                 background: $blueLight;
             }
+            svg use {
+                stroke: $white;
+            }
         }
         &__text {
             position: relative;
@@ -393,8 +396,8 @@ a, button {
                 stroke: $fontBlack;
             }
             @include max(md) {
-                width: vw(14);
-                height: vw(12);             
+                width: vw2(13);
+                height: vw2(11);             
             }            
         }
         &:hover {
@@ -693,9 +696,6 @@ a, button {
             object-fit: cover;
             object-position: center center;
         }
-    }
-    @include max(sm) {
-
     }
     &__section {
         z-index: 5;
@@ -1698,6 +1698,9 @@ a, button {
                     width: vw2(21);
                     height: vw2(28);
                 }
+                use {
+                    fill: $blueLight;
+                }
             }
         }
     }
@@ -2293,10 +2296,6 @@ a, button {
             }
         }        
     }
-    // &--see-also {
-    //     width: vw(576);
-    //     min-width: vw(576);
-    // }
 }
 .card--full-picture.active {
     .card__picture {

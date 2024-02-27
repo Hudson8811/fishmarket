@@ -44,8 +44,8 @@ mixin l-intro(props = defaultLIntroProps)
                 +title("h1", checkProps.title, "l-intro__title")
                 if(checkProps.textTop)
                     .l-intro__text.text-block.l-intro__text--top
-                        p!= checkProps.textTop
+                        != checkProps.textTop
                 if(checkProps.textBottom)
                     .l-intro__text.text-block.l-intro__text--bottom
-                        p!= checkProps.textBottom
+                        != checkProps.textBottom
 

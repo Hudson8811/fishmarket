@@ -8,16 +8,27 @@
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
+        @include max(md) {
+            flex-direction: column;
+        } 
     }
     &__title {
         max-width: vw(1130);
         font-size: vw(82);
         @include max(md) {
-            max-width: calc(100% - vw2(150));
+            max-width: 100%;
         } 
     }
     &__btn {
+        flex-basis: vw(411);
+        flex-shrink: 0;
+        flex-grow: 0;
         margin-top: vw(12);
+        @include max(md) {
+            flex-basis: auto;
+            margin-top: vw2(20);
+            max-width: vw2(260);
+        } 
     }
     &__slider {
         position: relative;
@@ -28,7 +39,7 @@
             }
         }
         @include max(md) {
-            margin-top: vw2(60);
+            margin-top: vw2(40);
         } 
     }
     &__slide {

@@ -5,10 +5,20 @@
     background-repeat: no-repeat;
     background-size: vw(861) auto;
     background-position: right vw(-34) top vw(170);
+    @include max(md) {
+        background-size: vw2(260) auto;
+        background-position: right vw2(-34) bottom vw2(20);
+    }
     &__container {
         display: flex;
         justify-content: space-between;
+        align-items: flex-start;
         padding: vw(20) 0;
+        @include max(md) {
+            flex-direction: column;
+            gap: vw2(24);
+            padding: vw2(20) 0;
+        }
     }
     &__title {
         max-width: vw(960);
@@ -17,5 +27,8 @@
         line-height: 0.97;
         text-transform: uppercase;
         color: $white;
+        @include max(md) {
+            max-width: 100%;
+        }
     }
 }
