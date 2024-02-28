@@ -2,15 +2,16 @@
 function MapInit() {
 	if ($('.contacts__map').length > 0) {
 		ymaps.ready(() => {
-			const map = new ymaps.Map('js-map', {
-				center: [55.672925, 37.625181],
+			const mapContainer = document.getElementById('js-map')
+			const defaultCoords = [55.672925, 37.625181]
+			const startCoords = mapContainer.dataset.coords ? mapContainer.dataset.coords.split(",") : defaultCoords
+
+			const map = new ymaps.Map(mapContainer, {
+				center: startCoords,
 				zoom:13,
-				// type: 'yandex#satellite',
-				// Карта будет создана без
-				// элементов управления.
 				controls: []
 			});
-			myPlacemark2 = new ymaps.Placemark([55.672925, 37.625181],{},{
+			myPlacemark2 = new ymaps.Placemark(startCoords,{},{
 					iconLayout: 'default#image',
 					iconImageHref: '/img/svg/predstvo_act.svg',
 					iconImageSize: [30, 36],
@@ -26,7 +27,6 @@ function MapInit() {
 					});
 					$(this).addClass( "active" );
 					var coor = $(this).attr('data-coords');
-					console.log (coor)
 					var a = coor;
 					var xy = a.split(',');
 					var x = parseFloat(xy[0]);
@@ -108,7 +108,6 @@ document.addEventListener("DOMContentLoaded", () => {
 	const openAccordion = (accordion) => {
 		let headerHeight = 0;
 		if (window.innerWidth > 1100){
-			// headerHeight = $('.fixed-header').outerHeight();
 			headerHeight = 100;
 		}
 		const content = accordion.querySelector(".accordion__content");

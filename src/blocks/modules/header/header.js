@@ -33,8 +33,6 @@ let searchOverlay = document.querySelector(".search--overlay");
   function tabAllClick(navs, panes) {
     var tabNavs = navs;
     var tabPanes = panes;
-    // var tabNavs = document.querySelectorAll(".nav-tab");
-    // var tabPanes = document.querySelectorAll(".tab-pane");
     if(tabNavs !==null & tabPanes !==null) {
       tabClick() 
     }
@@ -90,7 +88,6 @@ let sectionCommand = document.querySelector(".js-pop-up__command");
 let sectionCommandOverlay = document.querySelector(".js-pop-up__command--overlay");
 let sectionCommandClose = document.querySelector(".js-pop-up__command--close");
 let sectionCommandButton = document.querySelector(".js-pop-up__button--command");
-// console.log("sectionCommandButton")
 if( sectionCommandButton !== null) {
   sectionCommandButton.addEventListener("click", function () {
    
@@ -130,9 +127,6 @@ if(sectionThanksButton !== null) {
 }
 
 //Pop-up thanks
-
-
-
 $(document).mouseup(function (e){ 
   var search = $(".header__other__search");
   if (!search.is(e.target) 
@@ -145,7 +139,6 @@ searchBtn.addEventListener("click", function () {
   bodyNoScroll()
 });
 searchOverlay.addEventListener("click", function () {
-  console.log(search)
   search.classList.remove("active");
   bodyYesScroll()
 });
@@ -199,27 +192,6 @@ overlayBg.addEventListener("mousemove", function () {
   mobMenuSection.classList.remove("active");
   bodyYesScroll()
 });
-// humb.addEventListener("click", function () {
-//   let kye = mobMenuSection.classList.contains("active");
-//   if (kye == false) {
-//     mobMenuSection.classList.add("active");
-//     bodyNoScroll()
-//   }else {
-//     mobMenuSection.classList.remove("active");
-//     bodyYesScroll()
-//   }
-// });
-
-// $(window).scroll(function() {
-// 	var height = $(window).scrollTop();
-// 	 /*Если сделали скролл на 100px задаём новый класс для header*/
-// 	if(height > 10){
-// 		$('.section__header').addClass('bg__white');
-// 	} else{
-// 	/*Если меньше 100px удаляем класс для header*/
-// 		$('.section__header').removeClass('bg__white');
-// 	}
-// });
 
 //input file
 var dt = new DataTransfer();
@@ -250,5 +222,3 @@ function removeFilesItem(target){
 	}
 	input[0].files = dt.files;  
 }
-
-//input file

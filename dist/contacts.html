@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Vacancy Page</title>
+    <title>Contacts Page</title>
     <meta name="theme-color" content="#fff">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -429,109 +429,133 @@
     </div>
     <main class="site-main">
       <div class="scroll-page">
-        <div class="section section--first section__white vacancy__section">
-          <div class="container">
-                  <div class="breadcrumbs vacancy__breadcrumbs breadcrumbs--dark">
-                    <ul class="breadcrumbs__list list-reset">
-                      <li class="breadcrumbs__item"><a href="#">Главная /</a>
-                      </li>
-                      <li class="breadcrumbs__item"><a href="#">Вакансии /</a>
-                      </li>
-                      <li class="breadcrumbs__item breadcrumbs__item--current"><span>Сортировщик</span>
-                      </li>
-                    </ul>
-                  </div>
-            <div class="layout">
-              <div class="layout__col">
-                <div class="vacancy">
-                  <div class="vacancy__title title__52">
-                    <h1>Менеджер по продажам</h1>
-                  </div>
-                  <div class="vacancy__description">
-                    <div class="vacancy__cost title__24">от 100 000 ₽ на руки</div>
-                    <div class="vacancy__location">
-                      <div class="vacancy__location__icon"> 
+              <section class="l-map">
+                <div class="l-map__cities" data-js="cities">
+                        <button class="new-btn new-btn--small new-btn--white l-map__city active" type="button" data-city="moscow"><span class="new-btn__text">Москва</span>
+                        </button>
+                        <button class="new-btn new-btn--small new-btn--white l-map__city" type="button" data-city="kaliningrad"><span class="new-btn__text">Калининград</span>
+                        </button>
+                </div>
+                <div class="l-map__addresses active" data-js="lMapAddresses" data-city="moscow">
+                  <div class="l-map__address map-address active" data-id="moscowOffice1" data-coords="55.633871,37.453720" data-js="lMapAddress">
+                    <div class="map-address__header">
+                      <div class="map-address__title">Офис</div>
+                      <div class="map-address__icon"> 
                         <svg>
                           <use xlink:href="img/sprites/sprite.svg#header_position"></use>
                         </svg>
                       </div>
-                      <div class="vacancy__location__text text__18">Москва</div>
                     </div>
-                    <div class="vacancy__row"> 
-                      <div class="vacancy__experience">
-                        <div class="vacancy__experience__title text__12">Опыт работы:</div>
-                        <div class="vacancy__experience__text text__18">не требуется</div>
-                      </div>
-                      <div class="vacancy__schedule">
-                        <div class="vacancy__schedule__title text__12">График работы:</div>
-                        <div class="vacancy__schedule__text text__18">понедельник- пятница с 9:00 до 18:00</div>
-                      </div>
+                    <div class="map-address__item">
+                      <div class="map-address__subtitle">адрес:</div>
+                      <div class="map-address__text">Киевское шоссе, 21-й км, д. 3, стр. 1, Бизнес-центр “G10”</div>
                     </div>
-                    <div class="vacancy__list text-block">
-                      <h4>Обязанности</h4>
-                      <ul> 
-                        <li>Выстраивание долгосрочных отношений с клиентами</li>
-                        <li>Развитие активной клиентской базы: работа с действующими и поиск новых клиентов (действенные инструменты есть!)</li>
-                        <li>Проводить переговоры на уровне первых лиц компании</li>
-                        <li>Обеспечивать полный цикл работы с клиентами</li>
-                        <li>Вести отчетность в CRM системе и внутренний документооборот</li>
-                      </ul>
-                      <h4>Требования:</h4>
-                      <ul> 
-                        <li>Высокий уровень самоорганизации и нацеленность на результат</li>
-                        <li>Практический опыт продаж приветствуется</li>
-                        <li>Навыки в поиске и привлечении новых клиентов приветствуется</li>
-                        <li>Навыки работы в CRM приветствуется (1С, Битрикс 24)</li>
-                        <li>Личные качества: отличные коммуникативные навыки (устные и письменные)</li>
-                      </ul>
-                      <h4>Условия:</h4>
-                      <ul> 
-                        <li>Высокий уровень самоорганизации и нацеленность на результат</li>
-                        <li>Практический опыт продаж приветствуется</li>
-                        <li>Навыки в поиске и привлечении новых клиентов приветствуется</li>
-                        <li>Навыки работы в CRM приветствуется (1С, Битрикс 24)</li>
-                        <li>Личные качества: отличные коммуникативные навыки (устные и письменные)</li>
-                      </ul>
+                    <div class="map-address__item">
+                      <div class="map-address__subtitle">контакты:</div>
+                      <div class="map-address__text">8 800 000-00-00</div>
+                      <div class="map-address__text">info@fish.ru</div>
                     </div>
-                    <div class="vacancy__skills">
-                      <div class="vacancy__skills__title title__24">Ключевые навыки</div>
-                      <div class="vacancy__skills__list">
-                        <div class="vacancy__skills__list__item text__18">Активные продажи</div>
-                        <div class="vacancy__skills__list__item text__18">Поиск и привлечение клиентов</div>
-                        <div class="vacancy__skills__list__item text__18">Деловое общение</div>
-                        <div class="vacancy__skills__list__item text__18">Стрессоустойчивость</div>
-                        <div class="vacancy__skills__list__item text__18">Коммуникабельность</div>
-                        <div class="vacancy__skills__list__item text__18">Работа с большим объемом информации</div>
+                  </div>
+                  <div class="l-map__address map-address" data-id="moscowStock1" data-coords="55.891693,37.542141" data-js="lMapAddress">
+                    <div class="map-address__header">
+                      <div class="map-address__title">Склад</div>
+                      <div class="map-address__icon"> 
+                        <svg>
+                          <use xlink:href="img/sprites/sprite.svg#header_position"></use>
+                        </svg>
                       </div>
                     </div>
-                    <div class="vacancy__contacts">
-                      <div class="vacancy__contacts__title title__24">Контактная информация:</div><a class="vacancy__contacts__link text__18" href="tel:+88000000000"> тел.: 8 800 000-00-00</a><a class="vacancy__contacts__link text__18" href="mailto:">e-mail: info@skyfish.ru</a>
+                    <div class="map-address__item">
+                      <div class="map-address__subtitle">адрес:</div>
+                      <div class="map-address__text">Дмитровское шоссе, 137</div>
                     </div>
-                    <div class="vacancy__adress"> 
-                      <div class="vacancy__adress__title title__24">Адрес: </div>
-                      <div class="vacancy__adress__text text__18">Москва, Новомосковский административный округ, Киевское шоссе, 21-й километр, 3с1</div>
+                    <div class="map-address__item">
+                      <div class="map-address__subtitle">контакты:</div>
+                      <div class="map-address__text">8 800 000-00-00</div>
+                      <div class="map-address__text">info@fish.ru</div>
+                    </div>
+                  </div>
+                  <div class="l-map__address map-address" data-id="moscowStock2" data-coords="55.672935,37.725873" data-js="lMapAddress">
+                    <div class="map-address__header">
+                      <div class="map-address__title">Склад</div>
+                      <div class="map-address__icon"> 
+                        <svg>
+                          <use xlink:href="img/sprites/sprite.svg#header_position"></use>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="map-address__item">
+                      <div class="map-address__subtitle">адрес:</div>
+                      <div class="map-address__text">Москва, улица Полбина, 33А</div>
+                    </div>
+                    <div class="map-address__item">
+                      <div class="map-address__subtitle">контакты:</div>
+                      <div class="map-address__text">8 800 000-00-00</div>
+                      <div class="map-address__text">info@fish.ru</div>
+                    </div>
+                  </div>
+                  <div class="l-map__address map-address" data-id="moscowStock2" data-coords="55.672935,37.725873" data-js="lMapAddress">
+                    <div class="map-address__header">
+                      <div class="map-address__title">Склад</div>
+                      <div class="map-address__icon"> 
+                        <svg>
+                          <use xlink:href="img/sprites/sprite.svg#header_position"></use>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="map-address__item">
+                      <div class="map-address__subtitle">адрес:</div>
+                      <div class="map-address__text">Москва, улица Полбина, 33А</div>
+                    </div>
+                    <div class="map-address__item">
+                      <div class="map-address__subtitle">контакты:</div>
+                      <div class="map-address__text">8 800 000-00-00</div>
+                      <div class="map-address__text">info@fish.ru</div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="layout__col">
-                <div class="phone-call">
-                  <div class="phone-call__title title__32"> ОСТАЛИСЬ ВОПРОСЫ? <br> НАПИШИТЕ ИЛИ ЗАКАЖИТЕ <br> ЗВОНОК
-                  </div><a class="btn--box phone-call__btn js-phone-call__btn" href="#">
-                    <div class="btn btn--circle">
-                      <svg>
-                        <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
-                      </svg>
+                <div class="l-map__addresses" data-js="lMapAddresses" data-city="kaliningrad">
+                  <div class="l-map__address map-address" data-id="kaliningradStock1" data-coords="54.732777, 20.595486" data-js="lMapAddress">
+                    <div class="map-address__header">
+                      <div class="map-address__title">Склад</div>
+                      <div class="map-address__icon"> 
+                        <svg>
+                          <use xlink:href="img/sprites/sprite.svg#header_position"></use>
+                        </svg>
+                      </div>
                     </div>
-                    <div class="btn--box__text">Заказать звонок</div></a>
+                    <div class="map-address__item">
+                      <div class="map-address__subtitle">адрес:</div>
+                      <div class="map-address__text">Мелиоративная улица, 5Б</div>
+                    </div>
+                    <div class="map-address__item">
+                      <div class="map-address__subtitle">контакты:</div>
+                      <div class="map-address__text">8 800 000-00-00</div>
+                      <div class="map-address__text">info@fish.ru</div>
+                    </div>
+                  </div>
+                  <div class="l-map__address map-address active" data-id="kaliningradOffice1" data-coords="54.668160, 20.427968" data-js="lMapAddress">
+                    <div class="map-address__header">
+                      <div class="map-address__title">Офис</div>
+                      <div class="map-address__icon"> 
+                        <svg>
+                          <use xlink:href="img/sprites/sprite.svg#header_position"></use>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="map-address__item">
+                      <div class="map-address__subtitle">адрес:</div>
+                      <div class="map-address__text">Тепличная улица, 1</div>
+                    </div>
+                    <div class="map-address__item">
+                      <div class="map-address__subtitle">контакты:</div>
+                      <div class="map-address__text">8 800 000-00-00</div>
+                      <div class="map-address__text">info@fish.ru                </div>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="contacts__map">
-          <div class="contacts__map__item" id="js-map" data-coords="55.672925, 37.625181"></div>
-        </div>
+                <div class="l-map__map" data-js="lMap"></div>
+              </section>
         <footer class="footer footer__animation footer__animation--personally js-footer__animation">
           <div class="footer__logo"> <img src="img/logo__white.png" alt=""></div>
           <div class="footer__title title__170"> Понимаем море, слышим людей

@@ -55,7 +55,8 @@
         height: 100%;
         overflow-y: auto;
         scrollbar-width: thin;
-        scrollbar-color: #F3F4F5 rgba(0, 0, 0, 0);
+        scrollbar-color: #99c4d3 rgba(0, 0, 0, 0);
+        margin-left: auto;
         &::-webkit-scrollbar {
             height: 2px;
             width: 2px;
@@ -64,7 +65,7 @@
             background: rgba(0, 0, 0, 0);
         }
         &::-webkit-scrollbar-thumb {
-            background-color: #F3F4F5;
+            background-color: #99c4d3;
             border-radius: 10px;
             border: none;
         }

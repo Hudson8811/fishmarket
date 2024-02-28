@@ -1,8 +1,6 @@
 "use strict";
 
 import { paths } from "../gulpfile.babel";
-//import webpack from "webpack";
-//import webpackStream from "webpack-stream";
 import gulp from "gulp";
 import gulpif from "gulp-if";
 import rename from "gulp-rename";
@@ -20,7 +18,6 @@ webpackConfig.devtool = production ? false : "source-map";
 
 gulp.task("scripts", () => {
     return gulp.src(paths.scripts.src)
-        //.pipe(webpackStream(webpackConfig), webpack)
         .pipe(fileinclude({
             prefix: '@@',
             basepath: '@file'

@@ -8,6 +8,7 @@ block content
 	//-mixins
 	include ../../blocks/modules/l-intro/l-intro.pug
 	include ../../blocks/modules/l-walk/l-walk.pug
+	include ../../blocks/modules/l-map/l-map.pug
 
 	.scroll-page
 		+l-intro({
@@ -33,7 +34,7 @@ block content
 			image: 'img/logistics_intro.png'
 		})
 		+l-walk()
-		include ../../blocks/modules/l-map/l-map.pug
+		+l-map()
 		include ../../blocks/modules/l-call-action/l-call-action.pug
 
 		include ../../blocks/modules/footer/footer

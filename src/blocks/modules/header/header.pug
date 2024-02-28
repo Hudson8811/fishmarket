@@ -208,10 +208,10 @@ include ../../../blocks/modules/preloader/preloader
         .contacts__form__input-block__name Комментарий
         .contacts__form__input-block__error
       .contacts__form__personal-data.contacts__form__input-block.error 
-        <div class="checkbox">
-          <input class="custom-checkbox" type="checkbox" id="personal-data " name="personal-data " value="indigo">
-          <label for="personal-data ">Согласие на обработку персональных данных </label>
-        </div>
+        .checkbox
+          label
+            input.custom-checkbox(type="checkbox" name="personal-data" value="indigo")
+            != "Согласие на обработку персональных данных"
         .contacts__form__input-block__error обязательно нужно согласиться
     .mob-menu__question__bottom
       .mob-menu__question__bottom__text Отправить
@@ -247,18 +247,16 @@ include ../../../blocks/modules/preloader/preloader
         .contacts__form__input-block__name Комментарий / Сопроводительное письмо
         .contacts__form__input-block__error
       .contacts__form__input-block
-        <div class="input-file-row">
-          <label class="input-file">
-            <input type="file" name="file[]" multiple>		
-            <span>Выберите файл</span>
-          </label>
-          <div class="input-file-list"></div>  
-        </div>  
+        .input-file-row
+          label.input-file
+            input(type="file" name="file[]" multiple)
+            span Выберите файл
+          .input-file-list  
       .contacts__form__personal-data.contacts__form__input-block.error 
-        <div class="checkbox">
-          <input class="custom-checkbox" type="checkbox" id="personal-data " name="personal-data " value="indigo">
-          <label for="personal-data ">Согласие на обработку персональных данных </label>
-        </div>
+        .checkbox
+          label
+            input.custom-checkbox(type="checkbox" name="personal-data" value="indigo")
+            != "Согласие на обработку персональных данных"
         .contacts__form__input-block__error обязательно нужно согласиться
     .mob-menu__question__bottom
       .mob-menu__question__bottom__text Отправить
@@ -296,18 +294,16 @@ include ../../../blocks/modules/preloader/preloader
         .contacts__form__input-block__name Комментарий / Сопроводительное письмо
         .contacts__form__input-block__error
       .contacts__form__input-block
-        <div class="input-file-row">
-          <label class="input-file">
-            <input type="file" name="file[]" multiple>		
-            <span>Выберите файл</span>
-          </label>
-          <div class="input-file-list"></div>  
-        </div>  
+        .input-file-row
+          label.input-file
+            input(type="file" name="file[]" multiple)
+            span Выберите файл
+          .input-file-list
       .contacts__form__personal-data.contacts__form__input-block.error 
-        <div class="checkbox">
-          <input class="custom-checkbox" type="checkbox" id="personal-data " name="personal-data " value="indigo">
-          <label for="personal-data ">Согласие на обработку персональных данных </label>
-        </div>
+        .checkbox
+          label
+            input.custom-checkbox(type="checkbox" name="personal-data " value="indigo")
+            != "Согласие на обработку персональных данных"
         .contacts__form__input-block__error обязательно нужно согласиться
     .mob-menu__question__bottom
       .mob-menu__question__bottom__text Отправить

@@ -56,11 +56,6 @@ function initScrollAnimation(){
 
 		//реинциализация анимации при изменнии размеров окна
 		$(window).on('resize',function (){
-			//скролл в начало страницы / если есть анимация без fromTo
-			/*window.scrollTo({
-				top: 0,
-				behavior: "instant"
-			});*/
 
 			let wwidth = $(window).width();
 			if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) && wwidth < animationBreakpoint){

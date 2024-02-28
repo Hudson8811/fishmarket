@@ -1,0 +1,15 @@
+extends ../layouts/default
+include ../helpers/mixins
+
+block variables
+	- const title = "Contacts Page"
+
+block content
+	//-mixins
+	include ../../blocks/modules/l-map/l-map.pug
+
+	.scroll-page
+		+l-map()
+
+		include ../../blocks/modules/footer/footer
+
