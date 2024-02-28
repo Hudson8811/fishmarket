@@ -13,9 +13,6 @@
 		left: auto;
 		margin-bottom: vw2(436);
 	}
-	&__section {       
-	
-	}
 	&__title {
 		margin-bottom: vw(5);
 		margin-left: vw(-50);
@@ -39,14 +36,14 @@
 					width: 100%;
 					.swiper-buttons {
 						position: absolute;
+						top: calc(50% - vw(47));
+						left: vw(295);
 						display: flex;
 						justify-content: space-between;
 						align-items: center;
 						height: vw(100);
 						width: 100%;
 						max-width: vw(1348);
-						top: calc(50% - vw(47));
-						left: vw(295);
 						overflow: visible;
 						z-index: 15;
 						@include max(sm) {
@@ -118,7 +115,7 @@
 				background: #FFF;
 				padding: vw(15) vw(24) vw(24) vw(24);
 				border-right: 4px solid #D8D5D2;
-        border-bottom: 4px solid #D8D5D2;
+        		border-bottom: 4px solid #D8D5D2;
 				@include max(sm) {
 					margin-bottom: 0;
 					background: #FFF;

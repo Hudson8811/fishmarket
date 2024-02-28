@@ -39,14 +39,6 @@ a, button {
     cursor: pointer;
     text-decoration: none;
 }
-// .site-main {
-// 	flex: 1 0 auto;
-//     overflow: hidden;
-//     background: #07171D;
-//     width: 100%;
-//     @include max(mdHeader) {
-//     }
-// }
 .site-footer{
 	flex: 0 0 auto;
 }
@@ -61,7 +53,6 @@ a, button {
 	width: vw(1920);
 	max-width: calc(100% - vw(50));
 	margin: 0 auto;
-    position: relative;
     @include max(md) {
         width: 100%;
         max-width: calc(100% - vw2(40));
@@ -90,7 +81,7 @@ a, button {
     cursor: pointer;
     background: $blue;
     border-radius: 0;
-    transition: all 0.3s;
+    transition: all $tr-time;
     @include max(md) {
         max-width: 100%;
         min-width: vw2(300);
@@ -98,9 +89,7 @@ a, button {
         padding-left: vw2(20);
         padding-right: vw2(20);
         font-size: vw2(14);
-        font-style: normal;
         font-weight: 400;
-        line-height: normal;
     }
     p {
         @include max(sm) {
@@ -121,7 +110,7 @@ a, button {
         min-width: vw(59);
         min-height: vw(59);
         border-radius: 50%;
-        transition: all 0.3s;
+        transition: all $tr-time;
         padding: 0;
         @include max(md) {
             width: vw2(50);
@@ -144,7 +133,7 @@ a, button {
         }
         &:hover {
             background: $blueLight;
-            transition: all 0.3s;
+            transition: all $tr-time;
             svg use {
                 stroke: $white;
             }
@@ -156,7 +145,7 @@ a, button {
             }
             &:hover {
                 background: $black;
-                transition: all 0.3s;
+                transition: all $tr-time;
                 svg use {
                     stroke: $white;
                 }
@@ -172,7 +161,7 @@ a, button {
             }
             &:hover {
                 background: $black;
-                transition: all 0.3s;
+                transition: all $tr-time;
             }
         }
         &__black {
@@ -182,7 +171,7 @@ a, button {
             }
             &:hover {
                 background: $blueLight;
-                transition: all 0.3s;
+                transition: all $tr-time;
             }
         }
     }
@@ -197,7 +186,7 @@ a, button {
         padding: vw(20);
         background: $blueLight;
         text-decoration: none;
-        transition: all 0.3s;
+        transition: all $tr-time;
         @include max(md) {
             width: vw2(260);
             height: vw2(140);
@@ -206,13 +195,13 @@ a, button {
 
         &:hover {
             background: #fff;
-            transition: all 0.3s;
+            transition: all $tr-time;
             .btn--box__text {
-                transition: all 0.3s;
+                transition: all $tr-time;
                 color: $blueLight;
             }
             .btn{
-                transition: all 0.3s;
+                transition: all $tr-time;
                 background: $blueLight;
             }
             svg use {
@@ -222,7 +211,7 @@ a, button {
         &__text {
             position: relative;
             display: inline-block;
-            transition: all 0.3s;
+            transition: all $tr-time;
             color: #FFF;
             font-size: vw(14);
             font-style: normal;
@@ -263,11 +252,11 @@ a, button {
     font-size: vw(170);
     font-style: normal;
     font-weight: 500;
-    line-height: 97.228%; /* 165.923px */
+    line-height: 97.228%;
     text-transform: uppercase; 
     @include max(md) {
         font-size: vw2(95);
-        line-height: 1.2;  /* 98.163% */
+        line-height: 1.2;
     }   
 }
 .title__82 {
@@ -275,13 +264,11 @@ a, button {
     font-size: vw(82);
     font-style: normal;
     font-weight: 500;
-    line-height: 97.228%; /* 79.796px */
+    line-height: 97.228%;
     text-transform: uppercase;
     @include max(md) {
         font-size: vw2(50);
-        font-style: normal;
-        font-weight: 500;
-        line-height: 1.2;  /* 98.163% */
+        line-height: 1.2;
     } 
 }
 .title__52 {
@@ -289,14 +276,12 @@ a, button {
     font-size: vw(52);
     font-style: normal;
     font-weight: 500;
-    line-height: 97.228%; /* 50.559px */
+    line-height: 97.228%;
     text-transform: uppercase;
     
     @include max(md) {
         font-size: vw2(32);
-        font-style: normal;
-        font-weight: 500;
-        line-height: 1.2;  /* 98.163% */
+        line-height: 1.2;
     } 
 }
 .title__32 {
@@ -307,7 +292,7 @@ a, button {
     line-height: 100%;
     @include max(md) {
         font-size: vw2(32);
-        line-height: 1.2;  /* 98.163% */
+        line-height: 1.2;
     }
 }
 .title__24 {
@@ -318,8 +303,7 @@ a, button {
     line-height: 97.228%;
     @include max(md) {
         font-size: vw2(24);
-        font-style: normal;
-        line-height: 1.2;  /* 98.163% */
+        line-height: 1.2;
     }
 }
 .text__18 {
@@ -330,8 +314,7 @@ a, button {
     line-height: 140.625%;
     @include max(md) {
         font-size: vw2(24);
-        font-style: normal;
-        line-height: 1.2;  /* 98.163% */
+        line-height: 1.2;
     }
 }
 .text__12 {
@@ -342,7 +325,6 @@ a, button {
     line-height: normal;
     @include max(md) {
         font-size: vw2(24);
-        font-style: normal;
         line-height: 1.2;
     }
 }
@@ -360,7 +342,6 @@ a, button {
     overflow: visible;
     z-index: 15;
     @include max(md) {
-        display: flex;
         left: auto;
         right: vw2(20);
         bottom: vw2(20);
@@ -379,7 +360,7 @@ a, button {
         min-width: vw(59);
         min-height: vw(59);
         top: 0;
-        transition: all 0.3s;
+        transition: all $tr-time;
         @include max(md) {
             width: vw2(50);
             height: vw2(50);
@@ -402,7 +383,7 @@ a, button {
         }
         &:hover {
             background: $blueLight;
-            transition: all 0.3s;
+            transition: all $tr-time;
             svg {
                 use {
                     stroke: $white;
@@ -411,11 +392,6 @@ a, button {
         }
         &.swiper-button-disabled {
             opacity: 0.2;
-        }
-        &:hover {
-            // background: rgba(2, 1, 1, 0.7);
-            // -webkit-backdrop-filter: blur(5px);
-            // backdrop-filter: blur(5px);
         }
         &::after {
             font-size: 0;
@@ -452,7 +428,6 @@ a, button {
         padding-top: vw(20);
         flex-flow: column nowrap;
         &:nth-child(1) {
-            // width: 100%;
             flex:1 0 66.666%;
             max-width: 66.666%;
 
@@ -465,7 +440,6 @@ a, button {
             }
         }
         &:nth-child(2) {
-            // width: 100%;
             flex: 1 0 33.333333%;
             max-width: 33.333333%;
             @include max(md) {
@@ -491,7 +465,6 @@ a, button {
             display: flex;
     
             &:nth-child(1) {
-                // width: 100%;
                 flex:1 0 33.333333%;
                 max-width: 33.333333%;
                 @include max(md) {
@@ -501,7 +474,6 @@ a, button {
                 }  
             }
             &:nth-child(2) {
-                // width: 100%;
                 flex:1 0 33.333333%;
                 max-width: 33.333333%;
                 @include max(md) {
@@ -511,15 +483,14 @@ a, button {
                 }  
             }
             &:nth-child(3) {
-                // width: 100%;
                 flex:1 0 33.333333%;
                 max-width: 33.333333%;
                 @include max(md) {
                     flex:1 0 100%;
                     max-width: 100%;
                     border-right: none;
-                    padding-right: vw(0);
-                    padding-left: vw(0);
+                    padding-right: 0;
+                    padding-left: 0;
                 }  
             }
         }
@@ -534,7 +505,6 @@ a, button {
             position: relative;
             display: flex;
             &:nth-child(1) {
-                // width: 100%;
                 flex:1 0 33.333333%;
                 max-width: 33.333333%;
                 border-right: 1px solid #EFEFEF;
@@ -544,12 +514,11 @@ a, button {
                     flex:1 0 100%;
                     max-width: 100%;
                     border-right: none;
-                    padding-right: vw(0);
-                    padding-left: vw(0);
+                    padding-right: 0;
+                    padding-left: 0;
                 }  
             }
             &:nth-child(2) {
-                // width: 100%;
                 flex:1 0 66.666%;
                 max-width: 66.666%;
                 padding-right: vw(30);
@@ -557,8 +526,8 @@ a, button {
                     flex:1 0 100%;
                     max-width: 100%;
                     border-right: none;
-                    padding-right: vw(0);
-                    padding-left: vw(0);
+                    padding-right: 0;
+                    padding-left: 0;
                 }  
             }
         }
@@ -580,11 +549,8 @@ a, button {
                 padding-right: vw(30);
                 padding-left: vw(30);
                 @include max(md) {
-                    flex:1 0 100%;
-                    max-width: 100%;
-                    border-right: none;
-                    padding-right: vw(0);
-                    padding-left: vw(0);
+                    padding-right: 0;
+                    padding-left: 0;
                 } 
             }
         }        
@@ -601,82 +567,6 @@ a, button {
 	}
 }
 
-
-.services {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-flow: row wrap;
-    @include max(sm) {
-        width: 100vw;
-    }
-    &__section {
-        position: relative;
-        display: flex;
-        flex-flow: column nowrap;
-        justify-content: flex-start;
-        align-items: center;
-        margin-bottom: vw(306);
-        @include max(sm) {
-            width: 100vw;
-        }
-    }
-    &__title {
-        margin-bottom: vw(20);
-        @include max(sm) {
-            margin-bottom: vw2(15);
-            text-align: center;
-
-        }
-    }
-    &__subtitle {
-        margin-bottom: vw(120);
-        @include max(sm) {
-            margin-bottom: vw2(40);
-            text-align: center;
-            font-size: vw2(16);
-            font-style: normal;
-            font-weight: 300;
-            line-height: normal;
-            
-        }
-    }
-    &__astronaut {
-        position: absolute;
-        top: vw(-70);
-        right: vw(8);
-        width: vw(300);
-        z-index: 100;
-        img {
-            position: relative;
-            display: block;
-            width: 100%;
-            height: 100%;
-            object-position: center center;
-            object-fit: contain;
-        }
-    }
-    &__text--bottom {
-        color: #555;
-        text-align: center;
-        font-size: vw(14);
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
-        max-width: vw(1014);
-        margin-top: vw(24);
-        @include max(sm) {
-            max-width: 100%;
-            margin-top: vw2(24);
-            font-size: vw2(14);
-            padding-left: vw2(10);
-            padding-right: vw2(10);
-        }
-
-    }
-
-}
 .start {
     position: relative;
     display: flex;
@@ -713,9 +603,6 @@ a, button {
         overflow: hidden;
         width: 100%;
         height: 100%;
-        @include max(md) {
-            display: flex;
-        }
         .swiper-buttons {
             @include max(md) {
                 bottom: vw2(39);
@@ -815,18 +702,15 @@ a, button {
     
 }
 
-
 .hear {
     &__section {
         position: absolute;
         top: 0;
-        height: auto;
         z-index: 20;
         overflow: hidden;
-       
         width: 100vw;
         height: 100vh;
-        background: #07171D;
+        background: $fontBlack;
         @include max(md) {
             position: relative;
             display: flex;
@@ -841,7 +725,6 @@ a, button {
     }
     &__title {
         position: absolute;
-        // top: vw(331);
         left: 50vw;
         white-space: nowrap;
         z-index: 10;
@@ -910,7 +793,7 @@ a, button {
 .news {
     &__title {
       position: relative;
-      color: #07171D;
+      color: $fontBlack;
       margin-bottom: vw(45);
       width: 110%;
       span {
@@ -933,9 +816,7 @@ a, button {
         flex-flow: column nowrap ;
         @include max(md) {
             position: relative;
-            height: auto;
             min-height: auto;
-            // padding-top: vw2(40);
             padding-bottom: vw2(40);
         }  
         .layout--trio__news {
@@ -982,7 +863,6 @@ a, button {
         @include max(md) {
             position: relative;
             bottom: auto;
-            top: auto;
             left:auto;
         } 
         &--start {
@@ -992,7 +872,6 @@ a, button {
         }
         &--finish {
             display: none;
-            // bottom: 1.71875vw;
             left: vw(0);
             top: 0;
             &.active {
@@ -1068,7 +947,7 @@ a, button {
         align-items: flex-start;
         flex-flow: column nowrap;
         border: 1px solid rgba(255, 255, 255, 0.11);
-        background: #07171D;
+        background: $fontBlack;
         padding: vw(30) vw(40);
         @include max(md) {
             justify-content: flex-start;
@@ -1081,11 +960,11 @@ a, button {
             font-size: vw(112);
             font-style: normal;
             font-weight: 500;
-            line-height: 97.228%; /* 109.275px */
+            line-height: 97.228%;
             text-transform: uppercase; 
             @include max(md) {
                 font-size: vw2(95);
-                line-height: 1.2;  /* 98.163% */
+                line-height: 1.2;
                 margin-bottom: vw2(40);
             }              
         }
@@ -1146,7 +1025,7 @@ a, button {
         display: inline-block;
         width: 100%;
         max-width: vw(250);
-        color: #07171D;
+        color: $fontBlack;
         @include max(md) {
             max-width: vw2(250);
             margin-bottom: vw2(30);
@@ -1169,7 +1048,7 @@ a, button {
             padding-top: vw2(90);
         }
         &__title {
-            color: #07171D;
+            color: $fontBlack;
             margin-bottom: vw(47);
             @include max(md) {
                 margin-bottom: vw2(40);
@@ -1214,12 +1093,12 @@ a, button {
         align-items: flex-start;
         flex-flow: column nowrap;
         &__type {
-            color: #07171D;
+            color: $fontBlack;
             text-transform: uppercase;
             opacity: 0.2;
         }
         &__name {
-            color: #07171D;
+            color: $fontBlack;
         }
     }
     &__size {
@@ -1229,125 +1108,15 @@ a, button {
         align-items: flex-start;
         flex-flow: column nowrap;
         &__type {
-            color: #07171D;
+            color: $fontBlack;
             text-transform: uppercase;
             opacity: 0.2;
         }
         &__name {
-            color: #07171D;
+            color: $fontBlack;
         }
     }
 }
-// .questions {
-//     position: relative;
-//     display: flex;
-//     justify-content: space-between;
-//     align-items: center;
-//     width: 100%;
-//     border: 1px solid rgba(0, 0, 0, 0.2);
-//     padding: vw(35) vw(30);
-//     min-height: vw(127);
-//     margin-bottom: vw(23);
-//     &:last-child {
-//         margin-bottom: 0;
-//     }
-//     &__title {
-//         position: relative;
-//         display: inline-block;
-//         width: 100%;
-//         max-width: vw(250);
-//         color: #07171D;
-//         font-size: vw(24);
-//         font-style: normal;
-//         font-weight: 500;
-//         line-height: 97.228%;
-//     }
-//     &__section {
-//         position: relative;
-//         display: flex;
-//         justify-content: flex-start;
-//         align-items: flex-start;
-//         flex-flow: column nowrap;
-//         width: 100%;
-//         margin-top: vw(143);
-//         padding-bottom: vw(124);
-//         &__title {
-//             color: #07171D;
-//             margin-bottom: vw(47);
-//         }
-//         .layout {
-//             &__col {
-//                 flex-flow: column nowrap;
-//                 &:nth-child(1) {
-//                     @include max(md) {}
-//                 }
-//                 &:nth-child(2) {
-//                     padding-left: vw(25);
-//                     @include max(md) {}
-//                 }
-//             }
-//         }
-//     }
-//     &__col {
-//         position: relative;
-//         display: flex;
-//         justify-content: flex-start;
-//         align-items: center;
-//         &:nth-child(2) {
-//             width: 100%;
-//             max-width: vw(316);
-//             justify-content: space-between;
-//         }
-//     }
-//     &__file {
-//         position: relative;
-//         display: flex;
-//         justify-content: flex-start;
-//         align-items: flex-start;
-//         flex-flow: column nowrap;
-//         &__type {
-//             color: #07171D;
-//             font-size: 12px;
-//             font-style: normal;
-//             font-weight: 600;
-//             line-height: normal;
-//             text-transform: uppercase;
-//             opacity: 0.2;
-//         }
-//         &__name {
-//             color: #07171D;
-//             font-size: 12px;
-//             font-style: normal;
-//             font-weight: 600;
-//             line-height: normal;
-//             text-transform: uppercase;
-//         }
-//     }
-//     &__size {
-//         position: relative;
-//         display: flex;
-//         justify-content: flex-start;
-//         align-items: flex-start;
-//         flex-flow: column nowrap;
-//         &__type {
-//             color: #07171D;
-//             font-size: 12px;
-//             font-style: normal;
-//             font-weight: 600;
-//             line-height: normal;
-//             text-transform: uppercase;
-//             opacity: 0.2;
-//         }
-//         &__name {
-//             color: #07171D;
-//             font-size: 12px;
-//             font-style: normal;
-//             font-weight: 600;
-//             line-height: normal;
-//             text-transform: uppercase;
-//         }
-//     }
-// }
 .questions {
     position: relative;
     display: flex;
@@ -1366,7 +1135,7 @@ a, button {
             padding-bottom: vw2(60);
         }
         &__title {
-            color: #07171D;
+            color: $fontBlack;
             margin-bottom: vw(47);
             margin-top: vw(21);
             @include max(md) {
@@ -1376,7 +1145,7 @@ a, button {
         }
         &__subtitle {
             max-width: vw(593);
-            color: #07171D;
+            color: $fontBlack;
             margin-bottom: vw(47);
             @include max(md) {
                 margin-bottom: vw2(40);
@@ -1425,7 +1194,7 @@ a, button {
         &__intro {
             position: relative;
             cursor: pointer;
-            color: #07171D;
+            color: $fontBlack;
             font-size: vw(24);
             font-style: normal;
             font-weight: 500;
@@ -1434,18 +1203,13 @@ a, button {
             justify-content: space-between;
             align-items: center;
             border-radius: 0;
-            //padding-bottom: vw(65);
             border-top: 1px solid rgba(255, 255, 255, 0.2);
-    
-            @include max(md) {
-
-            }
     
             p {
                 position: relative;
                 display: inline-block;
                 width: 100%;
-                color: #07171D;
+                color: $fontBlack;
     
                 @include max(md) {
                     max-width: vw2(350);
@@ -1463,7 +1227,7 @@ a, button {
                 min-width: vw(59);
                 min-height: vw(59);
                 border-radius: 50%;
-                transition: all 0.3s;
+                transition: all $tr-time;
                 padding: 0;
                 @include max(md) {
                     width: vw2(50);
@@ -1493,7 +1257,7 @@ a, button {
                 &:hover {
                     background: $black;
                     color: #fff;
-                    transition: background .3s ease;
+                    transition: background $tr-time ease;
     
                     svg {
                         fill: #fff;
@@ -1731,6 +1495,7 @@ a, button {
         &__title {
             margin-bottom: vw(7);
             font-weight: 700;
+            text-transform: uppercase;
         }
         &__text {
             font-weight: 400;
@@ -1746,6 +1511,7 @@ a, button {
         &__title {
             margin-bottom: vw(7);
             font-weight: 700;
+            text-transform: uppercase;
         }
         &__text {
             font-weight: 400;
@@ -1758,11 +1524,7 @@ a, button {
         align-items: flex-start;
         width: 100%;
         flex-flow: column nowrap;
-        margin-bottom: vw(40);
-        @include max(md) {
-            margin-bottom: vw2(40);
-        }
-        &__title {
+        h4 {
             margin-bottom: 15px;
             @include max(md) {
                 margin-bottom: vw2(20);
@@ -1776,6 +1538,7 @@ a, button {
             padding-right: vw(20);
             padding-top: 0;
             margin-top: 0;
+            margin-bottom: vw(40);
             font-size: vw(18);
             font-style: normal;
             font-weight: 400;
@@ -1783,10 +1546,10 @@ a, button {
             line-height: 140.625%;
             @include max(md) {
                 font-size: vw2(24);
-                font-style: normal;
-                line-height: 1.2;  /* 98.163% */
+                line-height: 1.2;
                 padding-left: vw2(25);
                 padding-right: vw2(10);
+                margin-bottom: vw2(40);
             } 
             li {
                 position: relative;
@@ -1799,8 +1562,7 @@ a, button {
                 margin-bottom: vw(7);
                 @include max(md) {
                     font-size: vw2(24);
-                    font-style: normal;
-                    line-height: 1.2;  /* 98.163% */
+                    line-height: 1.2;
                     margin-bottom: vw2(15);
                 }
                 &::before {
@@ -1894,14 +1656,14 @@ a, button {
             display: flex;
             justify-content: flex-start;
             align-items: center;
-            transition: all .3s;
+            transition: all $tr-time;
             text-decoration: none;
             margin-bottom: vw(10);
             &:last-child {
                 margin-bottom: 0;
             }
             &:hover {
-                transition: all .3s;
+                transition: all $tr-time;
                 color: $blueHover; 
             }
         }    
@@ -1936,7 +1698,7 @@ a, button {
     flex-flow: column nowrap;
     width: 100%;
     &__title {
-        color: #07171D;
+        color: $fontBlack;
         font-weight: 500;
         margin-bottom: vw(51);
     }
@@ -1979,12 +1741,11 @@ a, button {
      }
     &__title {
         position: absolute;
-
         color: $black;
         font-size: vw(32);
         font-style: normal;
         font-weight: 500;
-        line-height: vw(36); /* 112.5% */
+        line-height: vw(36);
         letter-spacing: vw(-1.3);
         max-width: vw(408);
         span {
@@ -1993,7 +1754,7 @@ a, button {
         @include max(md) {
             font-size: vw2(32);
             font-style: normal;
-            line-height: 1.2; /* 98.163% */
+            line-height: 1.2;
             letter-spacing: vw2(-1.3);
             max-width: 70%;
         }       
@@ -2082,7 +1843,7 @@ a, button {
           padding-left: vw(28);
           padding-top: 0;
           margin-top: 0;
-          color: #07171D;
+          color: $fontBlack;
           font-size: vw(18);
           font-style: normal;
           font-weight: 400;
@@ -2092,12 +1853,12 @@ a, button {
             padding-left: vw2(20);
             font-size: vw2(24);
             font-style: normal;
-            line-height: 1.2;  /* 98.163% */
+            line-height: 1.2;
         }
           li {
             position: relative;
             list-style-type: none;
-            color: #07171D;
+            color: $fontBlack;
             font-size: vw(18);
             font-style: normal;
             font-weight: 400;
@@ -2107,9 +1868,8 @@ a, button {
             @include max(md) {
                 margin-bottom: vw2(15);
                 font-size: vw2(24);
-                font-style: normal;
                 max-width: 90%;
-                line-height: 1.2;  /* 98.163% */
+                line-height: 1.2;
             }
             &:last-child {
               margin-bottom: 0;
@@ -2127,8 +1887,6 @@ a, button {
               @include max(md) {
                 height: vw2(11);
                 width: vw2(11);
-                border-radius: 50%;
-                background-color: $blueLight;
                 left: vw2(-18);
                 top: vw2(8);
             }
@@ -2138,7 +1896,6 @@ a, button {
     }
     &--full-picture {
         padding: 0;
-        // border: 1px solid #DADADA;
         @include max(md) {
             margin-bottom: vw2(20);
         }
@@ -2204,7 +1961,7 @@ a, button {
             }
             .btn--circle__black {
                 background: $blueLight;
-                transition: all 0.3s;
+                transition: all $tr-time;
             }
         }
     }
@@ -2212,7 +1969,7 @@ a, button {
         padding: 0;
         padding-bottom: vw(126);
         min-height: vw(640);
-        border: 1px solid #DADADA;
+        border: 1px solid $greyLight;
         border-top: none;
         @include max(md) {
             margin-bottom: vw2(20);
@@ -2228,7 +1985,7 @@ a, button {
                 text-transform: uppercase;
                 line-height: 0.8;
                 margin-bottom: vw(38);
-                color: #07171D;
+                color: $fontBlack;
                 padding-left: vw(40);
                 padding-right: vw(40);
                 @include max(md) {
@@ -2243,7 +2000,7 @@ a, button {
             &__text {
                 position: relative;
                 max-width: vw(367);
-                color: #07171D;
+                color: $fontBlack;
                 padding-left: vw(40);
             }
             &__picture {
@@ -2292,7 +2049,7 @@ a, button {
             }
             .btn--circle__black {
                 background: $blueLight;
-                transition: all 0.3s;
+                transition: all $tr-time;
             }
         }        
     }
@@ -2303,62 +2060,7 @@ a, button {
         transition: all 0.5s;
     }
 }
-.form {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-flow: column nowrap;
-    min-height: vw(2000);
-    padding-top: vw(18);
-    @include max(sm) {
-        min-height: vw2(1051);
-        padding-top: 0;
-    }
 
-    &__section {
-        position: relative;
-        display: flex;
-        flex-flow: column nowrap;
-        justify-content: flex-start;
-        align-items: center;
-        width: 100%;
-        background-image: url(../../img/form__section__bg.png);
-        background-position: top center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        min-height: vw(2000);
-        margin-top: vw(-250);
-        padding-top: vw(500);
-        @include max(sm) {
-            margin-top: vw2(-170);
-            padding-top: vw2(270);
-            min-height: vw2(1051);
-            padding-left: vw2(10);
-            padding-right: vw2(10);
-            background-image: url(../../img/form__section__bg--mob.png); 
-        }
-    }
-    &__title {
-        color: #020101;
-        margin-bottom: vw(40);
-        @include max(sm) {
-            margin-bottom: vw2(20);
-        }
-    }  
-    &__text {
-        color: #020101;
-        margin-bottom: vw(40);
-        max-width: vw(710);
-        text-align: center;
-        @include max(sm) {
-            max-width: 100%;
-            margin-bottom: vw2(20);
-        }
-    } 
-}
 .error-page {
     position: relative;
     display: flex;
@@ -2399,7 +2101,7 @@ a, button {
         font-size: vw(420);
         font-style: normal;
         font-weight: 700;
-        line-height: 97.228%; /* 408.354px */
+        line-height: 97.228%;
         text-transform: uppercase;
         @include max(md) {
             font-size: vw2(220);
@@ -2434,7 +2136,7 @@ a, button {
         flex-flow: column nowrap;
         margin-bottom: vw(21);
         @include max(md) {
-            margin-bottom: 20px;
+            margin-bottom: vw(20);
         }
         &__name{
             position: absolute;
@@ -2443,15 +2145,9 @@ a, button {
             font-size: vw(18);
             font-style: normal;
             font-weight: 400;
-            line-height: 140.625%;
             line-height: normal;
-            transition: all 0.3s;
+            transition: all $tr-time;
             pointer-events: none;
-            @include max(md) {
-                // font-size: 20px;
-                // font-style: normal;
-                // line-height: 1.2; /* 98.163% */
-            }
         }
         &__error {
             position: absolute;
@@ -2463,14 +2159,7 @@ a, button {
             font-size: vw(14);
             font-style: normal;
             font-weight: 400;
-            line-height: normal;
-            @include max(sm) {
-                // bottom: -23px;
-                // font-size: 12px;
-                // bottom: -18px;
-                // font-style: normal;
-                // line-height: 1.2; /* 98.163% */
-            }       
+            line-height: normal;      
         }
         &.error{
             input, textarea {
@@ -2488,18 +2177,12 @@ a, button {
                     height: vw(10);
                     background: $red;
                     border-radius: 50%;
-                    @include max(sm) {
-                        // top:-48px;
-                        // content: '';
-                        // width: 18px;
-                        // height: 18px;                    
-                    }
                 }
             }
         }
     }
     &__input {
-        color: #07171D;
+        color: $fontBlack;
         font-size: vw(18);
         font-style: normal;
         font-weight: 400;
@@ -2513,18 +2196,18 @@ a, button {
         cursor: pointer;
         border: 0px solid rgba(255, 255, 255, 1);
         border-bottom:1px solid rgba(42, 42, 42, 0.2);
-        transition: all 0.3s;
+        transition: all $tr-time;
         &:hover {        
             border-bottom:1px solid rgba(0, 0, 0, 0.2);
-            transition: all 0.3s;
+            transition: all $tr-time;
         }
         &:focus { 
             border-bottom: 1px solid $blue;
-            transition: all 0.3s;
+            transition: all $tr-time;
         }
         &:active { 
             border-bottom: 1px solid $blue;
-            transition: all 0.3s;
+            transition: all $tr-time;
         }
         &:focus-visible {
             outline: none;
@@ -2532,17 +2215,17 @@ a, button {
         &:focus + .contacts__form__input-block__name { 
             top: 0;
             opacity: 0.2;
-            transition: all 0.3s;
+            transition: all $tr-time;
         }
         &.value + .contacts__form__input-block__name { 
             top: 0;
             opacity: 0.2;
-            transition: all 0.3s;
+            transition: all $tr-time;
         }
         &:active + .contacts__form__input-block__name { 
             top: 0;
             opacity: 0.2;
-            transition: all 0.3s;
+            transition: all $tr-time;
         }
 
 
@@ -2590,7 +2273,7 @@ a, button {
             font-size: vw(18);
             font-style: normal;
             font-weight: 400;
-            color: #07171D;
+            color: $fontBlack;
             line-height: 140.625%;
             margin-bottom: vw(15);
         }
@@ -2648,7 +2331,7 @@ a, button {
 			display: none;
 		}
 		&::before{
-            transition: all .3s;
+            transition: all $tr-time;
 			content:'';
 			transform: rotate(0deg);
 			width: vw(8);
@@ -2661,21 +2344,18 @@ a, button {
             }		
         }
 	}
-	// .select2-container--default .select2-selection--single {
-    //    position: relative;
-	// }
 	.select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow {
 		&::before{
 			content:'';
 			transform: rotate(180deg);
-            transition: all .3s;
+            transition: all $tr-time;
 		}
 	}
 	.select2-selection__clear {
 		display: none;
 	}
 	.select2-container--default .select2-selection__placeholder, .select2-selection__rendered {
-        color: #07171D;
+        color: $fontBlack;
         font-size: vw(18);
         font-style: normal;
         font-weight: 400;
@@ -2687,11 +2367,11 @@ a, button {
         @include max(md) {
             font-size: vw2(24);
             font-style: normal;
-            line-height: 1.2;  /* 98.163% */
+            line-height: 1.2;
         }
 	}
     .select2-container--default .select2-selection--single {
-        color: #07171D;
+        color: $fontBlack;
         font-size: vw(18);
         font-style: normal;
         font-weight: 400;
@@ -2701,24 +2381,21 @@ a, button {
         border-radius: 0;
         padding-top: vw(20);
         width: 100%;
-        border: none;
         background: transparent;
         cursor: pointer;
         border: 0px solid rgba(255, 255, 255, 1);
         border-bottom:1px solid rgba(42, 42, 42, 0.2);
-        transition: all 0.3s;
+        transition: all $tr-time;
         @include max(md) {
             min-height: vw2(50);
             padding-right: vw2(20);
-            border-radius: 0;
             padding-top: vw2(20);
             font-size: vw2(24);
-            font-style: normal;
-            line-height: 1.2;  /* 98.163% */
+            line-height: 1.2;
         }
         &:hover {        
             border-bottom:1px solid rgba(0, 0, 0, 0.2);;
-            transition: all 0.3s;
+            transition: all $tr-time;
         }  
     }
     &.no-border {
@@ -2731,7 +2408,7 @@ a, button {
             display: flex;
             align-items: center;
             justify-content: flex-start;
-            color: #07171D;
+            color: $fontBlack;
 			font-size: vw(14);
 			font-style: normal;
 			font-weight: 600;
@@ -2746,11 +2423,9 @@ a, button {
             border: none;
             background: transparent;
             cursor: pointer;
-            border: none;
             border-bottom: none;
             @include max(md) {
                 font-size: vw2(24);
-                font-style: normal;
                 line-height: 1.2;
             } 
         }
@@ -2758,7 +2433,7 @@ a, button {
             top: calc(50% + vw(2));
         }
         .select2-container--default .select2-selection--single .select2-selection__placeholder {
-            color: #07171D;
+            color: $fontBlack;
             font-size: vw(14);
             font-style: normal;
             font-weight: 600;
@@ -2766,9 +2441,8 @@ a, button {
             text-transform: uppercase;
             @include max(md) {
                 font-size: vw2(24);
-                font-style: normal;
                 line-height: 1.2;
-                margin-right: vw(20);
+                margin-right: vw2(20);
             } 
         }
     }
@@ -2783,9 +2457,6 @@ a, button {
         top: -2px;
         box-shadow: 2px 2px 20px 0px rgba(0, 0, 0, 0.07);
     }
-    .select2-results__options {
-
-    }
     .select2-results {
         &__options {
             max-height: 100%;
@@ -2794,7 +2465,7 @@ a, button {
         }
         &__option {
             
-            color: #07171D;
+            color: $fontBlack;
             font-size: vw(18);
             font-style: normal;
             font-weight: 400;
@@ -2805,13 +2476,12 @@ a, button {
             align-items: center;
             white-space: nowrap;
             width: 100%;
-            border: none;
             background: transparent;
             padding-left: vw(18);
             padding-right: vw(18);
             cursor: pointer;
             border: 0px solid rgba(255, 255, 255, 1);
-            transition: all 0.3s;
+            transition: all $tr-time;
             &:last-child {
                 border-bottom: none;
 
@@ -2821,17 +2491,16 @@ a, button {
                 padding-right: vw2(20);
                 font-size: vw2(24);
                 min-height: vw2(40);
-                font-style: normal;
-                line-height: 1.2;  /* 98.163% */
+                line-height: 1.2;
             }
             &:hover {  
-                transition: all 0.3s;      
+                transition: all $tr-time;      
                 color: $fontBlack;
                 background: rgba(217, 217, 217, 0.2);
             }
             &.select2-results__option--highlighted {
                 color: #2BAEDA; 
-                transition: all 0.3s;
+                transition: all $tr-time;
             }
         }
 
@@ -2845,9 +2514,9 @@ a, button {
 
 /* для элемента input c type="checkbox" */
 .custom-checkbox {
-position: absolute;
-z-index: -1;
-opacity: 0;
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
 }
 
 /* для элемента label, связанного с .custom-checkbox */
@@ -2856,8 +2525,7 @@ opacity: 0;
     display: inline-flex;
     align-items: center;
     user-select: none;
-    color: #07171D;
-    font-weight: 400;
+    color: $fontBlack;
     font-size: vw(18);
     font-style: normal;
     font-weight: 400;
@@ -2883,7 +2551,7 @@ opacity: 0;
 
 /* стили при наведении курсора на checkbox */
 .custom-checkbox:not(:disabled):not(:checked)+label:hover::before {
-border-color: $blueHover;
+    border-color: $blueHover;
 }
 
 /* стили для активного чекбокса (при нажатии на него) */
@@ -2894,24 +2562,24 @@ border-color: $blueHover;
 
 /* стили для чекбокса, находящегося в фокусе */
 .custom-checkbox:focus+label::before {
-// box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+    box-shadow: 0 0 0 0 rgba(0, 123, 255, 0);
 }
 
 /* стили для чекбокса, находящегося в фокусе и не находящегося в состоянии checked */
 .custom-checkbox:focus:not(:checked)+label::before {
-border-color: $blueHover;
+    border-color: $blueHover;
 }
 
 /* стили для чекбокса, находящегося в состоянии checked */
 .custom-checkbox:checked+label::before {
-border-color: rgba(0, 0, 0, 0.2);
-background-color: #fff;
-background-image: url(../img/custom-checkbox.png);
+    border-color: rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    background-image: url(../img/custom-checkbox.png);
 }
 
 /* стили для чекбокса, находящегося в состоянии disabled */
 .custom-checkbox:disabled+label::before {
-background-color: #e9ecef;
+    background-color: #e9ecef;
 }
 
 .input-file-row {
@@ -2921,7 +2589,7 @@ background-color: #e9ecef;
 .input-file {
     width: 100%;
     display: block;
-    color: #07171D;
+    color: $fontBlack;
     font-size: vw(18);
     font-style: normal;
     font-weight: 400;
@@ -2933,7 +2601,7 @@ background-color: #e9ecef;
 }
 .input-file span {
     display: block;
-    color: #07171D;
+    color: $fontBlack;
     font-size: vw(18);
     font-style: normal;
     min-height: vw(60);
@@ -2943,11 +2611,10 @@ background-color: #e9ecef;
     line-height: 140.625%;
     width: 100%;
     height: 100%;
-    border: none;
     background: transparent;
     border: 0px solid rgba(255, 255, 255, 1);
     border-bottom:1px solid rgba(42, 42, 42, 0.2);
-    transition: all 0.3s;
+    transition: all $tr-time;
 }
 .input-file input[type=file] {
 	position: absolute;
@@ -2961,23 +2628,23 @@ background-color: #e9ecef;
 /* Focus */
 .input-file input[type=file]:focus + span {
     border-bottom: 1px solid $blue;
-    transition: all 0.3s;
+    transition: all $tr-time;
 }
  
 /* Hover/Active */
 .input-file:hover span {
     border-bottom: 1px solid $blue;
-    transition: all 0.3s;
+    transition: all $tr-time;
 }
 .input-file:active span {
     border-bottom: 1px solid $blue;
-    transition: all 0.3s;
+    transition: all $tr-time;
 }
  
 /* Disabled */
 .input-file input[type=file]:disabled + span {
     border-bottom: 1px solid $red;
-    transition: all 0.3s;
+    transition: all $tr-time;
 }
  
 /* Список файлов */
@@ -2990,7 +2657,7 @@ background-color: #e9ecef;
     display: flex;
     justify-content: flex-start;
     align-items: stretch;
-    color: #07171D;
+    color: $fontBlack;
     font-size: vw(18);
     font-style: normal;
     font-weight: 400;
@@ -3001,7 +2668,7 @@ background-color: #e9ecef;
     display: flex;
     justify-content: flex-start;
     align-items: flex-end;
-    color: #07171D;
+    color: $fontBlack;
     font-size: vw(18);
     font-style: normal;
     font-weight: 400;
@@ -3045,9 +2712,9 @@ background-color: #e9ecef;
 /*Страница со списком страниц*/
 .pages-page {
     min-height: 100vh;
-    padding-top: vw(150);
+    padding: vw(120) 0 vw(60);
     @include max(md) {
-        padding-top: vw2(150); 
+        padding: vw2(120) 0 vw2(50);
     }
 
     &__title {
@@ -3061,10 +2728,12 @@ background-color: #e9ecef;
 
     &__links {
         display: grid;
-        justify-items: start;
+        grid-template-columns: 1fr 1fr;
+        grid-auto-rows: 2em;
         grid-gap: vw(20);
-        margin-top: vw(70);
+        margin-top: vw(60);
         @include max(md) {
+            grid-template-columns: 1fr;
             grid-gap: vw2(15);
             margin-top: vw2(40); 
         }

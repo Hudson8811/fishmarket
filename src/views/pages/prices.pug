@@ -2,7 +2,7 @@ extends ../layouts/default
 include ../helpers/mixins
 
 block variables
-	- const title = "Documents Page"
+	- const title = "Prices Page"
 
 block content
 	include ../../blocks/components/breadcrumbs/breadcrumbs.pug
@@ -18,7 +18,7 @@ block content
 							link: '#'
 						},
 						{
-							name: 'Документы',
+							name: 'Прайсы',
 							link: '#'
 						}
 					]
@@ -26,11 +26,11 @@ block content
 				.layout
 					.layout__col
 						.document__section__title.title__52
-							h1 Документы <br>для сделок
+							h1 Прайсы
 						.document 
 							.document__col
 								.document__title.title__24
-									!="Свидетельство <br> в налоговом органе"
+									!="Прайс каталог Москва 28.02.2024"
 							.document__col
 								.document__file
 									.document__file__type.text__12 тип файла
@@ -44,11 +44,11 @@ block content
 						.document 
 							.document__col
 								.document__title.title__24
-									!="Прайс"
+									!="Прайс каталог Калининград 28.02.2024"
 							.document__col
 								.document__file
 									.document__file__type.text__12 тип файла
-									.document__file__name.text__18 pdf 
+									.document__file__name.text__18 pdf
 								.document__size
 									.document__size__type.text__12 Размер
 									.document__size__name.text__18  1 mb
@@ -58,39 +58,11 @@ block content
 						.document 
 							.document__col
 								.document__title.title__24
-									!="Шаблон договора"
+									!="Прайс услуги 28.02.2024"
 							.document__col
 								.document__file
 									.document__file__type.text__12 тип файла
-									.document__file__name.text__18 doc
-								.document__size
-									.document__size__type.text__12 Размер
-									.document__size__name.text__18  1 mb
-								a(href="#" download).document__btn.btn.btn--circle.btn--circle__download
-									svg
-										use(xlink:href=`img/sprites/sprite.svg#arrow_btn`)
-						.document 
-							.document__col
-								.document__title.title__24
-									!="Устав компании <br>«Скай-Ф»"
-							.document__col
-								.document__file
-									.document__file__type.text__12 тип файла
-									.document__file__name.text__18 doc
-								.document__size
-									.document__size__type.text__12 Размер
-									.document__size__name.text__18  1 mb
-								a(href="#" download).document__btn.btn.btn--circle.btn--circle__download
-									svg
-										use(xlink:href=`img/sprites/sprite.svg#arrow_btn`)
-						.document 
-							.document__col
-								.document__title.title__24
-									!="Шаблон счета"
-							.document__col
-								.document__file
-									.document__file__type.text__12 тип файла
-									.document__file__name.text__18 jpg 
+									.document__file__name.text__18 pdf
 								.document__size
 									.document__size__type.text__12 Размер
 									.document__size__name.text__18  1 mb

@@ -102,7 +102,7 @@
 		width: 100%;
 		height: 100%;
 		overflow: hidden;
-		transition: all 0.3s;
+		transition: all $tr-time;
 		img {
 			position: relative;
 			display: block;
@@ -127,7 +127,7 @@
 		justify-content: flex-start;
 		align-items: flex-start;
 		width: vw(171);
-		transition: all 0.3s;
+		transition: all $tr-time;
 		@include max(md) {
 			width: vw2(150);
 		}

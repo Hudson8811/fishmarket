@@ -4,14 +4,14 @@
 	display: flex;
 	justify-content: center;
 	align-items: flex-start;
-	transition: 1s;
 	width: 100%;
+	height: vw(90);
 	padding: 0;
 	background: #FFF;
 	z-index: 9999;
-	height: vw(90);
 	box-sizing: border-box;
 	border-bottom: 1px solid  rgba(0, 0, 0, 0.2);
+	transition: 1s;
 	@include max(md) {
 		height: vw2(70);
 	}
@@ -25,9 +25,6 @@
 		flex-flow: row nowrap;
 		width: 100%;
 		height: 100%;
-		@include max(md) {
-			flex-flow: row nowrap;
-		}
 		&__col {
 			position: relative;
 			display: flex;
@@ -41,8 +38,6 @@
 				flex: 1 0 auto;
 				border: none;
 				@include max(md) {
-					max-width: 100%;
-					flex: 1 0 auto;
 					justify-content: space-between;
 				}
 
@@ -60,20 +55,12 @@
 			}
 		}
 	}
-	.hamburger {
-
-		@include max(md) {
-		}
-	}
 	.container {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 		max-width: 100%;
 		height: 100%;
-		@include max(md) {
-			max-width: 100%;
-		}
 	}
 }
 
@@ -87,7 +74,6 @@
 		width: vw(194);
 		min-width: vw(194);
 		background: $blueLight;
-		height: 100%;
 		height: vw(91);
 		@include max(md) {	
 			width: auto;
@@ -96,7 +82,7 @@
 			height: vw2(70);
 		}
 		img {
-			transition: all 0.3s;
+			transition: all $tr-time;
 			position: relative;
 			display: inline-block;
 			width: vw(153);
@@ -115,8 +101,6 @@
 		justify-content: flex-start;
 		align-items: center;
 		width: fit-content;
-		@include max(md) {
-		}
 		&__humb {
 			position: relative;
 			display: flex;
@@ -130,7 +114,7 @@
 			background-position: center center;
 			background-size: 50% 50%;
 			background-repeat: no-repeat;
-			transition: all 0.3s ;
+			transition: all $tr-time;
 			@include max(md) {
 				width: vw2(90);
 				border-right: none;
@@ -145,7 +129,7 @@
 			}
 
 			&:hover {
-				transition: all 0.3s ;
+				transition: all $tr-time;
 				background-image: url(../img/svg/hamburger--blue.svg);
 			}
 		}
@@ -167,11 +151,11 @@
 			margin-right: vw(42);
 			height: 100%;
 			cursor: pointer;
-			transition: all 0.3s;
+			transition: all $tr-time;
 			border-bottom: 1px solid transparent;
 			&:hover {
 				color: $blue;
-				transition: all 0.3s;
+				transition: all $tr-time;
 				.js-row {
 					animation-name: rotationOpenMenuSidebar;
 					animation-duration: .2s;
@@ -193,7 +177,6 @@
 				display: flex;
 				justify-content: center;
 				align-items: center;
-				// width: vw(16);
 				margin-right: vw(6);
 				svg {
 					position: relative;
@@ -222,9 +205,6 @@
 				right: vw(-12);
 				top: vw(5);
 			}
-			svg {
-				// margin-left: vw(5);
-			}
 		}
 		&__list {
 			position: absolute;
@@ -239,13 +219,13 @@
 			min-width: 100%;
 			flex-flow: column nowrap;
 			opacity: 0;
-			transition: all .3s;
+			transition: all $tr-time;
 			border-top: 3px solid $blueHover;
 			background: $blueLight;
 			&.active {
 				display: flex;
 				opacity: 1;
-				transition: all .3s;
+				transition: all $tr-time;
 				visibility: inherit;
 			}
 			&__item {
@@ -272,7 +252,6 @@
 					display: flex;
 					justify-content: flex-start;
 					align-items: flex-start;
-					color: #212A39;
 					text-align: center;
 					color: #FFF;
 					font-size: vw(18);
@@ -280,9 +259,9 @@
 					font-weight: 400;
 					line-height: 140.625%;
 					text-decoration: none;
-					transition: all 0.3s;
+					transition: all $tr-time;
 					&:hover {
-						transition: all 0.3s;
+						transition: all $tr-time;
 						color: $grey;
 
 					}
@@ -304,12 +283,12 @@
 			width: calc(100vw - 0px);
 			opacity: 0;
 			border-radius: 0;
-			transition: all .3s;
+			transition: all $tr-time;
 			z-index: 100;
 			&.active {
 				display: flex;
 				opacity: 1;
-				transition: all .3s;
+				transition: all $tr-time;
 				visibility: inherit;
 			}
 			&__list {
@@ -338,7 +317,7 @@
 					font-size: vw(24);
 					font-style: normal;
 					font-weight: 500;
-					line-height: vw(30); /* 125% */
+					line-height: vw(30);
 					letter-spacing: vw(-0.4);
 					list-style-type: none;
 					text-align: left;
@@ -378,13 +357,13 @@
 						letter-spacing: vw(0.325);
 						text-transform: uppercase;
 						text-decoration: none;
-						transition: all .3s;
+						transition: all $tr-time;
 						width: 100%;
 						height: auto;
 						white-space: wrap;
 						text-align: left;
 						&:hover {
-							transition: all .3s;
+							transition: all $tr-time;
 							color: $blue;
 						}
 					}
@@ -419,7 +398,7 @@
 			text-decoration: none;
 			white-space: nowrap;
 			color: $black;
-			transition: all .3s;
+			transition: all $tr-time;
 			padding-left: vw(24);
 			cursor: pointer;
 			@include max(md) {
@@ -442,22 +421,22 @@
 					justify-content: center;
 					align-items: center;
 					margin-right: vw(18);
-					transition: all 0.3s ;
+					transition: all $tr-time;
 					&:last-child {
 						margin-right: 0;
 					}
 					svg {
 						use {
-							transition: all 0.3s ;
+							transition: all $tr-time;
 							fill: $fontBlack;
 						}
 					}
 					&:hover {
-						transition: all 0.3s ;
+						transition: all $tr-time;
 						svg {
 							use {
 								fill: $blueHover;
-								transition: all 0.3s ;
+								transition: all $tr-time;
 							}
 						}
 					}
@@ -483,10 +462,10 @@
 				padding-left: 0;
 				padding-right: 0;
 				justify-content: center;
-				transition: all 0.3s ;
+				transition: all $tr-time;
 				svg {
 					use {
-						transition: all 0.3s ;
+						transition: all $tr-time;
 					}
 				}
 				&:hover {
@@ -494,7 +473,7 @@
 					svg {
 						use {
 							fill: $blueHover;
-							transition: all 0.3s ;
+							transition: all $tr-time;
 						}
 					}
 				}
@@ -508,16 +487,16 @@
 				justify-content: center;
 				svg {
 					use {
-						transition: all 0.3s ;
+						transition: all $tr-time;
 						fill: $fontBlack;
 					}
 				}
 				&:hover {
-					transition: all 0.3s ;
+					transition: all $tr-time;
 					svg {
 						use {
 							fill: $blueHover;
-							transition: all 0.3s ;
+							transition: all $tr-time;
 						}
 					}
 				}
@@ -545,9 +524,8 @@
 					text-transform: uppercase;
 					@include max(md) {
 						font-size: vw2(20);
-						font-style: normal;
 						line-height: 1.2;
-						margin-right: vw(20);
+						margin-right: vw2(20);
 					} 
 				}
 				
@@ -575,17 +553,17 @@
 					cursor: pointer;
 					svg {
 						use {
-							transition: all 0.3s ;
+							transition: all $tr-time;
 							stroke: $fontBlack;
 							stroke-width: 2;
 						}
 					}
 					&:hover {
-						transition: all 0.3s ;
+						transition: all $tr-time;
 						svg {
 							use {
 								stroke: $blueHover;
-								transition: all 0.3s ;
+								transition: all $tr-time;
 							}
 						}
 					}
@@ -594,7 +572,7 @@
 			}
 			&:hover {
 				color: $blue;
-				transition: all 0.3s;
+				transition: all $tr-time;
 				.js-row {
 					animation-name: rotationOpenMenuSidebar;
 					animation-duration: .2s;
@@ -617,12 +595,11 @@
 			}
 			&:hover {
 				color: $blue;
-				transition: all .3s;
+				transition: all $tr-time;
 
 			}
 			img, svg {
-				transition: all .3s;
-				// margin-right: 5px;
+				transition: all $tr-time;
 			}
 		}
 		&__top {
@@ -643,15 +620,14 @@
 				line-height: normal;
 				text-transform: uppercase;
 				text-decoration: none;
-				transition: all .3s;
+				transition: all $tr-time;
 				@include max(md) {
 					font-size: vw2(20);
-					font-style: normal;
 					line-height: 1.2;
 					margin-right: vw(20);
 			} 
 				&:hover {
-					transition: all .3s;
+					transition: all $tr-time;
 					color: $blue;
 				}
 			}
@@ -686,7 +662,7 @@
 			border-right: 1px solid $grey;
 			border-left: 1px solid $grey;
 			background: transparent;
-			transition: all 0.3s;
+			transition: all $tr-time;
 			@include max(md) {
 				font-size: vw2(20);
 				font-style: normal;
@@ -696,7 +672,7 @@
 			&:hover {
 				color: #fff;
 				background: $blueLight;
-				transition: all 0.3s;
+				transition: all $tr-time;
 				border-right: 1px solid $blueLight;
 				border-left: 1px solid $blueLight;
 			}
@@ -720,7 +696,7 @@
 	visibility: hidden;
 	width: 0;
 	background: transparent;
-	transition: all 0.3s;
+	transition: all $tr-time;
 	z-index: 9999;
 	border-right: none;
 	&--overlay {
@@ -735,7 +711,7 @@
 		z-index: 10;
 	}
 	&.active {
-		transition: all 0.3s;
+		transition: all $tr-time;
 		height: vw(90);
 		width: vw(1000);
 		visibility: inherit;
@@ -786,21 +762,17 @@
 			font-weight: 600;
 			line-height: normal;
 			text-transform: uppercase;
-			padding-right: vw(180);
-			
+			padding-right: vw(180);		
 			border-right: none;
 			padding-left: vw(23);
-			width: 100%;
-			border: none;
 			background: #fff;
 			cursor: pointer;
 			border: 0px solid #44C8F5;
-			transition: all 0.3s;
+			transition: all $tr-time;
 			@include max(md) {
 				font-size: vw2(20);
-				font-style: normal;
 				line-height: 1.2;
-				margin-right: vw(20);
+				margin-right: vw2(20);
 		} 
 			&::placeholder {
 				color: #07171D;
@@ -811,7 +783,6 @@
 				text-transform: uppercase;
 				@include max(md) {
 					font-size: vw2(20);
-					font-style: normal;
 					line-height: 1.2;
 					margin-right: vw(20);
 			} 
@@ -819,17 +790,17 @@
 			&:hover {       
 					border: none; 
 					border-bottom: none;
-					transition: all 0.3s;
+					transition: all $tr-time;
 			}
 			&:focus { 
 					border: none; 
 					border-bottom: none;
-					transition: all 0.3s;
+					transition: all $tr-time;
 			}
 			&:active { 
 					border: none; 
 					border-bottom: none;
-					transition: all 0.3s;
+					transition: all $tr-time;
 			}
 			&:focus-visible {
 					outline: none;
@@ -865,9 +836,9 @@
 		background: $blueLight;
 		padding-left: vw(22);
 		padding-right: vw(22);
-		transition: all .3s;
+		transition: all $tr-time;
 		&:hover {
-			transition: all .3s;
+			transition: all $tr-time;
 			background: $blueHover;
 		}
 		&__row {
@@ -890,7 +861,6 @@
 			text-transform: uppercase;
 			@include max(md) {
 				font-size: vw2(20);
-				font-style: normal;
 				line-height: 1.2;
 				margin-right: vw(20);
 		} 
@@ -917,12 +887,12 @@
 			padding-bottom: vw(31);
 			padding-left: vw(13);
 			padding-right: vw(13);
-			transition: all 0.3s;
+			transition: all $tr-time;
 			&:last-child {
 				border: none;
 			}
 			&:hover {
-				transition: all 0.3s;
+				transition: all $tr-time;
 				background: rgba(0, 0, 0, 0.2);
 			}
 			&__picture {
@@ -973,9 +943,8 @@
 				text-transform: uppercase;
 				@include max(md) {
 					font-size: vw2(20);
-					font-style: normal;
 					line-height: 1.2;
-					margin-right: vw(20);
+					margin-right: vw2(20);
 			} 			
 			}
 		}
@@ -987,10 +956,10 @@
 			cursor: pointer;
 			min-height: vw(80);
 			background: #07171D;
-			transition: all 0.3s;
+			transition: all $tr-time;
 			width: 100%;
 			&:hover {
-				transition: all 0.3s;
+				transition: all $tr-time;
 				background: #2BAEDA;
 			}
 
@@ -1013,11 +982,6 @@
 	@include max(md) {
 		max-width: 90%;
 		padding:  vw2(20);
-		flex-flow: column nowrap;
-		justify-content: flex-start;
-		align-items: flex-start;
-		z-index: 9999;
-		background: #fff;
 		height: calc(100vh - vw2(70));
 	}
 	&__wrap {
@@ -1072,17 +1036,16 @@
 		font-size: vw(45);
 		font-style: normal;
 		font-weight: 500;
-		line-height: 97.228%; /* 43.753px */
+		line-height: 97.228%;
 		text-transform: uppercase;
-		transition: all .3s;
+		transition: all $tr-time;
 		cursor: pointer;
-    @include max(md) {
+    	@include max(md) {
 			font-size: vw2(32);
-			font-style: normal;
 			line-height: 1.2;
 		}
 		&:hover {
-			transition: all .3s;
+			transition: all $tr-time;
 			color: $blueHover;
 		}
 	}
@@ -1119,7 +1082,7 @@
 			padding-left: vw2(15);
 		}
 		&:hover {
-			transition: all .3s;
+			transition: all $tr-time;
 			color: $blueHover;
 		}
 		&__item {
@@ -1133,16 +1096,15 @@
 			text-transform: uppercase;
 			margin-bottom: vw(15);
 			text-decoration: none;
-			transition: all .3s;
+			transition: all $tr-time;
 			cursor: pointer;
 			@include max(md) {
 				font-size: vw2(20);
-				font-style: normal;
 				line-height: 1.2;
 				margin-right: vw(20);
 		} 
 			&:hover {
-				transition: all .3s;
+				transition: all $tr-time;
 				color: $blueHover;
 			}
 			&:last-child {
@@ -1166,7 +1128,7 @@
 		a {
 			position: relative;
 			display: flex;
-			transition: all .3s;
+			transition: all $tr-time;
 			color: $black;
 			font-size: 14px;
 			font-style: normal;
@@ -1176,7 +1138,7 @@
 			text-transform: uppercase;
 			&:hover {
 				color: $greyBlack;
-				transition: all .3s;
+				transition: all $tr-time;
 			}
 			text-decoration: none;		
 		}
@@ -1206,9 +1168,9 @@
 			line-height: normal;
 			letter-spacing: vw(1.1);
 			text-transform: uppercase;
-			transition: all 0.3s;
+			transition: all $tr-time;
 			&:hover {
-				transition: all 0.3s;
+				transition: all $tr-time;
 				color: $blue;
 			}		
 		}
@@ -1274,7 +1236,7 @@
 			text-decoration: none;
 			width: vw(24);
 			height: vw(24);
-			transition: all 0.3s;
+			transition: all $tr-time;
 			border-radius: vw(7);
 			margin-left: vw(20);
 			&__text {
@@ -1293,7 +1255,7 @@
 				}
 			}
 			&:hover {
-				transition: all 0.3s;
+				transition: all $tr-time;
 				background: rgba(255, 255, 255, 0.21);
 			}
 		}
@@ -1333,11 +1295,10 @@
 				font-size: vw(32);
 				font-style: normal;
 				font-weight: 500;
-				line-height: 106%; /* 33.92px */
+				line-height: 106%;
 				text-transform: uppercase;
 				@include max(md) {
 					font-size: vw2(28);
-					font-style: normal;
 					line-height: 1.2;
 			}
 			}
@@ -1350,14 +1311,14 @@
 				display: flex;
 				justify-content: center;
 				align-items: center;
-				transition: all .3s;
+				transition: all $tr-time;
 				cursor: pointer;
 				@include max(md) {
 					width: vw2(40);
 					height: vw2(40);
 				}
 				&:hover {
-					transition: all .3s;
+					transition: all $tr-time;
 					background: $blueHover;
 				}
 				svg {
@@ -1396,7 +1357,7 @@
 			background: $blueLight;
 			padding-left: vw(24);
 			padding-right: vw(24);
-			transition: all .3s;
+			transition: all $tr-time;
 			cursor: pointer;
 			@include max(md) {
 				min-height: vw2(65);
@@ -1404,7 +1365,7 @@
 				padding-right: vw2(20);
 			}
 			&:hover {
-				transition: all .3s;
+				transition: all $tr-time;
 				background: $blueHover;
 			}
 			&__row {
@@ -1427,7 +1388,6 @@
 				text-transform: uppercase;
 				@include max(md) {
 					font-size: vw2(20);
-					font-style: normal;
 					line-height: 1.2;
 					margin-right: vw(20);
 			} 
@@ -1486,7 +1446,7 @@
 				font-size: vw(32);
 				font-style: normal;
 				font-weight: 500;
-				line-height: 106%; /* 33.92px */
+				line-height: 106%;
 				text-transform: uppercase;	
 			}
 			&__close {
@@ -1498,7 +1458,7 @@
 				display: flex;
 				justify-content: center;
 				align-items: center;
-				transition: all .3s;
+				transition: all $tr-time;
 				cursor: pointer;
 				svg {
 					width: vw(20);
@@ -1510,7 +1470,7 @@
 					}
 				}
 				&:hover {
-					transition: all .3s;
+					transition: all $tr-time;
 					background: $blueHover;
 				}
 			}
@@ -1547,10 +1507,10 @@
 			background: $blueLight;
 			padding-left: vw(30);
 			padding-right: vw(30);
-			transition: all .3s;
+			transition: all $tr-time;
 			cursor: pointer;
 			&:hover {
-				transition: all .3s;
+				transition: all $tr-time;
 				background: $blueHover;
 			}
 			&__row {
@@ -1573,7 +1533,6 @@
 				text-transform: uppercase;
 				@include max(md) {
 					font-size: vw2(20);
-					font-style: normal;
 					line-height: 1.2;
 					margin-right: vw(20);
 			} 
