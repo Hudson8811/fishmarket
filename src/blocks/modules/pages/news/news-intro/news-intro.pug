@@ -1,0 +1,22 @@
+include ../../../../components/breadcrumbs/breadcrumbs
+include ../../../../components/title/title
+
+section.news-intro(style="background-image: url(img/news_intro_bg.png);")
+    .news-intro__overlay
+    .container.news-intro__container
+        +breadcrumbs({
+            classes: '',
+            colorMode: 'light',
+            items: [
+                {
+                    name: 'Главная',
+                    link: '#'
+                },
+                {
+                    name: 'Новости',
+                    link: '#'
+                }
+            ]
+        })
+        .news-intro__date 11  декабря  2023
+        +title('h1', 'ФИЛЕ СВЕЖЕМОРОЖЕНОЕ', 'news-intro__title')

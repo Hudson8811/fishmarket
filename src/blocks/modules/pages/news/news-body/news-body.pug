@@ -1,0 +1,64 @@
+include ../../../../components/new-btn/new-btn
+include ../../../../components/slider-photo/slider-photo
+
+section.news-body
+    .news-body__container
+        .news-body__left
+            .news-body__text.text-block
+                != "СКИДКИ ОТ ОБЪЕМА"
+                ul
+                    li ФИЛЕ СЕМГИ из охлажденного сырья (Мурманск) 1,3-1,8, TRIM А от 1550 ₽/кг
+                    li ФИЛЕ ФОРЕЛИ (Турция, море) 1,3-1,8, TRIM А от 1350 ₽/кг
+                    li ФИЛЕ ГОРБУШИ IQF от 300 ₽/кг
+                != "Закажите  прямо сейчас и получите самые выгодные условия для вашего бизнеса!"
+            +slider-photo('news-body__slider')
+            .news-body__share
+                +new-btn({
+                    classes: 'news-body__social',
+                    vMode: 'icon',
+                    text: '',
+                    icon: 'true',
+                    iconName: 'youtube',
+                    cMode: 'white',
+                })
+                +new-btn({
+                    classes: 'news-body__social',
+                    vMode: 'icon',
+                    text: '',
+                    icon: 'true',
+                    iconName: 'vk',
+                    cMode: 'white',
+                })
+                +new-btn({
+                    classes: 'news-body__social',
+                    vMode: 'icon',
+                    text: '',
+                    icon: 'true',
+                    iconName: 'telegram',
+                    cMode: 'white',
+                })
+                +new-btn({
+                    classes: 'news-body__social',
+                    vMode: 'icon',
+                    text: '',
+                    icon: 'true',
+                    iconName: 'ok',
+                    cMode: 'white',
+                })
+                +new-btn({
+                    classes: 'news-body__social',
+                    vMode: 'icon',
+                    text: '',
+                    icon: 'true',
+                    iconName: 'skype',
+                    cMode: 'white',
+                })
+        .news-body__right
+            .news-body__offer Получить персональное предложение
+            +new-btn({
+                classes: 'news-body__btn',
+                vMode: 'big',
+                text: 'Оставить заявку',
+                icon: 'true',
+                cMode: 'blue',
+            })

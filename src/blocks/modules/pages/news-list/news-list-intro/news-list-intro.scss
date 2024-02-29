@@ -1,7 +1,31 @@
 .news-list-intro {
-    padding: vw(115) 0 vw(262);
-    &__cards {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
+    padding: vw(115) 0 vw(38);
+    @include max(md) {
+        padding: vw2(95) 0 vw2(38);
     }
+    &__title {
+        margin-top: vw(24);
+        @include max(md) {
+            margin-top: vw2(24);
+        }
+    }
+    &__cards {
+        margin-top: vw(88);
+        display: grid;
+        gap: 1px;
+        background-color: $greyLight;
+        border: 1px solid $greyLight;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        @include max(md) {
+            margin-top: vw2(44);
+            grid-template-columns: minmax(0, 1fr);
+        }
+    }
+    &__pagination {
+        margin-top: vw(153);
+        @include max(md) {
+            margin-top: vw2(75);
+        }
+    }
+
 }

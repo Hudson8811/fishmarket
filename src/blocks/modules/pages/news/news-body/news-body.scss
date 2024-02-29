@@ -1,0 +1,22 @@
+.news-body {
+    &__container {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        background-color: $greyBorder;
+        gap: 1px;
+    }
+    &__left {
+        display: flex;
+        flex-direction: column;
+        background-color: $white;
+        padding: vw(32) 0 vw(89);
+    }
+    &__slider {
+        padding: vw(124) vw(30) vw(39);
+        background-color: $fontBlack;
+    }
+    &__right {
+        background-color: $white;
+        padding: vw(28) 0 vw(89);
+    }
+}
