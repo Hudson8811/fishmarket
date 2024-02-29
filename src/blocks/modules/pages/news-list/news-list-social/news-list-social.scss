@@ -1,0 +1,89 @@
+.category-intro {
+    padding-top: vw(114);
+    padding-bottom: vw(40);
+    @include max(md) {
+        padding-top: vw2(90);
+        padding-bottom: vw2(40);
+    } 
+    &__breadcrumbs {
+		padding-left: vw(8);
+	}
+    &__title {
+        color: $fontBlack;
+        margin-top: vw(156);
+        @include max(md) {
+            margin-top: vw2(50);
+        } 
+    }
+    &__controls {
+        display: flex;
+        justify-content: flex-end;
+        gap: vw(16);
+        @include max(md) {
+            display: none;
+        } 
+    }
+    &__mode-btn.new-btn {
+        width: vw(28);
+        height: vw(28);
+        .new-btn__icon {
+            width: vw(28);
+            height: vw(28);
+            svg {
+                width: vw(28);
+                height: vw(28);
+                use {
+                    fill: $greyLight;
+                    stroke: none;
+                }
+            }
+        }
+        &:hover, &.active {
+            .new-btn__icon svg use {
+                fill: $fontBlack;
+            }
+        }
+        @include max(md) {
+            width: vw2(28);
+            height: vw2(28);
+            .new-btn__icon {
+                width: vw2(28);
+                height: vw2(28);
+                svg {
+                    width: vw2(28);
+                    height: vw2(28);
+                }
+            }
+        } 
+    }
+    &__cards {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        row-gap: vw(39);
+        column-gap: vw(34);
+        margin-top: vw(30);
+        @include max(md) {
+            grid-template-columns: 1fr;
+            row-gap: vw2(24);
+            column-gap: vw2(24);
+            margin-top: vw2(30);
+        }
+    }
+    &__pagination {
+        margin-top: vw(152);
+    }
+}
+
+@include min(md) {
+    .category-intro--rows {
+        padding-bottom: vw(60);
+        .category-intro__cards {
+            display: flex;
+            flex-direction: column;
+            column-gap: vw(24);
+        }
+        .category-intro__pagination {
+            margin-top: vw(178);
+        }
+    }
+}

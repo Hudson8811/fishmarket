@@ -1,0 +1,13 @@
+extends ../layouts/default
+include ../helpers/mixins
+
+block variables
+	- const title = "News List Page"
+
+block content
+
+	.scroll-page
+		include ../../blocks/modules/pages/news-list/news-list-intro/news-list-intro
+		include ../../blocks/modules/pages/news-list/news-list-social/news-list-social
+		include ../../blocks/modules/footer/footer
+

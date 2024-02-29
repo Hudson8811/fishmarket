@@ -1,0 +1,97 @@
+include ../../../../components/breadcrumbs/breadcrumbs
+include ../../../../components/pagination/pagination
+include ../../../../components/title/title
+include ../../../../components/new-btn/new-btn
+include ../../../../components/news-card/news-card
+
+section.news-list-intro
+    .container.news-list-intro__container
+        +breadcrumbs({
+            classes: '',
+            items: [
+                {
+                    name: 'Главная',
+                    link: '#'
+                },
+                {
+                    name: 'Новости',
+                    link: '#'
+                }
+            ]
+        })
+        +title('h1', 'Наши <br>новости', 'news-list-intro__title')
+        .news-list-intro__cards
+            +news-card()
+            +news-card({
+                classes: '',
+                title: 'СЕМГА ЧИЛИ',
+                info: [
+                    '1-2 от 850 ₽/кг',
+                    '2-3 от 930 ₽/кг'
+                ],
+                img: 'img/card-news__picture__1.png',
+            })
+            +news-card({
+                classes: '',
+                title: 'СЕМГА ЧИЛИ',
+                info: [
+                    '1-2 от 850 ₽/кг',
+                    '2-3 от 930 ₽/кг'
+                ],
+                img: 'img/card-news__picture__1.png',
+            })
+            +news-card({
+                classes: '',
+                title: 'СЕМГА ЧИЛИ',
+                info: [
+                    '1-2 от 850 ₽/кг',
+                    '2-3 от 930 ₽/кг'
+                ],
+                img: 'img/card-news__picture__1.png',
+            })
+            +news-card({
+                classes: '',
+                title: 'СЕМГА ЧИЛИ',
+                info: [
+                    '1-2 от 850 ₽/кг',
+                    '2-3 от 930 ₽/кг'
+                ],
+                img: 'img/card-news__picture__1.png',
+            })
+            +news-card({
+                classes: '',
+                title: 'СЕМГА ЧИЛИ',
+                info: [
+                    '1-2 от 850 ₽/кг',
+                    '2-3 от 930 ₽/кг'
+                ],
+                img: 'img/card-news__picture__1.png',
+            })
+            +news-card({
+                classes: '',
+                title: 'СЕМГА ЧИЛИ',
+                info: [
+                    '1-2 от 850 ₽/кг',
+                    '2-3 от 930 ₽/кг'
+                ],
+                img: 'img/card-news__picture__1.png',
+            })
+            +news-card({
+                classes: '',
+                title: 'СЕМГА ЧИЛИ',
+                info: [
+                    '1-2 от 850 ₽/кг',
+                    '2-3 от 930 ₽/кг'
+                ],
+                img: 'img/card-news__picture__1.png',
+            })
+            +news-card({
+                classes: '',
+                title: 'СЕМГА ЧИЛИ',
+                info: [
+                    '1-2 от 850 ₽/кг',
+                    '2-3 от 930 ₽/кг'
+                ],
+                img: 'img/card-news__picture__1.png',
+            })
+        +pagination()

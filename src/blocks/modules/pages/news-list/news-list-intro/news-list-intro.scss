@@ -1,0 +1,7 @@
+.news-list-intro {
+    padding: vw(115) 0 vw(262);
+    &__cards {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}

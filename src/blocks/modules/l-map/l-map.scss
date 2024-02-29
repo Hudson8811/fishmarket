@@ -2,14 +2,20 @@
     position: relative;
     height: vw(800);
     padding: vw(32) vw(25);
-    display: flex;
     overflow: hidden;
-    justify-content: space-between;
-    gap: vw(50);
     @include max(md) {
         height: vw2(450);
-        gap: vw2(25);
         padding: vw2(32) vw2(20);
+    }
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        gap: vw(50);
+        height: 100%;
+        overflow: hidden;
+        @include max(md) {
+            gap: vw2(25);
+        }
     }
     &__cities {
         position: relative;
@@ -168,4 +174,22 @@
         }
     }
 
+}
+
+.l-map.l-map--first {
+    padding-top: vw(115);
+    height: vw(915);
+    @include max(md) {
+        height: vw2(520);
+        padding-top: vw2(90);
+    }
+    .l-map__content {
+        padding-top: vw(39);
+        @include max(md) {
+            padding-top: vw2(20);
+        }
+    }
+    .breadcrumbs.breadcrumbs--dark .breadcrumbs__item--current {
+        opacity: 0.6;
+    }
 }

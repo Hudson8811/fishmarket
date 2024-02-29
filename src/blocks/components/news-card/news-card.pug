@@ -1,0 +1,39 @@
+-
+    const defaultNewsCardProps = {
+        classes: '',
+        title: 'СЕМГА ЧИЛИ',
+        info: [
+            '1-2 от 850 ₽/кг',
+            '2-3 от 930 ₽/кг'
+        ],
+        img: 'img/card-news__picture__1.png',
+    }
+
+mixin news-card(props = defaultNewsCardProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultNewsCardProps.classes,
+            title: props.title ? props.title : defaultNewsCardProps.title,
+            info: props.info ? props.info : defaultNewsCardProps.info,
+            img: props.img ? props.img : defaultNewsCardProps.img,
+        }
+
+    .news-card(href="#")
+        .news-card__img
+            img(src=checkProps.img alt=checkProps.title)
+        .news-card__content
+            .news-card__title
+                != checkProps.title
+            .news-card__info.text-block
+                ul 
+                    - let i = 0
+                        while i < checkProps.info.length
+                            li!= checkProps.info[i]
+                            - i++
+            .news-card__bottom
+                .news-card__date
+                    !="1 ноября 2023"
+                +new-btn
+
+
+

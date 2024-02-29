@@ -3,7 +3,7 @@
         classes: '',
         isFirst: false,
         breadcrumbs: {
-            classes: 'l-intro__breadcrumbs',
+            classes: '',
             colorMode: 'dark',
             items: [
                 {
@@ -25,111 +25,100 @@ mixin l-map(props = defaultLMapProps)
     -
         const checkProps = {
             classes: props.classes ? props.classes : defaultLMapProps.classes,
-            isFirst: props.classes ? props.classes : defaultLMapProps.classes,
+            isFirst: props.isFirst ? props.isFirst : defaultLMapProps.isFirst,
             breadcrumbs: props.breadcrumbs ? props.breadcrumbs : defaultLMapProps.breadcrumbs,
         };
 
-    section.l-map
-        .l-map__cities(data-js='cities')
-            +new-btn({
-                classes: 'l-map__city active',
-                tag: 'button',
-                vMode: 'small',
-                text: 'Москва',
-                icon: 'false',
-                cMode: 'white',
-            })(data-city="moscow")
-            +new-btn({
-                classes: 'l-map__city',
-                tag: 'button',
-                vMode: 'small',
-                text: 'Калининград',
-                icon: 'false',
-                cMode: 'white',
-            })(data-city="kaliningrad")
-        .l-map__addresses.active(data-js="lMapAddresses" data-city="moscow")
-            .l-map__address.map-address.active(data-id='moscowOffice1' data-coords="55.633871,37.453720" data-js='lMapAddress')
-                .map-address__header
-                    .map-address__title Офис
-                    .map-address__icon 
-                        svg
-                            use(xlink:href=`img/sprites/sprite.svg#header_position`)
-                .map-address__item
-                    .map-address__subtitle адрес:
-                    .map-address__text Киевское шоссе, 21-й км, д. 3, стр. 1, Бизнес-центр “G10”
-                .map-address__item
-                    .map-address__subtitle контакты:
-                    .map-address__text 8 800 000-00-00
-                    .map-address__text info@fish.ru
-            .l-map__address.map-address(data-id='moscowStock1' data-coords="55.891693,37.542141" data-js='lMapAddress')
-                .map-address__header
-                    .map-address__title Склад
-                    .map-address__icon 
-                        svg
-                            use(xlink:href=`img/sprites/sprite.svg#header_position`)
-                .map-address__item
-                    .map-address__subtitle адрес:
-                    .map-address__text Дмитровское шоссе, 137
-                .map-address__item
-                    .map-address__subtitle контакты:
-                    .map-address__text 8 800 000-00-00
-                    .map-address__text info@fish.ru
-            .l-map__address.map-address(data-id='moscowStock2' data-coords="55.672935,37.725873" data-js='lMapAddress')
-                .map-address__header
-                    .map-address__title Склад
-                    .map-address__icon 
-                        svg
-                            use(xlink:href=`img/sprites/sprite.svg#header_position`)
-                .map-address__item
-                    .map-address__subtitle адрес:
-                    .map-address__text Москва, улица Полбина, 33А
-                .map-address__item
-                    .map-address__subtitle контакты:
-                    .map-address__text 8 800 000-00-00
-                    .map-address__text info@fish.ru
+        let firstClass = checkProps.isFirst ? " l-map--first" : "";
 
+    section.l-map(class= checkProps.classes + firstClass)
+        - if(checkProps.isFirst)
+            +breadcrumbs(checkProps.breadcrumbs)
+        .l-map__content
+            .l-map__cities(data-js='cities')
+                +new-btn({
+                    classes: 'l-map__city active',
+                    tag: 'button',
+                    vMode: 'small',
+                    text: 'Москва',
+                    icon: 'false',
+                    cMode: 'white',
+                })(data-city="moscow")
+                +new-btn({
+                    classes: 'l-map__city',
+                    tag: 'button',
+                    vMode: 'small',
+                    text: 'Калининград',
+                    icon: 'false',
+                    cMode: 'white',
+                })(data-city="kaliningrad")
+            .l-map__addresses.active(data-js="lMapAddresses" data-city="moscow")
+                .l-map__address.map-address.active(data-id='moscowOffice1' data-coords="55.633871,37.453720" data-js='lMapAddress')
+                    .map-address__header
+                        .map-address__title Офис
+                        .map-address__icon 
+                            svg
+                                use(xlink:href=`img/sprites/sprite.svg#header_position`)
+                    .map-address__item
+                        .map-address__subtitle адрес:
+                        .map-address__text Киевское шоссе, 21-й км, д. 3, стр. 1, Бизнес-центр “G10”
+                    .map-address__item
+                        .map-address__subtitle контакты:
+                        .map-address__text 8 800 000-00-00
+                        .map-address__text info@fish.ru
+                .l-map__address.map-address(data-id='moscowStock1' data-coords="55.891693,37.542141" data-js='lMapAddress')
+                    .map-address__header
+                        .map-address__title Склад
+                        .map-address__icon 
+                            svg
+                                use(xlink:href=`img/sprites/sprite.svg#header_position`)
+                    .map-address__item
+                        .map-address__subtitle адрес:
+                        .map-address__text Дмитровское шоссе, 137
+                    .map-address__item
+                        .map-address__subtitle контакты:
+                        .map-address__text 8 800 000-00-00
+                        .map-address__text info@fish.ru
+                .l-map__address.map-address(data-id='moscowStock2' data-coords="55.672935,37.725873" data-js='lMapAddress')
+                    .map-address__header
+                        .map-address__title Склад
+                        .map-address__icon 
+                            svg
+                                use(xlink:href=`img/sprites/sprite.svg#header_position`)
+                    .map-address__item
+                        .map-address__subtitle адрес:
+                        .map-address__text Москва, улица Полбина, 33А
+                    .map-address__item
+                        .map-address__subtitle контакты:
+                        .map-address__text 8 800 000-00-00
+                        .map-address__text info@fish.ru
 
-
-            .l-map__address.map-address(data-id='moscowStock2' data-coords="55.672935,37.725873" data-js='lMapAddress')
-                .map-address__header
-                    .map-address__title Склад
-                    .map-address__icon 
-                        svg
-                            use(xlink:href=`img/sprites/sprite.svg#header_position`)
-                .map-address__item
-                    .map-address__subtitle адрес:
-                    .map-address__text Москва, улица Полбина, 33А
-                .map-address__item
-                    .map-address__subtitle контакты:
-                    .map-address__text 8 800 000-00-00
-                    .map-address__text info@fish.ru
-
-        .l-map__addresses(data-js="lMapAddresses" data-city="kaliningrad")
-            .l-map__address.map-address(data-id='kaliningradStock1' data-coords="54.732777, 20.595486" data-js='lMapAddress')
-                .map-address__header
-                    .map-address__title Склад
-                    .map-address__icon 
-                        svg
-                            use(xlink:href=`img/sprites/sprite.svg#header_position`)
-                .map-address__item
-                    .map-address__subtitle адрес:
-                    .map-address__text Мелиоративная улица, 5Б
-                .map-address__item
-                    .map-address__subtitle контакты:
-                    .map-address__text 8 800 000-00-00
-                    .map-address__text info@fish.ru
-            .l-map__address.map-address.active(data-id='kaliningradOffice1' data-coords="54.668160, 20.427968" data-js='lMapAddress')
-                .map-address__header
-                    .map-address__title Офис
-                    .map-address__icon 
-                        svg
-                            use(xlink:href=`img/sprites/sprite.svg#header_position`)
-                .map-address__item
-                    .map-address__subtitle адрес:
-                    .map-address__text Тепличная улица, 1
-                .map-address__item
-                    .map-address__subtitle контакты:
-                    .map-address__text 8 800 000-00-00
-                    .map-address__text info@fish.ru                
+            .l-map__addresses(data-js="lMapAddresses" data-city="kaliningrad")
+                .l-map__address.map-address(data-id='kaliningradStock1' data-coords="54.732777, 20.595486" data-js='lMapAddress')
+                    .map-address__header
+                        .map-address__title Склад
+                        .map-address__icon 
+                            svg
+                                use(xlink:href=`img/sprites/sprite.svg#header_position`)
+                    .map-address__item
+                        .map-address__subtitle адрес:
+                        .map-address__text Мелиоративная улица, 5Б
+                    .map-address__item
+                        .map-address__subtitle контакты:
+                        .map-address__text 8 800 000-00-00
+                        .map-address__text info@fish.ru
+                .l-map__address.map-address.active(data-id='kaliningradOffice1' data-coords="54.668160, 20.427968" data-js='lMapAddress')
+                    .map-address__header
+                        .map-address__title Офис
+                        .map-address__icon 
+                            svg
+                                use(xlink:href=`img/sprites/sprite.svg#header_position`)
+                    .map-address__item
+                        .map-address__subtitle адрес:
+                        .map-address__text Тепличная улица, 1
+                    .map-address__item
+                        .map-address__subtitle контакты:
+                        .map-address__text 8 800 000-00-00
+                        .map-address__text info@fish.ru                
 
         .l-map__map(data-js="lMap")

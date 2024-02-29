@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Contacts Page</title>
+    <title>News List Page</title>
     <meta name="theme-color" content="#fff">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -429,220 +429,213 @@
     </div>
     <main class="site-main">
       <div class="scroll-page">
-              <section class="l-map  l-map--first">
-                      <div class="breadcrumbs  breadcrumbs--dark">
-                        <ul class="breadcrumbs__list list-reset">
-                          <li class="breadcrumbs__item"><a href="#">Главная /</a>
-                          </li>
-                          <li class="breadcrumbs__item breadcrumbs__item--current"><span>Контакты</span>
-                          </li>
-                        </ul>
-                      </div>
-                <div class="l-map__content">
-                  <div class="l-map__cities" data-js="cities">
-                          <button class="new-btn new-btn--small new-btn--white l-map__city active" type="button" data-city="moscow"><span class="new-btn__text">Москва</span>
-                          </button>
-                          <button class="new-btn new-btn--small new-btn--white l-map__city" type="button" data-city="kaliningrad"><span class="new-btn__text">Калининград</span>
-                          </button>
-                  </div>
-                  <div class="l-map__addresses active" data-js="lMapAddresses" data-city="moscow">
-                    <div class="l-map__address map-address active" data-id="moscowOffice1" data-coords="55.633871,37.453720" data-js="lMapAddress">
-                      <div class="map-address__header">
-                        <div class="map-address__title">Офис</div>
-                        <div class="map-address__icon"> 
-                          <svg>
-                            <use xlink:href="img/sprites/sprite.svg#header_position"></use>
-                          </svg>
+        <section class="news-list-intro">
+          <div class="container news-list-intro__container">
+                    <div class="breadcrumbs  breadcrumbs--dark">
+                      <ul class="breadcrumbs__list list-reset">
+                        <li class="breadcrumbs__item"><a href="#">Главная /</a>
+                        </li>
+                        <li class="breadcrumbs__item breadcrumbs__item--current"><span>Новости</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="title title--h1 news-list-intro__title">
+                      <h1>Наши <br>новости</h1>
+                    </div>
+            <div class="news-list-intro__cards">
+                      <div class="news-card" href="#">
+                        <div class="news-card__img"><img src="img/card-news__picture__1.png" alt="СЕМГА ЧИЛИ"></div>
+                        <div class="news-card__content">
+                          <div class="news-card__title">СЕМГА ЧИЛИ
+                          </div>
+                          <div class="news-card__info text-block">
+                            <ul> 
+                              <li>1-2 от 850 ₽/кг</li>
+                              <li>2-3 от 930 ₽/кг</li>
+                            </ul>
+                          </div>
+                          <div class="news-card__bottom">
+                            <div class="news-card__date">1 ноября 2023
+                            </div><a class="new-btn new-btn--icon new-btn--blue " href="javascript:void(0);"><span class="new-btn__icon">
+                                        <svg>
+                                          <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
+                                        </svg></span></a>
+                          </div>
                         </div>
                       </div>
-                      <div class="map-address__item">
-                        <div class="map-address__subtitle">адрес:</div>
-                        <div class="map-address__text">Киевское шоссе, 21-й км, д. 3, стр. 1, Бизнес-центр “G10”</div>
-                      </div>
-                      <div class="map-address__item">
-                        <div class="map-address__subtitle">контакты:</div>
-                        <div class="map-address__text">8 800 000-00-00</div>
-                        <div class="map-address__text">info@fish.ru</div>
-                      </div>
-                    </div>
-                    <div class="l-map__address map-address" data-id="moscowStock1" data-coords="55.891693,37.542141" data-js="lMapAddress">
-                      <div class="map-address__header">
-                        <div class="map-address__title">Склад</div>
-                        <div class="map-address__icon"> 
-                          <svg>
-                            <use xlink:href="img/sprites/sprite.svg#header_position"></use>
-                          </svg>
+                      <div class="news-card" href="#">
+                        <div class="news-card__img"><img src="img/card-news__picture__1.png" alt="СЕМГА ЧИЛИ"></div>
+                        <div class="news-card__content">
+                          <div class="news-card__title">СЕМГА ЧИЛИ
+                          </div>
+                          <div class="news-card__info text-block">
+                            <ul> 
+                              <li>1-2 от 850 ₽/кг</li>
+                              <li>2-3 от 930 ₽/кг</li>
+                            </ul>
+                          </div>
+                          <div class="news-card__bottom">
+                            <div class="news-card__date">1 ноября 2023
+                            </div><a class="new-btn new-btn--icon new-btn--blue " href="javascript:void(0);"><span class="new-btn__icon">
+                                        <svg>
+                                          <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
+                                        </svg></span></a>
+                          </div>
                         </div>
                       </div>
-                      <div class="map-address__item">
-                        <div class="map-address__subtitle">адрес:</div>
-                        <div class="map-address__text">Дмитровское шоссе, 137</div>
-                      </div>
-                      <div class="map-address__item">
-                        <div class="map-address__subtitle">контакты:</div>
-                        <div class="map-address__text">8 800 000-00-00</div>
-                        <div class="map-address__text">info@fish.ru</div>
-                      </div>
-                    </div>
-                    <div class="l-map__address map-address" data-id="moscowStock2" data-coords="55.672935,37.725873" data-js="lMapAddress">
-                      <div class="map-address__header">
-                        <div class="map-address__title">Склад</div>
-                        <div class="map-address__icon"> 
-                          <svg>
-                            <use xlink:href="img/sprites/sprite.svg#header_position"></use>
-                          </svg>
+                      <div class="news-card" href="#">
+                        <div class="news-card__img"><img src="img/card-news__picture__1.png" alt="СЕМГА ЧИЛИ"></div>
+                        <div class="news-card__content">
+                          <div class="news-card__title">СЕМГА ЧИЛИ
+                          </div>
+                          <div class="news-card__info text-block">
+                            <ul> 
+                              <li>1-2 от 850 ₽/кг</li>
+                              <li>2-3 от 930 ₽/кг</li>
+                            </ul>
+                          </div>
+                          <div class="news-card__bottom">
+                            <div class="news-card__date">1 ноября 2023
+                            </div><a class="new-btn new-btn--icon new-btn--blue " href="javascript:void(0);"><span class="new-btn__icon">
+                                        <svg>
+                                          <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
+                                        </svg></span></a>
+                          </div>
                         </div>
                       </div>
-                      <div class="map-address__item">
-                        <div class="map-address__subtitle">адрес:</div>
-                        <div class="map-address__text">Москва, улица Полбина, 33А</div>
-                      </div>
-                      <div class="map-address__item">
-                        <div class="map-address__subtitle">контакты:</div>
-                        <div class="map-address__text">8 800 000-00-00</div>
-                        <div class="map-address__text">info@fish.ru</div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="l-map__addresses" data-js="lMapAddresses" data-city="kaliningrad">
-                    <div class="l-map__address map-address" data-id="kaliningradStock1" data-coords="54.732777, 20.595486" data-js="lMapAddress">
-                      <div class="map-address__header">
-                        <div class="map-address__title">Склад</div>
-                        <div class="map-address__icon"> 
-                          <svg>
-                            <use xlink:href="img/sprites/sprite.svg#header_position"></use>
-                          </svg>
+                      <div class="news-card" href="#">
+                        <div class="news-card__img"><img src="img/card-news__picture__1.png" alt="СЕМГА ЧИЛИ"></div>
+                        <div class="news-card__content">
+                          <div class="news-card__title">СЕМГА ЧИЛИ
+                          </div>
+                          <div class="news-card__info text-block">
+                            <ul> 
+                              <li>1-2 от 850 ₽/кг</li>
+                              <li>2-3 от 930 ₽/кг</li>
+                            </ul>
+                          </div>
+                          <div class="news-card__bottom">
+                            <div class="news-card__date">1 ноября 2023
+                            </div><a class="new-btn new-btn--icon new-btn--blue " href="javascript:void(0);"><span class="new-btn__icon">
+                                        <svg>
+                                          <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
+                                        </svg></span></a>
+                          </div>
                         </div>
                       </div>
-                      <div class="map-address__item">
-                        <div class="map-address__subtitle">адрес:</div>
-                        <div class="map-address__text">Мелиоративная улица, 5Б</div>
-                      </div>
-                      <div class="map-address__item">
-                        <div class="map-address__subtitle">контакты:</div>
-                        <div class="map-address__text">8 800 000-00-00</div>
-                        <div class="map-address__text">info@fish.ru</div>
-                      </div>
-                    </div>
-                    <div class="l-map__address map-address active" data-id="kaliningradOffice1" data-coords="54.668160, 20.427968" data-js="lMapAddress">
-                      <div class="map-address__header">
-                        <div class="map-address__title">Офис</div>
-                        <div class="map-address__icon"> 
-                          <svg>
-                            <use xlink:href="img/sprites/sprite.svg#header_position"></use>
-                          </svg>
+                      <div class="news-card" href="#">
+                        <div class="news-card__img"><img src="img/card-news__picture__1.png" alt="СЕМГА ЧИЛИ"></div>
+                        <div class="news-card__content">
+                          <div class="news-card__title">СЕМГА ЧИЛИ
+                          </div>
+                          <div class="news-card__info text-block">
+                            <ul> 
+                              <li>1-2 от 850 ₽/кг</li>
+                              <li>2-3 от 930 ₽/кг</li>
+                            </ul>
+                          </div>
+                          <div class="news-card__bottom">
+                            <div class="news-card__date">1 ноября 2023
+                            </div><a class="new-btn new-btn--icon new-btn--blue " href="javascript:void(0);"><span class="new-btn__icon">
+                                        <svg>
+                                          <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
+                                        </svg></span></a>
+                          </div>
                         </div>
                       </div>
-                      <div class="map-address__item">
-                        <div class="map-address__subtitle">адрес:</div>
-                        <div class="map-address__text">Тепличная улица, 1</div>
+                      <div class="news-card" href="#">
+                        <div class="news-card__img"><img src="img/card-news__picture__1.png" alt="СЕМГА ЧИЛИ"></div>
+                        <div class="news-card__content">
+                          <div class="news-card__title">СЕМГА ЧИЛИ
+                          </div>
+                          <div class="news-card__info text-block">
+                            <ul> 
+                              <li>1-2 от 850 ₽/кг</li>
+                              <li>2-3 от 930 ₽/кг</li>
+                            </ul>
+                          </div>
+                          <div class="news-card__bottom">
+                            <div class="news-card__date">1 ноября 2023
+                            </div><a class="new-btn new-btn--icon new-btn--blue " href="javascript:void(0);"><span class="new-btn__icon">
+                                        <svg>
+                                          <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
+                                        </svg></span></a>
+                          </div>
+                        </div>
                       </div>
-                      <div class="map-address__item">
-                        <div class="map-address__subtitle">контакты:</div>
-                        <div class="map-address__text">8 800 000-00-00</div>
-                        <div class="map-address__text">info@fish.ru                </div>
+                      <div class="news-card" href="#">
+                        <div class="news-card__img"><img src="img/card-news__picture__1.png" alt="СЕМГА ЧИЛИ"></div>
+                        <div class="news-card__content">
+                          <div class="news-card__title">СЕМГА ЧИЛИ
+                          </div>
+                          <div class="news-card__info text-block">
+                            <ul> 
+                              <li>1-2 от 850 ₽/кг</li>
+                              <li>2-3 от 930 ₽/кг</li>
+                            </ul>
+                          </div>
+                          <div class="news-card__bottom">
+                            <div class="news-card__date">1 ноября 2023
+                            </div><a class="new-btn new-btn--icon new-btn--blue " href="javascript:void(0);"><span class="new-btn__icon">
+                                        <svg>
+                                          <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
+                                        </svg></span></a>
+                          </div>
+                        </div>
                       </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="l-map__map" data-js="lMap"></div>
-              </section>
-        <section class="contacts-info">
-          <div class="container">
-            <div class="contacts-info__requisites requisites">
-              <div class="requisites__title">Реквизиты <span>ООО "СКАЙ-Ф" МРК</span></div>
-              <div class="requisites__info">
-                <div class="requisites__item">
-                  <div class="requisites__name">юр. адрес:</div>
-                  <div class="requisites__value">249010 Калужская обл., Боровский р-н, д. Маланьино</div>
-                </div>
-                <div class="requisites__columns">
-                  <div class="requisites__column">
-                    <div class="requisites__item">
-                      <div class="requisites__name">ИНН:</div>
-                      <div class="requisites__value">7724564269</div>
-                    </div>
-                    <div class="requisites__item">
-                      <div class="requisites__name">ОГРН:</div>
-                      <div class="requisites__value">1057749469150</div>
-                    </div>
-                    <div class="requisites__item">
-                      <div class="requisites__name">КПП:</div>
-                      <div class="requisites__value">400301001</div>
-                    </div>
-                    <div class="requisites__item">
-                      <div class="requisites__name">ОКПО:</div>
-                      <div class="requisites__value">79510906</div>
-                    </div>
-                  </div>
-                  <div class="requisites__column">
-                    <div class="requisites__item">
-                      <div class="requisites__name">Наименование банка:</div>
-                      <div class="requisites__value">Филиал «Центральный» Банка ВТБ (ПАО) в г. Москве</div>
-                    </div>
-                    <div class="requisites__item">
-                      <div class="requisites__name">Расчетный счет:</div>
-                      <div class="requisites__value">40702810924250001054</div>
-                    </div>
-                    <div class="requisites__item">
-                      <div class="requisites__name">Корр. счет:</div>
-                      <div class="requisites__value">30101810145250000411</div>
-                    </div>
-                    <div class="requisites__item">
-                      <div class="requisites__name">БИК:</div>
-                      <div class="requisites__value">044525411</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+                      <div class="news-card" href="#">
+                        <div class="news-card__img"><img src="img/card-news__picture__1.png" alt="СЕМГА ЧИЛИ"></div>
+                        <div class="news-card__content">
+                          <div class="news-card__title">СЕМГА ЧИЛИ
+                          </div>
+                          <div class="news-card__info text-block">
+                            <ul> 
+                              <li>1-2 от 850 ₽/кг</li>
+                              <li>2-3 от 930 ₽/кг</li>
+                            </ul>
+                          </div>
+                          <div class="news-card__bottom">
+                            <div class="news-card__date">1 ноября 2023
+                            </div><a class="new-btn new-btn--icon new-btn--blue " href="javascript:void(0);"><span class="new-btn__icon">
+                                        <svg>
+                                          <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
+                                        </svg></span></a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="news-card" href="#">
+                        <div class="news-card__img"><img src="img/card-news__picture__1.png" alt="СЕМГА ЧИЛИ"></div>
+                        <div class="news-card__content">
+                          <div class="news-card__title">СЕМГА ЧИЛИ
+                          </div>
+                          <div class="news-card__info text-block">
+                            <ul> 
+                              <li>1-2 от 850 ₽/кг</li>
+                              <li>2-3 от 930 ₽/кг</li>
+                            </ul>
+                          </div>
+                          <div class="news-card__bottom">
+                            <div class="news-card__date">1 ноября 2023
+                            </div><a class="new-btn new-btn--icon new-btn--blue " href="javascript:void(0);"><span class="new-btn__icon">
+                                        <svg>
+                                          <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
+                                        </svg></span></a>
+                          </div>
+                        </div>
+                      </div>
             </div>
-            <div class="contacts-info__requisites requisites">
-              <div class="requisites__title">Реквизиты <span>ООО "КАЛИНИНГРАД 1"</span></div>
-              <div class="requisites__info">
-                <div class="requisites__item">
-                  <div class="requisites__name">юр. адрес:</div>
-                  <div class="requisites__value">249010 Калужская обл., Боровский р-н, д. Маланьино</div>
-                </div>
-                <div class="requisites__columns">
-                  <div class="requisites__column">
-                    <div class="requisites__item">
-                      <div class="requisites__name">ИНН:</div>
-                      <div class="requisites__value">7724564269</div>
+                    <div class="pagination pagination--start">
+                              <button class="new-btn new-btn--icon new-btn--white pagination__btn pagination__prev" type="button"><span class="new-btn__icon">
+                                  <svg>
+                                    <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
+                                  </svg></span>
+                              </button><a class="pagination__page active" href="javascript:void(0);">1</a><a class="pagination__page" href="javascript:void(0);">2</a><a class="pagination__page" href="javascript:void(0);">3</a><a class="pagination__page" href="javascript:void(0);">4</a><a class="pagination__page" href="javascript:void(0);">5</a><a class="pagination__page" href="javascript:void(0);">6</a>
+                              <button class="new-btn new-btn--icon new-btn--white pagination__btn pagination__next" type="button"><span class="new-btn__icon">
+                                  <svg>
+                                    <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
+                                  </svg></span>
+                              </button>
                     </div>
-                    <div class="requisites__item">
-                      <div class="requisites__name">ОГРН:</div>
-                      <div class="requisites__value">1057749469150</div>
-                    </div>
-                    <div class="requisites__item">
-                      <div class="requisites__name">КПП:</div>
-                      <div class="requisites__value">400301001</div>
-                    </div>
-                    <div class="requisites__item">
-                      <div class="requisites__name">ОКПО:</div>
-                      <div class="requisites__value">79510906</div>
-                    </div>
-                  </div>
-                  <div class="requisites__column">
-                    <div class="requisites__item">
-                      <div class="requisites__name">Наименование банка:</div>
-                      <div class="requisites__value">Филиал «Центральный» Банка ВТБ (ПАО) в г. Москве</div>
-                    </div>
-                    <div class="requisites__item">
-                      <div class="requisites__name">Расчетный счет:</div>
-                      <div class="requisites__value">40702810924250001054</div>
-                    </div>
-                    <div class="requisites__item">
-                      <div class="requisites__name">Корр. счет:</div>
-                      <div class="requisites__value">30101810145250000411</div>
-                    </div>
-                    <div class="requisites__item">
-                      <div class="requisites__name">БИК:</div>
-                      <div class="requisites__value">044525411                            </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
         </section>
         <footer class="footer footer__animation footer__animation--personally js-footer__animation">
