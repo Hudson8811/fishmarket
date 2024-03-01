@@ -1,0 +1,29 @@
+-
+    const defaultVacancyCardProps = {
+        classes: '',
+        title: 'Менеджер по продажам',
+        city: 'Москва',
+        salary: 'от 100 000 руб.',
+    }
+
+mixin vacancy-card(props = defaultVacancyCardProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultVacancyCardProps.classes,
+            title: props.title ? props.title : defaultVacancyCardProps.title,
+            city: props.city ? props.city : defaultVacancyCardProps.city,
+            salary: props.salary ? props.salary : defaultVacancyCardProps.salary,
+        }
+
+    .vacancy-card(class= checkProps.classes)
+        a.vacancy-card__link(href="#")
+        .vacancy-card__header
+            .vacancy-card__title= checkProps.title
+            +new-btn({classes: 'vacancy-card__btn'})
+        .vacancy-card__city
+            svg
+                use(xlink:href=`img/sprites/sprite.svg#header_position`)
+            span= checkProps.city
+        .vacancy-card__salary= checkProps.salary
+
+

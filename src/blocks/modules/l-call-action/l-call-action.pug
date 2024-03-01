@@ -1,12 +1,26 @@
-include ../../components/title/title.pug
-include ../../components/new-btn/new-btn.pug
+-
+	const defaultLCallActionProps = {
+		classes: '',
+		title: 'ОСТАЛИСЬ ВОПРОСЫ? НАПИШИТЕ ИЛИ ЗАКАЖИТЕ ЗВОНОК',
+		btnText: 'Заказать звонок'
+	}
 
-section.l-call-action
-	.container.l-call-action__container
-		+title('h2', 'ОСТАЛИСЬ ВОПРОСЫ? НАПИШИТЕ ИЛИ ЗАКАЖИТЕ ЗВОНОК', 'l-call-action__title')
-		+new-btn({        
-			text: 'Заказать звонок',
-			cMode: 'white',
-			vMode: 'big'
-		})
+mixin l-call-action(props = defaultLCallActionProps)
+	include ../../components/title/title.pug
+	include ../../components/new-btn/new-btn.pug
 
+	-
+		const checkProps = {
+			classes: props.classes ? props.classes : defaultLCallActionProps.classes,
+			title: props.title ? props.title : defaultLCallActionProps.title,
+			btnText: props.btnText ? props.btnText : defaultLCallActionProps.btnText,
+		};
+
+	section.l-call-action
+		.container.l-call-action__container
+			+title('h2', checkProps.title, 'l-call-action__title')
+			+new-btn({        
+				text: checkProps.btnText,
+				cMode: 'white',
+				vMode: 'big'
+			})

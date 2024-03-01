@@ -1,0 +1,85 @@
+.vacancy-card {
+    position: relative;
+    min-height: vw(288);
+    display: flex;
+    flex-direction: column;
+    padding: vw(21) vw(17) vw(28) vw(24);
+    border: 1px solid $greyLight;
+    background-color: $white;
+
+    &:hover {
+        .vacancy-card__btn {
+            background-color: $fontBlack;
+        }
+    }
+
+    &__link {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -5;
+    }
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        gap: vw(20);
+        @include max(md) {
+            
+        } 
+    }
+
+    &__title {
+        margin-top: vw(6);
+        max-width: vw(500);
+        font-size: vw(32);
+        font-weight: 500;
+        line-height: 1.06;
+        color: $fontBlack;
+        -webkit-line-clamp: 2;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        @include max(md) {
+        } 
+    }
+
+    &__city {
+        display: flex;
+        align-items: center;
+        gap: vw(14);
+        margin: vw(29) 0 0;
+        font-size: vw(18);
+        font-weight: 400;
+        line-height: 1.4;
+        color: $fontBlack;
+        svg {
+            width: vw(21);
+            height: vw(27);
+            use {
+                width: vw(21);
+                height: vw(27);
+                fill: $blueLight;
+            }
+        }
+        @include max(md) {
+        }
+    }
+
+    &__salary {
+        margin-top: auto;
+        font-size: vw(24);
+        font-weight: 500;
+        line-height: 0.97;
+        color: $fontBlack;
+    }
+
+    &__btn {
+        svg use {
+            stroke: $white !important;
+        }
+    }
+
+}

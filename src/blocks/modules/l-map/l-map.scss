@@ -17,6 +17,12 @@
             gap: vw2(25);
         }
     }
+    &__left {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+    }
     &__cities {
         position: relative;
         z-index: 5;
@@ -27,6 +33,30 @@
         @include max(md) {
             height: vw2(45);
         }
+    }
+    &__description {
+        margin-top: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: vw(30);
+        width: vw(665);
+        min-height: vw(336);
+        padding: vw(20) vw(35) vw(30);
+        background-color: $white;
+        z-index: 5;
+    }
+    &__title {
+        font-size: vw(60);
+        font-weight: 500;
+        line-height: 1.117;
+        color: $fontBlack;
+    }
+    &__text {
+        font-size: vw(18);
+        font-weight: 400;
+        line-height: 1.389;
+        color: $fontBlack;
     }
     &__city {
         font-size: vw(14);

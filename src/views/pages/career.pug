@@ -1,0 +1,46 @@
+extends ../layouts/default
+include ../helpers/mixins
+
+block variables
+	- const title = "Career Page"
+
+block content
+	//-mixins
+	include ../../blocks/modules/l-intro/l-intro.pug
+	include ../../blocks/modules/l-map/l-map.pug
+	include ../../blocks/modules/l-call-action/l-call-action.pug
+	include ../../blocks/modules/pages/career/career-purpose/career-purpose.pug
+
+	.scroll-page
+		+l-intro({
+			classes: '',
+			breadcrumbs: {
+				classes: 'l-intro__breadcrumbs',
+				colorMode: 'light',
+				items: [
+					{
+						name: 'Главная',
+						link: '#'
+					},
+					{
+						name: 'Карьера  в Sky Fish',
+						link: '#'
+					}
+				]
+			},
+			title: 'Карьера  в Sky Fish',
+			image: 'img/career_intro_bg.png'
+		})
+		+career-purpose()
+		+l-map({
+			desc: true,
+		})
+		include ../../blocks/modules/pages/career/career-photos/career-photos.pug
+		include ../../blocks/modules/pages/career/career-vacancies/career-vacancies.pug
+		+l-call-action({
+			title: 'Ищете работу? Присылайте резюме',
+			btnText: 'Откликнуться'
+		})
+
+		include ../../blocks/modules/footer/footer
+

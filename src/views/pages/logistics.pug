@@ -9,6 +9,7 @@ block content
 	include ../../blocks/modules/l-intro/l-intro.pug
 	include ../../blocks/modules/l-walk/l-walk.pug
 	include ../../blocks/modules/l-map/l-map.pug
+	include ../../blocks/modules/l-call-action/l-call-action.pug
 
 	.scroll-page
 		+l-intro({
@@ -34,8 +35,10 @@ block content
 			image: 'img/logistics_intro.png'
 		})
 		+l-walk()
-		+l-map()
-		include ../../blocks/modules/l-call-action/l-call-action.pug
+		+l-map({
+			controls: true
+		})
+		+l-call-action()
 
 		include ../../blocks/modules/footer/footer
 

@@ -1,0 +1,14 @@
+.career-vacancies {
+    padding: vw(71) 0 vw(91);
+    @include max(md) {
+    }
+    &__search {
+        margin-top: vw(42);
+    }
+    &__cards {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: vw(17) vw(20);
+        margin-top: vw(67);
+    }
+}
