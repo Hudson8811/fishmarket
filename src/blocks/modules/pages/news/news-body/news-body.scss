@@ -4,19 +4,117 @@
         grid-template-columns: repeat(2, minmax(0, 1fr));
         background-color: $greyBorder;
         gap: 1px;
+        @include max(md) {
+            grid-template-columns: minmax(0, 1fr);
+        }
     }
     &__left {
         display: flex;
         flex-direction: column;
         background-color: $white;
         padding: vw(32) 0 vw(89);
+        @include max(md) {
+            padding: vw2(32) 0 vw2(20);
+        }
+    }
+    &__text {
+        padding: 0 vw(25);
+        @include max(md) {
+            padding: 0 vw2(20);
+        }
+        ul {
+            margin: vw(88) 0 vw(73);
+            @include max(md) {
+                margin: vw2(30) 0 vw2(25);
+            }
+        }
     }
     &__slider {
+        margin-top: vw(31);
         padding: vw(124) vw(30) vw(39);
         background-color: $fontBlack;
+        @include max(md) {
+            margin-top: vw2(30);
+            padding: vw2(60) vw2(20) vw2(30);
+        }
+    }
+    &__share {
+        margin-top: vw(156);
+        margin-left: vw(25);
+        @include max(md) {
+            margin-top: vw2(30);
+            margin-left: vw2(20);
+        }
+    }
+    .social-share {     
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: vw(20);
+        column-gap: vw(15);
+        @include max(md) {
+            row-gap: vw2(20);
+            column-gap: vw2(15);
+        }
+        &__title {
+            flex-basis: 100%;
+            font-size: vw(18);
+            font-weight: 400;
+            line-height: 1.389;
+            color: $fontBlack;
+            @include max(md) {
+                font-size: vw2(16);
+            }
+        }
+        &__btn {
+            width: vw(48);
+            height: vw(48);
+            background-color: #D3D3D3;
+            @include max(md) {
+                width: vw2(48);
+                height: vw2(48);
+            }
+            &:hover {
+                background-color: $blueHover;
+            }
+            .new-btn__icon {
+                width: vw(48);
+                height: vw(48);
+                @include max(md) {
+                    width: vw2(48);
+                    height: vw2(48);
+                }
+                svg, svg use {
+                    stroke: none;
+                    width: vw(16) !important;
+                    height: vw(16) !important;
+                    @include max(md) {
+                        width: vw2(16) !important;
+                        height: vw2(16) !important;
+                    }
+                }
+            }
+        }
     }
     &__right {
         background-color: $white;
-        padding: vw(28) 0 vw(89);
+        padding: vw(28) vw(25) vw(89) vw(52);
+        @include max(md) {
+            padding: vw2(30) vw2(20) vw2(30) vw2(20);
+        }
+    }
+    &__offer {
+        font-size: vw(32);
+        font-weight: 500;
+        line-height: 0.97;
+        color: $fontBlack;
+        @include max(md) {
+            font-size: vw2(32);
+        }
+    }
+    &__btn {
+        margin-top: vw(75);
+        @include max(md) {
+            margin-top: vw2(30);
+        }
     }
 }
