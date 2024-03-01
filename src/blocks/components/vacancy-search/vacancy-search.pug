@@ -1,0 +1,24 @@
+mixin vacancy-search(classes='')
+
+    .vacancy-search(class= classes)
+        label.vacancy-search__label
+            input.vacancy-search__input(type="text" placeholder="Поиск")
+        .vacancy-search__tags
+            .vacancy-search__tag.filter-tag
+                .filter-tag__text Москва
+                .filter-tag__delete 
+                    svg
+                        use(xlink:href=`img/sprites/sprite.svg#city__top__close`)
+            .vacancy-search__tag.filter-tag
+                .filter-tag__text От 30 000 &#8381;
+                .filter-tag__delete 
+                    svg
+                        use(xlink:href=`img/sprites/sprite.svg#city__top__close`)
+        +new-btn({
+            classes: 'vacancy-search__filter',
+            tag: 'button',
+            vMode: 'small',
+            text: 'Фильтр',
+            icon: 'false',
+            cMode: 'black',
+        })

@@ -428,7 +428,7 @@
       </div>
     </div>
     <main class="site-main">
-      <div class="scroll-page">
+      <div class="scroll-page" data-animation="careerpage">
               <section class="l-intro" style="background-image: url(img/career_intro_bg.png)">
                 <div class="container l-intro__container">
                   <div class="l-intro__content">
@@ -459,6 +459,31 @@
                   </div>
                 </div>
               </section>
+        <section class="career-numbers" data-js="careerNumbersSection">
+          <div class="career-numbers__cards">
+            <div class="layout--trio">
+              <div class="layout--trio__col js-advantage__col--1">
+                <div class="career-numbers__title">несколько цифр <br>группы компаний</div>
+                <div class="career-numbers__card number-card">
+                  <div class="number-card__num">110+</div>
+                  <div class="number-card__title title__32">сотрудников</div>
+                </div>
+              </div>
+              <div class="layout--trio__col js-advantage__col--2">
+                <div class="career-numbers__card number-card">
+                  <div class="number-card__num">50+</div>
+                  <div class="number-card__title title__32">специальностей</div>
+                </div>
+              </div>
+              <div class="layout--trio__col js-advantage__col--3">
+                <div class="career-numbers__card number-card">
+                  <div class="number-card__num">35-40</div>
+                  <div class="number-card__title title__32">средний возраст</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
               <section class="l-map">
                 <div class="l-map__content">
                   <div class="l-map__left">
@@ -499,7 +524,31 @@
                     <div class="title title--h2 career-vacancies__title">
                       <h2>Наши вакансии</h2>
                     </div>
-            <div class="career-vacancies__search"></div>
+                    <div class="vacancy-search career-vacancies__search">
+                      <label class="vacancy-search__label">
+                        <input class="vacancy-search__input" type="text" placeholder="Поиск">
+                      </label>
+                      <div class="vacancy-search__tags">
+                        <div class="vacancy-search__tag filter-tag">
+                          <div class="filter-tag__text">Москва</div>
+                          <div class="filter-tag__delete"> 
+                            <svg>
+                              <use xlink:href="img/sprites/sprite.svg#city__top__close"></use>
+                            </svg>
+                          </div>
+                        </div>
+                        <div class="vacancy-search__tag filter-tag">
+                          <div class="filter-tag__text">От 30 000 &#8381;</div>
+                          <div class="filter-tag__delete"> 
+                            <svg>
+                              <use xlink:href="img/sprites/sprite.svg#city__top__close"></use>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                            <button class="new-btn new-btn--small new-btn--black vacancy-search__filter" type="button"><span class="new-btn__text">Фильтр</span>
+                            </button>
+                    </div>
             <div class="career-vacancies__cards">
                       <div class="vacancy-card"><a class="vacancy-card__link" href="#"></a>
                         <div class="vacancy-card__header">

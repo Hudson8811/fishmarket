@@ -1,0 +1,79 @@
+.career-numbers {
+    position: relative;
+    height: vw(640);
+    background-image: url(../img/career_numbers_bg.png);
+    background-repeat: no-repeat;
+    background-size: vw(1456) vw(284); 
+    background-position: right vw(-127) bottom vw(106);
+    z-index: 5;
+    &__cards {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 100%;
+        z-index: 10;
+        @include max(md) {
+            position: relative;
+            top: auto;
+            left: auto;
+        }
+        .layout--trio {
+            position: relative;
+            &__col {
+                flex-flow: column nowrap;
+                padding-bottom: vw(0);
+                &:nth-child(1) {
+                    padding-top: vw(0);
+                }
+                &:nth-child(2) {
+                    
+                }
+                &:nth-child(3) {
+                    padding-top: vw(0);   
+                }
+            }
+        }
+    }
+    .number-card {
+        position: relative;
+        display: flex;
+        width: 100%;
+        min-height: vw(640);
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-flow: column nowrap;
+        border: 1px solid rgba(255, 255, 255, 0.11);
+        background: $fontBlack;
+        padding: vw(30) vw(40);
+        @include max(md) {
+            justify-content: flex-start;
+            padding: vw2(20);
+            min-height: vw2(440);
+            padding-bottom: vw2(50);
+        }
+        &__num {
+            color: $blueLight;
+            font-size: vw(112);
+            font-style: normal;
+            font-weight: 500;
+            line-height: 97.228%;
+            text-transform: uppercase; 
+            @include max(md) {
+                font-size: vw2(95);
+                line-height: 1.2;
+                margin-bottom: vw2(40);
+            }              
+        }
+        &__title {
+            margin-top: auto;
+            margin-bottom: vw(37);
+            max-width: vw(357);
+            text-transform: uppercase;
+            @include max(md) {
+                font-size: vw2(50);
+                width: 100%;
+                max-width: 100%;
+            }  
+        }
+    }
+}

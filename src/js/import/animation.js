@@ -42,6 +42,9 @@ function initScrollAnimation(){
 		case "homepage":
 			//анимация главной
 			break;
+		case "careerpage":
+			//анимация главной
+			break;
 		default:
 			//анимация только подвала
 			if ($('.js-footer__animation').length > 0){
@@ -117,6 +120,21 @@ function startAnimation(){
 					});
 				}
 				break;
+			case "careerpage":
+				//анимация страницы Карьера
+				if (window.innerWidth > animationBreakpoint ){
+					careerPageAnimationDesktop();
+					scrollTriggerObject = ScrollTrigger.create({
+						trigger: "[data-js='careerNumbersSection']",
+						//pin: true,
+						markers: true,
+						start: "top bottom",
+						end: "bottom top",
+						scrub: 2,
+						animation: mainTimeline,
+					});
+				}
+				break;
 			default:
 				break;
 		}
@@ -151,8 +169,6 @@ function addFooterAnimationDesktop(){
 	);
 	animationSelectors.push(".footer__title");
 }
-
-
 
 //фунция содержащая анимацию для главной - десктоп
 function homepageAnimationDesktop(){
@@ -344,8 +360,63 @@ function homepageAnimationDesktop(){
 	animationSelectors.push(".footer__title");
 }
 
+//фунция содержащая анимацию для страницы Карьера - десктоп
+function careerPageAnimationDesktop(){
+	//Убираем класс статики с футера
+	//-$('.js-footer__animation').removeClass('footer__animation--personally');
 
 
+	let scHeight = $('.main-site').innerHeight();
+	let footerHeight =  $('.js-footer__animation').innerHeight();
 
+	mainTimeline.fromTo(".js-advantage__col--1", {
+		y: "0%",
+		top: "0%",
+	}, {
+		top: "-30%",
+		y: "-30%",
+		duration: 1,
+		ease: "none",
+	}, "0");
+	animationSelectors.push(".js-advantage__col--1");
 
+	mainTimeline.fromTo(".js-advantage__col--2", {
+		y: "30%",
+		top: "30%",
+	}, {
+		top: "-60%",
+		y: "-60%",
+		duration: 1,
+		ease: "none",
+	}, "<");
+	animationSelectors.push(".js-advantage__col--2");
 
+	mainTimeline.fromTo(".js-advantage__col--3", {
+		y: "60%",
+		top: "60%",
+	}, {
+		top: "-90%",
+		y: "-90%",
+		duration: 1,
+		ease: "none",
+	}, "<");
+	animationSelectors.push(".js-advantage__col--3");
+
+	mainTimeline.fromTo(".footer__menu", {
+		right: "-100%",
+	}, {
+		right: "0%",
+		duration: 1,
+		ease: "none",
+	}, ">-=1");
+	animationSelectors.push(".footer__menu");
+
+	mainTimeline.fromTo(".footer__title", {
+		left: "55%",
+	}, {
+		left: "-100%",
+		duration: 1,
+		ease: "none",
+	}, "<+=0.5");
+	animationSelectors.push(".footer__title");
+}

@@ -11,7 +11,7 @@ block content
 	include ../../blocks/modules/l-call-action/l-call-action.pug
 	include ../../blocks/modules/pages/career/career-purpose/career-purpose.pug
 
-	.scroll-page
+	.scroll-page(data-animation="careerpage")
 		+l-intro({
 			classes: '',
 			breadcrumbs: {
@@ -32,6 +32,7 @@ block content
 			image: 'img/career_intro_bg.png'
 		})
 		+career-purpose()
+		include ../../blocks/modules/pages/career/career-numbers/career-numbers.pug
 		+l-map({
 			desc: true,
 		})

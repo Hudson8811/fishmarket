@@ -1,10 +1,11 @@
 include ../../../../components/title/title.pug
 include ../../../../components/vacancy-card/vacancy-card.pug
+include ../../../../components/vacancy-search/vacancy-search.pug
 
 section.career-vacancies
     .container
         +title('h2', 'Наши вакансии', 'career-vacancies__title')
-        .career-vacancies__search
+        +vacancy-search('career-vacancies__search')
         .career-vacancies__cards
             +vacancy-card()
             +vacancy-card({

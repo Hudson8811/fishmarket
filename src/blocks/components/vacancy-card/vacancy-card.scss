@@ -6,11 +6,9 @@
     padding: vw(21) vw(17) vw(28) vw(24);
     border: 1px solid $greyLight;
     background-color: $white;
-
+    transition: all $tr-time linear;
     &:hover {
-        .vacancy-card__btn {
-            background-color: $fontBlack;
-        }
+        background-color: #F7F7F7;
     }
 
     &__link {
