@@ -1,11 +1,19 @@
 .career-numbers {
     position: relative;
-    height: vw(640);
+    height: vw(520);
     background-image: url(../img/career_numbers_bg.png);
     background-repeat: no-repeat;
     background-size: vw(1456) vw(284); 
     background-position: right vw(-127) bottom vw(106);
     z-index: 5;
+    &__title {
+        padding: 0 0 vw(30) vw(25);
+        font-size: vw(20);
+        font-weight: 600;
+        line-height: 1.2;
+        color: $fontBlack;
+        text-transform: uppercase;
+    }
     &__cards {
         display: flex;
         justify-content: flex-start;
@@ -29,7 +37,7 @@
                     
                 }
                 &:nth-child(3) {
-                    padding-top: vw(0);   
+                    padding-top: vw(0); 
                 }
             }
         }

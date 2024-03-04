@@ -1,0 +1,44 @@
+.input-radio {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: vw(12);
+    &__input {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 0;
+        height: 0;
+        overflow: hidden;
+        opacity: 0;
+        &:checked ~ .input-radio__fake::after {
+            opacity: 1;
+        }
+    }
+    &__fake {
+        position: relative;
+        width: vw(26);
+        height: vw(26);
+        border: 1px solid $greyBorder;
+        border-radius: 100%;
+        &::after {
+            content: "";
+            width: 61.5%;
+            height: 61.5%;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 100%;
+            background-color: $blueLight;
+            opacity: 0;
+            transition: all $tr-time linear; 
+        }
+    }
+    &__text {
+        font-size: vw(18);
+        font-weight: 400;
+        line-height: 1.4;
+        color: $fontBlack;
+    }
+}

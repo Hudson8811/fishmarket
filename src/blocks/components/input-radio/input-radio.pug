@@ -1,0 +1,21 @@
+-
+    const defaultInputRadioProps = {
+        classes: '',
+        name: 'city',
+        value: 'Москва',
+        text: 'Москва',
+    }
+
+mixin input-radio(props = defaultInputRadioProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultInputRadioProps.classes,
+            name: props.name ? props.name : defaultInputRadioProps.name,
+            value: props.value ? props.value : defaultInputRadioProps.value,
+            text: props.text ? props.text : defaultInputRadioProps.text
+        }
+
+    label.input-radio
+        input.input-radio__input(type="radio" name=checkProps.name  value=checkProps.value)
+        span.input-radio__fake
+        span.input-radio__text!= checkProps.text

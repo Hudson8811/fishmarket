@@ -3,7 +3,9 @@ gsap.registerPlugin(ScrollTrigger);
 
 let animationBreakpoint = 992;
 let scrollTriggerObject;
+let scrollTriggerObject2;
 let mainTimeline = gsap.timeline();
+let careerTimeline = gsap.timeline();
 
 let pageAnimationType = null;
 let animationSelectors = [];
@@ -43,7 +45,7 @@ function initScrollAnimation(){
 			//анимация главной
 			break;
 		case "careerpage":
-			//анимация главной
+			//анимация страницы Карьера
 			break;
 		default:
 			//анимация только подвала
@@ -81,8 +83,10 @@ function initScrollAnimation(){
 function resetAnimation(){
 	//сбрасываем объекты ScrollTrigger
 	if (typeof scrollTriggerObject !== "undefined") scrollTriggerObject.kill();
+	if (typeof scrollTriggerObject2 !== "undefined") scrollTriggerObject2.kill();
 	//очищаем таймлайны анимаций
 	mainTimeline.clear();
+	careerTimeline.clear();
 	//очищаем стили добавленные анимациями
 	let uniqueElementsArray = uniqueArray(animationSelectors);
 	let selectorsString = uniqueElementsArray.join(", ");
@@ -125,11 +129,18 @@ function startAnimation(){
 				if (window.innerWidth > animationBreakpoint ){
 					careerPageAnimationDesktop();
 					scrollTriggerObject = ScrollTrigger.create({
-						trigger: "[data-js='careerNumbersSection']",
-						//pin: true,
-						markers: true,
-						start: "top bottom",
+						trigger: "[data-js=careerPurposeSection]",
+						start: "top 90%",
+						endTrigger:"[data-js='careerNumbersSection']",
 						end: "bottom top",
+						scrub: 2,
+						animation: careerTimeline,
+					});
+					scrollTriggerObject2 = ScrollTrigger.create({
+						trigger: ".js-footer__animation",
+						start: "top top",
+						pin: true,
+						end: () => "+=" + addTimeFooter + "%",
 						scrub: 2,
 						animation: mainTimeline,
 					});
@@ -362,14 +373,21 @@ function homepageAnimationDesktop(){
 
 //фунция содержащая анимацию для страницы Карьера - десктоп
 function careerPageAnimationDesktop(){
-	//Убираем класс статики с футера
-	//-$('.js-footer__animation').removeClass('footer__animation--personally');
 
+	//анимация контента
+	careerTimeline.fromTo(".js-career-purpose__content", {
+		y: "100",
+		opacity: "0",
+	}, {
+		opacity: "1",
+		y: "0",
+		duration: 0.3,
+		ease: "none",
+	}, "0");
+	animationSelectors.push(".js-career-purpose__content");
 
-	let scHeight = $('.main-site').innerHeight();
-	let footerHeight =  $('.js-footer__animation').innerHeight();
-
-	mainTimeline.fromTo(".js-advantage__col--1", {
+	//анимация квадратов
+	careerTimeline.fromTo(".js-advantage__col--1", {
 		y: "0%",
 		top: "0%",
 	}, {
@@ -377,10 +395,10 @@ function careerPageAnimationDesktop(){
 		y: "-30%",
 		duration: 1,
 		ease: "none",
-	}, "0");
+	}, ">");
 	animationSelectors.push(".js-advantage__col--1");
 
-	mainTimeline.fromTo(".js-advantage__col--2", {
+	careerTimeline.fromTo(".js-advantage__col--2", {
 		y: "30%",
 		top: "30%",
 	}, {
@@ -391,7 +409,7 @@ function careerPageAnimationDesktop(){
 	}, "<");
 	animationSelectors.push(".js-advantage__col--2");
 
-	mainTimeline.fromTo(".js-advantage__col--3", {
+	careerTimeline.fromTo(".js-advantage__col--3", {
 		y: "60%",
 		top: "60%",
 	}, {
@@ -402,13 +420,14 @@ function careerPageAnimationDesktop(){
 	}, "<");
 	animationSelectors.push(".js-advantage__col--3");
 
+	//анимация футера
 	mainTimeline.fromTo(".footer__menu", {
 		right: "-100%",
 	}, {
 		right: "0%",
 		duration: 1,
 		ease: "none",
-	}, ">-=1");
+	}, "0");
 	animationSelectors.push(".footer__menu");
 
 	mainTimeline.fromTo(".footer__title", {
@@ -417,6 +436,6 @@ function careerPageAnimationDesktop(){
 		left: "-100%",
 		duration: 1,
 		ease: "none",
-	}, "<+=0.5");
+	}, "<+=0.1");
 	animationSelectors.push(".footer__title");
 }

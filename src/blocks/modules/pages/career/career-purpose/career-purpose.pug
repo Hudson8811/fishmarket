@@ -1,28 +1,28 @@
 -
-    const defaultCareerPuposeProps = {
-        classes: '',
-        title: 'мы стремимся к тому, чтобы каждый чувствовал себя ценным',
-        text: 'На протяжении многих лет, мы стремимся создать благоприятную атмосферу, где каждый сотрудник чувствует себя частью команды и гордится своим вкладом в общее дело.',
-        image: 'img/career_purpose.png'
-    }
+	const defaultCareerPuposeProps = {
+		classes: '',
+		title: 'мы стремимся к тому, чтобы каждый чувствовал себя ценным',
+		text: 'На протяжении многих лет, мы стремимся создать благоприятную атмосферу, где каждый сотрудник чувствует себя частью команды и гордится своим вкладом в общее дело.',
+		image: 'img/career_purpose.png'
+	}
 
 mixin career-purpose(props = defaultCareerPuposeProps)
-    include ../../../../components/title/title.pug
+	include ../../../../components/title/title.pug
 
-    -
-        const checkProps = {
-            classes: props.classes ? props.classes : defaultCareerPuposeProps.classes,
-            title: props.title ? props.title : defaultCareerPuposeProps.title,
-            text: props.text ? props.text : defaultCareerPuposeProps.text,
-            image: props.image ? props.image : defaultCareerPuposeProps.image,
-        };
+	-
+		const checkProps = {
+			classes: props.classes ? props.classes : defaultCareerPuposeProps.classes,
+			title: props.title ? props.title : defaultCareerPuposeProps.title,
+			text: props.text ? props.text : defaultCareerPuposeProps.text,
+			image: props.image ? props.image : defaultCareerPuposeProps.image,
+		};
 
-    section.career-purpose
-        .container.career-purpose__container
-            .career-purpose__left
-                +title('h2', checkProps.title, 'career-purpose__title')
-            .career-purpose__right
-                .career-purpose__img
-                    img(src=checkProps.image alt=src=checkProps.title)
-                .career-purpose__text!= checkProps.text
+	section.career-purpose(data-js="careerPurposeSection")
+		.container.career-purpose__container.js-career-purpose__content
+			.career-purpose__left
+				+title('h2', checkProps.title, 'career-purpose__title')
+			.career-purpose__right
+				.career-purpose__img
+					img(src=checkProps.image alt=src=checkProps.title)
+				.career-purpose__text!= checkProps.text
 

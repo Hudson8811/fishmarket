@@ -1,0 +1,15 @@
+.input-range {
+    display: flex;
+    flex-direction: column;
+    gap: vw(10);
+    &__fake {
+        width: 100%;
+    }
+    &__inputs {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__input {
+        width: calc((100% - vw(20)) / 2);
+    }
+}

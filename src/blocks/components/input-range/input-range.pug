@@ -1,0 +1,23 @@
+-
+    const defaultInputRangeProps = {
+        classes: '',
+        text: 'Заработная плата',
+        min: 0,
+        max: 200000,
+    }
+
+mixin input-range(props = defaultInputRangeProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultInputRangeProps.classes,
+            text: props.text ? props.text : defaultInputRangeProps.text,
+            min: props.min ? props.min : defaultInputRangeProps.min,
+            max: props.max ? props.max : defaultInputRangeProps.max,
+        }
+
+    label.input-range(data-js='input-range' data-min=checkProps.min data-max=checkProps.max)
+        span.input-range__text!= checkProps.text
+        span.input-range__fake.js-input-range__fake
+        span.input-range__inputs
+            input.input-range__input.input-range__input--min.js-handle__min(type="text" value="")
+            input.input-range__input.input-range__input--max.js-handle__max(type="text" value="")

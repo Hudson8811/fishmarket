@@ -203,7 +203,9 @@
             pointer-events: none;
         }
     }
-
+    .ymaps-2-1-79-map-copyrights-promo, .ymaps-2-1-79-copyright {
+        display: none;
+    }
 }
 
 .l-map.l-map--first {

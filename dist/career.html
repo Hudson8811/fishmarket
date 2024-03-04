@@ -446,8 +446,8 @@
                   </div>
                 </div>
               </section>
-              <section class="career-purpose">
-                <div class="container career-purpose__container">
+              <section class="career-purpose" data-js="careerPurposeSection">
+                <div class="container career-purpose__container js-career-purpose__content">
                   <div class="career-purpose__left">
                           <div class="title title--h2 career-purpose__title">
                             <h2>мы стремимся к тому, чтобы каждый чувствовал себя ценным</h2>
@@ -524,12 +524,12 @@
                     <div class="title title--h2 career-vacancies__title">
                       <h2>Наши вакансии</h2>
                     </div>
-                    <div class="vacancy-search career-vacancies__search">
+                    <div class="vacancy-search career-vacancies__search" data-js="vacancySearch">
                       <label class="vacancy-search__label">
                         <input class="vacancy-search__input" type="text" placeholder="Поиск">
                       </label>
                       <div class="vacancy-search__tags">
-                        <div class="vacancy-search__tag filter-tag">
+                        <div class="vacancy-search__tag filter-tag" data-js="vacancySearchTag">
                           <div class="filter-tag__text">Москва</div>
                           <div class="filter-tag__delete"> 
                             <svg>
@@ -537,7 +537,7 @@
                             </svg>
                           </div>
                         </div>
-                        <div class="vacancy-search__tag filter-tag">
+                        <div class="vacancy-search__tag filter-tag" data-js="vacancySearchTag">
                           <div class="filter-tag__text">От 30 000 &#8381;</div>
                           <div class="filter-tag__delete"> 
                             <svg>
@@ -546,8 +546,36 @@
                           </div>
                         </div>
                       </div>
-                            <button class="new-btn new-btn--small new-btn--black vacancy-search__filter" type="button"><span class="new-btn__text">Фильтр</span>
-                            </button>
+                      <div class="vacancy-search__filter search-filter">
+                              <button class="new-btn new-btn--small new-btn--black search-filter__open" type="button" data-js="searchFilterOpen"><span class="new-btn__text">Фильтр</span><span class="new-btn__icon">
+                                  <svg>
+                                    <use xlink:href="img/sprites/sprite.svg#select_arrow"></use>
+                                  </svg></span>
+                              </button>
+                        <div class="search-filter__params">
+                          <div class="search-filter__fields">
+                            <div class="search-filter__param search-filter__param--city">
+                              <div class="search-filter__name">Город</div>
+                                      <label class="input-radio">
+                                        <input class="input-radio__input" type="radio" name="city" value="Москва"><span class="input-radio__fake"></span><span class="input-radio__text">Москва</span>
+                                      </label>
+                                      <label class="input-radio">
+                                        <input class="input-radio__input" type="radio" name="city" value="Калининград"><span class="input-radio__fake"></span><span class="input-radio__text">Калининград</span>
+                                      </label>
+                            </div>
+                            <div class="search-filter__param search-filter__param--salary">
+                                      <label class="input-range" data-js="input-range" data-min="0" data-max="200000"><span class="input-range__text">Заработная плата</span><span class="input-range__fake js-input-range__fake"></span><span class="input-range__inputs">
+                                          <input class="input-range__input input-range__input--min js-handle__min" type="text" value="">
+                                          <input class="input-range__input input-range__input--max js-handle__max" type="text" value=""></span></label>
+                            </div>
+                          </div>
+                                <button class="new-btn new-btn--small new-btn--black search-filter__apply" type="button" data-js="searchFilterApply"><span class="new-btn__text">Применить</span><span class="new-btn__icon">
+                                    <svg>
+                                      <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
+                                    </svg></span>
+                                </button>
+                        </div>
+                      </div>
                     </div>
             <div class="career-vacancies__cards">
                       <div class="vacancy-card"><a class="vacancy-card__link" href="#"></a>
