@@ -5,31 +5,21 @@ mixin vacancy-search(classes='')
     .vacancy-search(class= classes data-js="vacancySearch")
         label.vacancy-search__label
             input.vacancy-search__input(type="text" placeholder="Поиск")
-        .vacancy-search__tags
-            .vacancy-search__tag.filter-tag(data-js="vacancySearchTag")
-                .filter-tag__text Москва
-                .filter-tag__delete 
-                    svg
-                        use(xlink:href=`img/sprites/sprite.svg#city__top__close`)
-            .vacancy-search__tag.filter-tag(data-js="vacancySearchTag")
-                .filter-tag__text От 30 000 &#8381;
-                .filter-tag__delete 
-                    svg
-                        use(xlink:href=`img/sprites/sprite.svg#city__top__close`)
-        .vacancy-search__filter.search-filter
+        .vacancy-search__tags(data-js="vacancySearchTags")
+        .vacancy-search__filter.search-filter(data-js="searchFilter")
             +new-btn({
                 classes: 'search-filter__open',
                 tag: 'button',
                 vMode: 'small',
                 text: 'Фильтр',
                 icon: 'true',
-                iconName: 'select_arrow',
+                iconName: 'arrow_select',
                 cMode: 'black',
             })(data-js='searchFilterOpen')
             .search-filter__params
                 .search-filter__fields
                     .search-filter__param.search-filter__param--city
-                        .search-filter__name Город
+                        .search-filter__subtitle Город
                         +input-radio()
                         +input-radio({
                             value: 'Калининград',
@@ -44,5 +34,5 @@ mixin vacancy-search(classes='')
                     vMode: 'small',
                     text: 'Применить',
                     icon: 'true',
-                    cMode: 'black',
+                    cMode: 'blue',
                 })(data-js='searchFilterApply')

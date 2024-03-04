@@ -3,6 +3,9 @@
     display: flex;
     align-items: center;
     gap: vw(12);
+    @include max(md) {
+        gap: vw2(12);
+    }
     &__input {
         position: absolute;
         left: 0;
@@ -21,6 +24,10 @@
         height: vw(26);
         border: 1px solid $greyBorder;
         border-radius: 100%;
+        @include max(md) {
+            width: vw2(26);
+            height: vw2(26);
+        }
         &::after {
             content: "";
             width: 61.5%;
@@ -40,5 +47,8 @@
         font-weight: 400;
         line-height: 1.4;
         color: $fontBlack;
+        @include max(md) {
+            font-size: vw2(18);
+        }
     }
 }

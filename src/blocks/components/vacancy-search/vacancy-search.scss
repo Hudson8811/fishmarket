@@ -2,11 +2,17 @@
     display: flex;
     align-items: stretch;
     border: 1px solid #CDD1D2;
+    @include max(md) {
+        flex-wrap: wrap;
+    }
     &__label {
         flex-basis: auto;
         flex-shrink: 1;
         flex-grow: 1;
         padding: vw(14);
+        @include max(md) {
+            padding: vw2(14);
+        }
     }
     &__input {
         width: 100%;
@@ -17,6 +23,9 @@
         font-weight: 400;
         line-height: 1.389;
         color: $fontBlack;
+        @include max(md) {
+            font-size: vw2(14);
+        }
     }
     &__tags {
         display: flex;
@@ -28,6 +37,10 @@
         flex-grow: 1;
         max-width: fit-content;
         padding: vw(13.5);
+        @include max(md) {
+            gap: vw2(5);
+            padding: vw2(7);
+        }
     }
     .filter-tag {
         display: flex;
@@ -36,12 +49,19 @@
         gap: vw(13);
         padding: vw(11) vw(13);
         background-color: $blueLight;
+        @include max(md) {
+            gap: vw2(7);
+            padding: vw2(5) vw2(7);
+        }
         &__text {
             color: $white;
             font-size: vw(18);
             font-weight: 400;
             line-height: 1.4;
             white-space: nowrap;
+            @include max(md) {
+                font-size: vw2(12);
+            }
         }
         &__delete {
             display: flex;
@@ -51,10 +71,16 @@
             flex-shrink: 0;
             flex-grow: 0;
             cursor: pointer;
+            @include max(md) {
+                flex-basis: vw2(11);
+            }
             svg, svg use {
                 width: vw(22);
                 height: vw(22);
-                fill: red;
+                @include max(md) {
+                    width: vw2(11);
+                    height: vw2(11);
+                }
             }
         }
     }
@@ -62,24 +88,89 @@
         flex-basis: vw(295);
         flex-shrink: 0;
         flex-grow: 0;
+        @include max(md) {
+            flex-basis: 100%;
+        }
     }
     .search-filter {
         position: relative;
+        &__open {
+            .new-btn__icon svg use {
+                   stroke: none !important;
+                   fill: $blueLight !important;
+                   transition: all $tr-time linear;
+               }
+
+            &:hover {
+                .new-btn__icon svg use {
+                        stroke: none !important;
+                        fill: $white !important;
+                } 
+            }
+        }
         &__params {
             position: absolute;
             top: 100%;
             left: 0;
             width: calc(100% + 1px);
+            height: auto;
+            max-height: 0;
             display: flex;
             flex-direction: column;
             background-color: $white;
             z-index: 10;
+            overflow: hidden;
+            transition: max-height $tr-time linear;
         }
         &__fields {
-            padding: vw(27);
+            padding: vw(20);
             border-left: 1px solid $greyBorder;
             border-right: 1px solid $greyBorder;
+            display: flex;
+            flex-direction: column;
+            gap: vw(24);
+            @include max(md) {
+                padding: vw2(10);
+                gap: vw2(12);
+            }
         }
+        &__param {
+            display: flex;
+            flex-direction: column;
+            gap: vw(10);
+            @include max(md) {
+                gap: vw2(10);
+            }
+        }
+        &__subtitle {
+            font-size: vw(18);
+            font-weight: 400;
+            line-height: 1.4;
+            color: $fontBlack;
+            @include max(md) {
+                font-size: vw2(18);
+            }
+        }
+        &__apply {
+            .new-btn__icon svg use {
+                stroke: $white !important;
+            }
+        }
+    }
+    .search-filter.is-open {
+        .search-filter__params {
+            max-height: vw(350);
+            @include max(md) {
+                max-height: vw2(320);
+            }
+        }
+        .search-filter__open {
+            .new-btn__icon {
+                transition: transform 0.1s linear;
+                  transform: rotate(180deg);
+            }
+        }
+
     }
 
 }

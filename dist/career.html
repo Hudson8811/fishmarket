@@ -528,34 +528,17 @@
                       <label class="vacancy-search__label">
                         <input class="vacancy-search__input" type="text" placeholder="Поиск">
                       </label>
-                      <div class="vacancy-search__tags">
-                        <div class="vacancy-search__tag filter-tag" data-js="vacancySearchTag">
-                          <div class="filter-tag__text">Москва</div>
-                          <div class="filter-tag__delete"> 
-                            <svg>
-                              <use xlink:href="img/sprites/sprite.svg#city__top__close"></use>
-                            </svg>
-                          </div>
-                        </div>
-                        <div class="vacancy-search__tag filter-tag" data-js="vacancySearchTag">
-                          <div class="filter-tag__text">От 30 000 &#8381;</div>
-                          <div class="filter-tag__delete"> 
-                            <svg>
-                              <use xlink:href="img/sprites/sprite.svg#city__top__close"></use>
-                            </svg>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="vacancy-search__filter search-filter">
+                      <div class="vacancy-search__tags" data-js="vacancySearchTags"></div>
+                      <div class="vacancy-search__filter search-filter" data-js="searchFilter">
                               <button class="new-btn new-btn--small new-btn--black search-filter__open" type="button" data-js="searchFilterOpen"><span class="new-btn__text">Фильтр</span><span class="new-btn__icon">
                                   <svg>
-                                    <use xlink:href="img/sprites/sprite.svg#select_arrow"></use>
+                                    <use xlink:href="img/sprites/sprite.svg#arrow_select"></use>
                                   </svg></span>
                               </button>
                         <div class="search-filter__params">
                           <div class="search-filter__fields">
                             <div class="search-filter__param search-filter__param--city">
-                              <div class="search-filter__name">Город</div>
+                              <div class="search-filter__subtitle">Город</div>
                                       <label class="input-radio">
                                         <input class="input-radio__input" type="radio" name="city" value="Москва"><span class="input-radio__fake"></span><span class="input-radio__text">Москва</span>
                                       </label>
@@ -569,7 +552,7 @@
                                           <input class="input-range__input input-range__input--max js-handle__max" type="text" value=""></span></label>
                             </div>
                           </div>
-                                <button class="new-btn new-btn--small new-btn--black search-filter__apply" type="button" data-js="searchFilterApply"><span class="new-btn__text">Применить</span><span class="new-btn__icon">
+                                <button class="new-btn new-btn--small new-btn--blue search-filter__apply" type="button" data-js="searchFilterApply"><span class="new-btn__text">Применить</span><span class="new-btn__icon">
                                     <svg>
                                       <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
                                     </svg></span>

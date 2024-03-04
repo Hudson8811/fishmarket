@@ -2,11 +2,16 @@
     padding: vw(35) 0;
     overflow: hidden;
     @include max(md) {
+        padding: vw2(105) 0 vw2(35);
     }
 
     &__slide {
         width: vw(653);
         height: vw(427);
+        @include max(md) {
+            width: vw2(400);
+            height: vw2(262);
+        }
     }
 
     &__slider {
@@ -61,12 +66,15 @@
         opacity: 0;
         &.swiper-button-disabled {
             opacity: 0;
+            @include max(md) {
+                opacity: 0.35;
+            }
         }
         @include max(md) {
             width: vw2(50);
             height: vw2(50);
             opacity: 1;
-            top: vw2(-70);
+            top: vw2(-50);
         } 
         &::after {
             content: none;

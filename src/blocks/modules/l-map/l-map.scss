@@ -45,18 +45,30 @@
         padding: vw(20) vw(35) vw(30);
         background-color: $white;
         z-index: 5;
+        @include max(md) {
+            gap: vw2(20);
+            width: vw2(300);
+            min-height: vw2(200);
+            padding: vw2(10) vw2(20) vw2(15);
+        }
     }
     &__title {
         font-size: vw(60);
         font-weight: 500;
         line-height: 1.117;
         color: $fontBlack;
+        @include max(md) {
+            font-size: vw2(22);
+        }
     }
     &__text {
         font-size: vw(18);
         font-weight: 400;
         line-height: 1.389;
         color: $fontBlack;
+        @include max(md) {
+            font-size: vw2(14);
+        }
     }
     &__city {
         font-size: vw(14);

@@ -6,6 +6,10 @@
     background-size: vw(1456) vw(284); 
     background-position: right vw(-127) bottom vw(106);
     z-index: 5;
+    @include max(md) {
+        height: auto;
+        background-image: none;
+    }
     &__title {
         padding: 0 0 vw(30) vw(25);
         font-size: vw(20);
@@ -13,6 +17,10 @@
         line-height: 1.2;
         color: $fontBlack;
         text-transform: uppercase;
+        @include max(md) {
+            padding: 0 0 vw2(30) vw2(20);
+            font-size: vw2(32);
+        }
     }
     &__cards {
         display: flex;
@@ -32,9 +40,6 @@
                 padding-bottom: vw(0);
                 &:nth-child(1) {
                     padding-top: vw(0);
-                }
-                &:nth-child(2) {
-                    
                 }
                 &:nth-child(3) {
                     padding-top: vw(0); 

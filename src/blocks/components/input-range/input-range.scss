@@ -2,8 +2,42 @@
     display: flex;
     flex-direction: column;
     gap: vw(10);
+    @include max(md) {
+        gap: vw2(10);
+    }
+    &__text {
+        font-size: vw(18);
+        font-weight: 400;
+        line-height: 1.4;
+        color: $fontBlack;
+        @include max(md) {
+            font-size: vw2(18);
+        }
+    }
     &__fake {
-        width: 100%;
+        width: calc(100% - vw(20));
+        margin: 0 auto;
+        @include max(md) {
+            width: calc(100% - vw2(20));
+        }
+        &.ui-widget.ui-widget-content {
+            border-color: $greyBorder;
+        }
+        .ui-slider-range {
+            background-color: $blueLight;
+        }
+        .ui-slider-handle {
+            border-radius: 100%;
+            background-color: $blueHover;
+            border-color: $greyBorder;
+            outline: none;
+            width: vw(20);
+            height: vw(20);
+            @include max(md) {
+                width: vw2(20);
+                height: vw2(20);
+            }
+        }
     }
     &__inputs {
         display: flex;
@@ -11,5 +45,19 @@
     }
     &__input {
         width: calc((100% - vw(20)) / 2);
+        padding: vw(12);
+        outline: none;
+        border: 0.95px solid #EFEFEF;
+        border-radius: vw(6);
+        font-size: vw(14);
+        font-weight: 400;
+        line-height: 1.385;
+        color: $fontBlack;
+        @include max(md) {
+            width: calc((100% - vw2(20)) / 2);
+            padding: vw2(12);
+            border-radius: vw2(6);
+            font-size: vw2(14);
+        }
     }
 }

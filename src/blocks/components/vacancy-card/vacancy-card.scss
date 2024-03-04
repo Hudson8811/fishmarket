@@ -7,6 +7,10 @@
     border: 1px solid $greyLight;
     background-color: $white;
     transition: all $tr-time linear;
+    @include max(md) {
+        min-height: vw2(200);
+        padding: vw2(21) vw2(17) vw2(28) vw2(24);  
+    } 
     &:hover {
         background-color: #F7F7F7;
     }
@@ -23,9 +27,10 @@
     &__header {
         display: flex;
         justify-content: space-between;
+        align-items: flex-start;
         gap: vw(20);
         @include max(md) {
-            
+            gap: vw2(20); 
         } 
     }
 
@@ -41,6 +46,9 @@
         -webkit-box-orient: vertical;
         overflow: hidden;
         @include max(md) {
+            margin-top: vw2(6);
+            max-width: vw2(370);
+            font-size: vw2(20);
         } 
     }
 
@@ -56,13 +64,24 @@
         svg {
             width: vw(21);
             height: vw(27);
+            @include max(md) {
+                width: vw2(13);
+                height: vw2(16);
+            }
             use {
                 width: vw(21);
                 height: vw(27);
+                @include max(md) {
+                    width: vw2(12);
+                    height: vw2(16);
+                }
                 fill: $blueLight;
             }
         }
         @include max(md) {
+            gap: vw2(14);
+            margin: vw2(15) 0 0;
+            font-size: vw2(16);
         }
     }
 
@@ -72,9 +91,21 @@
         font-weight: 500;
         line-height: 0.97;
         color: $fontBlack;
+        @include max(md) {
+            font-size: vw2(16);
+        }
     }
 
     &__btn {
+        @include max(md) {
+            width: vw2(50) !important;
+            height: vw2(50) !important;
+            .new-btn__icon {
+                width: vw2(50) !important;
+                height: vw2(50) !important; 
+            }
+        }
+
         svg use {
             stroke: $white !important;
         }

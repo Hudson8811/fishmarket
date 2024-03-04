@@ -1,32 +1,42 @@
 .career-purpose {
     padding: vw(25) 0;
     @include max(md) {
+        padding: vw2(25) 0;
     }
 
     &__container {
         display: flex;
         justify-content: space-between;
         @include max(md) {
+            flex-direction: column;
         }
     }
 
     &__left {
         flex-basis: vw(1013);
+        @include max(md) {
+            flex-basis: auto;
+        }
     }
 
     &__title {
         font-size: vw(72);
-        @include max(md) {
-        }
     }
 
     &__right {
         flex-basis: vw(614);
+        @include max(md) {
+            flex-basis: auto;
+        }
     }
 
     &__img {
         width: 100%;
         height: vw(403);
+        @include max(md) {
+            height: vw2(350);
+            margin-top: vw2(30);
+        }
         img {
             width: 100%;
             height: 100%;
@@ -42,5 +52,10 @@
         line-height: 1;
         letter-spacing: -0.03em;
         color: $fontBlack;
+        @include max(md) {
+            margin-top: vw2(30);
+            max-width: 100%;
+            font-size: vw2(24);
+        }
     }
 }
