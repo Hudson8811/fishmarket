@@ -20,12 +20,39 @@ section.cart-intro
 			]
 		})
 
-		+title("h1", "Результаты поиска", "cart-intro__title")
-		.cart-intro__list
-			.cart-intro__cards
-				+cart-card()
-				+cart-card()
-				+cart-card()
-				+cart-card()
-				+cart-card()
-				+cart-card()
+		.cart-intro__content
+			.cart-intro__body
+				.cart-intro__header
+					+title("h1", "Корзина", "cart-intro__title")
+					+new-btn({
+						classes: 'cart-intro__clear',
+						tag: 'button',
+						vMode: 'small',
+						text: 'Очистить',
+						iconName: 'close_for_sprite',
+						cMode: 'transparent',
+					})
+				.cart-intro__cards
+					+cart-card()
+					+cart-card()
+					+cart-card()
+					+cart-card()
+					+cart-card()
+					+cart-card()
+			.cart-intro__sidebar.sidebar
+				.cart-intro__results.cart-result
+					.cart-result__info
+						.cart-result__title Итого:
+						.cart-result__summ 9 999 999 &#8381;
+						.cart-result__vat Включая НДС: 0 &#8381;
+					+new-btn({
+						classes: 'cart-result__offer',
+						tag: 'button',
+						vMode: 'small',
+						text: 'получить персональное предложение',
+						iconName: 'arrow_btn',
+						cMode: 'blue',
+					})
+				.cart-intro__banner
+					a(href='#')
+						img(src="img/cart_banner.png" alt="banner")

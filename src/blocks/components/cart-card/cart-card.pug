@@ -1,7 +1,7 @@
 -
 	const defaultCartCardProps = {
 		classes: '',
-		title: 'Семга (лосось) потр.с/г 2-3 ord охлажденная',
+		title: 'Семга (лосось) потр.с/г 2-3 ord<br>охлажденная',
 		image: 'img/product_card_salmon.png',
 	}
 
@@ -19,13 +19,13 @@ mixin cart-card(props = defaultCartCardProps)
 		.cart-card__title!= checkProps.title
 		.cart-card__controls
 			include ../amount-input/amount-input.pug
-			.cart-card__price 500 Р
+			.cart-card__price 1 600 000 руб./кг
 		+new-btn({
 			classes: 'cart-card__delete',
 			tag: 'button',
 			vMode: 'icon',
 			icon: 'true',
-			iconName: 'arrow_btn',
+			iconName: 'city__top__close',
 			cMode: 'blue',
 		})
 

@@ -1,0 +1,38 @@
+include ../../../../components/l-modal/l-modal
+	.mob-menu__question
+		.mob-menu__question__top 
+			.mob-menu__question__top__title
+				!="ОСТАЛИСЬ ВОПРОСЫ? НАПИШИТЕ ИЛИ ЗАКАЖИТЕ ЗВОНОК"
+			.mob-menu__question__top__close
+				svg
+				use(xlink:href=`img/sprites/sprite.svg#header_close`)
+
+		form(action="").contacts__form  
+		.contacts__form__input-block.error
+			input(type="text" name="").contacts__form__input.js-mask-name.text__13
+			.contacts__form__input-block__name 	Имя*
+			.contacts__form__input-block__error Некорректное имя
+		.contacts__form__input-block.error
+			input(type="tel" name="").contacts__form__input.js-mask-phone
+			.contacts__form__input-block__name Телефон
+			.contacts__form__input-block__error Некорректный телефон
+		.contacts__form__input-block.error
+			input(type="email" name="").contacts__form__input.text__13
+			.contacts__form__input-block__name Почта
+			.contacts__form__input-block__error Некорректная почта
+
+		.contacts__form__input-block
+			textarea(name="").contacts__form__input.text__13
+			.contacts__form__input-block__name Комментарий
+			.contacts__form__input-block__error
+		.contacts__form__personal-data.contacts__form__input-block.error 
+			.checkbox
+			label
+				input.custom-checkbox(type="checkbox" name="personal-data" value="indigo")
+				!= "Согласие на обработку персональных данных"
+			.contacts__form__input-block__error обязательно нужно согласиться
+		.mob-menu__question__bottom
+		.mob-menu__question__bottom__text Отправить
+		.mob-menu__question__bottom__row
+			svg
+			use(xlink:href=`img/sprites/sprite.svg#arrow_btn`)

@@ -1,163 +1,137 @@
 .cart-intro {
+    background: $greyBg;
     padding-top: vw(114);
-    padding-bottom: vw(62);
+    padding-bottom: vw(101);
     @include max(md) {
-        padding-top: vw2(90);
-        padding-bottom: vw2(40);
+
     } 
     &__breadcrumbs {
 		padding-left: vw(8);
 	}
-    &__search {
-        position: relative;
-        width: 100%;
-        visibility: visible;
-        margin-top: vw(151);
-        height: vw(95);
-        z-index: 5;
+    &__content {
+        max-width: 100%;
+        overflow: hidden;
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch;
+        gap: vw(20);
+        margin-top: vw(137);
         @include max(md) {
-            margin-top: vw2(51);
-            height: vw2(90);
-        }
-        .search__content {
-            height: vw(65);
-            padding-bottom: vw(20);
-            border: none;
-            border-bottom: 1px solid $greyLight;
-            @include max(md) {
-                height: vw2(60);
-                padding-bottom: vw2(10);
-            }
-        }
-        .search__inter {
-            display: block;
-            @include max(md) {
-                flex-shrink: 1;
-                flex-grow: 1;
-            }
-            input {
-                font-size: vw(70);
-                font-weight: 400;
-                line-height: 1;
-                text-transform: none;
-                @include max(md) {
-                    font-size: vw2(40);
-                }
-                &::placeholder {
-                    font-size: vw(70);
-                    text-transform: none;
-                    @include max(md) {
-                        font-size: vw2(40);
-                    }
-                }
-            }
-        }
-        .search__select {
-            display: block;
-        }
-        .search__btn {
-            display: flex;
-            width: vw(443);
-            background: $fontBlack;
-            cursor: pointer;
-            @include max(md) {
-                min-width: vw2(150);
-                flex-shrink: 0;
-                flex-basis: 0;
-                padding-left: vw2(10);
-                padding-right: vw2(10);
-            }
-            .search__btn__text {
-                @include max(md) {
-                    font-size: vw2(14);
-                }
-            }
-            .search__btn__row {
-                svg, svg use {
-                    width: vw2(11);
-                    height: vw2(9);
-                }
-            }
-            &:hover {
-                background-color: $blueHover;
-            }
         }
     }
-    &__list {
+    &__body {
+        flex-basis: auto;
+        flex-shrink: 1;
+        flex-grow: 1;
+        @include max(md) {
+        }
+    }
+    &__header {
         display: flex;
         justify-content: space-between;
         align-items: flex-end;
-        flex-wrap: wrap;
-        margin-top: vw(156);
-        @include max(md) {
-            margin-top: vw2(56);
-        }
+        gap: vw(50);
     }
     &__title {
         color: $fontBlack;
-        max-width: 50%;
-        font-size: vw(32);
+        flex-basis: auto;
+        flex-shrink: 1;
+        flex-grow: 1;
+        font-size: vw(45);
         line-height: 1;
         @include max(md) {
             max-width: 100%;
             font-size: vw2(32);
         } 
     }
-    &__select {
-        flex-basis: vw(200);
-        max-width: vw(200);
+    &__clear {
+        flex-basis: vw(105);
         flex-shrink: 0;
         flex-grow: 0;
-        margin-bottom: 0;
-        @include max(md) {
-            margin-top: vw2(20);
-            flex-basis: vw2(250);
-            max-width: vw2(250);
-            margin-left: auto;
-        }
-        .select2-selection.select2-selection--single {
-            padding-top: 0;
-            min-height: vw(15);
-            padding-bottom: vw(5);
-            height: auto;
-            border-bottom: none;
-            @include max(md) {
-                padding-top: 0;
-                min-height: vw2(15);
-                padding-bottom: vw2(5);
+        padding: 0;
+        font-size: vw(14);
+        color: $fontBlack;
+        transition: all $tr-time linear;
+        .new-btn__icon {
+            width: vw(20);
+            height: vw(20);
+            svg, svg use {
+                width: vw(20);
+                height: vw(20);
+                fill: $fontBlack !important;
+                stroke: $fontBlack !important;
+                transition: all $tr-time linear;
             }
-            &:hover {
-                border-bottom: none;
-            }
-            .select2-selection__rendered {
-                font-size: vw(12);
-                text-transform: uppercase;
-                font-weight: 600;
-                line-height: 1.2;
-                text-align: end;
-                @include max(md) {
-                    font-size: vw2(12)
+        } 
+        &:hover {
+            color: $blueHover;
+            .new-btn__icon {
+                svg, svg use {
+                    fill: $blueHover !important;
+                    stroke: $blueHover !important;
                 }
-            }
-            .select2-selection__arrow {
-                top: 51%;
             }
         }
     }
     &__cards {
-        flex-basis: 100%;
-        max-width: 100%;
         display: flex;
         flex-direction: column;
-        row-gap: vw(29);
-        margin-top: vw(20);
-        @include max(md) {
-            row-gap: vw2(24);
-            margin-top: vw2(10);
+        margin-top: vw(24);
+    }
+
+    &__sidebar {
+        flex-basis: vw(453);
+        flex-shrink: 0;
+        flex-grow: 0;
+        padding-top: vw(69);
+        height: 100%;
+        overflow: hidden;
+    }
+
+    .cart-result {
+        background-color: $white;
+        &__info {
+            padding: vw(15) vw(12);
+        }
+        &__title {
+            font-size: vw(18);
+            font-weight: 600;
+            line-height: 1.222;
+            color: $fontBlack;
+        }
+        &__summ {
+            margin-top: vw(6);
+            font-size: vw(40);
+            font-weight: 500;
+            line-height: 0.97;
+            color: $fontBlack;
+        }
+        &__vat {
+            margin-top: vw(6);
+            font-size: vw(14);
+            font-weight: 600;
+            line-height: 1.222;
+            color: $greyText;
+        }
+        &__offer {
+            margin-top: 50px;
+            .new-btn__icon {
+                svg, svg use {
+                    fill: $white;
+                    stroke: $white;
+                }
+            }
         }
     }
 
-    &__pagination {
-        margin-top: vw(133);
+    &__banner {
+        margin-top: vw(17);
+        max-width: 100%;
+        img {
+            max-width: 100%;
+            max-height: vw(600);
+            object-fit: contain;
+        }
     }
+
 }
