@@ -1,0 +1,173 @@
+include ../../../../components/title/title.pug
+include ../../../../components/new-btn/new-btn.pug
+include ../../../../components/pagination/pagination.pug
+include ../../../../components/breadcrumbs/breadcrumbs.pug
+include ../../../../components/search-card/search-card.pug
+
+section.search-result-intro
+	.container
+		+breadcrumbs({
+			classes: 'search-result-intro__breadcrumbs',
+			items: [
+				{
+					name: 'Главная',
+					link: '#'
+				},
+				{
+					name: 'Поиск',
+					link: '#'
+				},
+			]
+		})
+		.search-result-intro__search.search
+			.search__content
+				.search__inter
+					input(type="text" placeholder="Поиск")
+					.search__select 
+						.header__other__item.header__other__fone.header__other__fone--desc
+							.header__other__top
+								a(href="#")
+									!="каталог"
+									.header__menu__item__arrow.js-row
+										img(src="img/svg/header__menu__item__arrow.svg" alt="")
+							ul.header__menu__list
+								li.header__menu__list__item
+									a(href="#") каталог
+								li.header__menu__list__item 
+									a(href="#") сайт
+				.search__btn.js-search__btn-find
+					.search__btn__text Искать
+					.search__btn__row
+						svg
+							use(xlink:href=`img/sprites/sprite.svg#arrow_btn`)
+		.search-result-intro__list
+			+title("h1", "Результаты поиска", "search-result-intro__title")
+			.contacts__form__input-block.search-result-intro__select
+				select.contacts__form__select.js-mob-menu__city__select(name="" preloader="По релевантности")
+					option По релевантности
+					option По цене 
+					.localities-centers__select-arrow
+						svg
+							use(xlink:href=`img/sprites/sprite.svg#select_arrow`)
+
+			.search-result-intro__cards
+				+search-card({
+					classes: "",
+					type: 'product'
+				})
+				+search-card({
+					classes: "",
+					type: 'vacancy',
+					title: 'Специалист по сертификации и оформлению семги',
+					image: 'img/person_placeholder.png',
+					breadcrumbs: {
+						classes: 'search-card__breadcrumbs',
+						items: [
+							{
+								name: 'Главная',
+								link: '#'
+							},
+							{
+								name: 'ВАКАНСИИ',
+								link: '#'
+							},
+							{
+								name: 'СПЕЦИАЛИСТ ПО СЕРТИФИКАЦИИ И ОФОРМЛЕНИЮ СЕМГИ',
+								link: '#'
+							}
+						]
+					}
+				})
+
+				+search-card({
+					classes: "",
+					type: 'news',
+					image: 'img/search_new_cover.png',
+					breadcrumbs: {
+						classes: 'search-card__breadcrumbs',
+						items: [
+							{
+								name: 'Главная',
+								link: '#'
+							},
+							{
+								name: 'Новости',
+								link: '#'
+							},
+							{
+								name: 'Семга (лосось) потр.с/г 2-3 ord охлажденная',
+								link: '#'
+							}
+						]
+					}
+				})
+				+search-card({
+					classes: "",
+					type: 'news',
+					image: 'img/search_new_cover.png',
+					breadcrumbs: {
+						classes: 'search-card__breadcrumbs',
+						items: [
+							{
+								name: 'Главная',
+								link: '#'
+							},
+							{
+								name: 'Новости',
+								link: '#'
+							},
+							{
+								name: 'Семга (лосось) потр.с/г 2-3 ord охлажденная',
+								link: '#'
+							}
+						]
+					}
+				})
+				+search-card({
+					classes: "",
+					type: 'news',
+					image: 'img/search_new_cover.png',
+					breadcrumbs: {
+						classes: 'search-card__breadcrumbs',
+						items: [
+							{
+								name: 'Главная',
+								link: '#'
+							},
+							{
+								name: 'Новости',
+								link: '#'
+							},
+							{
+								name: 'Семга (лосось) потр.с/г 2-3 ord охлажденная',
+								link: '#'
+							}
+						]
+					}
+				})
+				+search-card({
+					classes: "",
+					type: 'news',
+					image: 'img/search_new_cover.png',
+					breadcrumbs: {
+						classes: 'search-card__breadcrumbs',
+						items: [
+							{
+								name: 'Главная',
+								link: '#'
+							},
+							{
+								name: 'Новости',
+								link: '#'
+							},
+							{
+								name: 'Семга (лосось) потр.с/г 2-3 ord охлажденная',
+								link: '#'
+							}
+						]
+					}
+				})
+
+			+pagination({
+				classes: "search-result-intro__pagination"
+			})

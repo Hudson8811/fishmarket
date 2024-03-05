@@ -1,0 +1,91 @@
+-
+	const defaultSearchCardProps = {
+		classes: '',
+		type: 'product',
+		title: 'Семга (лосось) потр.с/г 2-3 ord охлажденная',
+		image: 'img/product_card_salmon.png',
+		breadcrumbs: {
+			classes: 'search-card__breadcrumbs',
+			items: [
+				{
+					name: 'Главная',
+					link: '#'
+				},
+				{
+					name: 'Каталог',
+					link: '#'
+				},
+				{
+					name: 'рыба охлажденная',
+					link: '#'
+				},
+				{
+					name: 'Лосось охлажденный',
+					link: '#'
+				},
+			]
+		}
+	}
+
+mixin search-card(props = defaultSearchCardProps)
+	include ../product-table/product-table.pug
+	-
+		const checkProps = {
+			classes: props.classes ? props.classes : defaultSearchCardProps.classes,
+			type: props.type ? props.type : defaultSearchCardProps.type,
+			title: props.title ? props.title : defaultSearchCardProps.title,
+			image: props.image ? props.image : defaultSearchCardProps.image,
+			breadcrumbs: props.breadcrumbs ? props.breadcrumbs : defaultSearchCardProps.breadcrumbs,
+		}
+
+		let typeClass = "search-card--" + checkProps.type
+
+	.search-card(class= typeClass + " " + checkProps.classes)
+		.search-card__info
+			+breadcrumbs(checkProps.breadcrumbs)
+			.search-card__header
+				.search-card__title!= checkProps.title
+				.search-card__vcode Арт.: 6425642-S
+			.search-card__photo
+				img(src=checkProps.image alt=checkProps.title)
+			.search-card__controls
+				.search-card__price 500 Р
+				include ../amount-input/amount-input.pug
+				.search-card__salary 29 000 руб.
+			+product-table("search-card__table")
+			.search-card__location
+				svg
+					use(xlink:href=`img/sprites/sprite.svg#header_position`)
+				span Ростов-на-Дону, улица Пескова, 1
+			.search-card__description
+				!= "ФИЛЕ ОЧИЩЕННОЕ (без кожи и плавника), уп. 1 кг (кор. 21 кг) от 640 ₽<br>ТУШКА н/к, 2 блока * 11 кг (мешок 22 кг) от 260 ₽"
+		.search-card__btns
+			+new-btn({
+				classes: 'search-card__offer',
+				tag: 'button',
+				vMode: 'small',
+				text: 'Получить предложение',
+				icon: 'true',
+				iconName: 'arrow_btn',
+				cMode: 'black',
+			})
+			+new-btn({
+				classes: 'search-card__cart',
+				tag: 'button',
+				vMode: 'icon',
+				icon: 'true',
+				iconName: 'cart',
+				cMode: 'blue',
+			})
+			+new-btn({
+				classes: 'search-card__more',
+				tag: 'button',
+				vMode: 'small',
+				text: 'Подробнее',
+				icon: 'true',
+				iconName: 'arrow_btn',
+				cMode: 'black',
+			})
+
+
+

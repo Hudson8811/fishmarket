@@ -1,0 +1,128 @@
+.search-card {
+    display: flex;
+    align-items: center;
+    border: 1px solid $greyLight;
+    background-color: $white;
+    padding: vw(9) vw(20) vw(10) vw(11);
+    column-gap: vw(50);
+    row-gap: vw(7);
+    @include max(md) {
+        flex-wrap: wrap;
+        padding: 0;
+    }
+    &__title {
+        font-size: vw(24);
+        font-weight: 500;
+        line-height: 0.958;
+        color: $fontBlack;
+        @include max(md) {
+            font-size: vw2(30);
+        } 
+    }
+    &__photo {
+        margin: auto 0 auto;
+        margin-right: vw(12);
+        width: 100%;
+        order: 0;
+        flex-basis: vw(129);
+        flex-shrink: 0;
+        flex-grow: 0;
+        height: vw(124);
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        @include max(md) {
+            flex-basis: vw2(97);
+            height: vw2(93);
+        } 
+    }
+    &__controls {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 0 0 auto;
+        order: 3;
+        min-width: vw(308);
+        flex-basis: auto;
+        gap: vw(17);
+        @include max(md) {
+            margin: 0;
+        } 
+    }
+    &__price {
+        display: none;
+        padding: vw(12) vw(26) vw(16);
+        font-size: vw(24);
+        font-weight: 600;
+        line-height: 1.22;
+        color: $fontBlack; 
+        border: 1px solid $greyLight;
+        white-space: nowrap;
+        @include max(md) {
+            padding: vw2(12) vw2(26) vw2(16);
+            font-size: vw2(24);
+        } 
+    }
+    .amount-input {
+        display: none;
+    }
+
+    &__delete.new-btn {
+        
+    }
+
+}
+
+.search-card.search-card--product {
+    .search-card__vcode {
+        display: block;
+    }
+    .search-card__table {
+        display: block;
+    }
+    .search-card__price {
+        display: block;
+    }
+    .amount-input {
+        display: flex;
+    }
+    .search-card__offer.new-btn {
+        display: flex;
+    }
+    .search-card__cart.new-btn {
+        display: flex;
+    }
+    .search-card__controls {
+        @include max(md) {
+            margin-top: vw2(20);
+        } 
+    }
+}
+
+.search-card.search-card--vacancy {
+    .search-card__salary {
+        display: block;
+    }
+    .search-card__location {
+        display: flex;
+    }
+    .search-card__more.new-btn {
+        display: flex;
+    }
+    .search-card__controls {
+        @include max(md) {
+            margin-top: vw2(20);
+        } 
+    }
+}
+
+.search-card.search-card--news {
+    .search-card__description {
+        display: block;
+    }
+    .search-card__more.new-btn {
+        display: flex;
+    }
+}

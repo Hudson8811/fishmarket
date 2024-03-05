@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Search Result Page</title>
+    <meta name="theme-color" content="#fff">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon">
+    <link rel="icon" sizes="16x16" href="img/favicons/favicon-16x16.png" type="image/png">
+    <link rel="icon" sizes="32x32" href="img/favicons/favicon-32x32.png" type="image/png">
+    <link rel="apple-touch-icon-precomposed" href="img/favicons/apple-touch-icon-precomposed.png">
+    <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
+    <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
+    <link rel="stylesheet" href="styles/main.min.css">
+  </head>
+  <body>
+    <div class="section preloader__section section--gray">
+      <div class="container">
+        <div class="preloader__picture__wrap">
+          <div class="preloader__picture"> <img src="img/svg/preloader__img.svg" alt=""></div>
+        </div>
+        <div class="preloader__animations">
+          <div class="preloader__animation preloader__animation__1"><img src="img/preloader__bg--1.svg" alt=""></div>
+          <div class="preloader__animation preloader__animation__2"><img src="img/preloader__bg--2.svg" alt=""></div>
+        </div>
+        <div class="layout--five">
+          <div class="layout--five__col"></div>
+          <div class="layout--five__col"></div>
+          <div class="layout--five__col"></div>
+          <div class="layout--five__col"></div>
+          <div class="layout--five__col"></div>
+        </div>
+      </div>
+    </div>
+    <div class="section__header">
+      <div class="container">
+        <div class="layout">
+          <div class="layout__col"><a class="header__logo" href="index.html"> <img src="img/svg/logo.svg" alt="logo"></a>
+            <div class="header__menu__humb js-hamburger"></div>
+            <div class="header__other">
+              <div class="header__other__item header__other__item--place js-header__other__item--place">
+                <div class="header__other__top">
+                  <div class="header__menu__item__icon">
+                    <svg>
+                      <use xlink:href="img/sprites/sprite.svg#header_position"></use>
+                    </svg>
+                  </div>
+                  <div class="header__menu__item__text" data-js="cityTextValue">город</div>
+                </div>
+              </div>
+              <div class="header__other__item">
+                <div class="header__other__top"><a href="mailto:info@skyfish.ru"> info@skyfish.ru
+                    <div class="header__menu__item__arrow js-row"><img src="img/svg/header__menu__item__arrow.svg" alt=""></div></a></div>
+                <ul class="header__menu__list">
+                  <li class="header__menu__list__item"><a href="mailto:info@skyfish.ru"> info@skyfish.ru</a></li>
+                  <li class="header__menu__list__item"><a href="mailto:info@skyfish.ru"> sales@fishmarket.ru</a></li>
+                  <li class="header__menu__list__item"> <a href="mailto:info@skyfish.ru">purchase@fishmarket.ru</a></li>
+                </ul>
+              </div>
+              <div class="header__other__item header__other__fone header__other__fone--desc">
+                <div class="header__other__top"><a href="tel:+749578685">+7 (495) 748-86-85
+                    <div class="header__menu__item__arrow js-row"><img src="img/svg/header__menu__item__arrow.svg" alt=""></div></a></div>
+                <ul class="header__menu__list">
+                  <li class="header__menu__list__item"><a href="tel:+749578685">+7 (495) 748-86-85</a></li>
+                  <li class="header__menu__list__item"> <a href="tel:+74957488685">+7 (495) 748-86-85 (доб. 136)</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="layout__col">
+            <div class="header__other">
+              <div class="header__other__item--soc header__other__item"><a class="header__other__item--soc__item" href="#"> 
+                  <svg>
+                    <use xlink:href="img/sprites/sprite.svg#header_tg"></use>
+                  </svg></a><a class="header__other__item--soc__item" href="#"> 
+                  <svg>
+                    <use xlink:href="img/sprites/sprite.svg#header_vk"></use>
+                  </svg></a></div>
+              <div class="header__other__item--search header__other__item">
+                <div class="header__other__item--search__btn js-search__btn">
+                  <svg>
+                    <use xlink:href="img/sprites/sprite.svg#header_search"></use>
+                  </svg>
+                </div>
+                <div class="search">
+                  <div class="search--overlay"></div>
+                  <div class="search__content">
+                    <div class="search__inter"> 
+                      <input type="text" placeholder="поиск">
+                      <div class="search__select"> 
+                        <div class="header__other__item header__other__fone header__other__fone--desc">
+                          <div class="header__other__top"><a href="#">по каталогу
+                              <div class="header__menu__item__arrow js-row"><img src="img/svg/header__menu__item__arrow.svg" alt=""></div></a></div>
+                          <ul class="header__menu__list">
+                            <li class="header__menu__list__item"><a href="#">по каталогу</a></li>
+                            <li class="header__menu__list__item"> <a href="#">по сайту</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="search__btn js-search__btn-find">
+                      <div class="search__btn__text">Найти</div>
+                      <div class="search__btn__row">
+                        <svg>
+                          <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="search__result">
+                    <div class="search__result__item">
+                      <div class="search__result__item__picture"> <img src="img/search__result__item__picture.png" alt=""></div>
+                      <div class="search__result__item__desc">
+                        <div class="search__result__item__title"> Семга (лосось) потр.с/г 2-3 ord охлажденная
+                        </div>
+                        <div class="search__result__item__art">Арт.: 6425642-S
+                        </div>
+                      </div>
+                    </div>
+                    <div class="search__result__item">
+                      <div class="search__result__item__picture"> <img src="img/search__result__item__picture.png" alt=""></div>
+                      <div class="search__result__item__desc">
+                        <div class="search__result__item__title"> Семга (лосось) потр.с/г 2-3 ord охлажденная
+                        </div>
+                        <div class="search__result__item__art">Арт.: 6425642-S
+                        </div>
+                      </div>
+                    </div>
+                    <div class="search__result__item">
+                      <div class="search__result__item__picture"> <img src="img/search__result__item__picture.png" alt=""></div>
+                      <div class="search__result__item__desc">
+                        <div class="search__result__item__title"> Семга (лосось) потр.с/г 2-3 ord охлажденная
+                        </div>
+                        <div class="search__result__item__art">Арт.: 6425642-S
+                        </div>
+                      </div>
+                    </div>
+                    <div class="search__result__item">
+                      <div class="search__result__item__picture"> <img src="img/search__result__item__picture.png" alt=""></div>
+                      <div class="search__result__item__desc">
+                        <div class="search__result__item__title"> Семга (лосось) потр.с/г 2-3 ord охлажденная
+                        </div>
+                        <div class="search__result__item__art">Арт.: 6425642-S
+                        </div>
+                      </div>
+                    </div><a class="search__result__btn text__12" href="#">Показать все</a>
+                  </div>
+                </div>
+              </div>
+              <div class="header__other__item--cart header__other__item">
+                <div class="header__other__item--cart__icon">
+                  <svg>
+                    <use xlink:href="img/sprites/sprite.svg#header_cart"></use>
+                  </svg>
+                </div>
+                <div class="header__other__item--cart__value">1</div>
+              </div>
+              <div class="header__other__item--personal header__other__item js-pop-up__button--login-register"><a href="#"> 
+                  <svg>
+                    <use xlink:href="img/sprites/sprite.svg#header_login"></use>
+                  </svg></a></div>
+              <div class="header__other__item--button header__other__item">
+                <button class="header__other__button btn js-button__question" type="submit">заказать звонок</button>
+              </div>
+              <div class="header__other__item--lang header__other__item">
+                <div class="header__other__top"><a href="#"> En
+                    <div class="header__menu__item__arrow js-row"><img src="img/svg/header__menu__item__arrow.svg" alt=""></div></a></div>
+                <ul class="header__menu__list">
+                  <li class="header__menu__list__item"><a href="#"> EN</a></li>
+                  <li class="header__menu__list__item"> <a href="#">RU	</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mob-menu__section js-mob-menu__section">
+      <div class="mob-menu--overlay"></div>
+      <div class="mob-menu__wrap">
+        <div class="mob-menu"><a class="mob-menu__link" href="#">каталог</a>
+          <div class="mob-menu__list"><a class="mob-menu__list__item" href="#">Рыба охлажденная</a><a class="mob-menu__list__item" href="#">Рыба свежемороженая</a><a class="mob-menu__list__item" href="#">Филе охлажденное</a><a class="mob-menu__list__item" href="#">Филе свежемороженое</a><a class="mob-menu__list__item" href="#">Морепродукты</a><a class="mob-menu__list__item" href="#">Субпродукты</a></div><a class="mob-menu__link" href="#">О компании</a>
+          <div class="mob-menu__list"><a class="mob-menu__list__item" href="#">Производство</a><a class="mob-menu__list__item" href="#">Склад и логистика</a><a class="mob-menu__list__item" href="#">Мы в социуме</a><a class="mob-menu__list__item" href="#">Карьера в SkyFish</a><a class="mob-menu__list__item" href="#">Наша команда</a></div><a class="mob-menu__link" href="#"> </a><a class="mob-menu__link" href="#">Контакты</a><a class="mob-menu__link" href="#">Личный кабинет</a><a class="mob-menu__link" href="#">Документы</a><a class="mob-menu__link" href="#">Новости</a><a class="mob-menu__link" href="#">Вопросы и ответы (FAQ)</a>
+        </div>
+      </div>
+    </div>
+    <div class="mob-menu__section mob-menu__city__section js-mob-menu__city__section">
+      <div class="mob-menu--overlay js-mob-menu__city__top__overlay"></div>
+      <div class="mob-menu__city">
+        <div class="mob-menu__city__top"> 
+          <div class="mob-menu__city__top__title">Не выбран <br>регион
+          </div>
+          <div class="mob-menu__city__top__close">
+            <svg>
+              <use xlink:href="img/sprites/sprite.svg#header_close"></use>
+            </svg>
+          </div>
+        </div>
+        <div class="mob-menu__city__select">
+          <div class="contacts__form__input-block">
+            <select class="contacts__form__select js-mob-menu__city__select" name="" preloader="Москва">
+              <option> </option>
+              <option>Москва</option>
+              <option>Калининград </option>
+              <div class="localities-centers__select-arrow">
+                <svg>
+                  <use xlink:href="img/sprites/sprite.svg#select_arrow"></use>
+                </svg>
+              </div>
+            </select>
+          </div>
+        </div>
+        <div class="mob-menu__city__bottom js-mob-menu__city__ok">
+          <div class="mob-menu__city__bottom__text">ok</div>
+          <div class="mob-menu__city__bottom__row">
+            <svg>
+              <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mob-menu__section mob-menu__question__section js-mob-menu__section__question">
+      <div class="mob-menu--overlay js-mob-menu__question--overlay"></div>
+      <div class="mob-menu__question">
+        <div class="mob-menu__question__top"> 
+          <div class="mob-menu__question__top__title">ОСТАЛИСЬ ВОПРОСЫ? НАПИШИТЕ ИЛИ ЗАКАЖИТЕ ЗВОНОК
+          </div>
+          <div class="mob-menu__question__top__close">
+            <svg>
+              <use xlink:href="img/sprites/sprite.svg#header_close"></use>
+            </svg>
+          </div>
+        </div>
+        <form class="contacts__form" action=""> 
+          <div class="contacts__form__input-block error">
+            <input class="contacts__form__input js-mask-name text__13" type="text" name="">
+            <div class="contacts__form__input-block__name">	Имя*</div>
+            <div class="contacts__form__input-block__error">Некорректное имя</div>
+          </div>
+          <div class="contacts__form__input-block error">
+            <input class="contacts__form__input js-mask-phone" type="tel" name="">
+            <div class="contacts__form__input-block__name">Телефон</div>
+            <div class="contacts__form__input-block__error">Некорректный телефон</div>
+          </div>
+          <div class="contacts__form__input-block error">
+            <input class="contacts__form__input text__13" type="email" name="">
+            <div class="contacts__form__input-block__name">Почта</div>
+            <div class="contacts__form__input-block__error">Некорректная почта</div>
+          </div>
+          <div class="contacts__form__input-block">
+            <textarea class="contacts__form__input text__13" name=""></textarea>
+            <div class="contacts__form__input-block__name">Комментарий</div>
+            <div class="contacts__form__input-block__error"></div>
+          </div>
+          <div class="contacts__form__personal-data contacts__form__input-block error"> 
+            <div class="checkbox">
+              <label>
+                <input class="custom-checkbox" type="checkbox" name="personal-data" value="indigo">Согласие на обработку персональных данных
+              </label>
+            </div>
+            <div class="contacts__form__input-block__error">обязательно нужно согласиться</div>
+          </div>
+        </form>
+        <div class="mob-menu__question__bottom">
+          <div class="mob-menu__question__bottom__text">Отправить</div>
+          <div class="mob-menu__question__bottom__row">
+            <svg>
+              <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mob-menu__section mob-menu__question__section js-pop-up__login-register">
+      <div class="mob-menu--overlay js-pop-up__login-register--overlay"></div>
+      <div class="mob-menu__question">
+        <div class="mob-menu__question__top"> 
+          <div class="mob-menu__question__top__tabs nav-tabs"><a class="nav-tab active" href="#" data-tab="1">Tab 1</a></div>
+          <div class="mob-menu__question__top__close js-pop-up__login-register--close">
+            <svg>
+              <use xlink:href="img/sprites/sprite.svg#header_close"></use>
+            </svg>
+          </div>
+        </div>
+        <form class="contacts__form" action=""> 
+          <div class="contacts__form__input-block">
+            <input class="contacts__form__input js-mask-name text__13" type="text" name="">
+            <div class="contacts__form__input-block__name">	Имя*</div>
+            <div class="contacts__form__input-block__error">Некорректное имя</div>
+          </div>
+          <div class="contacts__form__input-block">
+            <input class="contacts__form__input js-mask-phone" type="tel" name="">
+            <div class="contacts__form__input-block__name">Телефон</div>
+            <div class="contacts__form__input-block__error">Некорректный телефон</div>
+          </div>
+          <div class="contacts__form__input-block">
+            <input class="contacts__form__input text__13" type="email" name="">
+            <div class="contacts__form__input-block__name">Почта</div>
+            <div class="contacts__form__input-block__error">Некорректная почта					</div>
+          </div>
+          <div class="contacts__form__input-block">
+            <textarea class="contacts__form__input text__13" name=""></textarea>
+            <div class="contacts__form__input-block__name">Комментарий / Сопроводительное письмо</div>
+            <div class="contacts__form__input-block__error"></div>
+          </div>
+          <div class="contacts__form__input-block">
+            <div class="input-file-row">
+              <label class="input-file">
+                <input type="file" name="file[]" multiple><span>Выберите файл</span>
+              </label>
+              <div class="input-file-list"> </div>
+            </div>
+          </div>
+          <div class="contacts__form__personal-data contacts__form__input-block error"> 
+            <div class="checkbox">
+              <label>
+                <input class="custom-checkbox" type="checkbox" name="personal-data" value="indigo">Согласие на обработку персональных данных
+              </label>
+            </div>
+            <div class="contacts__form__input-block__error">обязательно нужно согласиться</div>
+          </div>
+        </form>
+        <div class="mob-menu__question__bottom">
+          <div class="mob-menu__question__bottom__text">Отправить</div>
+          <div class="mob-menu__question__bottom__row">
+            <svg>
+              <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mob-menu__section mob-menu__question__section js-pop-up__command">
+      <div class="mob-menu--overlay js-pop-up__command--overlay"></div>
+      <div class="mob-menu__question">
+        <div class="mob-menu__question__top"> 
+          <div class="mob-menu__question__top__title">Стать частью команды SkyFish
+          </div>
+          <div class="mob-menu__question__top__close js-pop-up__command--close">
+            <svg>
+              <use xlink:href="img/sprites/sprite.svg#header_close"></use>
+            </svg>
+          </div>
+        </div>
+        <form class="contacts__form" action=""> 
+          <div class="contacts__form__input-block">
+            <input class="contacts__form__input js-mask-name text__13" type="text" name="">
+            <div class="contacts__form__input-block__name">	Имя*</div>
+            <div class="contacts__form__input-block__error">Некорректное имя</div>
+          </div>
+          <div class="contacts__form__input-block">
+            <input class="contacts__form__input js-mask-phone" type="tel" name="">
+            <div class="contacts__form__input-block__name">Телефон</div>
+            <div class="contacts__form__input-block__error">Некорректный телефон</div>
+          </div>
+          <div class="contacts__form__input-block">
+            <input class="contacts__form__input text__13" type="email" name="">
+            <div class="contacts__form__input-block__name">Почта</div>
+            <div class="contacts__form__input-block__error">Некорректная почта					</div>
+          </div>
+          <div class="contacts__form__input-block">
+            <textarea class="contacts__form__input text__13" name=""></textarea>
+            <div class="contacts__form__input-block__name">Комментарий / Сопроводительное письмо</div>
+            <div class="contacts__form__input-block__error"></div>
+          </div>
+          <div class="contacts__form__input-block">
+            <div class="input-file-row">
+              <label class="input-file">
+                <input type="file" name="file[]" multiple><span>Выберите файл</span>
+              </label>
+              <div class="input-file-list"></div>
+            </div>
+          </div>
+          <div class="contacts__form__personal-data contacts__form__input-block error"> 
+            <div class="checkbox">
+              <label>
+                <input class="custom-checkbox" type="checkbox" name="personal-data " value="indigo">Согласие на обработку персональных данных
+              </label>
+            </div>
+            <div class="contacts__form__input-block__error">обязательно нужно согласиться</div>
+          </div>
+        </form>
+        <div class="mob-menu__question__bottom">
+          <div class="mob-menu__question__bottom__text">Отправить</div>
+          <div class="mob-menu__question__bottom__row">
+            <svg>
+              <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mob-menu__section mob-menu__question__section js-pop-up__thanks">
+      <div class="mob-menu--overlay js-pop-up__thanks--overlay"></div>
+      <div class="mob-menu__question">
+        <div class="mob-menu__question__top"> 
+          <div class="mob-menu__question__top__title">
+          </div>
+          <div class="mob-menu__question__top__close js-pop-up__thanks--close">
+            <svg>
+              <use xlink:href="img/sprites/sprite.svg#header_close"></use>
+            </svg>
+          </div>
+        </div>
+        <div class="mob-menu__question__content">
+          <div class="mob-menu__question__answer title__32">спасибо Ваша заявка отправлена
+          </div>
+        </div><a class="mob-menu__question__bottom" href="#">
+          <div class="mob-menu__question__bottom__text">На главную</div>
+          <div class="mob-menu__question__bottom__row">
+            <svg>
+              <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
+            </svg>
+          </div></a>
+      </div>
+    </div>
+    <main class="site-main">
+      <div class="scroll-page">
+        <section class="search-result-intro">
+          <div class="container">
+                    <div class="breadcrumbs search-result-intro__breadcrumbs breadcrumbs--dark">
+                      <ul class="breadcrumbs__list list-reset">
+                        <li class="breadcrumbs__item"><a href="#">Главная /</a>
+                        </li>
+                        <li class="breadcrumbs__item breadcrumbs__item--current"><span>Поиск</span>
+                        </li>
+                      </ul>
+                    </div>
+            <div class="search-result-intro__search search">
+              <div class="search__content">
+                <div class="search__inter">
+                  <input type="text" placeholder="Поиск">
+                  <div class="search__select"> 
+                    <div class="header__other__item header__other__fone header__other__fone--desc">
+                      <div class="header__other__top"><a href="#">каталог
+                          <div class="header__menu__item__arrow js-row"><img src="img/svg/header__menu__item__arrow.svg" alt=""></div></a></div>
+                      <ul class="header__menu__list">
+                        <li class="header__menu__list__item"><a href="#">каталог</a></li>
+                        <li class="header__menu__list__item"> <a href="#">сайт</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="search__btn js-search__btn-find">
+                  <div class="search__btn__text">Искать</div>
+                  <div class="search__btn__row">
+                    <svg>
+                      <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="search-result-intro__list">
+                      <div class="title title--h1 search-result-intro__title">
+                        <h1>Результаты поиска</h1>
+                      </div>
+              <div class="contacts__form__input-block search-result-intro__select">
+                <select class="contacts__form__select js-mob-menu__city__select" name="" preloader="По релевантности">
+                  <option>По релевантности</option>
+                  <option>По цене </option>
+                  <div class="localities-centers__select-arrow">
+                    <svg>
+                      <use xlink:href="img/sprites/sprite.svg#select_arrow"></use>
+                    </svg>
+                  </div>
+                </select>
+              </div>
+              <div class="search-result-intro__cards">
+                        <div class="search-card search-card--product ">
+                          <div class="search-card__info">
+                                    <div class="breadcrumbs search-card__breadcrumbs breadcrumbs--dark">
+                                      <ul class="breadcrumbs__list list-reset">
+                                        <li class="breadcrumbs__item"><a href="#">Главная /</a>
+                                        </li>
+                                        <li class="breadcrumbs__item"><a href="#">Каталог /</a>
+                                        </li>
+                                        <li class="breadcrumbs__item"><a href="#">рыба охлажденная /</a>
+                                        </li>
+                                        <li class="breadcrumbs__item breadcrumbs__item--current"><span>Лосось охлажденный</span>
+                                        </li>
+                                      </ul>
+                                    </div>
+                            <div class="search-card__header">
+                              <div class="search-card__title">Семга (лосось) потр.с/г 2-3 ord охлажденная</div>
+                              <div class="search-card__vcode">Арт.: 6425642-S</div>
+                            </div>
+                            <div class="search-card__photo"><img src="img/product_card_salmon.png" alt="Семга (лосось) потр.с/г 2-3 ord охлажденная"></div>
+                            <div class="search-card__controls">
+                              <div class="search-card__price">500 Р</div>
+                              <div class="amount-input" data-js="amountInput"><span class="amount-input__change amount-input__minus min">
+                                  <svg> 
+                                    <use xlink:href="img/sprites/sprite.svg#minus"></use>
+                                  </svg></span>
+                                <input class="amount-input__value" type="number" name="amount" value="1" autocomplete="off"><span class="amount-input__change amount-input__plus"> 
+                                  <svg> 
+                                    <use xlink:href="img/sprites/sprite.svg#plus"></use>
+                                  </svg></span>
+                              </div>
+                              <div class="search-card__salary">29 000 руб.</div>
+                            </div>
+                                    <div class="product-table search-card__table">
+                                      <div class="product-table__row">
+                                        <div class="product-table__param">Страна происхождения</div>
+                                        <div class="product-table__value">Россия</div>
+                                      </div>
+                                      <div class="product-table__row">
+                                        <div class="product-table__param">Размер</div>
+                                        <div class="product-table__value">2-3</div>
+                                      </div>
+                                      <div class="product-table__row">
+                                        <div class="product-table__param">Спецификация</div>
+                                        <div class="product-table__value">потр., с/г, ord, охл.</div>
+                                      </div>
+                                    </div>
+                            <div class="search-card__location">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#header_position"></use>
+                              </svg><span>Ростов-на-Дону, улица Пескова, 1</span>
+                            </div>
+                            <div class="search-card__description">ФИЛЕ ОЧИЩЕННОЕ (без кожи и плавника), уп. 1 кг (кор. 21 кг) от 640 ₽<br>ТУШКА н/к, 2 блока * 11 кг (мешок 22 кг) от 260 ₽
+                            </div>
+                          </div>
+                          <div class="search-card__btns">
+                                    <button class="new-btn new-btn--small new-btn--black search-card__offer" type="button"><span class="new-btn__text">Получить предложение</span><span class="new-btn__icon">
+                                        <svg>
+                                          <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
+                                        </svg></span>
+                                    </button>
+                                    <button class="new-btn new-btn--icon new-btn--blue search-card__cart" type="button"><span class="new-btn__icon">
+                                        <svg>
+                                          <use xlink:href="img/sprites/sprite.svg#cart"></use>
+                                        </svg></span>
+                                    </button>
+                                    <button class="new-btn new-btn--small new-btn--black search-card__more" type="button"><span class="new-btn__text">Подробнее</span><span class="new-btn__icon">
+                                        <svg>
+                                          <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
+                                        </svg></span>
+                                    </button>
+                          </div>
+                        </div>
+                        <div class="search-card search-card--vacancy ">
+                          <div class="search-card__info">
+                                    <div class="breadcrumbs search-card__breadcrumbs breadcrumbs--dark">
+                                      <ul class="breadcrumbs__list list-reset">
+                                        <li class="breadcrumbs__item"><a href="#">Главная /</a>
+                                        </li>
+                                        <li class="breadcrumbs__item"><a href="#">ВАКАНСИИ /</a>
+                                        </li>
+                                        <li class="breadcrumbs__item breadcrumbs__item--current"><span>СПЕЦИАЛИСТ ПО СЕРТИФИКАЦИИ И ОФОРМЛЕНИЮ СЕМГИ</span>
+                                        </li>
+                                      </ul>
+                                    </div>
+                            <div class="search-card__header">
+                              <div class="search-card__title">Специалист по сертификации и оформлению семги</div>
+                              <div class="search-card__vcode">Арт.: 6425642-S</div>
+                            </div>
+                            <div class="search-card__photo"><img src="img/person_placeholder.png" alt="Специалист по сертификации и оформлению семги"></div>
+                            <div class="search-card__controls">
+                              <div class="search-card__price">500 Р</div>
+                              <div class="amount-input" data-js="amountInput"><span class="amount-input__change amount-input__minus min">
+                                  <svg> 
+                                    <use xlink:href="img/sprites/sprite.svg#minus"></use>
+                                  </svg></span>
+                                <input class="amount-input__value" type="number" name="amount" value="1" autocomplete="off"><span class="amount-input__change amount-input__plus"> 
+                                  <svg> 
+                                    <use xlink:href="img/sprites/sprite.svg#plus"></use>
+                                  </svg></span>
+                              </div>
+                              <div class="search-card__salary">29 000 руб.</div>
+                            </div>
+                                    <div class="product-table search-card__table">
+                                      <div class="product-table__row">
+                                        <div class="product-table__param">Страна происхождения</div>
+                                        <div class="product-table__value">Россия</div>
+                                      </div>
+                                      <div class="product-table__row">
+                                        <div class="product-table__param">Размер</div>
+                                        <div class="product-table__value">2-3</div>
+                                      </div>
+                                      <div class="product-table__row">
+                                        <div class="product-table__param">Спецификация</div>
+                                        <div class="product-table__value">потр., с/г, ord, охл.</div>
+                                      </div>
+                                    </div>
+                            <div class="search-card__location">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#header_position"></use>
+                              </svg><span>Ростов-на-Дону, улица Пескова, 1</span>
+                            </div>
+                            <div class="search-card__description">ФИЛЕ ОЧИЩЕННОЕ (без кожи и плавника), уп. 1 кг (кор. 21 кг) от 640 ₽<br>ТУШКА н/к, 2 блока * 11 кг (мешок 22 кг) от 260 ₽
+                            </div>
+                          </div>
+                          <div class="search-card__btns">
+                                    <button class="new-btn new-btn--small new-btn--black search-card__offer" type="button"><span class="new-btn__text">Получить предложение</span><span class="new-btn__icon">
+                                        <svg>
+                                          <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
+                                        </svg></span>
+                                    </button>
+                                    <button class="new-btn new-btn--icon new-btn--blue search-card__cart" type="button"><span class="new-btn__icon">
+                                        <svg>
+                                          <use xlink:href="img/sprites/sprite.svg#cart"></use>
+                                        </svg></span>
+                                    </button>
+                                    <button class="new-btn new-btn--small new-btn--black search-card__more" type="button"><span class="new-btn__text">Подробнее</span><span class="new-btn__icon">
+                                        <svg>
+                                          <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
+                                        </svg></span>
+                                    </button>
+                          </div>
+                        </div>
+                        <div class="search-card search-card--news ">
+                          <div class="search-card__info">
+                                    <div class="breadcrumbs search-card__breadcrumbs breadcrumbs--dark">
+                                      <ul class="breadcrumbs__list list-reset">
+                                        <li class="breadcrumbs__item"><a href="#">Главная /</a>
+                                        </li>
+                                        <li class="breadcrumbs__item"><a href="#">Новости /</a>
+                                        </li>
+                                        <li class="breadcrumbs__item breadcrumbs__item--current"><span>Семга (лосось) потр.с/г 2-3 ord охлажденная</span>
+                                        </li>
+                                      </ul>
+                                    </div>
+                            <div class="search-card__header">
+                              <div class="search-card__title">Семга (лосось) потр.с/г 2-3 ord охлажденная</div>
+                              <div class="search-card__vcode">Арт.: 6425642-S</div>
+                            </div>
+                            <div class="search-card__photo"><img src="img/search_new_cover.png" alt="Семга (лосось) потр.с/г 2-3 ord охлажденная"></div>
+                            <div class="search-card__controls">
+                              <div class="search-card__price">500 Р</div>
+                              <div class="amount-input" data-js="amountInput"><span class="amount-input__change amount-input__minus min">
+                                  <svg> 
+                                    <use xlink:href="img/sprites/sprite.svg#minus"></use>
+                                  </svg></span>
+                                <input class="amount-input__value" type="number" name="amount" value="1" autocomplete="off"><span class="amount-input__change amount-input__plus"> 
+                                  <svg> 
+                                    <use xlink:href="img/sprites/sprite.svg#plus"></use>
+                                  </svg></span>
+                              </div>
+                              <div class="search-card__salary">29 000 руб.</div>
+                            </div>
+                                    <div class="product-table search-card__table">
+                                      <div class="product-table__row">
+                                        <div class="product-table__param">Страна происхождения</div>
+                                        <div class="product-table__value">Россия</div>
+                                      </div>
+                                      <div class="product-table__row">
+                                        <div class="product-table__param">Размер</div>
+                                        <div class="product-table__value">2-3</div>
+                                      </div>
+                                      <div class="product-table__row">
+                                        <div class="product-table__param">Спецификация</div>
+                                        <div class="product-table__value">потр., с/г, ord, охл.</div>
+                                      </div>
+                                    </div>
+                            <div class="search-card__location">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#header_position"></use>
+                              </svg><span>Ростов-на-Дону, улица Пескова, 1</span>
+                            </div>
+                            <div class="search-card__description">ФИЛЕ ОЧИЩЕННОЕ (без кожи и плавника), уп. 1 кг (кор. 21 кг) от 640 ₽<br>ТУШКА н/к, 2 блока * 11 кг (мешок 22 кг) от 260 ₽
+                            </div>
+                          </div>
+                          <div class="search-card__btns">
+                                    <button class="new-btn new-btn--small new-btn--black search-card__offer" type="button"><span class="new-btn__text">Получить предложение</span><span class="new-btn__icon">
+                                        <svg>
+                                          <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
+                                        </svg></span>
+                                    </button>
+                                    <button class="new-btn new-btn--icon new-btn--blue search-card__cart" type="button"><span class="new-btn__icon">
+                                        <svg>
+                                          <use xlink:href="img/sprites/sprite.svg#cart"></use>
+                                        </svg></span>
+                                    </button>
+                                    <button class="new-btn new-btn--small new-btn--black search-card__more" type="button"><span class="new-btn__text">Подробнее</span><span class="new-btn__icon">
+                                        <svg>
+                                          <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
+                                        </svg></span>
+                                    </button>
+                          </div>
+                        </div>
+                        <div class="search-card search-card--news ">
+                          <div class="search-card__info">
+                                    <div class="breadcrumbs search-card__breadcrumbs breadcrumbs--dark">
+                                      <ul class="breadcrumbs__list list-reset">
+                                        <li class="breadcrumbs__item"><a href="#">Главная /</a>
+                                        </li>
+                                        <li class="breadcrumbs__item"><a href="#">Новости /</a>
+                                        </li>
+                                        <li class="breadcrumbs__item breadcrumbs__item--current"><span>Семга (лосось) потр.с/г 2-3 ord охлажденная</span>
+                                        </li>
+                                      </ul>
+                                    </div>
+                            <div class="search-card__header">
+                              <div class="search-card__title">Семга (лосось) потр.с/г 2-3 ord охлажденная</div>
+                              <div class="search-card__vcode">Арт.: 6425642-S</div>
+                            </div>
+                            <div class="search-card__photo"><img src="img/search_new_cover.png" alt="Семга (лосось) потр.с/г 2-3 ord охлажденная"></div>
+                            <div class="search-card__controls">
+                              <div class="search-card__price">500 Р</div>
+                              <div class="amount-input" data-js="amountInput"><span class="amount-input__change amount-input__minus min">
+                                  <svg> 
+                                    <use xlink:href="img/sprites/sprite.svg#minus"></use>
+                                  </svg></span>
+                                <input class="amount-input__value" type="number" name="amount" value="1" autocomplete="off"><span class="amount-input__change amount-input__plus"> 
+                                  <svg> 
+                                    <use xlink:href="img/sprites/sprite.svg#plus"></use>
+                                  </svg></span>
+                              </div>
+                              <div class="search-card__salary">29 000 руб.</div>
+                            </div>
+                                    <div class="product-table search-card__table">
+                                      <div class="product-table__row">
+                                        <div class="product-table__param">Страна происхождения</div>
+                                        <div class="product-table__value">Россия</div>
+                                      </div>
+                                      <div class="product-table__row">
+                                        <div class="product-table__param">Размер</div>
+                                        <div class="product-table__value">2-3</div>
+                                      </div>
+                                      <div class="product-table__row">
+                                        <div class="product-table__param">Спецификация</div>
+                                        <div class="product-table__value">потр., с/г, ord, охл.</div>
+                                      </div>
+                                    </div>
+                            <div class="search-card__location">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#header_position"></use>
+                              </svg><span>Ростов-на-Дону, улица Пескова, 1</span>
+                            </div>
+                            <div class="search-card__description">ФИЛЕ ОЧИЩЕННОЕ (без кожи и плавника), уп. 1 кг (кор. 21 кг) от 640 ₽<br>ТУШКА н/к, 2 блока * 11 кг (мешок 22 кг) от 260 ₽
+                            </div>
+                          </div>
+                          <div class="search-card__btns">
+                                    <button class="new-btn new-btn--small new-btn--black search-card__offer" type="button"><span class="new-btn__text">Получить предложение</span><span class="new-btn__icon">
+                                        <svg>
+                                          <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
+                                        </svg></span>
+                                    </button>
+                                    <button class="new-btn new-btn--icon new-btn--blue search-card__cart" type="button"><span class="new-btn__icon">
+                                        <svg>
+                                          <use xlink:href="img/sprites/sprite.svg#cart"></use>
+                                        </svg></span>
+                                    </button>
+                                    <button class="new-btn new-btn--small new-btn--black search-card__more" type="button"><span class="new-btn__text">Подробнее</span><span class="new-btn__icon">
+                                        <svg>
+                                          <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
+                                        </svg></span>
+                                    </button>
+                          </div>
+                        </div>
+                        <div class="search-card search-card--news ">
+                          <div class="search-card__info">
+                                    <div class="breadcrumbs search-card__breadcrumbs breadcrumbs--dark">
+                                      <ul class="breadcrumbs__list list-reset">
+                                        <li class="breadcrumbs__item"><a href="#">Главная /</a>
+                                        </li>
+                                        <li class="breadcrumbs__item"><a href="#">Новости /</a>
+                                        </li>
+                                        <li class="breadcrumbs__item breadcrumbs__item--current"><span>Семга (лосось) потр.с/г 2-3 ord охлажденная</span>
+                                        </li>
+                                      </ul>
+                                    </div>
+                            <div class="search-card__header">
+                              <div class="search-card__title">Семга (лосось) потр.с/г 2-3 ord охлажденная</div>
+                              <div class="search-card__vcode">Арт.: 6425642-S</div>
+                            </div>
+                            <div class="search-card__photo"><img src="img/search_new_cover.png" alt="Семга (лосось) потр.с/г 2-3 ord охлажденная"></div>
+                            <div class="search-card__controls">
+                              <div class="search-card__price">500 Р</div>
+                              <div class="amount-input" data-js="amountInput"><span class="amount-input__change amount-input__minus min">
+                                  <svg> 
+                                    <use xlink:href="img/sprites/sprite.svg#minus"></use>
+                                  </svg></span>
+                                <input class="amount-input__value" type="number" name="amount" value="1" autocomplete="off"><span class="amount-input__change amount-input__plus"> 
+                                  <svg> 
+                                    <use xlink:href="img/sprites/sprite.svg#plus"></use>
+                                  </svg></span>
+                              </div>
+                              <div class="search-card__salary">29 000 руб.</div>
+                            </div>
+                                    <div class="product-table search-card__table">
+                                      <div class="product-table__row">
+                                        <div class="product-table__param">Страна происхождения</div>
+                                        <div class="product-table__value">Россия</div>
+                                      </div>
+                                      <div class="product-table__row">
+                                        <div class="product-table__param">Размер</div>
+                                        <div class="product-table__value">2-3</div>
+                                      </div>
+                                      <div class="product-table__row">
+                                        <div class="product-table__param">Спецификация</div>
+                                        <div class="product-table__value">потр., с/г, ord, охл.</div>
+                                      </div>
+                                    </div>
+                            <div class="search-card__location">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#header_position"></use>
+                              </svg><span>Ростов-на-Дону, улица Пескова, 1</span>
+                            </div>
+                            <div class="search-card__description">ФИЛЕ ОЧИЩЕННОЕ (без кожи и плавника), уп. 1 кг (кор. 21 кг) от 640 ₽<br>ТУШКА н/к, 2 блока * 11 кг (мешок 22 кг) от 260 ₽
+                            </div>
+                          </div>
+                          <div class="search-card__btns">
+                                    <button class="new-btn new-btn--small new-btn--black search-card__offer" type="button"><span class="new-btn__text">Получить предложение</span><span class="new-btn__icon">
+                                        <svg>
+                                          <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
+                                        </svg></span>
+                                    </button>
+                                    <button class="new-btn new-btn--icon new-btn--blue search-card__cart" type="button"><span class="new-btn__icon">
+                                        <svg>
+                                          <use xlink:href="img/sprites/sprite.svg#cart"></use>
+                                        </svg></span>
+                                    </button>
+                                    <button class="new-btn new-btn--small new-btn--black search-card__more" type="button"><span class="new-btn__text">Подробнее</span><span class="new-btn__icon">
+                                        <svg>
+                                          <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
+                                        </svg></span>
+                                    </button>
+                          </div>
+                        </div>
+                        <div class="search-card search-card--news ">
+                          <div class="search-card__info">
+                                    <div class="breadcrumbs search-card__breadcrumbs breadcrumbs--dark">
+                                      <ul class="breadcrumbs__list list-reset">
+                                        <li class="breadcrumbs__item"><a href="#">Главная /</a>
+                                        </li>
+                                        <li class="breadcrumbs__item"><a href="#">Новости /</a>
+                                        </li>
+                                        <li class="breadcrumbs__item breadcrumbs__item--current"><span>Семга (лосось) потр.с/г 2-3 ord охлажденная</span>
+                                        </li>
+                                      </ul>
+                                    </div>
+                            <div class="search-card__header">
+                              <div class="search-card__title">Семга (лосось) потр.с/г 2-3 ord охлажденная</div>
+                              <div class="search-card__vcode">Арт.: 6425642-S</div>
+                            </div>
+                            <div class="search-card__photo"><img src="img/search_new_cover.png" alt="Семга (лосось) потр.с/г 2-3 ord охлажденная"></div>
+                            <div class="search-card__controls">
+                              <div class="search-card__price">500 Р</div>
+                              <div class="amount-input" data-js="amountInput"><span class="amount-input__change amount-input__minus min">
+                                  <svg> 
+                                    <use xlink:href="img/sprites/sprite.svg#minus"></use>
+                                  </svg></span>
+                                <input class="amount-input__value" type="number" name="amount" value="1" autocomplete="off"><span class="amount-input__change amount-input__plus"> 
+                                  <svg> 
+                                    <use xlink:href="img/sprites/sprite.svg#plus"></use>
+                                  </svg></span>
+                              </div>
+                              <div class="search-card__salary">29 000 руб.</div>
+                            </div>
+                                    <div class="product-table search-card__table">
+                                      <div class="product-table__row">
+                                        <div class="product-table__param">Страна происхождения</div>
+                                        <div class="product-table__value">Россия</div>
+                                      </div>
+                                      <div class="product-table__row">
+                                        <div class="product-table__param">Размер</div>
+                                        <div class="product-table__value">2-3</div>
+                                      </div>
+                                      <div class="product-table__row">
+                                        <div class="product-table__param">Спецификация</div>
+                                        <div class="product-table__value">потр., с/г, ord, охл.</div>
+                                      </div>
+                                    </div>
+                            <div class="search-card__location">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#header_position"></use>
+                              </svg><span>Ростов-на-Дону, улица Пескова, 1</span>
+                            </div>
+                            <div class="search-card__description">ФИЛЕ ОЧИЩЕННОЕ (без кожи и плавника), уп. 1 кг (кор. 21 кг) от 640 ₽<br>ТУШКА н/к, 2 блока * 11 кг (мешок 22 кг) от 260 ₽
+                            </div>
+                          </div>
+                          <div class="search-card__btns">
+                                    <button class="new-btn new-btn--small new-btn--black search-card__offer" type="button"><span class="new-btn__text">Получить предложение</span><span class="new-btn__icon">
+                                        <svg>
+                                          <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
+                                        </svg></span>
+                                    </button>
+                                    <button class="new-btn new-btn--icon new-btn--blue search-card__cart" type="button"><span class="new-btn__icon">
+                                        <svg>
+                                          <use xlink:href="img/sprites/sprite.svg#cart"></use>
+                                        </svg></span>
+                                    </button>
+                                    <button class="new-btn new-btn--small new-btn--black search-card__more" type="button"><span class="new-btn__text">Подробнее</span><span class="new-btn__icon">
+                                        <svg>
+                                          <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
+                                        </svg></span>
+                                    </button>
+                          </div>
+                        </div>
+              </div>
+                      <div class="pagination pagination--start search-result-intro__pagination">
+                                <button class="new-btn new-btn--icon new-btn--white pagination__btn pagination__prev" type="button"><span class="new-btn__icon">
+                                    <svg>
+                                      <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
+                                    </svg></span>
+                                </button><a class="pagination__page active" href="javascript:void(0);">1</a><a class="pagination__page" href="javascript:void(0);">2</a><a class="pagination__page" href="javascript:void(0);">3</a><a class="pagination__page" href="javascript:void(0);">4</a><a class="pagination__page" href="javascript:void(0);">5</a><a class="pagination__page" href="javascript:void(0);">6</a>
+                                <button class="new-btn new-btn--icon new-btn--white pagination__btn pagination__next" type="button"><span class="new-btn__icon">
+                                    <svg>
+                                      <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
+                                    </svg></span>
+                                </button>
+                      </div>
+            </div>
+          </div>
+        </section>
+        <footer class="footer footer__animation footer__animation--personally js-footer__animation">
+          <div class="footer__logo"> <img src="img/logo__white.png" alt=""></div>
+          <div class="footer__title title__170"> Понимаем море, слышим людей
+          </div>
+          <div class="footer__menu"> 
+            <ul class="footer__menu__list">
+              <li class="footer__menu__list__title">Каталог</li>
+              <li class="footer__menu__list__item"><a href="#">Рыба охлажденная</a></li>
+              <li class="footer__menu__list__item"><a href="#">Рыба свежемороженая</a></li>
+              <li class="footer__menu__list__item"><a href="#">Филе охлажденное</a></li>
+              <li class="footer__menu__list__item"><a href="#">Филе свежемороженое</a></li>
+              <li class="footer__menu__list__item"><a href="#">Морепродукты</a></li>
+              <li class="footer__menu__list__item"><a href="#">Субпродукты</a></li>
+            </ul>
+            <ul class="footer__menu__list">
+              <li class="footer__menu__list__title">О компании</li>
+              <li class="footer__menu__list__item"><a href="#">Производство</a></li>
+              <li class="footer__menu__list__item"><a href="#">Склад и логистика</a></li>
+              <li class="footer__menu__list__item"><a href="#">мы в социуме</a></li>
+              <li class="footer__menu__list__item"><a href="#">карьера в skyfish</a></li>
+              <li class="footer__menu__list__item"><a href="#">наша команда</a></li>
+            </ul>
+            <!--ul.footer__menu__list
+            li.footer__menu__list__title Документы
+            li.footer__menu__list__item
+            	a(href="#") Документы
+            li.footer__menu__list__item
+            	a(href="#") Прайсы
+            -->
+            <ul class="footer__menu__list">
+              <li class="footer__menu__list__title">А еще...</li>
+              <li class="footer__menu__list__item"><a href="#">контакты</a></li>
+              <li class="footer__menu__list__item"><a href="#">Личный кабинет</a></li>
+              <li class="footer__menu__list__item"><a href="#">Документы</a></li>
+              <li class="footer__menu__list__item"><a href="#">Новости</a></li>
+              <li class="footer__menu__list__item"><a href="#">Вопросы и ответы (FAQ)</a></li>
+            </ul>
+          </div><a class="btn--box footer__btn" href="#">
+            <div class="btn btn--circle">
+              <svg>
+                <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
+              </svg>
+            </div>
+            <div class="btn--box__text">Подробнее</div></a>
+          <div class="footer__bg"><img src="img/footer__bg.png" alt=""></div>
+          <div class="footer__agreement">
+            <div class="footer__agreement__date text__12">© 2023 — 2024</div><a class="footer__agreement__text text__12" href="#"> Пользовательское <br>соглашение</a>
+          </div>
+        </footer>
+      </div>
+    </main>
+    <!--block footer
+    include ../../blocks/modules/footer/footer
+    
+    -->
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=d30e0023-10b4-4a5c-a8fd-7e8d66094730&amp;lang=ru_RU"></script>
+    <script src="js/main.min.js"></script>
+  </body>
+</html>

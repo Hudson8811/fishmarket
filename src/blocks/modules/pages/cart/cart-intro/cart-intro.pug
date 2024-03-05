@@ -1,0 +1,31 @@
+include ../../../../components/title/title.pug
+include ../../../../components/new-btn/new-btn.pug
+include ../../../../components/pagination/pagination.pug
+include ../../../../components/breadcrumbs/breadcrumbs.pug
+include ../../../../components/cart-card/cart-card.pug
+
+section.cart-intro
+	.container
+		+breadcrumbs({
+			classes: 'cart-intro__breadcrumbs',
+			items: [
+				{
+					name: 'Главная',
+					link: '#'
+				},
+				{
+					name: 'Корзина',
+					link: '#'
+				},
+			]
+		})
+
+		+title("h1", "Результаты поиска", "cart-intro__title")
+		.cart-intro__list
+			.cart-intro__cards
+				+cart-card()
+				+cart-card()
+				+cart-card()
+				+cart-card()
+				+cart-card()
+				+cart-card()

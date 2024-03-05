@@ -1,0 +1,169 @@
+.search-result-intro {
+    padding-top: vw(114);
+    padding-bottom: vw(62);
+    @include max(md) {
+        padding-top: vw2(90);
+        padding-bottom: vw2(40);
+    } 
+    &__breadcrumbs {
+		padding-left: vw(8);
+	}
+    &__search {
+        position: relative;
+        width: 100%;
+        visibility: visible;
+        margin-top: vw(151);
+        height: vw(95);
+        z-index: 5;
+        @include max(md) {
+            margin-top: vw2(51);
+            height: vw2(90);
+        }
+        .search__content {
+            height: vw(95);
+            padding-bottom: vw(20);
+            border: none;
+            border-bottom: 1px solid $greyLight;
+            @include max(md) {
+                height: vw2(60);
+                padding-bottom: vw2(10);
+            }
+        }
+        .search__inter {
+            display: block;
+            @include max(md) {
+                flex-shrink: 1;
+                flex-grow: 1;
+            }
+            input {
+                font-size: vw(70);
+                font-weight: 400;
+                line-height: 1;
+                text-transform: none;
+                @include max(md) {
+                    font-size: vw2(40);
+                }
+                &::placeholder {
+                    font-size: vw(70);
+                    text-transform: none;
+                    @include max(md) {
+                        font-size: vw2(40);
+                    }
+                }
+            }
+        }
+        .search__select {
+            display: block;
+        }
+        .search__btn {
+            display: flex;
+            width: vw(443);
+            background: $fontBlack;
+            cursor: pointer;
+            @include max(md) {
+                min-width: vw2(150);
+                flex-shrink: 0;
+                flex-basis: 0;
+                padding-left: vw2(10);
+                padding-right: vw2(10);
+            }
+            .search__btn__text {
+                @include max(md) {
+                    font-size: vw2(14);
+                }
+            }
+            .search__btn__row {
+                svg, svg use {
+                    @include max(md) {
+                        width: vw2(11);
+                        height: vw2(9);
+                    }
+                }
+            }
+            &:hover {
+                background-color: $blueHover;
+            }
+        }
+    }
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        flex-wrap: wrap;
+        margin-top: vw(156);
+        @include max(md) {
+            margin-top: vw2(56);
+        }
+    }
+    &__title {
+        color: $fontBlack;
+        max-width: 50%;
+        font-size: vw(32);
+        line-height: 1;
+        @include max(md) {
+            max-width: 100%;
+            font-size: vw2(32);
+        } 
+    }
+    &__select {
+        flex-basis: vw(200);
+        max-width: vw(200);
+        flex-shrink: 0;
+        flex-grow: 0;
+        margin-bottom: 0;
+        @include max(md) {
+            margin-top: vw2(20);
+            flex-basis: vw2(250);
+            max-width: vw2(250);
+            margin-left: auto;
+        }
+        .select2-selection.select2-selection--single {
+            padding-top: 0;
+            min-height: vw(15);
+            padding-bottom: vw(5);
+            height: auto;
+            border-bottom: none;
+            @include max(md) {
+                padding-top: 0;
+                min-height: vw2(15);
+                padding-bottom: vw2(5);
+            }
+            &:hover {
+                border-bottom: none;
+            }
+            .select2-selection__rendered {
+                font-size: vw(12);
+                text-transform: uppercase;
+                font-weight: 600;
+                line-height: 1.2;
+                text-align: end;
+                @include max(md) {
+                    font-size: vw2(12)
+                }
+            }
+            .select2-selection__arrow {
+                top: 51%;
+            }
+        }
+    }
+    &__cards {
+        flex-basis: 100%;
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        row-gap: vw(29);
+        margin-top: vw(20);
+        @include max(md) {
+            row-gap: vw2(24);
+            margin-top: vw2(10);
+        }
+    }
+
+
+
+
+
+    &__pagination {
+        margin-top: vw(133);
+    }
+}
