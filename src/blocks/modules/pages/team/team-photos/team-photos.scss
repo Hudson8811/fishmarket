@@ -2,13 +2,17 @@
     padding: vw(35) 0;
     overflow: hidden;
     @include max(md) {
-        padding: vw2(105) 0 vw2(35);
+        padding: vw2(35) 0;
     }
 
     &__container {
         display: flex;
         align-items: stretch;
         gap: vw(35);
+        @include max(md) {
+            flex-direction: column; 
+            gap: vw2(20); 
+        }
     }
 
     &__right {
@@ -19,12 +23,19 @@
         flex-basis: auto;
         flex-shrink: 1;
         flex-grow: 1;
+        @include max(md) {
+            display: contents; 
+        }
     }
 
     &__title {
         font-size: vw(82);
         width: vw(660);
         align-self: flex-start;
+        @include max(md) {
+            order: -1;
+            width: vw2(400);
+        }
     }
     
     &__slider {
@@ -34,6 +45,11 @@
         flex-shrink: 0;
         flex-grow: 0;
         overflow: hidden;
+        @include max(md) {
+            width: 100%;
+            flex-basis: auto;
+            overflow: visible;
+        }
         &:hover {
             .team-photos__control {
                 opacity: 1;
@@ -47,7 +63,7 @@
     &__slide {
         height: vw(720);
         @include max(md) {
-            height: vw2(600);
+            height: 70vh;
         }
     }
 

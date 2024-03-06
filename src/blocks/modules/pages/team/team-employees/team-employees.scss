@@ -1,0 +1,53 @@
+.team-employees {
+    padding: vw(32) 0;
+    background-color: $white;
+    border-top: 1px solid $greyBorder;
+    position: relative;
+    @include max(md) {
+        overflow: hidden;
+    }
+
+    &__title {
+        max-width: vw(680);
+        font-size: vw(82);
+        font-weight: 500;
+        line-height: 0.97;
+        color: $fontBlack;
+        text-transform: uppercase;
+        @include max(md) {
+            max-width: 100%;
+        }
+    }
+    &__cards {
+        position: relative;
+        width: 100%;
+        display: flex;
+        align-items: flex-end;
+        z-index: 10;
+    }
+    .swiper-wrapper {
+        display: contents;
+        @include max(md) {
+            display: flex;
+        }
+    }
+    &__column {
+        flex-basis: calc(100% / 3);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        background-color: #A8AEB0;
+        border: 1px solid #A8AEB0;
+        gap: 1px;
+        @include max(md) {
+            display: contents;
+        }
+        &--1 {
+            border-right: none;
+        }
+        &--3 {
+            border: none;
+            background-color: $white;
+        }
+    }
+}

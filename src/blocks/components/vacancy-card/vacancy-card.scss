@@ -91,6 +91,15 @@
         @include max(md) {
             margin-top: vw2(15);
             margin-bottom: vw2(30);
+            p, span, a, li {
+                font-size: vw2(16);
+            }
+            li {
+                margin-bottom: vw2(10);
+            }
+            ul {
+                padding: 0 vw2(10) 0 vw2(17);
+            }
         }
     }
 

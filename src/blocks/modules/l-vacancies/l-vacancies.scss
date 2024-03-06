@@ -11,11 +11,18 @@
         flex-direction: column;
         min-height: vw(750);
         gap: vw(140);
+        @include max(md) {
+            min-height: auto;
+            gap: vw2(30);
+        }
     }
 
     &__header {
         display: flex;
         justify-content: space-between;
+        @include max(md) {
+            display: contents;
+        }
     }
 
     &__title {
@@ -23,6 +30,10 @@
         flex-shrink: 0;
         flex-grow: 0;
         font-size: vw(60);
+        @include max(md) {
+            flex-basis: auto;
+            width: calc(100% - vw(150));
+        }
     }
 
     &__btns {
@@ -32,6 +43,12 @@
         flex-basis: vw(915);
         flex-shrink: 0;
         flex-grow: 0;
+        @include max(md) {
+            flex-basis: auto;
+            flex-direction: column;
+            gap: vw2(15);
+            order: 2;
+        }
     }
 
     &__btn {
@@ -40,7 +57,12 @@
         }
     }
 
+    &__card {
+        min-height: vw(393);
+    }
+
     &__slider {
+        position: relative;
         flex-basis: 100%;
         @include max(md) {
         }
@@ -48,9 +70,62 @@
 
     &__slide {
         width: vw(757);
+        @include max(md) {
+            width: auto;
+        }
     }
 
-    &__card {
-        min-height: vw(393);
+    &__control {
+        width: vw(59);
+        height: vw(59);
+        background-color: $blueLight;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 100%;
+        transition: $tr-time;
+        top: vw(-67);
+        opacity: 1;
+        @include max(md) {
+            width: vw2(50);
+            height: vw2(50);
+            opacity: 1;
+            top: vw2(-55);
+        } 
+        &::after {
+            content: none;
+        }
+        &:hover {
+            background-color: $blueHover;
+        }
+        svg {
+            width: vw(11);
+            height: vw(8);
+            @include max(md) {
+                width: vw2(11);
+                height: vw2(8);
+            } 
+            use {
+                stroke: $white;
+                fill: none;
+                width: vw(11);
+                height: vw(8);
+                @include max(md) {
+                    width: vw2(11);
+                    height: vw2(8);
+                } 
+            }
+        } 
+        &.swiper-button-prev {
+            transform: rotate(180deg);
+            right: vw(70);
+            left: auto;
+            @include max(md) {
+                right: vw2(70);
+            } 
+        }
+        &.swiper-button-next {
+            right: 0;
+        }
     }
 }

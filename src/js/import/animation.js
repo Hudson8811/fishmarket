@@ -5,7 +5,7 @@ let animationBreakpoint = 992;
 let scrollTriggerObject;
 let scrollTriggerObject2;
 let mainTimeline = gsap.timeline();
-let careerTimeline = gsap.timeline();
+let innerTimeline = gsap.timeline();
 
 let pageAnimationType = null;
 let animationSelectors = [];
@@ -47,6 +47,9 @@ function initScrollAnimation(){
 		case "careerpage":
 			//анимация страницы Карьера
 			break;
+		case "teampage":
+			//анимация страницы Карьера
+			break;
 		default:
 			//анимация только подвала
 			if ($('.js-footer__animation').length > 0){
@@ -86,7 +89,7 @@ function resetAnimation(){
 	if (typeof scrollTriggerObject2 !== "undefined") scrollTriggerObject2.kill();
 	//очищаем таймлайны анимаций
 	mainTimeline.clear();
-	careerTimeline.clear();
+	innerTimeline.clear();
 	//очищаем стили добавленные анимациями
 	let uniqueElementsArray = uniqueArray(animationSelectors);
 	let selectorsString = uniqueElementsArray.join(", ");
@@ -134,7 +137,39 @@ function startAnimation(){
 						endTrigger:"[data-js='careerNumbersSection']",
 						end: "bottom top",
 						scrub: 2,
-						animation: careerTimeline,
+						animation: innerTimeline,
+					});
+					scrollTriggerObject2 = ScrollTrigger.create({
+						trigger: ".js-footer__animation",
+						start: "top top",
+						pin: true,
+						end: () => "+=" + addTimeFooter + "%",
+						scrub: 2,
+						animation: mainTimeline,
+					});
+				}
+				break;
+			case "teampage":
+				//анимация страницы Наша команда
+				if (window.innerWidth > animationBreakpoint ){
+					
+					//устанавливаем высоту секции с карточками
+					let teamEmployeesSection = document.querySelector("[data-js='teamEmployeesSection']")
+					let columnsHeightArr = [
+						teamEmployeesSection.querySelector(".js-team-employees__column--1").offsetHeight, 
+						teamEmployeesSection.querySelector(".js-team-employees__column--2").offsetHeight,
+						teamEmployeesSection.querySelector(".js-team-employees__column--3").offsetHeight
+					]
+					teamEmployeesSection.style.height = (Math.max(...columnsHeightArr) * 0.62) + 'px'
+				
+					teamPageAnimationDesktop();
+					scrollTriggerObject = ScrollTrigger.create({
+						trigger: "[data-js=teamPhotosSection]",
+						start: "top 90%",
+						endTrigger:"[data-js='teamEmployeesSection']",
+						end: "bottom top",
+						scrub: 2,
+						animation: innerTimeline,
 					});
 					scrollTriggerObject2 = ScrollTrigger.create({
 						trigger: ".js-footer__animation",
@@ -375,7 +410,7 @@ function homepageAnimationDesktop(){
 function careerPageAnimationDesktop(){
 
 	//анимация контента
-	careerTimeline.fromTo(".js-career-purpose__content", {
+	innerTimeline.fromTo(".js-career-purpose__content", {
 		y: "100",
 		opacity: "0",
 	}, {
@@ -387,7 +422,7 @@ function careerPageAnimationDesktop(){
 	animationSelectors.push(".js-career-purpose__content");
 
 	//анимация квадратов
-	careerTimeline.fromTo(".js-advantage__col--1", {
+	innerTimeline.fromTo(".js-advantage__col--1", {
 		y: "0%",
 		top: "0%",
 	}, {
@@ -398,7 +433,7 @@ function careerPageAnimationDesktop(){
 	}, ">");
 	animationSelectors.push(".js-advantage__col--1");
 
-	careerTimeline.fromTo(".js-advantage__col--2", {
+	innerTimeline.fromTo(".js-advantage__col--2", {
 		y: "30%",
 		top: "30%",
 	}, {
@@ -409,7 +444,7 @@ function careerPageAnimationDesktop(){
 	}, "<");
 	animationSelectors.push(".js-advantage__col--2");
 
-	careerTimeline.fromTo(".js-advantage__col--3", {
+	innerTimeline.fromTo(".js-advantage__col--3", {
 		y: "60%",
 		top: "60%",
 	}, {
@@ -419,6 +454,69 @@ function careerPageAnimationDesktop(){
 		ease: "none",
 	}, "<");
 	animationSelectors.push(".js-advantage__col--3");
+
+	//анимация футера
+	mainTimeline.fromTo(".footer__menu", {
+		right: "-100%",
+	}, {
+		right: "0%",
+		duration: 1,
+		ease: "none",
+	}, "0");
+	animationSelectors.push(".footer__menu");
+
+	mainTimeline.fromTo(".footer__title", {
+		left: "55%",
+	}, {
+		left: "-100%",
+		duration: 1,
+		ease: "none",
+	}, "<+=0.1");
+	animationSelectors.push(".footer__title");
+}
+
+//фунция содержащая анимацию для страницы Наша команда - десктоп
+function teamPageAnimationDesktop(){
+
+	//анимация контента
+	innerTimeline.fromTo("[data-js='teamPhotosContent']", {
+		y: "100",
+		opacity: "0",
+	}, {
+		opacity: "1",
+		y: "0",
+		duration: 0.2,
+		ease: "none",
+	}, "0");
+	animationSelectors.push("[data-js='teamPhotosContent']");
+
+	//анимация квадратов
+	innerTimeline.fromTo(".js-team-employees__column--1", {
+		y: "0%",
+	}, {
+		y: "-60%",
+		duration: 1,
+		ease: "none",
+	}, "<");
+	animationSelectors.push(".js-team-employees__column--1");
+
+	innerTimeline.fromTo(".js-team-employees__column--2", {
+		y: "30%",
+	}, {
+		y: "-60%",
+		duration: 1,
+		ease: "none",
+	}, "<");
+	animationSelectors.push(".js-team-employees__column--2");
+
+	innerTimeline.fromTo(".js-team-employees__column--3", {
+		y: "30%",
+	}, {
+		y: "-70%",
+		duration: 1,
+		ease: "none",
+	}, "<");
+	animationSelectors.push(".js-team-employees__column--3");
 
 	//анимация футера
 	mainTimeline.fromTo(".footer__menu", {
