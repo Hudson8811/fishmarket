@@ -3,7 +3,8 @@
     padding-top: vw(114);
     padding-bottom: vw(101);
     @include max(md) {
-
+        padding-top: vw2(95);
+        padding-bottom: vw2(50);
     } 
     &__breadcrumbs {
 		padding-left: vw(8);
@@ -17,20 +18,25 @@
         gap: vw(20);
         margin-top: vw(137);
         @include max(md) {
+            flex-direction: column;
+            gap: vw2(30);
+            margin-top: vw2(40);
         }
     }
     &__body {
         flex-basis: auto;
         flex-shrink: 1;
         flex-grow: 1;
-        @include max(md) {
-        }
     }
     &__header {
         display: flex;
         justify-content: space-between;
         align-items: flex-end;
         gap: vw(50);
+        @include max(md) {
+            gap: vw2(20);
+            flex-wrap: wrap;
+        }
     }
     &__title {
         color: $fontBlack;
@@ -52,15 +58,29 @@
         font-size: vw(14);
         color: $fontBlack;
         transition: all $tr-time linear;
+        @include max(md) {
+            flex-basis: vw2(105);
+            font-size: vw2(14);
+            margin-left: auto;
+            padding: 0;
+        }
         .new-btn__icon {
             width: vw(20);
             height: vw(20);
+            @include max(md) {
+                width: vw2(20);
+                height: vw2(20);
+            }
             svg, svg use {
                 width: vw(20);
                 height: vw(20);
                 fill: $fontBlack !important;
                 stroke: $fontBlack !important;
                 transition: all $tr-time linear;
+                @include max(md) {
+                    width: vw2(20);
+                    height: vw2(20);
+                }
             }
         } 
         &:hover {
@@ -77,6 +97,9 @@
         display: flex;
         flex-direction: column;
         margin-top: vw(24);
+        @include max(md) {
+            margin-top: vw(24);
+        }
     }
 
     &__sidebar {
@@ -86,18 +109,29 @@
         padding-top: vw(69);
         height: 100%;
         overflow: hidden;
+        @include max(md) {
+            flex-basis: auto;
+            padding-top: 0;
+            height: auto;
+        }
     }
 
     .cart-result {
         background-color: $white;
         &__info {
             padding: vw(15) vw(12);
+            @include max(md) {
+                padding: vw2(15) vw2(12);
+            }
         }
         &__title {
             font-size: vw(18);
             font-weight: 600;
             line-height: 1.222;
             color: $fontBlack;
+            @include max(md) {
+                font-size: vw2(18);
+            }
         }
         &__summ {
             margin-top: vw(6);
@@ -105,6 +139,10 @@
             font-weight: 500;
             line-height: 0.97;
             color: $fontBlack;
+            @include max(md) {
+                margin-top: vw2(6);
+                font-size: vw2(30);
+            }
         }
         &__vat {
             margin-top: vw(6);
@@ -112,25 +150,91 @@
             font-weight: 600;
             line-height: 1.222;
             color: $greyText;
+            @include max(md) {
+                margin-top: vw2(6);
+                font-size: vw2(14);
+            }
         }
         &__offer {
-            margin-top: 50px;
+            margin-top: vw(50);
+            justify-content: flex-start;
+            position: relative;
+            @include max(md) {
+                margin-top: vw2(50);
+            }
+            .new-btn__info {
+                margin-right: vw(10);
+                width: vw(17);
+                height: vw(17);
+                @include max(md) {
+                    margin-right: vw2(10);
+                    width: vw2(17);
+                    height: vw2(17);
+                }
+                svg {
+                    width: vw(17);
+                    height: vw(17);
+                    @include max(md) {
+                        width: vw2(17);
+                        height: vw2(17);
+                    }
+                    use {
+                       color: $white;
+                   }
+                }
+                &:hover ~ .new-btn__desc {
+                    z-index: 30;
+                    opacity: 1;
+                }
+            }
+            .new-btn__desc {
+                position: absolute;
+                left: 1px;
+                top: 75%;
+                width: vw(164);
+                background-color: $white;
+                box-shadow: vw(2) vw(2) vw(20) 0 #00000012;
+                font-size: vw(9.5);
+                font-weight: 500;
+                line-height: 1.375;
+                color: #1F2145;
+                padding: vw(11) vw(13);
+                z-index: -10;
+                opacity: 0;
+                transition: opacity $tr-time linear;
+                text-transform: none;
+                text-align: left;
+                @include max(md) {
+                    width: vw2(164);
+                    padding: vw2(11) vw2(13);
+                    box-shadow: vw2(2) vw2(2) vw2(20) 0 #00000012;
+                    font-size: vw2(9.5);
+                }
+            }
             .new-btn__icon {
+                margin-left: auto;
                 svg, svg use {
                     fill: $white;
                     stroke: $white;
                 }
             }
+
         }
     }
 
     &__banner {
         margin-top: vw(17);
         max-width: 100%;
+        @include max(md) {
+            margin-top: vw2(20);
+        }
         img {
             max-width: 100%;
             max-height: vw(600);
             object-fit: contain;
+            @include max(md) {
+                max-height: 80vh;
+            }
         }
     }
 

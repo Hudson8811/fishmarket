@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Cart Page</title>
+    <title>Team Page</title>
     <meta name="theme-color" content="#fff">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -428,226 +428,188 @@
       </div>
     </div>
     <main class="site-main">
-      <div class="scroll-page">
-        <section class="cart-intro">
-          <div class="container">
-                    <div class="breadcrumbs cart-intro__breadcrumbs breadcrumbs--dark">
-                      <ul class="breadcrumbs__list list-reset">
-                        <li class="breadcrumbs__item"><a href="#">Главная /</a>
-                        </li>
-                        <li class="breadcrumbs__item breadcrumbs__item--current"><span>Корзина</span>
-                        </li>
-                      </ul>
+      <div class="scroll-page" data-animation="teampage">
+              <section class="l-intro" style="background-image: url(img/team_intro_cover.png)">
+                <div class="container l-intro__container">
+                  <div class="l-intro__content">
+                          <div class="breadcrumbs l-intro__breadcrumbs breadcrumbs--light">
+                            <ul class="breadcrumbs__list list-reset">
+                              <li class="breadcrumbs__item"><a href="#">Главная /</a>
+                              </li>
+                              <li class="breadcrumbs__item breadcrumbs__item--current"><span>Наша команда</span>
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="title title--h1 l-intro__title">
+                            <h1>Наша команда</h1>
+                          </div>
+                    <div class="l-intro__text l-intro__text--bottom">Команда, которая вдохновляет и достигает успеха
                     </div>
-            <div class="cart-intro__content">
-              <div class="cart-intro__body">
-                <div class="cart-intro__header">
-                          <div class="title title--h1 cart-intro__title">
-                            <h1>Корзина</h1>
-                          </div>
-                          <button class="new-btn new-btn--small new-btn--transparent cart-intro__clear" type="button"><span class="new-btn__text">Очистить</span><span class="new-btn__icon">
-                              <svg>
-                                <use xlink:href="img/sprites/sprite.svg#close_for_sprite"></use>
-                              </svg></span>
-                          </button>
-                </div>
-                <div class="cart-intro__cards">
-                          <div class="cart-card">
-                            <div class="cart-card__photo"><img src="img/product_card_salmon.png" alt="Семга (лосось) потр.с/г 2-3 ord&lt;br&gt;охлажденная"></div>
-                            <div class="cart-card__title">Семга (лосось) потр.с/г 2-3 ord<br>охлажденная</div>
-                            <div class="cart-card__controls">
-                              <div class="amount-input" data-js="amountInput"><span class="amount-input__change amount-input__minus min">
-                                  <svg> 
-                                    <use xlink:href="img/sprites/sprite.svg#minus"></use>
-                                  </svg></span>
-                                <input class="amount-input__value" type="number" name="amount" value="1" autocomplete="off"><span class="amount-input__change amount-input__plus"> 
-                                  <svg> 
-                                    <use xlink:href="img/sprites/sprite.svg#plus"></use>
-                                  </svg></span>
-                              </div>
-                              <div class="cart-card__price">1 600 000 руб./кг</div>
-                            </div>
-                                    <button class="new-btn new-btn--icon new-btn--blue cart-card__delete" type="button"><span class="new-btn__icon">
-                                        <svg>
-                                          <use xlink:href="img/sprites/sprite.svg#city__top__close"></use>
-                                        </svg></span>
-                                    </button>
-                          </div>
-                          <div class="cart-card">
-                            <div class="cart-card__photo"><img src="img/product_card_salmon.png" alt="Семга (лосось) потр.с/г 2-3 ord&lt;br&gt;охлажденная"></div>
-                            <div class="cart-card__title">Семга (лосось) потр.с/г 2-3 ord<br>охлажденная</div>
-                            <div class="cart-card__controls">
-                              <div class="amount-input" data-js="amountInput"><span class="amount-input__change amount-input__minus min">
-                                  <svg> 
-                                    <use xlink:href="img/sprites/sprite.svg#minus"></use>
-                                  </svg></span>
-                                <input class="amount-input__value" type="number" name="amount" value="1" autocomplete="off"><span class="amount-input__change amount-input__plus"> 
-                                  <svg> 
-                                    <use xlink:href="img/sprites/sprite.svg#plus"></use>
-                                  </svg></span>
-                              </div>
-                              <div class="cart-card__price">1 600 000 руб./кг</div>
-                            </div>
-                                    <button class="new-btn new-btn--icon new-btn--blue cart-card__delete" type="button"><span class="new-btn__icon">
-                                        <svg>
-                                          <use xlink:href="img/sprites/sprite.svg#city__top__close"></use>
-                                        </svg></span>
-                                    </button>
-                          </div>
-                          <div class="cart-card">
-                            <div class="cart-card__photo"><img src="img/product_card_salmon.png" alt="Семга (лосось) потр.с/г 2-3 ord&lt;br&gt;охлажденная"></div>
-                            <div class="cart-card__title">Семга (лосось) потр.с/г 2-3 ord<br>охлажденная</div>
-                            <div class="cart-card__controls">
-                              <div class="amount-input" data-js="amountInput"><span class="amount-input__change amount-input__minus min">
-                                  <svg> 
-                                    <use xlink:href="img/sprites/sprite.svg#minus"></use>
-                                  </svg></span>
-                                <input class="amount-input__value" type="number" name="amount" value="1" autocomplete="off"><span class="amount-input__change amount-input__plus"> 
-                                  <svg> 
-                                    <use xlink:href="img/sprites/sprite.svg#plus"></use>
-                                  </svg></span>
-                              </div>
-                              <div class="cart-card__price">1 600 000 руб./кг</div>
-                            </div>
-                                    <button class="new-btn new-btn--icon new-btn--blue cart-card__delete" type="button"><span class="new-btn__icon">
-                                        <svg>
-                                          <use xlink:href="img/sprites/sprite.svg#city__top__close"></use>
-                                        </svg></span>
-                                    </button>
-                          </div>
-                          <div class="cart-card">
-                            <div class="cart-card__photo"><img src="img/product_card_salmon.png" alt="Семга (лосось) потр.с/г 2-3 ord&lt;br&gt;охлажденная"></div>
-                            <div class="cart-card__title">Семга (лосось) потр.с/г 2-3 ord<br>охлажденная</div>
-                            <div class="cart-card__controls">
-                              <div class="amount-input" data-js="amountInput"><span class="amount-input__change amount-input__minus min">
-                                  <svg> 
-                                    <use xlink:href="img/sprites/sprite.svg#minus"></use>
-                                  </svg></span>
-                                <input class="amount-input__value" type="number" name="amount" value="1" autocomplete="off"><span class="amount-input__change amount-input__plus"> 
-                                  <svg> 
-                                    <use xlink:href="img/sprites/sprite.svg#plus"></use>
-                                  </svg></span>
-                              </div>
-                              <div class="cart-card__price">1 600 000 руб./кг</div>
-                            </div>
-                                    <button class="new-btn new-btn--icon new-btn--blue cart-card__delete" type="button"><span class="new-btn__icon">
-                                        <svg>
-                                          <use xlink:href="img/sprites/sprite.svg#city__top__close"></use>
-                                        </svg></span>
-                                    </button>
-                          </div>
-                          <div class="cart-card">
-                            <div class="cart-card__photo"><img src="img/product_card_salmon.png" alt="Семга (лосось) потр.с/г 2-3 ord&lt;br&gt;охлажденная"></div>
-                            <div class="cart-card__title">Семга (лосось) потр.с/г 2-3 ord<br>охлажденная</div>
-                            <div class="cart-card__controls">
-                              <div class="amount-input" data-js="amountInput"><span class="amount-input__change amount-input__minus min">
-                                  <svg> 
-                                    <use xlink:href="img/sprites/sprite.svg#minus"></use>
-                                  </svg></span>
-                                <input class="amount-input__value" type="number" name="amount" value="1" autocomplete="off"><span class="amount-input__change amount-input__plus"> 
-                                  <svg> 
-                                    <use xlink:href="img/sprites/sprite.svg#plus"></use>
-                                  </svg></span>
-                              </div>
-                              <div class="cart-card__price">1 600 000 руб./кг</div>
-                            </div>
-                                    <button class="new-btn new-btn--icon new-btn--blue cart-card__delete" type="button"><span class="new-btn__icon">
-                                        <svg>
-                                          <use xlink:href="img/sprites/sprite.svg#city__top__close"></use>
-                                        </svg></span>
-                                    </button>
-                          </div>
-                          <div class="cart-card">
-                            <div class="cart-card__photo"><img src="img/product_card_salmon.png" alt="Семга (лосось) потр.с/г 2-3 ord&lt;br&gt;охлажденная"></div>
-                            <div class="cart-card__title">Семга (лосось) потр.с/г 2-3 ord<br>охлажденная</div>
-                            <div class="cart-card__controls">
-                              <div class="amount-input" data-js="amountInput"><span class="amount-input__change amount-input__minus min">
-                                  <svg> 
-                                    <use xlink:href="img/sprites/sprite.svg#minus"></use>
-                                  </svg></span>
-                                <input class="amount-input__value" type="number" name="amount" value="1" autocomplete="off"><span class="amount-input__change amount-input__plus"> 
-                                  <svg> 
-                                    <use xlink:href="img/sprites/sprite.svg#plus"></use>
-                                  </svg></span>
-                              </div>
-                              <div class="cart-card__price">1 600 000 руб./кг</div>
-                            </div>
-                                    <button class="new-btn new-btn--icon new-btn--blue cart-card__delete" type="button"><span class="new-btn__icon">
-                                        <svg>
-                                          <use xlink:href="img/sprites/sprite.svg#city__top__close"></use>
-                                        </svg></span>
-                                    </button>
-                          </div>
-                </div>
-              </div>
-              <div class="cart-intro__sidebar sidebar">
-                <div class="cart-intro__results cart-result">
-                  <div class="cart-result__info">
-                    <div class="cart-result__title">Итого:</div>
-                    <div class="cart-result__summ">9 999 999 &#8381;</div>
-                    <div class="cart-result__vat">Включая НДС: 0 &#8381;</div>
                   </div>
-                  <button class="new-btn new-btn--small new-btn--blue cart-result__offer" type="button" data-modal="cartOffer"><span class="new-btn__info">
-                      <svg>
-                        <use xlink:href="img/sprites/sprite.svg#info_icon"></use>
-                      </svg></span><span class="new-btn__text">получить персональное предложение</span><span class="new-btn__icon">
-                      <svg>
-                        <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
-                      </svg></span><span class="new-btn__desc">Не оферта. Отправив свой заказ Вы получите персональные условия сделки. В ближайшее время с Вами свяжется наш менеджер.</span></button>
                 </div>
-                <div class="cart-intro__banner"><a href="#"><img src="img/cart_banner.png" alt="banner"></a></div>
+              </section>
+        <section class="team-photos">
+          <div class="container team-photos__container">
+            <div class="team-photos__slider" data-js="teamPhotosSlider">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide team-photos__slide"><a class="team-photos__img" href="img/team_photo_1.png" data-fancybox="teamPhotos" data-caption="Короткое описание 1"><img src="img/team_photo_1.png" alt="слайд 1"></a></div>
+                <div class="swiper-slide team-photos__slide"><a class="team-photos__img" href="img/team_photo_1.png" data-fancybox="teamPhotos" data-caption="Короткое описание 2"><img src="img/team_photo_1.png" alt="слайд 2"></a></div>
+                <div class="swiper-slide team-photos__slide"><a class="team-photos__img" href="img/team_photo_1.png" data-fancybox="teamPhotos" data-caption="Короткое описание 3"><img src="img/team_photo_1.png" alt="слайд 3"></a></div>
+              </div>
+              <div class="team-photos__control swiper-button-prev">
+                <svg>
+                  <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
+                </svg>
+              </div>
+              <div class="team-photos__control swiper-button-next">
+                <svg>
+                  <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
+                </svg>
+              </div>
+            </div>
+            <div class="team-photos__right"> 
+                    <div class="title title--h2 team-photos__title">
+                      <h2>Каждый день работаем с улыбкой</h2>
+                    </div><a class="new-btn new-btn--big new-btn--blue " href="javascript:void(0);" data-fancybox-trigger="teamPhotos"><span class="new-btn__text">Смотреть</span><span class="new-btn__icon">
+                        <svg>
+                          <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
+                        </svg></span></a>
+            </div>
+          </div>
+        </section>
+              <section class="l-call-action">
+                <div class="container l-call-action__container">
+                        <div class="title title--h2 l-call-action__title">
+                          <h2>Ищете работу? Присылайте резюме</h2>
+                        </div><a class="new-btn new-btn--big new-btn--white " href="javascript:void(0);"><span class="new-btn__text">Откликнуться</span><span class="new-btn__icon">
+                            <svg>
+                              <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
+                            </svg></span></a>
+                </div>
+              </section>
+        <section class="l-vacancies">
+          <div class="container l-vacancies__container">
+            <div class="l-vacancies__header">
+                      <div class="title title--h2 l-vacancies__title">
+                        <h2>Ищем в команду (горящие вакансии)</h2>
+                      </div>
+              <div class="l-vacancies__btns"><a class="new-btn new-btn--small new-btn--black l-vacancies__btn" href="javascript:void(0);"><span class="new-btn__text">Смотреть все</span><span class="new-btn__icon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
+                          </svg></span></a>
+                      <button class="new-btn new-btn--small new-btn--blue l-vacancies__btn" type="button"><span class="new-btn__text">Откликнуться</span><span class="new-btn__icon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
+                          </svg></span>
+                      </button>
+              </div>
+            </div>
+            <div class="l-vacancies__slider" data-js="lVacanciesSlider">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide l-vacancies__slide">
+                          <div class="vacancy-card l-vacancies__card"><a class="vacancy-card__link" href="#"></a>
+                            <div class="vacancy-card__header">
+                              <div class="vacancy-card__title">Специалист по сертификации и оформлению технической документации</div><a class="new-btn new-btn--icon new-btn--blue vacancy-card__btn" href="javascript:void(0);"><span class="new-btn__icon">
+                                        <svg>
+                                          <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
+                                        </svg></span></a>
+                            </div>
+                            <div class="vacancy-card__city">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#header_position"></use>
+                              </svg><span>Ростов-на-Дону, улица Пескова, 1</span>
+                            </div>
+                            <div class="vacancy-card__desc text-block"><ul>
+                            <li>5/2</li>
+                            <li>Скидка в Ашан 10% на категорию Рыба</li>
+</ul></div>
+                            <div class="vacancy-card__salary">29 000 руб.</div>
+                          </div>
+                </div>
+                <div class="swiper-slide l-vacancies__slide">
+                          <div class="vacancy-card l-vacancies__card"><a class="vacancy-card__link" href="#"></a>
+                            <div class="vacancy-card__header">
+                              <div class="vacancy-card__title">Специалист по сертификации и оформлению технической документации</div><a class="new-btn new-btn--icon new-btn--blue vacancy-card__btn" href="javascript:void(0);"><span class="new-btn__icon">
+                                        <svg>
+                                          <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
+                                        </svg></span></a>
+                            </div>
+                            <div class="vacancy-card__city">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#header_position"></use>
+                              </svg><span>Ростов-на-Дону, улица Пескова, 1</span>
+                            </div>
+                            <div class="vacancy-card__desc text-block"><ul>
+                            <li>5/2</li>
+                            <li>Скидка в Ашан 10% на категорию Рыба</li>
+</ul></div>
+                            <div class="vacancy-card__salary">29 000 руб.</div>
+                          </div>
+                </div>
+                <div class="swiper-slide l-vacancies__slide">
+                          <div class="vacancy-card l-vacancies__card"><a class="vacancy-card__link" href="#"></a>
+                            <div class="vacancy-card__header">
+                              <div class="vacancy-card__title">Специалист по сертификации и оформлению технической документации</div><a class="new-btn new-btn--icon new-btn--blue vacancy-card__btn" href="javascript:void(0);"><span class="new-btn__icon">
+                                        <svg>
+                                          <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
+                                        </svg></span></a>
+                            </div>
+                            <div class="vacancy-card__city">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#header_position"></use>
+                              </svg><span>Ростов-на-Дону, улица Пескова, 1</span>
+                            </div>
+                            <div class="vacancy-card__desc text-block"><ul>
+                            <li>5/2</li>
+                            <li>Скидка в Ашан 10% на категорию Рыба</li>
+</ul></div>
+                            <div class="vacancy-card__salary">29 000 руб.</div>
+                          </div>
+                </div>
+                <div class="swiper-slide l-vacancies__slide">
+                          <div class="vacancy-card l-vacancies__card"><a class="vacancy-card__link" href="#"></a>
+                            <div class="vacancy-card__header">
+                              <div class="vacancy-card__title">Специалист по сертификации и оформлению технической документации</div><a class="new-btn new-btn--icon new-btn--blue vacancy-card__btn" href="javascript:void(0);"><span class="new-btn__icon">
+                                        <svg>
+                                          <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
+                                        </svg></span></a>
+                            </div>
+                            <div class="vacancy-card__city">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#header_position"></use>
+                              </svg><span>Ростов-на-Дону, улица Пескова, 1</span>
+                            </div>
+                            <div class="vacancy-card__desc text-block"><ul>
+                            <li>5/2</li>
+                            <li>Скидка в Ашан 10% на категорию Рыба</li>
+</ul></div>
+                            <div class="vacancy-card__salary">29 000 руб.</div>
+                          </div>
+                </div>
+                <div class="swiper-slide l-vacancies__slide">
+                          <div class="vacancy-card l-vacancies__card"><a class="vacancy-card__link" href="#"></a>
+                            <div class="vacancy-card__header">
+                              <div class="vacancy-card__title">Специалист по сертификации и оформлению технической документации</div><a class="new-btn new-btn--icon new-btn--blue vacancy-card__btn" href="javascript:void(0);"><span class="new-btn__icon">
+                                        <svg>
+                                          <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
+                                        </svg></span></a>
+                            </div>
+                            <div class="vacancy-card__city">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#header_position"></use>
+                              </svg><span>Ростов-на-Дону, улица Пескова, 1</span>
+                            </div>
+                            <div class="vacancy-card__desc text-block"><ul>
+                            <li>5/2</li>
+                            <li>Скидка в Ашан 10% на категорию Рыба</li>
+</ul></div>
+                            <div class="vacancy-card__salary">29 000 руб.</div>
+                          </div>
+                </div>
               </div>
             </div>
           </div>
         </section>
-                <div class="l-modal" data-id="cartOffer">
-                  <div class="l-modal__overlay" data-js="lModalOverlay"></div>
-                  <div class="l-modal__content">
-                    <div class="l-modal__close" data-js="lModalClose">
-                      <svg>
-                        <use xlink:href="img/sprites/sprite.svg#header_close"></use>
-                      </svg>
-                    </div>
-                    <div class="mob-menu__question__top"> 
-                      <div class="mob-menu__question__top__title">ОСТАЛИСЬ ВОПРОСЫ? НАПИШИТЕ ИЛИ ЗАКАЖИТЕ ЗВОНОК
-                      </div>
-                    </div>
-                    <form class="contacts__form" action=""> </form>
-                    <div class="contacts__form__input-block error">
-                      <input class="contacts__form__input js-mask-name text__13" type="text" name="">
-                      <div class="contacts__form__input-block__name">	Имя*</div>
-                      <div class="contacts__form__input-block__error">Некорректное имя</div>
-                    </div>
-                    <div class="contacts__form__input-block error">
-                      <input class="contacts__form__input js-mask-phone" type="tel" name="">
-                      <div class="contacts__form__input-block__name">Телефон</div>
-                      <div class="contacts__form__input-block__error">Некорректный телефон</div>
-                    </div>
-                    <div class="contacts__form__input-block error">
-                      <input class="contacts__form__input text__13" type="email" name="">
-                      <div class="contacts__form__input-block__name">Почта</div>
-                      <div class="contacts__form__input-block__error">Некорректная почта</div>
-                    </div>
-                    <div class="contacts__form__input-block">
-                      <textarea class="contacts__form__input text__13" name=""></textarea>
-                      <div class="contacts__form__input-block__name">Комментарий</div>
-                      <div class="contacts__form__input-block__error"></div>
-                    </div>
-                    <div class="contacts__form__personal-data contacts__form__input-block error"> 
-                      <div class="checkbox"></div>
-                      <label>
-                        <input class="custom-checkbox" type="checkbox" name="personal-data" value="indigo">Согласие на обработку персональных данных
-                      </label>
-                      <div class="contacts__form__input-block__error">обязательно нужно согласиться</div>
-                    </div>
-                    <div class="mob-menu__question__bottom"></div>
-                    <div class="mob-menu__question__bottom__text">Отправить</div>
-                    <div class="mob-menu__question__bottom__row">
-                      <svg></svg>
-                      <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
-                    </div>
-                  </div>
-                </div>
         <footer class="footer footer__animation footer__animation--personally js-footer__animation">
           <div class="footer__logo"> <img src="img/logo__white.png" alt=""></div>
           <div class="footer__title title__170"> Понимаем море, слышим людей

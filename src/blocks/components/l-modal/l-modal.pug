@@ -1,3 +1,8 @@
-.mob-menu__section.mob-menu__question__section.js-mob-menu__section__question.active
-    .mob-menu--overlay.js-mob-menu__question--overlay
-    block modal-content
+mixin l-modal(modalId="myModal")
+    .l-modal(data-id=modalId)
+        .l-modal__overlay(data-js="lModalOverlay")
+        .l-modal__content
+            .l-modal__close(data-js="lModalClose")
+                svg
+                    use(xlink:href=`img/sprites/sprite.svg#header_close`)
+            block

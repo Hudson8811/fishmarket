@@ -1,0 +1,56 @@
+.l-vacancies {
+    padding: vw(37) 0 vw(30);
+    overflow: hidden;
+    @include max(md) {
+        padding: vw2(35) 0 vw2(30);
+    }
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        min-height: vw(750);
+        gap: vw(140);
+    }
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__title {
+        flex-basis: vw(705);
+        flex-shrink: 0;
+        flex-grow: 0;
+        font-size: vw(60);
+    }
+
+    &__btns {
+        display: flex;
+        align-items: center;
+        gap: vw(29);
+        flex-basis: vw(915);
+        flex-shrink: 0;
+        flex-grow: 0;
+    }
+
+    &__btn {
+        .new-btn__icon svg use {
+            stroke: $white;
+        }
+    }
+
+    &__slider {
+        flex-basis: 100%;
+        @include max(md) {
+        }
+    }
+
+    &__slide {
+        width: vw(757);
+    }
+
+    &__card {
+        min-height: vw(393);
+    }
+}

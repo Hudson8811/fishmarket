@@ -1,5 +1,5 @@
 .l-intro {
-    padding: vw(115) 0 vw(25);
+    padding: vw(115) 0 vw(68);
     min-height: 100vh;
     display: flex;
     background-size: cover;
@@ -36,6 +36,7 @@
     }
 
     &__text {
+        color: $white;
         * {
             color: $white !important;
         }
@@ -43,15 +44,26 @@
             margin-bottom: 1em;
         }
         &--top {
-            margin-top: vw(29);
+            margin-top: vw(30);
             max-width: vw(643);
             @include max(md) {
-                margin-top: vw2(29);
+                margin-top: vw2(30);
                 max-width: 100%;
             } 
         }
         &--bottom {
             margin-top: auto;
+            padding-top: vw(50);
+            max-width: vw(847);
+            font-size: vw(70);
+            font-weight: 400;
+            line-height: 0.89;
+            letter-spacing: -0.02em;
+            @include max(md) {
+                max-width: 100%;
+                padding-top: vw2(50);
+                font-size: vw2(40);
+            } 
         }
     }
 }

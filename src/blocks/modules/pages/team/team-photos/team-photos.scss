@@ -1,0 +1,123 @@
+.team-photos {
+    padding: vw(35) 0;
+    overflow: hidden;
+    @include max(md) {
+        padding: vw2(105) 0 vw2(35);
+    }
+
+    &__container {
+        display: flex;
+        align-items: stretch;
+        gap: vw(35);
+    }
+
+    &__right {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-end;
+        flex-basis: auto;
+        flex-shrink: 1;
+        flex-grow: 1;
+    }
+
+    &__title {
+        font-size: vw(82);
+        width: vw(660);
+        align-self: flex-start;
+    }
+    
+    &__slider {
+        position: relative;
+        width: vw(579);
+        flex-basis: vw(579);
+        flex-shrink: 0;
+        flex-grow: 0;
+        overflow: hidden;
+        &:hover {
+            .team-photos__control {
+                opacity: 1;
+                &.swiper-button-disabled {
+                    opacity: 0.35;
+                }
+            }
+        }
+    }
+
+    &__slide {
+        height: vw(720);
+        @include max(md) {
+            height: vw2(600);
+        }
+    }
+
+    &__img {
+        width: 100%;
+        height: 100%;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__control {
+        width: vw(59);
+        height: vw(59);
+        background-color: $blueLight;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 100%;
+        transition: $tr-time;
+        top: 53.5%;
+        opacity: 0;
+        &.swiper-button-disabled {
+            opacity: 0;
+            @include max(md) {
+                opacity: 0.35;
+            }
+        }
+        @include max(md) {
+            width: vw2(50);
+            height: vw2(50);
+            opacity: 1;
+            top: vw2(-50);
+        } 
+        &::after {
+            content: none;
+        }
+        &:hover {
+            background-color: $blueHover;
+        }
+        svg {
+            width: vw(11);
+            height: vw(8);
+            @include max(md) {
+                width: vw2(11);
+                height: vw2(8);
+            } 
+            use {
+                stroke: $white;
+                fill: none;
+                width: vw(11);
+                height: vw(8);
+                @include max(md) {
+                    width: vw2(11);
+                    height: vw2(8);
+                } 
+            }
+        } 
+        &.swiper-button-prev {
+            transform: rotate(180deg);
+            left: vw(26);
+            @include max(md) {
+                right: vw2(70);
+                left: auto;
+            } 
+        }
+        &.swiper-button-next {
+            right: vw(26);
+        }
+    }
+}

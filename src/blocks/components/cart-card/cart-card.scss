@@ -1,4 +1,5 @@
 .cart-card {
+    position: relative;
     display: flex;
     align-items: center;
     border-bottom: 1px solid $greyLight;
@@ -23,7 +24,11 @@
             object-fit: contain;
         }
         @include max(md) {
-
+            width: vw2(198);
+            flex-basis: vw2(198);
+            height: vw2(149);
+            padding: vw2(10) vw2(20) 0;
+            border-right: none;
         } 
     }
     &__title {
@@ -33,6 +38,10 @@
         line-height: 0.958;
         color: $fontBlack;
         @include max(md) {
+            flex-basis: 100%;
+            font-size: vw2(24);
+            order: 2;
+            padding: 0 vw2(20) vw2(20);
         } 
     }
     &__controls {
@@ -53,17 +62,32 @@
         white-space: nowrap;
         margin-top: 7px;
         @include max(md) {
-            font-size: vw2(24);
+            font-size: vw2(14);
         } 
     }
 
     &__delete.new-btn {
+        @include max(md) {
+            position: absolute;
+            right: vw2(10);
+            top: vw2(10);
+            width: vw2(50);
+            height: vw2(50);
+        }
         .new-btn__icon {
+            @include max(md) {
+                width: vw2(50);
+                height: vw2(50);
+            }
             svg, svg use {
                 width: vw(20);
                 height: vw(20);
                 fill: $white;
                 stroke: $white;
+                @include max(md) {
+                    width: vw2(20);
+                    height: vw2(20);
+                }
             }
         } 
     }

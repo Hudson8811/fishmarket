@@ -5,54 +5,55 @@ include ../../../../components/breadcrumbs/breadcrumbs.pug
 include ../../../../components/cart-card/cart-card.pug
 
 section.cart-intro
-	.container
-		+breadcrumbs({
-			classes: 'cart-intro__breadcrumbs',
-			items: [
-				{
-					name: 'Главная',
-					link: '#'
-				},
-				{
-					name: 'Корзина',
-					link: '#'
-				},
-			]
-		})
+    .container
+        +breadcrumbs({
+            classes: 'cart-intro__breadcrumbs',
+            items: [
+                {
+                    name: 'Главная',
+                    link: '#'
+                },
+                {
+                    name: 'Корзина',
+                    link: '#'
+                },
+            ]
+        })
 
-		.cart-intro__content
-			.cart-intro__body
-				.cart-intro__header
-					+title("h1", "Корзина", "cart-intro__title")
-					+new-btn({
-						classes: 'cart-intro__clear',
-						tag: 'button',
-						vMode: 'small',
-						text: 'Очистить',
-						iconName: 'close_for_sprite',
-						cMode: 'transparent',
-					})
-				.cart-intro__cards
-					+cart-card()
-					+cart-card()
-					+cart-card()
-					+cart-card()
-					+cart-card()
-					+cart-card()
-			.cart-intro__sidebar.sidebar
-				.cart-intro__results.cart-result
-					.cart-result__info
-						.cart-result__title Итого:
-						.cart-result__summ 9 999 999 &#8381;
-						.cart-result__vat Включая НДС: 0 &#8381;
-					+new-btn({
-						classes: 'cart-result__offer',
-						tag: 'button',
-						vMode: 'small',
-						text: 'получить персональное предложение',
-						iconName: 'arrow_btn',
-						cMode: 'blue',
-					})
-				.cart-intro__banner
-					a(href='#')
-						img(src="img/cart_banner.png" alt="banner")
+        .cart-intro__content
+            .cart-intro__body
+                .cart-intro__header
+                    +title("h1", "Корзина", "cart-intro__title")
+                    +new-btn({
+                        classes: 'cart-intro__clear',
+                        tag: 'button',
+                        vMode: 'small',
+                        text: 'Очистить',
+                        iconName: 'close_for_sprite',
+                        cMode: 'transparent',
+                    })
+                .cart-intro__cards
+                    +cart-card()
+                    +cart-card()
+                    +cart-card()
+                    +cart-card()
+                    +cart-card()
+                    +cart-card()
+            .cart-intro__sidebar.sidebar
+                .cart-intro__results.cart-result
+                    .cart-result__info
+                        .cart-result__title Итого:
+                        .cart-result__summ 9 999 999 &#8381;
+                        .cart-result__vat Включая НДС: 0 &#8381;
+                    button.new-btn.new-btn--small.new-btn--blue.cart-result__offer(type="button" data-modal="cartOffer")
+                        span.new-btn__info
+                            svg
+                                use(xlink:href="img/sprites/sprite.svg#info_icon")
+                        span.new-btn__text получить персональное предложение
+                        span.new-btn__icon
+                            svg
+                                use(xlink:href="img/sprites/sprite.svg#arrow_btn")
+                        span.new-btn__desc Не оферта. Отправив свой заказ Вы получите персональные условия сделки. В ближайшее время с Вами свяжется наш менеджер.
+                .cart-intro__banner
+                    a(href='#')
+                        img(src="img/cart_banner.png" alt="banner")

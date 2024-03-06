@@ -85,6 +85,15 @@
         }
     }
 
+    &__desc.text-block {
+        margin-top: vw(15);
+        margin-bottom: vw(30);
+        @include max(md) {
+            margin-top: vw2(15);
+            margin-bottom: vw2(30);
+        }
+    }
+
     &__salary {
         margin-top: auto;
         font-size: vw(24);

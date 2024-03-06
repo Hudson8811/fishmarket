@@ -1,0 +1,42 @@
+extends ../layouts/default
+include ../helpers/mixins
+
+block variables
+    - const title = "Team Page"
+
+block content
+    //-mixins
+    include ../../blocks/components/new-btn/new-btn.pug
+    include ../../blocks/modules/l-intro/l-intro.pug
+    include ../../blocks/modules/l-call-action/l-call-action.pug
+
+    .scroll-page(data-animation="teampage")
+        +l-intro({
+            classes: '',
+            breadcrumbs: {
+                classes: 'l-intro__breadcrumbs',
+                colorMode: 'light',
+                items: [
+                    {
+                        name: 'Главная',
+                        link: '#'
+                    },
+                    {
+                        name: 'Наша команда',
+                        link: '#'
+                    }
+                ]
+            },
+            title: 'Наша команда',
+            textBottom: 'Команда, которая вдохновляет и достигает успеха',
+            image: 'img/team_intro_cover.png'
+        })
+        include ../../blocks/modules/pages/team/team-photos/team-photos.pug
+        +l-call-action({
+            title: 'Ищете работу? Присылайте резюме',
+            btnText: 'Откликнуться'
+        })
+        include ../../blocks/modules/l-vacancies/l-vacancies.pug
+
+        include ../../blocks/modules/footer/footer
+

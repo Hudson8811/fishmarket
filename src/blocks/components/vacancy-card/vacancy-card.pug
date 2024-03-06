@@ -2,6 +2,7 @@
     const defaultVacancyCardProps = {
         classes: '',
         title: 'Менеджер по продажам',
+        desc: '',
         city: 'Москва',
         salary: 'от 100 000 руб.',
     }
@@ -11,6 +12,7 @@ mixin vacancy-card(props = defaultVacancyCardProps)
         const checkProps = {
             classes: props.classes ? props.classes : defaultVacancyCardProps.classes,
             title: props.title ? props.title : defaultVacancyCardProps.title,
+            desc: props.desc ? props.desc : defaultVacancyCardProps.desc,
             city: props.city ? props.city : defaultVacancyCardProps.city,
             salary: props.salary ? props.salary : defaultVacancyCardProps.salary,
         }
@@ -24,6 +26,9 @@ mixin vacancy-card(props = defaultVacancyCardProps)
             svg
                 use(xlink:href=`img/sprites/sprite.svg#header_position`)
             span= checkProps.city
+        - if(checkProps.desc)
+            .vacancy-card__desc.text-block!= checkProps.desc
+
         .vacancy-card__salary= checkProps.salary
 
 
