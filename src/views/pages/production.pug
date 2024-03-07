@@ -1,0 +1,30 @@
+extends ../layouts/default
+include ../helpers/mixins
+
+block variables
+    - const title = "Production Page"
+
+block content
+    //-mixins
+    include ../../blocks/components/new-btn/new-btn.pug
+    include ../../blocks/modules/l-map/l-map.pug
+    include ../../blocks/modules/l-walk/l-walk.pug
+    include ../../blocks/modules/l-vacancies/l-vacancies.pug
+
+    .scroll-page(data-animation="productionpage")
+        include ../../blocks/modules/pages/production/production-intro/production-intro.pug
+        include ../../blocks/modules/pages/production/production-services/production-services.pug
+        +l-walk({
+            classes: 'production__walk',
+            title: "Виртуальная прогулка<br>по заводу"
+        })
+        +l-map({
+            controls: true
+        })
+        +l-vacancies({
+            classes: 'production__vacancies',
+            title: 'Ищем в команду на производство'
+        })
+
+        include ../../blocks/modules/footer/footer
+

@@ -20,11 +20,9 @@
         }
     }
     &__cards {
-        position: relative;
         width: 100%;
         display: flex;
         align-items: flex-end;
-        z-index: 10;
         @include max(md) {
             align-items: center;
             flex-direction: column;
@@ -46,6 +44,7 @@
         background-color: #A8AEB0;
         border: 1px solid #A8AEB0;
         gap: 1px;
+        z-index: 5;
         @include max(md) {
             flex-basis: auto;
             width: 100%;

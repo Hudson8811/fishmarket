@@ -10,11 +10,11 @@ mixin l-walk(props = defaultLWalkProps)
 
 	-
 		const checkProps = {
-			classes: props.classes ? props.classes : defaultLIntroProps.classes,
+			classes: props.classes ? props.classes : defaultLWalkProps.classes,
 			title: props.title ? props.title : defaultLWalkProps.title,
 		};
 
-	section.l-walk
+	section.l-walk(class= checkProps.classes)
 		.container
 			.l-walk__header
 				+title("h2", checkProps.title, "l-walk__title")

@@ -1,86 +1,99 @@
-include ../../components/title/title.pug
-include ../../components/vacancy-card/vacancy-card.pug
+-
+    const defaultLVacanciesProps = {
+        classes: '',
+        title: 'Ищем в команду (горящие вакансии)',
+    }
 
-section.l-vacancies
-    .container.l-vacancies__container
-        .l-vacancies__header
-            +title('h2', 'Ищем в команду (горящие вакансии)', 'l-vacancies__title')
-            .l-vacancies__btns
-                +new-btn({
-                    classes: 'l-vacancies__btn',
-                    buttonType: 'button',
-                    vMode: 'small',
-                    text: 'Смотреть все',
-                    cMode: 'black',
-                })
-                +new-btn({
-                    classes: 'l-vacancies__btn',
-                    tag: 'button',
-                    buttonType: 'button',
-                    vMode: 'small',
-                    text: 'Откликнуться',
-                    cMode: 'blue'
-                })
-        .l-vacancies__slider(data-js="lVacanciesSlider")
-            .swiper-wrapper
-                .swiper-slide.l-vacancies__slide
-                    +vacancy-card({
-                        classes: 'l-vacancies__card',
-                        title: 'Специалист по сертификации и оформлению технической документации',
-                        desc: `<ul>
-                            <li>5/2</li>
-                            <li>Скидка в Ашан 10% на категорию Рыба</li>
-                            </ul>`,
-                        city: 'Ростов-на-Дону, улица Пескова, 1',
-                        salary: '29 000 руб.',
-                            })
-                .swiper-slide.l-vacancies__slide
-                    +vacancy-card({
-                        classes: 'l-vacancies__card',
-                        title: 'Специалист по сертификации и оформлению технической документации',
-                        city: 'Ростов-на-Дону, улица Пескова, 1',
-                        desc: `<ul>
-                            <li>5/2</li>
-                            <li>Скидка в Ашан 10% на категорию Рыба</li>
-                            </ul>`,
-                        salary: '29 000 руб.',
-                            })
-                .swiper-slide.l-vacancies__slide
-                    +vacancy-card({
-                        classes: 'l-vacancies__card',
-                        title: 'Специалист по сертификации и оформлению технической документации',
-                        city: 'Ростов-на-Дону, улица Пескова, 1',
-                        desc: `<ul>
-                            <li>5/2</li>
-                            <li>Скидка в Ашан 10% на категорию Рыба</li>
-                            </ul>`,
-                        salary: '29 000 руб.',
-                            })
-                .swiper-slide.l-vacancies__slide
-                    +vacancy-card({
-                        classes: 'l-vacancies__card',
-                        title: 'Специалист по сертификации и оформлению технической документации',
-                        city: 'Ростов-на-Дону, улица Пескова, 1',
-                        desc: `<ul>
-                            <li>5/2</li>
-                            <li>Скидка в Ашан 10% на категорию Рыба</li>
-                            </ul>`,
-                        salary: '29 000 руб.',
-                            })
-                .swiper-slide.l-vacancies__slide
-                    +vacancy-card({
-                        classes: 'l-vacancies__card',
-                        title: 'Специалист по сертификации и оформлению технической документации',
-                        city: 'Ростов-на-Дону, улица Пескова, 1',
-                        desc: `<ul>
-                            <li>5/2</li>
-                            <li>Скидка в Ашан 10% на категорию Рыба</li>
-                            </ul>`,
-                        salary: '29 000 руб.',
-                            })
-            .l-vacancies__control.swiper-button-prev
-                svg
-                    use(xlink:href=`img/sprites/sprite.svg#arrow_btn`)
-            .l-vacancies__control.swiper-button-next
-                svg
-                    use(xlink:href=`img/sprites/sprite.svg#arrow_btn`)
+mixin l-vacancies(props = defaultLVacanciesProps)
+    include ../../components/title/title.pug
+    include ../../components/vacancy-card/vacancy-card.pug
+
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultLVacanciesProps.classes,
+            title: props.title ? props.title : defaultLVacanciesProps.title,
+        };
+
+    section.l-vacancies(class= checkProps.classes)
+        .container.l-vacancies__container
+            .l-vacancies__header
+                +title('h2', checkProps.title, 'l-vacancies__title')
+                .l-vacancies__btns
+                    +new-btn({
+                        classes: 'l-vacancies__btn',
+                        buttonType: 'button',
+                        vMode: 'small',
+                        text: 'Смотреть все',
+                        cMode: 'black',
+                    })
+                    +new-btn({
+                        classes: 'l-vacancies__btn',
+                        tag: 'button',
+                        buttonType: 'button',
+                        vMode: 'small',
+                        text: 'Откликнуться',
+                        cMode: 'blue'
+                    })
+            .l-vacancies__slider(data-js="lVacanciesSlider")
+                .swiper-wrapper
+                    .swiper-slide.l-vacancies__slide
+                        +vacancy-card({
+                            classes: 'l-vacancies__card',
+                            title: 'Специалист по сертификации и оформлению технической документации',
+                            desc: `<ul>
+                                <li>5/2</li>
+                                <li>Скидка в Ашан 10% на категорию Рыба</li>
+                                </ul>`,
+                            city: 'Ростов-на-Дону, улица Пескова, 1',
+                            salary: '29 000 руб.',
+                                })
+                    .swiper-slide.l-vacancies__slide
+                        +vacancy-card({
+                            classes: 'l-vacancies__card',
+                            title: 'Специалист по сертификации и оформлению технической документации',
+                            city: 'Ростов-на-Дону, улица Пескова, 1',
+                            desc: `<ul>
+                                <li>5/2</li>
+                                <li>Скидка в Ашан 10% на категорию Рыба</li>
+                                </ul>`,
+                            salary: '29 000 руб.',
+                                })
+                    .swiper-slide.l-vacancies__slide
+                        +vacancy-card({
+                            classes: 'l-vacancies__card',
+                            title: 'Специалист по сертификации и оформлению технической документации',
+                            city: 'Ростов-на-Дону, улица Пескова, 1',
+                            desc: `<ul>
+                                <li>5/2</li>
+                                <li>Скидка в Ашан 10% на категорию Рыба</li>
+                                </ul>`,
+                            salary: '29 000 руб.',
+                                })
+                    .swiper-slide.l-vacancies__slide
+                        +vacancy-card({
+                            classes: 'l-vacancies__card',
+                            title: 'Специалист по сертификации и оформлению технической документации',
+                            city: 'Ростов-на-Дону, улица Пескова, 1',
+                            desc: `<ul>
+                                <li>5/2</li>
+                                <li>Скидка в Ашан 10% на категорию Рыба</li>
+                                </ul>`,
+                            salary: '29 000 руб.',
+                                })
+                    .swiper-slide.l-vacancies__slide
+                        +vacancy-card({
+                            classes: 'l-vacancies__card',
+                            title: 'Специалист по сертификации и оформлению технической документации',
+                            city: 'Ростов-на-Дону, улица Пескова, 1',
+                            desc: `<ul>
+                                <li>5/2</li>
+                                <li>Скидка в Ашан 10% на категорию Рыба</li>
+                                </ul>`,
+                            salary: '29 000 руб.',
+                                })
+                .l-vacancies__control.swiper-button-prev
+                    svg
+                        use(xlink:href=`img/sprites/sprite.svg#arrow_btn`)
+                .l-vacancies__control.swiper-button-next
+                    svg
+                        use(xlink:href=`img/sprites/sprite.svg#arrow_btn`)

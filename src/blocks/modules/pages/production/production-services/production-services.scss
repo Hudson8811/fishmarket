@@ -1,0 +1,19 @@
+.production-services {
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    @include max(md) {
+        padding: vw2(100) 0 vw2(30);
+        min-height: vw2(650);
+    } 
+
+    &__container {
+        min-height: 100%;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        min-height: 100%;
+    }
+}

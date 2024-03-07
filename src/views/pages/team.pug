@@ -9,6 +9,7 @@ block content
     include ../../blocks/components/new-btn/new-btn.pug
     include ../../blocks/modules/l-intro/l-intro.pug
     include ../../blocks/modules/l-call-action/l-call-action.pug
+    include ../../blocks/modules/l-vacancies/l-vacancies.pug
 
     .scroll-page(data-animation="teampage")
         +l-intro({
@@ -37,7 +38,7 @@ block content
             title: 'Ищете работу? Присылайте резюме',
             btnText: 'Откликнуться'
         })
-        include ../../blocks/modules/l-vacancies/l-vacancies.pug
+        +l-vacancies()
 
         include ../../blocks/modules/footer/footer
 

@@ -129,3 +129,9 @@
         }
     }
 }
+
+.l-vacancies.production__vacancies {
+    .l-vacancies__title {
+        flex-basis: vw(650); 
+    }
+}

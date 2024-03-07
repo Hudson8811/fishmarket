@@ -1,0 +1,52 @@
+.production-intro {
+    padding: vw(115) 0 vw(68);
+    min-height: 100vh;
+    display: flex;
+    background-size: cover;
+    background-position: center;
+    @include max(md) {
+        padding: vw2(100) 0 vw2(30);
+        min-height: vw2(650);
+    } 
+
+    &__container {
+        min-height: 100%;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        min-height: 100%;
+    }
+
+    &__breadcrumbs {
+        padding-left: vw(20);
+        @include max(md) {
+            padding-left: vw2(5);
+        } 
+    }
+
+    &__title {
+        color: $white;
+        font-size: vw(171);
+        line-height: 0.97;
+        @include max(md) {
+            font-size: vw2(50)
+        } 
+    }
+
+    &__text {
+        margin-top: vw(30);
+        max-width: vw(472);
+        font-size: vw(32);
+        font-weight: 400;
+        line-height: 1.11;
+        letter-spacing: -0.03em;
+        color: $white;
+        @include max(md) {
+            max-width: 100%;
+            margin-top: vw2(50);
+            font-size: vw2(40);
+        } 
+    }
+}

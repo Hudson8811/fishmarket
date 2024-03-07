@@ -156,3 +156,12 @@
         }
     }
 }
+
+.l-walk.production__walk {
+    .l-walk__title {
+        max-width: vw(1000);
+        @include max(md) {
+            max-width: 100%;
+        } 
+    }
+}

@@ -1,0 +1,22 @@
+include ../../../../components/breadcrumbs/breadcrumbs.pug
+include ../../../../components/title/title.pug
+
+section.production-intro(style="background-image: url(img/production_intro_cover.png);")
+    .container.production-intro__container
+        .production-intro__content
+            +breadcrumbs({
+                classes: 'production-intro__breadcrumbs',
+                colorMode: 'light',
+                items: [
+                    {
+                        name: 'Главная',
+                        link: '#'
+                    },
+                    {
+                        name: 'Наше производство',
+                        link: '#'
+                    }
+                ]
+            })
+            +title("h1", "Наше производство", "production-intro__title")
+            .production-intro__text Компания запустила собственное производство по переработке и фасовке рыбы в 2007 году. Производственная мощность 350 тонн готовой продукции в месяц.
