@@ -4,9 +4,9 @@ include ../../../../components/employee-card/employee-card.pug
 section.team-employees(data-js='teamEmployeesSection')
     .container
         +title('h2', 'Наша команда', 'team-employees__title')
-        .team-employees__cards(data-js="teamEmployeesSlider")
-            .swiper-wrapper
-                .team-employees__column.team-employees__column--1.js-team-employees__column--1
+        .team-employees__cards
+            .team-employees__column.team-employees__column--1.js-team-employees__column--1(data-js="teamEmployeesSlider")
+                .swiper-wrapper
                     +employee-card({
                         classes: "team-employees__card swiper-slide"
                     })
@@ -26,7 +26,8 @@ section.team-employees(data-js='teamEmployeesSection')
                         position: 'Руководитель отдела маркетинга',
                     })
 
-                .team-employees__column.team-employees__column--2.js-team-employees__column--2
+            .team-employees__column.team-employees__column--2.js-team-employees__column--2(data-js="teamEmployeesSlider")
+                .swiper-wrapper
                     +employee-card({
                         classes: "team-employees__card swiper-slide",
                         bgColor: "white",
@@ -57,7 +58,8 @@ section.team-employees(data-js='teamEmployeesSection')
                         name: 'Хохлов Дмитрий',
                         position: 'Руководитель склада в Маланьино',
                     })
-                .team-employees__column.team-employees__column--3.js-team-employees__column--3
+            .team-employees__column.team-employees__column--3.js-team-employees__column--3(data-js="teamEmployeesSlider")
+                .swiper-wrapper
                     +employee-card({
                         classes: "team-employees__card swiper-slide",
                         bgColor: "blue",

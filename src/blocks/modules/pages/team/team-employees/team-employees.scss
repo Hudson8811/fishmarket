@@ -5,6 +5,7 @@
     position: relative;
     @include max(md) {
         overflow: hidden;
+        padding: vw2(40) 0;
     }
 
     &__title {
@@ -24,6 +25,12 @@
         display: flex;
         align-items: flex-end;
         z-index: 10;
+        @include max(md) {
+            align-items: center;
+            flex-direction: column;
+            gap: vw2(30);
+            margin-top: vw2(40);
+        }
     }
     .swiper-wrapper {
         display: contents;
@@ -40,7 +47,11 @@
         border: 1px solid #A8AEB0;
         gap: 1px;
         @include max(md) {
-            display: contents;
+            flex-basis: auto;
+            width: 100%;
+            display: block;
+            background-color: transparent;
+            border: none;
         }
         &--1 {
             border-right: none;

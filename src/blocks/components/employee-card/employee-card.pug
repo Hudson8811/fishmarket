@@ -24,7 +24,7 @@ mixin employee-card(props = defaultEmployeeCardProps)
             btn: props.btn ? props.btn : defaultEmployeeCardProps.btn,
         }
 
-    .employee-card(class= 'employee-card--'+checkProps.bgColor)
+    .employee-card(class= 'employee-card--'+checkProps.bgColor + ' ' + checkProps.classes)
         .employee-card__name= checkProps.name
         .employee-card__position= checkProps.position
         .employee-card__photo 

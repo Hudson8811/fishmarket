@@ -93,7 +93,9 @@ function resetAnimation(){
 	//очищаем стили добавленные анимациями
 	let uniqueElementsArray = uniqueArray(animationSelectors);
 	let selectorsString = uniqueElementsArray.join(", ");
-	gsap.set(selectorsString, {clearProps:"all"});
+	if(selectorsString.length > 0) {
+		gsap.set(selectorsString, {clearProps:"all"});
+	}
 }
 
 function startAnimation(){
@@ -151,17 +153,29 @@ function startAnimation(){
 				break;
 			case "teampage":
 				//анимация страницы Наша команда
+				let teamEmployeesSection = document.querySelector("[data-js='teamEmployeesSection']");
+				let teamEmployeesSliders = teamEmployeesSection.querySelectorAll('[data-js="teamEmployeesSlider"]')
+
 				if (window.innerWidth > animationBreakpoint ){
+
+					//удаляем слайдеры если они уже есть
+					if(teamEmployeesSliders.length > 0) {
+						teamEmployeesSliders.forEach(teamEmployeesSlider => {
+							if(teamEmployeesSlider.swiper) {
+								teamEmployeesSlider.swiper.destroy()
+							}
+						})
+					}
 					
 					//устанавливаем высоту секции с карточками
-					let teamEmployeesSection = document.querySelector("[data-js='teamEmployeesSection']")
 					let columnsHeightArr = [
 						teamEmployeesSection.querySelector(".js-team-employees__column--1").offsetHeight, 
 						teamEmployeesSection.querySelector(".js-team-employees__column--2").offsetHeight,
 						teamEmployeesSection.querySelector(".js-team-employees__column--3").offsetHeight
 					]
 					teamEmployeesSection.style.height = (Math.max(...columnsHeightArr) * 0.62) + 'px'
-				
+					
+					//запускаем анимацию
 					teamPageAnimationDesktop();
 					scrollTriggerObject = ScrollTrigger.create({
 						trigger: "[data-js=teamPhotosSection]",
@@ -179,6 +193,23 @@ function startAnimation(){
 						scrub: 2,
 						animation: mainTimeline,
 					});
+
+				} else {
+					
+					//сбрасываем высоту секции
+					teamEmployeesSection.style.height = 'auto';
+
+					//инициализируем слайдеры если их ещё нет
+					if(teamEmployeesSliders.length > 0) {
+						teamEmployeesSliders.forEach(teamEmployeesSlider => {
+							if(!teamEmployeesSlider.swiper) {
+								let teamEmployeesSliderEx = new Swiper(teamEmployeesSlider, {
+									slidesPerView: 'auto',
+									spaceBetween: 20,
+								});
+							}
+						})
+					}
 				}
 				break;
 			default:
