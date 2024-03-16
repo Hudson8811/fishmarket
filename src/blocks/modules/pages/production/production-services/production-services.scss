@@ -1,10 +1,13 @@
 .production-services {
-    min-height: 100vh;
+    height: 120vh;
     background-size: cover;
     background-position: center;
+    z-index: 5;
     @include max(md) {
-        padding: vw2(100) 0 vw2(30);
-        min-height: vw2(650);
+        padding: 0;
+        height: auto;
+        background-size: 100% auto;
+        background-position: top;
     } 
 
     &__container {
@@ -13,24 +16,178 @@
 
     &__cards {
         display: flex;
-        flex-direction: column;
+        align-items: flex-start;
         min-height: 100%;
+        @include max(md) {
+            flex-wrap: wrap;
+        }
+    }
+
+    &__title {
+        max-width: vw(400);
+        font-size: vw(32);
+        font-weight: 500;
+        line-height: 1.09em;
+        color: $white;
+        margin-bottom: vw(192);
+        text-transform: uppercase;
+        @include max(md) {
+            max-width: 100%;
+            font-size: vw2(32);
+            padding: vw2(70) vw2(150) vw2(50) vw2(20);
+            margin-bottom: 0;
+            background: rgba(0, 0, 0, 0.3);
+        }
     }
 
     &__col {
+        position: relative;
         flex-basis: calc(100% / 3);
         flex-grow: 0;
         flex-shrink: 0;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        z-index: 5;
+        @include max(md) {
+            flex-basis: 100%;
+        }
+        &--1 {
+            .service-card + .service-card {
+                margin-top: vw(1000);
+                @include max(md) {
+                    margin-top: -1px;
+                }
+            }
+            .service-card__text {
+                max-width: vw(411);
+                @include max(md) {
+                    max-width: vw2(411);
+                }
+            }
+        }
+        &--2 {
+            margin-left: -1px;
+            margin-right: -1px;
+            @include max(md) {
+                margin-left: 0;
+                margin-right: 0;
+                margin-top: -1px;
+            }
+            .service-card + .service-card {
+                margin-top: vw(975);
+                @include max(md) {
+                    margin-top: -1px;
+                }
+            }
+            .service-card__text {
+                max-width: vw(489);
+                @include max(md) {
+                    max-width: vw2(489);
+                }
+            }
+        }
+        &--3 {
+            padding-top: vw(86);
+            @include max(md) {
+                padding-top: 0;
+                margin-top: -1px;
+            }
+            .service-card + .service-card {
+                margin-top: vw(1010);
+                @include max(md) {
+                    margin-top: -1px;
+                }
+                .service-card__text {
+                    max-width: vw(451);
+                    @include max(md) {
+                        max-width: vw2(451);
+                    }
+                }
+            }
+            .service-card__text {
+                max-width: vw(315);
+                @include max(md) {
+                    max-width: vw2(315);
+                }
+            }
+        }
     }
 
     .service-card {
         width: 100%;
-        height: vw(640);
+        min-height: vw(640);
         display: flex;
         flex-direction: column;
+        justify-content: flex-end;
+        padding: vw(39) vw(19);
         background-color: $white;
+        border: 1px solid rgba(7, 23, 29, 0.35);
+        color: $fontBlack;
+        @include max(md) {
+            min-height: vw2(400);
+            padding: vw2(39) vw2(19);
+        }
+        &--black {
+            border: 1px solid rgba(255, 255, 255, 0.32);
+            background-color: $fontBlack;
+            color: $white;
+        }
+        &--blue {
+            border: 1px solid rgba(255, 255, 255, 0.32);
+            background-color: $blueLight;
+            color: $white;
+        }
+        &__text {
+            font-size: vw(32);
+            font-weight: 500;
+            line-height: 1.09em;
+            color: inherit;
+            text-transform: uppercase;
+            @include max(md) {
+                font-size: vw2(32);
+            }
+        }
+        &:nth-child(1) {
+            .service-card__text {
+                margin-bottom: vw(35);
+                @include max(md) {
+                    margin-bottom: 0;
+                }
+            }
+        }
+        &:nth-child(2) {
+            .service-card__text {
+                margin-bottom: vw(140);
+                @include max(md) {
+                    margin-bottom: 0;
+                }
+            }
+        }
+        &:nth-child(3) {
+            .service-card__text {
+                margin-bottom: vw(24);
+                @include max(md) {
+                    margin-bottom: 0;
+                }
+            }
+        }
+        &:nth-child(4) {
+            .service-card__text {
+                margin-bottom: vw(94);
+                @include max(md) {
+                    margin-bottom: 0;
+                }
+            }
+        }
+        &:nth-child(5) {
+            .service-card__text {
+                margin-bottom: vw(35);
+                @include max(md) {
+                    margin-bottom: 0;
+                }
+            }
+        }
     }
+
 }

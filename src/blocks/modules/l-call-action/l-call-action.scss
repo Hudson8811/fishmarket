@@ -31,4 +31,18 @@
             max-width: 100%;
         }
     }
+    &__btn.new-btn {
+        &:hover {
+            background-color: $black;
+            .btn--box__text {
+                color: $white;
+            }
+            .btn.btn--circle {
+                background-color: $white;
+                svg use {
+                    stroke: $fontBlack;
+                }
+            }
+        }
+    }
 }

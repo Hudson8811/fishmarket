@@ -111,10 +111,22 @@
             font-size: vw2(32);
         }
     }
-    &__btn {
+    &__btn.new-btn {
         margin-top: vw(75);
         @include max(md) {
             margin-top: vw2(30);
+        }
+        &:hover {
+            background-color: $blueHover;
+            .new-btn__text {
+                color: $white;
+            }
+            .new-btn__icon{
+                background-color: $white;
+                svg use {
+                    stroke: $fontBlack;
+                }
+            }
         }
     }
 }

@@ -1,12 +1,12 @@
 .production-intro {
     padding: vw(115) 0 vw(68);
-    min-height: 100vh;
+    min-height: 130vh;
     display: flex;
     background-size: cover;
     background-position: center;
     @include max(md) {
         padding: vw2(100) 0 vw2(30);
-        min-height: vw2(650);
+        min-height: vw2(500);
     } 
 
     &__container {
@@ -30,6 +30,7 @@
         color: $white;
         font-size: vw(171);
         line-height: 0.97;
+        padding-left: vw(26);
         @include max(md) {
             font-size: vw2(50)
         } 
@@ -47,6 +48,7 @@
             max-width: 100%;
             margin-top: vw2(50);
             font-size: vw2(40);
+            font-size: vw2(24);
         } 
     }
 }

@@ -19,7 +19,7 @@
             max-width: 100%;
         } 
     }
-    &__btn {
+    &__btn.new-btn {
         flex-basis: vw(411);
         flex-shrink: 0;
         flex-grow: 0;
@@ -29,6 +29,18 @@
             margin-top: vw2(20);
             max-width: vw2(260);
         } 
+        &:hover {
+            background-color: $blueHover;
+            .new-btn__text {
+                color: $white;
+            }
+            .new-btn__icon {
+                background-color: $white;
+                svg use {
+                    stroke: $fontBlack;
+                }
+            }
+        }
     }
     &__slider {
         position: relative;

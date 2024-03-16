@@ -98,7 +98,7 @@
             .new-btn__icon svg use {
                    stroke: none !important;
                    fill: $blueLight !important;
-                   transition: all $tr-time linear;
+                   transition: all $tr-time-fast linear;
                }
 
             &:hover {
@@ -120,7 +120,7 @@
             background-color: $white;
             z-index: 10;
             overflow: hidden;
-            transition: max-height $tr-time linear;
+            transition: max-height $tr-time-fast linear;
         }
         &__fields {
             padding: vw(20);

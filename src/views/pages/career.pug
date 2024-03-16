@@ -9,6 +9,7 @@ block content
     include ../../blocks/modules/l-intro/l-intro.pug
     include ../../blocks/modules/l-map/l-map.pug
     include ../../blocks/modules/l-call-action/l-call-action.pug
+    include ../../blocks/modules/l-vacancies/l-vacancies.pug
     include ../../blocks/modules/pages/career/career-purpose/career-purpose.pug
 
     .scroll-page(data-animation="careerpage")
@@ -37,6 +38,7 @@ block content
             desc: true,
         })
         include ../../blocks/modules/pages/career/career-photos/career-photos.pug
+        +l-vacancies()
         include ../../blocks/modules/pages/career/career-vacancies/career-vacancies.pug
         +l-call-action({
             title: 'Ищете работу? Присылайте резюме',

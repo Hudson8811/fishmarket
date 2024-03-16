@@ -133,7 +133,7 @@ a, button {
         }
         &:hover {
             background: $blueLight;
-            transition: all $tr-time;
+            transition: all $tr-time-fast;
             svg use {
                 stroke: $white;
             }
@@ -145,7 +145,7 @@ a, button {
             }
             &:hover {
                 background: $black;
-                transition: all $tr-time;
+                transition: all $tr-time-fast;
                 svg use {
                     stroke: $white;
                 }
@@ -161,7 +161,7 @@ a, button {
             }
             &:hover {
                 background: $black;
-                transition: all $tr-time;
+                transition: all $tr-time-fast;
             }
         }
         &__black {
@@ -171,7 +171,7 @@ a, button {
             }
             &:hover {
                 background: $blueLight;
-                transition: all $tr-time;
+                transition: all $tr-time-fast;
             }
         }
     }
@@ -195,13 +195,13 @@ a, button {
 
         &:hover {
             background: #fff;
-            transition: all $tr-time;
+            transition: all $tr-time-fast;
             .btn--box__text {
-                transition: all $tr-time;
+                transition: all $tr-time-fast;
                 color: $blueLight;
             }
             .btn{
-                transition: all $tr-time;
+                transition: all $tr-time-fast;
                 background: $blueLight;
             }
             svg use {
@@ -383,7 +383,7 @@ a, button {
         }
         &:hover {
             background: $blueLight;
-            transition: all $tr-time;
+            transition: all $tr-time-fast;
             svg {
                 use {
                     stroke: $white;
@@ -878,6 +878,18 @@ a, button {
                 display: flex;
                 position: relative;
 
+            }
+        }
+       &:hover {
+            background-color: $blueHover;
+            .btn--box__text {
+                color: $white;
+            }
+            .btn.btn--circle {
+                background-color: $white;
+                svg use {
+                    stroke: $fontBlack;
+                }
             }
         }
 
@@ -1663,7 +1675,7 @@ a, button {
                 margin-bottom: 0;
             }
             &:hover {
-                transition: all $tr-time;
+                transition: all $tr-time-fast;
                 color: $blueHover; 
             }
         }    
@@ -1701,6 +1713,20 @@ a, button {
         color: $fontBlack;
         font-weight: 500;
         margin-bottom: vw(51);
+    }
+    &__btn {
+        &:hover {
+            background-color: $blueHover;
+            .btn--box__text {
+                color: $white;
+            }
+            .btn.btn--circle {
+                background-color: $white;
+                svg use {
+                    stroke: $fontBlack;
+                }
+            }
+        }
     }
 }
 .pop-up {
@@ -1922,7 +1948,7 @@ a, button {
             }
             &__picture {
                 opacity: 0;
-                transition: all 0.5s;
+                transition: all $tr-time;
                 @include max(md) {
                     opacity: 1;
                 } 
@@ -1957,11 +1983,11 @@ a, button {
         &:hover {
             .card__picture {
                 opacity: 1;
-                transition: all 0.5s;
+                transition: all $tr-time-fast;
             }
             .btn--circle__black {
                 background: $blueLight;
-                transition: all $tr-time;
+                transition: all $tr-time-fast;
             }
         }
     }
@@ -2005,7 +2031,7 @@ a, button {
             }
             &__picture {
                 opacity: 1;
-                transition: all 0.5s;
+                transition: all $tr-time;
                 margin-bottom: vw(38);
                 @include max(md) {
                     margin-bottom: vw2(30);
@@ -2045,11 +2071,11 @@ a, button {
         &:hover {
             .card__picture {
                 opacity: 1;
-                transition: all 0.5s;
+                transition: all $tr-time-fast;
             }
             .btn--circle__black {
                 background: $blueLight;
-                transition: all $tr-time;
+                transition: all $tr-time-fast;
             }
         }        
     }
@@ -2057,7 +2083,7 @@ a, button {
 .card--full-picture.active {
     .card__picture {
         opacity: 1;
-        transition: all 0.5s;
+        transition: all $tr-time;
     }
 }
 

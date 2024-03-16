@@ -9,7 +9,7 @@
     justify-content: flex-end;
     align-items: flex-start;
     overflow: hidden;
-    transition: all .5s;
+    transition: all $tr-time;
     z-index: 9999;
     @include max(md) {
         top: vw2(70);	
@@ -17,7 +17,7 @@
     }
 
     &.active {
-        transition: all .5s;
+        transition: all $tr-time;
         width: 100vw;
         height: 100vh;
         left: auto;
@@ -35,7 +35,7 @@
         height: vw(57);
         border-radius: 50%;
         background: $blueLight;
-        transition: all $tr-time;
+        transition: all $tr-time-fast;
         cursor: pointer;
         z-index: 20;
         svg {
@@ -48,7 +48,7 @@
             }
         }
         &:hover {
-            transition: all $tr-time;
+            transition: all $tr-time-fast;
             background: $blueHover;
         }
 	} 

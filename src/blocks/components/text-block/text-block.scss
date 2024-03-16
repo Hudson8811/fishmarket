@@ -142,9 +142,9 @@
         line-height: 1.2;
     }
     text-decoration: underline;
-    transition: all .3s;
+    transition: all $tr-time-fast;
     &:hover {
-      transition: all .3s;
+      transition: all $tr-time-fast;
       text-decoration: none;
     }
     

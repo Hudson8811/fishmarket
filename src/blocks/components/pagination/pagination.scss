@@ -22,7 +22,7 @@
         font-size: vw(24);
         font-weight: 600;
         line-height: 1.2;
-        transition: $tr-time; 
+        transition: $tr-time-fast; 
         @include max(md) {
             width: vw2(50);
             height: vw2(50);

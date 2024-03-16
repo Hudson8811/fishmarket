@@ -30,7 +30,7 @@
 			}
 			.footer__menu {
 				height: calc(100vh - vw(00));
-				padding-top: vw(137);
+				padding-top: vw(127);
 				@include max(md) {
 					padding: vw2(20);
 					height: 100%;
@@ -89,7 +89,7 @@
 		justify-content: flex-start;
 		align-items: flex-start;
 		flex-flow: column nowrap;
-		padding: vw(47) vw(37);
+		padding: vw(40) vw(37);
 		padding-bottom: vw(25);
 		background: #fff;
 		z-index: 900;
@@ -137,7 +137,7 @@
 					font-weight: 600;
 					line-height: normal;
 					text-transform: uppercase;
-					transition: all 0.3s;
+					transition: all $tr-time-fast;
 					cursor: pointer;
 					@include max(md) {
 						font-size: vw2(24);
@@ -145,7 +145,7 @@
 						color: #fff;
 					}
 					&:hover {
-						transition: all 0.3s;
+						transition: all $tr-time-fast;
 						color:$blueHover;
 					}
 										
@@ -240,12 +240,12 @@
 			}
 		}
 		&__text {
-			transition: all 0.3s;
+			transition: all $tr-time-fast;
 			@include max(md) {
 				text-align: center;
 			}
 			&:hover {
-				transition: all 0.3s;
+				transition: all $tr-time-fast;
 				color: $blueHover;
 			}
 		}

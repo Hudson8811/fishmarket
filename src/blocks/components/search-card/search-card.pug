@@ -41,6 +41,8 @@ mixin search-card(props = defaultSearchCardProps)
 		let typeClass = "search-card--" + checkProps.type
 
 	.search-card(class= typeClass + " " + checkProps.classes)
+		- if(checkProps.type === 'product')
+			a.search-card__link(href="#")
 		.search-card__info
 			+breadcrumbs(checkProps.breadcrumbs)
 			.search-card__header

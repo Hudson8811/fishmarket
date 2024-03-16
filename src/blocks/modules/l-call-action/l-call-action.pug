@@ -19,7 +19,8 @@ mixin l-call-action(props = defaultLCallActionProps)
 	section.l-call-action
 		.container.l-call-action__container
 			+title('h2', checkProps.title, 'l-call-action__title')
-			+new-btn({        
+			+new-btn({
+				classes: 'l-call-action__btn',      
 				text: checkProps.btnText,
 				cMode: 'white',
 				vMode: 'big'

@@ -136,4 +136,19 @@
             right: vw(26);
         }
     }
+
+    &__btn.new-btn {
+        &:hover {
+            background-color: $blueHover;
+            .new-btn__text {
+                color: $white;
+            }
+            .new-btn__icon{
+                background-color: $white;
+                svg use {
+                    stroke: $fontBlack;
+                }
+            }
+        }
+    }
 }

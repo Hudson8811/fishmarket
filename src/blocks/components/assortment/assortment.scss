@@ -84,7 +84,7 @@
 								&:hover {
 									.btn--circle__blue {
 										background: $black;
-										transition: all 0.3s;
+										transition: all $tr-time;
 									}
 								}
 								@include min(md) {
@@ -120,7 +120,7 @@
 					&:hover {
 						.btn--circle__blue {
 							background: $black;
-    						transition: all 0.3s;
+    						transition: all $tr-time;
 						}
 					}
 					@include min(md) {

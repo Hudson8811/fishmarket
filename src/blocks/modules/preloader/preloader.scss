@@ -16,12 +16,12 @@
 		z-index: 99999;
 		&.no-active {
 			.preloader__animation {
-				transition: all 0.3s;
+				transition: all $tr-time;
 				opacity: 0;
 				visibility: hidden;
 			}
 			.preloader__picture  {
-				transition: all 0.3s;
+				transition: all $tr-time;
 				opacity: 0;
 				visibility: hidden;
 			}
@@ -54,22 +54,22 @@
 				background: $blueLight;
 				border: vw(5) solid $blueLight;
 				&:nth-child(1) {
-					animation: heightCol 1s ease 3.9s 1 normal forwards;
+					animation: heightCol $tr-time-slow ease 3.9s 1 normal forwards;
 					
 				}
 				&:nth-child(2) {
-					animation: heightCol 1s ease 3.8s 1 normal forwards;
+					animation: heightCol $tr-time-slow ease 3.8s 1 normal forwards;
 
 				}
 				&:nth-child(3) {
-					animation: heightCol 1s ease 3.7s 1 normal forwards;
+					animation: heightCol $tr-time-slow ease 3.7s 1 normal forwards;
 
 				}
 				&:nth-child(4) {
-					animation: heightCol 1s ease 3.6s 1 normal forwards;
+					animation: heightCol $tr-time-slow ease 3.6s 1 normal forwards;
 				}
 				&:nth-child(5) {
-					animation: heightCol 1s ease 3.5s 1 normal forwards;
+					animation: heightCol $tr-time-slow ease 3.5s 1 normal forwards;
 				}
 
 				@include max(md) {
@@ -180,7 +180,7 @@
 	}
 }
 .puff-out-center {
-	animation: puff-out-center 1s cubic-bezier(0.165, 0.840, 0.440, 1.000) both;
+	animation: puff-out-center $tr-time-slow cubic-bezier(0.165, 0.840, 0.440, 1.000) both;
 }
 @keyframes puff-out-center {
   0% {

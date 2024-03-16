@@ -5,7 +5,7 @@
     font-weight: 600;
     line-height: 1.225;
     border: none;
-    transition: all $tr-time linear;
+    transition: all $tr-time-fast linear;
     text-decoration: none;
     cursor: pointer;
     @include max(md) {
@@ -30,10 +30,10 @@
                 color: $blueLight;
                 .new-btn__icon {
                     background-color: $blueLight;
-                    transition: all $tr-time linear;
+                    transition: all $tr-time-fast linear;
                     svg {
                         use {
-                            transition: all $tr-time linear;
+                            transition: all $tr-time-fast linear;
                             stroke: $white;
                             fill: none;
                         }
@@ -71,7 +71,7 @@
         padding: vw(30) vw(25) vw(30) vw(18);
         align-items: center;
         justify-content: space-between;
-        transition: all $tr-time linear;
+        transition: all $tr-time-fast linear;
         @include max(md) {
             padding: vw2(30) vw2(25) vw2(30) vw2(18);
         }
@@ -134,10 +134,10 @@
         color: $white;
         .new-btn__icon {
             background-color: $white;
-            transition: all $tr-time linear;
+            transition: all $tr-time-fast linear;
             svg {
                 use {
-                    transition: all $tr-time linear;
+                    transition: all $tr-time-fast linear;
                     stroke: $fontBlack;
                     fill: none;
                 }
@@ -174,10 +174,10 @@
         color: $black;
         .new-btn__icon {
             background-color: $blueNtn;
-            transition: all $tr-time linear;
+            transition: all $tr-time-fast linear;
             svg {
                 use {
-                    transition: all $tr-time linear;
+                    transition: all $tr-time-fast linear;
                     stroke: $white;
                     fill: none;
                 }

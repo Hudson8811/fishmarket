@@ -39,7 +39,7 @@
             border-radius: 100%;
             background-color: $blueLight;
             opacity: 0;
-            transition: all $tr-time linear; 
+            transition: all $tr-time-fast linear; 
         }
     }
     &__text {

@@ -62,6 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			spaceBetween: 10,
 			loop: true,
 			slidesPerView: 1,
+			speed: 600,
 			navigation: {
 				nextEl: slider.find('.swiper-button-next')[0],
 				prevEl: slider.find('.swiper-button-prev')[0]
