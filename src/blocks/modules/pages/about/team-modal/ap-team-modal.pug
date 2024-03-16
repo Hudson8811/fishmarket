@@ -1,0 +1,17 @@
+
+include ../../../../components/l-modal/l-modal
+
++l-modal("teamCardModal")
+    +new-btn({
+        classes: 'ap-modal__close',
+        tag: 'button',
+        vMode: 'icon',
+        cMode: 'blue',
+        iconName: 'close'
+    })(data-hystclose)
+    .ap-team-modal__photo
+        img(src="img/about_page/employee_photo.png" alt="employee")
+    .ap-team-modal__title История о том, как попал на работу в SkyFish
+    .ap-team-modal__text 
+        p Иван был обычным парнем, который жил в небольшом городке и мечтал о карьере в крупной компании. Он всегда был любознательным и любил решать сложные задачи, поэтому решил попробовать свои силы в сфере логистики.
+        p Однажды он услышал о вакансии логиста в одной из крупнейших компаний страны. Иван решил отправить свое резюме и вскоре получил приглашение на собеседование.

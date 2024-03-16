@@ -1,0 +1,41 @@
+-
+    const defaultInputProps = {
+        classes: '',
+        inputType: 'text',
+        name: 'text',
+        isRequired: false,
+        placeholder: 'Введите значение',
+        checkboxText: 'Согласие на обработку персональных данных и получение рекламных рассылок'
+    }
+
+mixin input(props = defaultInputProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultInputProps.classes,
+            type: props.type ? props.type : defaultInputProps.type,
+            name: props.name ? props.name : defaultInputProps.name,
+            isRequired: props.isRequired ? props.isRequired : defaultInputProps.isRequired,
+            placeholder: props.placeholder ? props.placeholder : defaultInputProps.placeholder,
+            checkboxText: props.checkboxText ? props.checkboxText : defaultInputProps.checkboxText,
+        }
+
+        let placeholderValue = checkProps.isRequired === true ? checkProps.placeholder + "*" : checkProps.placeholder
+        let inputAttributes = {}
+
+        if(checkProps.isRequired) {
+            inputAttributes['required'] = '';
+            inputAttributes['data-v-name'] = checkProps.name
+        }
+
+        if(checkProps.type === 'tel') {
+            inputAttributes['data-is-tel'] = 'true';
+        }
+
+    if (checkProps.type === 'checkbox')
+        label.input.input--checkbox(class= checkProps.classes)
+            input.input__input(type=checkProps.type name=checkProps.name)&attributes(inputAttributes)
+            .input__fake
+            .input__text= checkProps.checkboxText
+    else
+        label.input(class= checkProps.classes)
+            input.input__input(type=checkProps.type name=checkProps.name placeholder=placeholderValue)&attributes(inputAttributes)

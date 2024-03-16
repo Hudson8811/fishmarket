@@ -1,0 +1,34 @@
+-
+    const defaultApDividedProps = {
+        classes: '',
+        position: 'right',
+        image: 'img/about_page/ap_production.png',
+        title: 'Наше производство',
+        text: 'Компания запустила собственное производство по переработке и фасовке рыбы в 2007 году. Производственная мощность 350 тонн готовой продукции в месяц.',
+        btns: [
+        ],
+    }
+
+mixin ap-divided(props = defaultApDividedProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultApDividedProps.classes,
+            position: props.position ? props.position : defaultApDividedProps.position,
+            image: props.image ? props.image : defaultApDividedProps.image,
+            title: props.title ? props.title : defaultApDividedProps.title,
+            text: props.text ? props.text : defaultApDividedProps.text,
+            btns: props.btns ? props.btns : defaultApDividedProps.btns,
+        }
+
+        let modeClass = checkProps.position == 'right' ? 'ap-divided--right' : 'ap-divided--left'
+
+    section.ap-divided(class=modeClass + ' ' + checkProps.classes data-anim-content)
+        .ap-divided__img
+            img(src=checkProps.image alt=checkProps.title)
+        .ap-divided__info 
+            +title('h2', checkProps.title, 'ap-divided__title')
+            .ap-divided__text= checkProps.text
+            .ap-divided__btns
+                +new-btn(checkProps.btns[0])
+                if (checkProps.btns[1])
+                    +new-btn(checkProps.btns[1])

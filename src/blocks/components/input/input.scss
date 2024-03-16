@@ -1,0 +1,93 @@
+.site-main, .about-page, .ap-header, .ap-footer {
+    .input {
+        display: block;
+        width: 100%;
+        border-bottom: vw(1) solid rgba(0,0,0,0.2);
+        padding: 0 0 vw(15);
+        &__input {
+            width: 100%;
+            padding: 0;
+            border: none;
+            outline: none;
+            font-family: 'Commissioner', sans-serif;
+            color: $fontBlack;
+            font-size: vw(18);
+            line-height: 1.4;
+            font-weight: 400;
+            &::-webkit-input-placeholder {
+                color: inherit;
+            }
+            &::-moz-placeholder {
+               color: inherit;
+               opacity: 1;
+            }
+            &::-ms-input-placeholder {
+               color: inherit;
+            }
+            &::placeholder {
+               color: inherit;
+            }
+        }
+        &._invalid {
+            position: relative;
+            border-bottom: vw(3) solid $red;
+            &::after {
+                content: '';
+                position: absolute;
+                right: 0;
+                bottom: vw(23);
+                background-color: $red;
+                width: vw(10);
+                height: vw(10);
+                border-radius: 100%;
+            }
+        }
+    }
+
+    .input.input--checkbox {
+        display: flex;
+        gap: vw(12);
+        align-items: flex-start;
+        .input__input {
+            position: relative;
+            left: 0;
+            right: 0;
+            width: 0;
+            height: 0;
+            opacity: 0;
+            z-index: -10;
+        }
+        .input__fake {
+            flex-basis: vw(26);
+            flex-shrink: 0;
+            flex-grow: 0;
+            position: relative;
+            width: vw(26);
+            height: vw(26);
+            border: 1px solid rgba(0,0,0,0.2);
+            border-radius: vw(4);
+            &::after{ 
+                content: "";
+                position: absolute;
+                width: vw(16);
+                height: vw(16);
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                transition: all $tr-time linear;
+                background-color: $blueLight;
+                border-radius: vw(2);
+                opacity: 0;
+            }
+        }
+        .input__input:checked + .input__fake::after {
+            opacity: 1;
+        }
+        .input__text {
+            font-size: vw(18);
+            font-weight: 400;
+            line-height: 1.399;
+            color: $fontBlack;
+        }
+    }
+}

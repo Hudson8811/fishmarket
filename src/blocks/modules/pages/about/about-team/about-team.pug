@@ -1,0 +1,107 @@
+//blocks
+include ../../../../components/employee-card/employee-card.pug
+
+//components
+include ../../../../components/title/title.pug
+
+section.ap-team
+    .container
+        +title('h2', 'Наша команда', 'ap-team__title')
+    .ap-team__cards
+        .ap-team__column.ap-team__column--1
+            +employee-card()
+            +employee-card({
+                name: 'Соловьев Владислав',
+                position: 'Коммерческий директор',
+            })
+            +employee-card({
+                name: 'Косырева Наталья',
+                position: 'Финансовый директор',
+            })
+            +employee-card({
+                name: 'Кашецкий Юрий',
+                position: 'Руководитель отдела маркетинга',
+            })
+        .ap-team__column.ap-team__column--2
+            +employee-card({
+                bgColor: "white",
+                name: 'Гришин Дмитрий',
+                position: 'Руководитель отдела IT',
+            })
+            +employee-card({
+                bgColor: "white",
+                name: 'Лазин Петр',
+                position: 'Руководитель отдела ВЭД',
+            })
+            +employee-card({
+                bgColor: "white",
+                name: 'Алтухов Сергей',
+                position: 'Директор производства',
+            })
+            +employee-card({
+                bgColor: "white",
+                name: 'Лондарова Марина',
+                position: 'Руководитель отдела доставки',
+            })
+            +employee-card({
+                bgColor: "white",
+                name: 'Хохлов Дмитрий',
+                position: 'Руководитель склада в Маланьино',
+            })
+        .ap-team__column.ap-team__column--3
+            +employee-card({
+                bgColor: "blue",
+                name: 'Муравьев Павел',
+                position: 'Руководитель представительства в Калининграде',
+                btn: {
+                    classes: 'employee-card__btn',
+                    tag: 'button',
+                    vMode: 'icon',
+                    cMode: 'white'
+                }
+            })
+            +employee-card({
+                bgColor: "blue",
+                name: 'Соловьева Анастасия',
+                position: 'Руководитель склада в Москве',
+                btn: {
+                    classes: 'employee-card__btn',
+                    tag: 'button',
+                    vMode: 'icon',
+                    cMode: 'white'
+                }
+            })
+            +employee-card({
+                bgColor: "blue",
+                name: 'Чугунов Владимир',
+                position: 'Руководитель отдела закупок',
+                btn: {
+                    classes: 'employee-card__btn',
+                    tag: 'button',
+                    vMode: 'icon',
+                    cMode: 'white'
+                }
+            })
+            +employee-card({
+                bgColor: "blue",
+                name: 'Бочарова Наталья',
+                position: ' Руководитель отдела кадров',
+                btn: {
+                    classes: 'employee-card__btn',
+                    tag: 'button',
+                    vMode: 'icon',
+                    cMode: 'white'
+                }
+            })
+            +employee-card({
+                bgColor: "blue",
+                name: 'Франц Эдвард',
+                position: 'Юрист',
+                btn: {
+                    classes: 'employee-card__btn',
+                    tag: 'button',
+                    vMode: 'icon',
+                    cMode: 'white'
+                }
+            })
+

@@ -1,0 +1,22 @@
+include ../../../../components/ap-advantages-card/ap-advantages-card.pug
+
+section.ap-advantages
+    .ap-advantages__video
+        video(autoplay loop preload muted poster="img/ap_advantages_bg.png")
+            source(src="video/ap_advantages_bg.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"')
+            source(src="video/ap_advantages_bg.webm" type='video/webm; codecs="vp8, vorbis"')
+    +title('h2', 'наши преимущества', 'ap-advantages__title')
+    .ap-advantages__cards
+        .ap-advantages__column.ap-advantages__column--1
+            +ap-advantages-card()
+            +ap-advantages-card('black', 'Участник «Ассоциации производственных и торговых предприятий рыбного рынка» и «Рыбного Союза»')
+        .ap-advantages__column.ap-advantages__column--2
+            +ap-advantages-card('white', '20+ лет опыта работы на рыбном рынке')
+            +ap-advantages-card('white', 'Собственное производство')
+        .ap-advantages__column.ap-advantages__column--3
+            +ap-advantages-card('blue', 'сбалансированный ассортимент до самых востребованных  наименований на рынке')
+            +ap-advantages-card('blue', 'партнер всероссийского благотворительного фонда  «Спорт начинается с детей»')
+            +ap-advantages-card('blue', 'собственный холодильный комплекс и автопарк')
+
+
+

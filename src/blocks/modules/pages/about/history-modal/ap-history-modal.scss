@@ -1,0 +1,83 @@
+.hystmodal.ap-history-modal {
+    .hystmodal__window {
+        background-color: $blueLight;
+    }
+}
+
+.ap-history-modal {
+    .ap-modal__close {
+        .btn__icon {
+            svg use {
+                stroke: $fontBlack;
+                fill: $fontBlack;
+            }
+        }
+    }
+    .btn--icon.ap-modal__close:hover {
+        .btn__icon {
+            svg use {
+                stroke: $white;
+                fill: $white
+            }
+        }
+    }
+    .ap-modal__content {
+        width: vw(1135);
+        padding: vw(57);
+        display: flex;
+        flex-direction: column;
+        gap: vw(54);
+        background-image: url("../img/ap_waves_modal.png");
+        background-size: vw(401) auto;
+        background-position: bottom vw(53) right vw(46);
+        background-repeat: no-repeat;
+    }
+    &__item {
+        position: relative;
+        display: flex;
+        align-items: flex-start;
+        gap: vw(35);
+        color: $white;
+    }
+    &__item:not(:last-child)::after {
+        content: "";
+        position: absolute;
+        top: vw(16.5);
+        left: vw(16.5);
+        width: vw(1);
+        height: calc(100% + vw(54));
+        background-color: $white;
+        z-index: 5;
+    }
+    &__decor {
+        position: relative;
+        width: vw(34);
+        height: vw(34);
+        background-color: rgba(255, 255, 255, 0.2);
+        border-radius: 100%;
+        z-index: 10;
+        &::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: vw(16);
+            height: vw(16);
+            background-color: $white;
+            border-radius: 100%;
+        }
+    }
+    &__year {
+        font-family:'Helvetica Neue', sans-serif;
+        font-size: vw(80);
+        line-height: 0.97;
+        font-weight: 500;
+    }
+    &__text {
+        max-width: vw(682);
+        font-size: vw(24);
+        line-height: 1.375;
+        font-weight: 400;
+    }
+}

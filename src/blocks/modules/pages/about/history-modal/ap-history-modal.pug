@@ -1,0 +1,38 @@
+
+//-+ap-modal('historyModal', 'ap-history-modal')
+
+include ../../../../components/l-modal/l-modal
+
++l-modal("historyModal")
+    +new-btn({
+        classes: 'ap-modal__close',
+        tag: 'button',
+        vMode: 'icon',
+        cMode: 'white',
+        iconName: 'close'
+    })(data-hystclose)
+    .ap-history-modal__item
+        .ap-history-modal__decor
+        .ap-history-modal__year 2001
+        .ap-history-modal__text Cоздание компании
+    .ap-history-modal__item
+        .ap-history-modal__decor
+        .ap-history-modal__year 2007
+        .ap-history-modal__text Запуск собственного производства по переработке и фасовке рыбы (ООО «Рыбные продукты»)
+    .ap-history-modal__item
+        .ap-history-modal__decor
+        .ap-history-modal__year 2012
+        .ap-history-modal__text Создание торговой <br>марки SKY FISH
+    .ap-history-modal__item
+        .ap-history-modal__decor
+        .ap-history-modal__year 2019
+        .ap-history-modal__text Открыто представительство в Калининграде <br>под торговой маркой «ZapFish»
+    .ap-history-modal__item
+        .ap-history-modal__decor
+        .ap-history-modal__year 2020
+        .ap-history-modal__text Расширение компании и переезд в дизайнерский <br>головной офис в Москве
+    .ap-history-modal__item
+        .ap-history-modal__decor
+        .ap-history-modal__year 2023
+        .ap-history-modal__text Новое позиционирование и <br>ребрендинг компании
+

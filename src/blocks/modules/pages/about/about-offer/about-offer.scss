@@ -1,0 +1,49 @@
+.ap-offer {
+    background-color: $blueLight;
+    background-image: url("../img/ap_waves_blue.png");
+    background-repeat: no-repeat;
+    background-size: vw(861) auto;
+    background-position: right vw(-35) top vw(160);
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        padding: vw(20) 0 vw(31);
+    }
+    &__title {
+        max-width: vw(723);
+        font-size: vw(82);
+        font-weight: 500;
+        line-height: 0.97;
+        text-transform: uppercase;
+        color: $white;
+    }
+    &__wrapper {
+        flex-basis: 100%;
+        margin-top: vw(244);
+    }
+    &__text {
+        max-width: vw(535);
+        font-size: vw(32);
+        font-weight: 400;
+        line-height: 1;
+        letter-spacing: -0.03em;
+        color: $white;
+    }
+    &__btn.new-btn {
+        &:hover {
+            background-color: $fontBlack;
+            .new-btn__text {
+                color: $white;
+            }
+            .new-btn__icon {
+                background-color: $white;
+                svg use {
+                    stroke: $fontBlack;
+                }
+            }
+        }
+    } 
+
+}

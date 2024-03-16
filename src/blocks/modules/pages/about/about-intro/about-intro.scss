@@ -1,0 +1,37 @@
+.ap-main-screen {
+    background-image: url('../img/ap_main_screen.png');
+    background-size: 100% 100%;
+    position: relative;
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: vw(238);
+        background: linear-gradient(0deg, #07171D 0%, rgba(7, 23, 29, 0) 100%);
+    }
+    &__container {
+        height: vw(1300);
+        padding: vw(114) 0 vw(248);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    &__title {
+        margin-top: vw(-29);
+        font-size: vw(419);
+        font-weight: 700;
+        line-height: 97.2%;
+        color: $white;
+    }
+    &__text {
+        max-width: vw(847);
+        margin-top: auto;
+        font-size: vw(70);
+        font-weight: 400;
+        line-height: 89%;
+        letter-spacing: -0.02em;
+        color: $white;
+    }
+}

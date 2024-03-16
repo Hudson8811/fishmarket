@@ -1,0 +1,13 @@
+include ../../../../components/title/title.pug
+
+section.ap-offer
+    .container.ap-offer__container
+        +title('h2', 'Стать частью компании SkyFish', 'ap-offer__title')
+        +new-btn({ 
+            classes: 'ap-offer__btn',       
+            text: 'Откликнуться',
+            cMode: 'white',
+            vMode: 'big'
+        })
+        .ap-offer__wrapper
+            .ap-offer__text Мы регулярно расширяем состав компании

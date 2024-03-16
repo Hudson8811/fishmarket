@@ -1,0 +1,58 @@
+include ../../../../components/l-modal/l-modal
+
+//-+ap-modal('callbackModal', 'ap-callback-modal')
++l-modal("callbackModal")
+    +new-btn({
+        classes: 'ap-modal__close',
+        tag: 'button',
+        vMode: 'icon',
+        cMode: 'blue',
+        iconName: 'close'
+    })(data-hystclose)
+    form.ap-callback-modal__form.callback-form(action="#" novalidate data-validate)
+        .callback-form__content
+            .callback-form__title ОСТАЛИСЬ ВОПРОСЫ?<br>НАПИШИТЕ ИЛИ ЗАКАЖИТЕ ЗВОНОК
+            +input({
+                classes: 'callback-form__input',
+                type: 'text',
+                name: 'name',
+                placeholder: 'Имя',
+                isRequired: false,
+            })
+            +input({
+                classes: 'callback-form__input',
+                type: 'tel',
+                name: 'phone',
+                placeholder: 'Телефон',
+                isRequired: true,
+            })
+            +input({
+                classes: 'callback-form__input',
+                type: 'email',
+                name: 'email',
+                placeholder: 'Почта',
+                isRequired: true,
+            })
+            +input({
+                classes: 'callback-form__input',
+                type: 'text',
+                name: 'comment',
+                placeholder: 'Комментарий',
+                isRequired: false,
+            })
+            +input({
+                classes: 'callback-form__input',
+                type: 'checkbox',
+                name: 'checkbox',
+                placeholder: '',
+                isRequired: true,
+            })
+        +new-btn({
+            classes: 'callback-form__btn',
+            tag: 'button',
+            buttonType: 'submit',
+            vMode: 'small',
+            text: 'Отправить',
+            icon: 'true',
+            cMode: 'blue',
+        })

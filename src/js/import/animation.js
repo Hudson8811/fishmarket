@@ -53,6 +53,9 @@ function initScrollAnimation(){
 		case "productionpage":
 			//анимация страницы Карьера
 			break;
+		case "aboutpage":
+			//анимация страницы О компании
+			break;
 		default:
 			//анимация только подвала
 			if ($('.js-footer__animation').length > 0){
@@ -122,6 +125,20 @@ function startAnimation(){
 				//анимация главной
 				if (window.innerWidth > animationBreakpoint ){
 					homepageAnimationDesktop();
+					scrollTriggerObject = ScrollTrigger.create({
+						trigger: ".scroll-page",
+						pin: true,
+						start: "top top",
+						end: () => "+=" + addTime + "%",
+						scrub: 2,
+						animation: mainTimeline,
+					});
+				}
+				break;
+			case "aboutpage":
+				//анимация страницы О компании
+				if (window.innerWidth > animationBreakpoint ){
+					aboutPageAnimationDesktop();
 					scrollTriggerObject = ScrollTrigger.create({
 						trigger: ".scroll-page",
 						pin: true,
@@ -641,5 +658,197 @@ function productionPageAnimationDesktop() {
 		duration: 1,
 		ease: "none",
 	}, "<+=0.1");
+	animationSelectors.push(".footer__title");
+}
+
+//фунция содержащая анимацию для границы о компании - десктоп
+function aboutPageAnimationDesktop(){
+	//анимация первого экрана не привязана к таймлайну
+	gsap.fromTo(".js-about-intro__title", 
+	{
+		y: "-100%",
+	},
+	{
+		duration: 0.5,
+		y: '0',
+		delay: 6,
+		ease: "none",
+	});
+	gsap.fromTo(".js-about-intro__text", 
+	{
+		y: "100%",
+	},
+	{
+		duration: 0.5,
+		delay: 6.1,
+		y: '0',
+		ease: "none",
+
+	});
+
+
+	//Убираем класс статики с футера
+	$('.js-footer__animation').removeClass('footer__animation--personally');
+
+
+	let scHeight = $('.main-site').innerHeight();
+	let b6Height =  $('.js-assortment__section').innerHeight();
+	let footerHeight =  $('.js-footer__animation').innerHeight();
+
+	mainTimeline.fromTo(".js-assortment__section", {
+		y: "100vh",
+	}, {
+		y: -1 * (b6Height - scHeight),
+		duration: 1,
+		ease: "none",
+		onComplete: function () {
+			$('.assortment__btn').addClass('active');
+		},
+	}, "0");
+	animationSelectors.push(".js-assortment__section");
+
+	mainTimeline.fromTo(".js-assortment__section", {
+		y: -1 * (b6Height - scHeight),
+	}, {
+		y: "-100%",
+		duration: 0.8,
+		ease: "none",
+	}, ">");
+
+	mainTimeline.fromTo(".js-assortment__col--2", {
+		y: "23%",
+		top: "23%",
+	}, {
+		top: "0%",
+		y: "0%",
+		duration: 1,
+		ease: "none",
+	}, "<-=0.8");
+	animationSelectors.push(".js-assortment__col--2");
+
+	mainTimeline.fromTo(".assortment__btn", {
+		bottom: "-100%",
+	}, {
+		bottom: "1.71875vw",
+		duration: 0.5,
+		ease: "power1.out",
+	}, "<-=0.20");
+	animationSelectors.push(".assortment__btn");
+
+
+	mainTimeline.fromTo(".hear__section", {
+		left: "-100vw",
+		opacity: "0"
+	}, {
+		left: "0vw",
+		duration: 0.5,
+		opacity: "1",
+		ease: "none",
+	}, "<+=0.53");
+	animationSelectors.push(".hear__section");
+
+	mainTimeline.fromTo(".hear__title", {
+		top: "50%",
+		left: "100%",
+	}, {
+		top: "50%",
+		left: "-200%",
+		duration: 2,
+		ease: "none",
+	}, ">+=0.3");
+	animationSelectors.push(".hear__title");
+
+	mainTimeline.fromTo(".news__section", {
+		y: "100%",
+		top: "100%",
+	}, {
+		top: "-100%",
+		y: "-100%",
+		duration: 2,
+		ease: "none",
+		onStart: function () {
+			$('.news__btn').addClass('active');
+		},
+	}, "<+=0.6");
+	animationSelectors.push(".news__section");
+
+	mainTimeline.fromTo(".js-advantage__col--1", {
+		y: "0%",
+		top: "0%",
+	}, {
+		top: "-30%",
+		y: "-30%",
+		duration: 1,
+		ease: "none",
+	}, "<+=0.4");
+	animationSelectors.push(".js-advantage__col--1");
+
+	mainTimeline.fromTo(".js-advantage__col--2", {
+		y: "30%",
+		top: "30%",
+	}, {
+		top: "-60%",
+		y: "-60%",
+		duration: 1,
+		ease: "none",
+	}, "<");
+	animationSelectors.push(".js-advantage__col--2");
+
+	mainTimeline.fromTo(".js-advantage__col--3", {
+		y: "60%",
+		top: "60%",
+	}, {
+		top: "-90%",
+		y: "-90%",
+		duration: 1,
+		ease: "none",
+	}, "<");
+	animationSelectors.push(".js-advantage__col--3");
+
+	mainTimeline.fromTo(".js-news__btn", {
+		marginTop: 0,
+	}, {
+		marginTop: "180%",
+		duration: 0.5,
+		ease: "none",
+	}, "<+=0.6");
+	animationSelectors.push(".js-news__btn");
+
+	mainTimeline.fromTo(".js-news__col--2", {
+		y: "10%",
+		top: "10%",
+	}, {
+		top: "-20%",
+		y: "-20%",
+		duration: 2,
+		ease: "none",
+	}, "<-=0.1");
+	animationSelectors.push(".js-news__col--2");
+
+	mainTimeline.fromTo(".js-footer__animation", {
+		y: "100%",
+	}, {
+		y: -1 * (footerHeight - scHeight),
+		duration: 0.5,
+		ease: "none",
+	}, "<+=0.2");
+	animationSelectors.push(".js-footer__animation");
+
+	mainTimeline.fromTo(".footer__menu", {
+		right: "-100%",
+	}, {
+		right: "0%",
+		duration: 1,
+		ease: "none",
+	}, ">-=1");
+	animationSelectors.push(".footer__menu");
+
+	mainTimeline.fromTo(".footer__title", {
+		left: "55%",
+	}, {
+		left: "-100%",
+		duration: 1,
+		ease: "none",
+	}, "<+=0.5");
 	animationSelectors.push(".footer__title");
 }

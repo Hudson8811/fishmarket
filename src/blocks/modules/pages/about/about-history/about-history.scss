@@ -1,0 +1,21 @@
+.ap-history {
+    background-color: $fontBlack;
+    &__container {
+        padding: vw(91) 0 vw(152);
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+    }
+    &__text {
+        max-width: vw(1037);
+        margin-bottom: vw(173);
+        font-size: vw(70);
+        font-weight: 400;
+        line-height: 89%;
+        letter-spacing: -0.02em;
+        color: $white;
+        span {
+            opacity: 18%;
+        }
+    }
+}

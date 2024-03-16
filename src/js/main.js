@@ -5,6 +5,7 @@
 @@include("./libs/stroll.min.js")
 @@include("./libs/gsap.min.js")
 @@include("./libs/ScrollTrigger.min.js")
+@@include("./libs/hystmodal.min.js")
 @@include("./libs/jquery.mask.min.js")
 @@include("./libs/jq-ui.min.js")
 @@include("./libs/jq-ui-touch-punch.min.js")

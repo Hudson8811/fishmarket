@@ -1,0 +1,78 @@
+extends ../layouts/default
+include ../helpers/mixins
+
+block variables
+    - const title = "About"
+
+block content
+    include ../../blocks/modules/pages/about/about-divided/about-divided
+    include ../../blocks/components/new-btn/new-btn.pug
+    include ../../blocks/components/input/input.pug
+
+    //-(data-animation="aboutpage") подключает анимацию, если добавить к scroll page
+    .scroll-page
+        include ../../blocks/modules/pages/about/about-intro/about-intro
+        include ../../blocks/modules/pages/about/about-history/about-history
+        include ../../blocks/modules/pages/about/about-advantages/about-advantages
+        +ap-divided({
+            classes: '',
+            position: 'right',
+            image: 'img/ap_production.png',
+            title: 'Наше производство',
+            text: 'Компания запустила собственное производство по переработке и фасовке рыбы в 2007 году. Производственная мощность 350 тонн готовой продукции в месяц.',
+            btns: [
+                {        
+                    text: 'Подробнее',
+                    cMode: 'blue',
+                    vMode: 'big'
+                },
+                {        
+                    text: 'Посмотреть фото',
+                    cMode: 'black',
+                    vMode: 'big'
+                }
+            ],
+        })
+        +ap-divided({
+            classes: '',
+            position: 'left',
+            image: 'img/ap_logistics.png',
+            title: 'Наша логистика',
+            text: 'Наши складские комплексы расположены в Москве, Калужской и Калининградской областях. Склады оснащены необходимыми морозильными камерами и погрузочно-разгрузочной техникой.',
+            btns: [
+                {
+                    text: 'Подробнее',
+                    cMode: 'blue',
+                    vMode: 'big'
+                },
+                {        
+                    text: 'Посмотреть фото',
+                    cMode: 'white',
+                    vMode: 'big'
+                }
+            ],
+        })
+        +ap-divided({
+            classes: 'ap-divided--society',
+            position: 'right',
+            image: 'img/ap_society.png',
+            title: 'Мы в социуме',
+            text: 'В нашей компании принято за основу - мы живем в социуме, ведь работаем с людьми.  У нас есть список мероприятий где мы были запечатлены.',
+            btns: [
+                {        
+                    text: 'Подробнее',
+                    cMode: 'black',
+                    vMode: 'big'
+                }
+            ],
+        })
+        include ../../blocks/modules/pages/about/about-career/about-career
+        include ../../blocks/modules/pages/about/about-team/about-team
+        include ../../blocks/modules/pages/about/about-offer/about-offer
+
+        include ../../blocks/modules/footer/footer
+
+    //modals
+    include ../../blocks/modules/pages/about/history-modal/ap-history-modal
+    include ../../blocks/modules/pages/about/team-modal/ap-team-modal
+    include ../../blocks/modules/pages/about/callback-modal/ap-callback-modal

@@ -1,0 +1,42 @@
+.ap-team-modal {
+    .ap-modal__close {
+        .btn__icon {
+            svg use {
+                stroke: $white;
+                fill: $white;
+            }
+        }
+    }
+    .btn--icon.ap-modal__close:hover {
+        .btn__icon {
+            svg use {
+                stroke: $white;
+                fill: $white
+            }
+        }
+    }
+    .ap-modal__content {
+        width: vw(640);
+        padding: vw(83) vw(49) vw(50) vw(30);
+        display: flex;
+        flex-direction: column;
+        gap: vw(40);
+    }
+    &__photo {
+        align-self: center;
+        color: $fontBlack;
+    }
+    &__title {
+        max-width: vw(485);
+        margin-top: vw(26);
+        font-size: vw(32);
+        line-height: 1.06;
+        font-weight: 500;
+    }
+    &__text {
+        max-width: vw(477);
+        font-size: vw(18);
+        line-height: 1.4;
+        font-weight: 400;
+    }
+}
