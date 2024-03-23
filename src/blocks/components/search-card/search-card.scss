@@ -240,6 +240,12 @@
     &__offer.new-btn {
         display: none;
         grid-area: a;
+        .new-btn__icon {
+            svg, svg use {
+                fill: $white;
+                stroke: $white;  
+            }
+        }
     }
     &__cart.new-btn {
         grid-area: b;
@@ -271,6 +277,12 @@
     &__more.new-btn {
         grid-area: c;
         display: none;
+        .new-btn__icon {
+            svg, svg use {
+                fill: $white;
+                stroke: $white;  
+            }
+        }
     }
 
 }

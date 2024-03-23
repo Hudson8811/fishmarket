@@ -1,15 +1,29 @@
 .ap-offer {
+    position: absolute;
+    top: 0;
+    left: 0;
     background-color: $blueLight;
     background-image: url("../img/ap_waves_blue.png");
     background-repeat: no-repeat;
     background-size: vw(861) auto;
     background-position: right vw(-35) top vw(160);
+    z-index: 45;
+    @include max(md) {
+        position: relative;
+        background-size: vw2(260) auto;
+        background-position: right vw2(-35) bottom vw2(20);
+    }
     &__container {
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
         flex-wrap: wrap;
         padding: vw(20) 0 vw(31);
+        @include max(md) {
+            padding: vw2(20) 0;
+            flex-direction: column;
+            gap: vw2(24);
+        }
     }
     &__title {
         max-width: vw(723);
@@ -18,10 +32,18 @@
         line-height: 0.97;
         text-transform: uppercase;
         color: $white;
+        @include max(md) {
+            max-width: 100%;
+            font-size: vw2(32);
+        }
     }
     &__wrapper {
         flex-basis: 100%;
         margin-top: vw(244);
+        @include max(md) {
+            flex-basis: auto;
+            margin-top: vw(25);
+        }
     }
     &__text {
         max-width: vw(535);
@@ -30,8 +52,15 @@
         line-height: 1;
         letter-spacing: -0.03em;
         color: $white;
+        @include max(md) {
+            max-width: vw2(300);
+            font-size: vw2(20);
+        }
     }
     &__btn.new-btn {
+        @include max(md) {
+            order: 2;
+        }
         &:hover {
             background-color: $fontBlack;
             .new-btn__text {

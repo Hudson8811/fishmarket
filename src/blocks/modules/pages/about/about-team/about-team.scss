@@ -1,6 +1,17 @@
 .ap-team {
-    padding: vw(33) 0 vw(228);
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: vw(33) 0 vw(0);
     background-color: $white;
+    z-index: 40;
+    max-height: vw(2700);
+    @include max(md) {
+        position: relative;
+        max-height: none;
+        overflow: hidden;
+        padding: vw2(40) 0;
+    }
     &__title {
         max-width: vw(680);
         font-size: vw(82);
@@ -8,16 +19,39 @@
         line-height: 0.97;
         color: $fontBlack;
         text-transform: uppercase;
+        @include max(md) {
+            max-width: 100%;
+        }
     }
     &__cards {
         display: grid;
         grid-template-columns: repeat(3, minmax(0, 1fr));
-        margin-top: vw(46);
+        @include max(md) {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            gap: vw2(30);
+            margin-top: vw2(40);
+            padding-left: vw2(20);
+        }
+    }
+    .swiper-wrapper {
+        display: contents;
+        @include max(md) {
+            display: flex;
+        }
     }
     &__column {
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
+        @include max(md) {
+            flex-basis: auto;
+            width: 100%;
+            display: block;
+            background-color: transparent;
+            border: none;
+        }
         .employee-card {
             border: 1px solid rgba(7, 23, 29, 0.35);
         }
@@ -26,6 +60,9 @@
         }
         &--1 {
             margin-bottom: vw(423);
+            @include max(md) {
+                margin-bottom: 0;
+            }
             .employee-card {
                 border: 1px solid rgba(255, 255, 255, 0.32)
             }
@@ -36,6 +73,9 @@
         }
         &--3 {
             margin-bottom: vw(175);
+            @include max(md) {
+                margin-bottom: 0;
+            }
             .employee-card {
                 border: 1px solid rgba(255, 255, 255, 0.32)
             }

@@ -19,10 +19,13 @@ section.search-result-intro
 				},
 			]
 		})
-		.search-result-intro__search.search
+		.search-result-intro__search.search(data-js="search")
 			.search__content
 				.search__inter
 					input(type="text" placeholder="Поиск")
+					.search__clear(data-js="searchClear")
+						svg
+							use(xlink:href=`img/sprites/sprite.svg#close_for_sprite`)
 					.search__select 
 						.header__other__item.header__other__fone.header__other__fone--desc
 							.header__other__top

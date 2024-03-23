@@ -4,119 +4,130 @@ include ../../../../components/employee-card/employee-card.pug
 section.team-employees(data-js='teamEmployeesSection')
     .container
         +title('h2', 'Наша команда', 'team-employees__title')
-        .team-employees__cards
-            .team-employees__column.team-employees__column--1.js-team-employees__column--1(data-js="teamEmployeesSlider")
-                .swiper-wrapper
-                    +employee-card({
-                        classes: "team-employees__card swiper-slide"
-                    })
-                    +employee-card({
-                        classes: "team-employees__card swiper-slide",
-                        name: 'Соловьев Владислав',
-                        position: 'Коммерческий директор',
-                    })
-                    +employee-card({
-                        classes: "team-employees__card swiper-slide",
-                        name: 'Косырева Наталья',
-                        position: 'Финансовый директор',
-                    })
-                    +employee-card({
-                        classes: "team-employees__card swiper-slide",
-                        name: 'Кашецкий Юрий',
-                        position: 'Руководитель отдела маркетинга',
-                    })
+    .team-employees__cards
+        .team-employees__column.team-employees__column--1.js-team-employees__column--1(data-js="teamEmployeesSlider")
+            .swiper-wrapper
+                +employee-card({
+                    classes: "team-employees__card swiper-slide",
+                })
+                +employee-card({
+                    classes: "team-employees__card swiper-slide",
+                    name: 'Соловьев Владислав',
+                    position: 'Коммерческий директор',
+                    hasBtn: true,
+                })
+                +employee-card({
+                    classes: "team-employees__card swiper-slide",
+                    name: 'Косырева Наталья',
+                    position: 'Финансовый директор',
+                    hasBtn: true,
+                })
+                +employee-card({
+                    classes: "team-employees__card swiper-slide",
+                    name: 'Кашецкий Юрий',
+                    position: 'Руководитель отдела маркетинга',
+                    hasBtn: true,
+                })
 
-            .team-employees__column.team-employees__column--2.js-team-employees__column--2(data-js="teamEmployeesSlider")
-                .swiper-wrapper
-                    +employee-card({
-                        classes: "team-employees__card swiper-slide",
-                        bgColor: "white",
-                        name: 'Гришин Дмитрий',
-                        position: 'Руководитель отдела IT',
-                    })
-                    +employee-card({
-                        classes: "team-employees__card swiper-slide",
-                        bgColor: "white",
-                        name: 'Лазин Петр',
-                        position: 'Руководитель отдела ВЭД',
-                    })
-                    +employee-card({
-                        classes: "team-employees__card swiper-slide",
-                        bgColor: "white",
-                        name: 'Алтухов Сергей',
-                        position: 'Директор производства',
-                    })
-                    +employee-card({
-                        classes: "team-employees__card swiper-slide",
-                        bgColor: "white",
-                        name: 'Лондарова Марина',
-                        position: 'Руководитель отдела доставки',
-                    })
-                    +employee-card({
-                        classes: "team-employees__card swiper-slide",
-                        bgColor: "white",
-                        name: 'Хохлов Дмитрий',
-                        position: 'Руководитель склада в Маланьино',
-                    })
-            .team-employees__column.team-employees__column--3.js-team-employees__column--3(data-js="teamEmployeesSlider")
-                .swiper-wrapper
-                    +employee-card({
-                        classes: "team-employees__card swiper-slide",
-                        bgColor: "blue",
-                        name: 'Муравьев Павел',
-                        position: 'Руководитель представительства в Калининграде',
-                        btn: {
-                            classes: 'team-employees-card__btn',
-                            tag: 'button',
-                            vMode: 'icon',
-                            cMode: 'white'
-                        }
-                    })
-                    +employee-card({
-                        classes: "team-employees__card swiper-slide",
-                        bgColor: "blue",
-                        name: 'Соловьева Анастасия',
-                        position: 'Руководитель склада в Москве',
-                        btn: {
-                            classes: 'team-employees-card__btn',
-                            tag: 'button',
-                            vMode: 'icon',
-                            cMode: 'white'
-                        }
-                    })
-                    +employee-card({
-                        classes: "team-employees__card swiper-slide",
-                        bgColor: "blue",
-                        name: 'Чугунов Владимир',
-                        position: 'Руководитель отдела закупок',
-                        btn: {
-                            classes: 'team-employees-card__btn',
-                            tag: 'button',
-                            vMode: 'icon',
-                            cMode: 'white'
-                        }
-                    })
-                    +employee-card({
-                        classes: "team-employees__card swiper-slide",
-                        bgColor: "blue",
-                        name: 'Бочарова Наталья',
-                        position: ' Руководитель отдела кадров',
-                        btn: {
-                            classes: 'team-employees-card__btn',
-                            tag: 'button',
-                            vMode: 'icon',
-                            cMode: 'white'
-                        }
-                    })
-                    +employee-card({
-                        classes: "team-employees__card swiper-slide",
-                        bgColor: "blue",
-                        name: 'Франц Эдвард',
-                        position: 'Юрист',
-                        btn: {
-                            classes: 'team-employees-card__btn',
-                            tag: 'button',
-                            vMode: 'icon',
-                            cMode: 'white'
-                        }
-                    })
+        .team-employees__column.team-employees__column--2.js-team-employees__column--2(data-js="teamEmployeesSlider")
+            .swiper-wrapper
+                +employee-card({
+                    classes: "team-employees__card swiper-slide",
+                    bgColor: "white",
+                    name: 'Гришин Дмитрий',
+                    position: 'Руководитель отдела IT',
+                    hasBtn: true,                        
+                })
+                +employee-card({
+                    classes: "team-employees__card swiper-slide",
+                    bgColor: "white",
+                    name: 'Лазин Петр',
+                    position: 'Руководитель отдела ВЭД',
+                })
+                +employee-card({
+                    classes: "team-employees__card swiper-slide",
+                    bgColor: "white",
+                    name: 'Алтухов Сергей',
+                    position: 'Директор производства',
+                    hasBtn: true,                        
+                })
+                +employee-card({
+                    classes: "team-employees__card swiper-slide",
+                    bgColor: "white",
+                    name: 'Лондарова Марина',
+                    position: 'Руководитель отдела доставки',
+                    hasBtn: true,                        
+                })
+                +employee-card({
+                    classes: "team-employees__card swiper-slide",
+                    bgColor: "white",
+                    name: 'Хохлов Дмитрий',
+                    position: 'Руководитель склада в Маланьино',
+                    hasBtn: true,                        
+                })
+        .team-employees__column.team-employees__column--3.js-team-employees__column--3(data-js="teamEmployeesSlider")
+            .swiper-wrapper
+                +employee-card({
+                    classes: "team-employees__card swiper-slide",
+                    bgColor: "blue",
+                    name: 'Муравьев Павел',
+                    position: 'Руководитель представительства в Калининграде',
+                    hasBtn: true,                        
+                    btn: {
+                        classes: 'team-employees-card__btn',
+                        tag: 'button',
+                        vMode: 'icon',
+                        cMode: 'white'
+                    }
+                })
+                +employee-card({
+                    classes: "team-employees__card swiper-slide",
+                    bgColor: "blue",
+                    name: 'Соловьева Анастасия',
+                    position: 'Руководитель склада в Москве',
+                    btn: {
+                        classes: 'team-employees-card__btn',
+                        tag: 'button',
+                        vMode: 'icon',
+                        cMode: 'white'
+                    }
+                })
+                +employee-card({
+                    classes: "team-employees__card swiper-slide",
+                    bgColor: "blue",
+                    name: 'Чугунов Владимир',
+                    position: 'Руководитель отдела закупок',
+                    hasBtn: true,                        
+                    btn: {
+                        classes: 'team-employees-card__btn',
+                        tag: 'button',
+                        vMode: 'icon',
+                        cMode: 'white'
+                    }
+                })
+                +employee-card({
+                    classes: "team-employees__card swiper-slide",
+                    bgColor: "blue",
+                    name: 'Бочарова Наталья',
+                    position: ' Руководитель отдела кадров',
+                    hasBtn: true,                        
+                    btn: {
+                        classes: 'team-employees-card__btn',
+                        tag: 'button',
+                        vMode: 'icon',
+                        cMode: 'white'
+                    }
+                })
+                +employee-card({
+                    classes: "team-employees__card swiper-slide",
+                    bgColor: "blue",
+                    name: 'Франц Эдвард',
+                    position: 'Юрист',
+                    hasBtn: true,                        
+                    btn: {
+                        classes: 'team-employees-card__btn',
+                        tag: 'button',
+                        vMode: 'icon',
+                        cMode: 'white'
+                    }
+                })

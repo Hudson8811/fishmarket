@@ -1,46 +1,49 @@
 -
-    const defaultEmployeeCardProps = {
-        classes: '',
-        bgColor: "black",
-        name: 'Елецкий Андрей',
-        position: 'Генеральный директор',
-        btn: {
-            classes: 'employee-card__btn',
-            tag: 'button',
-            vMode: 'icon',
-            cMode: 'blue'
-        }
-    }
+	const defaultEmployeeCardProps = {
+		classes: '',
+		bgColor: "black",
+		name: 'Елецкий Андрей',
+		position: 'Генеральный директор',
+		hasBtn: false,
+		btn: {
+			classes: 'employee-card__btn',
+			tag: 'button',
+			vMode: 'icon',
+			cMode: 'blue'
+		}
+	}
 
 
 
 mixin employee-card(props = defaultEmployeeCardProps)
-    -
-        const checkProps = {
-            classes: props.classes ? props.classes : defaultEmployeeCardProps.classes,
-            bgColor: props.bgColor ? props.bgColor : defaultEmployeeCardProps.bgColor,
-            name: props.name ? props.name : defaultEmployeeCardProps.name,
-            position: props.position ? props.position : defaultEmployeeCardProps.position,
-            btn: props.btn ? props.btn : defaultEmployeeCardProps.btn,
-        }
+	-
+		const checkProps = {
+			classes: props.classes ? props.classes : defaultEmployeeCardProps.classes,
+			bgColor: props.bgColor ? props.bgColor : defaultEmployeeCardProps.bgColor,
+			name: props.name ? props.name : defaultEmployeeCardProps.name,
+			position: props.position ? props.position : defaultEmployeeCardProps.position,
+			hasBtn: props.hasBtn ? props.hasBtn : defaultEmployeeCardProps.hasBtn,
+			btn: props.btn ? props.btn : defaultEmployeeCardProps.btn,
+		}
 
-    .employee-card(class= 'employee-card--'+checkProps.bgColor + ' ' + checkProps.classes)
-        .employee-card__name= checkProps.name
-        .employee-card__position= checkProps.position
-        .employee-card__photo 
-            img(src="img/employee_photo.png" alt=checkProps.name)
-        .employee-card__flexblock 
-            .employee-card__contacts 
-                .employee-card__phone.contact
-                    .contact__icon
-                        svg
-                            use(xlink:href=`img/sprites/sprite.svg#envelope`)
-                    .contact__text +7 (4922) 44-11-11
-                .employee-card__email.contact
-                    .contact__icon
-                        svg
-                            use(xlink:href=`img/sprites/sprite.svg#handset`)
-                    .contact__text log@skyfish.ru
-            +new-btn(checkProps.btn)
+	.employee-card(class= 'employee-card--'+checkProps.bgColor + ' ' + checkProps.classes)
+		.employee-card__name= checkProps.name
+		.employee-card__position= checkProps.position
+		.employee-card__photo 
+			img(src="img/employee_photo.png" alt=checkProps.name)
+		.employee-card__flexblock 
+			.employee-card__contacts 
+				.employee-card__phone.contact
+					.contact__icon
+						svg
+							use(xlink:href=`img/sprites/sprite.svg#envelope`)
+					.contact__text +7 (4922) 44-11-11
+				.employee-card__email.contact
+					.contact__icon
+						svg
+							use(xlink:href=`img/sprites/sprite.svg#handset`)
+					.contact__text log@skyfish.ru
+			if(checkProps.hasBtn)
+				+new-btn(checkProps.btn)(data-modal="teamCardModal")
 
 

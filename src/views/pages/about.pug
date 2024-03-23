@@ -10,12 +10,12 @@ block content
     include ../../blocks/components/input/input.pug
 
     //-(data-animation="aboutpage") подключает анимацию, если добавить к scroll page
-    .scroll-page
+    .scroll-page(data-animation="aboutpage")
         include ../../blocks/modules/pages/about/about-intro/about-intro
         include ../../blocks/modules/pages/about/about-history/about-history
         include ../../blocks/modules/pages/about/about-advantages/about-advantages
         +ap-divided({
-            classes: '',
+            classes: 'ap-divided--production js-production-section',
             position: 'right',
             image: 'img/ap_production.png',
             title: 'Наше производство',
@@ -34,7 +34,7 @@ block content
             ],
         })
         +ap-divided({
-            classes: '',
+            classes: 'js-logistics-section',
             position: 'left',
             image: 'img/ap_logistics.png',
             title: 'Наша логистика',
@@ -53,11 +53,11 @@ block content
             ],
         })
         +ap-divided({
-            classes: 'ap-divided--society',
+            classes: 'ap-divided--society js-society-section',
             position: 'right',
             image: 'img/ap_society.png',
             title: 'Мы в социуме',
-            text: 'В нашей компании принято за основу - мы живем в социуме, ведь работаем с людьми.  У нас есть список мероприятий где мы были запечатлены.',
+            text: 'В нашей компании принято за основу - мы живем в социуме, ведь работаем с людьми. У нас есть список мероприятий где мы были запечатлены.',
             btns: [
                 {        
                     text: 'Подробнее',
@@ -72,7 +72,7 @@ block content
 
         include ../../blocks/modules/footer/footer
 
-    //modals
+    //-modals
     include ../../blocks/modules/pages/about/history-modal/ap-history-modal
     include ../../blocks/modules/pages/about/team-modal/ap-team-modal
     include ../../blocks/modules/pages/about/callback-modal/ap-callback-modal

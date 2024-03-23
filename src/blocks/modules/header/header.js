@@ -28,6 +28,7 @@ let humb = document.querySelector(".js-hamburger");
 let searchBtn = document.querySelector(".js-search__btn");
 let search = document.querySelector(".search");
 let searchOverlay = document.querySelector(".search--overlay");
+let searchClears = document.querySelectorAll("[data-js='searchClear']");
 
 	///tabs
   function tabAllClick(navs, panes) {
@@ -142,6 +143,13 @@ searchOverlay.addEventListener("click", function () {
   search.classList.remove("active");
   bodyYesScroll()
 });
+searchClears.forEach(searchClear => {
+  searchClear.addEventListener("click", function () {
+    searchClear.closest('[data-js="search"]')
+      .querySelector('input')
+      .value = '';
+  });
+})
 overlayBg.addEventListener("click", function () {
   mobMenuSection.classList.remove("active");
   humb.classList.remove("is-active");

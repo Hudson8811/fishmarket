@@ -112,6 +112,14 @@
                 }
             }
         }
+        .new-btn.new-btn--white:hover {
+            background-color: $fontBlack;
+            .new-btn__icon {
+                svg use {
+                    stroke: $white;
+                }
+            }
+        }
     }
     &--white {
         background-color: $white;

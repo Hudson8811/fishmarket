@@ -1,5 +1,5 @@
-mixin l-modal(modalId="myModal")
-    .l-modal(data-id=modalId)
+mixin l-modal(modalId="myModal", classes= '')
+    .l-modal(class=classes data-id=modalId)
         .l-modal__overlay(data-js="lModalOverlay")
         .l-modal__content
             .l-modal__close(data-js="lModalClose")

@@ -1,20 +1,20 @@
 include ../../../../components/title/title.pug
 include ../../../../components/breadcrumbs/breadcrumbs.pug
 
-section.ap-main-screen
-    .container.ap-main-screen__container
-        +breadcrumbs({
-            colorMode: 'light',
-            items: [
-                {
-                    name: 'Главная',
-                    link: '#'
-                },
-                {
-                    name: 'О компании',
-                    link: '#'
-                }
-            ]
-        })
-        +title("h1", "SKY FISH", 'ap-main-screen__title js-about-intro__title')
-        .ap-main-screen__text.js-about-intro__text Привозим, продаём,<br>перерабатываем<br>и знаем о рыбе всё
+section.ap-main-screen.js-main-screen
+	.container.ap-main-screen__container
+		+breadcrumbs({
+			colorMode: 'light',
+			items: [
+				{
+					name: 'Главная',
+					link: '#'
+				},
+				{
+					name: 'О компании',
+					link: '#'
+				}
+			]
+		})
+		+title("h1", "SKY FISH", 'ap-main-screen__title js-about-intro__title')
+		.ap-main-screen__text.js-about-intro__text Привозим, продаём,<br>перерабатываем<br>и знаем о рыбе всё

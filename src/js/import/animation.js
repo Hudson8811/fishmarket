@@ -137,7 +137,28 @@ function startAnimation(){
 				break;
 			case "aboutpage":
 				//анимация страницы О компании
-				if (window.innerWidth > animationBreakpoint ){
+				let aboutEmployeesSection = document.querySelector("[data-js='teamEmployeesSection']");
+				let aboutEmployeesSliders = aboutEmployeesSection.querySelectorAll('[data-js="teamEmployeesSlider"]')
+
+				if (window.innerWidth > animationBreakpoint ) {
+
+					//удаляем слайдеры если они уже есть
+					if(aboutEmployeesSliders.length > 0) {
+						aboutEmployeesSliders.forEach(aboutEmployeesSliders => {
+							if(aboutEmployeesSliders.swiper) {
+								aboutEmployeesSliders.swiper.destroy()
+							}
+						})
+					}
+
+					//устанавливаем высоту секции с карточками
+					let columnsHeightArr = [
+						aboutEmployeesSection.querySelector(".js-team__column--1").offsetHeight, 
+						aboutEmployeesSection.querySelector(".js-team__column--2").offsetHeight,
+						aboutEmployeesSection.querySelector(".js-team__column--3").offsetHeight
+					]
+					aboutEmployeesSection.style.height = (Math.max(...columnsHeightArr) * 0.90) + 'px'
+
 					aboutPageAnimationDesktop();
 					scrollTriggerObject = ScrollTrigger.create({
 						trigger: ".scroll-page",
@@ -147,6 +168,22 @@ function startAnimation(){
 						scrub: 2,
 						animation: mainTimeline,
 					});
+				} else {
+
+					//сбрасываем высоту секции
+					aboutEmployeesSection.style.height = 'auto';
+
+					//инициализируем слайдеры если их ещё нет
+					if(aboutEmployeesSliders.length > 0) {
+						aboutEmployeesSliders.forEach(aboutEmployeesSlider => {
+							if(!aboutEmployeesSlider.swiper) {
+								let aboutEmployeesSliderEx = new Swiper(aboutEmployeesSlider, {
+									slidesPerView: 'auto',
+									spaceBetween: 20,
+								});
+							}
+						})
+					}
 				}
 				break;
 			case "careerpage":
@@ -193,7 +230,7 @@ function startAnimation(){
 						teamEmployeesSection.querySelector(".js-team-employees__column--2").offsetHeight,
 						teamEmployeesSection.querySelector(".js-team-employees__column--3").offsetHeight
 					]
-					teamEmployeesSection.style.height = (Math.max(...columnsHeightArr) * 0.62) + 'px'
+					teamEmployeesSection.style.height = (Math.max(...columnsHeightArr) * 0.90) + 'px'
 					
 					//запускаем анимацию
 					teamPageAnimationDesktop();
@@ -564,27 +601,27 @@ function teamPageAnimationDesktop() {
 
 	//анимация квадратов
 	innerTimeline.fromTo(".js-team-employees__column--1", {
-		y: "0%",
+		y: "-10%",
 	}, {
-		y: "-60%",
+		y: "-30%",
 		duration: 1,
 		ease: "none",
 	}, "<");
 	animationSelectors.push(".js-team-employees__column--1");
 
 	innerTimeline.fromTo(".js-team-employees__column--2", {
-		y: "30%",
+		y: "13%",
 	}, {
-		y: "-60%",
+		y: "-30%",
 		duration: 1,
 		ease: "none",
 	}, "<");
 	animationSelectors.push(".js-team-employees__column--2");
 
 	innerTimeline.fromTo(".js-team-employees__column--3", {
-		y: "30%",
+		y: "10%",
 	}, {
-		y: "-70%",
+		y: "-25%",
 		duration: 1,
 		ease: "none",
 	}, "<");
@@ -666,22 +703,28 @@ function aboutPageAnimationDesktop(){
 	//анимация первого экрана не привязана к таймлайну
 	gsap.fromTo(".js-about-intro__title", 
 	{
-		y: "-100%",
+		y: "60%",
+		opacity: 0
+
 	},
 	{
 		duration: 0.5,
 		y: '0',
-		delay: 6,
+		opacity: 1,
+		delay: 5.5,
 		ease: "none",
 	});
 	gsap.fromTo(".js-about-intro__text", 
 	{
-		y: "100%",
+		y: "30%",
+		opacity: 0
+
 	},
 	{
-		duration: 0.5,
-		delay: 6.1,
+		duration: 0.3,
+		delay: 5.9,
 		y: '0',
+		opacity: 1,
 		ease: "none",
 
 	});
@@ -692,146 +735,171 @@ function aboutPageAnimationDesktop(){
 
 
 	let scHeight = $('.main-site').innerHeight();
-	let b6Height =  $('.js-assortment__section').innerHeight();
+	let windowHeight = window.innerHeight; 
+	let careerHeight = $('.js-career-section').innerHeight();
+	let teamHeight = $('.js-team-section').innerHeight();	
+	let offerHeight = $('.js-offer-section').innerHeight();
+	let careerOffsetHeight = careerHeight - windowHeight;
 	let footerHeight =  $('.js-footer__animation').innerHeight();
 
-	mainTimeline.fromTo(".js-assortment__section", {
+	mainTimeline.fromTo(".js-history-section", {
 		y: "100vh",
 	}, {
-		y: -1 * (b6Height - scHeight),
+		y: '-100%',
 		duration: 1,
 		ease: "none",
-		onComplete: function () {
-			$('.assortment__btn').addClass('active');
-		},
 	}, "0");
-	animationSelectors.push(".js-assortment__section");
+	animationSelectors.push(".js-history-section");
 
-	mainTimeline.fromTo(".js-assortment__section", {
-		y: -1 * (b6Height - scHeight),
+	mainTimeline.fromTo(".js-main-screen", {
+		y: "0",
 	}, {
-		y: "-100%",
-		duration: 0.8,
+		y: '-100%',
+		duration: 1.5,
+		ease: "none",
+	}, "<");
+	animationSelectors.push(".js-main-screen");
+
+	mainTimeline.fromTo(".js-advantages-section", {
+		y: '100%',
+	}, {
+		y: "0",
+		duration: 0,
+		ease: "none",
+	}, "<+30%");
+	animationSelectors.push(".js-advantages-section");
+
+	mainTimeline.fromTo(".js-advantages__title", {
+		x: "100%",
+	}, {
+		x: "-50%",
+		duration: 1,
 		ease: "none",
 	}, ">");
+	animationSelectors.push(".js-advantages__title");
 
-	mainTimeline.fromTo(".js-assortment__col--2", {
-		y: "23%",
-		top: "23%",
-	}, {
-		top: "0%",
-		y: "0%",
-		duration: 1,
-		ease: "none",
-	}, "<-=0.8");
-	animationSelectors.push(".js-assortment__col--2");
-
-	mainTimeline.fromTo(".assortment__btn", {
-		bottom: "-100%",
-	}, {
-		bottom: "1.71875vw",
-		duration: 0.5,
-		ease: "power1.out",
-	}, "<-=0.20");
-	animationSelectors.push(".assortment__btn");
-
-
-	mainTimeline.fromTo(".hear__section", {
-		left: "-100vw",
-		opacity: "0"
-	}, {
-		left: "0vw",
-		duration: 0.5,
-		opacity: "1",
-		ease: "none",
-	}, "<+=0.53");
-	animationSelectors.push(".hear__section");
-
-	mainTimeline.fromTo(".hear__title", {
-		top: "50%",
-		left: "100%",
-	}, {
-		top: "50%",
-		left: "-200%",
-		duration: 2,
-		ease: "none",
-	}, ">+=0.3");
-	animationSelectors.push(".hear__title");
-
-	mainTimeline.fromTo(".news__section", {
+	mainTimeline.fromTo(".js-advantages__cards", {
 		y: "100%",
-		top: "100%",
 	}, {
-		top: "-100%",
+		y: "-120%",
+		duration: 2,
+		ease: "none",
+	}, "<");
+	animationSelectors.push(".js-advantages__cards");
+
+	mainTimeline.fromTo(".js-advantages__video", {
+		opacity: '1',
+	}, {
+		opacity: "0",
+		duration: 0,
+		ease: "none",
+	}, ">-33%");
+	animationSelectors.push(".js-advantages__video");
+
+	mainTimeline.fromTo(".js-advantages__title", {
+		opacity: '1',
+	}, {
+		opacity: "0",
+		duration: 0,
+		ease: "none",
+	}, "<");
+	
+	mainTimeline.fromTo(".js-production-section", {
+		y: "100vh",
+	}, {
+		y: "0",
+		duration: 0,
+		ease: "none",
+	}, "<-100%");
+	animationSelectors.push(".js-production-section");
+
+	mainTimeline.fromTo(".js-advantages-section", {
+		y: '0',
+	}, {
 		y: "-100%",
-		duration: 2,
+		duration: 1,
 		ease: "none",
-		onStart: function () {
-			$('.news__btn').addClass('active');
-		},
-	}, "<+=0.6");
-	animationSelectors.push(".news__section");
+	}, "<-0.02");
 
-	mainTimeline.fromTo(".js-advantage__col--1", {
+	mainTimeline.fromTo(".js-logistics-section", {
+		y: "100vh",
+	}, {
+		y: "0",
+		duration: 0.8,
+		ease: "none",
+	}, ">-=0.2");
+	animationSelectors.push(".js-logistics-section");
+
+	mainTimeline.fromTo(".js-society-section", {
+		y: "100vh",
+	}, {
+		y: "0",
+		duration: 0.8,
+		ease: "none",
+	}, ">+=0.5");
+	animationSelectors.push(".js-society-section");
+	
+	mainTimeline.fromTo(".js-career-section", {
+		y: `${careerHeight}px`,
+	}, {
+		y: `-${careerOffsetHeight}px`,
+		duration: 1.5,
+		ease: "none",
+	}, ">+=0.1");
+	animationSelectors.push(".js-career-section");
+	
+	mainTimeline.fromTo(".js-team-section", {
+		y: windowHeight,
+	}, {
+		y: `-${offerHeight + teamHeight}px`,
+		duration: 2.2,
+		ease: "none",
+	}, ">+=0.2");
+	animationSelectors.push(".js-team-section");
+
+	mainTimeline.fromTo(".js-team__column--1", {
 		y: "0%",
-		top: "0%",
 	}, {
-		top: "-30%",
-		y: "-30%",
-		duration: 1,
-		ease: "none",
-	}, "<+=0.4");
-	animationSelectors.push(".js-advantage__col--1");
-
-	mainTimeline.fromTo(".js-advantage__col--2", {
-		y: "30%",
-		top: "30%",
-	}, {
-		top: "-60%",
-		y: "-60%",
-		duration: 1,
+		y: "-25%",
+		duration: 1.7,
 		ease: "none",
 	}, "<");
-	animationSelectors.push(".js-advantage__col--2");
+	animationSelectors.push(".js-team__column--1");
 
-	mainTimeline.fromTo(".js-advantage__col--3", {
-		y: "60%",
-		top: "60%",
+	mainTimeline.fromTo(".js-team__column--2", {
+		y: "13%",
 	}, {
-		top: "-90%",
-		y: "-90%",
-		duration: 1,
+		y: "-35%",
+		duration: 1.7,
 		ease: "none",
 	}, "<");
-	animationSelectors.push(".js-advantage__col--3");
+	animationSelectors.push(".js-team__column--2");
 
-	mainTimeline.fromTo(".js-news__btn", {
-		marginTop: 0,
-	}, {
-		marginTop: "180%",
-		duration: 0.5,
-		ease: "none",
-	}, "<+=0.6");
-	animationSelectors.push(".js-news__btn");
-
-	mainTimeline.fromTo(".js-news__col--2", {
+	mainTimeline.fromTo(".js-team__column--3", {
 		y: "10%",
-		top: "10%",
 	}, {
-		top: "-20%",
-		y: "-20%",
-		duration: 2,
+		y: "-30%",
+		duration: 1.7,
 		ease: "none",
-	}, "<-=0.1");
-	animationSelectors.push(".js-news__col--2");
+	}, "<");
+	animationSelectors.push(".js-team__column--3");
+
+	mainTimeline.fromTo(".js-offer-section", {
+		y: `${windowHeight + teamHeight}px`,
+	}, {
+		y: `-100%`,
+		duration: 2.2,
+		ease: "none",
+	}, "<");
+	animationSelectors.push(".js-offer-section");
 
 	mainTimeline.fromTo(".js-footer__animation", {
 		y: "100%",
 	}, {
 		y: -1 * (footerHeight - scHeight),
-		duration: 0.5,
+		duration: 0,
 		ease: "none",
-	}, "<+=0.2");
+	}, ">-=0.54");
 	animationSelectors.push(".js-footer__animation");
 
 	mainTimeline.fromTo(".footer__menu", {
@@ -840,7 +908,7 @@ function aboutPageAnimationDesktop(){
 		right: "0%",
 		duration: 1,
 		ease: "none",
-	}, ">-=1");
+	}, ">-=0.6");
 	animationSelectors.push(".footer__menu");
 
 	mainTimeline.fromTo(".footer__title", {

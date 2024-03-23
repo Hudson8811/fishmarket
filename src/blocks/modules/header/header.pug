@@ -50,11 +50,14 @@ include ../../../blocks/modules/preloader/preloader
             .header__other__item--search__btn.js-search__btn
               svg
                 use(xlink:href=`img/sprites/sprite.svg#header_search`)
-            .search
+            .search(data-js="search")
               .search--overlay
               .search__content
                 .search__inter 
                   input(type="text" placeholder="поиск")
+                  .search__clear(data-js="searchClear")
+                    svg
+                      use(xlink:href=`img/sprites/sprite.svg#close_for_sprite`)
                   .search__select 
                     .header__other__item.header__other__fone.header__other__fone--desc
                       .header__other__top

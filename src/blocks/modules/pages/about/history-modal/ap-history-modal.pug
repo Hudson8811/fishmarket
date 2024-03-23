@@ -1,16 +1,6 @@
-
-//-+ap-modal('historyModal', 'ap-history-modal')
-
 include ../../../../components/l-modal/l-modal
 
-+l-modal("historyModal")
-    +new-btn({
-        classes: 'ap-modal__close',
-        tag: 'button',
-        vMode: 'icon',
-        cMode: 'white',
-        iconName: 'close'
-    })(data-hystclose)
++l-modal("historyModal", "ap-history-modal")
     .ap-history-modal__item
         .ap-history-modal__decor
         .ap-history-modal__year 2001

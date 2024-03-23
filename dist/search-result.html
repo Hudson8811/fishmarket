@@ -94,11 +94,16 @@
                     <use xlink:href="img/sprites/sprite.svg#header_search"></use>
                   </svg>
                 </div>
-                <div class="search">
+                <div class="search" data-js="search">
                   <div class="search--overlay"></div>
                   <div class="search__content">
                     <div class="search__inter"> 
                       <input type="text" placeholder="поиск">
+                      <div class="search__clear" data-js="searchClear">
+                        <svg>
+                          <use xlink:href="img/sprites/sprite.svg#close_for_sprite"></use>
+                        </svg>
+                      </div>
                       <div class="search__select"> 
                         <div class="header__other__item header__other__fone header__other__fone--desc">
                           <div class="header__other__top"><a href="#">по каталогу
@@ -430,10 +435,15 @@
                         </li>
                       </ul>
                     </div>
-            <div class="search-result-intro__search search">
+            <div class="search-result-intro__search search" data-js="search">
               <div class="search__content">
                 <div class="search__inter">
                   <input type="text" placeholder="Поиск">
+                  <div class="search__clear" data-js="searchClear">
+                    <svg>
+                      <use xlink:href="img/sprites/sprite.svg#close_for_sprite"></use>
+                    </svg>
+                  </div>
                   <div class="search__select"> 
                     <div class="header__other__item header__other__fone header__other__fone--desc">
                       <div class="header__other__top"><a href="#">каталог
@@ -543,7 +553,7 @@
                                     </button>
                           </div>
                         </div>
-                        <div class="search-card search-card--vacancy ">
+                        <div class="search-card search-card--vacancy "><a class="search-card__link" href="#"></a>
                           <div class="search-card__info">
                                     <div class="breadcrumbs search-card__breadcrumbs breadcrumbs--dark">
                                       <ul class="breadcrumbs__list list-reset">
@@ -613,7 +623,7 @@
                                     </button>
                           </div>
                         </div>
-                        <div class="search-card search-card--news ">
+                        <div class="search-card search-card--news "><a class="search-card__link" href="#"></a>
                           <div class="search-card__info">
                                     <div class="breadcrumbs search-card__breadcrumbs breadcrumbs--dark">
                                       <ul class="breadcrumbs__list list-reset">
@@ -683,7 +693,7 @@
                                     </button>
                           </div>
                         </div>
-                        <div class="search-card search-card--news ">
+                        <div class="search-card search-card--news "><a class="search-card__link" href="#"></a>
                           <div class="search-card__info">
                                     <div class="breadcrumbs search-card__breadcrumbs breadcrumbs--dark">
                                       <ul class="breadcrumbs__list list-reset">
@@ -753,7 +763,7 @@
                                     </button>
                           </div>
                         </div>
-                        <div class="search-card search-card--news ">
+                        <div class="search-card search-card--news "><a class="search-card__link" href="#"></a>
                           <div class="search-card__info">
                                     <div class="breadcrumbs search-card__breadcrumbs breadcrumbs--dark">
                                       <ul class="breadcrumbs__list list-reset">
@@ -823,7 +833,7 @@
                                     </button>
                           </div>
                         </div>
-                        <div class="search-card search-card--news ">
+                        <div class="search-card search-card--news "><a class="search-card__link" href="#"></a>
                           <div class="search-card__info">
                                     <div class="breadcrumbs search-card__breadcrumbs breadcrumbs--dark">
                                       <ul class="breadcrumbs__list list-reset">

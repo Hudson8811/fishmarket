@@ -13,4 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     //modals
     lModal("cartOffer")
+    lModal("historyModal")
+    lModal("teamCardModal")
+    lModal("callbackModal")
 })

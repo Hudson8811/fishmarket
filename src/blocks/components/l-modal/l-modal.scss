@@ -12,8 +12,8 @@
     transition: all $tr-time;
     z-index: 9999;
     @include max(md) {
-        top: vw2(70);	
-        height: calc(100vh - vw2(70));
+        top: vw2(68);	
+        height: calc(100vh - vw2(68));
     }
 
     &.active {
@@ -38,9 +38,17 @@
         transition: all $tr-time-fast;
         cursor: pointer;
         z-index: 20;
+        @include max(md) {
+            width: vw2(57);
+            height: vw2(57);
+        }
         svg {
             width: vw(20);
             height: vw(20);
+            @include max(md) {
+                width: vw2(20);
+                height: vw2(20);
+            }
             use {
                 width: 100%;
                 height: 100%;
@@ -75,5 +83,9 @@
 		height: 100vh;
 		z-index: 9999;
 		overflow: auto;
+        @include max(md) {
+            max-width: 100%;
+            padding-top: vw2(30);
+        }
     }
 }

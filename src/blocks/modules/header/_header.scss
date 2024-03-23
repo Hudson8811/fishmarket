@@ -262,7 +262,7 @@
 					transition: all $tr-time;
 					&:hover {
 						transition: all $tr-time;
-						color: $grey;
+						color: $white;
 
 					}
 				}
@@ -744,6 +744,28 @@
 		border: 3px solid #44C8F5;
 		box-sizing: border-box;
 		z-index: 9999;
+	}
+	&__clear {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		right: vw(170);
+		width: vw(50);
+		height: vw(50);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border: none;
+		cursor: pointer;
+		opacity: 0.8;
+		svg {
+			width: vw(30);
+			height: vw(30);
+			use {
+				fill: $fontBlack;
+				stroke: $fontBlack;
+			}
+		}
 	}
 	&__inter  {
 		position: relative;

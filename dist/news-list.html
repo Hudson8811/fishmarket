@@ -94,11 +94,16 @@
                     <use xlink:href="img/sprites/sprite.svg#header_search"></use>
                   </svg>
                 </div>
-                <div class="search">
+                <div class="search" data-js="search">
                   <div class="search--overlay"></div>
                   <div class="search__content">
                     <div class="search__inter"> 
                       <input type="text" placeholder="поиск">
+                      <div class="search__clear" data-js="searchClear">
+                        <svg>
+                          <use xlink:href="img/sprites/sprite.svg#close_for_sprite"></use>
+                        </svg>
+                      </div>
                       <div class="search__select"> 
                         <div class="header__other__item header__other__fone header__other__fone--desc">
                           <div class="header__other__top"><a href="#">по каталогу

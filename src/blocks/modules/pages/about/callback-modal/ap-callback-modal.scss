@@ -1,23 +1,12 @@
 .ap-callback-modal {
-    .ap-modal__close {
-        .btn__icon {
-            svg use {
-                stroke: $white;
-                fill: $white;
-            }
-        }
-    }
-    .btn--icon.ap-modal__close:hover {
-        .btn__icon {
-            svg use {
-                stroke: $white;
-                fill: $white
-            }
-        }
-    }
-    .ap-modal__content {
+    .l-modal__content {
         width: vw(665);
         padding: vw(30) 0 0;
+        @include max(md) {
+            width: 100%;
+            max-width: 100%;
+            padding: vw(20);
+        }
     }
     &__form {
         height: 100%;
@@ -28,6 +17,9 @@
         justify-content: space-between;
         &__content {
             padding: vw(0) vw(29) vw(41);
+            @include max(md) {
+                padding: vw2(0) vw2(29) vw2(41);
+            }
         }
         &__title {
             max-width: vw(485);
@@ -35,11 +27,22 @@
             font-size: vw(32);
             line-height: 1.06;
             font-weight: 500;
+            @include max(md) {
+                max-width: vw2(485);
+                margin-bottom: vw2(56);
+                font-size: vw2(32);
+            }
         }
         &__input {
             margin-top: vw(41);
+            @include max(md) {
+                margin-top: vw2(41);
+            }
             &.input--checkbox {
                 margin-top: vw(23);
+                @include max(md) {
+                    margin-top: vw2(23);
+                }
             }
         }
     }

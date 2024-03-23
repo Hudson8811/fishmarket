@@ -1,10 +1,24 @@
 .ap-history {
+    position: absolute;
+    top: 0;
+    left: 0;
     background-color: $fontBlack;
+    z-index: 15;
+    @include max(md) {
+        position: relative;
+    }
     &__container {
+        min-height: 100vh;
         padding: vw(91) 0 vw(152);
         display: flex;
         align-items: flex-end;
         justify-content: space-between;
+        @include max(md) {
+            min-height: auto;
+            padding: vw2(90) 0 vw2(60);
+            flex-direction: column-reverse;
+            align-items: flex-start;
+        }
     }
     &__text {
         max-width: vw(1037);
@@ -14,6 +28,11 @@
         line-height: 89%;
         letter-spacing: -0.02em;
         color: $white;
+        @include max(md) {
+            max-width: vw2(470);
+            margin-bottom: vw2(70);
+            font-size: vw2(30);
+        }
         span {
             opacity: 18%;
         }

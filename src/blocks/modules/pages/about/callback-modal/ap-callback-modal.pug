@@ -1,14 +1,6 @@
 include ../../../../components/l-modal/l-modal
 
-//-+ap-modal('callbackModal', 'ap-callback-modal')
-+l-modal("callbackModal")
-    +new-btn({
-        classes: 'ap-modal__close',
-        tag: 'button',
-        vMode: 'icon',
-        cMode: 'blue',
-        iconName: 'close'
-    })(data-hystclose)
++l-modal("callbackModal", "ap-callback-modal")
     form.ap-callback-modal__form.callback-form(action="#" novalidate data-validate)
         .callback-form__content
             .callback-form__title ОСТАЛИСЬ ВОПРОСЫ?<br>НАПИШИТЕ ИЛИ ЗАКАЖИТЕ ЗВОНОК

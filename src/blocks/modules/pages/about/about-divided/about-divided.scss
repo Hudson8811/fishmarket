@@ -1,8 +1,19 @@
 .ap-divided {
+    position: absolute;
+    top: 0;
+    left: 0;
     display: flex;
     flex-direction: row;
     height: vw(800);
+    min-height: 100vh;
+    width: 100%;
     background-color: $white;
+    @include max(md) {
+        position: relative;
+        height: auto;
+        min-height: auto;
+        flex-direction: column-reverse;
+    }
     &--left {
         flex-direction: row-reverse;
         background-color: $fontBlack;
@@ -20,6 +31,9 @@
             opacity: 0.4;
             letter-spacing: -0.03em;
             max-width: vw(535);
+            @include max(md) {
+                max-width: vw2(350);
+            }
         }
         .ap-divided__img {
             img {
@@ -29,12 +43,31 @@
     }
     &.ap-divided--society .ap-divided__info {
         background-size: vw(884) auto;
+        @include max(md) {
+            background-size: vw2(384) auto;
+        }
+    }
+    &.ap-divided--production  {
+        .new-btn.new-btn--blue:hover {
+            background-color: $blueHover;
+            color: $white;
+            .new-btn__icon {
+                background-color: $white;
+                svg use {
+                    stroke: $fontBlack;
+                }
+            }
+        }
     }
     &__img {
         flex-basis: calc(100% / 3);
         height: 100%;
         flex-grow: 0;
         flex-shrink: 0;
+        @include max(md) {
+            flex-basis: auto;
+            height: vw2(550);
+        }
         img {
             width: 100%;
             height: 100%;
@@ -48,11 +81,16 @@
         flex-basis: 100%;
         flex-shrink: 1;
         flex-grow: 1;
-        padding: vw(22) vw(50) vw(33);
+        padding: vw(100) vw(50) vw(33);
         background-image: url("../img/ap_waves_light.png");
         background-size: vw(788) auto;
         background-position: right 0 bottom vw(95);
         background-repeat: no-repeat;
+        @include max(md) {
+            padding: vw2(45) vw2(20) vw2(30);
+            background-size: vw2(388) auto;
+            background-position: right 0 bottom vw2(80);
+        }
     }
     &__title {
         max-width: vw(743);
@@ -61,6 +99,10 @@
         font-weight: 500;
         text-transform: uppercase;
         color: $fontBlack;
+        @include max(md) {
+            max-width: 100%;
+            font-size: vw2(32);
+        }
     }
     &__text {
         margin-top: vw(33);
@@ -71,10 +113,19 @@
         font-weight: 400;
         color: $fontBlack;
         opacity: 0.6;
+        @include max(md) {
+            margin-top: vw2(25);
+            max-width: vw2(350);
+            font-size: vw2(20);
+        }
     }
     &__btns {
         display: flex;
         margin-top: auto;
         gap: vw(25);
+        @include max(md) {
+            gap: vw2(15);
+            margin-top: vw2(30);
+        }
     }
 }
