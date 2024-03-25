@@ -66,7 +66,8 @@ let loginRegister = document.querySelector(".js-pop-up__login-register");
 let loginRegisterOverlay = document.querySelector(".js-pop-up__login-register--overlay");
 let loginRegisterClose = document.querySelector(".js-pop-up__login-register--close");
 let loginRegisterButton = document.querySelector(".js-pop-up__button--login-register");
-if( loginRegisterButton !== null) {
+//скрыто пока не готова форма
+/*if( loginRegisterButton !== null) {
   loginRegisterButton.addEventListener("click", function () {
    
     loginRegister.classList.add("active");
@@ -80,7 +81,7 @@ if( loginRegisterButton !== null) {
     loginRegister.classList.remove("active");
     bodyYesScroll()
   });
-}
+}*/
 
 
 //Pop-up login-register
