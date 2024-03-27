@@ -3,7 +3,7 @@
     padding-top: vw(114);
     padding-bottom: vw(101);
     @include max(md) {
-        padding-top: vw2(95);
+        padding-top: vw2(90);
         padding-bottom: vw2(50);
     } 
     &__breadcrumbs {
@@ -16,11 +16,10 @@
         justify-content: space-between;
         align-items: stretch;
         gap: vw(20);
-        margin-top: vw(137);
+        margin-top: vw(24);
         @include max(md) {
             flex-direction: column;
             gap: vw2(30);
-            margin-top: vw2(40);
         }
     }
     &__body {

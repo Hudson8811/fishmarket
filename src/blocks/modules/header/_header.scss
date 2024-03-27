@@ -707,7 +707,7 @@
 		display: block;
 		width: 0vw;
 		height: 100vh;
-		background: rgba(7, 23, 29, 0.28);
+		background: rgba(7, 23, 29, 0.4);
 		z-index: 10;
 	}
 	&.active {
@@ -1086,7 +1086,7 @@
 		display: block;
 		width: 100%;
 		height: 100%;
-		background: rgba(7, 23, 29, 0.28);
+		background: rgba(7, 23, 29, 0.5);
 		z-index: 990;
 	}
 	&__list {

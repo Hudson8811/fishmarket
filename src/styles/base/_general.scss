@@ -895,7 +895,7 @@ a, button {
 
     }
     &__bg {
-        margin-bottom: vw(337);
+        margin-bottom: vw(100);
         position: relative;
         width: 100%;
         display: flex;
@@ -1067,7 +1067,7 @@ a, button {
             }
         }
         .layout {
-            margin-top: vw(143);
+            margin-top: vw(4);
             &__col {
                 flex-flow: column nowrap;
                 &:nth-child(1) {
@@ -1406,10 +1406,8 @@ a, button {
             padding-top: vw2(90);
         } 
         .layout {
-            margin-top: vw(143);
-            @include max(md) {
-                margin-top: vw2(90);
-            }
+            margin-top: vw(24);
+
             &__col {
 
                 &:nth-child(1) {
@@ -1947,7 +1945,7 @@ a, button {
                 }
             }
             &__picture {
-                opacity: 0;
+                opacity: 1;
                 transition: all $tr-time;
                 @include max(md) {
                     opacity: 1;

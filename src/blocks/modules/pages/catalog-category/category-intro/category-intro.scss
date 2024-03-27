@@ -10,10 +10,8 @@
 	}
     &__title {
         color: $fontBlack;
-        margin-top: vw(156);
-        @include max(md) {
-            margin-top: vw2(50);
-        } 
+        margin-top: vw(24);
+
     }
     &__controls {
         display: flex;
