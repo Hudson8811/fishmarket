@@ -3884,6 +3884,7 @@ button {
 
 .news__section .layout--trio__news {
   padding-top: 6.9444444444vw;
+  position: relative;
 }
 
 .news__section .layout--trio__news .layout--trio__col {
@@ -3923,7 +3924,6 @@ button {
 
 .news__btn--finish.active {
   display: flex;
-  position: relative;
 }
 
 .news__btn:hover {
@@ -12567,8 +12567,13 @@ button {
     padding-bottom: 6.9444444444vw;
   }
 
+  .news__section .layout--trio__news {
+    padding-bottom: 34.7222222222vw;
+  }
+
   .news__section .layout--trio__news .layout--trio__col {
     padding-bottom: 0;
+    position: static;
   }
 
   .news__section .layout--trio__news .layout--trio__col:nth-child(1) {
@@ -12580,9 +12585,9 @@ button {
   }
 
   .news__btn {
-    position: relative;
-    bottom: auto;
-    left: auto;
+    bottom: -26.0416666667vw;
+    left: 0;
+    top: auto;
   }
 
   .news__bg {

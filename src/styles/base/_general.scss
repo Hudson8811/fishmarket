@@ -821,12 +821,17 @@ a, button {
         }  
         .layout--trio__news {
             padding-top: vw2(40);
+            position: relative;
+            @include max(md) {
+                padding-bottom: vw2(200);
+            }
             .layout--trio {
                 &__col {
                     flex-flow: column nowrap;
                     padding-bottom: vw(139);
                     @include max(md) {
                         padding-bottom: 0;
+                        position: static;
                     }
                     &:nth-child(1) {
                         padding-bottom: vw(30);
@@ -861,9 +866,9 @@ a, button {
         left: vw(25);
         z-index: 26;
         @include max(md) {
-            position: relative;
-            bottom: auto;
-            left:auto;
+            bottom:vw2(-150);
+            left: 0;
+            top: auto;
         } 
         &--start {
             &.active {
@@ -876,8 +881,6 @@ a, button {
             top: 0;
             &.active {
                 display: flex;
-                position: relative;
-
             }
         }
        &:hover {
