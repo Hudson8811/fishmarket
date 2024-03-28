@@ -231,3 +231,14 @@ function removeFilesItem(target){
 	}
 	input[0].files = dt.files;  
 }
+
+
+$(window).on("scroll", function () {
+    var scrolled = $(this).scrollTop();
+    if( scrolled > 107 ) {
+        $('body').addClass('header--small');
+    }
+    if( scrolled <= 107 ) {
+        $('body').removeClass('header--small');
+    }
+});

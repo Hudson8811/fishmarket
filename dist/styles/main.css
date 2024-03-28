@@ -7725,7 +7725,7 @@ button {
   width: 10.1041666667vw;
   min-width: 10.1041666667vw;
   background: #44C8F5;
-  height: 4.7395833333vw;
+  height: 100%;
 }
 
 .header__logo img {
@@ -8658,6 +8658,7 @@ button {
   padding-right: 0.4166666667vw;
   background: #fff;
   z-index: 9999;
+  min-height: 100%;
 }
 
 .mob-menu::-webkit-scrollbar {
@@ -12292,6 +12293,14 @@ button {
 
   .product-card--row .product-card__more.new-btn {
     display: none;
+  }
+
+  .header--small .section__header {
+    height: 3.6458333333vw;
+  }
+
+  .header--small .mob-menu__section {
+    top: 3.6458333333vw;
   }
 
   .category-intro--rows {
