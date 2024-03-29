@@ -170,6 +170,48 @@ function startAnimation(){
 					});
 				} else {
 
+					gsap.fromTo(".js-about-intro__title", 
+					{
+						y: "60%",
+						opacity: 0
+				
+					},
+					{
+						duration: 0.5,
+						y: '0',
+						opacity: 1,
+						delay: 4,
+						ease: "none",
+					});
+					gsap.fromTo(".js-about-intro__text", 
+					{
+						y: "30%",
+						opacity: 0
+				
+					},
+					{
+						duration: 0.3,
+						delay: 4.4,
+						y: '0',
+						opacity: 1,
+						ease: "none",
+				
+					});
+					gsap.fromTo(".js-about-history__text", 
+					{
+						y: "30%",
+						opacity: 0
+				
+					},
+					{
+						duration: 0.3,
+						delay: 5,
+						y: '0',
+						opacity: 1,
+						ease: "none",
+				
+					});
+
 					//сбрасываем высоту секции
 					aboutEmployeesSection.style.height = 'auto';
 

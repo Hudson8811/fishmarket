@@ -2114,6 +2114,9 @@ a, button {
             width: 100%;
             object-fit: cover;
             object-position: center center;
+            @include max(md) {
+                object-position: left center;
+            }
         }
     }
     &__desc {

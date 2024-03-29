@@ -147,17 +147,18 @@
             }
         }
         &__title {
-            margin-top: vw(4);
             font-size: vw(30);
             font-weight: 500;
             line-height: 1.09;
             text-transform: uppercase;
             @include max(md) {
-                margin-top: vw2(4);
-                font-size: vw2(20);
+                font-size: vw2(18);
             }
         }
         &__icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
             width: vw(28);
             height: vw(35);
             @include max(md) {
