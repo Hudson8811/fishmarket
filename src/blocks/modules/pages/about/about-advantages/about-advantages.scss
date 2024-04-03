@@ -57,7 +57,7 @@
         z-index: 5;
         text-transform: uppercase;
         @include max(md) {
-            white-space: wrap;
+            white-space: inherit;
             left: vw2(20);
             top: vw2(120);
             font-size: vw2(32);
