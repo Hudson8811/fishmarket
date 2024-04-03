@@ -162,6 +162,19 @@ document.addEventListener("DOMContentLoaded", () => {
 			$('.js-mob-menu__city__section').addClass('active');
 		}
 	}, 3300);
+
+	// Автовоспроизведение видео на мобильном
+	var videos = document.querySelectorAll('[data-js="autoplayVideo"]');
+
+	if(videos.length) {
+		window.addEventListener('touchstart', function() {
+			videos.forEach(video => {
+				video.play();
+				console.log('first touch');
+			})
+			this.removeEventListener('touchstart', videoStart);
+		});
+	}
 });
 
 function bodyNoScroll() {
