@@ -27,7 +27,7 @@ mixin ap-divided(props = defaultApDividedProps)
             img(src=checkProps.image alt=checkProps.title)
         .ap-divided__info 
             +title('h2', checkProps.title, 'ap-divided__title')
-            .ap-divided__text= checkProps.text
+            .ap-divided__text!= checkProps.text
             .ap-divided__btns
                 +new-btn(checkProps.btns[0])
                 if (checkProps.btns[1])

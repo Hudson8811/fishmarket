@@ -27,8 +27,8 @@ mixin employee-card(props = defaultEmployeeCardProps)
 		}
 
 	.employee-card(class= 'employee-card--'+checkProps.bgColor + ' ' + checkProps.classes)
-		.employee-card__name= checkProps.name
-		.employee-card__position= checkProps.position
+		.employee-card__name!= checkProps.name
+		.employee-card__position!= checkProps.position
 		.employee-card__photo 
 			img(src="img/employee_photo.png" alt=checkProps.name)
 		.employee-card__flexblock 
