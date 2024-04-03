@@ -1,6 +1,7 @@
 -
 	const defaultEmployeeCardProps = {
 		classes: '',
+		bgColor: "black",
 		name: 'Елецкий Андрей',
 		position: 'Генеральный директор',
 		hasBtn: false,
@@ -18,17 +19,18 @@ mixin employee-card(props = defaultEmployeeCardProps)
 	-
 		const checkProps = {
 			classes: props.classes ? props.classes : defaultEmployeeCardProps.classes,
+			bgColor: props.bgColor ? props.bgColor : defaultEmployeeCardProps.bgColor,
 			name: props.name ? props.name : defaultEmployeeCardProps.name,
 			position: props.position ? props.position : defaultEmployeeCardProps.position,
 			hasBtn: props.hasBtn ? props.hasBtn : defaultEmployeeCardProps.hasBtn,
 			btn: props.btn ? props.btn : defaultEmployeeCardProps.btn,
 		}
 
-	.employee-card(class= checkProps.classes)
+	.employee-card(class= 'employee-card--'+checkProps.bgColor + ' ' + checkProps.classes)
 		.employee-card__name!= checkProps.name
 		.employee-card__position!= checkProps.position
-		.employee-card__photo
-			img(src="img/employee_photo.jpg" alt=checkProps.name)
+		.employee-card__photo 
+			img(src="img/employee_photo.png" alt=checkProps.name)
 		.employee-card__flexblock 
 			.employee-card__contacts 
 				.employee-card__phone.contact

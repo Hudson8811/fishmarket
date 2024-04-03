@@ -50,8 +50,8 @@ a, button {
 .container {
     position: relative;
 	box-sizing: border-box;
-	width: vw(1920);
-	max-width: calc(100% - vw(50));
+	width: vwf(1920);
+	max-width: calc(100% - vwf(50));
 	margin: 0 auto;
     @include max(md) {
         width: 100%;
