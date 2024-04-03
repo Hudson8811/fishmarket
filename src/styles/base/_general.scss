@@ -787,6 +787,24 @@ a, button {
             display: block;
             object-fit: cover;
             object-position: center center;
+            &::-webkit-media-controls-panel {
+                display: none !important;
+                -webkit-appearance: none;
+                opacity: 0;
+                visibility: hidden;
+              }
+              &::-webkit-media-controls-play-button {
+                display: none !important;
+                -webkit-appearance: none;
+                opacity: 0;
+                visibility: hidden;
+              }
+              &::-webkit-media-controls-start-playback-button {
+                display: none !important;
+                -webkit-appearance: none;
+                opacity: 0;
+                visibility: hidden;
+              }
         }
     }
 }

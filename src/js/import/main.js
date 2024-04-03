@@ -167,7 +167,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	var videos = document.querySelectorAll('[data-js="autoplayVideo"]');
 
 	if(videos.length) {
-		window.addEventListener('touchstart', function() {
+		window.addEventListener('touchstart', function videoStart() {
 			videos.forEach(video => {
 				video.play();
 				console.log('first touch');
