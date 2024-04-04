@@ -7,7 +7,10 @@
 	max-width: 100%;
 	overflow-x: hidden;
 	height: calc(100vh - vw(70));
-	background: #07171D;
+	background-color: #07171D;
+	background-image: url('../img/footer__bg.png"');
+	background-position: left bottom;
+	background-repeat: repeat-x;
 	z-index: 30;
 	&__animation {
 		position: absolute;
@@ -41,7 +44,7 @@
 			}
 		}
 	}
-	&__bg  {
+	/*&__bg  {
 		position: absolute;
 		left: 0;
 		bottom: 0;
@@ -55,7 +58,7 @@
 			display: block;
 			width: 100%;
 		}
-	}
+	}*/
 	&__title{
 		position: absolute;
 		top: calc(50% - vw(170));
@@ -178,7 +181,7 @@
 	&__btn {
 		position: absolute;
 		bottom: vw(33);
-		left: vw(25);
+		left: vwf(25);
 		z-index:  20;
 		@include max(md) {
 			position: relative;
@@ -193,7 +196,7 @@
 	&__logo  {
 		position: absolute;
 		top: vw(30);
-		left: vw(20);
+		left: vwf(25);
 		display: block;
 		width: vw(153);
 		@include max(md) {

@@ -4,6 +4,7 @@
     left: 0;
     background-color: $fontBlack;
     z-index: 15;
+    width: 100%;
     @include max(md) {
         position: relative;
     }

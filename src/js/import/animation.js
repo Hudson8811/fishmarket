@@ -358,7 +358,7 @@ function addFooterAnimationDesktop(){
 	mainTimeline.fromTo(".footer__title", {
 			left: "55%",
 		}, {
-			left: "-100%",
+			left: "-70%",
 			duration: 1,
 			ease: "none",
 		},
@@ -450,7 +450,7 @@ function homepageAnimationDesktop(){
 		left: "100%",
 	}, {
 		top: "45%",
-		left: "-200%",
+		left: "-165%",
 		duration: 2,
 		ease: "none",
 	}, ">+=0.6");
@@ -465,8 +465,11 @@ function homepageAnimationDesktop(){
 		duration: 2,
 		ease: "none",
 		onStart: function () {
-			$('.news__btn').addClass('active');
+			$('.news__btn').addClass('fixed');
 		},
+		onComplete: function () {
+			$('.news__btn').removeClass('fixed');
+		}
 	}, "<+=0.6");
 	animationSelectors.push(".news__section");
 
@@ -504,21 +507,19 @@ function homepageAnimationDesktop(){
 	animationSelectors.push(".js-advantage__col--3");
 
 	mainTimeline.fromTo(".js-news__btn", {
-		marginTop: "22%",
+		bottom: "20px",
 	}, {
-		marginTop: "147%",
-		duration: 0.5,
+		bottom: "20px",
+		duration: 0,
 		ease: "none",
 	}, "<+=0.6");
 	animationSelectors.push(".js-news__btn");
 
 	mainTimeline.fromTo(".js-news__col--2", {
 		y: "10%",
-		top: "10%",
 	}, {
-		top: "-20%",
 		y: "-20%",
-		duration: 2,
+		duration: 1,
 		ease: "none",
 	}, "<-=0.1");
 	animationSelectors.push(".js-news__col--2");
@@ -526,7 +527,7 @@ function homepageAnimationDesktop(){
 	mainTimeline.fromTo(".js-footer__animation", {
 		y: "100%",
 	}, {
-		y: -1 * (footerHeight - scHeight),
+		y: 0,
 		duration: 0.5,
 		ease: "none",
 	}, "<+=0.2");
@@ -544,7 +545,7 @@ function homepageAnimationDesktop(){
 	mainTimeline.fromTo(".footer__title", {
 		left: "55%",
 	}, {
-		left: "-100%",
+		left: "-70%",
 		duration: 1,
 		ease: "none",
 	}, "<+=0.5");
@@ -613,7 +614,7 @@ function careerPageAnimationDesktop() {
 	mainTimeline.fromTo(".footer__title", {
 		left: "55%",
 	}, {
-		left: "-100%",
+		left: "-70%",
 		duration: 1,
 		ease: "none",
 	}, "<+=0.1");
@@ -676,7 +677,7 @@ function teamPageAnimationDesktop() {
 	mainTimeline.fromTo(".footer__title", {
 		left: "55%",
 	}, {
-		left: "-100%",
+		left: "-70%",
 		duration: 1,
 		ease: "none",
 	}, "<+=0.1");
@@ -727,7 +728,7 @@ function productionPageAnimationDesktop() {
 	mainTimeline.fromTo(".footer__title", {
 		left: "55%",
 	}, {
-		left: "-100%",
+		left: "-70%",
 		duration: 1,
 		ease: "none",
 	}, "<+=0.1");
@@ -808,7 +809,7 @@ function aboutPageAnimationDesktop(){
 	mainTimeline.fromTo(".js-advantages__title", {
 		x: "100%",
 	}, {
-		x: "-50%",
+		x: "-28%",
 		duration: 1,
 		ease: "none",
 	}, ">");
@@ -950,7 +951,7 @@ function aboutPageAnimationDesktop(){
 	mainTimeline.fromTo(".footer__title", {
 		left: "100%",
 	}, {
-		left: "-100%",
+		left: "-70%",
 		duration: 1,
 		ease: "none",
 	}, "<+=0.5");
