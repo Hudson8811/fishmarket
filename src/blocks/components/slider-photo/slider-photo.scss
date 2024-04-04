@@ -7,7 +7,7 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		height: vw(532);
+		height: vw(500);
         @include max(md) {
             height: vw2(400);
         }
@@ -26,7 +26,7 @@
 	}
 	&__thumbs {
 		position: relative;
-		margin-top: vw(70);
+		margin-top: vw(50);
 		height: vw(114);
         @include max(md) {
             height: vw2(66);

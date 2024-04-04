@@ -85,7 +85,7 @@
 		z-index: 99999;
 		margin-top: auto;
 		margin-bottom: 15.2vh;
-		height: vw(30);
+		height: vwf(30);
 		@include max(md) {
 			height: vw2(20);
 			margin-bottom: auto;

@@ -3,9 +3,6 @@
 		padding-left: vw(8);
 	}
 	&__title {
-		position: absolute;
-		top: vw(25);
-		left: vw(0);
 		color: #fff;
 		width: 110%;
 		span {
@@ -23,7 +20,7 @@
 			position: absolute;
 			top: 0;
 			left: 0;
-			height: auto;
+			height: 100vh;
 			z-index: 25;
 			overflow: hidden;
 			background: #07171D;
@@ -38,19 +35,18 @@
 
 			&__bg {
 					position: absolute;
-					left: vw(-30);
 					display: flex;
 					justify-content: flex-start;
 					align-items: flex-start;
-					top: vw(787);
-					width: vw(728);
+					left: vwf(-30);
+					top: calc(100vh - vw(270));
+					width: vw(1456);
 					height: vw(283);
-					opacity: 0.2;
 					img {
 							position: relative;
 							width: 100%;
 							display: block;
-							object-fit: left top;
+							object-fit: contain;
 							object-position: center center;
 					}
 			}
@@ -60,7 +56,9 @@
 							padding-bottom: vw(249);
 
 							&:nth-child(1) {
-									padding-top: vw(24);
+									padding-top: vw(90);
+									padding-bottom: vw(90);
+									height: 100vh;
 							}
 							&:nth-child(2) {
 									right: -1px;
@@ -170,27 +168,9 @@
 			}
 	}
 	&__btn {
-		position: absolute;
-		bottom: -100vh;
+		margin-top: auto;
 		top: auto;
 		left: vw(25);
 		z-index: 26;
-		&--start {
-				@include max(md) {
-						display: none;
-				}
-				&.active {
-						display: none;
-				}
-		}
-		&--finish {
-				display: none;
-				bottom: 1.71875vw;
-				left: vw(0);
-				&.active {
-						display: flex;
-				}
-		}
-
 	}
 }

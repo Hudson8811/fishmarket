@@ -19,6 +19,9 @@
             .society-awards__btn {
                 opacity: 1;
             }
+            .society-awards__btn.swiper-button-disabled {
+                opacity: 0.35;
+            }
         }
         @include max(md) {
             margin-top: vw2(60);
@@ -95,6 +98,9 @@
             opacity: 1;
             top: vw2(-70);
         } 
+        &.swiper-button-disabled {
+            opacity: 0;
+        }
         &::after {
             content: none;
         }

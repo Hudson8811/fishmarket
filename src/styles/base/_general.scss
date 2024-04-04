@@ -557,6 +557,23 @@ a, button {
     }
 }
 
+.layout-sticky {
+    align-items: flex-start;
+    @include max(md) {
+        align-items: stretch;
+    }
+    &__block {
+        position: sticky;
+        top: vw(128);
+        margin-bottom: vw(25);
+        @include max(md) {
+            position: relative;
+            top: 0;
+            margin-bottom: 0;
+        }
+    }
+}
+
 @keyframes rotateCircle {
 	0% {
 		transform: rotate(0)
@@ -1103,6 +1120,9 @@ a, button {
                     }
                 }
             }
+        }
+        .layout-sticky__block {
+            margin-bottom: 0;
         }
     }
     &__col {

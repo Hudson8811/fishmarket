@@ -223,13 +223,13 @@
 
 .l-map.l-map--first {
     padding-top: vw(115);
-    height: vw(915);
+    height: vw(860);
     @include max(md) {
         height: vw2(520);
         padding-top: vw2(90);
     }
     .l-map__content {
-        padding-top: vw(39);
+        padding-top: vw(30);
         @include max(md) {
             padding-top: vw2(20);
         }

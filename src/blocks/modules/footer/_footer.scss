@@ -6,12 +6,12 @@
 	width: 100%;
 	max-width: 100%;
 	overflow-x: hidden;
-	height: calc(100vh - vw(90));
+	height: calc(100vh - vw(70));
 	background: #07171D;
 	z-index: 30;
 	&__animation {
 		position: absolute;
-		top: vw(90);
+		top: vw(70);
 		@include max(md) {
 			position: relative;
 			flex-flow: column nowrap;
@@ -30,7 +30,7 @@
 			}
 			.footer__menu {
 				height: calc(100vh - vw(00));
-				padding-top: vw(127);
+				padding-top: vw(100);
 				@include max(md) {
 					padding: vw2(20);
 					height: 100%;
@@ -46,7 +46,7 @@
 		left: 0;
 		bottom: 0;
 		z-index: 5;
-		width: vw(1456);
+		width: vwf(1456);
 		@include max(md) {
 			display: none;
 		}
@@ -84,12 +84,12 @@
 		top: 0;
 		right: -100%;
 		width: vw(473);
-		height: calc(100vh - vw(90));
+		height: calc(100vh - vw(70));
 		display: flex;
 		justify-content: flex-start;
 		align-items: flex-start;
 		flex-flow: column nowrap;
-		padding: vw(40) vw(37);
+		padding: vw(35) vw(37);
 		padding-bottom: vw(25);
 		background: #fff;
 		z-index: 900;
@@ -112,7 +112,7 @@
 			width: 100%;
 			border-top: 1px solid rgba(0, 0, 0, 0.2);
 			padding-top: vw(26);
-			margin-bottom: vw(45);
+			margin-bottom: vw(30);
 			list-style-type: none;
 			&__item {
 				position: relative;
