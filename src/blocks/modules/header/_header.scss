@@ -123,7 +123,7 @@
 			background-position: center center;
 			background-size: 50% 50%;
 			background-repeat: no-repeat;
-			transition: all $tr-time;
+			transition: all $tr-time-fast;
 			@include max(md) {
 				width: vw2(90);
 				border-right: none;
@@ -136,10 +136,11 @@
 					width: vw2(90);
 				}
 			}
-
-			&:hover {
-				transition: all $tr-time;
-				background-image: url(../img/svg/hamburger--blue.svg);
+			@include min(md){
+				&:hover {
+					transition: all $tr-time-fast;
+					background-image: url(../img/svg/hamburger--blue.svg);
+				}
 			}
 		}
 		&__item {
