@@ -225,47 +225,86 @@ include ../../../blocks/modules/preloader/preloader
   .mob-menu--overlay.js-pop-up__login-register--overlay
   .mob-menu__question
     .mob-menu__question__top 
-      .mob-menu__question__top__tabs.nav-tabs
-        a(href="#" data-tab="1").nav-tab.active Tab 1
       .mob-menu__question__top__close.js-pop-up__login-register--close
         svg
           use(xlink:href=`img/sprites/sprite.svg#header_close`)
 
-    form(action="").contacts__form  
-      .contacts__form__input-block
-        input(type="text" name="").contacts__form__input.js-mask-name.text__13
-        .contacts__form__input-block__name 	Имя*
-        .contacts__form__input-block__error Некорректное имя
-      .contacts__form__input-block
-        input(type="tel" name="").contacts__form__input.js-mask-phone
-        .contacts__form__input-block__name Телефон
-        .contacts__form__input-block__error Некорректный телефон
-      .contacts__form__input-block
-        input(type="email" name="").contacts__form__input.text__13
-        .contacts__form__input-block__name Почта
-        .contacts__form__input-block__error Некорректная почта					
+    .login-area
+      .login-area__slider(data-js="loginAreaSlider")
+        .swiper-wrapper 
+          .swiper-slide
+            form(action="").contacts__form  
+              .contacts__form__input-block
+                input(type="text" name="").contacts__form__input.js-mask-name.text__13
+                .contacts__form__input-block__name 	Имя*
+                .contacts__form__input-block__error Некорректное имя
+              .contacts__form__input-block
+                input(type="tel" name="").contacts__form__input.js-mask-phone
+                .contacts__form__input-block__name Телефон
+                .contacts__form__input-block__error Некорректный телефон
+              .contacts__form__input-block
+                input(type="email" name="").contacts__form__input.text__13
+                .contacts__form__input-block__name Почта
+                .contacts__form__input-block__error Некорректная почта					
 
-      .contacts__form__input-block
-        textarea(name="").contacts__form__input.text__13
-        .contacts__form__input-block__name Комментарий / Сопроводительное письмо
-        .contacts__form__input-block__error
-      .contacts__form__input-block
-        .input-file-row
-          label.input-file
-            input(type="file" name="file[]" multiple)
-            span Выберите файл
-          .input-file-list  
-      .contacts__form__personal-data.contacts__form__input-block.error 
-        .checkbox
-          label
-            input.custom-checkbox(type="checkbox" name="personal-data" value="indigo")
-            != "Согласие на обработку персональных данных"
-        .contacts__form__input-block__error обязательно нужно согласиться
-    .mob-menu__question__bottom
-      .mob-menu__question__bottom__text Отправить
-      .mob-menu__question__bottom__row
-        svg
-          use(xlink:href=`img/sprites/sprite.svg#arrow_btn`)
+              .contacts__form__input-block
+                textarea(name="").contacts__form__input.text__13
+                .contacts__form__input-block__name Комментарий / Сопроводительное письмо
+                .contacts__form__input-block__error
+              .contacts__form__input-block
+                .input-file-row
+                  label.input-file
+                    input(type="file" name="file[]" multiple)
+                    span Выберите файл
+                  .input-file-list  
+              .contacts__form__personal-data.contacts__form__input-block.error 
+                .checkbox
+                  label
+                    input.custom-checkbox(type="checkbox" name="personal-data" value="indigo")
+                    != "Согласие на обработку персональных данных"
+                .contacts__form__input-block__error обязательно нужно согласиться
+            .mob-menu__question__bottom
+              .mob-menu__question__bottom__text Отправить
+              .mob-menu__question__bottom__row
+                svg
+                  use(xlink:href=`img/sprites/sprite.svg#arrow_btn`)
+
+          .swiper-slide
+            form(action="").contacts__form  
+              .contacts__form__input-block
+                input(type="text" name="").contacts__form__input.js-mask-name.text__13
+                .contacts__form__input-block__name 	Имя*
+                .contacts__form__input-block__error Некорректное имя
+              .contacts__form__input-block
+                input(type="tel" name="").contacts__form__input.js-mask-phone
+                .contacts__form__input-block__name Телефон
+                .contacts__form__input-block__error Некорректный телефон
+              .contacts__form__input-block
+                input(type="email" name="").contacts__form__input.text__13
+                .contacts__form__input-block__name Почта
+                .contacts__form__input-block__error Некорректная почта					
+
+              .contacts__form__input-block
+                textarea(name="").contacts__form__input.text__13
+                .contacts__form__input-block__name Комментарий / Сопроводительное письмо
+                .contacts__form__input-block__error
+              .contacts__form__input-block
+                .input-file-row
+                  label.input-file
+                    input(type="file" name="file[]" multiple)
+                    span Выберите файл
+                  .input-file-list  
+              .contacts__form__personal-data.contacts__form__input-block.error 
+                .checkbox
+                  label
+                    input.custom-checkbox(type="checkbox" name="personal-data" value="indigo")
+                    != "Согласие на обработку персональных данных"
+                .contacts__form__input-block__error обязательно нужно согласиться
+            .mob-menu__question__bottom
+              .mob-menu__question__bottom__text Отправить
+              .mob-menu__question__bottom__row
+                svg
+                  use(xlink:href=`img/sprites/sprite.svg#arrow_btn`)
 
 //- На отдельной странице pop-up
 .mob-menu__section.mob-menu__question__section.js-pop-up__command

@@ -284,57 +284,112 @@
       <div class="mob-menu--overlay js-pop-up__login-register--overlay"></div>
       <div class="mob-menu__question">
         <div class="mob-menu__question__top"> 
-          <div class="mob-menu__question__top__tabs nav-tabs"><a class="nav-tab active" href="#" data-tab="1">Tab 1</a></div>
           <div class="mob-menu__question__top__close js-pop-up__login-register--close">
             <svg>
               <use xlink:href="img/sprites/sprite.svg#header_close"></use>
             </svg>
           </div>
         </div>
-        <form class="contacts__form" action=""> 
-          <div class="contacts__form__input-block">
-            <input class="contacts__form__input js-mask-name text__13" type="text" name="">
-            <div class="contacts__form__input-block__name">	Имя*</div>
-            <div class="contacts__form__input-block__error">Некорректное имя</div>
-          </div>
-          <div class="contacts__form__input-block">
-            <input class="contacts__form__input js-mask-phone" type="tel" name="">
-            <div class="contacts__form__input-block__name">Телефон</div>
-            <div class="contacts__form__input-block__error">Некорректный телефон</div>
-          </div>
-          <div class="contacts__form__input-block">
-            <input class="contacts__form__input text__13" type="email" name="">
-            <div class="contacts__form__input-block__name">Почта</div>
-            <div class="contacts__form__input-block__error">Некорректная почта					</div>
-          </div>
-          <div class="contacts__form__input-block">
-            <textarea class="contacts__form__input text__13" name=""></textarea>
-            <div class="contacts__form__input-block__name">Комментарий / Сопроводительное письмо</div>
-            <div class="contacts__form__input-block__error"></div>
-          </div>
-          <div class="contacts__form__input-block">
-            <div class="input-file-row">
-              <label class="input-file">
-                <input type="file" name="file[]" multiple><span>Выберите файл</span>
-              </label>
-              <div class="input-file-list"> </div>
+        <div class="login-area">
+          <div class="login-area__slider" data-js="loginAreaSlider">
+            <div class="swiper-wrapper"> 
+              <div class="swiper-slide">
+                <form class="contacts__form" action=""> 
+                  <div class="contacts__form__input-block">
+                    <input class="contacts__form__input js-mask-name text__13" type="text" name="">
+                    <div class="contacts__form__input-block__name">	Имя*</div>
+                    <div class="contacts__form__input-block__error">Некорректное имя</div>
+                  </div>
+                  <div class="contacts__form__input-block">
+                    <input class="contacts__form__input js-mask-phone" type="tel" name="">
+                    <div class="contacts__form__input-block__name">Телефон</div>
+                    <div class="contacts__form__input-block__error">Некорректный телефон</div>
+                  </div>
+                  <div class="contacts__form__input-block">
+                    <input class="contacts__form__input text__13" type="email" name="">
+                    <div class="contacts__form__input-block__name">Почта</div>
+                    <div class="contacts__form__input-block__error">Некорректная почта					</div>
+                  </div>
+                  <div class="contacts__form__input-block">
+                    <textarea class="contacts__form__input text__13" name=""></textarea>
+                    <div class="contacts__form__input-block__name">Комментарий / Сопроводительное письмо</div>
+                    <div class="contacts__form__input-block__error"></div>
+                  </div>
+                  <div class="contacts__form__input-block">
+                    <div class="input-file-row">
+                      <label class="input-file">
+                        <input type="file" name="file[]" multiple><span>Выберите файл</span>
+                      </label>
+                      <div class="input-file-list"> </div>
+                    </div>
+                  </div>
+                  <div class="contacts__form__personal-data contacts__form__input-block error"> 
+                    <div class="checkbox">
+                      <label>
+                        <input class="custom-checkbox" type="checkbox" name="personal-data" value="indigo">Согласие на обработку персональных данных
+                      </label>
+                    </div>
+                    <div class="contacts__form__input-block__error">обязательно нужно согласиться</div>
+                  </div>
+                </form>
+                <div class="mob-menu__question__bottom">
+                  <div class="mob-menu__question__bottom__text">Отправить</div>
+                  <div class="mob-menu__question__bottom__row">
+                    <svg>
+                      <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <form class="contacts__form" action=""> 
+                  <div class="contacts__form__input-block">
+                    <input class="contacts__form__input js-mask-name text__13" type="text" name="">
+                    <div class="contacts__form__input-block__name">	Имя*</div>
+                    <div class="contacts__form__input-block__error">Некорректное имя</div>
+                  </div>
+                  <div class="contacts__form__input-block">
+                    <input class="contacts__form__input js-mask-phone" type="tel" name="">
+                    <div class="contacts__form__input-block__name">Телефон</div>
+                    <div class="contacts__form__input-block__error">Некорректный телефон</div>
+                  </div>
+                  <div class="contacts__form__input-block">
+                    <input class="contacts__form__input text__13" type="email" name="">
+                    <div class="contacts__form__input-block__name">Почта</div>
+                    <div class="contacts__form__input-block__error">Некорректная почта					</div>
+                  </div>
+                  <div class="contacts__form__input-block">
+                    <textarea class="contacts__form__input text__13" name=""></textarea>
+                    <div class="contacts__form__input-block__name">Комментарий / Сопроводительное письмо</div>
+                    <div class="contacts__form__input-block__error"></div>
+                  </div>
+                  <div class="contacts__form__input-block">
+                    <div class="input-file-row">
+                      <label class="input-file">
+                        <input type="file" name="file[]" multiple><span>Выберите файл</span>
+                      </label>
+                      <div class="input-file-list"> </div>
+                    </div>
+                  </div>
+                  <div class="contacts__form__personal-data contacts__form__input-block error"> 
+                    <div class="checkbox">
+                      <label>
+                        <input class="custom-checkbox" type="checkbox" name="personal-data" value="indigo">Согласие на обработку персональных данных
+                      </label>
+                    </div>
+                    <div class="contacts__form__input-block__error">обязательно нужно согласиться</div>
+                  </div>
+                </form>
+                <div class="mob-menu__question__bottom">
+                  <div class="mob-menu__question__bottom__text">Отправить</div>
+                  <div class="mob-menu__question__bottom__row">
+                    <svg>
+                      <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
-          <div class="contacts__form__personal-data contacts__form__input-block error"> 
-            <div class="checkbox">
-              <label>
-                <input class="custom-checkbox" type="checkbox" name="personal-data" value="indigo">Согласие на обработку персональных данных
-              </label>
-            </div>
-            <div class="contacts__form__input-block__error">обязательно нужно согласиться</div>
-          </div>
-        </form>
-        <div class="mob-menu__question__bottom">
-          <div class="mob-menu__question__bottom__text">Отправить</div>
-          <div class="mob-menu__question__bottom__row">
-            <svg>
-              <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
-            </svg>
           </div>
         </div>
       </div>
@@ -675,7 +730,7 @@
                   <div class="advantage__num">3</div>
                   <div class="advantage__desc">
                     <div class="advantage__title title__32">В чем наше преимущество?</div>
-                    <div class="advantage__text text__18"> В сервисном отношении к&nbsp;своим клиентам. Мы понимаем и&nbsp;слышим своих партнеров.
+                    <div class="advantage__text text__18"> В сервисном отношении к&nbsp;своим клиентам. Мы&nbsp;понимаем и&nbsp;слышим своих партнеров.
                     </div>
                   </div>
                 </div>

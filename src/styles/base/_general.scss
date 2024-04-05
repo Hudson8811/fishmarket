@@ -874,6 +874,7 @@ a, button {
                     &:nth-child(1) {
                         padding-bottom: vw(30);
                         @include max(md) {
+                            display: contents;
                             padding-bottom: 0;
                         }
                     }
@@ -903,7 +904,7 @@ a, button {
         z-index: 26;
         transition: none;
         @include max(md) {
-            bottom:vw2(-150);
+            order: 2;
             left: 0;
             top: auto;
         }
@@ -2450,7 +2451,7 @@ a, button {
         @include max(md) {
             min-height: vw2(50);
             padding-right: vw2(20);
-            padding-top: vw2(20);
+            padding-top: vw2(10);
             font-size: vw2(24);
             line-height: 1.2;
         }
