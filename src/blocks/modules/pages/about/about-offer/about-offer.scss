@@ -8,6 +8,7 @@
     background-size: vw(861) auto;
     background-position: right vw(-35) top vw(160);
     z-index: 45;
+    width: 100%;
     @include max(md) {
         position: relative;
         background-size: vw2(260) auto;

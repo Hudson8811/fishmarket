@@ -1,51 +1,51 @@
 -
-    const defaultLIntroProps = {
-        classes: '',
-        breadcrumbs: {
-            classes: 'l-intro__breadcrumbs',
-            colorMode: 'light',
-            items: [
-                {
-                    name: 'Главная',
-                    link: '#'
-                },
-                {
-                    name: 'Мы в социуме',
-                    link: '#'
-                }
-            ]
-        },
-        title: 'Мы в социуме',
-        textTop: '',
-        textBottom: '',
-        image: 'img/society-intro.png'
-    }
+	const defaultLIntroProps = {
+		classes: '',
+		breadcrumbs: {
+			classes: 'l-intro__breadcrumbs',
+			colorMode: 'light',
+			items: [
+				{
+					name: 'Главная',
+					link: '#'
+				},
+				{
+					name: 'Мы в социуме',
+					link: '#'
+				}
+			]
+		},
+		title: 'Мы в социуме',
+		textTop: '',
+		textBottom: '',
+		image: 'img/society-intro.png'
+	}
 
 mixin l-intro(props = defaultLIntroProps)
-    include ../../components/breadcrumbs/breadcrumbs.pug
-    include ../../components/title/title.pug
+	include ../../components/breadcrumbs/breadcrumbs.pug
+	include ../../components/title/title.pug
 
-    -
-        const checkProps = {
-            classes: props.classes ? props.classes : defaultLIntroProps.classes,
-            breadcrumbs: props.breadcrumbs ? props.breadcrumbs : defaultLIntroProps.breadcrumbs,
-            title: props.title ? props.title : defaultLIntroProps.title,
-            textTop: props.textTop ? props.textTop : defaultLIntroProps.textTop,
-            textBottom: props.textBottom ? props.textBottom : defaultLIntroProps.textBottom,
-            image: props.image ? props.image : defaultLIntroProps.image,
-        };
+	-
+		const checkProps = {
+			classes: props.classes ? props.classes : defaultLIntroProps.classes,
+			breadcrumbs: props.breadcrumbs ? props.breadcrumbs : defaultLIntroProps.breadcrumbs,
+			title: props.title ? props.title : defaultLIntroProps.title,
+			textTop: props.textTop ? props.textTop : defaultLIntroProps.textTop,
+			textBottom: props.textBottom ? props.textBottom : defaultLIntroProps.textBottom,
+			image: props.image ? props.image : defaultLIntroProps.image,
+		};
 
-        let bgImage = 'background-image: url(' + checkProps.image +')';
+		let bgImage = 'background-image: url(' + checkProps.image +')';
 
-    section.l-intro(class=checkProps.classes, style=bgImage)
-        .container.l-intro__container
-            .l-intro__content
-                +breadcrumbs(checkProps.breadcrumbs)
-                +title("h1", checkProps.title, "l-intro__title")
-                if(checkProps.textTop)
-                    .l-intro__text.text-block.l-intro__text--top
-                        != checkProps.textTop
-                if(checkProps.textBottom)
-                    .l-intro__text.l-intro__text--bottom
-                        != checkProps.textBottom
+	section.l-intro(class=checkProps.classes, style=bgImage)
+		.container.l-intro__container
+			.l-intro__content
+				+breadcrumbs(checkProps.breadcrumbs)
+				+title("h1", checkProps.title, "l-intro__title")
+				if(checkProps.textTop)
+					.l-intro__text.text-block.l-intro__text--top
+						!= checkProps.textTop
+				if(checkProps.textBottom)
+					.l-intro__text.l-intro__text--bottom
+						!= checkProps.textBottom
 

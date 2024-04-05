@@ -21,7 +21,7 @@ body.Bodymotionless {
 	width: 100vw;
 	min-height: 100vh;
 	overflow: hidden;
-  }
+}
 
 * {
 	margin: 0;
@@ -34,6 +34,9 @@ body {
     display: flex;
 	flex-direction: column;
 	min-height: 100%;
+}
+body {
+    overflow-x: hidden;
 }
 a, button {
     cursor: pointer;
@@ -896,9 +899,9 @@ a, button {
     }
     &__btn {
         position: relative;
-        bottom: 0;
-        top: auto;
+        margin-top: auto;
         z-index: 26;
+        transition: none;
         @include max(md) {
             bottom:vw2(-150);
             left: 0;
