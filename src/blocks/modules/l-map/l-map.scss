@@ -122,7 +122,7 @@
             display: block;
         }
         @include max(md) {
-            flex-basis: vw2(200);
+            flex-basis: vw2(220);
         }
     }
     &__address:not(:last-child) {

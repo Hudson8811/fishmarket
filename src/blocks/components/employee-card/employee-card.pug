@@ -31,12 +31,12 @@ mixin employee-card(props = defaultEmployeeCardProps)
 			img(src="img/employee_photo.jpg" alt=checkProps.name)
 		.employee-card__flexblock 
 			.employee-card__contacts 
-				.employee-card__phone.contact
+				a.employee-card__phone.contact(href="tel:74922441111")
 					.contact__icon
 						svg
 							use(xlink:href=`img/sprites/sprite.svg#envelope`)
 					.contact__text +7 (4922) 44-11-11
-				.employee-card__email.contact
+				a.employee-card__email.contact(href="mailto:log@skyfish.ru")
 					.contact__icon
 						svg
 							use(xlink:href=`img/sprites/sprite.svg#handset`)

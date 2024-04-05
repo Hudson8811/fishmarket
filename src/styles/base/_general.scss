@@ -2133,6 +2133,7 @@ a, button {
     @include max(md) {
         padding: vw2(20);
         padding-top: vw2(70);
+        max-height: vw2(580);
     }
     &__bg {
         position: absolute;
@@ -2166,8 +2167,8 @@ a, button {
         line-height: 97.228%;
         text-transform: uppercase;
         @include max(md) {
-            font-size: vw2(220);
-            margin-bottom: vw2(40);
+            font-size: vw2(200);
+            margin-bottom: vw2(15);
         }      
     }
     &__subtitle {

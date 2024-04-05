@@ -63,7 +63,7 @@
     &__slide {
         height: vw(720);
         @include max(md) {
-            height: 70vh;
+            height: 45vh;
         }
     }
 

@@ -12,7 +12,8 @@
         position: relative;
         height: auto;
         min-height: auto;
-        flex-direction: column-reverse;
+        flex-direction: column;
+        padding: vw2(30) vw2(20);
     }
     &--left {
         flex-direction: row-reverse;
@@ -66,13 +67,17 @@
         flex-shrink: 0;
         @include max(md) {
             flex-basis: auto;
-            height: vw2(550);
+            height: vw2(350);
+            margin-top: vw2(15);
         }
         img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             object-position: left;
+            @include max(md) {
+                object-position: left top;
+            }
         }
     }
     &__info {
@@ -87,6 +92,7 @@
         background-position: right 0 bottom vw(95);
         background-repeat: no-repeat;
         @include max(md) {
+            display: contents;
             padding: vw2(45) vw2(20) vw2(30);
             background-size: vw2(388) auto;
             background-position: right 0 bottom vw2(80);
@@ -100,6 +106,7 @@
         text-transform: uppercase;
         color: $fontBlack;
         @include max(md) {
+            order: -1;
             max-width: 100%;
             font-size: vw2(32);
         }
@@ -114,6 +121,7 @@
         color: $fontBlack;
         opacity: 0.6;
         @include max(md) {
+            order: -1;
             margin-top: vw2(25);
             max-width: vw2(350);
             font-size: vw2(20);

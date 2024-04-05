@@ -61,7 +61,7 @@
         @include max(md) {
             justify-content: flex-start;
             padding: vw2(20);
-            min-height: vw2(440);
+            min-height: vw2(300);
             padding-bottom: vw2(50);
         }
         &__num {
