@@ -5,102 +5,285 @@ include ../../../../components/employee-card/employee-card.pug
 include ../../../../components/title/title.pug
 
 section.ap-team.js-team-section(data-js='teamEmployeesSection')
-	.container
-		+title('h2', 'Наша команда', 'ap-team__title')
-	.ap-team__cards
-		.ap-team__column.ap-team__column--1.js-team__column--1(data-js="teamEmployeesSlider")
-			.swiper-wrapper
-				+employee-card({
-					classes: 'swiper-slide',
-				})
-				+employee-card({
-					classes: 'swiper-slide',
-					name: 'Соловьев Владислав',
-					position: 'Коммерческий директор',
-					hasBtn: true,
-				})
-				+employee-card({
-					classes: 'swiper-slide',
-					name: 'Косырева Наталья',
-					position: 'Финансовый директор',
-					hasBtn: true,				
-				})
-				+employee-card({
-					classes: 'swiper-slide',
-					name: 'Кашецкий Юрий',
-					position: 'Руководитель отдела маркетинга',
-					hasBtn: true,				
-				})
-		.ap-team__column.ap-team__column--2.js-team__column--2(data-js="teamEmployeesSlider")
-			.swiper-wrapper
-				+employee-card({
-					classes: 'swiper-slide',
-					bgColor: "white",
-					name: 'Гришин Дмитрий',
-					position: 'Руководитель отдела IT',
-					hasBtn: true,				
-				})
-				+employee-card({
-					classes: 'swiper-slide',
-					bgColor: "white",
-					name: 'Лазин Петр',
-					position: 'Руководитель отдела ВЭД',
-				})
-				+employee-card({
-					classes: 'swiper-slide',
-					bgColor: "white",
-					name: 'Алтухов Сергей',
-					position: 'Директор производства',
-					hasBtn: true,				
-				})
-				+employee-card({
-					classes: 'swiper-slide',
-					bgColor: "white",
-					name: 'Лондарова Марина',
-					position: 'Руководитель отдела доставки',
-					hasBtn: true,				
-				})
-				+employee-card({
-					classes: 'swiper-slide',
-					bgColor: "white",
-					name: 'Хохлов Дмитрий',
-					position: 'Руководитель склада в&nbsp;Маланьино',
-					hasBtn: true,				
-				})
-		.ap-team__column.ap-team__column--3.js-team__column--3(data-js="teamEmployeesSlider")
-			.swiper-wrapper
-				+employee-card({
-					classes: 'swiper-slide',
-					bgColor: "blue",
-					name: 'Муравьев Павел',
-					position: 'Руководитель представительства в&nbsp;Калининграде',
-					hasBtn: true
-				})
-				+employee-card({
-					classes: 'swiper-slide',
-					bgColor: "blue",
-					name: 'Соловьева Анастасия',
-					position: 'Руководитель склада в&nbsp;Москве'
-				})
-				+employee-card({
-					classes: 'swiper-slide',
-					bgColor: "blue",
-					name: 'Чугунов Владимир',
-					position: 'Руководитель отдела закупок',
-					hasBtn: true
-				})
-				+employee-card({
-					classes: 'swiper-slide',
-					bgColor: "blue",
-					name: 'Бочарова Наталья',
-					position: ' Руководитель отдела кадров',
-					hasBtn: true
-				})
-				+employee-card({
-					classes: 'swiper-slide',
-					bgColor: "blue",
-					name: 'Франц Эдвард',
-					position: 'Юрист',
-					hasBtn: true
-				})
+    .container
+        +title('h2', 'Наша команда', 'ap-team__title')
+    .ap-team__cards
+        .ap-team__column.ap-team__column--1.js-team__column--1(data-js="teamEmployeesSlider")
+            .swiper-wrapper
+                +employee-card({
+                    classes: 'swiper-slide',
+                })
+                +employee-card({
+                    classes: 'swiper-slide',
+                    name: 'Соловьев Владислав',
+                    position: 'Коммерческий директор',
+                    hasBtn: true,
+                    photo: 'img/solovyov_vladislav.jpg',
+                    contacts: [
+                        {
+                            type: 'phone',
+                            value: '+7 495 748 86 85, доб. 108',
+                            link: 'tel:74957488685',
+                            iconName: 'handset' 
+                        },
+                        {
+                            type: 'email',
+                            value: 'vlad@fishmarket.ru',
+                            link: 'mailto:vlad@fishmarket.ru',
+                            iconName: 'envelope'
+                        }
+                    ],
+                })
+                +employee-card({
+                    classes: 'swiper-slide',
+                    name: 'Косырева Наталья',
+                    position: 'Финансовый директор',
+                    hasBtn: true,
+                    contacts: [
+                        {
+                            type: 'phone',
+                            value: '+7 495 748 86 85, доб. 126',
+                            link: 'tel:74957488685',
+                            iconName: 'handset' 
+                        },
+                        {
+                            type: 'email',
+                            value: 'n.kosyreva@fishmarket.ru',
+                            link: 'mailto:n.kosyreva@fishmarket.ru',
+                            iconName: 'envelope'
+                        }
+                    ],				
+                })
+                +employee-card({
+                    classes: 'swiper-slide',
+                    name: 'Кашецкий Юрий',
+                    position: 'Руководитель отдела маркетинга',
+                    hasBtn: true,
+                    photo: 'img/kasheczkij_yurij.jpg',
+                    contacts: [
+                        {
+                            type: 'phone',
+                            value: '+7 495 748 86 85, доб. 164',
+                            link: 'tel:74957488685',
+                            iconName: 'handset' 
+                        },
+                        {
+                            type: 'email',
+                            value: 'kashetsky_y@fishmarket.ru',
+                            link: 'mailto:kashetsky_y@fishmarket.ru',
+                            iconName: 'envelope'
+                        }
+                    ],				
+                })
+        .ap-team__column.ap-team__column--2.js-team__column--2(data-js="teamEmployeesSlider")
+            .swiper-wrapper
+                +employee-card({
+                    classes: 'swiper-slide',
+                    bgColor: "white",
+                    name: 'Гришин Дмитрий',
+                    position: 'Руководитель отдела IT',
+                    hasBtn: true,
+                    photo: 'img/grishin_dmitrij.jpg',
+                    contacts: [
+                        {
+                            type: 'phone',
+                            value: '+7 495 748 86 85, доб. 158',
+                            link: 'tel:74957488685',
+                            iconName: 'handset' 
+                        },
+                        {
+                            type: 'email',
+                            value: 'dg@fishmarket.ru',
+                            link: 'mailto:dg@fishmarket.ru',
+                            iconName: 'envelope'
+                        }
+                    ],			
+                })
+                +employee-card({
+                    classes: 'swiper-slide',
+                    bgColor: "white",
+                    name: 'Лазин Петр',
+                    position: 'Руководитель отдела ВЭД',
+                    photo: 'img/lazin_pyotr.jpg',
+                    contacts: [
+                        {
+                            type: 'phone',
+                            value: '+7 495 748 86 85, доб. 136',
+                            link: 'tel:74957488685',
+                            iconName: 'handset' 
+                        },
+                        {
+                            type: 'email',
+                            value: 'lazin_p@fishmarket.ru',
+                            link: 'mailto:lazin_p@fishmarket.ru',
+                            iconName: 'envelope'
+                        }
+                    ],	
+                })
+                +employee-card({
+                    classes: 'swiper-slide',
+                    bgColor: "white",
+                    name: 'Алтухов Сергей',
+                    position: 'Директор производства',
+                    hasBtn: true,
+                    contacts: [
+                        {
+                            type: 'phone',
+                            value: '+7 495 748 86 85, доб. 206',
+                            link: 'tel:74957488685',
+                            iconName: 'handset' 
+                        },
+                        {
+                            type: 'email',
+                            value: 'altukhov_s@fishmarket.ru',
+                            link: 'mailto:altukhov_s@fishmarket.ru',
+                            iconName: 'envelope'
+                        }
+                    ],			
+                })
+                +employee-card({
+                    classes: 'swiper-slide',
+                    bgColor: "white",
+                    name: 'Лондарова Марина',
+                    position: 'Руководитель отдела доставки',
+                    hasBtn: true,
+                    contacts: [
+                        {
+                            type: 'phone',
+                            value: '+7 495 748 86 85, доб. 204',
+                            link: 'tel:74957488685',
+                            iconName: 'handset' 
+                        },
+                        {
+                            type: 'email',
+                            value: 'Skylogistic@fishmarket.ru',
+                            link: 'mailto:Skylogistic@fishmarket.ru',
+                            iconName: 'envelope'
+                        }
+                    ],			
+                })
+                +employee-card({
+                    classes: 'swiper-slide',
+                    bgColor: "white",
+                    name: 'Хохлов Дмитрий',
+                    position: 'Руководитель склада в&nbsp;Маланьино',
+                    hasBtn: true,	
+                    photo: 'img/xoxlov_dmitrij.jpg',
+                    contacts: [
+                        {
+                            type: 'phone',
+                            value: '+7 495 748 86 85, доб. 210',
+                            link: 'tel:74957488685',
+                            iconName: 'handset' 
+                        },
+                        {
+                            type: 'email',
+                            value: 'khokhlov_d@fishmarket.ru',
+                            link: 'khokhlov_d@fishmarket.ru',
+                            iconName: 'envelope'
+                        }
+                    ],				
+                })
+        .ap-team__column.ap-team__column--3.js-team__column--3(data-js="teamEmployeesSlider")
+            .swiper-wrapper
+                +employee-card({
+                    classes: 'swiper-slide',
+                    bgColor: "blue",
+                    name: 'Муравьев Павел',
+                    position: 'Руководитель представительства в&nbsp;Калининграде',
+                    hasBtn: true,
+                    contacts: [
+                        {
+                            type: 'phone',
+                            value: '+7 495 748 86 85, доб. 403',
+                            link: 'tel:74957488685',
+                            iconName: 'handset'
+                        },
+                        {
+                            type: 'email',
+                            value: 'muraviev_p@fishmarket.ru',
+                            link: 'mailto:muraviev_p@fishmarket.ru',
+                            iconName: 'envelope'
+                        }
+                    ],
+                })
+                +employee-card({
+                    classes: 'swiper-slide',
+                    bgColor: "blue",
+                    name: 'Соловьева Анастасия',
+                    position: 'Руководитель склада в&nbsp;Москве',
+                    contacts: [
+                        {
+                            type: 'email',
+                            value: 'larina_a@fishmarket.ru',
+                            link: 'mailto:larina_a@fishmarket.ru',
+                            iconName: 'envelope'
+                        }
+                    ],	
+                })
+                +employee-card({
+                    classes: 'swiper-slide',
+                    bgColor: "blue",
+                    name: 'Чугунов Владимир',
+                    position: 'Руководитель отдела закупок',
+                    hasBtn: true,
+                    photo: 'img/chugunov_vladimir.jpg',
+                    contacts: [
+                        {
+                            type: 'phone',
+                            value: '+7 495 748 86 85, доб. 163',
+                            link: 'tel:74957488685',
+                            iconName: 'handset'
+                        },
+                        {
+                            type: 'email',
+                            value: 'chugunov_v@fishmarket.ru',
+                            link: 'mailto:chugunov_v@fishmarket.ru',
+                            iconName: 'envelope'
+                        }
+                    ],	
+                })
+                +employee-card({
+                    classes: 'swiper-slide',
+                    bgColor: "blue",
+                    name: 'Бочарова Наталья',
+                    position: ' Руководитель отдела кадров',
+                    hasBtn: true,
+                    photo: 'img/bocharova_natalya.jpg',
+                    contacts: [
+                        {
+                            type: 'phone',
+                            value: '+7 495 748 86 85, доб. 701',
+                            link: 'tel:74957488685',
+                            iconName: 'handset' 
+                        },
+                        {
+                            type: 'email',
+                            value: 'hr@fishmarket.ru',
+                            link: 'mailto:hr@fishmarket.ru',
+                            iconName: 'envelope'
+                        }
+                    ],	
+                })
+                +employee-card({
+                    classes: 'swiper-slide',
+                    bgColor: "blue",
+                    name: 'Франц Эдвард',
+                    position: 'Юрисконсульт',
+                    hasBtn: true,
+                    contacts: [
+                        {
+                            type: 'phone',
+                            value: '+7 495 748 86 85, доб. 106',
+                            link: 'tel:74957488685',
+                            iconName: 'handset' 
+                        },
+                        {
+                            type: 'email',
+                            value: 'jurist@fishmarket.ru',
+                            link: 'mailto:jurist@fishmarket.ru',
+                            iconName: 'envelope'
+                        }
+                    ],
+                })
 

@@ -284,81 +284,104 @@
     <div class="mob-menu__section mob-menu__question__section js-pop-up__login-register">
       <div class="mob-menu--overlay js-pop-up__login-register--overlay"></div>
       <div class="mob-menu__question">
-        <div class="mob-menu__question__top"> 
-          <div class="mob-menu__question__top__close js-pop-up__login-register--close">
-            <svg>
-              <use xlink:href="img/sprites/sprite.svg#header_close"></use>
-            </svg>
-          </div>
+        <div class="mob-menu__question__top__close login-area__close js-pop-up__login-register--close">
+          <svg>
+            <use xlink:href="img/sprites/sprite.svg#header_close"></use>
+          </svg>
         </div>
         <div class="login-area">
           <div class="login-area__slider" data-js="loginAreaSlider">
+            <div class="login-area__controls">
+              <div class="login-area__control login-area__control--prev">Авторизация</div>
+              <div class="login-area__control login-area__control--next">Регистрация</div>
+            </div>
             <div class="swiper-wrapper"> 
-              <div class="swiper-slide">
-                <form class="contacts__form" action=""> 
-                  <div class="contacts__form__input-block">
-                    <input class="contacts__form__input js-mask-name text__13" type="text" name="">
-                    <div class="contacts__form__input-block__name">	Имя*</div>
-                    <div class="contacts__form__input-block__error">Некорректное имя</div>
-                  </div>
-                  <div class="contacts__form__input-block">
-                    <input class="contacts__form__input js-mask-phone" type="tel" name="">
-                    <div class="contacts__form__input-block__name">Телефон</div>
-                    <div class="contacts__form__input-block__error">Некорректный телефон</div>
-                  </div>
-                  <div class="contacts__form__input-block">
-                    <input class="contacts__form__input text__13" type="email" name="">
-                    <div class="contacts__form__input-block__name">Почта</div>
-                    <div class="contacts__form__input-block__error">Некорректная почта					</div>
-                  </div>
-                  <div class="contacts__form__input-block">
-                    <textarea class="contacts__form__input text__13" name=""></textarea>
-                    <div class="contacts__form__input-block__name">Комментарий / Сопроводительное письмо</div>
-                    <div class="contacts__form__input-block__error"></div>
-                  </div>
-                  <div class="contacts__form__input-block">
-                    <div class="input-file-row">
-                      <label class="input-file">
-                        <input type="file" name="file[]" multiple><span>Выберите файл</span>
-                      </label>
-                      <div class="input-file-list"> </div>
+              <div class="swiper-slide login-area__slide">
+                <form class="contacts__form" action="#">
+                  <div class="contacts__form__content">
+                    <div class="contacts__form__title">Авторизация</div>
+                    <div class="contacts__form__input-block">
+                      <input class="contacts__form__input text__13" type="email" name="">
+                      <div class="contacts__form__input-block__name">Логин</div>
+                      <div class="contacts__form__input-block__error">Некорректная почта</div>
+                    </div>
+                    <div class="contacts__form__input-block">
+                      <input class="contacts__form__input text__13" type="password" name="">
+                      <div class="contacts__form__input-block__name">Пароль</div>
+                      <div class="contacts__form__input-block__error">Некорректный пароль</div>
                     </div>
                   </div>
-                  <div class="contacts__form__personal-data contacts__form__input-block error"> 
-                    <div class="checkbox">
-                      <label>
-                        <input class="custom-checkbox" type="checkbox" name="personal-data" value="indigo">Согласие на обработку персональных данных
-                      </label>
+                  <button class="mob-menu__question__bottom" type="submit">
+                    <div class="mob-menu__question__bottom__text">Отправить</div>
+                    <div class="mob-menu__question__bottom__row">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
+                      </svg>
                     </div>
-                    <div class="contacts__form__input-block__error">обязательно нужно согласиться</div>
-                  </div>
+                  </button>
                 </form>
-                <div class="mob-menu__question__bottom">
-                  <div class="mob-menu__question__bottom__text">Отправить</div>
-                  <div class="mob-menu__question__bottom__row">
-                    <svg>
-                      <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
-                    </svg>
-                  </div>
-                </div>
               </div>
-              <div class="swiper-slide">
-                <form class="contacts__form" action=""> 
-                  <div class="contacts__form__input-block">
-                    <input class="contacts__form__input js-mask-name text__13" type="text" name="">
-                    <div class="contacts__form__input-block__name">	Имя*</div>
-                    <div class="contacts__form__input-block__error">Некорректное имя</div>
+              <div class="swiper-slide login-area__slide">
+                <form class="contacts__form registration-entity" action="#">
+                  <div class="contacts__form__content">
+                    <div class="contacts__form__title">Регистрация</div>
+                    <div class="contacts__form__input-block">
+                      <input class="contacts__form__input js-mask-name text__13" type="text" name="">
+                      <div class="contacts__form__input-block__name">	ИНН Организации</div>
+                      <div class="contacts__form__input-block__error">Некорректный ИНН</div>
+                    </div>
+                    <div class="contacts__form__input-block">
+                      <input class="contacts__form__input js-mask-name text__13" type="text" name="">
+                      <div class="contacts__form__input-block__name">	Фамилия контактного лица</div>
+                      <div class="contacts__form__input-block__error">Некорректная фамилия</div>
+                    </div>
+                    <div class="contacts__form__input-block">
+                      <input class="contacts__form__input js-mask-name text__13" type="text" name="">
+                      <div class="contacts__form__input-block__name">	Имя контактного лица</div>
+                      <div class="contacts__form__input-block__error">Некорректная имя</div>
+                    </div>
+                    <div class="contacts__form__input-block">
+                      <input class="contacts__form__input js-mask-name text__13" type="text" name="">
+                      <div class="contacts__form__input-block__name">	Отчество контактного лица</div>
+                      <div class="contacts__form__input-block__error">Некорректное отчество</div>
+                    </div>
+                    <div class="contacts__form__input-block">
+                      <input class="contacts__form__input js-mask-name text__13" type="text" name="">
+                      <div class="contacts__form__input-block__name">	Отчество контактного лица</div>
+                      <div class="contacts__form__input-block__error">Некорректное отчество</div>
+                    </div>
+                    <div class="contacts__form__input-block">                 
+                      <input class="contacts__form__input text__13" type="email" name="">
+                      <div class="contacts__form__input-block__name">Почта контактного лица</div>
+                      <div class="contacts__form__input-block__error">Некорректная почта</div>
+                    </div>
+                    <div class="contacts__form__input-block">
+                      <input class="contacts__form__input js-mask-phone" type="tel" name="">
+                      <div class="contacts__form__input-block__name">Телефон контактного лица</div>
+                      <div class="contacts__form__input-block__error">Некорректный телефон</div>
+                    </div>
+                    <div class="contacts__form__input-block">
+                      <input class="contacts__form__input text__13" type="password" name="">
+                      <div class="contacts__form__input-block__name">Пароль</div>
+                      <div class="contacts__form__input-block__error">Некорректный пароль</div>
+                    </div>
+                    <div class="contacts__form__input-block">
+                      <input class="contacts__form__input text__13" type="password" name="">
+                      <div class="contacts__form__input-block__name">Подтверждение пароля</div>
+                      <div class="contacts__form__input-block__error">Пароли не совпадают</div>
+                    </div>
                   </div>
-                  <div class="contacts__form__input-block">
-                    <input class="contacts__form__input js-mask-phone" type="tel" name="">
-                    <div class="contacts__form__input-block__name">Телефон</div>
-                    <div class="contacts__form__input-block__error">Некорректный телефон</div>
-                  </div>
-                  <div class="contacts__form__input-block">
-                    <input class="contacts__form__input text__13" type="email" name="">
-                    <div class="contacts__form__input-block__name">Почта</div>
-                    <div class="contacts__form__input-block__error">Некорректная почта					</div>
-                  </div>
+                  <button class="mob-menu__question__bottom" type="submit">
+                    <div class="mob-menu__question__bottom__text">Зарегистрироваться</div>
+                    <div class="mob-menu__question__bottom__row">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
+                      </svg>
+                    </div>
+                  </button>
+                </form>
+                <form class="contacts__form registration-individual" action="#">
+                  <div class="contacts__form__title">Регистрация</div>
                   <div class="contacts__form__input-block">
                     <textarea class="contacts__form__input text__13" name=""></textarea>
                     <div class="contacts__form__input-block__name">Комментарий / Сопроводительное письмо</div>
@@ -380,15 +403,15 @@
                     </div>
                     <div class="contacts__form__input-block__error">обязательно нужно согласиться</div>
                   </div>
-                </form>
-                <div class="mob-menu__question__bottom">
-                  <div class="mob-menu__question__bottom__text">Отправить</div>
-                  <div class="mob-menu__question__bottom__row">
-                    <svg>
-                      <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
-                    </svg>
+                  <div class="mob-menu__question__bottom">
+                    <div class="mob-menu__question__bottom__text">Зарегистрироваться</div>
+                    <div class="mob-menu__question__bottom__row">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
+                      </svg>
+                    </div>
                   </div>
-                </div>
+                </form>
               </div>
             </div>
           </div>
@@ -538,44 +561,52 @@
           <div class="team-employees__cards">
             <div class="team-employees__column team-employees__column--1 js-team-employees__column--1" data-js="teamEmployeesSlider">
               <div class="swiper-wrapper">
-                        <div class="employee-card team-employees__card swiper-slide">
+                        <div class="employee-card swiper-slide team-employees__card">
                           <div class="employee-card__name">Елецкий Андрей</div>
                           <div class="employee-card__position">Генеральный директор</div>
-                          <div class="employee-card__photo"><img src="img/employee_photo.jpg" alt="Елецкий Андрей"></div>
+                          <div class="employee-card__photo"><img src="img/francz_edvard.jpg" alt="Елецкий Андрей"></div>
                           <div class="employee-card__flexblock"> 
-                            <div class="employee-card__contacts"> <a class="employee-card__phone contact" href="tel:74922441111">
-                                <div class="contact__icon">
-                                  <svg>
-                                    <use xlink:href="img/sprites/sprite.svg#envelope"></use>
-                                  </svg>
-                                </div>
-                                <div class="contact__text">+7 (4922) 44-11-11</div></a><a class="employee-card__email contact" href="mailto:log@skyfish.ru">
+                            <div class="employee-card__contacts"><a class="contact employee-card__phone" href="tel:74957488685">
                                 <div class="contact__icon">
                                   <svg>
                                     <use xlink:href="img/sprites/sprite.svg#handset"></use>
                                   </svg>
                                 </div>
-                                <div class="contact__text">log@skyfish.ru</div></a></div>
+                                <div class="contact__text">+7 495 748 86 85</div></a><a class="contact employee-card__email" href="mailto:ae@fishmarket.ru">
+                                <div class="contact__icon">
+                                  <svg>
+                                    <use xlink:href="img/sprites/sprite.svg#envelope"></use>
+                                  </svg>
+                                </div>
+                                <div class="contact__text">ae@fishmarket.ru</div></a><a class="contact employee-card__email" href="mailto:info@fishmarket.ru">
+                                <div class="contact__icon">
+                                  <svg>
+                                    <use xlink:href="img/sprites/sprite.svg#envelope"></use>
+                                  </svg>
+                                </div>
+                                <div class="contact__text">info@fishmarket.ru</div></a>
+                            </div>
                           </div>
                         </div>
-                        <div class="employee-card team-employees__card swiper-slide">
+                        <div class="employee-card swiper-slide team-employees__card">
                           <div class="employee-card__name">Соловьев Владислав</div>
                           <div class="employee-card__position">Коммерческий директор</div>
-                          <div class="employee-card__photo"><img src="img/employee_photo.jpg" alt="Соловьев Владислав"></div>
+                          <div class="employee-card__photo"><img src="img/solovyov_vladislav.jpg" alt="Соловьев Владислав"></div>
                           <div class="employee-card__flexblock"> 
-                            <div class="employee-card__contacts"> <a class="employee-card__phone contact" href="tel:74922441111">
-                                <div class="contact__icon">
-                                  <svg>
-                                    <use xlink:href="img/sprites/sprite.svg#envelope"></use>
-                                  </svg>
-                                </div>
-                                <div class="contact__text">+7 (4922) 44-11-11</div></a><a class="employee-card__email contact" href="mailto:log@skyfish.ru">
+                            <div class="employee-card__contacts"><a class="contact employee-card__phone" href="tel:74957488685">
                                 <div class="contact__icon">
                                   <svg>
                                     <use xlink:href="img/sprites/sprite.svg#handset"></use>
                                   </svg>
                                 </div>
-                                <div class="contact__text">log@skyfish.ru</div></a></div>
+                                <div class="contact__text">+7 495 748 86 85, доб. 108</div></a><a class="contact employee-card__email" href="mailto:vlad@fishmarket.ru">
+                                <div class="contact__icon">
+                                  <svg>
+                                    <use xlink:href="img/sprites/sprite.svg#envelope"></use>
+                                  </svg>
+                                </div>
+                                <div class="contact__text">vlad@fishmarket.ru</div></a>
+                            </div>
                                   <button class="new-btn new-btn--icon new-btn--blue employee-card__btn" type="button" data-modal="teamCardModal"><span class="new-btn__icon">
                                       <svg>
                                         <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
@@ -583,24 +614,25 @@
                                   </button>
                           </div>
                         </div>
-                        <div class="employee-card team-employees__card swiper-slide">
+                        <div class="employee-card swiper-slide team-employees__card">
                           <div class="employee-card__name">Косырева Наталья</div>
                           <div class="employee-card__position">Финансовый директор</div>
-                          <div class="employee-card__photo"><img src="img/employee_photo.jpg" alt="Косырева Наталья"></div>
+                          <div class="employee-card__photo"><img src="img/francz_edvard.jpg" alt="Косырева Наталья"></div>
                           <div class="employee-card__flexblock"> 
-                            <div class="employee-card__contacts"> <a class="employee-card__phone contact" href="tel:74922441111">
-                                <div class="contact__icon">
-                                  <svg>
-                                    <use xlink:href="img/sprites/sprite.svg#envelope"></use>
-                                  </svg>
-                                </div>
-                                <div class="contact__text">+7 (4922) 44-11-11</div></a><a class="employee-card__email contact" href="mailto:log@skyfish.ru">
+                            <div class="employee-card__contacts"><a class="contact employee-card__phone" href="tel:74957488685">
                                 <div class="contact__icon">
                                   <svg>
                                     <use xlink:href="img/sprites/sprite.svg#handset"></use>
                                   </svg>
                                 </div>
-                                <div class="contact__text">log@skyfish.ru</div></a></div>
+                                <div class="contact__text">+7 495 748 86 85, доб. 126</div></a><a class="contact employee-card__email" href="mailto:n.kosyreva@fishmarket.ru">
+                                <div class="contact__icon">
+                                  <svg>
+                                    <use xlink:href="img/sprites/sprite.svg#envelope"></use>
+                                  </svg>
+                                </div>
+                                <div class="contact__text">n.kosyreva@fishmarket.ru</div></a>
+                            </div>
                                   <button class="new-btn new-btn--icon new-btn--blue employee-card__btn" type="button" data-modal="teamCardModal"><span class="new-btn__icon">
                                       <svg>
                                         <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
@@ -608,24 +640,25 @@
                                   </button>
                           </div>
                         </div>
-                        <div class="employee-card team-employees__card swiper-slide">
+                        <div class="employee-card swiper-slide team-employees__card">
                           <div class="employee-card__name">Кашецкий Юрий</div>
                           <div class="employee-card__position">Руководитель отдела маркетинга</div>
-                          <div class="employee-card__photo"><img src="img/employee_photo.jpg" alt="Кашецкий Юрий"></div>
+                          <div class="employee-card__photo"><img src="img/kasheczkij_yurij.jpg" alt="Кашецкий Юрий"></div>
                           <div class="employee-card__flexblock"> 
-                            <div class="employee-card__contacts"> <a class="employee-card__phone contact" href="tel:74922441111">
-                                <div class="contact__icon">
-                                  <svg>
-                                    <use xlink:href="img/sprites/sprite.svg#envelope"></use>
-                                  </svg>
-                                </div>
-                                <div class="contact__text">+7 (4922) 44-11-11</div></a><a class="employee-card__email contact" href="mailto:log@skyfish.ru">
+                            <div class="employee-card__contacts"><a class="contact employee-card__phone" href="tel:74957488685">
                                 <div class="contact__icon">
                                   <svg>
                                     <use xlink:href="img/sprites/sprite.svg#handset"></use>
                                   </svg>
                                 </div>
-                                <div class="contact__text">log@skyfish.ru</div></a></div>
+                                <div class="contact__text">+7 495 748 86 85, доб. 164</div></a><a class="contact employee-card__email" href="mailto:kashetsky_y@fishmarket.ru">
+                                <div class="contact__icon">
+                                  <svg>
+                                    <use xlink:href="img/sprites/sprite.svg#envelope"></use>
+                                  </svg>
+                                </div>
+                                <div class="contact__text">kashetsky_y@fishmarket.ru</div></a>
+                            </div>
                                   <button class="new-btn new-btn--icon new-btn--blue employee-card__btn" type="button" data-modal="teamCardModal"><span class="new-btn__icon">
                                       <svg>
                                         <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
@@ -637,24 +670,25 @@
             </div>
             <div class="team-employees__column team-employees__column--2 js-team-employees__column--2" data-js="teamEmployeesSlider">
               <div class="swiper-wrapper">
-                        <div class="employee-card team-employees__card swiper-slide">
+                        <div class="employee-card swiper-slide team-employees__card">
                           <div class="employee-card__name">Гришин Дмитрий</div>
                           <div class="employee-card__position">Руководитель отдела IT</div>
-                          <div class="employee-card__photo"><img src="img/employee_photo.jpg" alt="Гришин Дмитрий"></div>
+                          <div class="employee-card__photo"><img src="img/grishin_dmitrij.jpg" alt="Гришин Дмитрий"></div>
                           <div class="employee-card__flexblock"> 
-                            <div class="employee-card__contacts"> <a class="employee-card__phone contact" href="tel:74922441111">
-                                <div class="contact__icon">
-                                  <svg>
-                                    <use xlink:href="img/sprites/sprite.svg#envelope"></use>
-                                  </svg>
-                                </div>
-                                <div class="contact__text">+7 (4922) 44-11-11</div></a><a class="employee-card__email contact" href="mailto:log@skyfish.ru">
+                            <div class="employee-card__contacts"><a class="contact employee-card__phone" href="tel:74957488685">
                                 <div class="contact__icon">
                                   <svg>
                                     <use xlink:href="img/sprites/sprite.svg#handset"></use>
                                   </svg>
                                 </div>
-                                <div class="contact__text">log@skyfish.ru</div></a></div>
+                                <div class="contact__text">+7 495 748 86 85, доб. 158</div></a><a class="contact employee-card__email" href="mailto:dg@fishmarket.ru">
+                                <div class="contact__icon">
+                                  <svg>
+                                    <use xlink:href="img/sprites/sprite.svg#envelope"></use>
+                                  </svg>
+                                </div>
+                                <div class="contact__text">dg@fishmarket.ru</div></a>
+                            </div>
                                   <button class="new-btn new-btn--icon new-btn--blue employee-card__btn" type="button" data-modal="teamCardModal"><span class="new-btn__icon">
                                       <svg>
                                         <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
@@ -662,44 +696,46 @@
                                   </button>
                           </div>
                         </div>
-                        <div class="employee-card team-employees__card swiper-slide">
+                        <div class="employee-card swiper-slide team-employees__card">
                           <div class="employee-card__name">Лазин Петр</div>
                           <div class="employee-card__position">Руководитель отдела ВЭД</div>
-                          <div class="employee-card__photo"><img src="img/employee_photo.jpg" alt="Лазин Петр"></div>
+                          <div class="employee-card__photo"><img src="img/lazin_pyotr.jpg" alt="Лазин Петр"></div>
                           <div class="employee-card__flexblock"> 
-                            <div class="employee-card__contacts"> <a class="employee-card__phone contact" href="tel:74922441111">
-                                <div class="contact__icon">
-                                  <svg>
-                                    <use xlink:href="img/sprites/sprite.svg#envelope"></use>
-                                  </svg>
-                                </div>
-                                <div class="contact__text">+7 (4922) 44-11-11</div></a><a class="employee-card__email contact" href="mailto:log@skyfish.ru">
+                            <div class="employee-card__contacts"><a class="contact employee-card__phone" href="tel:74957488685">
                                 <div class="contact__icon">
                                   <svg>
                                     <use xlink:href="img/sprites/sprite.svg#handset"></use>
                                   </svg>
                                 </div>
-                                <div class="contact__text">log@skyfish.ru</div></a></div>
+                                <div class="contact__text">+7 495 748 86 85, доб. 136</div></a><a class="contact employee-card__email" href="mailto:lazin_p@fishmarket.ru">
+                                <div class="contact__icon">
+                                  <svg>
+                                    <use xlink:href="img/sprites/sprite.svg#envelope"></use>
+                                  </svg>
+                                </div>
+                                <div class="contact__text">lazin_p@fishmarket.ru</div></a>
+                            </div>
                           </div>
                         </div>
-                        <div class="employee-card team-employees__card swiper-slide">
+                        <div class="employee-card swiper-slide team-employees__card">
                           <div class="employee-card__name">Алтухов Сергей</div>
                           <div class="employee-card__position">Директор производства</div>
-                          <div class="employee-card__photo"><img src="img/employee_photo.jpg" alt="Алтухов Сергей"></div>
+                          <div class="employee-card__photo"><img src="img/francz_edvard.jpg" alt="Алтухов Сергей"></div>
                           <div class="employee-card__flexblock"> 
-                            <div class="employee-card__contacts"> <a class="employee-card__phone contact" href="tel:74922441111">
-                                <div class="contact__icon">
-                                  <svg>
-                                    <use xlink:href="img/sprites/sprite.svg#envelope"></use>
-                                  </svg>
-                                </div>
-                                <div class="contact__text">+7 (4922) 44-11-11</div></a><a class="employee-card__email contact" href="mailto:log@skyfish.ru">
+                            <div class="employee-card__contacts"><a class="contact employee-card__phone" href="tel:74957488685">
                                 <div class="contact__icon">
                                   <svg>
                                     <use xlink:href="img/sprites/sprite.svg#handset"></use>
                                   </svg>
                                 </div>
-                                <div class="contact__text">log@skyfish.ru</div></a></div>
+                                <div class="contact__text">+7 495 748 86 85, доб. 206</div></a><a class="contact employee-card__email" href="mailto:altukhov_s@fishmarket.ru">
+                                <div class="contact__icon">
+                                  <svg>
+                                    <use xlink:href="img/sprites/sprite.svg#envelope"></use>
+                                  </svg>
+                                </div>
+                                <div class="contact__text">altukhov_s@fishmarket.ru</div></a>
+                            </div>
                                   <button class="new-btn new-btn--icon new-btn--blue employee-card__btn" type="button" data-modal="teamCardModal"><span class="new-btn__icon">
                                       <svg>
                                         <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
@@ -707,24 +743,25 @@
                                   </button>
                           </div>
                         </div>
-                        <div class="employee-card team-employees__card swiper-slide">
+                        <div class="employee-card swiper-slide team-employees__card">
                           <div class="employee-card__name">Лондарова Марина</div>
                           <div class="employee-card__position">Руководитель отдела доставки</div>
-                          <div class="employee-card__photo"><img src="img/employee_photo.jpg" alt="Лондарова Марина"></div>
+                          <div class="employee-card__photo"><img src="img/francz_edvard.jpg" alt="Лондарова Марина"></div>
                           <div class="employee-card__flexblock"> 
-                            <div class="employee-card__contacts"> <a class="employee-card__phone contact" href="tel:74922441111">
-                                <div class="contact__icon">
-                                  <svg>
-                                    <use xlink:href="img/sprites/sprite.svg#envelope"></use>
-                                  </svg>
-                                </div>
-                                <div class="contact__text">+7 (4922) 44-11-11</div></a><a class="employee-card__email contact" href="mailto:log@skyfish.ru">
+                            <div class="employee-card__contacts"><a class="contact employee-card__phone" href="tel:74957488685">
                                 <div class="contact__icon">
                                   <svg>
                                     <use xlink:href="img/sprites/sprite.svg#handset"></use>
                                   </svg>
                                 </div>
-                                <div class="contact__text">log@skyfish.ru</div></a></div>
+                                <div class="contact__text">+7 495 748 86 85, доб. 204</div></a><a class="contact employee-card__email" href="mailto:Skylogistic@fishmarket.ru">
+                                <div class="contact__icon">
+                                  <svg>
+                                    <use xlink:href="img/sprites/sprite.svg#envelope"></use>
+                                  </svg>
+                                </div>
+                                <div class="contact__text">Skylogistic@fishmarket.ru</div></a>
+                            </div>
                                   <button class="new-btn new-btn--icon new-btn--blue employee-card__btn" type="button" data-modal="teamCardModal"><span class="new-btn__icon">
                                       <svg>
                                         <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
@@ -732,24 +769,25 @@
                                   </button>
                           </div>
                         </div>
-                        <div class="employee-card team-employees__card swiper-slide">
+                        <div class="employee-card swiper-slide team-employees__card">
                           <div class="employee-card__name">Хохлов Дмитрий</div>
-                          <div class="employee-card__position">Руководитель склада в Маланьино</div>
-                          <div class="employee-card__photo"><img src="img/employee_photo.jpg" alt="Хохлов Дмитрий"></div>
+                          <div class="employee-card__position">Руководитель склада в&nbsp;Маланьино</div>
+                          <div class="employee-card__photo"><img src="img/xoxlov_dmitrij.jpg" alt="Хохлов Дмитрий"></div>
                           <div class="employee-card__flexblock"> 
-                            <div class="employee-card__contacts"> <a class="employee-card__phone contact" href="tel:74922441111">
-                                <div class="contact__icon">
-                                  <svg>
-                                    <use xlink:href="img/sprites/sprite.svg#envelope"></use>
-                                  </svg>
-                                </div>
-                                <div class="contact__text">+7 (4922) 44-11-11</div></a><a class="employee-card__email contact" href="mailto:log@skyfish.ru">
+                            <div class="employee-card__contacts"><a class="contact employee-card__phone" href="tel:74957488685">
                                 <div class="contact__icon">
                                   <svg>
                                     <use xlink:href="img/sprites/sprite.svg#handset"></use>
                                   </svg>
                                 </div>
-                                <div class="contact__text">log@skyfish.ru</div></a></div>
+                                <div class="contact__text">+7 495 748 86 85, доб. 210</div></a><a class="contact employee-card__email" href="khokhlov_d@fishmarket.ru">
+                                <div class="contact__icon">
+                                  <svg>
+                                    <use xlink:href="img/sprites/sprite.svg#envelope"></use>
+                                  </svg>
+                                </div>
+                                <div class="contact__text">khokhlov_d@fishmarket.ru</div></a>
+                            </div>
                                   <button class="new-btn new-btn--icon new-btn--blue employee-card__btn" type="button" data-modal="teamCardModal"><span class="new-btn__icon">
                                       <svg>
                                         <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
@@ -761,24 +799,25 @@
             </div>
             <div class="team-employees__column team-employees__column--3 js-team-employees__column--3" data-js="teamEmployeesSlider">
               <div class="swiper-wrapper">
-                        <div class="employee-card team-employees__card swiper-slide">
+                        <div class="employee-card swiper-slide team-employees__card">
                           <div class="employee-card__name">Муравьев Павел</div>
-                          <div class="employee-card__position">Руководитель представительства в Калининграде</div>
-                          <div class="employee-card__photo"><img src="img/employee_photo.jpg" alt="Муравьев Павел"></div>
+                          <div class="employee-card__position">Руководитель представительства в&nbsp;Калининграде</div>
+                          <div class="employee-card__photo"><img src="img/francz_edvard.jpg" alt="Муравьев Павел"></div>
                           <div class="employee-card__flexblock"> 
-                            <div class="employee-card__contacts"> <a class="employee-card__phone contact" href="tel:74922441111">
-                                <div class="contact__icon">
-                                  <svg>
-                                    <use xlink:href="img/sprites/sprite.svg#envelope"></use>
-                                  </svg>
-                                </div>
-                                <div class="contact__text">+7 (4922) 44-11-11</div></a><a class="employee-card__email contact" href="mailto:log@skyfish.ru">
+                            <div class="employee-card__contacts"><a class="contact employee-card__phone" href="tel:74957488685">
                                 <div class="contact__icon">
                                   <svg>
                                     <use xlink:href="img/sprites/sprite.svg#handset"></use>
                                   </svg>
                                 </div>
-                                <div class="contact__text">log@skyfish.ru</div></a></div>
+                                <div class="contact__text">+7 495 748 86 85, доб. 403</div></a><a class="contact employee-card__email" href="mailto:muraviev_p@fishmarket.ru">
+                                <div class="contact__icon">
+                                  <svg>
+                                    <use xlink:href="img/sprites/sprite.svg#envelope"></use>
+                                  </svg>
+                                </div>
+                                <div class="contact__text">muraviev_p@fishmarket.ru</div></a>
+                            </div>
                                   <button class="new-btn new-btn--icon new-btn--blue employee-card__btn" type="button" data-modal="teamCardModal"><span class="new-btn__icon">
                                       <svg>
                                         <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
@@ -786,44 +825,40 @@
                                   </button>
                           </div>
                         </div>
-                        <div class="employee-card team-employees__card swiper-slide">
+                        <div class="employee-card swiper-slide team-employees__card">
                           <div class="employee-card__name">Соловьева Анастасия</div>
-                          <div class="employee-card__position">Руководитель склада в Москве</div>
-                          <div class="employee-card__photo"><img src="img/employee_photo.jpg" alt="Соловьева Анастасия"></div>
+                          <div class="employee-card__position">Руководитель склада в&nbsp;Москве</div>
+                          <div class="employee-card__photo"><img src="img/francz_edvard.jpg" alt="Соловьева Анастасия"></div>
                           <div class="employee-card__flexblock"> 
-                            <div class="employee-card__contacts"> <a class="employee-card__phone contact" href="tel:74922441111">
+                            <div class="employee-card__contacts"><a class="contact employee-card__email" href="mailto:larina_a@fishmarket.ru">
                                 <div class="contact__icon">
                                   <svg>
                                     <use xlink:href="img/sprites/sprite.svg#envelope"></use>
                                   </svg>
                                 </div>
-                                <div class="contact__text">+7 (4922) 44-11-11</div></a><a class="employee-card__email contact" href="mailto:log@skyfish.ru">
-                                <div class="contact__icon">
-                                  <svg>
-                                    <use xlink:href="img/sprites/sprite.svg#handset"></use>
-                                  </svg>
-                                </div>
-                                <div class="contact__text">log@skyfish.ru</div></a></div>
+                                <div class="contact__text">larina_a@fishmarket.ru</div></a>
+                            </div>
                           </div>
                         </div>
-                        <div class="employee-card team-employees__card swiper-slide">
+                        <div class="employee-card swiper-slide team-employees__card">
                           <div class="employee-card__name">Чугунов Владимир</div>
                           <div class="employee-card__position">Руководитель отдела закупок</div>
-                          <div class="employee-card__photo"><img src="img/employee_photo.jpg" alt="Чугунов Владимир"></div>
+                          <div class="employee-card__photo"><img src="img/chugunov_vladimir.jpg" alt="Чугунов Владимир"></div>
                           <div class="employee-card__flexblock"> 
-                            <div class="employee-card__contacts"> <a class="employee-card__phone contact" href="tel:74922441111">
-                                <div class="contact__icon">
-                                  <svg>
-                                    <use xlink:href="img/sprites/sprite.svg#envelope"></use>
-                                  </svg>
-                                </div>
-                                <div class="contact__text">+7 (4922) 44-11-11</div></a><a class="employee-card__email contact" href="mailto:log@skyfish.ru">
+                            <div class="employee-card__contacts"><a class="contact employee-card__phone" href="tel:74957488685">
                                 <div class="contact__icon">
                                   <svg>
                                     <use xlink:href="img/sprites/sprite.svg#handset"></use>
                                   </svg>
                                 </div>
-                                <div class="contact__text">log@skyfish.ru</div></a></div>
+                                <div class="contact__text">+7 495 748 86 85, доб. 163</div></a><a class="contact employee-card__email" href="mailto:chugunov_v@fishmarket.ru">
+                                <div class="contact__icon">
+                                  <svg>
+                                    <use xlink:href="img/sprites/sprite.svg#envelope"></use>
+                                  </svg>
+                                </div>
+                                <div class="contact__text">chugunov_v@fishmarket.ru</div></a>
+                            </div>
                                   <button class="new-btn new-btn--icon new-btn--blue employee-card__btn" type="button" data-modal="teamCardModal"><span class="new-btn__icon">
                                       <svg>
                                         <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
@@ -831,24 +866,25 @@
                                   </button>
                           </div>
                         </div>
-                        <div class="employee-card team-employees__card swiper-slide">
+                        <div class="employee-card swiper-slide team-employees__card">
                           <div class="employee-card__name">Бочарова Наталья</div>
                           <div class="employee-card__position"> Руководитель отдела кадров</div>
-                          <div class="employee-card__photo"><img src="img/employee_photo.jpg" alt="Бочарова Наталья"></div>
+                          <div class="employee-card__photo"><img src="img/bocharova_natalya.jpg" alt="Бочарова Наталья"></div>
                           <div class="employee-card__flexblock"> 
-                            <div class="employee-card__contacts"> <a class="employee-card__phone contact" href="tel:74922441111">
-                                <div class="contact__icon">
-                                  <svg>
-                                    <use xlink:href="img/sprites/sprite.svg#envelope"></use>
-                                  </svg>
-                                </div>
-                                <div class="contact__text">+7 (4922) 44-11-11</div></a><a class="employee-card__email contact" href="mailto:log@skyfish.ru">
+                            <div class="employee-card__contacts"><a class="contact employee-card__phone" href="tel:74957488685">
                                 <div class="contact__icon">
                                   <svg>
                                     <use xlink:href="img/sprites/sprite.svg#handset"></use>
                                   </svg>
                                 </div>
-                                <div class="contact__text">log@skyfish.ru</div></a></div>
+                                <div class="contact__text">+7 495 748 86 85, доб. 701</div></a><a class="contact employee-card__email" href="mailto:hr@fishmarket.ru">
+                                <div class="contact__icon">
+                                  <svg>
+                                    <use xlink:href="img/sprites/sprite.svg#envelope"></use>
+                                  </svg>
+                                </div>
+                                <div class="contact__text">hr@fishmarket.ru</div></a>
+                            </div>
                                   <button class="new-btn new-btn--icon new-btn--blue employee-card__btn" type="button" data-modal="teamCardModal"><span class="new-btn__icon">
                                       <svg>
                                         <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
@@ -856,24 +892,25 @@
                                   </button>
                           </div>
                         </div>
-                        <div class="employee-card team-employees__card swiper-slide">
+                        <div class="employee-card swiper-slide team-employees__card">
                           <div class="employee-card__name">Франц Эдвард</div>
-                          <div class="employee-card__position">Юрист</div>
-                          <div class="employee-card__photo"><img src="img/employee_photo.jpg" alt="Франц Эдвард"></div>
+                          <div class="employee-card__position">Юрисконсульт</div>
+                          <div class="employee-card__photo"><img src="img/francz_edvard.jpg" alt="Франц Эдвард"></div>
                           <div class="employee-card__flexblock"> 
-                            <div class="employee-card__contacts"> <a class="employee-card__phone contact" href="tel:74922441111">
-                                <div class="contact__icon">
-                                  <svg>
-                                    <use xlink:href="img/sprites/sprite.svg#envelope"></use>
-                                  </svg>
-                                </div>
-                                <div class="contact__text">+7 (4922) 44-11-11</div></a><a class="employee-card__email contact" href="mailto:log@skyfish.ru">
+                            <div class="employee-card__contacts"><a class="contact employee-card__phone" href="tel:74957488685">
                                 <div class="contact__icon">
                                   <svg>
                                     <use xlink:href="img/sprites/sprite.svg#handset"></use>
                                   </svg>
                                 </div>
-                                <div class="contact__text">log@skyfish.ru</div></a></div>
+                                <div class="contact__text">+7 495 748 86 85, доб. 106</div></a><a class="contact employee-card__email" href="mailto:jurist@fishmarket.ru">
+                                <div class="contact__icon">
+                                  <svg>
+                                    <use xlink:href="img/sprites/sprite.svg#envelope"></use>
+                                  </svg>
+                                </div>
+                                <div class="contact__text">jurist@fishmarket.ru</div></a>
+                            </div>
                                   <button class="new-btn new-btn--icon new-btn--blue employee-card__btn" type="button" data-modal="teamCardModal"><span class="new-btn__icon">
                                       <svg>
                                         <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
