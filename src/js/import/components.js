@@ -14,6 +14,16 @@ document.addEventListener("DOMContentLoaded", () => {
     //modals
     lModal("cartOffer")
     lModal("historyModal")
-    lModal("teamCardModal")
     lModal("callbackModal")
+
+    lModal("teamCardModalSolovyovVladislav")
+    lModal("teamCardModalKosirevaNat")
+    lModal("teamCardModalKasheczkijYurij")
+    lModal("teamCardModalGrishinDmitrij")
+    lModal("teamCardModalAltuxovSergey")
+    lModal("teamCardModalLondarovaMarina")
+    lModal("teamCardModalXoxlovDmitrij")
+    lModal("teamCardModalMuravyovPavel")
+    lModal("teamCardModalChugunovVladimir")
+    lModal("teamCardModalBocharovaNatalya")
 })

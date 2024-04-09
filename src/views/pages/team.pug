@@ -10,6 +10,7 @@ block content
     include ../../blocks/modules/l-intro/l-intro.pug
     include ../../blocks/modules/l-call-action/l-call-action.pug
     include ../../blocks/modules/l-vacancies/l-vacancies.pug
+    include ../../blocks/modules/pages/about/team-modal/ap-team-modal.pug
 
     .scroll-page(data-animation="teampage")
         +l-intro({
@@ -40,7 +41,58 @@ block content
         })
         +l-vacancies()
 
-        include ../../blocks/modules/pages/about/team-modal/ap-team-modal
+        //-modals
+        +teamModal({
+            name: 'Соловьев Владислав',
+            id: 'SolovyovVladislav',
+            photo: 'img/solovyov_vladislav.jpg',
+        })
+        +teamModal({
+            name: 'Косырева Наталья',
+            id: 'KosirevaNat',
+            photo: 'img/kosireva_nat.jpg',
+        })
+        +teamModal({
+            name: 'Кашецкий Юрий',
+            id: 'KasheczkijYurij',
+            photo: 'img/kasheczkij_yurij.jpg',
+        })
+        +teamModal({
+            name: 'Гришин Дмитрий',
+            id: 'GrishinDmitrij',
+            photo: 'img/grishin_dmitrij.jpg',
+        })
+        +teamModal({
+            name: 'Алтухов Сергей',
+            id: 'AltuxovSergey',
+            photo: 'img/francz_edvard.jpg',
+        })
+        +teamModal({
+            name: 'Лондарова Марина',
+            id: 'LondarovaMarina',
+            photo: 'img/francz_edvard.jpg',
+        })
+        +teamModal({
+            name: 'Хохлов Дмитрий',
+            id: 'XoxlovDmitrij',	
+            photo: 'img/xoxlov_dmitrij.jpg',
+        })
+        +teamModal({
+            name: 'Муравьев Павел',
+            id: 'MuravyovPavel',
+            photo: 'img/francz_edvard.jpg',
+        })
+        +teamModal({
+            name: 'Чугунов Владимир',
+            id: 'ChugunovVladimir',
+            photo: 'img/chugunov_vladimir.jpg',
+        })
+        +teamModal({
+            name: 'Бочарова Наталья',
+            id: 'BocharovaNatalya',
+            photo: 'img/bocharova_natalya.jpg',
+        })
+
 
         include ../../blocks/modules/footer/footer
 

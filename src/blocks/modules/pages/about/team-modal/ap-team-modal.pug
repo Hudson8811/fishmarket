@@ -1,10 +1,25 @@
 
-include ../../../../components/l-modal/l-modal
+-
+    const defaultTeamModalProps = {
+        id: '',
+        photo: "img/employee_photo.jpg",
+        name: '',
+    }
 
-+l-modal("teamCardModal", "ap-team-modal")
-    .ap-team-modal__photo
-        img(src="img/employee_photo.jpg" alt="employee")
-    .ap-team-modal__title История о&nbsp;том, как попал на&nbsp;работу в&nbsp;SkyFish
-    .ap-team-modal__text 
-        p Иван был обычным парнем, который жил в&nbsp;небольшом городке и&nbsp;мечтал о&nbsp;карьере в крупной компании. Он всегда был любознательным и&nbsp;любил решать сложные задачи, поэтому решил попробовать свои силы в&nbsp;сфере логистики.
-        p Однажды он услышал о&nbsp;вакансии логиста в&nbsp;одной из крупнейших компаний страны. Иван решил отправить свое резюме и&nbsp;вскоре получил приглашение на&nbsp;собеседование.
+mixin teamModal(props = defaultTeamModalProps)
+    include ../../../../components/l-modal/l-modal
+
+    -
+        const checkProps = {
+            id: props.id ? props.id : defaultTeamModalProps.id,
+            photo: props.photo ? props.photo : defaultTeamModalProps.photo,
+            name: props.name ? props.name : defaultTeamModalProps.name,            
+        };
+
+    +l-modal(`teamCardModal${checkProps.id}`, "ap-team-modal")
+        .ap-team-modal__photo
+            img(src=checkProps.photo alt=checkProps.name)
+        .ap-team-modal__title История о&nbsp;том, как попал на&nbsp;работу в&nbsp;SkyFish
+        .ap-team-modal__text 
+            p Иван был обычным парнем, который жил в&nbsp;небольшом городке и&nbsp;мечтал о&nbsp;карьере в крупной компании. Он всегда был любознательным и&nbsp;любил решать сложные задачи, поэтому решил попробовать свои силы в&nbsp;сфере логистики.
+            p Однажды он услышал о&nbsp;вакансии логиста в&nbsp;одной из крупнейших компаний страны. Иван решил отправить свое резюме и&nbsp;вскоре получил приглашение на&nbsp;собеседование.

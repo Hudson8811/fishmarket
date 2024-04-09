@@ -8,8 +8,8 @@ block content
     include ../../blocks/modules/pages/about/about-divided/about-divided
     include ../../blocks/components/new-btn/new-btn.pug
     include ../../blocks/components/input/input.pug
+    include ../../blocks/modules/pages/about/team-modal/ap-team-modal.pug
 
-    //-(data-animation="aboutpage") подключает анимацию, если добавить к scroll page
     .scroll-page(data-animation="aboutpage")
         include ../../blocks/modules/pages/about/about-intro/about-intro
         include ../../blocks/modules/pages/about/about-history/about-history
@@ -73,6 +73,55 @@ block content
         include ../../blocks/modules/footer/footer
 
     //-modals
+    +teamModal({
+        name: 'Соловьев Владислав',
+        id: 'SolovyovVladislav',
+        photo: 'img/solovyov_vladislav.jpg',
+    })
+    +teamModal({
+        name: 'Косырева Наталья',
+        id: 'KosirevaNat',
+        photo: 'img/kosireva_nat.jpg',
+    })
+    +teamModal({
+        name: 'Кашецкий Юрий',
+        id: 'KasheczkijYurij',
+        photo: 'img/kasheczkij_yurij.jpg',
+    })
+    +teamModal({
+        name: 'Гришин Дмитрий',
+        id: 'GrishinDmitrij',
+        photo: 'img/grishin_dmitrij.jpg',
+    })
+    +teamModal({
+        name: 'Алтухов Сергей',
+        id: 'AltuxovSergey',
+        photo: 'img/francz_edvard.jpg',
+    })
+    +teamModal({
+        name: 'Лондарова Марина',
+        id: 'LondarovaMarina',
+        photo: 'img/francz_edvard.jpg',
+    })
+    +teamModal({
+        name: 'Хохлов Дмитрий',
+        id: 'XoxlovDmitrij',	
+        photo: 'img/xoxlov_dmitrij.jpg',
+    })
+    +teamModal({
+        name: 'Муравьев Павел',
+        id: 'MuravyovPavel',
+        photo: 'img/francz_edvard.jpg',
+    })
+    +teamModal({
+        name: 'Чугунов Владимир',
+        id: 'ChugunovVladimir',
+        photo: 'img/chugunov_vladimir.jpg',
+    })
+    +teamModal({
+        name: 'Бочарова Наталья',
+        id: 'BocharovaNatalya',
+        photo: 'img/bocharova_natalya.jpg',
+    })
     include ../../blocks/modules/pages/about/history-modal/ap-history-modal
-    include ../../blocks/modules/pages/about/team-modal/ap-team-modal
     include ../../blocks/modules/pages/about/callback-modal/ap-callback-modal

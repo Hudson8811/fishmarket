@@ -5,6 +5,7 @@
         desc: false,
         controls: false,
         cities: false,
+        page: 'page',
         breadcrumbs: {
             classes: '',
             colorMode: 'dark',
@@ -32,6 +33,7 @@ mixin l-map(props = defaultLMapProps)
             desc: props.desc ? props.desc : defaultLMapProps.desc,
             controls: props.controls ? props.controls : defaultLMapProps.controls,
             cities: props.cities ? props.cities : defaultLMapProps.cities,
+            page: props.page ? props.page : defaultLMapProps.page,
             breadcrumbs: props.breadcrumbs ? props.breadcrumbs : defaultLMapProps.breadcrumbs,
         };
 
@@ -69,7 +71,10 @@ mixin l-map(props = defaultLMapProps)
                 .l-map__addresses.active(data-js="lMapAddresses" data-city="moscow")
                     .l-map__address.map-address.active(data-id='moscowOffice1' data-coords="55.150972,36.653968" data-js='lMapAddress')
                         .map-address__header
-                            .map-address__title Производство
+                            - if(checkProps.page === 'logistics')
+                                .map-address__title Склад
+                            - else
+                                .map-address__title Производство                                
                             .map-address__icon 
                                 svg
                                     use(xlink:href=`img/sprites/sprite.svg#header_position`)

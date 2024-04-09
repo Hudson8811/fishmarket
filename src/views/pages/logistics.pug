@@ -37,12 +37,13 @@ block content
 		})
 		+l-walk()
 		+l-map({
-			controls: true
+			controls: true,
+			page: 'logistics'
 		})
 		+l-vacancies({
-            classes: 'production__vacancies',
-            title: 'Ищем в команду на производство'
-        })
+			classes: 'production__vacancies',
+			title: 'Ищем в команду на производство'
+		})
 		+l-call-action()
 
 		include ../../blocks/modules/footer/footer
