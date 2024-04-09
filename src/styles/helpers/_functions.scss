@@ -4,7 +4,7 @@
 // }
 
 @function vw($px, $resolutiond: 1920) {
-	$temp: #{math.div($px, $resolutiond) * 100};
+	$temp: #{math.div($px, $resolutiond) * 80};
 	@return $temp +'vw';
 }
 @function vw3($px, $resolutiond: 992) {
