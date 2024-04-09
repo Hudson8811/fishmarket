@@ -55,24 +55,26 @@
         } 
     }
     &__price {
-        font-size: vw(14);
+        font-size: vw(18);
         font-weight: 600;
         line-height: 1.25;
         color: $fontBlack;
         white-space: nowrap;
         margin-top: 7px;
         @include max(md) {
-            font-size: vw2(14);
+            font-size: vw2(18);
         } 
     }
 
     &__delete.new-btn {
+        margin-top: vw(-18);
         @include max(md) {
             position: absolute;
             right: vw2(10);
             top: vw2(10);
             width: vw2(50);
             height: vw2(50);
+            margin-top: vw2(28);
         }
         .new-btn__icon {
             @include max(md) {

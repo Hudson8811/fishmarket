@@ -83,7 +83,7 @@
 		width: vw(194);
 		min-width: vw(194);
 		background: $blueLight;
-		height: 100%;
+		height: calc(100% + 1px);
 		@include max(md) {	
 			width: auto;
 			min-width: auto;
@@ -99,10 +99,7 @@
 			@include max(md) {
 				width: vw2(153);
 			}
-
 		}
-		
-	
 	}
 	&__menu {
 		position: relative;

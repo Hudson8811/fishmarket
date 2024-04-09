@@ -9,6 +9,7 @@ block content
 	include ../../blocks/modules/l-intro/l-intro.pug
 	include ../../blocks/modules/l-walk/l-walk.pug
 	include ../../blocks/modules/l-map/l-map.pug
+	include ../../blocks/modules/l-vacancies/l-vacancies.pug
 	include ../../blocks/modules/l-call-action/l-call-action.pug
 
 	.scroll-page
@@ -28,7 +29,7 @@ block content
 					}
 				]
 			},
-			title: 'Наша<br>логистика',
+			title: 'Наша логистика',
 			textTop: `<p>Наши складские комплексы расположены в&nbsp;Москве, Калужской и&nbsp;Калининградской областях. Склады оснащены необходимыми морозильными камерами и&nbsp;погрузочно-разгрузочной техникой.</p>
 			<p>Доставка заказа осуществляется собственным автотранспортом, оборудованным рефрижераторными установками. Также доставим заказ в&nbsp;любой регион РФ проверенной логистической компанией.</p>
 			<p>Возможен самовывоз со складов компании в&nbsp;согласованное удобное время.</p>`,
@@ -38,6 +39,10 @@ block content
 		+l-map({
 			controls: true
 		})
+		+l-vacancies({
+            classes: 'production__vacancies',
+            title: 'Ищем в команду на производство'
+        })
 		+l-call-action()
 
 		include ../../blocks/modules/footer/footer

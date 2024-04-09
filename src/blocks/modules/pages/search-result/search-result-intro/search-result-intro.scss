@@ -151,10 +151,10 @@
         max-width: 100%;
         display: flex;
         flex-direction: column;
-        row-gap: vw(29);
+        //row-gap: vw(29);
         margin-top: vw(20);
         @include max(md) {
-            row-gap: vw2(24);
+            //row-gap: vw2(24);
             margin-top: vw2(10);
         }
     }

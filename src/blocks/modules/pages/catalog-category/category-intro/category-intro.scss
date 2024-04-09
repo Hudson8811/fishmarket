@@ -60,13 +60,13 @@
     &__cards {
         display: grid;
         grid-template-columns: repeat(4, minmax(0, 1fr));
-        row-gap: vw(39);
-        column-gap: vw(34);
+        //row-gap: vw(39);
+        //column-gap: vw(34);
         margin-top: vw(30);
         @include max(md) {
             grid-template-columns: 1fr;
-            row-gap: vw2(24);
-            column-gap: vw2(24);
+            //row-gap: vw2(24);
+            //column-gap: vw2(24);
             margin-top: vw2(30);
         }
     }

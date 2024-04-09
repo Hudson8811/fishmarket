@@ -10,6 +10,7 @@ block content
     include ../../blocks/modules/l-map/l-map.pug
     include ../../blocks/modules/l-walk/l-walk.pug
     include ../../blocks/modules/l-vacancies/l-vacancies.pug
+    include ../../blocks/modules/l-call-action/l-call-action.pug
 
     .scroll-page(data-animation="productionpage")
         include ../../blocks/modules/pages/production/production-intro/production-intro.pug
@@ -25,6 +26,6 @@ block content
             classes: 'production__vacancies',
             title: 'Ищем в команду на производство'
         })
-
+        +l-call-action()
         include ../../blocks/modules/footer/footer
 

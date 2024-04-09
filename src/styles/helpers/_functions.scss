@@ -2,10 +2,8 @@
 // @function rem($px) {
 //     @return ($px / 16) +rem;
 // }
-
-
-@function vw($px, $resolutiond: 1920) {
-	$temp: #{math.div($px, $resolutiond) * 80};
+@function vwf($px, $resolutiond: 1920) {
+	$temp: #{math.div($px, $resolutiond) * 100};
 	@return $temp +'vw';
 }
 @function vw($px, $resolutiond: 1920) {

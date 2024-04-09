@@ -861,7 +861,7 @@ a, button {
             padding-top: vw2(40);
             position: relative;
             @include max(md) {
-                padding-bottom: vw2(200);
+                padding-bottom: vw2(40);
             }
             .layout--trio {
                 &__col {
@@ -1051,14 +1051,14 @@ a, button {
     border: 1px solid rgba(0, 0, 0, 0.2);
     padding: vw(35) vw(30);
     min-height: vw(127);
-    margin-bottom: vw(23);
+    //margin-bottom: vw(23);
     @include max(md) {
         flex-flow: column nowrap;
         justify-content: flex-start;
         align-items: flex-start;
         padding: vw2(20);
         min-height: auto;
-        margin-bottom: vw2(20);
+        //margin-bottom: vw2(20);
         padding-top: vw2(15);
     }
     &:last-child {
@@ -1229,12 +1229,12 @@ a, button {
         width: 100%;
         overflow: hidden;
         position: relative;
-        margin-bottom: vw(25);
+        //margin-bottom: vw(25);
         display: block;
         padding: vw(30);
         border: 1px solid rgba(0, 0, 0, 0.2);
         @include max(md) {
-            margin-bottom: vw2(20);
+            //margin-bottom: vw2(20);
             padding: vw2(20);
         }
     
@@ -1980,7 +1980,7 @@ a, button {
                 }
             }
             &__picture {
-                opacity: 1;
+                opacity: 0;
                 transition: all $tr-time;
                 @include max(md) {
                     opacity: 1;

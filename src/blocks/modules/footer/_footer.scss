@@ -150,6 +150,7 @@
 						font-size: vw2(24);
 						line-height: 1.2;
 						color: #fff;
+						font-weight: 400;
 					}
 					&:hover {
 						transition: all $tr-time-fast;
@@ -277,7 +278,7 @@
 		position: absolute;
 		top: vw(30);
 		left: vwf(25);
-		display: block;
+		display: none;
 		width: vw(153);
 		@include max(md) {
 			position: relative;

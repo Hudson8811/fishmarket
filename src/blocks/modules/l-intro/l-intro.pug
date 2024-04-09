@@ -18,7 +18,7 @@
 		title: 'Мы в социуме',
 		textTop: '',
 		textBottom: '',
-		image: 'img/society-intro.png'
+		image: 'img/society-intro.jpg'
 	}
 
 mixin l-intro(props = defaultLIntroProps)
@@ -43,7 +43,7 @@ mixin l-intro(props = defaultLIntroProps)
 				+breadcrumbs(checkProps.breadcrumbs)
 				+title("h1", checkProps.title, "l-intro__title")
 				if(checkProps.textTop)
-					.l-intro__text.text-block.l-intro__text--top
+					.production-intro__text
 						!= checkProps.textTop
 				if(checkProps.textBottom)
 					.l-intro__text.l-intro__text--bottom

@@ -25,6 +25,7 @@
 		}
 	}
 	&__thumbs {
+        display: none;
 		position: relative;
 		margin-top: vw(50);
 		height: vw(114);
@@ -39,6 +40,7 @@
 		}
 	}
 	&__thumb {
+        display: none;
 		height: 100%;
 		width: vw(114);
 		cursor: pointer;
