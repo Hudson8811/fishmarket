@@ -19,6 +19,22 @@ include ../../../../components/slider-photo/slider-photo.pug
                 .product-intro__controls 
                     .product-intro__price 9 999 999 ₽
                     include ../../../../components/amount-input/amount-input.pug
+                +new-btn({
+                    classes: 'product-intro__offer',
+                    vMode: 'small',
+                    text: 'Получить предложение',
+                    icon: 'true',
+                    iconName: 'arrow_btn',
+                    cMode: 'white',
+                })
+                +new-btn({
+                    classes: 'product-intro__cart',
+                    vMode: 'small',
+                    text: 'В корзину',
+                    icon: 'true',
+                    iconName: 'arrow_btn',
+                    cMode: 'blue',
+                })
                 .product-intro__subtitle Описание
                 .product-intro__text.text-block 
                     p Красная рыба из рода лососей и&nbsp;семейства лососевых. Форель подразделяют на тихоокеанскую, атлантическую и&nbsp;гольца. В свою очередь эти группы делятся на виды, для каждого из которых присущи свои отличительные особенности. Она имеет богатый состав полезных для здоровья веществ и&nbsp;вкусное нежное мясо, которое употребляют даже в&nbsp;сыром виде.

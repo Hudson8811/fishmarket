@@ -25,6 +25,12 @@ mixin category-intro(cardsType="card")
 				]
 			})
 			+title("h1", "Рыба <br>охлажденная", "category-intro__title")
+			.related-categories
+				.related-categories__title.title__24 Смежные категории
+				.related-categories__list
+					a.related-categories__item.text__18(href="#")  Мидии
+					a.related-categories__item.text__18(href="#") Кальмар
+					a.related-categories__item.text__18(href="#") Креветка														
 			.category-intro__list
 				.category-intro__controls
 					+new-btn({

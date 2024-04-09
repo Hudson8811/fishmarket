@@ -6,6 +6,7 @@
     <title>FAQ Page</title>
     <meta name="theme-color" content="#fff">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <link rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon">
     <link rel="icon" sizes="16x16" href="img/favicons/favicon-16x16.png" type="image/png">
@@ -23,7 +24,7 @@
     <link rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png">
     <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
     <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
-    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/main.min.css">
   </head>
   <body>
     <div class="section preloader__section section--gray">
@@ -283,58 +284,136 @@
     <div class="mob-menu__section mob-menu__question__section js-pop-up__login-register">
       <div class="mob-menu--overlay js-pop-up__login-register--overlay"></div>
       <div class="mob-menu__question">
-        <div class="mob-menu__question__top"> 
-          <div class="mob-menu__question__top__tabs nav-tabs"><a class="nav-tab active" href="#" data-tab="1">Tab 1</a></div>
-          <div class="mob-menu__question__top__close js-pop-up__login-register--close">
-            <svg>
-              <use xlink:href="img/sprites/sprite.svg#header_close"></use>
-            </svg>
-          </div>
+        <div class="mob-menu__question__top__close login-area__close js-pop-up__login-register--close">
+          <svg>
+            <use xlink:href="img/sprites/sprite.svg#header_close"></use>
+          </svg>
         </div>
-        <form class="contacts__form" action=""> 
-          <div class="contacts__form__input-block">
-            <input class="contacts__form__input js-mask-name text__13" type="text" name="">
-            <div class="contacts__form__input-block__name">	Имя*</div>
-            <div class="contacts__form__input-block__error">Некорректное имя</div>
-          </div>
-          <div class="contacts__form__input-block">
-            <input class="contacts__form__input js-mask-phone" type="tel" name="">
-            <div class="contacts__form__input-block__name">Телефон</div>
-            <div class="contacts__form__input-block__error">Некорректный телефон</div>
-          </div>
-          <div class="contacts__form__input-block">
-            <input class="contacts__form__input text__13" type="email" name="">
-            <div class="contacts__form__input-block__name">Почта</div>
-            <div class="contacts__form__input-block__error">Некорректная почта					</div>
-          </div>
-          <div class="contacts__form__input-block">
-            <textarea class="contacts__form__input text__13" name=""></textarea>
-            <div class="contacts__form__input-block__name">Комментарий / Сопроводительное письмо</div>
-            <div class="contacts__form__input-block__error"></div>
-          </div>
-          <div class="contacts__form__input-block">
-            <div class="input-file-row">
-              <label class="input-file">
-                <input type="file" name="file[]" multiple><span>Выберите файл</span>
-              </label>
-              <div class="input-file-list"> </div>
+        <div class="login-area">
+          <div class="login-area__slider" data-js="loginAreaSlider">
+            <div class="login-area__controls">
+              <div class="login-area__control login-area__control--prev">Авторизация</div>
+              <div class="login-area__control login-area__control--next">Регистрация</div>
             </div>
-          </div>
-          <div class="contacts__form__personal-data contacts__form__input-block error"> 
-            <div class="checkbox">
-              <label>
-                <input class="custom-checkbox" type="checkbox" name="personal-data" value="indigo">Согласие на обработку персональных данных
-              </label>
+            <div class="swiper-wrapper"> 
+              <div class="swiper-slide login-area__slide">
+                <form class="contacts__form" action="#">
+                  <div class="contacts__form__content">
+                    <div class="contacts__form__title">Авторизация</div>
+                    <div class="contacts__form__input-block">
+                      <input class="contacts__form__input text__13" type="email" name="">
+                      <div class="contacts__form__input-block__name">Логин</div>
+                      <div class="contacts__form__input-block__error">Некорректная почта</div>
+                    </div>
+                    <div class="contacts__form__input-block">
+                      <input class="contacts__form__input text__13" type="password" name="">
+                      <div class="contacts__form__input-block__name">Пароль</div>
+                      <div class="contacts__form__input-block__error">Некорректный пароль</div>
+                    </div>
+                  </div>
+                  <button class="mob-menu__question__bottom" type="submit">
+                    <div class="mob-menu__question__bottom__text">Отправить</div>
+                    <div class="mob-menu__question__bottom__row">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
+                      </svg>
+                    </div>
+                  </button>
+                </form>
+              </div>
+              <div class="swiper-slide login-area__slide">
+                <form class="contacts__form registration-entity" action="#">
+                  <div class="contacts__form__content">
+                    <div class="contacts__form__title">Регистрация</div>
+                    <div class="contacts__form__input-block">
+                      <input class="contacts__form__input js-mask-name text__13" type="text" name="">
+                      <div class="contacts__form__input-block__name">	ИНН Организации</div>
+                      <div class="contacts__form__input-block__error">Некорректный ИНН</div>
+                    </div>
+                    <div class="contacts__form__input-block">
+                      <input class="contacts__form__input js-mask-name text__13" type="text" name="">
+                      <div class="contacts__form__input-block__name">	Фамилия контактного лица</div>
+                      <div class="contacts__form__input-block__error">Некорректная фамилия</div>
+                    </div>
+                    <div class="contacts__form__input-block">
+                      <input class="contacts__form__input js-mask-name text__13" type="text" name="">
+                      <div class="contacts__form__input-block__name">	Имя контактного лица</div>
+                      <div class="contacts__form__input-block__error">Некорректная имя</div>
+                    </div>
+                    <div class="contacts__form__input-block">
+                      <input class="contacts__form__input js-mask-name text__13" type="text" name="">
+                      <div class="contacts__form__input-block__name">	Отчество контактного лица</div>
+                      <div class="contacts__form__input-block__error">Некорректное отчество</div>
+                    </div>
+                    <div class="contacts__form__input-block">
+                      <input class="contacts__form__input js-mask-name text__13" type="text" name="">
+                      <div class="contacts__form__input-block__name">	Отчество контактного лица</div>
+                      <div class="contacts__form__input-block__error">Некорректное отчество</div>
+                    </div>
+                    <div class="contacts__form__input-block">                 
+                      <input class="contacts__form__input text__13" type="email" name="">
+                      <div class="contacts__form__input-block__name">Почта контактного лица</div>
+                      <div class="contacts__form__input-block__error">Некорректная почта</div>
+                    </div>
+                    <div class="contacts__form__input-block">
+                      <input class="contacts__form__input js-mask-phone" type="tel" name="">
+                      <div class="contacts__form__input-block__name">Телефон контактного лица</div>
+                      <div class="contacts__form__input-block__error">Некорректный телефон</div>
+                    </div>
+                    <div class="contacts__form__input-block">
+                      <input class="contacts__form__input text__13" type="password" name="">
+                      <div class="contacts__form__input-block__name">Пароль</div>
+                      <div class="contacts__form__input-block__error">Некорректный пароль</div>
+                    </div>
+                    <div class="contacts__form__input-block">
+                      <input class="contacts__form__input text__13" type="password" name="">
+                      <div class="contacts__form__input-block__name">Подтверждение пароля</div>
+                      <div class="contacts__form__input-block__error">Пароли не совпадают</div>
+                    </div>
+                  </div>
+                  <button class="mob-menu__question__bottom" type="submit">
+                    <div class="mob-menu__question__bottom__text">Зарегистрироваться</div>
+                    <div class="mob-menu__question__bottom__row">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
+                      </svg>
+                    </div>
+                  </button>
+                </form>
+                <form class="contacts__form registration-individual" action="#">
+                  <div class="contacts__form__title">Регистрация</div>
+                  <div class="contacts__form__input-block">
+                    <textarea class="contacts__form__input text__13" name=""></textarea>
+                    <div class="contacts__form__input-block__name">Комментарий / Сопроводительное письмо</div>
+                    <div class="contacts__form__input-block__error"></div>
+                  </div>
+                  <div class="contacts__form__input-block">
+                    <div class="input-file-row">
+                      <label class="input-file">
+                        <input type="file" name="file[]" multiple><span>Выберите файл</span>
+                      </label>
+                      <div class="input-file-list"> </div>
+                    </div>
+                  </div>
+                  <div class="contacts__form__personal-data contacts__form__input-block error"> 
+                    <div class="checkbox">
+                      <label>
+                        <input class="custom-checkbox" type="checkbox" name="personal-data" value="indigo">Согласие на обработку персональных данных
+                      </label>
+                    </div>
+                    <div class="contacts__form__input-block__error">обязательно нужно согласиться</div>
+                  </div>
+                  <div class="mob-menu__question__bottom">
+                    <div class="mob-menu__question__bottom__text">Зарегистрироваться</div>
+                    <div class="mob-menu__question__bottom__row">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </form>
+              </div>
             </div>
-            <div class="contacts__form__input-block__error">обязательно нужно согласиться</div>
-          </div>
-        </form>
-        <div class="mob-menu__question__bottom">
-          <div class="mob-menu__question__bottom__text">Отправить</div>
-          <div class="mob-menu__question__bottom__row">
-            <svg>
-              <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
-            </svg>
           </div>
         </div>
       </div>
@@ -438,7 +517,7 @@
             <div class="questions__section__title title__52">
               <h1>FAQ</h1>
             </div>
-            <div class="layout">
+            <div class="layout layout-sticky">
               <div class="layout__col">
                 <div class="questions__section__subtitle text__18">Мы объединили здесь всю необходимую информацию, чтобы избавить Вас от необходимости искать ее по разным источникам. От простых вопросов до более сложных – у нас есть решение для каждого!
                 </div>
@@ -507,7 +586,7 @@
                   </div>
                 </div>
               </div>
-              <div class="layout__col">
+              <div class="layout__col layout-sticky__block">
                 <div class="phone-call">
                   <div class="phone-call__title title__32"> ОСТАЛИСЬ ВОПРОСЫ? <br> НАПИШИТЕ ИЛИ ЗАКАЖИТЕ <br> ЗВОНОК
                   </div><a class="btn--box phone-call__btn js-phone-call__btn" href="#">
@@ -553,6 +632,16 @@
               <li class="footer__menu__list__item"><a href="#">Новости</a></li>
               <li class="footer__menu__list__item"><a href="#">Вопросы и ответы (FAQ)</a></li>
             </ul>
+            <div class="footer__menu__contacts footer-cotacts">
+              <div class="footer-cotacts__social"><a class="new-btn new-btn--icon new-btn--transparent" href="javascript:void(0)"><span class="new-btn__icon">
+                    <svg>
+                      <use xlink:href="img/sprites/sprite.svg#footer_telegram"></use>
+                    </svg></span></a><a class="new-btn new-btn--icon new-btn--transparent" href="javascript:void(0)"><span class="new-btn__icon">
+                    <svg>
+                      <use xlink:href="img/sprites/sprite.svg#footer_vk"></use>
+                    </svg></span></a></div>
+              <div class="footer-cotacts__contacts"><a href="mailto:info@skyfish.ru">info@skyfish.ru</a><a href="tel:74922521233">+7 (4922) 52-12-33</a></div>
+            </div>
           </div><a class="btn--box footer__btn" href="#">
             <div class="btn btn--circle">
               <svg>
@@ -560,7 +649,6 @@
               </svg>
             </div>
             <div class="btn--box__text">Заказать звонок</div></a>
-          <div class="footer__bg"><img src="img/footer__bg.png" alt=""></div>
           <div class="footer__agreement">
             <div class="footer__agreement__date text__12">© 2023 — 2024</div><a class="footer__agreement__text text__12" href="#"> Пользовательское <br>соглашение</a>
           </div>
@@ -568,6 +656,6 @@
       </div>
     </main>
     <script src="https://api-maps.yandex.ru/2.1/?apikey=d30e0023-10b4-4a5c-a8fd-7e8d66094730&amp;lang=ru_RU"></script>
-    <script src="js/main.js"></script>
+    <script src="js/main.min.js"></script>
   </body>
 </html>

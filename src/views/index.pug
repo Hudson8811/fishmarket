@@ -2,237 +2,231 @@ extends layouts/default
 include helpers/mixins
 
 block variables
-	- const title = "SkyFish home page"
+    - const title = "SkyFish home page"
 
 block content
-	.scroll-page(data-animation="homepage")
-		.start__section.section 
-			.swiper-container.start__slider.js-start__slider
-				.swiper-wrapper
-					.start__slide.swiper-slide
-						.start__slide__desc
+    .scroll-page(data-animation="homepage")
+        .start__section.section 
+            .swiper-container.start__slider.js-start__slider
+                .swiper-wrapper
+                    .start__slide.swiper-slide
+                        .start__slide__desc
 
-							.start__slide__title.title__82
-								h1 Продаём рыбу и&nbsp;морепродукты
-							.start__slide__text.title__32
-								!="Работаем по&nbsp;договору с ООО и&nbsp;ИП"
-						a(href="#").btn--box.start__slide__btn
-							.btn.btn--circle
-								svg
-									use(xlink:href=`img/sprites/sprite.svg#arrow_btn`)
-							.btn--box__text Подробнее
-						.start__bg 
-							img(src="img/start__section__bg.png" alt="")
-						.start__slide__picture 
-							picture 
-								source(media="(max-width: 992px )" srcset="img/start__slide--1.jpg")
-								img(src="img/start__slide--1.jpg" alt="" srcset="img/start__slide--1.jpg 2x")
-					.start__slide.swiper-slide
-						.start__slide__desc
-							.start__slide__title.title__82
-								!="Итоги импорта за II квартал 2024 года"
-							.start__slide__text.title__32
-								!="Подготовили аналитический отчет по&nbsp;объемам импорта рыбы и&nbsp;морепродуктов в&nbsp;России"
-						a(href="#").btn--box.start__slide__btn
-							.btn.btn--circle
-								svg
-									use(xlink:href=`img/sprites/sprite.svg#arrow_btn`)
-							.btn--box__text Подробнее
-						.start__bg 
-							img(src="img/start__section__bg.png" alt="")
-						.start__slide__video
-							video(autoplay muted loop)
-								source(src="video/start__slide__video--2.mp4" type="video/mp4")
+                            .start__slide__title.title__82
+                                h1 Продаём рыбу и&nbsp;морепродукты
+                            .start__slide__text.title__32
+                                !="Работаем по&nbsp;договору с ООО и&nbsp;ИП"
+                        a(href="#").btn--box.start__slide__btn
+                            .btn.btn--circle
+                                svg
+                                    use(xlink:href=`img/sprites/sprite.svg#arrow_btn`)
+                            .btn--box__text Подробнее
+                        .start__bg 
+                            img(src="img/start__section__bg.png" alt="")
+                        .start__slide__picture 
+                            picture 
+                                source(media="(max-width: 992px )" srcset="img/start__slide--1.jpg")
+                                img(src="img/start__slide--1.jpg" alt="" srcset="img/start__slide--1.jpg 2x")
+                    .start__slide.swiper-slide
+                        .start__slide__desc
+                            .start__slide__title.title__82
+                                !="Итоги импорта за II квартал 2024 года"
+                            .start__slide__text.title__32
+                                !="Подготовили аналитический отчет по&nbsp;объемам импорта рыбы и&nbsp;морепродуктов в&nbsp;России"
+                        a(href="#").btn--box.start__slide__btn
+                            .btn.btn--circle
+                                svg
+                                    use(xlink:href=`img/sprites/sprite.svg#arrow_btn`)
+                            .btn--box__text Подробнее
+                        .start__bg 
+                            img(src="img/start__section__bg.png" alt="")
+                        .start__slide__video
+                            video(autoplay muted loop)
+                                source(src="video/start__slide__video--2.mp4" type="video/mp4")
 
-					.start__slide.swiper-slide
-						.start__slide__desc
-							.start__slide__title.title__82
-								!="Черная пятница на море"
-							.start__slide__text.title__32
-								!="Вышли в&nbsp;море и&nbsp;наловили для всех несколько кораблей крабов"
-						a(href="#").btn--box.start__slide__btn
-							.btn.btn--circle
-								svg
-									use(xlink:href=`img/sprites/sprite.svg#arrow_btn`)
-							.btn--box__text Подробнее
-						.start__bg 
-							img(src="img/start__section__bg.png" alt="")
-						.start__slide__picture 
-							picture 
-								source(media="(max-width: 992px )" srcset="img/start__slide--3.jpg")
-								img(src="img/start__slide--3.jpg" alt="" srcset="img/start__slide--3.jpg 2x")
-					.start__slide.swiper-slide
-						.start__bg 
-							img(src="img/start__section__bg.png" alt="")
-						.start__slide__video
-							video(autoplay muted loop)
-								source(src="video/start__slide__video--1.mp4" type="video/mp4")
+                    .start__slide.swiper-slide
+                        .start__slide__desc
+                            .start__slide__title.title__82
+                                !="Черная пятница на море"
+                            .start__slide__text.title__32
+                                !="Вышли в&nbsp;море и&nbsp;наловили для всех несколько кораблей крабов"
+                        a(href="#").btn--box.start__slide__btn
+                            .btn.btn--circle
+                                svg
+                                    use(xlink:href=`img/sprites/sprite.svg#arrow_btn`)
+                            .btn--box__text Подробнее
+                        .start__bg 
+                            img(src="img/start__section__bg.png" alt="")
+                        .start__slide__picture 
+                            picture 
+                                source(media="(max-width: 992px )" srcset="img/start__slide--3.jpg")
+                                img(src="img/start__slide--3.jpg" alt="" srcset="img/start__slide--3.jpg 2x")
+                    .start__slide.swiper-slide
+                        .start__bg 
+                            img(src="img/start__section__bg.png" alt="")
+                        .start__slide__video
+                            video(autoplay muted loop)
+                                source(src="video/start__slide__video--1.mp4" type="video/mp4")
 
-					.start__slide.swiper-slide
-						.start__bg 
-							img(src="img/start__section__bg.png" alt="")
-						.start__slide__picture 
-							picture 
-								source(media="(max-width: 992px )" srcset="img/start__slide--5.jpg")
-								img(src="img/start__slide--5.jpg" alt="" srcset="img/start__slide--5.jpg 2x")
-					.start__slide.swiper-slide
-						.start__bg 
-							img(src="img/start__section__bg.png" alt="")
-						.start__slide__picture 
-							picture 
-								source(media="(max-width: 992px )" srcset="img/start__slide--6.jpg")
-								img(src="img/start__slide--6.jpg" alt="" srcset="img/start__slide--6.jpg 2x")
-					.start__slide.swiper-slide
-						.start__bg 
-							img(src="img/start__section__bg.png" alt="")
-						.start__slide__picture 
-							picture 
-								source(media="(max-width: 992px )" srcset="img/start__slide--7.jpg")
-								img(src="img/start__slide--7.jpg" alt="" srcset="img/start__slide--7.jpg 2x")
-					.start__slide.swiper-slide
-						.start__bg 
-							img(src="img/start__section__bg.png" alt="")
-						.start__slide__picture 
-							picture 
-								source(media="(max-width: 992px )" srcset="img/start__slide--8.jpg")
-								img(src="img/start__slide--8.jpg" alt="" srcset="img/start__slide--8.jpg 2x")
-					.start__slide.swiper-slide
-						.start__bg 
-							img(src="img/start__section__bg.png" alt="")
-						.start__slide__picture 
-							picture 
-								source(media="(max-width: 992px )" srcset="img/start__slide--9.jpg")
-								img(src="img/start__slide--9.jpg" alt="" srcset="img/start__slide--9.jpg 2x")
+                    .start__slide.swiper-slide
+                        .start__bg 
+                            img(src="img/start__section__bg.png" alt="")
+                        .start__slide__picture 
+                            picture 
+                                source(media="(max-width: 992px )" srcset="img/start__slide--5.jpg")
+                                img(src="img/start__slide--5.jpg" alt="" srcset="img/start__slide--5.jpg 2x")
+                    .start__slide.swiper-slide
+                        .start__bg 
+                            img(src="img/start__section__bg.png" alt="")
+                        .start__slide__picture 
+                            picture 
+                                source(media="(max-width: 992px )" srcset="img/start__slide--6.jpg")
+                                img(src="img/start__slide--6.jpg" alt="" srcset="img/start__slide--6.jpg 2x")
+                    .start__slide.swiper-slide
+                        .start__bg 
+                            img(src="img/start__section__bg.png" alt="")
+                        .start__slide__picture 
+                            picture 
+                                source(media="(max-width: 992px )" srcset="img/start__slide--7.jpg")
+                                img(src="img/start__slide--7.jpg" alt="" srcset="img/start__slide--7.jpg 2x")
+                    .start__slide.swiper-slide
+                        .start__bg 
+                            img(src="img/start__section__bg.png" alt="")
+                        .start__slide__picture 
+                            picture 
+                                source(media="(max-width: 992px )" srcset="img/start__slide--8.jpg")
+                                img(src="img/start__slide--8.jpg" alt="" srcset="img/start__slide--8.jpg 2x")
+                    .start__slide.swiper-slide
+                        .start__bg 
+                            img(src="img/start__section__bg.png" alt="")
+                        .start__slide__picture 
+                            picture 
+                                source(media="(max-width: 992px )" srcset="img/start__slide--9.jpg")
+                                img(src="img/start__slide--9.jpg" alt="" srcset="img/start__slide--9.jpg 2x")
 
 
-				.swiper-buttons.start__swiper-buttons
-					.swiper-button-prev
-						svg
-							use(xlink:href=`img/sprites/sprite.svg#arrow_btn`)
-					.swiper-button-next
-						svg
-							use(xlink:href=`img/sprites/sprite.svg#arrow_btn`)
+                .swiper-buttons.start__swiper-buttons
+                    .swiper-button-prev
+                        svg
+                            use(xlink:href=`img/sprites/sprite.svg#arrow_btn`)
+                    .swiper-button-next
+                        svg
+                            use(xlink:href=`img/sprites/sprite.svg#arrow_btn`)
 
-		a(href="#").btn--box.assortment__btn.assortment__btn--start
-			.btn.btn--circle
-				svg
-					use(xlink:href=`img/sprites/sprite.svg#arrow_btn`)
-			.btn--box__text Перейти в каталог
+        include ../blocks/components/assortment/assortment.pug
+        .section.hear__section
+            .hear__title.title__170 Понимаем море, слышим людей
+            .hear__subtitle.title__32 Сервис доставки рыбы и&nbsp;морепродуктов
+            a(href="#").btn--box.hear__btn
+                .btn.btn--circle
+                    svg
+                        use(xlink:href=`img/sprites/sprite.svg#arrow_btn`)
+                .btn--box__text Подробнее			
+            .hear__video
+                video(autoplay muted loop playsinline webkit-playsinline data-js="autoplayVideo")
+                    source(src="video/hear__video.mp4" type="video/mp4")
+        .section.news__section
+            .news__bg 
+                img(src="img/news__bg.png" alt="")
+            .advantages
+                .layout--trio
+                    .layout--trio__col.js-advantage__col--1
+                        .advantage
+                            .advantage__num 1
+                            .advantage__desc
+                                .advantage__title.title__32 Кто мы?
+                                .advantage__text.text__18 
+                                    !="Группа компаний, поставляющая рыбу и&nbsp;морепродукты на&nbsp;российский рынок из&nbsp;11 стран, осуществляющая производственный комплекс по&nbsp;переработке и&nbsp;фасовке рыбы, активно реализующая продукцию от&nbsp;Калининграда до&nbsp;любого города Российской Федерации."
 
-		include ../blocks/components/assortment/assortment.pug
-		.section.hear__section
-			.hear__title.title__170 Понимаем море, слышим людей
-			.hear__subtitle.title__32 Сервис поставки рыбы и&nbsp;морепродуктов
-			a(href="#").btn--box.hear__btn
-				.btn.btn--circle
-					svg
-						use(xlink:href=`img/sprites/sprite.svg#arrow_btn`)
-				.btn--box__text Подробнее			
-			.hear__video
-				video(autoplay muted loop)
-					source(src="video/hear__video.mp4" type="video/mp4")
-		.section.news__section
-			.news__bg 
-				img(src="img/news__bg.png" alt="")
-			.advantages
-				.layout--trio
-					.layout--trio__col.js-advantage__col--1
-						.advantage
-							.advantage__num 1
-							.advantage__desc
-								.advantage__title.title__32 Кто мы?
-								.advantage__text.text__18 
-									!="Группа компаний, поставляющая рыбу и&nbsp;морепродукты на&nbsp;российский рынок из&nbsp;11 стран, осуществляющая производственный комплекс по&nbsp;переработке и&nbsp;фасовке рыбы, активно реализующая продукцию от&nbsp;Калининграда до&nbsp;любого города Российской Федерации."
+                    .layout--trio__col.js-advantage__col--2
+                        .advantage
+                            .advantage__num 2
+                            .advantage__desc
+                                .advantage__title.title__32 С кем работаем?
+                                .advantage__text.text__18 
+                                    !="С реализаторами, переработчиками, рестораторами из&nbsp;крупных агломераций страны и&nbsp;физическими лицами (условия продажи, пожалуйста, уточняйте)"
 
-					.layout--trio__col.js-advantage__col--2
-						.advantage
-							.advantage__num 2
-							.advantage__desc
-								.advantage__title.title__32 С кем работаем?
-								.advantage__text.text__18 
-									!="С реализаторами, переработчиками, рестораторами из&nbsp;крупных агломераций страны и&nbsp;физическими лицами (условия продажи, пожалуйста, уточняйте)"
+                    .layout--trio__col.js-advantage__col--3
+                        .advantage
+                            .advantage__num 3
+                            .advantage__desc
+                                .advantage__title.title__32 В чем наше преимущество?
+                                .advantage__text.text__18 
+                                    !="В сервисном отношении к&nbsp;своим клиентам. Мы&nbsp;понимаем и&nbsp;слышим своих партнеров."
+            .container
+                .layout--trio__news
+                    .layout--trio
+                        .layout--trio__col.js-news__col--1
+                            .news__title.title__82
+                                !='Наши <br>новости'
+                            a(href="#").btn--box.news__btn.js-news__btn
+                                .btn.btn--circle
+                                    svg
+                                        use(xlink:href=`img/sprites/sprite.svg#arrow_btn`)
+                                .btn--box__text читать еще
 
-					.layout--trio__col.js-advantage__col--3
-						.advantage
-							.advantage__num 3
-							.advantage__desc
-								.advantage__title.title__32 В чем наше преимущество?
-								.advantage__text.text__18 
-									!="В сервисном отношении к&nbsp;своим клиентам. Мы понимаем и&nbsp;слышим своих партнеров."
-			.container
-				.layout--trio__news
-					.layout--trio
-						.layout--trio__col.js-news__col--1
-							.news__title.title__82
-								!='Наши <br>новости'
-							a(href="#").btn--box.news__btn.news__btn--finish.js-news__btn.active
-								.btn.btn--circle
-									svg
-										use(xlink:href=`img/sprites/sprite.svg#arrow_btn`)
-								.btn--box__text читать еще
-
-						.layout--trio__col.js-news__col--2
-							a(href="#").card.card--news
-								.card__picture 
-									img(src="img/card-news__picture__1.png" alt="")
-								.card__title.title__32
-									!='СЕМГА ЧИЛИ'
-								.card__list 
-									ul 
-										li 1-2 от 850 ₽/кг
-										li 2-3 от 930 ₽/кг
-								.card__bottom
-									.card__date.text__12 
-										!="1 ноября 2023"
-									.btn.btn--circle.btn--circle__blue
-										svg
-											use(xlink:href=`img/sprites/sprite.svg#arrow_btn`)
-							a(href="#").card.card--news
-								.card__picture 
-									img(src="img/card-news__picture__2.png" alt="")
-								.card__title.title__32
-									!='ФИЛЕ СВЕЖЕМОРОЖЕНОЕ'
-								.card__list 
-									ul 
-										li 
-											!="ФИЛЕ СЕМГИ из охлажденного сырья (Мурманск) <br> 1,3-1,8, TRIM А от 1550 ₽/кг"
-										li ФИЛЕ ФОРЕЛИ (Турция, море) 1,3-1,8, TRIM А от 1350 ₽/кг
-								.card__bottom
-									.card__date.text__12 
-										!="1 ноября 2023"
-									.btn.btn--circle.btn--circle__blue
-										svg
-											use(xlink:href=`img/sprites/sprite.svg#arrow_btn`)
-						.layout--trio__col.js-news__col--3
-							a(href="#").card.card--news
-								.card__picture 
-									img(src="img/card-news__picture__3.png" alt="")
-								.card__title.title__32
-									!='СТЕЙК ФОРЕЛИ'
-								.card__list 
-									ul 
-										li 3,5-4,0 (оч. крупный), короб 16 кг (4*4 кг) В НАЛИЧИИ ВСЕГО 1 ТОННА - от 700 ₽/кг
-										li 1,8-2,2 (средний), короб 16 кг (4*4 кг) от 730 ₽/кг
-								.card__bottom
-									.card__date.text__12 
-										!="1 ноября 2023"
-									.btn.btn--circle.btn--circle__blue
-										svg
-											use(xlink:href=`img/sprites/sprite.svg#arrow_btn`)
-							a(href="#").card.card--news
-								.card__picture 
-									img(src="img/card-news__picture__4.png" alt="")
-								.card__title.title__32
-									!='КАЛЬМАР PREMIUM'
-								.card__list 
-									ul 
-										li
-											!="ФИЛЕ ОЧИЩЕННОЕ (без кожи и плавника), уп. 1 кг <br> (кор. 21 кг) от 640 ₽ "
-										li ТУШКА н/к, 2 блока * 11 кг (мешок 22 кг) от 260 ₽								
-								.card__bottom
-									.card__date.text__12 
-										!="1 ноября 2023"
-									.btn.btn--circle.btn--circle__blue
-										svg
-											use(xlink:href=`img/sprites/sprite.svg#arrow_btn`)
-		include ../blocks/modules/footer/footer
+                        .layout--trio__col.js-news__col--2
+                            a(href="#").card.card--news
+                                .card__picture 
+                                    img(src="img/card-news__picture__1.png" alt="")
+                                .card__title.title__32
+                                    !='СЕМГА ЧИЛИ'
+                                .card__list 
+                                    ul 
+                                        li 1-2 от 850 ₽/кг
+                                        li 2-3 от 930 ₽/кг
+                                .card__bottom
+                                    .card__date.text__12 
+                                        !="1 ноября 2023"
+                                    .btn.btn--circle.btn--circle__blue
+                                        svg
+                                            use(xlink:href=`img/sprites/sprite.svg#arrow_btn`)
+                            a(href="#").card.card--news
+                                .card__picture 
+                                    img(src="img/card-news__picture__2.png" alt="")
+                                .card__title.title__32
+                                    !='ФИЛЕ СВЕЖЕМОРОЖЕНОЕ'
+                                .card__list 
+                                    ul 
+                                        li 
+                                            !="ФИЛЕ СЕМГИ из охлажденного сырья (Мурманск) <br> 1,3-1,8, TRIM А от 1550 ₽/кг"
+                                        li ФИЛЕ ФОРЕЛИ (Турция, море) 1,3-1,8, TRIM А от 1350 ₽/кг
+                                .card__bottom
+                                    .card__date.text__12 
+                                        !="1 ноября 2023"
+                                    .btn.btn--circle.btn--circle__blue
+                                        svg
+                                            use(xlink:href=`img/sprites/sprite.svg#arrow_btn`)
+                        .layout--trio__col.js-news__col--3
+                            a(href="#").card.card--news
+                                .card__picture 
+                                    img(src="img/card-news__picture__3.png" alt="")
+                                .card__title.title__32
+                                    !='СТЕЙК ФОРЕЛИ'
+                                .card__list 
+                                    ul 
+                                        li 3,5-4,0 (оч. крупный), короб 16 кг (4*4 кг) В НАЛИЧИИ ВСЕГО 1 ТОННА - от 700 ₽/кг
+                                        li 1,8-2,2 (средний), короб 16 кг (4*4 кг) от 730 ₽/кг
+                                .card__bottom
+                                    .card__date.text__12 
+                                        !="1 ноября 2023"
+                                    .btn.btn--circle.btn--circle__blue
+                                        svg
+                                            use(xlink:href=`img/sprites/sprite.svg#arrow_btn`)
+                            a(href="#").card.card--news
+                                .card__picture 
+                                    img(src="img/card-news__picture__4.png" alt="")
+                                .card__title.title__32
+                                    !='КАЛЬМАР PREMIUM'
+                                .card__list 
+                                    ul 
+                                        li
+                                            !="ФИЛЕ ОЧИЩЕННОЕ (без кожи и плавника), уп. 1 кг <br> (кор. 21 кг) от 640 ₽ "
+                                        li ТУШКА н/к, 2 блока * 11 кг (мешок 22 кг) от 260 ₽								
+                                .card__bottom
+                                    .card__date.text__12 
+                                        !="1 ноября 2023"
+                                    .btn.btn--circle.btn--circle__blue
+                                        svg
+                                            use(xlink:href=`img/sprites/sprite.svg#arrow_btn`)
+        include ../blocks/modules/footer/footer

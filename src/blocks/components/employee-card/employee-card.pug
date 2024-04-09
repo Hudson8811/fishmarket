@@ -1,10 +1,30 @@
 -
 	const defaultEmployeeCardProps = {
 		classes: '',
-		bgColor: "black",
 		name: 'Елецкий Андрей',
 		position: 'Генеральный директор',
 		hasBtn: false,
+		photo: 'img/francz_edvard.jpg',
+		contacts: [
+			{
+				type: 'phone',
+				value: '+7 495 748 86 85',
+				link: 'tel:74957488685',
+				iconName: 'handset' 
+			},
+			{
+				type: 'email',
+				value: 'ae@fishmarket.ru',
+				link: 'mailto:ae@fishmarket.ru',
+				iconName: 'envelope'
+			},
+			{
+				type: 'email',
+				value: 'info@fishmarket.ru',
+				link: 'mailto:info@fishmarket.ru',
+				iconName: 'envelope'
+			}
+		],
 		btn: {
 			classes: 'employee-card__btn',
 			tag: 'button',
@@ -13,36 +33,34 @@
 		}
 	}
 
-
-
 mixin employee-card(props = defaultEmployeeCardProps)
 	-
 		const checkProps = {
 			classes: props.classes ? props.classes : defaultEmployeeCardProps.classes,
-			bgColor: props.bgColor ? props.bgColor : defaultEmployeeCardProps.bgColor,
 			name: props.name ? props.name : defaultEmployeeCardProps.name,
 			position: props.position ? props.position : defaultEmployeeCardProps.position,
 			hasBtn: props.hasBtn ? props.hasBtn : defaultEmployeeCardProps.hasBtn,
+			photo: props.photo ? props.photo : defaultEmployeeCardProps.photo,
+			contacts: props.contacts ? props.contacts : defaultEmployeeCardProps.contacts,
 			btn: props.btn ? props.btn : defaultEmployeeCardProps.btn,
 		}
 
-	.employee-card(class= 'employee-card--'+checkProps.bgColor + ' ' + checkProps.classes)
-		.employee-card__name= checkProps.name
-		.employee-card__position= checkProps.position
-		.employee-card__photo 
-			img(src="img/employee_photo.png" alt=checkProps.name)
+	.employee-card(class= checkProps.classes)
+		.employee-card__name!= checkProps.name
+		.employee-card__position!= checkProps.position
+		.employee-card__photo
+			img(src=checkProps.photo alt=checkProps.name)
 		.employee-card__flexblock 
-			.employee-card__contacts 
-				.employee-card__phone.contact
-					.contact__icon
-						svg
-							use(xlink:href=`img/sprites/sprite.svg#envelope`)
-					.contact__text +7 (4922) 44-11-11
-				.employee-card__email.contact
-					.contact__icon
-						svg
-							use(xlink:href=`img/sprites/sprite.svg#handset`)
-					.contact__text log@skyfish.ru
+			.employee-card__contacts
+
+				- let i = 0
+				- while(i < checkProps.contacts.length)
+					a.contact(href=checkProps.contacts[i].link class=`employee-card__${checkProps.contacts[i].type}`)
+						.contact__icon
+							svg
+								use(xlink:href=`img/sprites/sprite.svg#${checkProps.contacts[i].iconName}`)
+						.contact__text!= checkProps.contacts[i].value
+					- i++
 			if(checkProps.hasBtn)
 				+new-btn(checkProps.btn)(data-modal="teamCardModal")
 

@@ -21,7 +21,7 @@ body.Bodymotionless {
 	width: 100vw;
 	min-height: 100vh;
 	overflow: hidden;
-  }
+}
 
 * {
 	margin: 0;
@@ -34,6 +34,9 @@ body {
     display: flex;
 	flex-direction: column;
 	min-height: 100%;
+}
+body {
+    overflow-x: hidden;
 }
 a, button {
     cursor: pointer;
@@ -50,8 +53,8 @@ a, button {
 .container {
     position: relative;
 	box-sizing: border-box;
-	width: vw(1920);
-	max-width: calc(100% - vw(50));
+	width: vwf(1920);
+	max-width: calc(100% - vwf(50));
 	margin: 0 auto;
     @include max(md) {
         width: 100%;
@@ -557,6 +560,23 @@ a, button {
     }
 }
 
+.layout-sticky {
+    align-items: flex-start;
+    @include max(md) {
+        align-items: stretch;
+    }
+    &__block {
+        position: sticky;
+        top: vw(128);
+        margin-bottom: vw(25);
+        @include max(md) {
+            position: relative;
+            top: 0;
+            margin-bottom: 0;
+        }
+    }
+}
+
 @keyframes rotateCircle {
 	0% {
 		transform: rotate(0)
@@ -708,7 +728,7 @@ a, button {
         top: 0;
         z-index: 20;
         overflow: hidden;
-        width: 100vw;
+        width: 100%;
         height: 100vh;
         background: $fontBlack;
         @include max(md) {
@@ -732,7 +752,7 @@ a, button {
             position: relative;
             width: 100%;
             left: auto;
-            white-space: wrap;
+            white-space: inherit;
             max-width: 95%;
             font-size: vw2(50);
             font-style: normal;
@@ -759,8 +779,8 @@ a, button {
     &__btn {
         position: absolute;
         bottom: vw(33);
-        left: vw(25);
-        z-index:  20;
+        left: vwf(25);
+        z-index: 20;
         @include max(md) {
             position: relative;
             left: vw2(20); 
@@ -787,6 +807,24 @@ a, button {
             display: block;
             object-fit: cover;
             object-position: center center;
+            &::-webkit-media-controls-panel {
+                display: none !important;
+                -webkit-appearance: none;
+                opacity: 0;
+                visibility: hidden;
+              }
+              &::-webkit-media-controls-play-button {
+                display: none !important;
+                -webkit-appearance: none;
+                opacity: 0;
+                visibility: hidden;
+              }
+              &::-webkit-media-controls-start-playback-button {
+                display: none !important;
+                -webkit-appearance: none;
+                opacity: 0;
+                visibility: hidden;
+              }
         }
     }
 }
@@ -836,6 +874,7 @@ a, button {
                     &:nth-child(1) {
                         padding-bottom: vw(30);
                         @include max(md) {
+                            display: contents;
                             padding-bottom: 0;
                         }
                     }
@@ -860,30 +899,20 @@ a, button {
         }
     }
     &__btn {
-        position: absolute;
-        bottom: -100vh;
-        top: auto;
-        left: vw(25);
+        position: relative;
+        margin-top: auto;
         z-index: 26;
+        transition: none;
         @include max(md) {
-            bottom:vw2(-150);
+            order: 2;
             left: 0;
             top: auto;
-        } 
-        &--start {
-            &.active {
-                display: none;
-            }
         }
-        &--finish {
-            display: none;
-            left: vw(0);
-            top: 0;
-            &.active {
-                display: flex;
-            }
+        &.fixed {
+            position: absolute;
+            left: vwf(30);
         }
-       &:hover {
+        &:hover {
             background-color: $blueHover;
             .btn--box__text {
                 color: $white;
@@ -1085,6 +1114,9 @@ a, button {
                     }
                 }
             }
+        }
+        .layout-sticky__block {
+            margin-bottom: 0;
         }
     }
     &__col {
@@ -2101,6 +2133,7 @@ a, button {
     @include max(md) {
         padding: vw2(20);
         padding-top: vw2(70);
+        max-height: vw2(580);
     }
     &__bg {
         position: absolute;
@@ -2114,6 +2147,9 @@ a, button {
             width: 100%;
             object-fit: cover;
             object-position: center center;
+            @include max(md) {
+                object-position: left center;
+            }
         }
     }
     &__desc {
@@ -2131,8 +2167,8 @@ a, button {
         line-height: 97.228%;
         text-transform: uppercase;
         @include max(md) {
-            font-size: vw2(220);
-            margin-bottom: vw2(40);
+            font-size: vw2(200);
+            margin-bottom: vw2(15);
         }      
     }
     &__subtitle {
@@ -2416,7 +2452,7 @@ a, button {
         @include max(md) {
             min-height: vw2(50);
             padding-right: vw2(20);
-            padding-top: vw2(20);
+            padding-top: vw2(10);
             font-size: vw2(24);
             line-height: 1.2;
         }

@@ -61,7 +61,7 @@
         @include max(md) {
             justify-content: flex-start;
             padding: vw2(20);
-            min-height: vw2(440);
+            min-height: vw2(300);
             padding-bottom: vw2(50);
         }
         &__num {
@@ -83,7 +83,7 @@
             max-width: vw(357);
             text-transform: uppercase;
             @include max(md) {
-                font-size: vw2(50);
+                font-size: vw2(32);
                 width: 100%;
                 max-width: 100%;
             }  

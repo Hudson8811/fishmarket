@@ -26,6 +26,24 @@
             height: 100%;
             object-fit: cover;
             opacity: 0.3;
+            &::-webkit-media-controls-panel {
+                display: none !important;
+                -webkit-appearance: none;
+                opacity: 0;
+                visibility: hidden;
+              }
+              &::-webkit-media-controls-play-button {
+                display: none !important;
+                -webkit-appearance: none;
+                opacity: 0;
+                visibility: hidden;
+              }
+              &::-webkit-media-controls-start-playback-button {
+                display: none !important;
+                -webkit-appearance: none;
+                opacity: 0;
+                visibility: hidden;
+              }
         }
     }
     &__title {
@@ -39,7 +57,7 @@
         z-index: 5;
         text-transform: uppercase;
         @include max(md) {
-            white-space: wrap;
+            white-space: inherit;
             left: vw2(20);
             top: vw2(120);
             font-size: vw2(32);

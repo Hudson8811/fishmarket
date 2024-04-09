@@ -10,8 +10,11 @@
 	}
     &__title {
         color: $fontBlack;
-        margin-top: vw(24);
-
+        margin-top: vw(56);
+        font-size: vw(70);
+        @include max(md) {
+            margin-top: vw2(50);
+        } 
     }
     &__controls {
         display: flex;
@@ -69,6 +72,54 @@
     }
     &__pagination {
         margin-top: vw(152);
+    }
+
+    .related-categories {
+        position: relative;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-flow: column nowrap;
+        width: 100%;
+        margin-bottom: vw(32);
+        margin-top: vw(32);
+        @include max(md) {
+            margin-bottom: vw2(40);
+        }
+        &__title {
+            color: $fontBlack;
+            margin-bottom: vw(21);
+            @include max(md) {
+                margin-bottom: vw2(20);
+            }
+        }
+        &__list {
+            position: relative;
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            flex-flow: row wrap;
+            gap: vw(22) vw(11);
+            width: 100%;
+            max-width: vw(900);
+            @include max(md) {
+                max-width: 100%;
+            }
+        }
+        &__item {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: fit-content;
+            background: $blueLight;
+            padding: vw(12);
+            color: #fff !important;
+            @include max(md) {
+                padding: vw2(10);
+            }
+        }
+
     }
 }
 

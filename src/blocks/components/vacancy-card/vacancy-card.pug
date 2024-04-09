@@ -20,15 +20,15 @@ mixin vacancy-card(props = defaultVacancyCardProps)
     .vacancy-card(class= checkProps.classes)
         a.vacancy-card__link(href="#")
         .vacancy-card__header
-            .vacancy-card__title= checkProps.title
+            .vacancy-card__title!= checkProps.title
             +new-btn({classes: 'vacancy-card__btn'})
         .vacancy-card__city
             svg
                 use(xlink:href=`img/sprites/sprite.svg#header_position`)
-            span= checkProps.city
+            span!= checkProps.city
         - if(checkProps.desc)
             .vacancy-card__desc.text-block!= checkProps.desc
 
-        .vacancy-card__salary= checkProps.salary
+        .vacancy-card__salary!= checkProps.salary
 
 

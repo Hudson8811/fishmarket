@@ -30,6 +30,7 @@
         line-height: 1.09em;
         color: $white;
         margin-bottom: vw(192);
+        margin-left: vw(30);
         text-transform: uppercase;
         @include max(md) {
             max-width: 100%;

@@ -170,6 +170,48 @@ function startAnimation(){
 					});
 				} else {
 
+					gsap.fromTo(".js-about-intro__title", 
+					{
+						y: "60%",
+						opacity: 0
+				
+					},
+					{
+						duration: 0.5,
+						y: '0',
+						opacity: 1,
+						delay: 4,
+						ease: "none",
+					});
+					gsap.fromTo(".js-about-intro__text", 
+					{
+						y: "30%",
+						opacity: 0
+				
+					},
+					{
+						duration: 0.3,
+						delay: 4.4,
+						y: '0',
+						opacity: 1,
+						ease: "none",
+				
+					});
+					gsap.fromTo(".js-about-history__text", 
+					{
+						y: "30%",
+						opacity: 0
+				
+					},
+					{
+						duration: 0.3,
+						delay: 5,
+						y: '0',
+						opacity: 1,
+						ease: "none",
+				
+					});
+
 					//сбрасываем высоту секции
 					aboutEmployeesSection.style.height = 'auto';
 
@@ -314,13 +356,13 @@ function addFooterAnimationDesktop(){
 	animationSelectors.push(".footer__menu");
 
 	mainTimeline.fromTo(".footer__title", {
-			left: "100%",
+			left: "55%",
 		}, {
-			left: "-100%",
+			left: "-70%",
 			duration: 1,
 			ease: "none",
 		},
-		"<-=0.1"
+		"<-=0.5"
 	);
 	animationSelectors.push(".footer__title");
 }
@@ -352,50 +394,40 @@ function homepageAnimationDesktop(){
 	//Убираем класс статики с футера
 	$('.js-footer__animation').removeClass('footer__animation--personally');
 
-
-	let scHeight = $('.main-site').innerHeight();
-	let b6Height =  $('.js-assortment__section').innerHeight();
-	let footerHeight =  $('.js-footer__animation').innerHeight();
-
 	mainTimeline.fromTo(".js-assortment__section", {
 		y: "100vh",
 	}, {
-		y: -1 * (b6Height - scHeight),
-		duration: 1,
+		y: 0,
+		duration: 0.6,
 		ease: "none",
-		onComplete: function () {
-			$('.assortment__btn').addClass('active');
-		},
 	}, "0");
 	animationSelectors.push(".js-assortment__section");
 
-	mainTimeline.fromTo(".js-assortment__section", {
-		y: -1 * (b6Height - scHeight),
-	}, {
-		y: "-100%",
-		duration: 0.8,
-		ease: "none",
-	}, ">");
-
 	mainTimeline.fromTo(".js-assortment__col--2", {
-		y: "23%",
-		top: "23%",
+		y: "65%",
 	}, {
-		top: "0%",
-		y: "0%",
-		duration: 1,
+		y: "-50%",
+		duration: 1.5,
 		ease: "none",
-	}, "<-=0.8");
+	}, "<-=0.1");
 	animationSelectors.push(".js-assortment__col--2");
 
-	mainTimeline.fromTo(".assortment__btn", {
-		bottom: "-100%",
+	mainTimeline.fromTo(".js-assortment__col--3", {
+		y: "65%",
 	}, {
-		bottom: "1.71875vw",
-		duration: 0.5,
-		ease: "power1.out",
-	}, "<-=0.20");
-	animationSelectors.push(".assortment__btn");
+		y: "-60%",
+		duration: 1.5,
+		ease: "none",
+	}, "<");
+	animationSelectors.push(".js-assortment__col--3");
+
+	mainTimeline.fromTo(".js-assortment__section", {
+		y: 0,
+	}, {
+		y: "-100%",
+		duration: 0.6,
+		ease: "none",
+	}, ">");
 
 
 	mainTimeline.fromTo(".hear__section", {
@@ -406,31 +438,26 @@ function homepageAnimationDesktop(){
 		duration: 0.5,
 		opacity: "1",
 		ease: "none",
-	}, "<+=0.53");
+	}, "<-=1");
 	animationSelectors.push(".hear__section");
 
 	mainTimeline.fromTo(".hear__title", {
-		top: "50%",
+		top: "45%",
 		left: "100%",
 	}, {
-		top: "50%",
-		left: "-200%",
+		top: "45%",
+		left: "-165%",
 		duration: 2,
 		ease: "none",
-	}, ">+=0.3");
+	}, ">+=0.6");
 	animationSelectors.push(".hear__title");
 
 	mainTimeline.fromTo(".news__section", {
 		y: "100%",
-		top: "100%",
 	}, {
-		top: "-100%",
 		y: "-100%",
 		duration: 2,
 		ease: "none",
-		onStart: function () {
-			$('.news__btn').addClass('active');
-		},
 	}, "<+=0.6");
 	animationSelectors.push(".news__section");
 
@@ -468,21 +495,19 @@ function homepageAnimationDesktop(){
 	animationSelectors.push(".js-advantage__col--3");
 
 	mainTimeline.fromTo(".js-news__btn", {
-		marginTop: 0,
+		marginTop: "2%",
 	}, {
-		marginTop: "180%",
-		duration: 0.5,
+		marginTop: "130%",
+		duration: 0.45,
 		ease: "none",
-	}, "<+=0.6");
+	}, "<+=0.75");
 	animationSelectors.push(".js-news__btn");
 
 	mainTimeline.fromTo(".js-news__col--2", {
 		y: "10%",
-		top: "10%",
 	}, {
-		top: "-20%",
 		y: "-20%",
-		duration: 2,
+		duration: 1,
 		ease: "none",
 	}, "<-=0.1");
 	animationSelectors.push(".js-news__col--2");
@@ -490,7 +515,7 @@ function homepageAnimationDesktop(){
 	mainTimeline.fromTo(".js-footer__animation", {
 		y: "100%",
 	}, {
-		y: -1 * (footerHeight - scHeight),
+		y: 0,
 		duration: 0.5,
 		ease: "none",
 	}, "<+=0.2");
@@ -508,10 +533,10 @@ function homepageAnimationDesktop(){
 	mainTimeline.fromTo(".footer__title", {
 		left: "55%",
 	}, {
-		left: "-100%",
+		left: "-70%",
 		duration: 1,
 		ease: "none",
-	}, "<+=0.5");
+	}, "<+=0.7");
 	animationSelectors.push(".footer__title");
 }
 
@@ -577,7 +602,7 @@ function careerPageAnimationDesktop() {
 	mainTimeline.fromTo(".footer__title", {
 		left: "55%",
 	}, {
-		left: "-100%",
+		left: "-70%",
 		duration: 1,
 		ease: "none",
 	}, "<+=0.1");
@@ -640,7 +665,7 @@ function teamPageAnimationDesktop() {
 	mainTimeline.fromTo(".footer__title", {
 		left: "55%",
 	}, {
-		left: "-100%",
+		left: "-70%",
 		duration: 1,
 		ease: "none",
 	}, "<+=0.1");
@@ -691,7 +716,7 @@ function productionPageAnimationDesktop() {
 	mainTimeline.fromTo(".footer__title", {
 		left: "55%",
 	}, {
-		left: "-100%",
+		left: "-70%",
 		duration: 1,
 		ease: "none",
 	}, "<+=0.1");
@@ -733,14 +758,11 @@ function aboutPageAnimationDesktop(){
 	//Убираем класс статики с футера
 	$('.js-footer__animation').removeClass('footer__animation--personally');
 
-
-	let scHeight = $('.main-site').innerHeight();
 	let windowHeight = window.innerHeight; 
 	let careerHeight = $('.js-career-section').innerHeight();
 	let teamHeight = $('.js-team-section').innerHeight();	
 	let offerHeight = $('.js-offer-section').innerHeight();
 	let careerOffsetHeight = careerHeight - windowHeight;
-	let footerHeight =  $('.js-footer__animation').innerHeight();
 
 	mainTimeline.fromTo(".js-history-section", {
 		y: "100vh",
@@ -772,7 +794,7 @@ function aboutPageAnimationDesktop(){
 	mainTimeline.fromTo(".js-advantages__title", {
 		x: "100%",
 	}, {
-		x: "-50%",
+		x: "-28%",
 		duration: 1,
 		ease: "none",
 	}, ">");
@@ -896,10 +918,10 @@ function aboutPageAnimationDesktop(){
 	mainTimeline.fromTo(".js-footer__animation", {
 		y: "100%",
 	}, {
-		y: -1 * (footerHeight - scHeight),
+		y: 0,
 		duration: 0,
 		ease: "none",
-	}, ">-=0.54");
+	}, ">-=0.64");
 	animationSelectors.push(".js-footer__animation");
 
 	mainTimeline.fromTo(".footer__menu", {
@@ -912,9 +934,9 @@ function aboutPageAnimationDesktop(){
 	animationSelectors.push(".footer__menu");
 
 	mainTimeline.fromTo(".footer__title", {
-		left: "55%",
+		left: "100%",
 	}, {
-		left: "-100%",
+		left: "-70%",
 		duration: 1,
 		ease: "none",
 	}, "<+=0.5");

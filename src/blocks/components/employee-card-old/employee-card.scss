@@ -1,0 +1,150 @@
+.employee-card {
+    width: 100%;
+    height: vw(640);
+    display: flex;
+    flex-direction: column;
+    padding: vw(26) vw(30) vw(23) vw(25);
+    @include max(md) {
+        width: vw2(400);
+        height: vw2(412);
+        padding: vw2(13) vw2(15) vw2(11) vw2(12);
+    }
+    &__name {
+        font-size: vw(32);
+        font-weight: 500;
+        line-height: 1.1;
+        text-transform: uppercase;
+        @include max(md) {
+            font-size: vw2(24);
+        }
+    }
+    &__position {
+        margin-top: vw(6);
+        font-size: vw(14);
+        font-weight: 600;
+        line-height: 1.22;
+        text-transform: uppercase;
+        @include max(md) {
+            margin-top: vw2(6);
+            font-size: vw2(12);
+        }
+    }
+    &__photo {
+        width: vw(283);
+        min-height: vw(283);
+        align-self: center;
+        margin-top: auto;
+        margin-bottom: auto;
+        border-radius: 100%;
+        overflow: hidden;
+        @include max(md) {
+            width: vw2(181);
+            min-height: vw2(181);
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &__flexblock {
+        margin-top: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    &__phone {
+        .contact__icon {
+            width: vw(15.9);
+            height: vw(14.39);
+            @include max(md) {
+                width: vw2(15.9);
+                height: vw2(14.39);
+            }          
+        }
+    }
+    &__email {
+        .contact__icon {
+            width: vw(17.7);
+            height: vw(12.82);
+            @include max(md) {
+                width: vw2(17.7);
+                height: vw2(12.82);
+            }
+        }
+    }
+    .contact {
+        display: flex;
+        align-items: center;
+        gap: vw(12);
+        @include max(md) {
+            gap: vw2(12);
+        }
+        &__icon {
+            height: vw(33);
+            @include max(md) {
+                height: vw2(33);
+            }
+            svg {
+                max-width: 100%;
+                max-height: 100%;
+            }
+            svg use {
+                fill: $blueLight;
+            }
+        }
+        &__text {
+            font-size: vw(24);
+            font-weight: 400;
+            line-height: 1.375;
+            @include max(md) {
+                font-size: vw2(20);
+            }
+        }
+    }
+    &--blue {
+        background-color: $blueLight;
+        color: $white;
+        .contact {
+            &__icon {
+                svg use {
+                    fill: $white;
+                }
+            }
+        }
+        .new-btn.new-btn--white:hover {
+            background-color: $fontBlack;
+            .new-btn__icon {
+                svg use {
+                    stroke: $white;
+                }
+            }
+        }
+    }
+    &--white {
+        background-color: $white;
+        color: $fontBlack;
+        .employee-card__btn {
+            .new-btn__icon {
+                svg use {
+                    stroke: $white;
+                }
+            }
+        }
+        @include max(md) {
+            border: 1px solid #A8AEB0;
+        }
+    }
+    &--black {
+        background-color: $fontBlack;
+        color: $white;
+        .employee-card__btn {
+            .new-btn__icon {
+                svg use {
+                    stroke: $white;
+                }
+            }
+        }
+    }
+
+}

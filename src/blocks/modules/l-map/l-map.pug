@@ -4,6 +4,7 @@
         isFirst: false,
         desc: false,
         controls: false,
+        cities: false,
         breadcrumbs: {
             classes: '',
             colorMode: 'dark',
@@ -30,6 +31,7 @@ mixin l-map(props = defaultLMapProps)
             isFirst: props.isFirst ? props.isFirst : defaultLMapProps.isFirst,
             desc: props.desc ? props.desc : defaultLMapProps.desc,
             controls: props.controls ? props.controls : defaultLMapProps.controls,
+            cities: props.cities ? props.cities : defaultLMapProps.cities,
             breadcrumbs: props.breadcrumbs ? props.breadcrumbs : defaultLMapProps.breadcrumbs,
         };
 
@@ -40,7 +42,7 @@ mixin l-map(props = defaultLMapProps)
             +breadcrumbs(checkProps.breadcrumbs)
         .l-map__content
             .l-map__left
-                - if(checkProps.controls)
+                - if(checkProps.controls && checkProps.cities)
                     .l-map__cities(data-js='cities')
                         +new-btn({
                             classes: 'l-map__city active',
@@ -65,19 +67,20 @@ mixin l-map(props = defaultLMapProps)
 
             - if(checkProps.controls)
                 .l-map__addresses.active(data-js="lMapAddresses" data-city="moscow")
-                    .l-map__address.map-address.active(data-id='moscowOffice1' data-coords="55.633871,37.453720" data-js='lMapAddress')
+                    .l-map__address.map-address.active(data-id='moscowOffice1' data-coords="55.150972,36.653968" data-js='lMapAddress')
                         .map-address__header
-                            .map-address__title Офис
+                            .map-address__title Производство
                             .map-address__icon 
                                 svg
                                     use(xlink:href=`img/sprites/sprite.svg#header_position`)
                         .map-address__item
                             .map-address__subtitle адрес:
-                            .map-address__text Киевское шоссе, 21-й км, д. 3, стр. 1, Бизнес-центр “G10”
+                            .map-address__text Калужская область, Боровский район, д.Маланьино
                         .map-address__item
                             .map-address__subtitle контакты:
-                            .map-address__text 8 800 000-00-00
+                            .map-address__text +7 (495) 748-86-85 (доб. 204)
                             .map-address__text info@fish.ru
+                            .map-address__text Самовывоз: 8:30–17:00
                     .l-map__address.map-address(data-id='moscowStock1' data-coords="55.150972, 36.653968" data-js='lMapAddress')
                         .map-address__header
                             .map-address__title Склад
@@ -91,6 +94,7 @@ mixin l-map(props = defaultLMapProps)
                             .map-address__subtitle контакты:
                             .map-address__text +7 (495) 748-86-85 (доб. 204)
                             .map-address__text info@fish.ru
+                            .map-address__text Самовывоз: 8:30–17:00
                     .l-map__address.map-address(data-id='moscowStock2' data-coords="55.887932, 37.498914" data-js='lMapAddress')
                         .map-address__header
                             .map-address__title Склад
@@ -99,38 +103,42 @@ mixin l-map(props = defaultLMapProps)
                                     use(xlink:href=`img/sprites/sprite.svg#header_position`)
                         .map-address__item
                             .map-address__subtitle адрес:
-                            .map-address__text Москва, улица Ижорская, д.7, с.1
+                            .map-address__text Калужская область, Боровский район, д.Маланьино
                         .map-address__item
                             .map-address__subtitle контакты:
-                            .map-address__text +7 (925) 480-18-48
+                            .map-address__text +7 (495) 748-86-85 (доб. 204)
                             .map-address__text info@fish.ru
+                            .map-address__text Самовывоз: 8:30–17:00
 
-                .l-map__addresses(data-js="lMapAddresses" data-city="kaliningrad")
-                    .l-map__address.map-address(data-id='kaliningradStock1' data-coords="54.732777, 20.595486" data-js='lMapAddress')
-                        .map-address__header
-                            .map-address__title Склад
-                            .map-address__icon 
-                                svg
-                                    use(xlink:href=`img/sprites/sprite.svg#header_position`)
-                        .map-address__item
-                            .map-address__subtitle адрес:
-                            .map-address__text Мелиоративная улица, 5Б
-                        .map-address__item
-                            .map-address__subtitle контакты:
-                            .map-address__text 8 800 000-00-00
-                            .map-address__text info@fish.ru
-                    .l-map__address.map-address.active(data-id='kaliningradOffice1' data-coords="54.668160, 20.427968" data-js='lMapAddress')
-                        .map-address__header
-                            .map-address__title Офис
-                            .map-address__icon 
-                                svg
-                                    use(xlink:href=`img/sprites/sprite.svg#header_position`)
-                        .map-address__item
-                            .map-address__subtitle адрес:
-                            .map-address__text Тепличная улица, 1
-                        .map-address__item
-                            .map-address__subtitle контакты:
-                            .map-address__text 8 800 000-00-00
-                            .map-address__text info@fish.ru                
+                - if(checkProps.cities)
+                    .l-map__addresses(data-js="lMapAddresses" data-city="kaliningrad")
+                        .l-map__address.map-address(data-id='kaliningradStock1' data-coords="54.732777, 20.595486" data-js='lMapAddress')
+                            .map-address__header
+                                .map-address__title Склад
+                                .map-address__icon 
+                                    svg
+                                        use(xlink:href=`img/sprites/sprite.svg#header_position`)
+                            .map-address__item
+                                .map-address__subtitle адрес:
+                                .map-address__text Калужская область, Боровский район, д.Маланьино
+                            .map-address__item
+                                .map-address__subtitle контакты:
+                                .map-address__text 8 800 000-00-00
+                                .map-address__text info@fish.ru
+                                .map-address__text Самовывоз: 8:30–17:00
+                        .l-map__address.map-address.active(data-id='kaliningradOffice1' data-coords="54.668160, 20.427968" data-js='lMapAddress')
+                            .map-address__header
+                                .map-address__title Производство
+                                .map-address__icon 
+                                    svg
+                                        use(xlink:href=`img/sprites/sprite.svg#header_position`)
+                            .map-address__item
+                                .map-address__subtitle адрес:
+                                .map-address__text Калужская область, Боровский район, д.Маланьино
+                            .map-address__item
+                                .map-address__subtitle контакты:
+                                .map-address__text 8 800 000-00-00
+                                .map-address__text info@fish.ru   
+                                .map-address__text Самовывоз: 8:30–17:00             
 
         .l-map__map(data-js="lMap")

@@ -122,7 +122,7 @@
             display: block;
         }
         @include max(md) {
-            flex-basis: vw2(200);
+            flex-basis: vw2(220);
         }
     }
     &__address:not(:last-child) {
@@ -147,17 +147,18 @@
             }
         }
         &__title {
-            margin-top: vw(4);
             font-size: vw(30);
             font-weight: 500;
             line-height: 1.09;
             text-transform: uppercase;
             @include max(md) {
-                margin-top: vw2(4);
-                font-size: vw2(20);
+                font-size: vw2(18);
             }
         }
         &__icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
             width: vw(28);
             height: vw(35);
             @include max(md) {
@@ -222,13 +223,13 @@
 
 .l-map.l-map--first {
     padding-top: vw(115);
-    height: vw(915);
+    height: vw(860);
     @include max(md) {
         height: vw2(520);
         padding-top: vw2(90);
     }
     .l-map__content {
-        padding-top: vw(39);
+        padding-top: vw(30);
         @include max(md) {
             padding-top: vw2(20);
         }

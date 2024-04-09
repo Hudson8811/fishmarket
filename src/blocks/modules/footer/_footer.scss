@@ -6,54 +6,46 @@
 	width: 100%;
 	max-width: 100%;
 	overflow-x: hidden;
-	height: calc(100vh - vw(90));
-	background: #07171D;
+	height: calc(100vh - vw(70));
+	background-color: #07171D;
+	background-image: url('../img/footer__bg.png');
+	background-position: left bottom;
+	background-repeat: repeat-x;
 	z-index: 30;
 	&__animation {
 		position: absolute;
-		top: vw(90);
+		top: vw(70);
 		@include max(md) {
 			position: relative;
 			flex-flow: column nowrap;
 			width: 100vw;
 			height: auto;
 			height: 100%;
+			top: 0
 		}
 		&--personally {
 			top: auto;
 			height: calc(100vh - vw(00));
 			position: relative;
 			flex-flow: column nowrap;
-			width: 100vw;
+			width: 100%;
 			@include max(md) {
 				height: 100%;
 			}
 			.footer__menu {
 				height: calc(100vh - vw(00));
-				padding-top: vw(127);
+				padding-top: vw(96);
 				@include max(md) {
 					padding: vw2(20);
 					height: 100%;
 				}
 			}
 			.footer__logo {
-				top: vw(137);
+				top: vw(100);
 			}
-		}
-	}
-	&__bg  {
-		position: absolute;
-		left: 0;
-		bottom: 0;
-		z-index: 5;
-		width: vw(1456);
-		@include max(md) {
-			display: none;
-		}
-		img {
-			position: relative;
-			display: block;
-			width: 100%;
+			.footer__title{
+				top: calc(50% - vw(135));
+			}
 		}
 	}
 	&__title{
@@ -67,7 +59,7 @@
 			position: relative;
 			top: auto;
 			left: auto;
-			white-space: wrap;
+			white-space: inherit;
 			width: 100%;
 			max-width: 95%;
 			font-size: vw2(50);
@@ -84,15 +76,30 @@
 		top: 0;
 		right: -100%;
 		width: vw(473);
-		height: calc(100vh - vw(90));
+		height: calc(100vh - vw(70));
 		display: flex;
 		justify-content: flex-start;
 		align-items: flex-start;
 		flex-flow: column nowrap;
-		padding: vw(40) vw(37);
+		padding: vw(25) vw(37);
 		padding-bottom: vw(25);
 		background: #fff;
 		z-index: 900;
+		overflow-y: auto;
+		scrollbar-width: thin;
+        scrollbar-color: #99c4d3 rgba(0, 0, 0, 0);
+        &::-webkit-scrollbar {
+            height: 2px;
+            width: 2px;
+        }
+        &::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0);
+        }
+        &::-webkit-scrollbar-thumb {
+            background-color: #99c4d3;
+            border-radius: 10px;
+            border: none;
+        }
 		@include max(md) {
 			position: relative;
 			right: auto;
@@ -112,7 +119,7 @@
 			width: 100%;
 			border-top: 1px solid rgba(0, 0, 0, 0.2);
 			padding-top: vw(26);
-			margin-bottom: vw(45);
+			margin-bottom: vw(30);
 			list-style-type: none;
 			&__item {
 				position: relative;
@@ -174,11 +181,87 @@
 				}			
 			}
 		}
+		&__contacts {
+			margin-top: auto;
+			&.footer-cotacts {
+				width: 100%;
+				display: flex;
+				justify-content: space-between;
+				@include max(md) {
+					margin-top: vw2(25);
+				}
+				.footer-cotacts__social {
+					display: flex;
+					align-items: center;
+					gap: vw(18);
+					@include max(md) {
+						gap: vw2(18);
+					}
+					.new-btn {
+						width: vwf(20);
+						height: vwf(20);
+						@include max(md) {
+							width: vw2(30);
+							height: vw2(30);
+						}
+						&__icon {
+							width: vwf(20);
+							height: vwf(20);
+							@include max(md) {
+								width: vw2(30);
+								height: vw2(30);
+							}
+						}
+						svg {
+							width: 100%;
+							height: 100%;
+							use {
+								fill: $fontBlack;
+								stroke: none;
+								@include max(md) {
+									fill: $white;
+								}
+							}
+						}
+						&:hover {
+							svg {
+								use {
+									fill: $blueLight;
+									stroke: none;
+								}
+							}
+						}
+					}
+				}
+				.footer-cotacts__contacts {
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					gap: vw(9);
+					a {
+						font-size: vw(12);
+						font-weight: 600;
+						line-height: 1.25;
+						color: $fontBlack;
+						text-transform: uppercase;
+						text-decoration: none;
+						@include max(md) {
+							text-align: start;
+							font-size: vw2(18);
+							color: $white;
+						}
+						&:hover {
+							color: $blueLight;
+						}
+					}
+				}
+			}
+		}
 	}
 	&__btn {
 		position: absolute;
 		bottom: vw(33);
-		left: vw(25);
+		left: vwf(25);
 		z-index:  20;
 		@include max(md) {
 			position: relative;
@@ -193,7 +276,7 @@
 	&__logo  {
 		position: absolute;
 		top: vw(30);
-		left: vw(20);
+		left: vwf(25);
 		display: block;
 		width: vw(153);
 		@include max(md) {
