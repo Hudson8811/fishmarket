@@ -29,6 +29,9 @@
             margin-top: vw2(40);
             max-width: 100%;
         }
+        .slider-photo__thumbs {
+            display: none;
+        }
     }
     &__info {
         flex-basis: vw(917);

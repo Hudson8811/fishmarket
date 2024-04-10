@@ -14,7 +14,7 @@
 	}
 	&__img {
 		width: 100%;
-		height: vw(532);
+		height: vw(500);
         @include max(md) {
             height: vw2(400);
         }
@@ -25,7 +25,6 @@
 		}
 	}
 	&__thumbs {
-        display: none;
 		position: relative;
 		margin-top: vw(50);
 		height: vw(114);
@@ -40,7 +39,6 @@
 		}
 	}
 	&__thumb {
-        display: none;
 		height: 100%;
 		width: vw(114);
 		cursor: pointer;
