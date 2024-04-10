@@ -610,8 +610,8 @@ a, button {
     &__section {
         z-index: 5;
 		@include max(md) {
-			margin-top: vw2(70);	
-			height: calc(100vh - vw2(70));
+			margin-top: vw2(68);	
+			height: calc(100vh - vw2(68));
             max-height: vw2(600);
 		}
     }

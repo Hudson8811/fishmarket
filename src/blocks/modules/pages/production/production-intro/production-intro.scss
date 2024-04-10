@@ -36,6 +36,9 @@
     }
 
     &__text {
+        display: flex;
+        flex-direction: column;
+        gap: vw(20);
         margin-top: vw(30);
         max-width: vw(657);
         font-size: vw(32);
@@ -48,6 +51,7 @@
             margin-top: vw2(50);
             font-size: vw2(40);
             font-size: vw2(24);
+            gap: vw2(15);
         } 
     }
 }
