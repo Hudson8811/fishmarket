@@ -1,0 +1,13 @@
+.personal-data{
+    min-height: 100vh;
+    padding-top: vw(114);
+    padding-bottom: vw(40);
+    .layout-sidebar {
+        margin-top: vw(60);
+    }
+    &__content {
+        display: flex;
+        align-items: flex-start;
+        gap: vw(55);
+    }
+}

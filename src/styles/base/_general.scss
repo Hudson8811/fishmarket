@@ -2804,3 +2804,21 @@ a, button {
         }
     }
 }
+
+.layout-sidebar {
+    display: flex;
+    align-items: flex-start;
+    &__sidebar {
+        position: sticky;
+        top: vw(114);
+        flex-basis: vw(412);
+        flex-shrink: 0;
+        flex-grow: 0;
+        padding-top: vw(8);
+    }
+    &__content {
+        flex-basis: auto;
+        flex-shrink: 1;
+        flex-grow: 1;
+    }
+}

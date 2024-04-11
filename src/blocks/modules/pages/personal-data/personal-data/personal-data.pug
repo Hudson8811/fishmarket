@@ -1,0 +1,89 @@
+include ../../../../components/new-btn/new-btn
+include ../../../../components/breadcrumbs/breadcrumbs.pug
+include ../../../../components/title/title.pug
+include ../../../lk-sidebar/lk-sidebar.pug
+
+section.personal-data
+    .container
+        +breadcrumbs({
+            classes: 'questions__breadcrumbs',
+            items: [
+                {
+                    name: 'Главная',
+                    link: '#'
+                },
+                {
+                    name: 'Личный кабинет',
+                    link: '#'
+                },
+                {
+                    name: 'Персональные данные',
+                    link: '#'
+                }
+            ]
+        })
+        .layout-sidebar
+            .layout-sidebar__sidebar
+                +lk-sidebar()
+            .layout-sidebar__content
+                .personal-data__content 
+                    form(action="#").contacts__form.personal-data__form
+                        .personal-data__title Личные данные
+                        .contacts__form__input-block
+                            input(type="text" name="").contacts__form__input.js-mask-name.text__13
+                            .contacts__form__input-block__name 	Фамилия контактного лица
+                            .contacts__form__input-block__error Некорректная фамилия
+                        .contacts__form__input-block
+                            input(type="text" name="").contacts__form__input.js-mask-name.text__13
+                            .contacts__form__input-block__name 	Имя контактного лица
+                            .contacts__form__input-block__error Некорректная имя
+                        .contacts__form__input-block
+                            input(type="text" name="").contacts__form__input.js-mask-name.text__13
+                            .contacts__form__input-block__name 	Отчество контактного лица
+                            .contacts__form__input-block__error Некорректное отчество
+                        .only-entity 
+                            .personal-data__title Реквизиты компании
+                            .contacts__form__input-block
+                                input(type="text" name="").contacts__form__input.js-mask-name.text__13
+                                .contacts__form__input-block__name 	Название компании
+                                .contacts__form__input-block__error Обязательное поле                    
+                            .contacts__form__input-block
+                                input(type="text" name="").contacts__form__input.js-mask-name.text__13
+                                .contacts__form__input-block__name 	ИНН
+                                .contacts__form__input-block__error Некорректный ИНН
+                            .contacts__form__input-block
+                                input(type="text" name="").contacts__form__input.js-mask-name.text__13
+                                .contacts__form__input-block__name 	КПП
+                                .contacts__form__input-block__error Некорректный КПП                        
+                            .contacts__form__input-block                  
+                                input(type="email" name="").contacts__form__input.text__13
+                                .contacts__form__input-block__name E-mail
+                                .contacts__form__input-block__error Некорректная почта
+                            .contacts__form__input-block
+                                input(type="tel" name="").contacts__form__input.js-mask-phone
+                                .contacts__form__input-block__name Телефон
+                                .contacts__form__input-block__error Некорректный телефон
+                                    button.btn.mob-menu__question__bottom(type='submit')
+                        +new-btn({
+                            tag: 'button',
+                            buttonType: 'submit',
+                            vMode: 'small',
+                            text: 'Сохранить',
+                        })
+
+                    form(action="#").contacts__form.personal-data__form
+                        .personal-data__title Изменение пароля
+                        .contacts__form__input-block
+                            input(type="password" name="").contacts__form__input.text__13
+                            .contacts__form__input-block__name Новый пароль
+                            .contacts__form__input-block__error Некорректный пароль
+                        .contacts__form__input-block
+                            input(type="password" name="").contacts__form__input.text__13
+                            .contacts__form__input-block__name Новый пароль ещё раз
+                            .contacts__form__input-block__error Пароли не совпадают
+                        +new-btn({
+                            tag: 'button',
+                            buttonType: 'submit',
+                            vMode: 'small',
+                            text: 'Сохранить изменения',
+                        })                        

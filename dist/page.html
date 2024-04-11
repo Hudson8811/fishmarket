@@ -299,7 +299,7 @@
               <div class="swiper-slide login-area__slide">
                 <form class="contacts__form" action="#">
                   <div class="contacts__form__content">
-                    <div class="contacts__form__title">Авторизация</div>
+                    <div class="login-area__title">Авторизация</div>
                     <div class="contacts__form__input-block">
                       <input class="contacts__form__input text__13" type="email" name="">
                       <div class="contacts__form__input-block__name">Логин</div>
@@ -311,8 +311,8 @@
                       <div class="contacts__form__input-block__error">Некорректный пароль</div>
                     </div>
                   </div>
-                  <button class="mob-menu__question__bottom" type="submit">
-                    <div class="mob-menu__question__bottom__text">Отправить</div>
+                  <button class="btn mob-menu__question__bottom" type="submit">
+                    <div class="mob-menu__question__bottom__text">Авторизоваться</div>
                     <div class="mob-menu__question__bottom__row">
                       <svg>
                         <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
@@ -321,97 +321,128 @@
                   </button>
                 </form>
               </div>
-              <div class="swiper-slide login-area__slide">
-                <form class="contacts__form registration-entity" action="#">
-                  <div class="contacts__form__content">
-                    <div class="contacts__form__title">Регистрация</div>
-                    <div class="contacts__form__input-block">
-                      <input class="contacts__form__input js-mask-name text__13" type="text" name="">
-                      <div class="contacts__form__input-block__name">	ИНН Организации</div>
-                      <div class="contacts__form__input-block__error">Некорректный ИНН</div>
-                    </div>
-                    <div class="contacts__form__input-block">
-                      <input class="contacts__form__input js-mask-name text__13" type="text" name="">
-                      <div class="contacts__form__input-block__name">	Фамилия контактного лица</div>
-                      <div class="contacts__form__input-block__error">Некорректная фамилия</div>
-                    </div>
-                    <div class="contacts__form__input-block">
-                      <input class="contacts__form__input js-mask-name text__13" type="text" name="">
-                      <div class="contacts__form__input-block__name">	Имя контактного лица</div>
-                      <div class="contacts__form__input-block__error">Некорректная имя</div>
-                    </div>
-                    <div class="contacts__form__input-block">
-                      <input class="contacts__form__input js-mask-name text__13" type="text" name="">
-                      <div class="contacts__form__input-block__name">	Отчество контактного лица</div>
-                      <div class="contacts__form__input-block__error">Некорректное отчество</div>
-                    </div>
-                    <div class="contacts__form__input-block">
-                      <input class="contacts__form__input js-mask-name text__13" type="text" name="">
-                      <div class="contacts__form__input-block__name">	Отчество контактного лица</div>
-                      <div class="contacts__form__input-block__error">Некорректное отчество</div>
-                    </div>
-                    <div class="contacts__form__input-block">                 
-                      <input class="contacts__form__input text__13" type="email" name="">
-                      <div class="contacts__form__input-block__name">Почта контактного лица</div>
-                      <div class="contacts__form__input-block__error">Некорректная почта</div>
-                    </div>
-                    <div class="contacts__form__input-block">
-                      <input class="contacts__form__input js-mask-phone" type="tel" name="">
-                      <div class="contacts__form__input-block__name">Телефон контактного лица</div>
-                      <div class="contacts__form__input-block__error">Некорректный телефон</div>
-                    </div>
-                    <div class="contacts__form__input-block">
-                      <input class="contacts__form__input text__13" type="password" name="">
-                      <div class="contacts__form__input-block__name">Пароль</div>
-                      <div class="contacts__form__input-block__error">Некорректный пароль</div>
-                    </div>
-                    <div class="contacts__form__input-block">
-                      <input class="contacts__form__input text__13" type="password" name="">
-                      <div class="contacts__form__input-block__name">Подтверждение пароля</div>
-                      <div class="contacts__form__input-block__error">Пароли не совпадают</div>
+              <div class="swiper-slide login-area__slide registration-area">
+                <div class="registration-area__slider" data-js="registrationAreaSlider">
+                  <div class="registration-area__top active" data-js="registrationAreaTop">
+                    <div class="registration-area__title">Регистрация</div>
+                    <div class="registration-area__subtitle">Тип клиента</div>
+                    <div class="registration-area__controls">
+                      <div class="registration-area__control active" data-js="registrationAreaTo1">Юр. лицо</div>
+                      <div class="registration-area__control" data-js="registrationAreaTo2">Физ. лицо</div>
                     </div>
                   </div>
-                  <button class="mob-menu__question__bottom" type="submit">
-                    <div class="mob-menu__question__bottom__text">Зарегистрироваться</div>
-                    <div class="mob-menu__question__bottom__row">
-                      <svg>
-                        <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
-                      </svg>
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide registration-area__slide">
+                      <form class="contacts__form registration-entity" action="#">
+                        <div class="contacts__form__content">
+                          <div class="contacts__form__input-block">
+                            <input class="contacts__form__input js-mask-name text__13" type="text" name="">
+                            <div class="contacts__form__input-block__name">	ИНН Организации</div>
+                            <div class="contacts__form__input-block__error">Некорректный ИНН</div>
+                          </div>
+                          <div class="contacts__form__input-block">
+                            <input class="contacts__form__input js-mask-name text__13" type="text" name="">
+                            <div class="contacts__form__input-block__name">	КПП Организации</div>
+                            <div class="contacts__form__input-block__error">Некорректный КПП                        </div>
+                          </div>
+                          <div class="contacts__form__input-block">
+                            <input class="contacts__form__input js-mask-name text__13" type="text" name="">
+                            <div class="contacts__form__input-block__name">	Фамилия контактного лица</div>
+                            <div class="contacts__form__input-block__error">Некорректная фамилия</div>
+                          </div>
+                          <div class="contacts__form__input-block">
+                            <input class="contacts__form__input js-mask-name text__13" type="text" name="">
+                            <div class="contacts__form__input-block__name">	Имя контактного лица</div>
+                            <div class="contacts__form__input-block__error">Некорректная имя</div>
+                          </div>
+                          <div class="contacts__form__input-block">
+                            <input class="contacts__form__input js-mask-name text__13" type="text" name="">
+                            <div class="contacts__form__input-block__name">	Отчество контактного лица</div>
+                            <div class="contacts__form__input-block__error">Некорректное отчество</div>
+                          </div>
+                          <div class="contacts__form__input-block">                 
+                            <input class="contacts__form__input text__13" type="email" name="">
+                            <div class="contacts__form__input-block__name">Почта контактного лица</div>
+                            <div class="contacts__form__input-block__error">Некорректная почта</div>
+                          </div>
+                          <div class="contacts__form__input-block">
+                            <input class="contacts__form__input js-mask-phone" type="tel" name="">
+                            <div class="contacts__form__input-block__name">Телефон контактного лица</div>
+                            <div class="contacts__form__input-block__error">Некорректный телефон</div>
+                          </div>
+                          <div class="contacts__form__input-block">
+                            <input class="contacts__form__input text__13" type="password" name="">
+                            <div class="contacts__form__input-block__name">Пароль</div>
+                            <div class="contacts__form__input-block__error">Некорректный пароль</div>
+                          </div>
+                          <div class="contacts__form__input-block">
+                            <input class="contacts__form__input text__13" type="password" name="">
+                            <div class="contacts__form__input-block__name">Подтверждение пароля</div>
+                            <div class="contacts__form__input-block__error">Пароли не совпадают</div>
+                          </div>
+                        </div>
+                        <button class="btn mob-menu__question__bottom" type="submit">
+                          <div class="mob-menu__question__bottom__text">Зарегистрироваться</div>
+                          <div class="mob-menu__question__bottom__row">
+                            <svg>
+                              <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
+                            </svg>
+                          </div>
+                        </button>
+                      </form>
                     </div>
-                  </button>
-                </form>
-                <form class="contacts__form registration-individual" action="#">
-                  <div class="contacts__form__title">Регистрация</div>
-                  <div class="contacts__form__input-block">
-                    <textarea class="contacts__form__input text__13" name=""></textarea>
-                    <div class="contacts__form__input-block__name">Комментарий / Сопроводительное письмо</div>
-                    <div class="contacts__form__input-block__error"></div>
-                  </div>
-                  <div class="contacts__form__input-block">
-                    <div class="input-file-row">
-                      <label class="input-file">
-                        <input type="file" name="file[]" multiple><span>Выберите файл</span>
-                      </label>
-                      <div class="input-file-list"> </div>
+                    <div class="swiper-slide registration-area__slide">
+                      <form class="contacts__form registration-individual" action="#">
+                        <div class="contacts__form__content">
+                          <div class="contacts__form__input-block">
+                            <input class="contacts__form__input js-mask-name text__13" type="text" name="">
+                            <div class="contacts__form__input-block__name">	Фамилия</div>
+                            <div class="contacts__form__input-block__error">Некорректная фамилия</div>
+                          </div>
+                          <div class="contacts__form__input-block">
+                            <input class="contacts__form__input js-mask-name text__13" type="text" name="">
+                            <div class="contacts__form__input-block__name">	Имя</div>
+                            <div class="contacts__form__input-block__error">Некорректная имя</div>
+                          </div>
+                          <div class="contacts__form__input-block">
+                            <input class="contacts__form__input js-mask-name text__13" type="text" name="">
+                            <div class="contacts__form__input-block__name">	Отчество</div>
+                            <div class="contacts__form__input-block__error">Некорректное отчество</div>
+                          </div>
+                          <div class="contacts__form__input-block">                 
+                            <input class="contacts__form__input text__13" type="email" name="">
+                            <div class="contacts__form__input-block__name">Почта</div>
+                            <div class="contacts__form__input-block__error">Некорректная почта</div>
+                          </div>
+                          <div class="contacts__form__input-block">
+                            <input class="contacts__form__input js-mask-phone" type="tel" name="">
+                            <div class="contacts__form__input-block__name">Телефон</div>
+                            <div class="contacts__form__input-block__error">Некорректный телефон</div>
+                          </div>
+                          <div class="contacts__form__input-block">
+                            <input class="contacts__form__input text__13" type="password" name="">
+                            <div class="contacts__form__input-block__name">Пароль</div>
+                            <div class="contacts__form__input-block__error">Некорректный пароль</div>
+                          </div>
+                          <div class="contacts__form__input-block">
+                            <input class="contacts__form__input text__13" type="password" name="">
+                            <div class="contacts__form__input-block__name">Подтверждение пароля</div>
+                            <div class="contacts__form__input-block__error">Пароли не совпадают</div>
+                          </div>
+                        </div>
+                        <button class="btn mob-menu__question__bottom" type="submit">
+                          <div class="mob-menu__question__bottom__text">Зарегистрироваться</div>
+                          <div class="mob-menu__question__bottom__row">
+                            <svg>
+                              <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
+                            </svg>
+                          </div>
+                        </button>
+                      </form>
                     </div>
+                    <div class="swiper-slide registration-area__slide"></div>
                   </div>
-                  <div class="contacts__form__personal-data contacts__form__input-block error"> 
-                    <div class="checkbox">
-                      <label>
-                        <input class="custom-checkbox" type="checkbox" name="personal-data" value="indigo">Согласие на обработку персональных данных
-                      </label>
-                    </div>
-                    <div class="contacts__form__input-block__error">обязательно нужно согласиться</div>
-                  </div>
-                  <div class="mob-menu__question__bottom">
-                    <div class="mob-menu__question__bottom__text">Зарегистрироваться</div>
-                    <div class="mob-menu__question__bottom__row">
-                      <svg>
-                        <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
-                      </svg>
-                    </div>
-                  </div>
-                </form>
+                </div>
               </div>
             </div>
           </div>
@@ -775,7 +806,7 @@
                 <div class="swiper-slide login-area__slide">
                   <form class="contacts__form" action="#">
                     <div class="contacts__form__content">
-                      <div class="contacts__form__title">Авторизация</div>
+                      <div class="login-area__title">Авторизация</div>
                       <div class="contacts__form__input-block">
                         <input class="contacts__form__input text__13" type="email" name="">
                         <div class="contacts__form__input-block__name">Логин</div>
@@ -787,8 +818,8 @@
                         <div class="contacts__form__input-block__error">Некорректный пароль</div>
                       </div>
                     </div>
-                    <button class="mob-menu__question__bottom" type="submit">
-                      <div class="mob-menu__question__bottom__text">Отправить</div>
+                    <button class="btn mob-menu__question__bottom" type="submit">
+                      <div class="mob-menu__question__bottom__text">Авторизоваться</div>
                       <div class="mob-menu__question__bottom__row">
                         <svg>
                           <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
@@ -797,97 +828,128 @@
                     </button>
                   </form>
                 </div>
-                <div class="swiper-slide login-area__slide">
-                  <form class="contacts__form registration-entity" action="#">
-                    <div class="contacts__form__content">
-                      <div class="contacts__form__title">Регистрация</div>
-                      <div class="contacts__form__input-block">
-                        <input class="contacts__form__input js-mask-name text__13" type="text" name="">
-                        <div class="contacts__form__input-block__name">	ИНН Организации</div>
-                        <div class="contacts__form__input-block__error">Некорректный ИНН</div>
-                      </div>
-                      <div class="contacts__form__input-block">
-                        <input class="contacts__form__input js-mask-name text__13" type="text" name="">
-                        <div class="contacts__form__input-block__name">	Фамилия контактного лица</div>
-                        <div class="contacts__form__input-block__error">Некорректная фамилия</div>
-                      </div>
-                      <div class="contacts__form__input-block">
-                        <input class="contacts__form__input js-mask-name text__13" type="text" name="">
-                        <div class="contacts__form__input-block__name">	Имя контактного лица</div>
-                        <div class="contacts__form__input-block__error">Некорректная имя</div>
-                      </div>
-                      <div class="contacts__form__input-block">
-                        <input class="contacts__form__input js-mask-name text__13" type="text" name="">
-                        <div class="contacts__form__input-block__name">	Отчество контактного лица</div>
-                        <div class="contacts__form__input-block__error">Некорректное отчество</div>
-                      </div>
-                      <div class="contacts__form__input-block">
-                        <input class="contacts__form__input js-mask-name text__13" type="text" name="">
-                        <div class="contacts__form__input-block__name">	Отчество контактного лица</div>
-                        <div class="contacts__form__input-block__error">Некорректное отчество</div>
-                      </div>
-                      <div class="contacts__form__input-block">                 
-                        <input class="contacts__form__input text__13" type="email" name="">
-                        <div class="contacts__form__input-block__name">Почта контактного лица</div>
-                        <div class="contacts__form__input-block__error">Некорректная почта</div>
-                      </div>
-                      <div class="contacts__form__input-block">
-                        <input class="contacts__form__input js-mask-phone" type="tel" name="">
-                        <div class="contacts__form__input-block__name">Телефон контактного лица</div>
-                        <div class="contacts__form__input-block__error">Некорректный телефон</div>
-                      </div>
-                      <div class="contacts__form__input-block">
-                        <input class="contacts__form__input text__13" type="password" name="">
-                        <div class="contacts__form__input-block__name">Пароль</div>
-                        <div class="contacts__form__input-block__error">Некорректный пароль</div>
-                      </div>
-                      <div class="contacts__form__input-block">
-                        <input class="contacts__form__input text__13" type="password" name="">
-                        <div class="contacts__form__input-block__name">Подтверждение пароля</div>
-                        <div class="contacts__form__input-block__error">Пароли не совпадают</div>
+                <div class="swiper-slide login-area__slide registration-area">
+                  <div class="registration-area__slider" data-js="registrationAreaSlider">
+                    <div class="registration-area__top active" data-js="registrationAreaTop">
+                      <div class="registration-area__title">Регистрация</div>
+                      <div class="registration-area__subtitle">Тип клиента</div>
+                      <div class="registration-area__controls">
+                        <div class="registration-area__control active" data-js="registrationAreaTo1">Юр. лицо</div>
+                        <div class="registration-area__control" data-js="registrationAreaTo2">Физ. лицо</div>
                       </div>
                     </div>
-                    <button class="mob-menu__question__bottom" type="submit">
-                      <div class="mob-menu__question__bottom__text">Зарегистрироваться</div>
-                      <div class="mob-menu__question__bottom__row">
-                        <svg>
-                          <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
-                        </svg>
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide registration-area__slide">
+                        <form class="contacts__form registration-entity" action="#">
+                          <div class="contacts__form__content">
+                            <div class="contacts__form__input-block">
+                              <input class="contacts__form__input js-mask-name text__13" type="text" name="">
+                              <div class="contacts__form__input-block__name">	ИНН Организации</div>
+                              <div class="contacts__form__input-block__error">Некорректный ИНН</div>
+                            </div>
+                            <div class="contacts__form__input-block">
+                              <input class="contacts__form__input js-mask-name text__13" type="text" name="">
+                              <div class="contacts__form__input-block__name">	КПП Организации</div>
+                              <div class="contacts__form__input-block__error">Некорректный КПП                        </div>
+                            </div>
+                            <div class="contacts__form__input-block">
+                              <input class="contacts__form__input js-mask-name text__13" type="text" name="">
+                              <div class="contacts__form__input-block__name">	Фамилия контактного лица</div>
+                              <div class="contacts__form__input-block__error">Некорректная фамилия</div>
+                            </div>
+                            <div class="contacts__form__input-block">
+                              <input class="contacts__form__input js-mask-name text__13" type="text" name="">
+                              <div class="contacts__form__input-block__name">	Имя контактного лица</div>
+                              <div class="contacts__form__input-block__error">Некорректная имя</div>
+                            </div>
+                            <div class="contacts__form__input-block">
+                              <input class="contacts__form__input js-mask-name text__13" type="text" name="">
+                              <div class="contacts__form__input-block__name">	Отчество контактного лица</div>
+                              <div class="contacts__form__input-block__error">Некорректное отчество</div>
+                            </div>
+                            <div class="contacts__form__input-block">                 
+                              <input class="contacts__form__input text__13" type="email" name="">
+                              <div class="contacts__form__input-block__name">Почта контактного лица</div>
+                              <div class="contacts__form__input-block__error">Некорректная почта</div>
+                            </div>
+                            <div class="contacts__form__input-block">
+                              <input class="contacts__form__input js-mask-phone" type="tel" name="">
+                              <div class="contacts__form__input-block__name">Телефон контактного лица</div>
+                              <div class="contacts__form__input-block__error">Некорректный телефон</div>
+                            </div>
+                            <div class="contacts__form__input-block">
+                              <input class="contacts__form__input text__13" type="password" name="">
+                              <div class="contacts__form__input-block__name">Пароль</div>
+                              <div class="contacts__form__input-block__error">Некорректный пароль</div>
+                            </div>
+                            <div class="contacts__form__input-block">
+                              <input class="contacts__form__input text__13" type="password" name="">
+                              <div class="contacts__form__input-block__name">Подтверждение пароля</div>
+                              <div class="contacts__form__input-block__error">Пароли не совпадают</div>
+                            </div>
+                          </div>
+                          <button class="btn mob-menu__question__bottom" type="submit">
+                            <div class="mob-menu__question__bottom__text">Зарегистрироваться</div>
+                            <div class="mob-menu__question__bottom__row">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
+                              </svg>
+                            </div>
+                          </button>
+                        </form>
                       </div>
-                    </button>
-                  </form>
-                  <form class="contacts__form registration-individual" action="#">
-                    <div class="contacts__form__title">Регистрация</div>
-                    <div class="contacts__form__input-block">
-                      <textarea class="contacts__form__input text__13" name=""></textarea>
-                      <div class="contacts__form__input-block__name">Комментарий / Сопроводительное письмо</div>
-                      <div class="contacts__form__input-block__error"></div>
-                    </div>
-                    <div class="contacts__form__input-block">
-                      <div class="input-file-row">
-                        <label class="input-file">
-                          <input type="file" name="file[]" multiple><span>Выберите файл</span>
-                        </label>
-                        <div class="input-file-list"> </div>
+                      <div class="swiper-slide registration-area__slide">
+                        <form class="contacts__form registration-individual" action="#">
+                          <div class="contacts__form__content">
+                            <div class="contacts__form__input-block">
+                              <input class="contacts__form__input js-mask-name text__13" type="text" name="">
+                              <div class="contacts__form__input-block__name">	Фамилия</div>
+                              <div class="contacts__form__input-block__error">Некорректная фамилия</div>
+                            </div>
+                            <div class="contacts__form__input-block">
+                              <input class="contacts__form__input js-mask-name text__13" type="text" name="">
+                              <div class="contacts__form__input-block__name">	Имя</div>
+                              <div class="contacts__form__input-block__error">Некорректная имя</div>
+                            </div>
+                            <div class="contacts__form__input-block">
+                              <input class="contacts__form__input js-mask-name text__13" type="text" name="">
+                              <div class="contacts__form__input-block__name">	Отчество</div>
+                              <div class="contacts__form__input-block__error">Некорректное отчество</div>
+                            </div>
+                            <div class="contacts__form__input-block">                 
+                              <input class="contacts__form__input text__13" type="email" name="">
+                              <div class="contacts__form__input-block__name">Почта</div>
+                              <div class="contacts__form__input-block__error">Некорректная почта</div>
+                            </div>
+                            <div class="contacts__form__input-block">
+                              <input class="contacts__form__input js-mask-phone" type="tel" name="">
+                              <div class="contacts__form__input-block__name">Телефон</div>
+                              <div class="contacts__form__input-block__error">Некорректный телефон</div>
+                            </div>
+                            <div class="contacts__form__input-block">
+                              <input class="contacts__form__input text__13" type="password" name="">
+                              <div class="contacts__form__input-block__name">Пароль</div>
+                              <div class="contacts__form__input-block__error">Некорректный пароль</div>
+                            </div>
+                            <div class="contacts__form__input-block">
+                              <input class="contacts__form__input text__13" type="password" name="">
+                              <div class="contacts__form__input-block__name">Подтверждение пароля</div>
+                              <div class="contacts__form__input-block__error">Пароли не совпадают</div>
+                            </div>
+                          </div>
+                          <button class="btn mob-menu__question__bottom" type="submit">
+                            <div class="mob-menu__question__bottom__text">Зарегистрироваться</div>
+                            <div class="mob-menu__question__bottom__row">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
+                              </svg>
+                            </div>
+                          </button>
+                        </form>
                       </div>
+                      <div class="swiper-slide registration-area__slide"></div>
                     </div>
-                    <div class="contacts__form__personal-data contacts__form__input-block error"> 
-                      <div class="checkbox">
-                        <label>
-                          <input class="custom-checkbox" type="checkbox" name="personal-data" value="indigo">Согласие на обработку персональных данных
-                        </label>
-                      </div>
-                      <div class="contacts__form__input-block__error">обязательно нужно согласиться</div>
-                    </div>
-                    <div class="mob-menu__question__bottom">
-                      <div class="mob-menu__question__bottom__text">Зарегистрироваться</div>
-                      <div class="mob-menu__question__bottom__row">
-                        <svg>
-                          <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
-                        </svg>
-                      </div>
-                    </div>
-                  </form>
+                  </div>
                 </div>
               </div>
             </div>

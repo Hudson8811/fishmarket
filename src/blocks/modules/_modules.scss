@@ -8,6 +8,7 @@
 @import "l-walk/l-walk";
 @import "l-map/l-map";
 @import "l-vacancies/l-vacancies";
+@import "lk-sidebar/lk-sidebar";
 
 //pages
 @import "pages/catalog-category/category-intro/category-intro";
@@ -52,3 +53,7 @@
 @import "pages/about/callback-modal/ap-callback-modal";
 @import "pages/about/history-modal/ap-history-modal";
 @import "pages/about/team-modal/ap-team-modal";
+
+@import "pages/lk/lk-intro/lk-intro";
+
+@import "pages/personal-data/personal-data/personal-data";

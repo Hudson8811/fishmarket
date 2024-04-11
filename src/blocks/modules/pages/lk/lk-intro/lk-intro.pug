@@ -1,0 +1,55 @@
+include ../../../../components/new-btn/new-btn
+include ../../../../components/breadcrumbs/breadcrumbs.pug
+include ../../../../components/title/title.pug
+
+section.lk-intro
+    .container
+        +breadcrumbs({
+            classes: 'questions__breadcrumbs',
+            items: [
+                {
+                    name: 'Главная',
+                    link: '#'
+                },
+                {
+                    name: 'Личный кабинет',
+                    link: '#'
+                }
+            ]
+        })
+        .lk-intro__content
+            +title('h1', 'Личный кабинет', 'lk-intro__title')
+            .lk-intro__btns
+                +new-btn({
+                    classes: 'lk-intro__btn',
+                    tag: 'link',
+                    link: 'javascript:void(0);',
+                    buttonType: 'button',
+                    vMode: 'big',
+                    text: 'Личные данные',
+                    icon: 'true',
+                    iconName: 'arrow_btn',
+                    cMode: 'blue',
+                })
+                +new-btn({
+                    classes: 'lk-intro__btn',
+                    tag: 'link',
+                    link: 'javascript:void(0);',
+                    buttonType: 'button',
+                    vMode: 'big',
+                    text: 'Корзина',
+                    icon: 'true',
+                    iconName: 'arrow_btn',
+                    cMode: 'blue',
+                })
+                +new-btn({
+                    classes: 'lk-intro__btn',
+                    tag: 'link',
+                    link: 'javascript:void(0);',
+                    buttonType: 'button',
+                    vMode: 'big',
+                    text: 'История заказов',
+                    icon: 'true',
+                    iconName: 'arrow_btn',
+                    cMode: 'blue',
+                })                

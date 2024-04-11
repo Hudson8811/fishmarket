@@ -1,390 +1,412 @@
 include ../../../blocks/modules/preloader/preloader
 .section__header
-	.container
-		a(href="index.html").header__logo 
-			img(src="img/svg/logo.svg" alt="logo")
-		.layout
-			.layout__col
-				.header__menu__humb.js-hamburger
-				.header__other
-					.header__other__item.header__other__item--place.js-header__other__item--place
-						.header__other__top
-							.header__menu__item__icon
-								svg
-									use(xlink:href=`img/sprites/sprite.svg#header_position`)
-							.header__menu__item__text(data-js="cityTextValue") город
-					.header__other__item
-						.header__other__top
-							a(href="mailto:info@skyfish.ru") 
-								!="info@skyfish.ru"
-								.header__menu__item__arrow.js-row
-									img(src="img/svg/header__menu__item__arrow.svg" alt="")
-						ul.header__menu__list
-							li.header__menu__list__item
-								a(href="mailto:info@skyfish.ru")  info@skyfish.ru
-							li.header__menu__list__item
-								a(href="mailto:sales@fishmarket.ru")  sales@fishmarket.ru
-							li.header__menu__list__item 
-								a(href="mailto:website@fishmarket.ru") website@fishmarket.ru
-					.header__other__item.header__other__fone.header__other__fone--desc
-						.header__other__top
-							a(href="tel:+749578685")
-								!="+7 (495) 748-86-85"
-								.header__menu__item__arrow.js-row
-									img(src="img/svg/header__menu__item__arrow.svg" alt="")
-						ul.header__menu__list
-							li.header__menu__list__item
-								a(href="tel:+749578685") +7 (495) 748-86-85
-							li.header__menu__list__item 
-								a(href="tel:+74957488685") +7 (495) 748-86-85 (доб. 136)
-			.layout__col
-				.header__other
-					.header__other__item--soc.header__other__item
-						a(href="#").header__other__item--soc__item 
-							svg
-								use(xlink:href=`img/sprites/sprite.svg#header_tg`)
-						a(href="#").header__other__item--soc__item 
-							svg
-								use(xlink:href=`img/sprites/sprite.svg#header_vk`)
-					.header__other__item--search.header__other__item
-						.header__other__item--search__btn.js-search__btn
-							svg
-								use(xlink:href=`img/sprites/sprite.svg#header_search`)
-						.search(data-js="search")
-							.search--overlay
-							.search__content
-								.search__inter 
-									input(type="text" placeholder="поиск")
-									.search__clear(data-js="searchClear")
-										svg
-											use(xlink:href=`img/sprites/sprite.svg#close_for_sprite`)
-									.search__select 
-										.header__other__item.header__other__fone.header__other__fone--desc
-											.header__other__top
-												a(href="#")
-													!="по каталогу"
-													.header__menu__item__arrow.js-row
-														img(src="img/svg/header__menu__item__arrow.svg" alt="")
-											ul.header__menu__list
-												li.header__menu__list__item
-													a(href="#") по каталогу
-												li.header__menu__list__item 
-													a(href="#") по сайту
-								.search__btn.js-search__btn-find
-									.search__btn__text Найти
-									.search__btn__row
-										svg
-											use(xlink:href=`img/sprites/sprite.svg#arrow_btn`)
-							.search__result
-								a.search__result__item(href="#")
-									.search__result__item__picture 
-										img(src="img/search__result__item__picture.png" alt="")
-									.search__result__item__desc
-										.search__result__item__title 
-											!="Семга (лосось) потр.с/г 2-3 ord охлажденная"
-										.search__result__item__art
-											!="Арт.: 6425642-S"
-								a.search__result__item(href="#")
-									.search__result__item__picture 
-										img(src="img/search__result__item__picture.png" alt="")
-									.search__result__item__desc
-										.search__result__item__title 
-											!="Семга (лосось) потр.с/г 2-3 ord охлажденная"
-										.search__result__item__art
-											!="Арт.: 6425642-S"
-								a.search__result__item(href="#")
-									.search__result__item__picture 
-										img(src="img/search__result__item__picture.png" alt="")
-									.search__result__item__desc
-										.search__result__item__title 
-											!="Семга (лосось) потр.с/г 2-3 ord охлажденная"
-										.search__result__item__art
-											!="Арт.: 6425642-S"
-								a.search__result__item(href="#")
-									.search__result__item__picture 
-										img(src="img/search__result__item__picture.png" alt="")
-									.search__result__item__desc
-										.search__result__item__title 
-											!="Семга (лосось) потр.с/г 2-3 ord охлажденная"
-										.search__result__item__art
-											!="Арт.: 6425642-S"
-								a(href="#").search__result__btn.text__12 Показать все
-					.header__other__item--cart.header__other__item
-						.header__other__item--cart__icon
-							svg
-								use(xlink:href=`img/sprites/sprite.svg#header_cart`)
-						.header__other__item--cart__value 1
-					.header__other__item--personal.header__other__item.js-pop-up__button--login-register
-						a(href="#") 
-							svg
-								use(xlink:href=`img/sprites/sprite.svg#header_login`)
-					.header__other__item--button.header__other__item
-						button(type="submit").header__other__button.btn.js-button__question заказать звонок
-					.header__other__item--lang.header__other__item
-						.header__other__top
-							a(href="#") 
-								!="En"
-								.header__menu__item__arrow.js-row
-									img(src="img/svg/header__menu__item__arrow.svg" alt="")
-						ul.header__menu__list
-							li.header__menu__list__item
-								a(href="#")  EN
-							li.header__menu__list__item 
-								a(href="#") RU	
+  .container
+    a(href="index.html").header__logo 
+      img(src="img/svg/logo.svg" alt="logo")
+    .layout
+      .layout__col
+        .header__menu__humb.js-hamburger
+        .header__other
+          .header__other__item.header__other__item--place.js-header__other__item--place
+            .header__other__top
+              .header__menu__item__icon
+                svg
+                  use(xlink:href=`img/sprites/sprite.svg#header_position`)
+              .header__menu__item__text(data-js="cityTextValue") город
+          .header__other__item
+            .header__other__top
+              a(href="mailto:info@skyfish.ru") 
+                !="info@skyfish.ru"
+                .header__menu__item__arrow.js-row
+                  img(src="img/svg/header__menu__item__arrow.svg" alt="")
+            ul.header__menu__list
+              li.header__menu__list__item
+                a(href="mailto:info@skyfish.ru")  info@skyfish.ru
+              li.header__menu__list__item
+                a(href="mailto:sales@fishmarket.ru")  sales@fishmarket.ru
+              li.header__menu__list__item 
+                a(href="mailto:website@fishmarket.ru") website@fishmarket.ru
+          .header__other__item.header__other__fone.header__other__fone--desc
+            .header__other__top
+              a(href="tel:+749578685")
+                !="+7 (495) 748-86-85"
+                .header__menu__item__arrow.js-row
+                  img(src="img/svg/header__menu__item__arrow.svg" alt="")
+            ul.header__menu__list
+              li.header__menu__list__item
+                a(href="tel:+749578685") +7 (495) 748-86-85
+              li.header__menu__list__item 
+                a(href="tel:+74957488685") +7 (495) 748-86-85 (доб. 136)
+      .layout__col
+        .header__other
+          .header__other__item--soc.header__other__item
+            a(href="#").header__other__item--soc__item 
+              svg
+                use(xlink:href=`img/sprites/sprite.svg#header_tg`)
+            a(href="#").header__other__item--soc__item 
+              svg
+                use(xlink:href=`img/sprites/sprite.svg#header_vk`)
+          .header__other__item--search.header__other__item
+            .header__other__item--search__btn.js-search__btn
+              svg
+                use(xlink:href=`img/sprites/sprite.svg#header_search`)
+            .search(data-js="search")
+              .search--overlay
+              .search__content
+                .search__inter 
+                  input(type="text" placeholder="поиск")
+                  .search__clear(data-js="searchClear")
+                    svg
+                      use(xlink:href=`img/sprites/sprite.svg#close_for_sprite`)
+                  .search__select 
+                    .header__other__item.header__other__fone.header__other__fone--desc
+                      .header__other__top
+                        a(href="#")
+                          !="по каталогу"
+                          .header__menu__item__arrow.js-row
+                            img(src="img/svg/header__menu__item__arrow.svg" alt="")
+                      ul.header__menu__list
+                        li.header__menu__list__item
+                          a(href="#") по каталогу
+                        li.header__menu__list__item 
+                          a(href="#") по сайту
+                .search__btn.js-search__btn-find
+                  .search__btn__text Найти
+                  .search__btn__row
+                    svg
+                      use(xlink:href=`img/sprites/sprite.svg#arrow_btn`)
+              .search__result
+                a.search__result__item(href="#")
+                  .search__result__item__picture 
+                    img(src="img/search__result__item__picture.png" alt="")
+                  .search__result__item__desc
+                    .search__result__item__title 
+                      !="Семга (лосось) потр.с/г 2-3 ord охлажденная"
+                    .search__result__item__art
+                      !="Арт.: 6425642-S"
+                a.search__result__item(href="#")
+                  .search__result__item__picture 
+                    img(src="img/search__result__item__picture.png" alt="")
+                  .search__result__item__desc
+                    .search__result__item__title 
+                      !="Семга (лосось) потр.с/г 2-3 ord охлажденная"
+                    .search__result__item__art
+                      !="Арт.: 6425642-S"
+                a.search__result__item(href="#")
+                  .search__result__item__picture 
+                    img(src="img/search__result__item__picture.png" alt="")
+                  .search__result__item__desc
+                    .search__result__item__title 
+                      !="Семга (лосось) потр.с/г 2-3 ord охлажденная"
+                    .search__result__item__art
+                      !="Арт.: 6425642-S"
+                a.search__result__item(href="#")
+                  .search__result__item__picture 
+                    img(src="img/search__result__item__picture.png" alt="")
+                  .search__result__item__desc
+                    .search__result__item__title 
+                      !="Семга (лосось) потр.с/г 2-3 ord охлажденная"
+                    .search__result__item__art
+                      !="Арт.: 6425642-S"
+                a(href="#").search__result__btn.text__12 Показать все
+          .header__other__item--cart.header__other__item
+            .header__other__item--cart__icon
+              svg
+                use(xlink:href=`img/sprites/sprite.svg#header_cart`)
+            .header__other__item--cart__value 1
+          .header__other__item--personal.header__other__item.js-pop-up__button--login-register
+            a(href="#") 
+              svg
+                use(xlink:href=`img/sprites/sprite.svg#header_login`)
+          .header__other__item--button.header__other__item
+            button(type="submit").header__other__button.btn.js-button__question заказать звонок
+          .header__other__item--lang.header__other__item
+            .header__other__top
+              a(href="#") 
+                !="En"
+                .header__menu__item__arrow.js-row
+                  img(src="img/svg/header__menu__item__arrow.svg" alt="")
+            ul.header__menu__list
+              li.header__menu__list__item
+                a(href="#")  EN
+              li.header__menu__list__item 
+                a(href="#") RU	
 
 .mob-menu__section.js-mob-menu__section
-	.mob-menu--overlay
-	.mob-menu__wrap
-		.mob-menu
-			a(href="#").mob-menu__link каталог
-			.mob-menu__list
-				a(href="#").mob-menu__list__item Рыба охлажденная
-				a(href="#").mob-menu__list__item Рыба свежемороженая
-				a(href="#").mob-menu__list__item Филе охлажденное
-				a(href="#").mob-menu__list__item Филе свежемороженое
-				a(href="#").mob-menu__list__item Морепродукты
-				a(href="#").mob-menu__list__item Субпродукты
-			a(href="#").mob-menu__link О компании
-			.mob-menu__list
-				a(href="#").mob-menu__list__item Производство
-				a(href="#").mob-menu__list__item Склад и логистика
-				a(href="#").mob-menu__list__item Мы в социуме
-				a(href="#").mob-menu__list__item Карьера в SkyFish
-				a(href="#").mob-menu__list__item Наша команда
-			a(href="#").mob-menu__link 
-			a(href="#").mob-menu__link Контакты
-			a(href="#").mob-menu__link Личный кабинет
-			a(href="#").mob-menu__link Документы
-			a(href="#").mob-menu__link Новости
-			a(href="#").mob-menu__link Вопросы и ответы (FAQ)
+  .mob-menu--overlay
+  .mob-menu__wrap
+    .mob-menu
+      a(href="#").mob-menu__link каталог
+      .mob-menu__list
+        a(href="#").mob-menu__list__item Рыба охлажденная
+        a(href="#").mob-menu__list__item Рыба свежемороженая
+        a(href="#").mob-menu__list__item Филе охлажденное
+        a(href="#").mob-menu__list__item Филе свежемороженое
+        a(href="#").mob-menu__list__item Морепродукты
+        a(href="#").mob-menu__list__item Субпродукты
+      a(href="#").mob-menu__link О компании
+      .mob-menu__list
+        a(href="#").mob-menu__list__item Производство
+        a(href="#").mob-menu__list__item Склад и логистика
+        a(href="#").mob-menu__list__item Мы в социуме
+        a(href="#").mob-menu__list__item Карьера в SkyFish
+        a(href="#").mob-menu__list__item Наша команда
+      a(href="#").mob-menu__link 
+      a(href="#").mob-menu__link Контакты
+      a(href="#").mob-menu__link Личный кабинет
+      a(href="#").mob-menu__link Документы
+      a(href="#").mob-menu__link Новости
+      a(href="#").mob-menu__link Вопросы и ответы (FAQ)
 
 .mob-menu__section.mob-menu__city__section.js-mob-menu__city__section
-	.mob-menu--overlay.js-mob-menu__city__top__overlay
+  .mob-menu--overlay.js-mob-menu__city__top__overlay
 
-	.mob-menu__city
-		.mob-menu__city__top 
-			.mob-menu__city__top__title
-				!="Не выбран <br>регион"
-			.mob-menu__city__top__close
-				svg
-					use(xlink:href=`img/sprites/sprite.svg#header_close`)
-		.mob-menu__city__select
-			.contacts__form__input-block
-				select.contacts__form__select.js-mob-menu__city__select(name="" preloader="Москва")
-					option 
-					option Москва
-					option Калининград 
-					.localities-centers__select-arrow
-						svg
-							use(xlink:href=`img/sprites/sprite.svg#select_arrow`)
-		.mob-menu__city__bottom.js-mob-menu__city__ok
-			.mob-menu__city__bottom__text ok
-			.mob-menu__city__bottom__row
-				svg
-					use(xlink:href=`img/sprites/sprite.svg#arrow_btn`)
+  .mob-menu__city
+    .mob-menu__city__top 
+      .mob-menu__city__top__title
+        !="Не выбран <br>регион"
+      .mob-menu__city__top__close
+        svg
+          use(xlink:href=`img/sprites/sprite.svg#header_close`)
+    .mob-menu__city__select
+      .contacts__form__input-block
+        select.contacts__form__select.js-mob-menu__city__select(name="" preloader="Москва")
+          option 
+          option Москва
+          option Калининград 
+          .localities-centers__select-arrow
+            svg
+              use(xlink:href=`img/sprites/sprite.svg#select_arrow`)
+    .mob-menu__city__bottom.js-mob-menu__city__ok
+      .mob-menu__city__bottom__text ok
+      .mob-menu__city__bottom__row
+        svg
+          use(xlink:href=`img/sprites/sprite.svg#arrow_btn`)
 .mob-menu__section.mob-menu__question__section.js-mob-menu__section__question
-	.mob-menu--overlay.js-mob-menu__question--overlay
-	.mob-menu__question
-		.mob-menu__question__top 
-			.mob-menu__question__top__title
-				!="ОСТАЛИСЬ ВОПРОСЫ? НАПИШИТЕ ИЛИ ЗАКАЖИТЕ ЗВОНОК"
-			.mob-menu__question__top__close
-				svg
-					use(xlink:href=`img/sprites/sprite.svg#header_close`)
+  .mob-menu--overlay.js-mob-menu__question--overlay
+  .mob-menu__question
+    .mob-menu__question__top 
+      .mob-menu__question__top__title
+        !="ОСТАЛИСЬ ВОПРОСЫ? НАПИШИТЕ ИЛИ ЗАКАЖИТЕ ЗВОНОК"
+      .mob-menu__question__top__close
+        svg
+          use(xlink:href=`img/sprites/sprite.svg#header_close`)
 
-		form(action="").contacts__form  
-			.contacts__form__input-block.error
-				input(type="text" name="").contacts__form__input.js-mask-name.text__13
-				.contacts__form__input-block__name 	Имя*
-				.contacts__form__input-block__error Некорректное имя
-			.contacts__form__input-block.error
-				input(type="tel" name="").contacts__form__input.js-mask-phone
-				.contacts__form__input-block__name Телефон
-				.contacts__form__input-block__error Некорректный телефон
-			.contacts__form__input-block.error
-				input(type="email" name="").contacts__form__input.text__13
-				.contacts__form__input-block__name Почта
-				.contacts__form__input-block__error Некорректная почта
+    form(action="").contacts__form  
+      .contacts__form__input-block.error
+        input(type="text" name="").contacts__form__input.js-mask-name.text__13
+        .contacts__form__input-block__name 	Имя*
+        .contacts__form__input-block__error Некорректное имя
+      .contacts__form__input-block.error
+        input(type="tel" name="").contacts__form__input.js-mask-phone
+        .contacts__form__input-block__name Телефон
+        .contacts__form__input-block__error Некорректный телефон
+      .contacts__form__input-block.error
+        input(type="email" name="").contacts__form__input.text__13
+        .contacts__form__input-block__name Почта
+        .contacts__form__input-block__error Некорректная почта
 
-			.contacts__form__input-block
-				textarea(name="").contacts__form__input.text__13
-				.contacts__form__input-block__name Комментарий
-				.contacts__form__input-block__error
-			.contacts__form__personal-data.contacts__form__input-block.error 
-				.checkbox
-					label
-						input.custom-checkbox(type="checkbox" name="personal-data" value="indigo")
-						!= "Согласие на обработку персональных данных"
-				.contacts__form__input-block__error обязательно нужно согласиться
-		.mob-menu__question__bottom
-			.mob-menu__question__bottom__text Отправить
-			.mob-menu__question__bottom__row
-				svg
-					use(xlink:href=`img/sprites/sprite.svg#arrow_btn`)
+      .contacts__form__input-block
+        textarea(name="").contacts__form__input.text__13
+        .contacts__form__input-block__name Комментарий
+        .contacts__form__input-block__error
+      .contacts__form__personal-data.contacts__form__input-block.error 
+        .checkbox
+          label
+            input.custom-checkbox(type="checkbox" name="personal-data" value="indigo")
+            != "Согласие на обработку персональных данных"
+        .contacts__form__input-block__error обязательно нужно согласиться
+    .mob-menu__question__bottom
+      .mob-menu__question__bottom__text Отправить
+      .mob-menu__question__bottom__row
+        svg
+          use(xlink:href=`img/sprites/sprite.svg#arrow_btn`)
 .mob-menu__section.mob-menu__question__section.js-pop-up__login-register
-	.mob-menu--overlay.js-pop-up__login-register--overlay
-	.mob-menu__question
-		.mob-menu__question__top__close.login-area__close.js-pop-up__login-register--close
-			svg
-				use(xlink:href=`img/sprites/sprite.svg#header_close`)
+  .mob-menu--overlay.js-pop-up__login-register--overlay
+  .mob-menu__question
+    .mob-menu__question__top__close.login-area__close.js-pop-up__login-register--close
+      svg
+        use(xlink:href=`img/sprites/sprite.svg#header_close`)
 
-		.login-area
-			.login-area__slider(data-js="loginAreaSlider")
-				.login-area__controls
-					.login-area__control.login-area__control--prev Авторизация
-					.login-area__control.login-area__control--next Регистрация
-				.swiper-wrapper 
-					.swiper-slide.login-area__slide
-						form(action="#").contacts__form
-							.contacts__form__content
-								.contacts__form__title Авторизация
-								.contacts__form__input-block
-									input(type="email" name="").contacts__form__input.text__13
-									.contacts__form__input-block__name Логин
-									.contacts__form__input-block__error Некорректная почта
-								.contacts__form__input-block
-									input(type="password" name="").contacts__form__input.text__13
-									.contacts__form__input-block__name Пароль
-									.contacts__form__input-block__error Некорректный пароль
-							button.mob-menu__question__bottom(type='submit')
-								.mob-menu__question__bottom__text Отправить
-								.mob-menu__question__bottom__row
-									svg
-										use(xlink:href=`img/sprites/sprite.svg#arrow_btn`)
+    .login-area
+      .login-area__slider(data-js="loginAreaSlider")
+        .login-area__controls
+          .login-area__control.login-area__control--prev Авторизация
+          .login-area__control.login-area__control--next Регистрация
+        .swiper-wrapper 
+          .swiper-slide.login-area__slide
+            form(action="#").contacts__form
+              .contacts__form__content
+                .login-area__title Авторизация
+                .contacts__form__input-block
+                  input(type="email" name="").contacts__form__input.text__13
+                  .contacts__form__input-block__name Логин
+                  .contacts__form__input-block__error Некорректная почта
+                .contacts__form__input-block
+                  input(type="password" name="").contacts__form__input.text__13
+                  .contacts__form__input-block__name Пароль
+                  .contacts__form__input-block__error Некорректный пароль
+              button.btn.mob-menu__question__bottom(type='submit')
+                .mob-menu__question__bottom__text Авторизоваться
+                .mob-menu__question__bottom__row
+                  svg
+                    use(xlink:href=`img/sprites/sprite.svg#arrow_btn`)
 
-					.swiper-slide.login-area__slide
-						form(action="#").contacts__form.registration-entity
-							.contacts__form__content
-								.contacts__form__title Регистрация
-								.contacts__form__input-block
-									input(type="text" name="").contacts__form__input.js-mask-name.text__13
-									.contacts__form__input-block__name 	ИНН Организации
-									.contacts__form__input-block__error Некорректный ИНН
-								.contacts__form__input-block
-									input(type="text" name="").contacts__form__input.js-mask-name.text__13
-									.contacts__form__input-block__name 	Фамилия контактного лица
-									.contacts__form__input-block__error Некорректная фамилия
-								.contacts__form__input-block
-									input(type="text" name="").contacts__form__input.js-mask-name.text__13
-									.contacts__form__input-block__name 	Имя контактного лица
-									.contacts__form__input-block__error Некорректная имя
-								.contacts__form__input-block
-									input(type="text" name="").contacts__form__input.js-mask-name.text__13
-									.contacts__form__input-block__name 	Отчество контактного лица
-									.contacts__form__input-block__error Некорректное отчество
-								.contacts__form__input-block
-									input(type="text" name="").contacts__form__input.js-mask-name.text__13
-									.contacts__form__input-block__name 	Отчество контактного лица
-									.contacts__form__input-block__error Некорректное отчество
-								.contacts__form__input-block                  
-									input(type="email" name="").contacts__form__input.text__13
-									.contacts__form__input-block__name Почта контактного лица
-									.contacts__form__input-block__error Некорректная почта
-								.contacts__form__input-block
-									input(type="tel" name="").contacts__form__input.js-mask-phone
-									.contacts__form__input-block__name Телефон контактного лица
-									.contacts__form__input-block__error Некорректный телефон
-								.contacts__form__input-block
-									input(type="password" name="").contacts__form__input.text__13
-									.contacts__form__input-block__name Пароль
-									.contacts__form__input-block__error Некорректный пароль
-								.contacts__form__input-block
-									input(type="password" name="").contacts__form__input.text__13
-									.contacts__form__input-block__name Подтверждение пароля
-									.contacts__form__input-block__error Пароли не совпадают
+          .swiper-slide.login-area__slide.registration-area
+            .registration-area__slider(data-js="registrationAreaSlider")
+              .registration-area__top.active(data-js="registrationAreaTop")
+                .registration-area__title Регистрация
+                .registration-area__subtitle Тип клиента
+                .registration-area__controls
+                  .registration-area__control.active(data-js="registrationAreaTo1") Юр. лицо
+                  .registration-area__control(data-js="registrationAreaTo2") Физ. лицо
+              .swiper-wrapper
+                .swiper-slide.registration-area__slide
+                  form(action="#").contacts__form.registration-entity
+                    .contacts__form__content
+                      .contacts__form__input-block
+                        input(type="text" name="").contacts__form__input.js-mask-name.text__13
+                        .contacts__form__input-block__name 	ИНН Организации
+                        .contacts__form__input-block__error Некорректный ИНН
+                      .contacts__form__input-block
+                        input(type="text" name="").contacts__form__input.js-mask-name.text__13
+                        .contacts__form__input-block__name 	КПП Организации
+                        .contacts__form__input-block__error Некорректный КПП                        
+                      .contacts__form__input-block
+                        input(type="text" name="").contacts__form__input.js-mask-name.text__13
+                        .contacts__form__input-block__name 	Фамилия контактного лица
+                        .contacts__form__input-block__error Некорректная фамилия
+                      .contacts__form__input-block
+                        input(type="text" name="").contacts__form__input.js-mask-name.text__13
+                        .contacts__form__input-block__name 	Имя контактного лица
+                        .contacts__form__input-block__error Некорректная имя
+                      .contacts__form__input-block
+                        input(type="text" name="").contacts__form__input.js-mask-name.text__13
+                        .contacts__form__input-block__name 	Отчество контактного лица
+                        .contacts__form__input-block__error Некорректное отчество
+                      .contacts__form__input-block                  
+                        input(type="email" name="").contacts__form__input.text__13
+                        .contacts__form__input-block__name Почта контактного лица
+                        .contacts__form__input-block__error Некорректная почта
+                      .contacts__form__input-block
+                        input(type="tel" name="").contacts__form__input.js-mask-phone
+                        .contacts__form__input-block__name Телефон контактного лица
+                        .contacts__form__input-block__error Некорректный телефон
+                      .contacts__form__input-block
+                        input(type="password" name="").contacts__form__input.text__13
+                        .contacts__form__input-block__name Пароль
+                        .contacts__form__input-block__error Некорректный пароль
+                      .contacts__form__input-block
+                        input(type="password" name="").contacts__form__input.text__13
+                        .contacts__form__input-block__name Подтверждение пароля
+                        .contacts__form__input-block__error Пароли не совпадают
 
-							button.mob-menu__question__bottom(type='submit')
-								.mob-menu__question__bottom__text Зарегистрироваться
-								.mob-menu__question__bottom__row
-									svg
-										use(xlink:href=`img/sprites/sprite.svg#arrow_btn`)
+                    button.btn.mob-menu__question__bottom(type='submit')
+                      .mob-menu__question__bottom__text Зарегистрироваться
+                      .mob-menu__question__bottom__row
+                        svg
+                          use(xlink:href=`img/sprites/sprite.svg#arrow_btn`)
+                .swiper-slide.registration-area__slide
+                  form(action="#").contacts__form.registration-individual
+                    .contacts__form__content
+                      .contacts__form__input-block
+                        input(type="text" name="").contacts__form__input.js-mask-name.text__13
+                        .contacts__form__input-block__name 	Фамилия
+                        .contacts__form__input-block__error Некорректная фамилия
+                      .contacts__form__input-block
+                        input(type="text" name="").contacts__form__input.js-mask-name.text__13
+                        .contacts__form__input-block__name 	Имя
+                        .contacts__form__input-block__error Некорректная имя
+                      .contacts__form__input-block
+                        input(type="text" name="").contacts__form__input.js-mask-name.text__13
+                        .contacts__form__input-block__name 	Отчество
+                        .contacts__form__input-block__error Некорректное отчество
+                      .contacts__form__input-block                  
+                        input(type="email" name="").contacts__form__input.text__13
+                        .contacts__form__input-block__name Почта
+                        .contacts__form__input-block__error Некорректная почта
+                      .contacts__form__input-block
+                        input(type="tel" name="").contacts__form__input.js-mask-phone
+                        .contacts__form__input-block__name Телефон
+                        .contacts__form__input-block__error Некорректный телефон
+                      .contacts__form__input-block
+                        input(type="password" name="").contacts__form__input.text__13
+                        .contacts__form__input-block__name Пароль
+                        .contacts__form__input-block__error Некорректный пароль
+                      .contacts__form__input-block
+                        input(type="password" name="").contacts__form__input.text__13
+                        .contacts__form__input-block__name Подтверждение пароля
+                        .contacts__form__input-block__error Пароли не совпадают
+                    button.btn.mob-menu__question__bottom(type='submit')
+                      .mob-menu__question__bottom__text Зарегистрироваться
+                      .mob-menu__question__bottom__row
+                        svg
+                          use(xlink:href=`img/sprites/sprite.svg#arrow_btn`)
 
-						form(action="#").contacts__form.registration-individual
-
-							.contacts__form__title Регистрация
-							.contacts__form__input-block
-								textarea(name="").contacts__form__input.text__13
-								.contacts__form__input-block__name Комментарий / Сопроводительное письмо
-								.contacts__form__input-block__error
-							.contacts__form__input-block
-								.input-file-row
-									label.input-file
-										input(type="file" name="file[]" multiple)
-										span Выберите файл
-									.input-file-list  
-							.contacts__form__personal-data.contacts__form__input-block.error 
-								.checkbox
-									label
-										input.custom-checkbox(type="checkbox" name="personal-data" value="indigo")
-										!= "Согласие на обработку персональных данных"
-								.contacts__form__input-block__error обязательно нужно согласиться
-							.mob-menu__question__bottom
-								.mob-menu__question__bottom__text Зарегистрироваться
-								.mob-menu__question__bottom__row
-									svg
-										use(xlink:href=`img/sprites/sprite.svg#arrow_btn`)
+                //-информация об отправленном письме.
+                .swiper-slide.registration-area__slide
 
 //- На отдельной странице pop-up
 .mob-menu__section.mob-menu__question__section.js-pop-up__command
-	.mob-menu--overlay.js-pop-up__command--overlay
-	.mob-menu__question
-		.mob-menu__question__top 
-			.mob-menu__question__top__title
-				!="Стать частью команды SkyFish"
-			.mob-menu__question__top__close.js-pop-up__command--close
-				svg
-					use(xlink:href=`img/sprites/sprite.svg#header_close`)
+  .mob-menu--overlay.js-pop-up__command--overlay
+  .mob-menu__question
+    .mob-menu__question__top 
+      .mob-menu__question__top__title
+        !="Стать частью команды SkyFish"
+      .mob-menu__question__top__close.js-pop-up__command--close
+        svg
+          use(xlink:href=`img/sprites/sprite.svg#header_close`)
 
-		form(action="").contacts__form  
-			.contacts__form__input-block
-				input(type="text" name="").contacts__form__input.js-mask-name.text__13
-				.contacts__form__input-block__name 	Имя*
-				.contacts__form__input-block__error Некорректное имя
-			.contacts__form__input-block
-				input(type="tel" name="").contacts__form__input.js-mask-phone
-				.contacts__form__input-block__name Телефон
-				.contacts__form__input-block__error Некорректный телефон
-			.contacts__form__input-block
-				input(type="email" name="").contacts__form__input.text__13
-				.contacts__form__input-block__name Почта
-				.contacts__form__input-block__error Некорректная почта					
+    form(action="").contacts__form  
+      .contacts__form__input-block
+        input(type="text" name="").contacts__form__input.js-mask-name.text__13
+        .contacts__form__input-block__name 	Имя*
+        .contacts__form__input-block__error Некорректное имя
+      .contacts__form__input-block
+        input(type="tel" name="").contacts__form__input.js-mask-phone
+        .contacts__form__input-block__name Телефон
+        .contacts__form__input-block__error Некорректный телефон
+      .contacts__form__input-block
+        input(type="email" name="").contacts__form__input.text__13
+        .contacts__form__input-block__name Почта
+        .contacts__form__input-block__error Некорректная почта					
 
-			.contacts__form__input-block
-				textarea(name="").contacts__form__input.text__13
-				.contacts__form__input-block__name Комментарий / Сопроводительное письмо
-				.contacts__form__input-block__error
-			.contacts__form__input-block
-				.input-file-row
-					label.input-file
-						input(type="file" name="file[]" multiple)
-						span Выберите файл
-					.input-file-list
-			.contacts__form__personal-data.contacts__form__input-block.error 
-				.checkbox
-					label
-						input.custom-checkbox(type="checkbox" name="personal-data " value="indigo")
-						!= "Согласие на обработку персональных данных"
-				.contacts__form__input-block__error обязательно нужно согласиться
-		.mob-menu__question__bottom
-			.mob-menu__question__bottom__text Отправить
-			.mob-menu__question__bottom__row
-				svg
-					use(xlink:href=`img/sprites/sprite.svg#arrow_btn`)
+      .contacts__form__input-block
+        textarea(name="").contacts__form__input.text__13
+        .contacts__form__input-block__name Комментарий / Сопроводительное письмо
+        .contacts__form__input-block__error
+      .contacts__form__input-block
+        .input-file-row
+          label.input-file
+            input(type="file" name="file[]" multiple)
+            span Выберите файл
+          .input-file-list
+      .contacts__form__personal-data.contacts__form__input-block.error 
+        .checkbox
+          label
+            input.custom-checkbox(type="checkbox" name="personal-data " value="indigo")
+            != "Согласие на обработку персональных данных"
+        .contacts__form__input-block__error обязательно нужно согласиться
+    .mob-menu__question__bottom
+      .mob-menu__question__bottom__text Отправить
+      .mob-menu__question__bottom__row
+        svg
+          use(xlink:href=`img/sprites/sprite.svg#arrow_btn`)
 .mob-menu__section.mob-menu__question__section.js-pop-up__thanks
-	.mob-menu--overlay.js-pop-up__thanks--overlay
-	.mob-menu__question
-		.mob-menu__question__top 
-			.mob-menu__question__top__title
-				!=""
-			.mob-menu__question__top__close.js-pop-up__thanks--close
-				svg
-					use(xlink:href=`img/sprites/sprite.svg#header_close`)
+  .mob-menu--overlay.js-pop-up__thanks--overlay
+  .mob-menu__question
+    .mob-menu__question__top 
+      .mob-menu__question__top__title
+        !=""
+      .mob-menu__question__top__close.js-pop-up__thanks--close
+        svg
+          use(xlink:href=`img/sprites/sprite.svg#header_close`)
 
-		.mob-menu__question__content
-			.mob-menu__question__answer.title__32
-				!="спасибо Ваша заявка отправлена"
-		a(href="#").mob-menu__question__bottom
-			.mob-menu__question__bottom__text На главную
-			.mob-menu__question__bottom__row
-				svg
-					use(xlink:href=`img/sprites/sprite.svg#arrow_btn`)
+    .mob-menu__question__content
+      .mob-menu__question__answer.title__32
+        !="спасибо Ваша заявка отправлена"
+    a(href="#").mob-menu__question__bottom
+      .mob-menu__question__bottom__text На главную
+      .mob-menu__question__bottom__row
+        svg
+          use(xlink:href=`img/sprites/sprite.svg#arrow_btn`)

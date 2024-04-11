@@ -1,0 +1,13 @@
+extends ../layouts/default
+include ../helpers/mixins
+
+block variables
+    - const title = "Personal Data Page"
+
+
+block content
+
+    .scroll-page
+        include ../../blocks/modules/pages/personal-data/personal-data/personal-data.pug
+
+        include ../../blocks/modules/footer/footer
