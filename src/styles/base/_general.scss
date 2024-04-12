@@ -2224,6 +2224,42 @@ a, button {
             font-weight: 400;
             line-height: normal;      
         }
+        &__show {
+            position: absolute;
+            right: vw(7);
+            top: 0;
+            width: vw(24);
+            height: vw(15);
+            cursor: pointer;
+            @include max(md) {
+                width: vw2(24);
+                height: vw2(15);
+            }
+            svg {
+                width: vw(24);
+                height: vw(15);
+                @include max(md) {
+                    width: vw2(24);
+                    height: vw2(15);
+                }
+            }
+            &.hide {
+                &::after {
+                    position: absolute;
+                    content: "";
+                    width: 106%;
+                    height: vw(3);
+                    top: 102%;
+                    left: -3%;
+                    transform: rotate(-40deg);
+                    background-color: #d1d2d3;
+                    border-radius: vw(2);
+                }
+                svg {
+                    fill-opacity: 0.2;
+                }
+            }
+        }
         &.error{
             input, textarea {
                 border-bottom: 3px solid $red;
