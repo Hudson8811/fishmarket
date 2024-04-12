@@ -2511,6 +2511,33 @@ a, button {
     }
 
 }
+
+.new-form {
+    .contacts__form__input-block {
+        &__name{
+            @include max(md) {
+                top: vw2(20);
+                font-size: vw2(16);
+            }
+        }
+        &__error {
+            @include max(md) {
+                bottom: vw2(-28);
+                font-size: vw2(12);
+            }
+    
+        }
+    }
+    .contacts__form__input {
+        @include max(md) {
+            font-size: vw2(16);
+            min-height: vw2(60);
+            padding-right: vw2(18);
+            padding-top: vw2(20);
+        }
+    }
+}
+
 .select2-container.select2-container--default.select2-container--open {
     z-index: 9999;
     .select2-dropdown {
@@ -2808,6 +2835,10 @@ a, button {
 .layout-sidebar {
     display: flex;
     align-items: flex-start;
+    @include max(md) {
+        flex-direction: column;
+        gap: vw2(40);
+    } 
     &__sidebar {
         position: sticky;
         top: vw(114);
@@ -2815,10 +2846,20 @@ a, button {
         flex-shrink: 0;
         flex-grow: 0;
         padding-top: vw(8);
+        @include max(md) {
+            width: 100%;
+            position: relative;
+            top: 0;
+            flex-basis: auto;
+            padding-top: 0;
+        } 
     }
     &__content {
         flex-basis: auto;
         flex-shrink: 1;
         flex-grow: 1;
+        @include max(md) {
+            width: 100%;
+        } 
     }
 }

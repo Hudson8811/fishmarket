@@ -488,6 +488,64 @@
 						}
 					}
 				}
+
+				.header-lk-info {
+					background-color: #fff;
+					&__title {
+						margin-bottom: vw(20);
+						text-align: center;
+						font-size: vw(20);
+						font-weight: 600;
+						line-height: 1em;
+						color: $fontBlack;
+					}
+					&__not-authorized, &__authorized {
+						display: flex;
+						flex-direction: column;
+						gap: vw(10);
+					}
+					&__btn.new-btn {
+						justify-content: center;
+						padding: 20px;
+
+					}
+					&__photo {
+						width: vw(50);
+						height: vw(50);
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						background-color: $blueLight;
+						border-radius: 100%;
+						font-size: vw(13);
+						font-weight: 500;
+						line-height: 1.06em;
+						color: #fff;
+						margin: 0 auto;
+					}
+					&__name {
+						font-size: vw(20);
+						font-weight: 500;
+						line-height: 1.06em;
+						color: $blueLight;
+						text-align: center;
+					}
+					&__links {
+						margin-top: vw(15);
+						display: flex;
+						flex-direction: column;
+						gap: vw(15);
+					}
+					&__link {
+						text-align: start;
+						&:hover .new-btn__text {
+							color: $blueHover;
+						}
+						.new-btn__text {
+							color: $fontBlack;
+						}
+					}
+				}
 			}
 			&--cart {
 				position: relative;
@@ -1666,6 +1724,20 @@
 			flex-grow: 1;
 			flex-shrink: 1;
 			overflow-y: auto;
+			scrollbar-width: thin;
+			scrollbar-color: #99c4d3 rgba(0, 0, 0, 0);
+			&::-webkit-scrollbar {
+				height: 2px;
+				width: 2px;
+			}
+			&::-webkit-scrollbar-track {
+				background: rgba(0, 0, 0, 0);
+			}
+			&::-webkit-scrollbar-thumb {
+				background-color: #99c4d3;
+				border-radius: 10px;
+				border: none;
+			}
 		}
 		&__title {
 			margin-bottom: vw(30);
@@ -1769,6 +1841,53 @@
 		}
 		&__title {
 			margin-bottom: 0;
+		}
+	}
+
+	.registration-confirm {
+		margin-top: vw(37);
+		padding: 0 vw(29) vw(35);
+		max-height: 100%;
+		overflow-y: auto;
+		color: $fontBlack;
+		@include max(md) {
+			margin-top: vw2(37);
+			padding: 0 vw2(29) vw2(35);
+		}
+		&__title {
+			margin-bottom: vw(28);
+			font-size: vw(32);
+			font-weight: 500;
+			line-height: 1.06em;
+			text-transform: uppercase;
+			@include max(md) {
+				margin-bottom: vw2(28);
+				font-size: vw2(32);
+			}
+		}
+		&__text {
+			font-size: vw(18);
+			font-weight: 400;
+			line-height: 1.4em;
+			@include max(md) {
+				font-size: vw2(18);
+			}
+		}
+		&__data {
+			margin-top: vw(65);
+			@include max(md) {
+				margin-top: vw2(65);
+			}
+		}
+		&__email {
+			color: $blueLight;
+			font-size: vw(32);
+			font-weight: 500;
+			line-height: 0.97em;
+			text-transform: uppercase;
+			@include max(md) {
+				font-size: vw2(32);
+			}
 		}
 	}
 }

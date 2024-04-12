@@ -164,10 +164,34 @@
                 </div>
                 <div class="header__other__item--cart__value">1</div>
               </div>
-              <div class="header__other__item--personal header__other__item js-pop-up__button--login-register"><a href="#"> 
+              <div class="header__other__item--personal header__other__item">
+                <div class="header__other__top">
                   <svg>
                     <use xlink:href="img/sprites/sprite.svg#header_login"></use>
-                  </svg></a></div>
+                  </svg>
+                </div>
+                <div class="header__menu__list header-lk-info">
+                  <div class="header-lk-info__not-authorized">
+                    <div class="header-lk-info__title">Необходима авторизация</div>
+                    <button class="header-lk-info__btn new-btn new-btn--small new-btn--black" data-js="popUpBtnLogin">
+                      <div class="new-btn__text">Авторизация</div>
+                    </button>
+                    <button class="header-lk-info__btn new-btn new-btn--small new-btn--blue" data-js="popUpBtnRegistration">
+                      <div class="new-btn__text">Регистрация</div>
+                    </button>
+                  </div>
+                  <div class="header-lk-info__authorized" style="display: none;">
+                    <div class="header-lk-info__photo">Е</div>
+                    <div class="header-lk-info__name">Евгений Федотов</div>
+                    <div class="header-lk-info__links"><a class="header-lk-info__link new-btn new-btn--link new-btn--transparent" href="javascript:void(0);">
+                        <div class="new-btn__text">Перерейти в профиль</div></a><a class="header-lk-info__link new-btn new-btn--link new-btn--transparent" href="javascript:void(0);">                   
+                        <div class="new-btn__text">Личные данные</div></a><a class="header-lk-info__link new-btn new-btn--link new-btn--transparent" href="javascript:void(0);">                   
+                        <div class="new-btn__text">Реквизиты для оплаты</div></a><a class="header-lk-info__link new-btn new-btn--link new-btn--transparent" href="javascript:void(0);">                   
+                        <div class="new-btn__text">Корзина</div></a><a class="header-lk-info__link new-btn new-btn--link new-btn--transparent" href="javascript:void(0);">                   
+                        <div class="new-btn__text">Выйти</div></a></div>
+                  </div>
+                </div>
+              </div>
               <div class="header__other__item--button header__other__item">
                 <button class="header__other__button btn js-button__question" type="submit">заказать звонок</button>
               </div>
@@ -297,7 +321,7 @@
             </div>
             <div class="swiper-wrapper"> 
               <div class="swiper-slide login-area__slide">
-                <form class="contacts__form" action="#">
+                <form class="contacts__form new-form" action="#">
                   <div class="contacts__form__content">
                     <div class="login-area__title">Авторизация</div>
                     <div class="contacts__form__input-block">
@@ -333,7 +357,7 @@
                   </div>
                   <div class="swiper-wrapper">
                     <div class="swiper-slide registration-area__slide">
-                      <form class="contacts__form registration-entity" action="#">
+                      <form class="contacts__form new-form" action="#">
                         <div class="contacts__form__content">
                           <div class="contacts__form__input-block">
                             <input class="contacts__form__input js-mask-name text__13" type="text" name="">
@@ -392,7 +416,7 @@
                       </form>
                     </div>
                     <div class="swiper-slide registration-area__slide">
-                      <form class="contacts__form registration-individual" action="#">
+                      <form class="contacts__form new-form" action="#">
                         <div class="contacts__form__content">
                           <div class="contacts__form__input-block">
                             <input class="contacts__form__input js-mask-name text__13" type="text" name="">
@@ -440,7 +464,16 @@
                         </button>
                       </form>
                     </div>
-                    <div class="swiper-slide registration-area__slide"></div>
+                    <div class="swiper-slide registration-area__slide">
+                      <div class="registration-confirm">
+                        <div class="registration-confirm__title">Сообщение<br>с подтверждением<br>отправлено</div>
+                        <div class="registration-confirm__text">Пожалуйста, проверьте Ваш почтовый ящик.</div>
+                        <div class="registration-confirm__data">
+                          <div class="registration-confirm__text">Письмо отправлено на:</div>
+                          <div class="registration-confirm__email" data-js="confirmUserEmail">usermail@mail.ru</div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -671,10 +704,34 @@
                   </div>
                   <div class="header__other__item--cart__value">1</div>
                 </div>
-                <div class="header__other__item--personal header__other__item js-pop-up__button--login-register"><a href="#"> 
+                <div class="header__other__item--personal header__other__item">
+                  <div class="header__other__top">
                     <svg>
                       <use xlink:href="img/sprites/sprite.svg#header_login"></use>
-                    </svg></a></div>
+                    </svg>
+                  </div>
+                  <div class="header__menu__list header-lk-info">
+                    <div class="header-lk-info__not-authorized">
+                      <div class="header-lk-info__title">Необходима авторизация</div>
+                      <button class="header-lk-info__btn new-btn new-btn--small new-btn--black" data-js="popUpBtnLogin">
+                        <div class="new-btn__text">Авторизация</div>
+                      </button>
+                      <button class="header-lk-info__btn new-btn new-btn--small new-btn--blue" data-js="popUpBtnRegistration">
+                        <div class="new-btn__text">Регистрация</div>
+                      </button>
+                    </div>
+                    <div class="header-lk-info__authorized" style="display: none;">
+                      <div class="header-lk-info__photo">Е</div>
+                      <div class="header-lk-info__name">Евгений Федотов</div>
+                      <div class="header-lk-info__links"><a class="header-lk-info__link new-btn new-btn--link new-btn--transparent" href="javascript:void(0);">
+                          <div class="new-btn__text">Перерейти в профиль</div></a><a class="header-lk-info__link new-btn new-btn--link new-btn--transparent" href="javascript:void(0);">                   
+                          <div class="new-btn__text">Личные данные</div></a><a class="header-lk-info__link new-btn new-btn--link new-btn--transparent" href="javascript:void(0);">                   
+                          <div class="new-btn__text">Реквизиты для оплаты</div></a><a class="header-lk-info__link new-btn new-btn--link new-btn--transparent" href="javascript:void(0);">                   
+                          <div class="new-btn__text">Корзина</div></a><a class="header-lk-info__link new-btn new-btn--link new-btn--transparent" href="javascript:void(0);">                   
+                          <div class="new-btn__text">Выйти</div></a></div>
+                    </div>
+                  </div>
+                </div>
                 <div class="header__other__item--button header__other__item">
                   <button class="header__other__button btn js-button__question" type="submit">заказать звонок</button>
                 </div>
@@ -804,7 +861,7 @@
               </div>
               <div class="swiper-wrapper"> 
                 <div class="swiper-slide login-area__slide">
-                  <form class="contacts__form" action="#">
+                  <form class="contacts__form new-form" action="#">
                     <div class="contacts__form__content">
                       <div class="login-area__title">Авторизация</div>
                       <div class="contacts__form__input-block">
@@ -840,7 +897,7 @@
                     </div>
                     <div class="swiper-wrapper">
                       <div class="swiper-slide registration-area__slide">
-                        <form class="contacts__form registration-entity" action="#">
+                        <form class="contacts__form new-form" action="#">
                           <div class="contacts__form__content">
                             <div class="contacts__form__input-block">
                               <input class="contacts__form__input js-mask-name text__13" type="text" name="">
@@ -899,7 +956,7 @@
                         </form>
                       </div>
                       <div class="swiper-slide registration-area__slide">
-                        <form class="contacts__form registration-individual" action="#">
+                        <form class="contacts__form new-form" action="#">
                           <div class="contacts__form__content">
                             <div class="contacts__form__input-block">
                               <input class="contacts__form__input js-mask-name text__13" type="text" name="">
@@ -947,7 +1004,16 @@
                           </button>
                         </form>
                       </div>
-                      <div class="swiper-slide registration-area__slide"></div>
+                      <div class="swiper-slide registration-area__slide">
+                        <div class="registration-confirm">
+                          <div class="registration-confirm__title">Сообщение<br>с подтверждением<br>отправлено</div>
+                          <div class="registration-confirm__text">Пожалуйста, проверьте Ваш почтовый ящик.</div>
+                          <div class="registration-confirm__data">
+                            <div class="registration-confirm__text">Письмо отправлено на:</div>
+                            <div class="registration-confirm__email" data-js="confirmUserEmail">usermail@mail.ru</div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>

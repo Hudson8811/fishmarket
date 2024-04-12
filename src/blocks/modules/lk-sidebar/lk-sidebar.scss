@@ -1,3 +1,85 @@
 .lk-sidebar {
-
+    &__user {
+        display: flex;
+        align-items: center;
+        gap: vw(24);
+        border: 1px solid #CDD1D2;
+        padding: vw(24) vw(26) vw(27);
+        @include max(md) {
+            gap: vw2(24);
+            padding: vw2(24) vw2(26) vw2(27);
+        } 
+    }
+    &__photo {
+        width: vw(82);
+        height: vw(82);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $blueLight;
+        border-radius: 100%;
+        font-size: vw(32);
+        font-weight: 500;
+        line-height: 1.06em;
+        color: #fff;
+        @include max(md) {
+            width: vw2(82);
+            height: vw2(82);
+            font-size: vw2(32);
+        } 
+    }
+    &__name {
+        font-size: vw(12);
+        font-weight: 600;
+        line-height: 1.22em;
+        color: $fontBlack;
+        text-transform: uppercase;
+        @include max(md) {
+            font-size: vw2(12);
+        } 
+    }
+    &__links {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        border-left: 1px solid #CDD1D2;
+        border-right: 1px solid #CDD1D2;
+    }
+    &__link {
+        padding: vw(35) vw(25);
+        font-size: vw(12);
+        font-weight: 600;
+        line-height: 1.2em;
+        color: $fontBlack;
+        text-transform: uppercase;
+        border-bottom: 1px solid #CDD1D2;
+        transition: all $tr-time-fast;
+        @include max(md) {
+            padding: vw2(35) vw2(25);
+            font-size: vw2(12);
+        } 
+        &:hover, &--current {
+            background-color: $fontBlack;
+            color: $white;
+        }
+        &--current {
+            pointer-events: none;
+        }
+    }
+    &__logout {
+        display: block;
+        font-size: vw(12);
+        font-weight: 600;
+        line-height: 1.22em;
+        color: $fontBlack;
+        text-transform: uppercase;
+        margin: vw(36) 0 0 vw(25);
+        @include max(md) {
+            font-size: vw2(12);
+            margin: vw2(36) 0 0 vw2(25);
+        } 
+        &:hover {
+            color: $blueHover;
+        }
+    }
 }

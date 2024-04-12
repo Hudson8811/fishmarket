@@ -34,17 +34,18 @@ mixin lk-sidebar(props = defaultLkSidebarProps)
 
 	.lk-sidebar(class=checkProps.classes)
 		.lk-sidebar__user
-			span!= checkProps.firstLetter
-			span!= checkProps.userName
+			.lk-sidebar__photo!= checkProps.firstLetter
+			.lk-sidebar__name!= checkProps.userName
 		.lk-sidebar__links
 			- let i = 0
 			- while(i < checkProps.links.length)
-				a.lk-sidebar__link(href=checkProps.links[i].name class=`${checkProps.links[i].current === true ? "lk-sidebar__link--current" : ""}`)
+				a.lk-sidebar__link(href="javascript:void(0);" class=`${checkProps.links[i].current === true ? "lk-sidebar__link--current" : ""}`)
 					!= checkProps.links[i].name
 				- i++
 		+new-btn({
-			classes: '.lk-sidebar__logout',
+			classes: 'lk-sidebar__logout',
 			vMode: 'link',
+			cMode: 'transparent',
 			text: 'Выйти',
 			icon: 'false',
 		})

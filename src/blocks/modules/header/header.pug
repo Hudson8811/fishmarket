@@ -114,10 +114,32 @@ include ../../../blocks/modules/preloader/preloader
               svg
                 use(xlink:href=`img/sprites/sprite.svg#header_cart`)
             .header__other__item--cart__value 1
-          .header__other__item--personal.header__other__item.js-pop-up__button--login-register
-            a(href="#") 
+          .header__other__item--personal.header__other__item
+            .header__other__top
               svg
                 use(xlink:href=`img/sprites/sprite.svg#header_login`)
+            .header__menu__list.header-lk-info
+              .header-lk-info__not-authorized
+                .header-lk-info__title Необходима авторизация
+                button(data-js='popUpBtnLogin').header-lk-info__btn.new-btn.new-btn--small.new-btn--black
+                  .new-btn__text Авторизация
+                button(data-js='popUpBtnRegistration').header-lk-info__btn.new-btn.new-btn--small.new-btn--blue
+                  .new-btn__text Регистрация
+              .header-lk-info__authorized(style="display: none;")
+                .header-lk-info__photo Е
+                .header-lk-info__name Евгений Федотов
+                .header-lk-info__links
+                  a(href="javascript:void(0);").header-lk-info__link.new-btn.new-btn--link.new-btn--transparent
+                    .new-btn__text Перерейти в профиль
+                  a(href="javascript:void(0);").header-lk-info__link.new-btn.new-btn--link.new-btn--transparent                    
+                    .new-btn__text Личные данные
+                  a(href="javascript:void(0);").header-lk-info__link.new-btn.new-btn--link.new-btn--transparent                    
+                    .new-btn__text Реквизиты для оплаты
+                  a(href="javascript:void(0);").header-lk-info__link.new-btn.new-btn--link.new-btn--transparent                    
+                    .new-btn__text Корзина
+                  a(href="javascript:void(0);").header-lk-info__link.new-btn.new-btn--link.new-btn--transparent                    
+                    .new-btn__text Выйти
+
           .header__other__item--button.header__other__item
             button(type="submit").header__other__button.btn.js-button__question заказать звонок
           .header__other__item--lang.header__other__item
@@ -235,7 +257,7 @@ include ../../../blocks/modules/preloader/preloader
           .login-area__control.login-area__control--next Регистрация
         .swiper-wrapper 
           .swiper-slide.login-area__slide
-            form(action="#").contacts__form
+            form(action="#").contacts__form.new-form
               .contacts__form__content
                 .login-area__title Авторизация
                 .contacts__form__input-block
@@ -262,7 +284,7 @@ include ../../../blocks/modules/preloader/preloader
                   .registration-area__control(data-js="registrationAreaTo2") Физ. лицо
               .swiper-wrapper
                 .swiper-slide.registration-area__slide
-                  form(action="#").contacts__form.registration-entity
+                  form(action="#").contacts__form.new-form
                     .contacts__form__content
                       .contacts__form__input-block
                         input(type="text" name="").contacts__form__input.js-mask-name.text__13
@@ -307,7 +329,7 @@ include ../../../blocks/modules/preloader/preloader
                         svg
                           use(xlink:href=`img/sprites/sprite.svg#arrow_btn`)
                 .swiper-slide.registration-area__slide
-                  form(action="#").contacts__form.registration-individual
+                  form(action="#").contacts__form.new-form
                     .contacts__form__content
                       .contacts__form__input-block
                         input(type="text" name="").contacts__form__input.js-mask-name.text__13
@@ -343,8 +365,14 @@ include ../../../blocks/modules/preloader/preloader
                         svg
                           use(xlink:href=`img/sprites/sprite.svg#arrow_btn`)
 
-                //-информация об отправленном письме.
                 .swiper-slide.registration-area__slide
+                  .registration-confirm
+                    .registration-confirm__title Сообщение<br>с подтверждением<br>отправлено
+                    .registration-confirm__text Пожалуйста, проверьте Ваш почтовый ящик.
+                    .registration-confirm__data
+                      .registration-confirm__text Письмо отправлено на:
+                      .registration-confirm__email(data-js="confirmUserEmail") usermail@mail.ru
+
 
 //- На отдельной странице pop-up
 .mob-menu__section.mob-menu__question__section.js-pop-up__command

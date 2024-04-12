@@ -1,13 +1,47 @@
-.personal-data{
+.personal-data {
     min-height: 100vh;
     padding-top: vw(114);
     padding-bottom: vw(40);
+    @include max(md) {
+        min-height: auto;
+        padding-top: vw2(90);
+        padding-bottom: vw2(40);
+    } 
     .layout-sidebar {
         margin-top: vw(60);
+        @include max(md) {
+            margin-top: vw2(40);
+        } 
     }
     &__content {
         display: flex;
         align-items: flex-start;
         gap: vw(55);
+        @include max(md) {
+            flex-direction: column;
+            gap: vw2(30);
+        } 
+    }
+    &__title {
+        font-size: vw(32);
+        line-height: 1.06em;
+        margin-bottom: vw(37);
+    }
+    .only-entity {
+        width: 100%;
+        margin-top: vw(70);
+    }
+    &__form {
+        @include max(md) {
+            width: 100%;
+        } 
+        .new-btn .new-btn__icon svg use {
+            stroke: #FFF;
+        }
+    }
+    .contacts__form__input-block__name {
+        span {
+            color: #DC4170;
+        }
     }
 }
