@@ -6,8 +6,7 @@
     @include max(md) {
         padding: 0;
         height: auto;
-        background-size: 100% auto;
-        background-position: top;
+        background: none !important;
     } 
 
     &__container {
@@ -35,9 +34,10 @@
         @include max(md) {
             max-width: 100%;
             font-size: vw2(32);
-            padding: vw2(70) vw2(150) vw2(50) vw2(20);
+            padding: vw2(40) vw2(150) vw2(40) vw2(20);
             margin-bottom: 0;
-            background: rgba(0, 0, 0, 0.3);
+            margin-left: 0;
+            color: $fontBlack;
         }
     }
 

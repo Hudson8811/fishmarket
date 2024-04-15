@@ -8,7 +8,7 @@
     border: 1px solid rgba(255, 255, 255, 0.32);
     @include max(md) {
         height: auto;
-        min-height: vw2(400);
+        min-height: vw2(215);
         padding: vw2(20);
     }
     &__text {

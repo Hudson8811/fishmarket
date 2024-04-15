@@ -30,7 +30,7 @@
 					min-height: auto;
 					top: auto;
 					left: auto;
-					padding-top: vw2(40) 0;
+					padding-top: vw2(40);
 			}
 
 			&__bg {
@@ -59,6 +59,10 @@
 									padding-top: vw(90);
 									padding-bottom: vw(90);
 									height: 100vh;
+									@include max(md) {
+										padding-top: 0;
+									}
+
 							}
 							&:nth-child(2) {
 									right: -1px;

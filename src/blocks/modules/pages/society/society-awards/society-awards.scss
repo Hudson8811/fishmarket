@@ -3,7 +3,7 @@
     background: $greyBg;
     padding: vw(25) 0 vw(100);
     @include max(md) {
-        padding: vw2(25) 0 vw2(80);
+        padding: vw2(40) 0 vw2(80);
     } 
     &__title {
         max-width: vw(380);

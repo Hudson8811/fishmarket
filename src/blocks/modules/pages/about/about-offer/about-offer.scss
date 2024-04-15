@@ -21,7 +21,7 @@
         flex-wrap: wrap;
         padding: vw(20) 0 vw(31);
         @include max(md) {
-            padding: vw2(20) 0;
+            padding: vw2(40) 0;
             flex-direction: column;
             gap: vw2(24);
         }

@@ -613,78 +613,88 @@
               </div>
               <div class="layout-sidebar__content">
                 <div class="personal-data__content"> 
-                  <form class="contacts__form personal-data__form new-form" action="#">
+                  <form class="contacts__form personal-data__form new-form" action="#" novalidate data-validate>
                             <div class="title title--h2 personal-data__title">
                               <h2>Личные данные</h2>
                             </div>
-                    <div class="contacts__form__input-block">
-                      <input class="contacts__form__input js-mask-name text__13" type="text" name="">
-                      <div class="contacts__form__input-block__name">	Фамилия контактного лица</div>
+                    <div class="contacts__form__input-block input">
+                      <input class="contacts__form__input text__13" type="text" name="" required data-v-name="name" data-is-name="true">
+                      <div class="contacts__form__input-block__name">	Фамилия</div>
                       <div class="contacts__form__input-block__error">Некорректная фамилия</div>
                     </div>
-                    <div class="contacts__form__input-block">
-                      <input class="contacts__form__input js-mask-name text__13" type="text" name="">
-                      <div class="contacts__form__input-block__name">	Имя контактного лица</div>
+                    <div class="contacts__form__input-block input">
+                      <input class="contacts__form__input text__13" type="text" name="" required data-v-name="name" data-is-name="true">
+                      <div class="contacts__form__input-block__name">	Имя</div>
                       <div class="contacts__form__input-block__error">Некорректная имя</div>
                     </div>
-                    <div class="contacts__form__input-block">
-                      <input class="contacts__form__input js-mask-name text__13" type="text" name="">
-                      <div class="contacts__form__input-block__name">	Отчество контактного лица</div>
+                    <div class="contacts__form__input-block input">
+                      <input class="contacts__form__input text__13" type="text" name="" required data-v-name="name" data-is-name="true">
+                      <div class="contacts__form__input-block__name">	Отчество</div>
                       <div class="contacts__form__input-block__error">Некорректное отчество</div>
                     </div>
                     <div class="only-entity">
                               <div class="title title--h2 personal-data__title">
                                 <h2>Реквизиты компании</h2>
                               </div>
-                      <div class="contacts__form__input-block">
-                        <input class="contacts__form__input js-mask-name text__13" type="text" name="">
+                      <div class="contacts__form__input-block input">
+                        <input class="contacts__form__input text__13" type="text" name="" required>
                         <div class="contacts__form__input-block__name">	Название компании <span>*</span></div>
-                        <div class="contacts__form__input-block__error">Обязательное поле                    </div>
+                        <div class="contacts__form__input-block__error">Обязательное поле</div>
                       </div>
-                      <div class="contacts__form__input-block">
-                        <input class="contacts__form__input js-mask-name text__13" type="text" name="">
+                      <div class="contacts__form__input-block input">
+                        <input class="contacts__form__input text__13" type="text" name="" required data-v-name="inn" data-is-number="true">
                         <div class="contacts__form__input-block__name">	ИНН <span>*</span></div>
                         <div class="contacts__form__input-block__error">Некорректный ИНН</div>
                       </div>
-                      <div class="contacts__form__input-block">
-                        <input class="contacts__form__input js-mask-name text__13" type="text" name="">
+                      <div class="contacts__form__input-block input">
+                        <input class="contacts__form__input text__13" type="text" name="" required data-v-name="kpp" data-is-number="true">
                         <div class="contacts__form__input-block__name">	КПП <span>*</span></div>
-                        <div class="contacts__form__input-block__error">Некорректный КПП                        </div>
+                        <div class="contacts__form__input-block__error">Некорректный КПП</div>
                       </div>
-                      <div class="contacts__form__input-block">                 
-                        <input class="contacts__form__input text__13" type="email" name="">
+                      <div class="contacts__form__input-block input">                 
+                        <input class="contacts__form__input text__13" type="email" name="" required data-v-name="email">
                         <div class="contacts__form__input-block__name">E-mail <span>*</span></div>
                         <div class="contacts__form__input-block__error">Некорректная почта</div>
                       </div>
-                      <div class="contacts__form__input-block">
-                        <input class="contacts__form__input js-mask-phone" type="tel" name="">
+                      <div class="contacts__form__input-block input">
+                        <input class="contacts__form__input" type="tel" name="" required data-is-tel="true" data-v-name="phone">
                         <div class="contacts__form__input-block__name">Телефон <span>*</span></div>
-                        <div class="contacts__form__input-block__error">Некорректный телефон
-                          <button class="btn mob-menu__question__bottom" type="submit"></button>
-                        </div>
+                        <div class="contacts__form__input-block__error">Некорректный телефон</div>
                       </div>
                     </div>
-                            <button class="new-btn new-btn--small new-btn--blue " type="submit"><span class="new-btn__text">Сохранить</span><span class="new-btn__icon">
+                            <button class="new-btn new-btn--small new-btn--blue personal-data__submit" type="submit"><span class="new-btn__text">Сохранить</span><span class="new-btn__icon">
                                 <svg>
                                   <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
                                 </svg></span>
                             </button>
                   </form>
-                  <form class="contacts__form personal-data__form new-form" action="#">
+                  <form class="contacts__form personal-data__form new-form" action="#" novalidate data-validate>
                             <div class="title title--h2 personal-data__title">
                               <h2>Изменение пароля</h2>
                             </div>
-                    <div class="contacts__form__input-block">
-                      <input class="contacts__form__input text__13" type="password" name="">
+                    <div class="contacts__form__input-block input" data-js="passField">
+                      <input class="contacts__form__input text__13" type="password" name="" required data-v-name="pass">
                       <div class="contacts__form__input-block__name">Новый пароль <span>*</span></div>
+                      <div class="contacts__form__input-block__show" data-js="passShowBtn">
+                        <svg> 
+                          <use xlink:href="img/sprites/sprite.svg#pass_show"></use>
+                        </svg>
+                      </div>
                       <div class="contacts__form__input-block__error">Некорректный пароль</div>
+                      <div class="contacts__form__input-block__note">Длина пароля не менее 6 символов</div>
                     </div>
-                    <div class="contacts__form__input-block">
-                      <input class="contacts__form__input text__13" type="password" name="">
+                    <div class="contacts__form__input-block input" data-js="passField">
+                      <input class="contacts__form__input text__13" type="password" name="" required data-v-name="pass-repeat">
                       <div class="contacts__form__input-block__name">Новый пароль ещё раз <span>*</span></div>
+                      <div class="contacts__form__input-block__show" data-js="passShowBtn">
+                        <svg> 
+                          <use xlink:href="img/sprites/sprite.svg#pass_show">                           </use>
+                        </svg>
+                      </div>
                       <div class="contacts__form__input-block__error">Пароли не совпадают</div>
+                      <div class="contacts__form__input-block__note">Длина пароля не менее 6 символов</div>
                     </div>
-                            <button class="new-btn new-btn--small new-btn--blue " type="submit"><span class="new-btn__text">Сохранить изменения</span><span class="new-btn__icon">
+                            <button class="new-btn new-btn--small new-btn--blue personal-data__submit" type="submit"><span class="new-btn__text">Сохранить изменения</span><span class="new-btn__icon">
                                 <svg>
                                   <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
                                 </svg></span>

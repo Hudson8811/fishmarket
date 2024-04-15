@@ -99,7 +99,7 @@
         background-color: $white;
         padding: vw(28) vw(25) vw(89) vw(52);
         @include max(md) {
-            padding: vw2(30) vw2(20) vw2(30) vw2(20);
+            padding: vw2(40) vw2(20);
         }
     }
     &__offer {

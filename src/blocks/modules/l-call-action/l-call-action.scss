@@ -17,7 +17,7 @@
         @include max(md) {
             flex-direction: column;
             gap: vw2(24);
-            padding: vw2(20) 0;
+            padding: vw2(40) 0;
         }
     }
     &__title {

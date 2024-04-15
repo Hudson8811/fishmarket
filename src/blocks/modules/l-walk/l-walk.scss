@@ -2,22 +2,22 @@
     overflow-x: hidden;
     padding: vw(22) 0 vw(166);
     @include max(md) {
-        padding: vw2(25) 0 vw2(80);
-    } 
+        padding: vw2(40) 0 vw2(80);
+    }
     &__header {
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
         @include max(md) {
             flex-direction: column;
-        } 
+        }
     }
     &__title {
         max-width: vw(1130);
         font-size: vw(82);
         @include max(md) {
             max-width: 100%;
-        } 
+        }
     }
     &__btn.new-btn {
         flex-basis: vw(411);
@@ -28,7 +28,7 @@
             flex-basis: auto;
             margin-top: vw2(20);
             max-width: vw2(260);
-        } 
+        }
         &:hover {
             background-color: $blueHover;
             .new-btn__text {

@@ -150,9 +150,12 @@ function validation() {
                     if(form.hasAttribute('data-registration-form')) {
                         let slider = form.closest("[data-js='registrationAreaSlider']");
                         let sliderTop = slider.querySelector("[data-js='registrationAreaTop']");
+                        let userEmail = form.querySelector("[data-v-name='email']").value;
+                        let userEmailText = slider.querySelector("[data-js='confirmUserEmail']");
 
+                        userEmailText.innerHTML = userEmail;
                         slider.swiper.slideTo(2);
-                        sliderTop.classList.remove("active")
+                        sliderTop.classList.remove("active");
                         
                     }
 

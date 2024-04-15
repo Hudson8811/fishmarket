@@ -27,61 +27,70 @@ section.personal-data
                 +lk-sidebar()
             .layout-sidebar__content
                 .personal-data__content 
-                    form(action="#").contacts__form.personal-data__form.new-form
+                    form(action="#" novalidate data-validate).contacts__form.personal-data__form.new-form
                         +title('h2', 'Личные данные', 'personal-data__title')
-                        .contacts__form__input-block
-                            input(type="text" name="").contacts__form__input.js-mask-name.text__13
-                            .contacts__form__input-block__name 	Фамилия контактного лица
+                        .contacts__form__input-block.input
+                            input(type="text" name="" required data-v-name='name' data-is-name="true").contacts__form__input.text__13
+                            .contacts__form__input-block__name 	Фамилия
                             .contacts__form__input-block__error Некорректная фамилия
-                        .contacts__form__input-block
-                            input(type="text" name="").contacts__form__input.js-mask-name.text__13
-                            .contacts__form__input-block__name 	Имя контактного лица
+                        .contacts__form__input-block.input
+                            input(type="text" name="" required data-v-name='name' data-is-name="true").contacts__form__input.text__13
+                            .contacts__form__input-block__name 	Имя
                             .contacts__form__input-block__error Некорректная имя
-                        .contacts__form__input-block
-                            input(type="text" name="").contacts__form__input.js-mask-name.text__13
-                            .contacts__form__input-block__name 	Отчество контактного лица
+                        .contacts__form__input-block.input
+                            input(type="text" name="" required data-v-name='name' data-is-name="true").contacts__form__input.text__13
+                            .contacts__form__input-block__name 	Отчество
                             .contacts__form__input-block__error Некорректное отчество
                         .only-entity
                             +title('h2', 'Реквизиты компании', 'personal-data__title')
-                            .contacts__form__input-block
-                                input(type="text" name="").contacts__form__input.js-mask-name.text__13
+                            .contacts__form__input-block.input
+                                input(type="text" name="" required).contacts__form__input.text__13
                                 .contacts__form__input-block__name 	Название компании <span>*</span>
-                                .contacts__form__input-block__error Обязательное поле                    
-                            .contacts__form__input-block
-                                input(type="text" name="").contacts__form__input.js-mask-name.text__13
+                                .contacts__form__input-block__error Обязательное поле
+                            .contacts__form__input-block.input
+                                input(type="text" name="" required data-v-name='inn' data-is-number="true").contacts__form__input.text__13
                                 .contacts__form__input-block__name 	ИНН <span>*</span>
                                 .contacts__form__input-block__error Некорректный ИНН
-                            .contacts__form__input-block
-                                input(type="text" name="").contacts__form__input.js-mask-name.text__13
+                            .contacts__form__input-block.input
+                                input(type="text" name="" required data-v-name='kpp' data-is-number="true").contacts__form__input.text__13
                                 .contacts__form__input-block__name 	КПП <span>*</span>
-                                .contacts__form__input-block__error Некорректный КПП                        
-                            .contacts__form__input-block                  
-                                input(type="email" name="").contacts__form__input.text__13
+                                .contacts__form__input-block__error Некорректный КПП
+                            .contacts__form__input-block.input                  
+                                input(type="email" name="" required data-v-name='email').contacts__form__input.text__13
                                 .contacts__form__input-block__name E-mail <span>*</span>
                                 .contacts__form__input-block__error Некорректная почта
-                            .contacts__form__input-block
-                                input(type="tel" name="").contacts__form__input.js-mask-phone
+                            .contacts__form__input-block.input
+                                input(type="tel" name="" required data-is-tel="true" data-v-name='phone').contacts__form__input
                                 .contacts__form__input-block__name Телефон <span>*</span>
                                 .contacts__form__input-block__error Некорректный телефон
-                                    button.btn.mob-menu__question__bottom(type='submit')
                         +new-btn({
+                            classes: 'personal-data__submit',
                             tag: 'button',
                             buttonType: 'submit',
                             vMode: 'small',
                             text: 'Сохранить',
                         })
 
-                    form(action="#").contacts__form.personal-data__form.new-form
+                    form(action="#" novalidate data-validate).contacts__form.personal-data__form.new-form
                         +title('h2', 'Изменение пароля', 'personal-data__title')
-                        .contacts__form__input-block
-                            input(type="password" name="").contacts__form__input.text__13
+                        .contacts__form__input-block.input(data-js='passField')
+                            input(type="password" name="" required data-v-name='pass').contacts__form__input.text__13
                             .contacts__form__input-block__name Новый пароль <span>*</span>
+                            .contacts__form__input-block__show(data-js='passShowBtn')
+                                svg 
+                                    use(xlink:href=`img/sprites/sprite.svg#pass_show`)
                             .contacts__form__input-block__error Некорректный пароль
-                        .contacts__form__input-block
-                            input(type="password" name="").contacts__form__input.text__13
+                            .contacts__form__input-block__note Длина пароля не менее 6 символов
+                        .contacts__form__input-block.input(data-js='passField')
+                            input(type="password" name="" required data-v-name='pass-repeat').contacts__form__input.text__13
                             .contacts__form__input-block__name Новый пароль ещё раз <span>*</span>
+                            .contacts__form__input-block__show(data-js='passShowBtn')
+                                svg 
+                                    use(xlink:href=`img/sprites/sprite.svg#pass_show`)                            
                             .contacts__form__input-block__error Пароли не совпадают
+                            .contacts__form__input-block__note Длина пароля не менее 6 символов
                         +new-btn({
+                            classes: 'personal-data__submit',
                             tag: 'button',
                             buttonType: 'submit',
                             vMode: 'small',

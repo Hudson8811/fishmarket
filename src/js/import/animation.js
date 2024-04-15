@@ -221,7 +221,6 @@ function startAnimation(){
 							if(!aboutEmployeesSlider.swiper) {
 								let aboutEmployeesSliderEx = new Swiper(aboutEmployeesSlider, {
 									slidesPerView: 'auto',
-									spaceBetween: 20,
 								});
 							}
 						})
@@ -304,7 +303,6 @@ function startAnimation(){
 							if(!teamEmployeesSlider.swiper) {
 								let teamEmployeesSliderEx = new Swiper(teamEmployeesSlider, {
 									slidesPerView: 'auto',
-									spaceBetween: 20,
 								});
 							}
 						})

@@ -2,7 +2,7 @@
     padding: vw(35) 0;
     overflow: hidden;
     @include max(md) {
-        padding: vw2(105) 0 vw2(35);
+        padding: vw2(105) 0 0;
     }
 
     &__slide {

@@ -2226,8 +2226,8 @@ a, button {
         }
         &__show {
             position: absolute;
-            right: vw(7);
-            top: 0;
+            right: vw(17);
+            top: vw(15);
             width: vw(24);
             height: vw(15);
             cursor: pointer;
@@ -2259,6 +2259,15 @@ a, button {
                     fill-opacity: 0.2;
                 }
             }
+        }
+        &__note {
+            position: absolute;
+            top: calc(100% + vw(9));
+            right: 0;
+            font-size: vw(14);
+            font-weight: 400;
+            line-height: 1.4em;
+            color: $fontBlack;
         }
         &.error{
             input, textarea {

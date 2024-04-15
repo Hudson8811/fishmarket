@@ -27,9 +27,16 @@
         line-height: 1.06em;
         margin-bottom: vw(37);
     }
+    &__submit {
+        margin-top: vw(43);
+    }
     .only-entity {
         width: 100%;
         margin-top: vw(70);
+    }
+    .input {
+        border-bottom: none;
+        padding-bottom: 0;
     }
     &__form {
         @include max(md) {

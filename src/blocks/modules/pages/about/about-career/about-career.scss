@@ -23,7 +23,7 @@
         @include max(md) {
             flex-direction: column;
             background-size: vw2(366) auto;
-            padding: vw2(15);
+            padding: vw2(40) vw2(15);
         }
     }
     &__title {
