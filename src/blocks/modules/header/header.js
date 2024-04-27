@@ -66,7 +66,7 @@ let loginRegister = document.querySelector(".js-pop-up__login-register");
 let loginRegisterSlider = document.querySelector("[data-js='loginAreaSlider']");
 let loginRegisterOverlay = document.querySelector(".js-pop-up__login-register--overlay");
 let loginRegisterClose = document.querySelector(".js-pop-up__login-register--close");
-let loginButton = document.querySelector("[data-js='popUpBtnLogin']");
+let loginButtons = document.querySelectorAll("[data-js='popUpBtnLogin']");
 let registerButton = document.querySelector("[data-js='popUpBtnRegistration']");
 let loginAreaSlider = document.querySelector("[data-js='loginAreaSlider']");
 let registrationAreaSlider = document.querySelector("[data-js='registrationAreaSlider']");
@@ -108,13 +108,16 @@ if(registrationAreaSlider) {
   })
 }
 
-if( loginButton !== null && registerButton !== null) {
+if( loginButtons.length > 0 && registerButton !== null) {
 
-  loginButton.addEventListener("click", function () {
-    loginRegisterSlider.swiper.slideTo(0);
-    loginRegister.classList.add("active");
-    bodyNoScroll()
-  });
+  
+  loginButtons.forEach(loginButton =>  {
+    loginButton.addEventListener("click", function () {
+      loginRegisterSlider.swiper.slideTo(0);
+      loginRegister.classList.add("active");
+      bodyNoScroll()
+    });
+  })
 
   registerButton.addEventListener("click", function () {
     loginRegisterSlider.swiper.slideTo(1);

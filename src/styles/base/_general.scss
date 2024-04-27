@@ -2199,7 +2199,7 @@ a, button {
         flex-flow: column nowrap;
         margin-bottom: vw(21);
         @include max(md) {
-            margin-bottom: vw(20);
+            margin-bottom: vw2(20);
         }
         &__name{
             position: absolute;
@@ -2268,6 +2268,10 @@ a, button {
             font-weight: 400;
             line-height: 1.4em;
             color: $fontBlack;
+            @include max(md) {
+                top: calc(100% + vw2(9));
+                font-size: vw2(14);
+            }
         }
         &.error{
             input, textarea {
@@ -2285,6 +2289,11 @@ a, button {
                     height: vw(10);
                     background: $red;
                     border-radius: 50%;
+                    @include max(md) {
+                        top:vw2(-49);
+                        width: vw2(10);
+                        height: vw2(10);
+                    }
                 }
             }
         }

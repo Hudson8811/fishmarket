@@ -29,6 +29,9 @@
     }
     &__submit {
         margin-top: vw(43);
+        @include max(md) {
+            margin-top: vw2(43);
+        }
     }
     .only-entity {
         width: 100%;
