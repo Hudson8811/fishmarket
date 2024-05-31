@@ -6,11 +6,17 @@
 			.layout--trio__col.js-assortment__col--1
 				.assortment__title.title__82
 					!='Наш ассортимент'
-				a(href="#").btn--box.assortment__btn
-					.btn.btn--circle
-						svg
-							use(xlink:href=`img/sprites/sprite.svg#arrow_btn`)
-					.btn--box__text Перейти в каталог
+				.assortment__btns
+					a(href="#").btn--box.btn--white.assortment__btn
+						.btn.btn--circle
+							svg
+								use(xlink:href=`img/sprites/sprite.svg#arrow_btn`)
+						.btn--box__text Скачать прайс-лист
+					a(href="#").btn--box.assortment__btn
+						.btn.btn--circle
+							svg
+								use(xlink:href=`img/sprites/sprite.svg#arrow_btn`)
+						.btn--box__text Перейти в каталог
 			.layout--trio__col.js-assortment__col--2
 				a(href="#").card.card--full-picture.active
 					.card__title.title__32

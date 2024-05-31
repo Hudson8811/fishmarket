@@ -1,36 +1,62 @@
 include ../../../../components/l-modal/l-modal
 
-+l-modal("cartOffer")
++l-modal("cartOffer", "cart-offer-modal")
     .mob-menu__question__top 
         .mob-menu__question__top__title
-            !="ОСТАЛИСЬ ВОПРОСЫ? НАПИШИТЕ ИЛИ ЗАКАЖИТЕ ЗВОНОК"
+            !="ЗАПРОСИТЬ ПЕРСОНАЛЬНОЕ ПРЕДЛОЖЕНИЕ"
 
-    form(action="").contacts__form  
-    .contacts__form__input-block.error
-        input(type="text" name="").contacts__form__input.js-mask-name.text__13
-        .contacts__form__input-block__name 	Имя*
-        .contacts__form__input-block__error Некорректное имя
-    .contacts__form__input-block.error
-        input(type="tel" name="").contacts__form__input.js-mask-phone
-        .contacts__form__input-block__name Телефон
-        .contacts__form__input-block__error Некорректный телефон
-    .contacts__form__input-block.error
-        input(type="email" name="").contacts__form__input.text__13
-        .contacts__form__input-block__name Почта
-        .contacts__form__input-block__error Некорректная почта
+    form(action="#" novalidate data-validate data-registration-form).contacts__form.new-form
+        .contacts__form__content
+            .contacts__form__input-block.input
+                input(type="text" name="" required data-v-name='name' data-is-name="true").contacts__form__input.text__13
+                .contacts__form__input-block__name 	Имя
+                .contacts__form__input-block__error Некорректная имя
+            .contacts__form__input-block.input
+                input(type="tel" name="" required data-is-tel="true" data-v-name='phone').contacts__form__input
+                .contacts__form__input-block__name Телефон
+                .contacts__form__input-block__error Некорректный телефон
+            .contacts__form__input-block.input                  
+                input(type="email" name="" required data-v-name='email').contacts__form__input.text__13
+                .contacts__form__input-block__name Почта
+                .contacts__form__input-block__error Некорректная почта
+            .contacts__form__inner-block
+                .contacts__form__subtitle Способ доставки
+                .contacts__form__flex-block(data-group-name="receipt")
+                    .contacts__form__input-block.input
+                        .checkbox
+                            label
+                                input.custom-checkbox(type="radio" name="receipt" data-group-item="selfPickup" checked)
+                                != "Самовывоз"
+                    .contacts__form__input-block.input
+                        .checkbox
+                            label
+                                input.custom-checkbox(type="radio" data-group-item="delivery" name="receipt")
+                                != "Служба доставки SkyFish"
+                    .contacts__form__radio-block.active(data-group-block="selfPickup")
+                        .contacts__form__input-block
+                            select.contacts__form__select.js-mob-menu__stock__select(name="" preloader="Склад1")
+                                option 
+                                option Склад1
+                                option Склад2
+                                option Склад3
+                                option Склад4
+                                option Склад5
+                                .localities-centers__select-arrow
+                                    svg
+                                        use(xlink:href=`img/sprites/sprite.svg#select_arrow`)
 
-    .contacts__form__input-block
-        textarea(name="").contacts__form__input.text__13
-        .contacts__form__input-block__name Комментарий
-        .contacts__form__input-block__error
-    .contacts__form__personal-data.contacts__form__input-block.error 
-        .checkbox
-        label
-            input.custom-checkbox(type="checkbox" name="personal-data" value="indigo")
-            != "Согласие на обработку персональных данных"
-        .contacts__form__input-block__error обязательно нужно согласиться
-    .mob-menu__question__bottom
-    .mob-menu__question__bottom__text Отправить
-    .mob-menu__question__bottom__row
-        svg
-        use(xlink:href=`img/sprites/sprite.svg#arrow_btn`)
+
+            .contacts__form__input-block.input
+                input(type="text" name="").contacts__form__input.text__13
+                .contacts__form__input-block__name 	Комментарий
+            .contacts__form__personal-data.contacts__form__input-block.input
+                .checkbox
+                    label
+                        input.custom-checkbox(type="checkbox" name="" required)
+                        != "Согласие на обработку персональных данных"
+                .contacts__form__input-block__error обязательно нужно согласиться
+        button.btn.mob-menu__question__bottom(type='submit')
+            .mob-menu__question__bottom__text Отправить
+            .mob-menu__question__bottom__row
+                svg
+                    use(xlink:href=`img/sprites/sprite.svg#arrow_btn`)

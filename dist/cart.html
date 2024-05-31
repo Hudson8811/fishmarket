@@ -61,6 +61,17 @@
                   <div class="header__menu__item__text" data-js="cityTextValue">город</div>
                 </div>
               </div>
+            </div>
+            <div class="header-nav header__nav">
+              <ul class="header-nav__list">
+                <li class="header-nav__item"><a href="#">Прайс</a></li>
+                <li class="header-nav__item"><a href="#">Каталог</a></li>
+                <li class="header-nav__item"> <a href="#">Производство</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="layout__col">
+            <div class="header__other">
               <div class="header__other__item">
                 <div class="header__other__top"><a href="mailto:info@skyfish.ru"> info@skyfish.ru
                     <div class="header__menu__item__arrow js-row"><img src="img/svg/header__menu__item__arrow.svg" alt=""></div></a></div>
@@ -78,10 +89,6 @@
                   <li class="header__menu__list__item"> <a href="tel:+74957488685">+7 (495) 748-86-85 (доб. 136)</a></li>
                 </ul>
               </div>
-            </div>
-          </div>
-          <div class="layout__col">
-            <div class="header__other">
               <div class="header__other__item--soc header__other__item"><a class="header__other__item--soc__item" href="#"> 
                   <svg>
                     <use xlink:href="img/sprites/sprite.svg#header_tg"></use>
@@ -220,8 +227,12 @@
     <div class="mob-menu__section mob-menu__city__section js-mob-menu__city__section">
       <div class="mob-menu--overlay js-mob-menu__city__top__overlay"></div>
       <div class="mob-menu__city">
-        <div class="mob-menu__city__top"> 
-          <div class="mob-menu__city__top__title">Не выбран <br>регион
+        <div class="mob-menu__city__top">
+          <div class="mob-menu__city__top__header"> 
+            <div class="mob-menu__city__top__title">Не выбран регион
+            </div>
+            <div class="mob-menu__city__top__text text__18">выбор региона в котором есть представительства компании
+            </div>
           </div>
           <div class="mob-menu__city__top__close">
             <svg>
@@ -759,7 +770,7 @@
             </div>
           </div>
         </section>
-                <div class="l-modal" data-id="cartOffer">
+                <div class="l-modal cart-offer-modal" data-id="cartOffer">
                   <div class="l-modal__overlay" data-js="lModalOverlay"></div>
                   <div class="l-modal__content">
                     <div class="l-modal__close" data-js="lModalClose">
@@ -768,43 +779,84 @@
                       </svg>
                     </div>
                     <div class="mob-menu__question__top"> 
-                      <div class="mob-menu__question__top__title">ОСТАЛИСЬ ВОПРОСЫ? НАПИШИТЕ ИЛИ ЗАКАЖИТЕ ЗВОНОК
+                      <div class="mob-menu__question__top__title">ЗАПРОСИТЬ ПЕРСОНАЛЬНОЕ ПРЕДЛОЖЕНИЕ
                       </div>
                     </div>
-                    <form class="contacts__form" action=""> </form>
-                    <div class="contacts__form__input-block error">
-                      <input class="contacts__form__input js-mask-name text__13" type="text" name="">
-                      <div class="contacts__form__input-block__name">	Имя*</div>
-                      <div class="contacts__form__input-block__error">Некорректное имя</div>
-                    </div>
-                    <div class="contacts__form__input-block error">
-                      <input class="contacts__form__input js-mask-phone" type="tel" name="">
-                      <div class="contacts__form__input-block__name">Телефон</div>
-                      <div class="contacts__form__input-block__error">Некорректный телефон</div>
-                    </div>
-                    <div class="contacts__form__input-block error">
-                      <input class="contacts__form__input text__13" type="email" name="">
-                      <div class="contacts__form__input-block__name">Почта</div>
-                      <div class="contacts__form__input-block__error">Некорректная почта</div>
-                    </div>
-                    <div class="contacts__form__input-block">
-                      <textarea class="contacts__form__input text__13" name=""></textarea>
-                      <div class="contacts__form__input-block__name">Комментарий</div>
-                      <div class="contacts__form__input-block__error"></div>
-                    </div>
-                    <div class="contacts__form__personal-data contacts__form__input-block error"> 
-                      <div class="checkbox"></div>
-                      <label>
-                        <input class="custom-checkbox" type="checkbox" name="personal-data" value="indigo">Согласие на обработку персональных данных
-                      </label>
-                      <div class="contacts__form__input-block__error">обязательно нужно согласиться</div>
-                    </div>
-                    <div class="mob-menu__question__bottom"></div>
-                    <div class="mob-menu__question__bottom__text">Отправить</div>
-                    <div class="mob-menu__question__bottom__row">
-                      <svg></svg>
-                      <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
-                    </div>
+                    <form class="contacts__form new-form" action="#" novalidate data-validate data-registration-form>
+                      <div class="contacts__form__content">
+                        <div class="contacts__form__input-block input">
+                          <input class="contacts__form__input text__13" type="text" name="" required data-v-name="name" data-is-name="true">
+                          <div class="contacts__form__input-block__name">	Имя</div>
+                          <div class="contacts__form__input-block__error">Некорректная имя</div>
+                        </div>
+                        <div class="contacts__form__input-block input">
+                          <input class="contacts__form__input" type="tel" name="" required data-is-tel="true" data-v-name="phone">
+                          <div class="contacts__form__input-block__name">Телефон</div>
+                          <div class="contacts__form__input-block__error">Некорректный телефон</div>
+                        </div>
+                        <div class="contacts__form__input-block input">                 
+                          <input class="contacts__form__input text__13" type="email" name="" required data-v-name="email">
+                          <div class="contacts__form__input-block__name">Почта</div>
+                          <div class="contacts__form__input-block__error">Некорректная почта</div>
+                        </div>
+                        <div class="contacts__form__inner-block">
+                          <div class="contacts__form__subtitle">Способ доставки</div>
+                          <div class="contacts__form__flex-block" data-group-name="receipt">
+                            <div class="contacts__form__input-block input">
+                              <div class="checkbox">
+                                <label>
+                                  <input class="custom-checkbox" type="radio" name="receipt" data-group-item="selfPickup" checked>Самовывоз
+                                </label>
+                              </div>
+                            </div>
+                            <div class="contacts__form__input-block input">
+                              <div class="checkbox">
+                                <label>
+                                  <input class="custom-checkbox" type="radio" data-group-item="delivery" name="receipt">Служба доставки SkyFish
+                                </label>
+                              </div>
+                            </div>
+                            <div class="contacts__form__radio-block active" data-group-block="selfPickup">
+                              <div class="contacts__form__input-block">
+                                <select class="contacts__form__select js-mob-menu__stock__select" name="" preloader="Склад1">
+                                  <option> </option>
+                                  <option>Склад1</option>
+                                  <option>Склад2</option>
+                                  <option>Склад3</option>
+                                  <option>Склад4</option>
+                                  <option>Склад5</option>
+                                  <div class="localities-centers__select-arrow">
+                                    <svg>
+                                      <use xlink:href="img/sprites/sprite.svg#select_arrow"></use>
+                                    </svg>
+                                  </div>
+                                </select>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="contacts__form__input-block input">
+                          <input class="contacts__form__input text__13" type="text" name="">
+                          <div class="contacts__form__input-block__name">	Комментарий</div>
+                        </div>
+                        <div class="contacts__form__personal-data contacts__form__input-block input">
+                          <div class="checkbox">
+                            <label>
+                              <input class="custom-checkbox" type="checkbox" name="" required>Согласие на обработку персональных данных
+                            </label>
+                          </div>
+                          <div class="contacts__form__input-block__error">обязательно нужно согласиться</div>
+                        </div>
+                      </div>
+                      <button class="btn mob-menu__question__bottom" type="submit">
+                        <div class="mob-menu__question__bottom__text">Отправить</div>
+                        <div class="mob-menu__question__bottom__row">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
+                          </svg>
+                        </div>
+                      </button>
+                    </form>
                   </div>
                 </div>
         <footer class="footer footer__animation footer__animation--personally js-footer__animation">
@@ -846,7 +898,7 @@
                     <svg>
                       <use xlink:href="img/sprites/sprite.svg#footer_vk"></use>
                     </svg></span></a></div>
-              <div class="footer-cotacts__contacts"><a href="mailto:info@skyfish.ru">info@skyfish.ru</a><a href="tel:74922521233">+7 (4922) 52-12-33</a></div>
+              <div class="footer-cotacts__contacts"><a href="mailto:info@skyfish.ru">info@skyfish.ru</a><a href="tel:74922521233">+7 (4922) 52-12-33</a><span>Калужская обл., <br>Боровский р-н, д. Маланьино</span></div>
             </div>
           </div><a class="btn--box footer__btn" href="#">
             <div class="btn btn--circle">

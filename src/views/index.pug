@@ -13,54 +13,64 @@ block content
                         .start__slide__desc
 
                             .start__slide__title.title__82
-                                h1 Продаём рыбу и&nbsp;морепродукты
+                                h1 РЫБА И МОРЕПРОДУКТЫ <br>ОПТОМ
                             .start__slide__text.title__32
-                                !="Работаем по&nbsp;договору с ООО и&nbsp;ИП"
-                        a(href="#").btn--box.start__slide__btn
-                            .btn.btn--circle
-                                svg
-                                    use(xlink:href=`img/sprites/sprite.svg#arrow_btn`)
-                            .btn--box__text Подробнее
+                                !="ДОСТАВКА ОТ 1 КОРОБКИ <br>В НАЛИЧИИ ДО 200 НАИМЕНОВАНИЙ"
+                        .start__slide__btns
+                            a(href="#").btn--box.start__slide__btn
+                                .btn.btn--circle
+                                    svg
+                                        use(xlink:href=`img/sprites/sprite.svg#arrow_btn`)
+                                .btn--box__text Подробнее
+                            a(href="#").btn--box.start__slide__btn.btn--white
+                                .btn.btn--circle
+                                    svg
+                                        use(xlink:href=`img/sprites/sprite.svg#arrow_btn`)
+                                .btn--box__text Скачать прайс-лист
                         .start__bg 
                             img(src="img/start__section__bg.png" alt="")
                         .start__slide__picture 
                             picture 
                                 source(media="(max-width: 992px )" srcset="img/start__slide--1.jpg")
                                 img(src="img/start__slide--1.jpg" alt="" srcset="img/start__slide--1.jpg 2x")
-                    .start__slide.swiper-slide
-                        .start__slide__desc
-                            .start__slide__title.title__82
-                                !="Итоги импорта за II квартал 2024 года"
-                            .start__slide__text.title__32
-                                !="Подготовили аналитический отчет по&nbsp;объемам импорта рыбы и&nbsp;морепродуктов в&nbsp;России"
-                        a(href="#").btn--box.start__slide__btn
-                            .btn.btn--circle
-                                svg
-                                    use(xlink:href=`img/sprites/sprite.svg#arrow_btn`)
-                            .btn--box__text Подробнее
-                        .start__bg 
-                            img(src="img/start__section__bg.png" alt="")
-                        .start__slide__video
-                            video(autoplay muted loop)
-                                source(src="video/start__slide__video--2.mp4" type="video/mp4")
 
                     .start__slide.swiper-slide
                         .start__slide__desc
                             .start__slide__title.title__82
-                                !="Черная пятница на море"
+                                !="Черная пятница <br>на море"
                             .start__slide__text.title__32
-                                !="Вышли в&nbsp;море и&nbsp;наловили для всех несколько кораблей крабов"
-                        a(href="#").btn--box.start__slide__btn
-                            .btn.btn--circle
-                                svg
-                                    use(xlink:href=`img/sprites/sprite.svg#arrow_btn`)
-                            .btn--box__text Подробнее
+                                !="Вышли в&nbsp;море и&nbsp;наловили для всех <br>несколько кораблей крабов"
+                        .start__slide__btns
+                            a(href="#").btn--box.start__slide__btn
+                                .btn.btn--circle
+                                    svg
+                                        use(xlink:href=`img/sprites/sprite.svg#arrow_btn`)
+                                .btn--box__text Каталог
                         .start__bg 
                             img(src="img/start__section__bg.png" alt="")
                         .start__slide__picture 
                             picture 
                                 source(media="(max-width: 992px )" srcset="img/start__slide--3.jpg")
                                 img(src="img/start__slide--3.jpg" alt="" srcset="img/start__slide--3.jpg 2x")
+
+                    .start__slide.swiper-slide
+                        .start__slide__desc
+                            .start__slide__title.title__82
+                                !="Итоги импорта за II квартал 2024 года"
+                            .start__slide__text.title__32
+                                !="Подготовили аналитический отчет по&nbsp;объемам импорта рыбы и&nbsp;морепродуктов в&nbsp;России"
+                        .start__slide__btns
+                            a(href="#").btn--box.start__slide__btn
+                                .btn.btn--circle
+                                    svg
+                                        use(xlink:href=`img/sprites/sprite.svg#arrow_btn`)
+                                .btn--box__text Призводство
+                        .start__bg 
+                            img(src="img/start__section__bg.png" alt="")
+                        .start__slide__video
+                            video(autoplay muted loop)
+                                source(src="video/start__slide__video--2.mp4" type="video/mp4")
+
                     .start__slide.swiper-slide
                         .start__bg 
                             img(src="img/start__section__bg.png" alt="")
@@ -117,11 +127,17 @@ block content
         .section.hear__section
             .hear__title.title__170 Понимаем море, слышим людей
             .hear__subtitle.title__32 Сервис доставки рыбы и&nbsp;морепродуктов
-            a(href="#").btn--box.hear__btn
-                .btn.btn--circle
-                    svg
-                        use(xlink:href=`img/sprites/sprite.svg#arrow_btn`)
-                .btn--box__text Подробнее			
+            .hear__btns
+                a(href="#").btn--box.hear__btn
+                    .btn.btn--circle
+                        svg
+                            use(xlink:href=`img/sprites/sprite.svg#arrow_btn`)
+                    .btn--box__text О компании
+                a(href="#").btn--box.btn--white.assortment__btn
+                    .btn.btn--circle
+                        svg
+                            use(xlink:href=`img/sprites/sprite.svg#arrow_btn`)
+                    .btn--box__text Производство
             .hear__video
                 video(autoplay muted loop playsinline webkit-playsinline data-js="autoplayVideo")
                     source(src="video/hear__video.mp4" type="video/mp4")

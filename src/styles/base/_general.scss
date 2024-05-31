@@ -224,10 +224,39 @@ a, button {
             width: 100%;
             text-align: left; 
             @include max(md) {
-                font-size: vw2(22);
+                font-size: vw2(12);
                 font-style: normal;
                 line-height: 1.2;
             }           
+        }
+    }
+    &--box.btn--white {
+        background: #fff;
+        transition: all $tr-time-fast;
+        .btn--box__text {
+            color: $blueLight;
+            transition: all $tr-time-fast;
+        }
+        .btn.btn--circle {
+            background-color: $blueLight;
+            transition: all $tr-time-fast;
+        }
+        svg {
+            use {
+                stroke: $white;
+            }        
+        }
+        &:hover {
+            background: $blueLight;
+            .btn--box__text {
+                color: $white;
+            }
+            .btn.btn--circle {
+                background-color: $white;
+            }
+            svg use {
+                stroke: $blueLight;
+            }
         }
     }
 }
@@ -688,13 +717,16 @@ a, button {
                 opacity: 1;
             }
         }
-        &__btn {
+        &__btns {
             position: absolute;
             bottom: vw(33);
             left: vw(25);
+            display: flex;
+            align-items: center;
+            gap: vw(30);
             z-index:  20;
-            opacity: 0;
             @include max(md) {
+                flex-direction: column;
                 bottom: vw2(20);
                 left: vw2(20);
                 opacity: 1;
@@ -703,7 +735,7 @@ a, button {
         
         &__title {
             position: relative;
-            max-width: vw(884);
+            max-width: vw(1065);
             margin-bottom: vw(25);
             @include max(md) {
                 max-width: 95%;
@@ -712,7 +744,7 @@ a, button {
         }
         &__text {
             position: relative;
-            max-width: vw(353);
+            max-width: vw(620);
             @include max(md) {
                 max-width: 70%;
             }
@@ -776,7 +808,10 @@ a, button {
             margin-bottom: vw2(30);
         }
     }
-    &__btn {
+    &__btns {
+        display: flex;
+        align-items: center;
+        gap: vw(30);
         position: absolute;
         bottom: vw(33);
         left: vwf(25);
@@ -2346,6 +2381,26 @@ a, button {
         }
 
 
+    }
+    &__subtitle {
+        font-size: vw(18);
+        font-weight: 400;
+        line-height: 1.4em;
+        margin-bottom: vw(15);
+    }
+    &__flex-block {
+        display: flex;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        gap: vw(15) vw(25);
+        .contacts__form__input-block.input {
+            width: fit-content;
+            padding-bottom: 0;
+            margin-bottom: 0;
+        }
+    }
+    &__radio-block {
+        width: 100%;
     }
     textarea {
         max-width: 100%;

@@ -13,6 +13,18 @@ include ../../../blocks/modules/preloader/preloader
 								svg
 									use(xlink:href=`img/sprites/sprite.svg#header_position`)
 							.header__menu__item__text(data-js="cityTextValue") город
+
+				.header-nav.header__nav
+					ul.header-nav__list
+						li.header-nav__item
+							a(href="#") Прайс
+						li.header-nav__item
+							a(href="#") Каталог
+						li.header-nav__item 
+							a(href="#") Производство
+
+			.layout__col
+				.header__other
 					.header__other__item
 						.header__other__top
 							a(href="mailto:info@skyfish.ru") 
@@ -37,8 +49,6 @@ include ../../../blocks/modules/preloader/preloader
 								a(href="tel:+749578685") +7 (495) 748-86-85
 							li.header__menu__list__item 
 								a(href="tel:+74957488685") +7 (495) 748-86-85 (доб. 136)
-			.layout__col
-				.header__other
 					.header__other__item--soc.header__other__item
 						a(href="#").header__other__item--soc__item 
 							svg
@@ -184,9 +194,12 @@ include ../../../blocks/modules/preloader/preloader
 	.mob-menu--overlay.js-mob-menu__city__top__overlay
 
 	.mob-menu__city
-		.mob-menu__city__top 
-			.mob-menu__city__top__title
-				!="Не выбран <br>регион"
+		.mob-menu__city__top
+			.mob-menu__city__top__header 
+				.mob-menu__city__top__title
+					!="Не выбран регион"
+				.mob-menu__city__top__text.text__18
+					!= 'выбор региона в котором есть представительства компании'
 			.mob-menu__city__top__close
 				svg
 					use(xlink:href=`img/sprites/sprite.svg#header_close`)

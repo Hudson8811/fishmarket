@@ -168,9 +168,16 @@
 				}
 			}
 	}
-	&__btn {
+	&__btns {
+		display: flex;
+		flex-direction: column;
+		gap: vw(30);
 		margin-top: auto;
 		top: auto;
 		z-index: 26;
+		@include max(md) {
+			flex-direction: row-reverse;
+			justify-content: flex-end;
+		}
 	}
 }
