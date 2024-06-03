@@ -35,7 +35,7 @@ function validation() {
             }
 
             function validateInput(input) {
-                const field = input.querySelector('input');
+                const field = input.querySelector('input') ? input.querySelector('input') : input.querySelector('select');
                 const name = field.getAttribute('data-v-name');
                 const valueField = field.value;
                 const passField = form.querySelector("[data-v-name='pass']");
@@ -99,6 +99,17 @@ function validation() {
                                 if (field.checked) {
                                     error(input).remove()
                                 } else {
+                                    error(input).set()
+                                }
+                                break
+                            case 'select':
+                                if (valueField.length > 0) {
+                                    console.log('селект не пустой')
+                                    console.log(valueField)
+                                    error(input).remove()
+                                } else {
+                                    console.log('селект пустой')
+                                    console.log(valueField)
                                     error(input).set()
                                 }
                                 break

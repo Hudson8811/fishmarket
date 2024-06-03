@@ -1,4 +1,6 @@
 include ../../../../components/l-modal/l-modal
+include ../../../../components/input-radio/input-radio
+include ../../../../components/input/input
 
 +l-modal("cartOffer", "cart-offer-modal")
     .mob-menu__question__top 
@@ -48,19 +50,22 @@ include ../../../../components/l-modal/l-modal
             .contacts__form__inner-block
                 .contacts__form__subtitle Способ доставки
                 .contacts__form__flex-block(data-group-name="receipt" data-js="formRadioTabs")
-                    .contacts__form__input-block.input
-                        .checkbox
-                            label
-                                input.custom-checkbox(type="radio" name="receipt" data-group-item="selfPickup" checked)
-                                != "Самовывоз"
-                    .contacts__form__input-block.input
-                        .checkbox
-                            label
-                                input.custom-checkbox(type="radio" name="receipt" data-group-item="delivery")
-                                != "Служба доставки SkyFish"
+
+                    .contacts__form__input-block.input.input--checkbox
+                        label
+                            input.input__input(type="radio" name="receipt" data-group-item="selfPickup" checked)
+                            .input__fake
+                            .input__text!= "Самовывоз"
+
+                    .contacts__form__input-block.input.input--checkbox
+                        label
+                            input.input__input(type="radio" name="receipt" data-group-item="delivery")
+                            .input__fake
+                            .input__text!= "Служба доставки SkyFish"                          
+
                     .contacts__form__radio-block.active(data-group-block="selfPickup")
-                        .contacts__form__input-block
-                            select.contacts__form__select.js-mob-menu__stock__select(name="" preloader="Склад1")
+                        .contacts__form__input-block.input
+                            select.contacts__form__select.js-mob-menu__stock__select(name="" preloader="Склад1" data-v-name='select' required)
                                 option 
                                 option Склад1
                                 option Склад2
@@ -70,17 +75,20 @@ include ../../../../components/l-modal/l-modal
                                 .localities-centers__select-arrow
                                     svg
                                         use(xlink:href=`img/sprites/sprite.svg#select_arrow`)
+                            .contacts__form__input-block__error Необходимо выбрать склад
 
 
             .contacts__form__input-block.input
                 input(type="text" name="").contacts__form__input.text__13
                 .contacts__form__input-block__name 	Комментарий
-            .contacts__form__personal-data.contacts__form__input-block.input
-                .checkbox
-                    label
-                        input.custom-checkbox(type="checkbox" name="" required)
-                        != "Согласие на обработку персональных данных"
-                .contacts__form__input-block__error обязательно нужно согласиться
+
+            .contacts__form__input-block.input.input--checkbox
+                label
+                    input.input__input(type="checkbox" name="checkbox" data-v-name="checkbox" required)
+                    .input__fake
+                    .input__text Согласие на обработку персональных данных
+                .contacts__form__input-block__error Обязательно нужно согласиться
+
         button.btn.mob-menu__question__bottom(type='submit')
             .mob-menu__question__bottom__text Отправить
             .mob-menu__question__bottom__row

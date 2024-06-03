@@ -743,8 +743,11 @@ a, button {
             }
         }
         &__text {
+            display: flex;
+            flex-direction: column;
+            gap: vw(20);
             position: relative;
-            max-width: vw(620);
+            max-width: vw(610);
             @include max(md) {
                 max-width: 70%;
             }
@@ -2404,6 +2407,9 @@ a, button {
         max-height: 0;
         overflow: hidden;
         transition: opacity $tr-time-fast linear;
+        .contacts__form__input-block.input {
+            width: 100%;
+        }
         &.active {
             opacity: 1;
             max-height: none;

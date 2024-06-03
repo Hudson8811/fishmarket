@@ -45,9 +45,12 @@
     }
 
     .input.input--checkbox {
-        display: flex;
-        gap: vw(12);
-        align-items: flex-start;
+        label {
+            display: flex;
+            gap: vw(12);
+            align-items: flex-start;
+            cursor: pointer;
+        }
         .input__input {
             position: relative;
             left: 0;
@@ -58,12 +61,12 @@
             z-index: -10;
         }
         .input__fake {
-            flex-basis: vw(26);
+            flex-basis: vw(28);
             flex-shrink: 0;
             flex-grow: 0;
             position: relative;
-            width: vw(26);
-            height: vw(26);
+            width: vw(28);
+            height: vw(28);
             border: 1px solid rgba(0,0,0,0.2);
             border-radius: vw(4);
             &::after{ 
@@ -74,10 +77,13 @@
                 left: 50%;
                 top: 50%;
                 transform: translate(-50%, -50%);
-                transition: all $tr-time linear;
+                transition: all $tr-time-fast linear;
                 background-color: $blueLight;
                 border-radius: vw(2);
                 opacity: 0;
+            }
+            &:hover {
+                border-color: $blueLight;
             }
         }
         .input__input:checked + .input__fake::after {
