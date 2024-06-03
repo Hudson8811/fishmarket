@@ -151,7 +151,7 @@ document.addEventListener("DOMContentLoaded", () => {
 				});
 			}
 		};
-
+		
 		content.addEventListener("transitionend", transitionEndHandler);
 	});
 
@@ -178,6 +178,34 @@ document.addEventListener("DOMContentLoaded", () => {
 			})
 			this.removeEventListener('touchstart', videoStart);
 		});
+	}
+
+	//Вкладки-радиокнопки в формах
+
+	const radioTabsGroups = document.querySelectorAll("[data-js=formRadioTabs]");
+
+	if(radioTabsGroups.length > 0) {
+		radioTabsGroups.forEach(radioTabsGroup => {
+			radioTabsGroup.addEventListener('click', function(e) {
+				if(e.target.closest("input[data-group-item]")) {
+					let activeRadioGroupItem = radioTabsGroup.querySelector('input:checked');
+					let activeRadioGroupName = activeRadioGroupItem.getAttribute('data-group-item');
+					let radioGroupBlocks = radioTabsGroup.querySelectorAll('[data-group-block]');
+
+					radioGroupBlocks.forEach(radioGroupBlock => {
+						radioGroupBlock.classList.remove('active');
+					})
+
+					if(activeRadioGroupName) {
+						let radioGroupTargetBlock = radioTabsGroup.querySelector(`[data-group-block=${activeRadioGroupName}]`)
+
+						if(radioGroupTargetBlock) {
+							radioGroupTargetBlock.classList.add('active')
+						}
+					}
+				}
+			})
+		})
 	}
 });
 

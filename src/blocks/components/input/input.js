@@ -1,3 +1,5 @@
+
+
 validation();
 showPassInit();
 
@@ -146,6 +148,7 @@ function validation() {
                 if (errors === 0) {
                     const formData = new FormData(form)
                     console.log(formData)
+                    formReset(form)
 
                     if(form.hasAttribute('data-registration-form')) {
                         let slider = form.closest("[data-js='registrationAreaSlider']");
@@ -248,4 +251,14 @@ function showPassInit() {
         })
     })
 
+}
+
+function formReset(form) {
+    form.reset();
+    
+    const selects = form.querySelectorAll('select');
+
+    selects.forEach(select => {
+        $(select).val('').trigger('change')
+    })
 }

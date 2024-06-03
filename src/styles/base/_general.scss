@@ -2379,8 +2379,6 @@ a, button {
             opacity: 0.2;
             transition: all $tr-time;
         }
-
-
     }
     &__subtitle {
         font-size: vw(18);
@@ -2401,7 +2399,45 @@ a, button {
     }
     &__radio-block {
         width: 100%;
+        visibility: hidden;
+        opacity: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: opacity $tr-time-fast linear;
+        &.active {
+            opacity: 1;
+            max-height: none;
+            visibility: visible;
+        }
     }
+    &__accordions &__accordion {
+        padding: 0;
+        margin-bottom: vw(36);
+        border: none;
+        border-bottom: 1px solid rgba(42, 42, 42, 0.2);
+        .accordion__intro__title {
+            font-size: vw(18);
+            font-weight: 400;
+            line-height: 1.4em;
+            margin-bottom: vw(15);
+        }
+        .accordion__intro__img {
+            width: vw(7.9875);
+            height: vw(7.9875);
+            min-width: vw(7.9875);
+            min-height: vw(7.9875);
+            border-radius: 0;
+            background: transparent;
+        }
+    }
+    &__accordions &__accordion.accordion__active {
+        .accordion__content {
+            margin-top: vw(15);
+            margin-bottom: vw(15);
+        }
+    }
+
+
     textarea {
         max-width: 100%;
         min-width: 100%;
@@ -2737,7 +2773,7 @@ a, button {
             border: 1px solid rgba(0, 0, 0, 0.2);
             margin-right: vw(12);
             background-repeat: no-repeat;
-            background-position: center center;
+            background-position: 52% center;
             background-size: 60% 60%;
         
         }

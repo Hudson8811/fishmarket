@@ -1,0 +1,29 @@
+.logistics-delivery {
+    padding: vw(22) 0 vw(44);
+    @include max(md) {
+        padding: vw2(22) 0 vw2(44);
+    }
+    &__title {
+        font-size: vw(82);
+
+    }
+    &__text-block {
+        margin-top: vw(50);
+        max-width: vw(1160);
+        @include max(md) {
+            margin-top: vw2(50);
+            max-width: 100%;
+        }
+        ol {
+            display: flex;
+            flex-direction: column;
+            gap: vw(12);
+            margin-top: vw(25);
+            padding-left: 1em;
+            @include max(md) {
+                gap: vw2(12);
+                margin-top: vw2(25);
+            }
+        }
+    }
+}

@@ -229,9 +229,9 @@
       <div class="mob-menu__city">
         <div class="mob-menu__city__top">
           <div class="mob-menu__city__top__header"> 
-            <div class="mob-menu__city__top__title">Не выбран регион
+            <div class="mob-menu__city__top__title">Выберите город
             </div>
-            <div class="mob-menu__city__top__text text__18">выбор региона в котором есть представительства компании
+            <div class="mob-menu__city__top__text">У компании Sky Fish есть филиалы в следующих городах. Если вашего города нет в списке, выберите ближайший.
             </div>
           </div>
           <div class="mob-menu__city__top__close">
@@ -243,7 +243,6 @@
         <div class="mob-menu__city__select">
           <div class="contacts__form__input-block">
             <select class="contacts__form__select js-mob-menu__city__select" name="" preloader="Москва">
-              <option> </option>
               <option>Москва</option>
               <option>Калининград </option>
               <div class="localities-centers__select-arrow">
@@ -782,7 +781,7 @@
                       <div class="mob-menu__question__top__title">ЗАПРОСИТЬ ПЕРСОНАЛЬНОЕ ПРЕДЛОЖЕНИЕ
                       </div>
                     </div>
-                    <form class="contacts__form new-form" action="#" novalidate data-validate data-registration-form>
+                    <form class="contacts__form new-form" action="#" novalidate data-validate>
                       <div class="contacts__form__content">
                         <div class="contacts__form__input-block input">
                           <input class="contacts__form__input text__13" type="text" name="" required data-v-name="name" data-is-name="true">
@@ -799,9 +798,47 @@
                           <div class="contacts__form__input-block__name">Почта</div>
                           <div class="contacts__form__input-block__error">Некорректная почта</div>
                         </div>
+                        <div class="questions contacts__form__accordions">
+                          <div class="accordion contacts__form__accordion">
+                            <div class="accordion__intro">
+                              <p class="title__24 accordion__intro__title">Список товаров</p>
+                              <div class="accordion__intro__img"> 
+                                <svg>
+                                  <use xlink:href="img/sprites/sprite.svg#header__menu__item__arrow"></use>
+                                </svg>
+                              </div>
+                            </div>
+                            <div class="accordion__content">
+                              <div class="products-list">
+                                <ul class="products-list__list">
+                                  <li class="products-list__item">
+                                    <div class="products-list__name">Товар 1</div>
+                                    <div class="products-list__count">5 шт.</div>
+                                  </li>
+                                  <li class="products-list__item">
+                                    <div class="products-list__name">Товар 2</div>
+                                    <div class="products-list__count">100 шт.</div>
+                                  </li>
+                                  <li class="products-list__item">
+                                    <div class="products-list__name">Товар 3</div>
+                                    <div class="products-list__count">1 шт.</div>
+                                  </li>
+                                  <li class="products-list__item">
+                                    <div class="products-list__name">Товар 4</div>
+                                    <div class="products-list__count">14 шт.</div>
+                                  </li>
+                                </ul>
+                                <div class="products-list__result">
+                                  <div class="products-list__result-title">Итого:</div>
+                                  <div class="products-list__result-summ">9 999 999 ₽</div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
                         <div class="contacts__form__inner-block">
                           <div class="contacts__form__subtitle">Способ доставки</div>
-                          <div class="contacts__form__flex-block" data-group-name="receipt">
+                          <div class="contacts__form__flex-block" data-group-name="receipt" data-js="formRadioTabs">
                             <div class="contacts__form__input-block input">
                               <div class="checkbox">
                                 <label>
@@ -812,7 +849,7 @@
                             <div class="contacts__form__input-block input">
                               <div class="checkbox">
                                 <label>
-                                  <input class="custom-checkbox" type="radio" data-group-item="delivery" name="receipt">Служба доставки SkyFish
+                                  <input class="custom-checkbox" type="radio" name="receipt" data-group-item="delivery">Служба доставки SkyFish
                                 </label>
                               </div>
                             </div>

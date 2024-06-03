@@ -50,4 +50,34 @@
 			flex-shrink: 0;
 		}
 	}
+	.products-list {
+		&__list{
+			display: flex;
+			flex-direction: column;
+			gap: vw(8);
+		}
+		&__item {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			font-size: vw(18);
+			font-weight: 400;
+		}
+		&__name {
+			flex: 0 0 50%;
+		}
+		&__count {
+			flex: 0 0 50%;
+			text-align: end;
+		}
+		&__result {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			font-size: vw(20);
+			font-weight: 700;
+			margin-top: vw(12);
+		}
+	}
+
 }
