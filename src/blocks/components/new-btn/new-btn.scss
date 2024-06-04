@@ -20,6 +20,7 @@
         padding: vw(20) vw(20) vw(22);
         align-items: flex-end;
         justify-content: space-between;
+        font-size: vw(20);
         @include max(md) {
             width: vw2(260);
             padding: vw2(20) vw2(20) vw2(22);

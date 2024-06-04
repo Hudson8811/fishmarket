@@ -69,7 +69,22 @@ mixin l-map(props = defaultLMapProps)
 
             - if(checkProps.controls)
                 .l-map__addresses.active(data-js="lMapAddresses" data-city="moscow")
-                    .l-map__address.map-address.active(data-id='moscowOffice1' data-coords="55.150972,36.653968" data-js='lMapAddress')
+                    - if(checkProps.page === 'contacts')
+                        .l-map__address.map-address.active(data-id='moscowOffice1' data-coords="55.633871, 37.453720" data-js='lMapAddress')
+                            .map-address__header
+                                .map-address__title Офис
+                                .map-address__icon 
+                                    svg
+                                        use(xlink:href=`img/sprites/sprite.svg#header_position`)
+                            .map-address__item
+                                .map-address__subtitle адрес:
+                                .map-address__text 108820, Москва, Киевское шоссе, 21-й километр, 3с1
+                            .map-address__item
+                                .map-address__subtitle контакты:
+                                .map-address__text +7 (495) 748-86-85 (доб. 204)
+                                .map-address__text info@fish.ru
+                                .map-address__text Самовывоз: 8:30–17:00
+                    .l-map__address.map-address(class= checkProps.page !== 'contacts' ? 'active' : '' data-id='moscowOffice2' data-coords="55.150972,36.653968" data-js='lMapAddress')
                         .map-address__header
                             - if(checkProps.page === 'logistics')
                                 .map-address__title Склад

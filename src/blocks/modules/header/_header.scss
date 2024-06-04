@@ -25,6 +25,9 @@
 		width: 100%;
 		height: 100%;
 		border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+		@include max(md) {
+			justify-content: flex-end;
+		}
 		&__col {
 			position: relative;
 			display: flex;
@@ -32,24 +35,27 @@
 			align-items: center;
 			flex-flow:  row nowrap;
 			padding: 0;
+			@include max(md) {
+				display: contents;
+			}
 			&:nth-child(1) {
 				width: auto;
 				max-width: 100%;
 				flex: 1 0 auto;
 				border: none;
-				@include max(md) {
-					justify-content: flex-end;
-				}
-
 			}
 			&:nth-child(2) {
 				width: auto;
 				max-width: 100%;
 				flex: 0 0 auto;
 				border: none;
-				justify-content: flex-end;
 				@include max(md) {
-					display: none;
+					.header__other__item {
+						display: none;
+					}
+					.header__other__item--search {
+						display: block;
+					}
 				}
 
 			}
@@ -67,7 +73,7 @@
 }
 
 
-.header--small .section__header{
+.header--small .section__header {
 	@include min(md) {
 		transition: height 0.3s;
 		height: vw(70);
@@ -128,6 +134,9 @@
 			@include max(md) {
 				width: vw2(90);
 				border-right: none;
+				order: 2;
+				flex-shrink: 0;
+				flex-grow: 0;
    		}
 			img {
 				position: relative;
@@ -189,6 +198,9 @@
 				justify-content: center;
 				align-items: center;
 				margin-right: vw(6);
+				@include max(md) {
+					margin-right: vw2(6);
+				}
 				svg {
 					position: relative;
 					display: block;
@@ -391,9 +403,6 @@
 		flex-flow: row nowrap;
 		width: fit-content;
 		height: 100%;
-		@include max(md) {
-			display: none;
-		}
 		&__item {
 			position: relative;
 			display: flex;
@@ -413,18 +422,28 @@
 			padding-left: vw(24);
 			cursor: pointer;
 			@include max(md) {
-				font-size: vw2(20);
+				font-size: vw2(15);
 				font-style: normal;
 				line-height: 1.2;
-				margin-right: vw(20);
 			} 
 			svg {
 				position: relative;
 				width: vw(25);
 				height: vw(27);
+				@include max(md) {
+					width: vw2(20);
+					height: vw2(20);
+				}
+			}
+			&--mail {
+				border-left: 1px solid $grey;
+				padding-left: vw(31.25);
+				padding-right: vw(31.25);
 			}
 			&--soc {
-				padding-right: vw(36);
+				padding-right: vw(31.25);
+				padding-left: vw(31.25);
+				border-left: 1px solid $grey;
 				&__item {
 					position: relative;
 					display: flex;
@@ -458,6 +477,22 @@
 				padding-left: vw(26);
 				padding-right: vw(31);
 				border-right: 1px solid $grey;
+				@include max(md) {
+					max-width: vw2(230);
+					padding-left: vw2(18);
+					padding-right: vw2(18);
+					border-right: 0;
+					overflow: hidden;
+					.header__other__top {
+						max-width: 100%;
+					}
+					.header__menu__item__text {
+						white-space: nowrap;
+						overflow: hidden;
+						text-overflow: ellipsis;
+						margin-top: vw2(4);
+					}
+				}
 				.header__menu__item__icon svg use {
 					fill: $blueLight;
 				}
@@ -615,6 +650,12 @@
 				padding-left: 0;
 				padding-right: 0;
 				justify-content: center;
+				@include max(md) {
+					padding-left: vw2(18);
+					padding-right: vw2(18);
+					border-right: 1px solid $grey;
+					border-left: 1px solid $grey;
+				}
 				&__btn {
 					position: relative;
 					width: 100%;
@@ -713,6 +754,9 @@
 				}
 			}
 			&--desc {
+				padding-left: vw(31.25);
+				padding-right: vw(31.25);
+				border-left: 1px solid $grey;
 				@include max(md) {
 					display: none;
 				}
@@ -756,8 +800,6 @@
 		}
 	}
 	&__nav {
-		margin-left: vw(24);
-		margin-top: vw(1.5);
 		@include max(md) {
 			display: none;
 		}
@@ -765,11 +807,21 @@
 
 }
 .header-nav {
+	height: 100%;
 	&__list {
+		height: 100%;
 		display: flex;
 		align-items: center;
-		gap: vw(24);
 		list-style: none;
+	}
+	&__item {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 100%;
+		padding: 0 vw(31.25);
+		border-right: 1px solid $grey;
+
 	}
 	&__item a {
 		display: block;
@@ -819,6 +871,11 @@
 		height: vw(90);
 		width: vw(1000);
 		visibility: inherit;
+		@include max(md) {
+			right: vw2(-90);
+			height: vw2(70);
+			width: 100vw;
+		}
 		.search--overlay {
 			visibility: inherit;	
 			width: 100vw;
@@ -848,6 +905,9 @@
 		border: 3px solid #44C8F5;
 		box-sizing: border-box;
 		z-index: 9999;
+		@include max(md) {
+			height: vw2(70);
+		}
 	}
 	&__clear {
 		position: absolute;
@@ -862,9 +922,18 @@
 		border: none;
 		cursor: pointer;
 		opacity: 0.8;
+		@include max(md) {
+			right: vw2(20);
+			width: vw2(50);
+			height: vw2(50);
+		}
 		svg {
 			width: vw(30);
 			height: vw(30);
+			@include max(md) {
+				width: vw2(30);
+				height: vw2(30);
+			}
 			use {
 				fill: $fontBlack;
 				stroke: $fontBlack;
@@ -896,7 +965,9 @@
 			border: 0px solid #44C8F5;
 			transition: all $tr-time;
 			@include max(md) {
-				font-size: vw2(20);
+				padding-right: vw2(50);
+				padding-left: vw2(18);
+				font-size: vw2(18);
 				line-height: 1.2;
 				margin-right: vw2(20);
 		} 
@@ -908,10 +979,10 @@
 				line-height: normal;
 				text-transform: uppercase;
 				@include max(md) {
-					font-size: vw2(20);
+					font-size: vw2(18);
 					line-height: 1.2;
-					margin-right: vw(20);
-			} 
+					margin-right: vw(18);
+				} 
 			}
 			&:hover {       
 					border: none; 
@@ -963,6 +1034,11 @@
 		padding-left: vw(22);
 		padding-right: vw(22);
 		transition: all $tr-time;
+		@include max(md) {
+			width: vw2(200);
+			padding-left: vw2(18);
+			padding-right: vw2(18);
+		}
 		&:hover {
 			transition: all $tr-time;
 			background: $blueHover;
@@ -986,10 +1062,10 @@
 			line-height: normal;
 			text-transform: uppercase;
 			@include max(md) {
-				font-size: vw2(20);
+				font-size: vw2(18);
 				line-height: 1.2;
 				margin-right: vw(20);
-		} 
+			} 
 		}
 	}
 	&__result {
@@ -1003,6 +1079,9 @@
 		background: #fff;
 		z-index: 9995;
 		flex-flow: column;
+		@include max(md) {
+			top: vw2(70);
+		}
 		&__item {
 			position: relative;
 			display: flex;
@@ -1014,6 +1093,11 @@
 			padding-left: vw(13);
 			padding-right: vw(13);
 			transition: all $tr-time;
+			@include max(md) {
+				padding-bottom: vw2(20);
+				padding-left: vw2(10);
+				padding-right: vw2(10);
+			}
 			&:last-child {
 				border: none;
 			}
@@ -1029,6 +1113,11 @@
 				width: vw(129);
 				height: vw(124);
 				margin-right: vw(59);
+				@include max(md) {
+					width: vw2(90);
+					height: vw2(86.5);
+					margin-right: vw2(20);
+				}
 				img {
 					position: relative;
 					display: block;
@@ -1038,13 +1127,13 @@
 					object-position: center center;
 				}
 			}
-			&__desc{
+			&__desc {
 				position: relative;
 				display: flex;
 				flex-flow: column nowrap;
 				justify-content: flex-start;
 				align-items: flex-start;
-				width: 100%;
+				flex: 1 1 auto;
 
 			}
 			&__title {
@@ -1059,6 +1148,11 @@
 				line-height: 97.228%;
 				margin-bottom: vw(12);
 				max-width: vw(420);
+				@include max(md) {
+					font-size: vw2(18);
+					margin-bottom: vw2(12);
+					max-width: none;
+				} 	
 			}
 			&__art {
 				color: #151212;
@@ -1068,10 +1162,8 @@
 				line-height: normal;
 				text-transform: uppercase;
 				@include max(md) {
-					font-size: vw2(20);
-					line-height: 1.2;
-					margin-right: vw2(20);
-			} 			
+					font-size: vw2(14);
+				} 			
 			}
 		}
 		&__btn {
@@ -1084,6 +1176,9 @@
 			background: #07171D;
 			transition: all $tr-time;
 			width: 100%;
+			@include max(md) {
+				min-height: vw2(50);
+			} 	
 			&:hover {
 				transition: all $tr-time;
 				background: #2BAEDA;
@@ -1117,10 +1212,15 @@
 	}
 	&__wrap {
 		position: relative;
-		padding-right: vw(8);
 		background: #fff;
 		z-index: 9999;
 		min-height: 100%;
+		@include max(md) {
+			width: 75%;
+			min-height: calc(100vh - vw2(70));
+			max-height: calc(100vh - vw2(70));
+			height: calc(100vh - vw2(70));
+		}
 	}
 	&::-webkit-scrollbar {
 		width: vw(10);
@@ -1158,6 +1258,43 @@
 			width: 100vw;
 			height: 100vh;
 			left: 0;
+		}
+
+		.footer__menu {
+			position: relative;
+			left: 0;
+			right: 0 !important;
+			top: 0;
+			bottom: 0;
+			&__list {
+				@include max(md) {
+					width: 100%;
+				}
+			}
+			&__list__title {
+				color: $blueLight;
+			}
+			&__list__item a,
+			&__list__item span {
+				@include max(md) {
+					color: #07171D;
+					font-size: vw2(16.25);
+				}
+			}
+			&__social {
+				.new-btn svg use {
+					@include max(md) {
+						fill: $fontBlack;
+					}
+				}
+			}
+			&__callback, &__lang {
+				display: none;
+				@include max(md) {
+					display: block;
+					margin-top: vw2(30);
+				} 	
+			}
 		}
 	}
 	&__link {

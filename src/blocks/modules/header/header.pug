@@ -25,7 +25,7 @@ include ../../../blocks/modules/preloader/preloader
 
 			.layout__col
 				.header__other
-					.header__other__item
+					.header__other__item.header__other__item--mail
 						.header__other__top
 							a(href="mailto:info@skyfish.ru") 
 								!="info@skyfish.ru"
@@ -151,7 +151,7 @@ include ../../../blocks/modules/preloader/preloader
 										.new-btn__text Выйти
 
 					.header__other__item--button.header__other__item
-						button(type="submit").header__other__button.btn.js-button__question заказать звонок
+						button(type="button").header__other__button.btn.js-button__question заказать звонок
 					.header__other__item--lang.header__other__item
 						.header__other__top
 							a(href="#") 
@@ -167,7 +167,72 @@ include ../../../blocks/modules/preloader/preloader
 .mob-menu__section.js-mob-menu__section
 	.mob-menu--overlay
 	.mob-menu__wrap
-		.mob-menu
+		.footer__menu
+			ul.footer__menu__list
+				li.footer__menu__list__title Каталог
+				li.footer__menu__list__item
+					a(href="#") Рыба охлажденная
+				li.footer__menu__list__item
+					a(href="#") Рыба свежемороженая
+				li.footer__menu__list__item
+					a(href="#") Филе охлажденное
+				li.footer__menu__list__item
+					a(href="#") Филе свежемороженое
+				li.footer__menu__list__item
+					a(href="#") Морепродукты
+				li.footer__menu__list__item
+					a(href="#") Субпродукты
+			ul.footer__menu__list
+				li.footer__menu__list__title О компании
+				li.footer__menu__list__item
+					a(href="#") Производство
+				li.footer__menu__list__item
+					a(href="#") Склад и логистика
+				li.footer__menu__list__item
+					a(href="#") мы в социуме
+				li.footer__menu__list__item
+					a(href="#") карьера в skyfish
+				li.footer__menu__list__item
+					a(href="#") наша команда
+			ul.footer__menu__list
+				li.footer__menu__list__title А еще...
+				li.footer__menu__list__item
+					a(href="#") контакты
+				li.footer__menu__list__item
+					a(href="javascript:void(0)" data-js='popUpBtnLogin') Личный кабинет
+				li.footer__menu__list__item
+					a(href="#") Корзина				
+				li.footer__menu__list__item
+					a(href="#") Документы
+				li.footer__menu__list__item
+					a(href="#") Прайсы
+				li.footer__menu__list__item
+					a(href="#") Новости
+				li.footer__menu__list__item
+					a(href="#") Вопросы и ответы (FAQ)
+			ul.footer__menu__list
+				li.footer__menu__list__title Связаться с нами
+				li.footer__menu__list__item
+					a(href="mailto:info@skyfish.ru") info@skyfish.ru
+				li.footer__menu__list__item
+					a(href="tel:74922521233") +7 (4922) 52-12-33
+				li.footer__menu__list__item
+					span 108820, Москва, Киевское шоссе, 21-й километр, 3с1
+				.footer__menu__social
+					a.new-btn(href='javascript:void(0)' class='new-btn--icon new-btn--transparent')
+						span.new-btn__icon
+							svg
+								use(xlink:href=`img/sprites/sprite.svg#footer_telegram`)
+					a.new-btn(href='javascript:void(0)' class='new-btn--icon new-btn--transparent')
+						span.new-btn__icon
+							svg
+								use(xlink:href=`img/sprites/sprite.svg#footer_vk`)
+				.footer__menu__callback 
+					button(type="button").btn.js-button__question заказать звонок
+				.footer__menu__lang
+					a(href="#")  EN
+
+		//-.mob-menu
 			a(href="#").mob-menu__link каталог
 			.mob-menu__list
 				a(href="#").mob-menu__list__item Рыба охлажденная
@@ -199,7 +264,7 @@ include ../../../blocks/modules/preloader/preloader
 				.mob-menu__city__top__title
 					!="Выберите город"
 				.mob-menu__city__top__text
-					!= 'У компании Sky Fish есть филиалы в следующих городах. Если вашего города нет в списке, выберите ближайший.'
+					!= 'Выберите регион, чтобы видеть актуальную информацию'
 			.mob-menu__city__top__close
 				svg
 					use(xlink:href=`img/sprites/sprite.svg#header_close`)

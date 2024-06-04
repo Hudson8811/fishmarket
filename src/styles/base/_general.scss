@@ -216,7 +216,7 @@ a, button {
             display: inline-block;
             transition: all $tr-time;
             color: #FFF;
-            font-size: vw(14);
+            font-size: vw(20);
             font-style: normal;
             font-weight: 600;
             line-height: normal;
@@ -740,6 +740,9 @@ a, button {
             @include max(md) {
                 max-width: 95%;
                 margin-bottom: vw2(25);
+                br {
+                    display: none;
+                }
             }
         }
         &__text {
@@ -749,7 +752,11 @@ a, button {
             position: relative;
             max-width: vw(610);
             @include max(md) {
-                max-width: 70%;
+                gap: vw2(10);
+                max-width: calc(100% - vw2(40));
+                br {
+                    display: none;
+                }
             }
         }
 

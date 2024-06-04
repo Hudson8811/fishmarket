@@ -44,7 +44,27 @@ footer.footer.footer__animation.footer__animation--personally.js-footer__animati
 				a(href="#") Новости
 			li.footer__menu__list__item
 				a(href="#") Вопросы и ответы (FAQ)
-		.footer__menu__contacts.footer-contacts
+		ul.footer__menu__list
+			li.footer__menu__list__title Связаться с нами
+			li.footer__menu__list__item
+				a(href="mailto:info@skyfish.ru") info@skyfish.ru
+			li.footer__menu__list__item
+				a(href="tel:74922521233") +7 (4922) 52-12-33
+			li.footer__menu__list__item
+				span 108820, Москва, Киевское шоссе, 21-й километр, 3с1
+			.footer__menu__social
+				a.new-btn(href='javascript:void(0)' class='new-btn--icon new-btn--transparent')
+					span.new-btn__icon
+						svg
+							use(xlink:href=`img/sprites/sprite.svg#footer_telegram`)
+				a.new-btn(href='javascript:void(0)' class='new-btn--icon new-btn--transparent')
+					span.new-btn__icon
+						svg
+							use(xlink:href=`img/sprites/sprite.svg#footer_vk`)
+
+
+
+		//-.footer__menu__contacts.footer-contacts
 			.footer-contacts__contacts
 				a(href="mailto:info@skyfish.ru") info@skyfish.ru
 				a(href="tel:74922521233") +7 (4922) 52-12-33
