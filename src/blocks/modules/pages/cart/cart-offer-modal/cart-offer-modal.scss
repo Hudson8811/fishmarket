@@ -7,6 +7,9 @@
 		margin: 0;
         &__input-block {
             border-bottom: none;
+			textarea {
+				min-height: auto;
+			}
         }
 		&__content {
 			width: 100%;

@@ -268,8 +268,13 @@ function formReset(form) {
     form.reset();
     
     const selects = form.querySelectorAll('select');
+    const radios = form.querySelectorAll('input:checked');
 
     selects.forEach(select => {
-        $(select).val('').trigger('change')
+        $(select).val('').trigger('change');
+    })
+
+    radios.forEach(radio => {
+        $(radio).trigger('change');
     })
 }

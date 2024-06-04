@@ -186,25 +186,51 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	if(radioTabsGroups.length > 0) {
 		radioTabsGroups.forEach(radioTabsGroup => {
-			radioTabsGroup.addEventListener('click', function(e) {
-				if(e.target.closest("input[data-group-item]")) {
-					let activeRadioGroupItem = radioTabsGroup.querySelector('input:checked');
-					let activeRadioGroupName = activeRadioGroupItem.getAttribute('data-group-item');
-					let radioGroupBlocks = radioTabsGroup.querySelectorAll('[data-group-block]');
 
-					radioGroupBlocks.forEach(radioGroupBlock => {
-						radioGroupBlock.classList.remove('active');
-					})
+			let radioTabs = radioTabsGroup.querySelectorAll('input[data-group-item]');
+			let activeRadioGroupItem = radioTabsGroup.querySelector('input:checked');
 
-					if(activeRadioGroupName) {
-						let radioGroupTargetBlock = radioTabsGroup.querySelector(`[data-group-block=${activeRadioGroupName}]`)
+			radioTabs.forEach(radioTab => {
 
-						if(radioGroupTargetBlock) {
-							radioGroupTargetBlock.classList.add('active')
+				radioTab.addEventListener('change', function(e) {
+
+					if(e.target !== activeRadioGroupItem) {
+
+						let activeRadioGroupName = e.target.getAttribute('data-group-item');
+						let radioGroupBlocks = radioTabsGroup.querySelectorAll('[data-group-block]');
+	
+						radioGroupBlocks.forEach(radioGroupBlock => {
+							radioGroupBlock.classList.remove('active');
+							let radioGroupBlockFields = radioGroupBlock.querySelectorAll('.contacts__form__input-block.input');
+							if(radioGroupBlockFields.length > 0) {
+								radioGroupBlockFields.forEach(radioGroupBlockField => {
+									radioGroupBlockField.classList.remove('error')
+									radioGroupBlockField.querySelector('input') ? radioGroupBlockField.querySelector('input').removeAttribute('required') : false;
+									radioGroupBlockField.querySelector('select') ? radioGroupBlockField.querySelector('select').removeAttribute('required') : false;
+								})
+							}
+						})
+	
+						if(activeRadioGroupName) {
+							let radioGroupTargetBlock = radioTabsGroup.querySelector(`[data-group-block=${activeRadioGroupName}]`)
+	
+							if(radioGroupTargetBlock) {
+								radioGroupTargetBlock.classList.add('active')
+								let radioGroupTargetBlockFields = radioGroupTargetBlock.querySelectorAll('.contacts__form__input-block.input');
+								if(radioGroupTargetBlockFields.length > 0) {
+									radioGroupTargetBlockFields.forEach(radioGroupTargetBlockField => {
+										radioGroupTargetBlockField.querySelector('input') ? radioGroupTargetBlockField.querySelector('input').setAttribute('required', '') : false;
+										radioGroupTargetBlockField.querySelector('select') ? radioGroupTargetBlockField.querySelector('select').setAttribute('required', '') : false;
+									})
+								}
+							}
 						}
+						
 					}
-				}
+					activeRadioGroupItem = radioTabsGroup.querySelector('input:checked');
+				})
 			})
+
 		})
 	}
 });

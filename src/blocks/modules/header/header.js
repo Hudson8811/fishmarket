@@ -23,7 +23,7 @@ let mobMenuCitySelect = document.querySelector(".js-mob-menu__city__select");
 let mobMenuQuestion = document.querySelector(".js-mob-menu__section__question");
 let mobMenuQuestionClose = document.querySelector(".mob-menu__question__top__close");
 let mobMenuQuestionOverlay = document.querySelector(".js-mob-menu__question--overlay");
-let buttonQuestion = document.querySelector(".js-button__question");
+let buttonQuestions = document.querySelectorAll(".js-button__question");
 let humb = document.querySelector(".js-hamburger");
 let searchBtn = document.querySelector(".js-search__btn");
 let search = document.querySelector(".search");
@@ -230,10 +230,12 @@ mobMenuCityOk.addEventListener("click", function () {
     bodyYesScroll()
   }
 });
-buttonQuestion.addEventListener("click", function () {
-  mobMenuQuestion.classList.add("active");
-  bodyNoScroll()
-});
+buttonQuestions.forEach(buttonQuestion => {
+  buttonQuestion.addEventListener("click", function () {
+    mobMenuQuestion.classList.add("active");
+    bodyNoScroll()
+  });
+})
 mobMenuQuestionClose.addEventListener("click", function () {
   mobMenuQuestion.classList.remove("active");
   bodyYesScroll()

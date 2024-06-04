@@ -2235,6 +2235,11 @@ a, button {
     padding-left: vw(30);
     padding-right: vw(30);
     margin-bottom: vw(30);
+    @include max(md) {
+        padding-left: vw2(24);
+        padding-right: vw2(24);
+        margin-bottom: vw2(24);   
+    }
     &__input-block {
         position: relative;
         display: flex;
@@ -2256,6 +2261,10 @@ a, button {
             line-height: normal;
             transition: all $tr-time;
             pointer-events: none;
+            @include max(md) {
+                top: vw2(22);
+                font-size: vw2(18);  
+            }
         }
         &__error {
             position: absolute;
@@ -2267,7 +2276,11 @@ a, button {
             font-size: vw(14);
             font-style: normal;
             font-weight: 400;
-            line-height: normal;      
+            line-height: normal;  
+            @include max(md) {
+                bottom: vw2(-20);
+                font-size: vw2(14);
+            }    
         }
         &__show {
             position: absolute;
@@ -2359,6 +2372,12 @@ a, button {
         border: 0px solid rgba(255, 255, 255, 1);
         border-bottom:1px solid rgba(42, 42, 42, 0.2);
         transition: all $tr-time;
+        @include max(md) {
+            font-size: vw2(18);
+            min-height: vw2(60);
+            padding-right: vw2(18);
+            padding-top: vw2(20);
+        }
         &:hover {        
             border-bottom:1px solid rgba(0, 0, 0, 0.2);
             transition: all $tr-time;
@@ -2416,6 +2435,8 @@ a, button {
         transition: opacity $tr-time-fast linear;
         .contacts__form__input-block.input {
             width: 100%;
+            margin-bottom: vw(15);
+            margin-bottom: vw(21);
         }
         &.active {
             opacity: 1;
@@ -2450,12 +2471,12 @@ a, button {
         }
     }
 
-
     textarea {
         max-width: 100%;
         min-width: 100%;
         min-height: vw(180);
         padding-top: vw(20);
+        resize: none;
         &::-webkit-scrollbar {
             width: 10px;
             background-color: #fff;
@@ -2775,6 +2796,9 @@ a, button {
         font-style: normal;
         font-weight: 400;
         line-height: 140.625%;
+        @include max(md) {
+            font-size: vw2(18);
+        }
         &::before {
             content: '';
             display: inline-block;
@@ -2788,7 +2812,14 @@ a, button {
             background-repeat: no-repeat;
             background-position: 52% center;
             background-size: 60% 60%;
-        
+            @include max(md) {
+                width: vw2(26);
+                height: vw2(26);
+                min-width: vw2(26);
+                min-height: vw2(26);
+                border-radius: vw2(4);
+                margin-right: vw2(12);
+            }
         }
     }
     label:has(.custom-checkbox:not(:disabled):not(:checked)):hover::before {

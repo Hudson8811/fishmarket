@@ -50,11 +50,17 @@
 				flex: 0 0 auto;
 				border: none;
 				@include max(md) {
+					.header__other {
+						display: contents;
+					}
 					.header__other__item {
 						display: none;
 					}
 					.header__other__item--search {
 						display: block;
+					}
+					.header__other__item--lang {
+						display: flex;
 					}
 				}
 
@@ -132,7 +138,7 @@
 			background-repeat: no-repeat;
 			transition: all $tr-time-fast;
 			@include max(md) {
-				width: vw2(90);
+				width: vw2(75);
 				border-right: none;
 				order: 2;
 				flex-shrink: 0;
@@ -215,6 +221,10 @@
 				align-items: center;
 				width: vw(7);
 				margin-left: vw(4);
+				@include max(md) {
+					width: vw2(7);
+					margin-left: vw2(4);
+				}
 				
 				svg,img {
 					width: 100%;
@@ -245,6 +255,9 @@
 			transition: all $tr-time;
 			border-top: 3px solid $blueHover;
 			background: $blueLight;
+			@include max(md) {
+				padding: vw2(16);
+			}
 			&.active {
 				display: flex;
 				opacity: 1;
@@ -265,6 +278,10 @@
 				margin-bottom: vw(17);
 				text-transform: none;
 				width: 100%;
+				@include max(md) {
+					font-size: vw2(16);
+					margin-bottom: vw2(12);
+				}
 				&:last-child {
 					margin-bottom: 0;
 					padding-bottom: 0;
@@ -283,6 +300,9 @@
 					line-height: 140.625%;
 					text-decoration: none;
 					transition: all $tr-time;
+					@include max(md) {
+						font-size: vw2(16);
+					}
 					&:hover {
 						transition: all $tr-time;
 						color: $white;
@@ -479,8 +499,8 @@
 				border-right: 1px solid $grey;
 				@include max(md) {
 					max-width: vw2(230);
-					padding-left: vw2(18);
-					padding-right: vw2(18);
+					padding-left: vw2(17);
+					padding-right: vw2(17);
 					border-right: 0;
 					overflow: hidden;
 					.header__other__top {
@@ -642,6 +662,12 @@
 				padding-left: 0;
 				padding-right: 0;
 				justify-content: center;
+				@include max(md) {
+					order: 3;
+					padding-left: vw2(17);
+					padding-right: vw2(17);
+					border-left: 1px solid $grey;
+				}
 			}
 			&--search {
 				position: relative;
@@ -651,8 +677,8 @@
 				padding-right: 0;
 				justify-content: center;
 				@include max(md) {
-					padding-left: vw2(18);
-					padding-right: vw2(18);
+					padding-left: vw2(17);
+					padding-right: vw2(17);
 					border-right: 1px solid $grey;
 					border-left: 1px solid $grey;
 				}
@@ -735,9 +761,9 @@
 				text-decoration: none;
 				transition: all $tr-time;
 				@include max(md) {
-					font-size: vw2(20);
+					font-size: vw2(18);
 					line-height: 1.2;
-					margin-right: vw(20);
+					margin-right: 0;
 			} 
 				&:hover {
 					transition: all $tr-time;
@@ -1267,8 +1293,12 @@
 			top: 0;
 			bottom: 0;
 			&__list {
+				padding-top: vw(22);
+				margin-bottom: vw(24);
 				@include max(md) {
 					width: 100%;
+					padding-top: vw2(22);
+					margin-bottom: vw2(24);
 				}
 			}
 			&__list__title {
@@ -1293,7 +1323,26 @@
 				@include max(md) {
 					display: block;
 					margin-top: vw2(30);
+					width: 100%;
 				} 	
+			}
+
+			&__callback .btn {
+				width: 100%;
+				background-color: #44C8F5;
+				font-size: vw2(20);
+			}
+
+			&__lang a {
+				color: #07171D;
+				text-align: center;
+				font-size: vw2(25);
+				font-style: normal;
+				font-weight: 600;
+				line-height: normal;
+				text-transform: uppercase;
+				text-decoration: none;
+				white-space: nowrap;
 			}
 		}
 	}
@@ -1699,7 +1748,8 @@
 		overflow: auto;
 		@include max(md) {
 			max-width: vw2(665);
-			padding-top: vw2(30);   
+			padding-top: vw2(30);
+			height: calc(100vh - vw2(70));   
 		}
 
 		&__section {
@@ -1731,6 +1781,12 @@
 			margin-bottom: vw(56);
 			padding-left: vw(30);
 			padding-right: vw(30);
+			@include max(md) {
+				margin-bottom: vw2(56);
+				padding-left: vw2(30);
+				padding-right: vw2(30);
+			}
+
 			&__title {
 				position: relative;
 				width: 100%;
@@ -1741,6 +1797,10 @@
 				font-weight: 500;
 				line-height: 106%;
 				text-transform: uppercase;	
+				@include max(md) {
+					max-width: 100%;
+					font-size: vw2(28); 
+				}
 			}
 			&__close {
 				position: relative;
@@ -1752,6 +1812,8 @@
 				justify-content: center;
 				align-items: center;
 				transition: all $tr-time;
+				flex-shrink: 0;
+				flex-grow: 0;
 				cursor: pointer;
 				@include max(md) {
 					width: vw2(40);
@@ -1797,6 +1859,9 @@
 			text-transform: uppercase;
 			margin-left: auto;
 			margin-right: auto;
+			@include max(md) {
+				max-width: 100%;  
+			}
 		}
 		&__bottom {
 			position: relative;
@@ -1842,9 +1907,9 @@
 				line-height: normal;
 				text-transform: uppercase;
 				@include max(md) {
-					font-size: vw2(20);
+					font-size: vw2(16);
 					line-height: 1.2;
-					margin-right: vw(20);
+					margin-right: vw2(16);
 				} 
 			}
 		}
