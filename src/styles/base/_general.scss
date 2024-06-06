@@ -1087,6 +1087,14 @@ a, button {
         }
     }
 }
+.logistics-intro {
+    .production-intro__text {
+        max-width: vw(729);
+        @include max(md) {
+            max-width: vw2(729);
+        }
+    }
+}
 .document {
     position: relative;
     display: flex;
@@ -1096,14 +1104,12 @@ a, button {
     border: 1px solid rgba(0, 0, 0, 0.2);
     padding: vw(35) vw(30);
     min-height: vw(127);
-    //margin-bottom: vw(23);
     @include max(md) {
         flex-flow: column nowrap;
         justify-content: flex-start;
         align-items: flex-start;
         padding: vw2(20);
         min-height: auto;
-        //margin-bottom: vw2(20);
         padding-top: vw2(15);
     }
     &:last-child {
