@@ -2,6 +2,89 @@
 	const defaultLWalkProps = {
 		classes: '',
 		title: 'Виртуальная прогулка<br>по складскому помещению и автопарку',
+		slides: [
+			{
+				image: 'img/walk_1.jpg',
+				caption: 'Короткое описание 1'
+			},
+			{
+				image: 'img/walk_2.jpg',
+				caption: 'Короткое описание 2'
+			},
+			{
+				image: 'img/walk_3.jpg',
+				caption: 'Короткое описание 3'
+			},
+			{
+				image: 'img/walk_4.jpg',
+				caption: 'Короткое описание 4'
+			},
+			{
+				image: 'img/walk_5.jpg',
+				caption: 'Короткое описание 5'
+			},
+			{
+				image: 'img/walk_6.jpg',
+				caption: 'Короткое описание 6'
+			},
+			{
+				image: 'img/walk_7.jpg',
+				caption: 'Короткое описание 7'
+			},
+			{
+				image: 'img/walk_8.jpg',
+				caption: 'Короткое описание 8'
+			},
+			{
+				image: 'img/walk_9.jpg',
+				caption: 'Короткое описание 9'
+			},
+			{
+				image: 'img/walk_10.jpg',
+				caption: 'Короткое описание 10'
+			},
+			{
+				image: 'img/walk_11.jpg',
+				caption: 'Короткое описание 11'
+			},
+			{
+				image: 'img/walk_12.jpg',
+				caption: 'Короткое описание 12'
+			},
+			{
+				image: 'img/walk_13.jpg',
+				caption: 'Короткое описание 13'
+			},
+			{
+				image: 'img/walk_14.jpg',
+				caption: 'Короткое описание 14'
+			},
+			{
+				image: 'img/walk_15.jpg',
+				caption: 'Короткое описание 15'
+			},
+			{
+				image: 'img/walk_16.jpg',
+				caption: 'Короткое описание 16'
+			},
+			{
+				image: 'img/walk_17.jpg',
+				caption: 'Короткое описание 17'
+			},
+			{
+				image: 'img/walk_18.jpg',
+				caption: 'Короткое описание 18'
+			},
+			{
+				image: 'img/walk_19.jpg',
+				caption: 'Короткое описание 19'
+			},
+			{
+				image: 'img/walk_20.jpg',
+				caption: 'Короткое описание 20'
+			},
+
+		]
 	}
 
 mixin l-walk(props = defaultLWalkProps)
@@ -12,6 +95,7 @@ mixin l-walk(props = defaultLWalkProps)
 		const checkProps = {
 			classes: props.classes ? props.classes : defaultLWalkProps.classes,
 			title: props.title ? props.title : defaultLWalkProps.title,
+			slides: props.slides ? props.slides : defaultLWalkProps.slides,
 		};
 
 	section.l-walk(class= checkProps.classes)
@@ -26,66 +110,13 @@ mixin l-walk(props = defaultLWalkProps)
 				})
 			.l-walk__slider(data-js="lWalkSlider")
 				.swiper-wrapper
-					.swiper-slide.l-walk__slide
-						a.l-walk__img(href="img/walk_1.jpg" data-fancybox="societyAwards" data-caption="Короткое описание 1")
-							img(src="img/walk_1.jpg" alt="слайд 1")
-					.swiper-slide.l-walk__slide
-						a.l-walk__img(href="img/walk_2.jpg" data-fancybox="societyAwards" data-caption="Короткое описание 2")
-							img(src="img/walk_2.jpg" alt="слайд 2")
-					.swiper-slide.l-walk__slide
-						a.l-walk__img(href="img/walk_3.jpg" data-fancybox="societyAwards" data-caption="Короткое описание 3")
-							img(src="img/walk_3.jpg" alt="слайд 3")
-					.swiper-slide.l-walk__slide
-						a.l-walk__img(href="img/walk_4.jpg" data-fancybox="societyAwards" data-caption="Короткое описание 4")
-							img(src="img/walk_4.jpg" alt="слайд 4")
-					.swiper-slide.l-walk__slide
-						a.l-walk__img(href="img/walk_5.jpg" data-fancybox="societyAwards" data-caption="Короткое описание 5")
-							img(src="img/walk_5.jpg" alt="слайд 5")
-					.swiper-slide.l-walk__slide
-						a.l-walk__img(href="img/walk_6.jpg" data-fancybox="societyAwards" data-caption="Короткое описание 6")
-							img(src="img/walk_6.jpg" alt="слайд 6")
-					.swiper-slide.l-walk__slide
-						a.l-walk__img(href="img/walk_7.jpg" data-fancybox="societyAwards" data-caption="Короткое описание 7")
-							img(src="img/walk_7.jpg" alt="слайд 7")
-					.swiper-slide.l-walk__slide
-						a.l-walk__img(href="img/walk_8.jpg" data-fancybox="societyAwards" data-caption="Короткое описание 8")
-							img(src="img/walk_8.jpg" alt="слайд 8")
-					.swiper-slide.l-walk__slide
-						a.l-walk__img(href="img/walk_9.jpg" data-fancybox="societyAwards" data-caption="Короткое описание 9")
-							img(src="img/walk_9.jpg" alt="слайд 9")
-					.swiper-slide.l-walk__slide
-						a.l-walk__img(href="img/walk_10.jpg" data-fancybox="societyAwards" data-caption="Короткое описание 10")
-							img(src="img/walk_10.jpg" alt="слайд 10")
-					.swiper-slide.l-walk__slide
-						a.l-walk__img(href="img/walk_11.jpg" data-fancybox="societyAwards" data-caption="Короткое описание 11")
-							img(src="img/walk_11.jpg" alt="слайд 11")
-					.swiper-slide.l-walk__slide
-						a.l-walk__img(href="img/walk_12.jpg" data-fancybox="societyAwards" data-caption="Короткое описание 12")
-							img(src="img/walk_12.jpg" alt="слайд 12")
-					.swiper-slide.l-walk__slide
-						a.l-walk__img(href="img/walk_13.jpg" data-fancybox="societyAwards" data-caption="Короткое описание 13")
-							img(src="img/walk_13.jpg" alt="слайд 13")
-					.swiper-slide.l-walk__slide
-						a.l-walk__img(href="img/walk_14.jpg" data-fancybox="societyAwards" data-caption="Короткое описание 14")
-							img(src="img/walk_14.jpg" alt="слайд 14")
-					.swiper-slide.l-walk__slide
-						a.l-walk__img(href="img/walk_15.jpg" data-fancybox="societyAwards" data-caption="Короткое описание 15")
-							img(src="img/walk_15.jpg" alt="слайд 15")
-					.swiper-slide.l-walk__slide
-						a.l-walk__img(href="img/walk_16.jpg" data-fancybox="societyAwards" data-caption="Короткое описание 16")
-							img(src="img/walk_16.jpg" alt="слайд 16")
-					.swiper-slide.l-walk__slide
-						a.l-walk__img(href="img/walk_17.jpg" data-fancybox="societyAwards" data-caption="Короткое описание 17")
-							img(src="img/walk_17.jpg" alt="слайд 17")
-					.swiper-slide.l-walk__slide
-						a.l-walk__img(href="img/walk_18.jpg" data-fancybox="societyAwards" data-caption="Короткое описание 18")
-							img(src="img/walk_18.jpg" alt="слайд 18")
-					.swiper-slide.l-walk__slide
-						a.l-walk__img(href="img/walk_19.jpg" data-fancybox="societyAwards" data-caption="Короткое описание 19")
-							img(src="img/walk_19.jpg" alt="слайд 19")
-					.swiper-slide.l-walk__slide
-						a.l-walk__img(href="img/walk_20.jpg" data-fancybox="societyAwards" data-caption="Короткое описание 20")
-							img(src="img/walk_20.jpg" alt="слайд 20")
+
+					- let i = 0
+					- while(i < checkProps.slides.length)
+						.swiper-slide.l-walk__slide
+							a.l-walk__img(href=checkProps.slides[i].image data-fancybox="societyAwards" data-caption=checkProps.slides[i].caption)
+								img(src=checkProps.slides[i].image alt=checkProps.slides[i].caption)
+						- i++
 
 				.l-walk__control.swiper-button-prev
 					svg

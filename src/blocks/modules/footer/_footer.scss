@@ -124,6 +124,9 @@
 			list-style-type: none;
 			&__item {
 				position: relative;
+				display: flex;
+				flex-direction: column;
+				gap: vw(7);
 				color: #07171D;
 				font-size: vw(14);
 				font-style: normal;
@@ -135,6 +138,7 @@
 					font-size: vw2(24);
 					line-height: 1.2;
 					color: #fff;
+					gap: vw2(5);
 				}
 				a {
 					position: relative;

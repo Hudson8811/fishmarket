@@ -33,9 +33,40 @@ block content
 			textTop: `<p>Наши складские комплексы расположены в&nbsp;Москве, Калужской и&nbsp;Калининградской областях. Склады оснащены необходимыми морозильными камерами и&nbsp;погрузочно-разгрузочной техникой.</p>
 			<p>Доставка заказа осуществляется в любой регион РФ собственным автотранспортом и автопарком логистической компанией, оборудованными рефрижераторными установками.</p>
 			<p>Возможен самовывоз со складов компании в&nbsp;согласованное удобное время. Минимальный&nbsp;заказ - 1 коробка.</p>`,
-			image: 'img/logistics_intro.jpg'
+			image: 'img/logistics_intro.png'
 		})
-		+l-walk()
+		+l-walk({
+			slides: [
+				{
+					image: 'img/logistics-walk-1.jpg',
+					caption: 'Короткое описание 1'
+				},
+				{
+					image: 'img/logistics-walk-2.jpg',
+					caption: 'Короткое описание 2'
+				},
+				{
+					image: 'img/logistics-walk-3.jpg',
+					caption: 'Короткое описание 3'
+				},
+				{
+					image: 'img/logistics-walk-4.jpg',
+					caption: 'Короткое описание 4'
+				},
+				{
+					image: 'img/logistics-walk-5.jpg',
+					caption: 'Короткое описание 5'
+				},
+				{
+					image: 'img/logistics-walk-6.jpg',
+					caption: 'Короткое описание 6'
+				},
+				{
+					image: 'img/logistics-walk-7.jpg',
+					caption: 'Короткое описание 7'
+				}
+			]
+		})
 		+l-map({
 			controls: true,
 			page: 'logistics'
