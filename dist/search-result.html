@@ -754,7 +754,7 @@
                             </div>
                           </div>
                           <div class="search-card__btns">
-                                    <button class="new-btn new-btn--small new-btn--black search-card__offer" type="button"><span class="new-btn__text">Получить предложение</span><span class="new-btn__icon">
+                                    <button class="new-btn new-btn--small new-btn--black search-card__offer" type="button" data-modal="cartOffer"><span class="new-btn__text">Получить предложение</span><span class="new-btn__icon">
                                         <svg>
                                           <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
                                         </svg></span>
@@ -828,7 +828,7 @@
                             </div>
                           </div>
                           <div class="search-card__btns">
-                                    <button class="new-btn new-btn--small new-btn--black search-card__offer" type="button"><span class="new-btn__text">Получить предложение</span><span class="new-btn__icon">
+                                    <button class="new-btn new-btn--small new-btn--black search-card__offer" type="button" data-modal="cartOffer"><span class="new-btn__text">Получить предложение</span><span class="new-btn__icon">
                                         <svg>
                                           <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
                                         </svg></span>
@@ -902,7 +902,7 @@
                             </div>
                           </div>
                           <div class="search-card__btns">
-                                    <button class="new-btn new-btn--small new-btn--black search-card__offer" type="button"><span class="new-btn__text">Получить предложение</span><span class="new-btn__icon">
+                                    <button class="new-btn new-btn--small new-btn--black search-card__offer" type="button" data-modal="cartOffer"><span class="new-btn__text">Получить предложение</span><span class="new-btn__icon">
                                         <svg>
                                           <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
                                         </svg></span>
@@ -976,7 +976,7 @@
                             </div>
                           </div>
                           <div class="search-card__btns">
-                                    <button class="new-btn new-btn--small new-btn--black search-card__offer" type="button"><span class="new-btn__text">Получить предложение</span><span class="new-btn__icon">
+                                    <button class="new-btn new-btn--small new-btn--black search-card__offer" type="button" data-modal="cartOffer"><span class="new-btn__text">Получить предложение</span><span class="new-btn__icon">
                                         <svg>
                                           <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
                                         </svg></span>
@@ -1050,7 +1050,7 @@
                             </div>
                           </div>
                           <div class="search-card__btns">
-                                    <button class="new-btn new-btn--small new-btn--black search-card__offer" type="button"><span class="new-btn__text">Получить предложение</span><span class="new-btn__icon">
+                                    <button class="new-btn new-btn--small new-btn--black search-card__offer" type="button" data-modal="cartOffer"><span class="new-btn__text">Получить предложение</span><span class="new-btn__icon">
                                         <svg>
                                           <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
                                         </svg></span>
@@ -1124,7 +1124,7 @@
                             </div>
                           </div>
                           <div class="search-card__btns">
-                                    <button class="new-btn new-btn--small new-btn--black search-card__offer" type="button"><span class="new-btn__text">Получить предложение</span><span class="new-btn__icon">
+                                    <button class="new-btn new-btn--small new-btn--black search-card__offer" type="button" data-modal="cartOffer"><span class="new-btn__text">Получить предложение</span><span class="new-btn__icon">
                                         <svg>
                                           <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
                                         </svg></span>
@@ -1193,10 +1193,10 @@
               <li class="footer__menu__list__item"><a href="mailto:info@skyfish.ru">info@skyfish.ru</a></li>
               <li class="footer__menu__list__item"><a href="tel:74957488685">+7 (495) 748–86–85</a></li>
               <li class="footer__menu__list__item"><span>Головной офис:</span><span>108820, Москва, Киевское ш., 21-й км, 3с1</span></li>
-              <div class="footer__menu__social"><a class="new-btn new-btn--icon new-btn--transparent" href="javascript:void(0)"><span class="new-btn__icon">
+              <div class="footer__menu__social"><a class="new-btn new-btn--icon new-btn--transparent" href="https://telegram.org/"><span class="new-btn__icon">
                     <svg>
                       <use xlink:href="img/sprites/sprite.svg#footer_telegram"></use>
-                    </svg></span></a><a class="new-btn new-btn--icon new-btn--transparent" href="javascript:void(0)"><span class="new-btn__icon">
+                    </svg></span></a><a class="new-btn new-btn--icon new-btn--transparent" href="https://vk.com/"><span class="new-btn__icon">
                     <svg>
                       <use xlink:href="img/sprites/sprite.svg#footer_vk"></use>
                     </svg></span></a></div>
@@ -1213,6 +1213,134 @@
           </div>
         </footer>
       </div>
+            <div class="l-modal cart-offer-modal" data-id="cartOffer">
+              <div class="l-modal__overlay" data-js="lModalOverlay"></div>
+              <div class="l-modal__content">
+                <div class="l-modal__close" data-js="lModalClose">
+                  <svg>
+                    <use xlink:href="img/sprites/sprite.svg#header_close"></use>
+                  </svg>
+                </div>
+                <div class="mob-menu__question__top"> 
+                  <div class="mob-menu__question__top__title">ЗАПРОСИТЬ ПЕРСОНАЛЬНОЕ ПРЕДЛОЖЕНИЕ
+                  </div>
+                </div>
+                <form class="contacts__form new-form" action="#" novalidate data-validate>
+                  <div class="contacts__form__content">
+                    <div class="contacts__form__input-block input">
+                      <input class="contacts__form__input text__13" type="text" name="" required data-v-name="name" data-is-name="true">
+                      <div class="contacts__form__input-block__name">	Имя</div>
+                      <div class="contacts__form__input-block__error">Некорректная имя</div>
+                    </div>
+                    <div class="contacts__form__input-block input">
+                      <input class="contacts__form__input" type="tel" name="" required data-is-tel="true" data-v-name="phone">
+                      <div class="contacts__form__input-block__name">Телефон</div>
+                      <div class="contacts__form__input-block__error">Некорректный телефон</div>
+                    </div>
+                    <div class="contacts__form__input-block input">                 
+                      <input class="contacts__form__input text__13" type="email" name="" required data-v-name="email">
+                      <div class="contacts__form__input-block__name">Почта</div>
+                      <div class="contacts__form__input-block__error">Некорректная почта</div>
+                    </div>
+                    <div class="questions contacts__form__accordions">
+                      <div class="accordion contacts__form__accordion">
+                        <div class="accordion__intro">
+                          <p class="title__24 accordion__intro__title">Список товаров</p>
+                          <div class="accordion__intro__img"> 
+                            <svg>
+                              <use xlink:href="img/sprites/sprite.svg#header__menu__item__arrow"></use>
+                            </svg>
+                          </div>
+                        </div>
+                        <div class="accordion__content">
+                          <div class="products-list">
+                            <ul class="products-list__list">
+                              <li class="products-list__item">
+                                <div class="products-list__name">Товар 1</div>
+                                <div class="products-list__count">5 шт.</div>
+                              </li>
+                              <li class="products-list__item">
+                                <div class="products-list__name">Товар 2</div>
+                                <div class="products-list__count">100 шт.</div>
+                              </li>
+                              <li class="products-list__item">
+                                <div class="products-list__name">Товар 3</div>
+                                <div class="products-list__count">1 шт.</div>
+                              </li>
+                              <li class="products-list__item">
+                                <div class="products-list__name">Товар 4</div>
+                                <div class="products-list__count">14 шт.</div>
+                              </li>
+                            </ul>
+                            <div class="products-list__result">
+                              <div class="products-list__result-title">Итого:</div>
+                              <div class="products-list__result-summ">9 999 999 ₽</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="contacts__form__inner-block">
+                      <div class="contacts__form__subtitle">Способ доставки</div>
+                      <div class="contacts__form__flex-block" data-group-name="receipt" data-js="formRadioTabs">
+                        <div class="contacts__form__input-block input input--checkbox">
+                          <label>
+                            <input class="input__input" type="radio" name="receipt" data-group-item="selfPickup" checked>
+                            <div class="input__fake"></div>
+                            <div class="input__text">Самовывоз</div>
+                          </label>
+                        </div>
+                        <div class="contacts__form__input-block input input--checkbox">
+                          <label>
+                            <input class="input__input" type="radio" name="receipt" data-group-item="delivery">
+                            <div class="input__fake"></div>
+                            <div class="input__text">Служба доставки SkyFish</div>
+                          </label>
+                        </div>
+                        <div class="contacts__form__radio-block active" data-group-block="selfPickup">
+                          <div class="contacts__form__input-block input">
+                            <select class="contacts__form__select js-mob-menu__stock__select" name="" preloader="Склад1" data-v-name="select" required>
+                              <option> </option>
+                              <option>Склад1</option>
+                              <option>Склад2</option>
+                              <option>Склад3</option>
+                              <option>Склад4</option>
+                              <option>Склад5</option>
+                              <div class="localities-centers__select-arrow">
+                                <svg>
+                                  <use xlink:href="img/sprites/sprite.svg#select_arrow"></use>
+                                </svg>
+                              </div>
+                            </select>
+                            <div class="contacts__form__input-block__error">Необходимо выбрать склад</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="contacts__form__input-block">
+                      <textarea class="contacts__form__input text__13" name="" rows="3"></textarea>
+                      <div class="contacts__form__input-block__name">	Комментарий</div>
+                    </div>
+                    <div class="contacts__form__input-block input input--checkbox">
+                      <label>
+                        <input class="input__input" type="checkbox" name="checkbox" data-v-name="checkbox" required>
+                        <div class="input__fake"></div>
+                        <div class="input__text">Согласие на обработку персональных данных</div>
+                      </label>
+                      <div class="contacts__form__input-block__error">Обязательно нужно согласиться</div>
+                    </div>
+                  </div>
+                  <button class="btn mob-menu__question__bottom" type="submit">
+                    <div class="mob-menu__question__bottom__text">Отправить</div>
+                    <div class="mob-menu__question__bottom__row">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
+                      </svg>
+                    </div>
+                  </button>
+                </form>
+              </div>
+            </div>
     </main>
     <script src="https://api-maps.yandex.ru/2.1/?apikey=d30e0023-10b4-4a5c-a8fd-7e8d66094730&amp;lang=ru_RU"></script>
     <script src="js/main.min.js"></script>

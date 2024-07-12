@@ -34,7 +34,7 @@ mixin product-card(props = defaultProductCardProps)
                 icon: 'true',
                 iconName: 'arrow_btn',
                 cMode: 'black',
-            })
+            })(data-modal="cartOffer")
             +new-btn({
                 classes: 'product-card__cart',
                 tag: 'button',

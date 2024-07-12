@@ -11,6 +11,7 @@
 	z-index: 9999;
 	box-sizing: border-box;
 	transition: top 2s, height 0.3s;
+
 	@include max(md) {
 		height: vw2(70);
 	}
@@ -25,40 +26,49 @@
 		width: 100%;
 		height: 100%;
 		border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+
 		@include max(md) {
 			justify-content: flex-end;
 		}
+
 		&__col {
 			position: relative;
 			display: flex;
 			justify-content: flex-start;
 			align-items: center;
-			flex-flow:  row nowrap;
+			flex-flow: row nowrap;
 			padding: 0;
+
 			@include max(md) {
 				display: contents;
 			}
+
 			&:nth-child(1) {
 				width: auto;
 				max-width: 100%;
 				flex: 1 0 auto;
 				border: none;
 			}
+
 			&:nth-child(2) {
 				width: auto;
 				max-width: 100%;
 				flex: 0 0 auto;
 				border: none;
+
 				@include max(md) {
 					.header__other {
 						display: contents;
 					}
+
 					.header__other__item {
 						display: none;
 					}
+
 					.header__other__item--search {
 						display: block;
 					}
+
 					.header__other__item--lang {
 						display: flex;
 					}
@@ -67,6 +77,7 @@
 			}
 		}
 	}
+
 	.container {
 		display: flex;
 		justify-content: space-between;
@@ -100,29 +111,34 @@
 		min-width: vw(194);
 		background: $blueLight;
 		height: 100%;
-		@include max(md) {	
+
+		@include max(md) {
 			width: auto;
 			min-width: auto;
 			padding: vw2(10) vw2(20);
 			height: 100%;
 		}
+
 		img {
 			transition: all $tr-time;
 			position: relative;
 			display: inline-block;
 			width: vw(153);
 			object-fit: contain;
+
 			@include max(md) {
 				width: vw2(153);
 			}
 		}
 	}
+
 	&__menu {
 		position: relative;
 		display: flex;
 		justify-content: flex-start;
 		align-items: center;
 		width: fit-content;
+
 		&__humb {
 			position: relative;
 			display: flex;
@@ -137,28 +153,33 @@
 			background-size: 50% 50%;
 			background-repeat: no-repeat;
 			transition: all $tr-time-fast;
+
 			@include max(md) {
 				width: vw2(75);
 				border-right: none;
 				order: 2;
 				flex-shrink: 0;
 				flex-grow: 0;
-   		}
+			}
+
 			img {
 				position: relative;
 				display: block;
 				width: vw(47);
+
 				@include max(md) {
 					width: vw2(90);
 				}
 			}
-			@include min(md){
+
+			@include min(md) {
 				&:hover {
 					transition: all $tr-time-fast;
 					background-image: url(../img/svg/hamburger--blue.svg);
 				}
 			}
 		}
+
 		&__item {
 			position: relative;
 			display: flex;
@@ -179,9 +200,11 @@
 			cursor: pointer;
 			transition: all $tr-time;
 			border-bottom: 1px solid transparent;
+
 			&:hover {
 				color: $blue;
 				transition: all $tr-time;
+
 				.js-row {
 					animation-name: rotationOpenMenuSidebar;
 					animation-duration: .2s;
@@ -190,6 +213,7 @@
 					animation-fill-mode: forwards;
 				}
 			}
+
 			.js-row {
 
 				animation-name: rotationCloseMenuSidebar;
@@ -198,15 +222,18 @@
 				animation-timing-function: linear;
 				animation-fill-mode: forwards;
 			}
+
 			&__icon {
 				position: relative;
 				display: flex;
 				justify-content: center;
 				align-items: center;
 				margin-right: vw(6);
+
 				@include max(md) {
 					margin-right: vw2(6);
 				}
+
 				svg {
 					position: relative;
 					display: block;
@@ -214,6 +241,7 @@
 					height: 100%;
 				}
 			}
+
 			&__arrow {
 				position: relative;
 				display: flex;
@@ -221,24 +249,28 @@
 				align-items: center;
 				width: vw(7);
 				margin-left: vw(4);
+
 				@include max(md) {
 					width: vw2(7);
 					margin-left: vw2(4);
 				}
-				
-				svg,img {
+
+				svg,
+				img {
 					width: 100%;
 					height: 100%;
 					display: block;
 					position: relative;
 				}
 			}
-			.m-top{
+
+			.m-top {
 				position: absolute;
 				right: vw(-12);
 				top: vw(5);
 			}
 		}
+
 		&__list {
 			position: absolute;
 			top: calc(100% - 1px);
@@ -255,15 +287,18 @@
 			transition: all $tr-time;
 			border-top: 3px solid $blueHover;
 			background: $blueLight;
+
 			@include max(md) {
 				padding: vw2(16);
 			}
+
 			&.active {
 				display: flex;
 				opacity: 1;
 				transition: all $tr-time;
 				visibility: inherit;
 			}
+
 			&__item {
 				position: relative;
 				display: flex;
@@ -278,16 +313,19 @@
 				margin-bottom: vw(17);
 				text-transform: none;
 				width: 100%;
+
 				@include max(md) {
 					font-size: vw2(16);
 					margin-bottom: vw2(12);
 				}
+
 				&:last-child {
 					margin-bottom: 0;
 					padding-bottom: 0;
 					border-bottom: 0;
 				}
-				a{
+
+				a {
 					position: relative;
 					display: flex;
 					justify-content: flex-start;
@@ -300,9 +338,11 @@
 					line-height: 140.625%;
 					text-decoration: none;
 					transition: all $tr-time;
+
 					@include max(md) {
 						font-size: vw2(16);
 					}
+
 					&:hover {
 						transition: all $tr-time;
 						color: $white;
@@ -312,6 +352,7 @@
 
 			}
 		}
+
 		&--all-menu {
 			position: absolute;
 			top: calc(100% + vw(0));
@@ -321,19 +362,21 @@
 			justify-content: flex-start;
 			align-items: stretch;
 			padding: vw(26) vw(31) vw(42) vw(31);
-			background:  #fff;
+			background: #fff;
 			flex-flow: row nowrap;
 			width: calc(100vw - 0px);
 			opacity: 0;
 			border-radius: 0;
 			transition: all $tr-time;
 			z-index: 100;
+
 			&.active {
 				display: flex;
 				opacity: 1;
 				transition: all $tr-time;
 				visibility: inherit;
 			}
+
 			&__list {
 				position: relative;
 				display: flex;
@@ -343,14 +386,16 @@
 				padding-left: vw(35);
 				padding-right: vw(35);
 				border-right: 1px solid rgba(0, 0, 0, 0.2);
-				
+
 				&:first-child {
 					padding-left: 0;
 				}
+
 				&:last-child {
 					border-right: none;
 					padding-right: 0;
 				}
+
 				&__title {
 					position: relative;
 					display: inline-block;
@@ -369,6 +414,7 @@
 					min-height: vw(90);
 					text-transform: none;
 				}
+
 				&__item {
 					position: relative;
 					display: flex;
@@ -386,10 +432,12 @@
 					width: 100%;
 					max-width: vw(170);
 					height: auto;
+
 					&:last-child {
 						margin-bottom: 0;
 					}
-					a{
+
+					a {
 						position: relative;
 						display: inline-block;
 						color: $black;
@@ -405,6 +453,7 @@
 						height: auto;
 						white-space: wrap;
 						text-align: left;
+
 						&:hover {
 							transition: all $tr-time;
 							color: $blue;
@@ -415,6 +464,7 @@
 
 		}
 	}
+
 	&__other {
 		position: relative;
 		display: flex;
@@ -423,6 +473,7 @@
 		flex-flow: row nowrap;
 		width: fit-content;
 		height: 100%;
+
 		&__item {
 			position: relative;
 			display: flex;
@@ -441,29 +492,35 @@
 			transition: all $tr-time;
 			padding-left: vw(24);
 			cursor: pointer;
+
 			@include max(md) {
 				font-size: vw2(15);
 				font-style: normal;
 				line-height: 1.2;
-			} 
+			}
+
 			svg {
 				position: relative;
 				width: vw(25);
 				height: vw(27);
+
 				@include max(md) {
 					width: vw2(20);
 					height: vw2(20);
 				}
 			}
+
 			&--mail {
 				border-left: 1px solid $grey;
 				padding-left: vw(31.25);
 				padding-right: vw(31.25);
 			}
+
 			&--soc {
 				padding-right: vw(31.25);
 				padding-left: vw(31.25);
 				border-left: 1px solid $grey;
+
 				&__item {
 					position: relative;
 					display: flex;
@@ -472,17 +529,21 @@
 					align-items: center;
 					margin-right: vw(18);
 					transition: all $tr-time;
+
 					&:last-child {
 						margin-right: 0;
 					}
+
 					svg {
 						use {
 							transition: all $tr-time;
 							fill: $fontBlack;
 						}
 					}
+
 					&:hover {
 						transition: all $tr-time;
+
 						svg {
 							use {
 								fill: $blueHover;
@@ -491,21 +552,25 @@
 						}
 					}
 				}
-			} 
+			}
+
 			&--place {
 				min-width: vw(167);
 				padding-left: vw(26);
 				padding-right: vw(31);
 				border-right: 1px solid $grey;
+
 				@include max(md) {
 					max-width: vw2(230);
 					padding-left: vw2(17);
 					padding-right: vw2(17);
 					border-right: 0;
 					overflow: hidden;
+
 					.header__other__top {
 						max-width: 100%;
 					}
+
 					.header__menu__item__text {
 						white-space: nowrap;
 						overflow: hidden;
@@ -513,14 +578,17 @@
 						margin-top: vw2(4);
 					}
 				}
+
 				.header__menu__item__icon svg use {
 					fill: $blueLight;
 				}
 			}
+
 			&--button {
 				padding-left: 0;
 				padding-right: 0;
 			}
+
 			&--personal {
 				position: relative;
 				border-left: 1px solid $grey;
@@ -529,13 +597,16 @@
 				padding-right: 0;
 				justify-content: center;
 				transition: all $tr-time;
+
 				svg {
 					use {
 						transition: all $tr-time;
 					}
 				}
+
 				&:hover {
 					fill: $fontBlack;
+
 					svg {
 						use {
 							fill: $blueHover;
@@ -549,6 +620,7 @@
 					border-left: 1px solid rgba(0, 0, 0, 0.2);
 					border-right: 1px solid rgba(0, 0, 0, 0.2);
 					border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+
 					&__title {
 						margin-bottom: vw(20);
 						text-align: center;
@@ -557,16 +629,20 @@
 						line-height: 1em;
 						color: $fontBlack;
 					}
-					&__not-authorized, &__authorized {
+
+					&__not-authorized,
+					&__authorized {
 						display: flex;
 						flex-direction: column;
 						gap: vw(10);
 					}
+
 					&__btn.new-btn {
 						justify-content: center;
 						padding: 20px;
 
 					}
+
 					&__photo {
 						width: vw(50);
 						height: vw(50);
@@ -581,6 +657,7 @@
 						color: #fff;
 						margin: 0 auto;
 					}
+
 					&__name {
 						font-size: vw(20);
 						font-weight: 500;
@@ -588,23 +665,28 @@
 						color: $blueLight;
 						text-align: center;
 					}
+
 					&__links {
 						margin-top: vw(15);
 						display: flex;
 						flex-direction: column;
 						gap: vw(15);
 					}
+
 					&__link {
 						text-align: start;
+
 						&:hover .new-btn__text {
 							color: $blueHover;
 						}
+
 						.new-btn__text {
 							color: $fontBlack;
 						}
 					}
 				}
 			}
+
 			&--cart {
 				position: relative;
 				border-left: 1px solid $grey;
@@ -612,14 +694,17 @@
 				padding-left: 0;
 				padding-right: 0;
 				justify-content: center;
+
 				svg {
 					use {
 						transition: all $tr-time;
 						fill: $fontBlack;
 					}
 				}
+
 				&:hover {
 					transition: all $tr-time;
+
 					svg {
 						use {
 							fill: $blueHover;
@@ -627,10 +712,12 @@
 						}
 					}
 				}
+
 				&__icon {
 					position: relative;
 					display: inline-block;
 				}
+
 				&__value {
 					position: absolute;
 					top: vw(25);
@@ -649,19 +736,22 @@
 					font-weight: 600;
 					line-height: 1;
 					text-transform: uppercase;
+
 					@include max(md) {
 						font-size: vw2(20);
 						line-height: 1.2;
 						margin-right: vw2(20);
-					} 
+					}
 				}
-				
+
 			}
+
 			&--lang {
 				min-width: vw(100);
 				padding-left: 0;
 				padding-right: 0;
 				justify-content: center;
+
 				@include max(md) {
 					order: 3;
 					padding-left: vw2(17);
@@ -669,6 +759,7 @@
 					border-left: 1px solid $grey;
 				}
 			}
+
 			&--search {
 				position: relative;
 				border-left: 1px solid $grey;
@@ -676,12 +767,14 @@
 				padding-left: 0;
 				padding-right: 0;
 				justify-content: center;
+
 				@include max(md) {
 					padding-left: vw2(17);
 					padding-right: vw2(17);
 					border-right: 1px solid $grey;
 					border-left: 1px solid $grey;
 				}
+
 				&__btn {
 					position: relative;
 					width: 100%;
@@ -690,6 +783,7 @@
 					justify-content: center;
 					align-items: center;
 					cursor: pointer;
+
 					svg {
 						use {
 							transition: all $tr-time;
@@ -697,8 +791,10 @@
 							stroke-width: 2;
 						}
 					}
+
 					&:hover {
 						transition: all $tr-time;
+
 						svg {
 							use {
 								stroke: $blueHover;
@@ -709,9 +805,11 @@
 				}
 
 			}
+
 			&:hover {
 				color: $blue;
 				transition: all $tr-time;
+
 				.js-row {
 					animation-name: rotationOpenMenuSidebar;
 					animation-duration: .2s;
@@ -720,6 +818,7 @@
 					animation-fill-mode: forwards;
 				}
 			}
+
 			.js-row {
 
 				animation-name: rotationCloseMenuSidebar;
@@ -728,25 +827,31 @@
 				animation-timing-function: linear;
 				animation-fill-mode: forwards;
 			}
+
 			&:last-child {
 				margin-right: 0;
 
 			}
+
 			&:hover {
 				color: $blue;
 				transition: all $tr-time;
 
 			}
-			img, svg {
+
+			img,
+			svg {
 				transition: all $tr-time;
 			}
 		}
+
 		&__top {
 			position: relative;
 			display: flex;
 			justify-content: flex-start;
 			align-items: center;
-			a{
+
+			a {
 				position: relative;
 				display: flex;
 				justify-content: flex-start;
@@ -760,34 +865,42 @@
 				text-transform: uppercase;
 				text-decoration: none;
 				transition: all $tr-time;
+
 				@include max(md) {
 					font-size: vw2(18);
 					line-height: 1.2;
 					margin-right: 0;
-			} 
+				}
+
 				&:hover {
 					transition: all $tr-time;
 					color: $blue;
 				}
 			}
 		}
+
 		&__fone {
 			margin-right: 0;
+
 			&--mob {
 				display: none;
+
 				@include max(md) {
 					display: flex;
 				}
 			}
+
 			&--desc {
 				padding-left: vw(31.25);
 				padding-right: vw(31.25);
 				border-left: 1px solid $grey;
+
 				@include max(md) {
 					display: none;
 				}
 			}
 		}
+
 		&__button {
 			position: relative;
 			display: flex;
@@ -800,17 +913,19 @@
 			font-weight: 600;
 			line-height: normal;
 			text-transform: uppercase;
-			width:	100%;
+			width: 100%;
 			border-right: 1px solid $grey;
 			border-left: 1px solid $grey;
 			background: transparent;
 			transition: all $tr-time;
+
 			@include max(md) {
 				font-size: vw2(20);
 				font-style: normal;
 				line-height: 1.2;
 				margin-right: vw(20);
-			} 
+			}
+
 			&:hover {
 				color: #fff;
 				background: $blueLight;
@@ -818,6 +933,7 @@
 				border-right: 1px solid $blueLight;
 				border-left: 1px solid $blueLight;
 			}
+
 			.btn {
 				@include max(md) {
 					min-height: vw2(49);
@@ -825,6 +941,7 @@
 			}
 		}
 	}
+
 	&__nav {
 		@include max(md) {
 			display: none;
@@ -832,14 +949,17 @@
 	}
 
 }
+
 .header-nav {
 	height: 100%;
+
 	&__list {
 		height: 100%;
 		display: flex;
 		align-items: center;
 		list-style: none;
 	}
+
 	&__item {
 		display: flex;
 		align-items: center;
@@ -849,6 +969,7 @@
 		border-right: 1px solid $grey;
 
 	}
+
 	&__item a {
 		display: block;
 		color: #07171D;
@@ -862,11 +983,13 @@
 		white-space: nowrap;
 		color: $black;
 		transition: all $tr-time;
+
 		&:hover {
 			color: $blueLight;
 		}
 	}
 }
+
 .search {
 	position: absolute;
 	top: 0;
@@ -881,6 +1004,7 @@
 	transition: all $tr-time;
 	z-index: 9999;
 	border-right: none;
+
 	&--overlay {
 		position: fixed;
 		visibility: hidden;
@@ -892,34 +1016,42 @@
 		background: rgba(7, 23, 29, 0.4);
 		z-index: 10;
 	}
+
 	&.active {
 		transition: all $tr-time;
 		height: vw(90);
 		width: vw(1000);
 		visibility: inherit;
+
 		@include max(md) {
 			right: vw2(-90);
 			height: vw2(70);
 			width: 100vw;
 		}
+
 		.search--overlay {
-			visibility: inherit;	
+			visibility: inherit;
 			width: 100vw;
 
 		}
+
 		.search__btn {
 			display: flex;
 		}
+
 		.search__select {
 			display: flex;
 		}
+
 		.search__inter {
 			display: flex;
 		}
+
 		.search__result {
 			display: flex;
 		}
 	}
+
 	&__content {
 		position: relative;
 		width: 100%;
@@ -931,10 +1063,12 @@
 		border: 3px solid #44C8F5;
 		box-sizing: border-box;
 		z-index: 9999;
+
 		@include max(md) {
 			height: vw2(70);
 		}
 	}
+
 	&__clear {
 		position: absolute;
 		top: 50%;
@@ -948,31 +1082,37 @@
 		border: none;
 		cursor: pointer;
 		opacity: 0.8;
+
 		@include max(md) {
 			right: vw2(20);
 			width: vw2(50);
 			height: vw2(50);
 		}
+
 		svg {
 			width: vw(30);
 			height: vw(30);
+
 			@include max(md) {
 				width: vw2(30);
 				height: vw2(30);
 			}
+
 			use {
 				fill: $fontBlack;
 				stroke: $fontBlack;
 			}
 		}
 	}
-	&__inter  {
+
+	&__inter {
 		position: relative;
 		width: 100%;
 		height: calc(100% - 0px);
 		display: none;
 		justify-content: flex-start;
 		align-items: flex-start;
+
 		input {
 			position: relative;
 			width: 100%;
@@ -983,20 +1123,22 @@
 			font-weight: 600;
 			line-height: normal;
 			text-transform: uppercase;
-			padding-right: vw(180);		
+			padding-right: vw(180);
 			border-right: none;
 			padding-left: vw(23);
 			background: #fff;
 			cursor: pointer;
 			border: 0px solid #44C8F5;
 			transition: all $tr-time;
+
 			@include max(md) {
 				padding-right: vw2(50);
 				padding-left: vw2(18);
 				font-size: vw2(18);
 				line-height: 1.2;
 				margin-right: vw2(20);
-		} 
+			}
+
 			&::placeholder {
 				color: #07171D;
 				font-size: vw(14);
@@ -1004,34 +1146,40 @@
 				font-weight: 600;
 				line-height: normal;
 				text-transform: uppercase;
+
 				@include max(md) {
 					font-size: vw2(18);
 					line-height: 1.2;
 					margin-right: vw(18);
-				} 
+				}
 			}
-			&:hover {       
-					border: none; 
-					border-bottom: none;
-					transition: all $tr-time;
+
+			&:hover {
+				border: none;
+				border-bottom: none;
+				transition: all $tr-time;
 			}
-			&:focus { 
-					border: none; 
-					border-bottom: none;
-					transition: all $tr-time;
+
+			&:focus {
+				border: none;
+				border-bottom: none;
+				transition: all $tr-time;
 			}
-			&:active { 
-					border: none; 
-					border-bottom: none;
-					transition: all $tr-time;
+
+			&:active {
+				border: none;
+				border-bottom: none;
+				transition: all $tr-time;
 			}
+
 			&:focus-visible {
-					outline: none;
+				outline: none;
 			}
 
 		}
 	}
-	&__select  {
+
+	&__select {
 		position: absolute;
 		right: 0;
 		top: 0;
@@ -1039,16 +1187,19 @@
 		display: none;
 		justify-content: flex-end;
 		align-items: center;
-		padding-right:vw(22);
+		padding-right: vw(22);
 		z-index: 9999;
+
 		.header__other__item {
 			height: 100%;
+
 			.header__menu__list {
 				top: 100%;
 				z-index: 9999;
 			}
 		}
 	}
+
 	&__btn {
 		position: relative;
 		display: none;
@@ -1060,19 +1211,23 @@
 		padding-left: vw(22);
 		padding-right: vw(22);
 		transition: all $tr-time;
+
 		@include max(md) {
 			width: vw2(200);
 			padding-left: vw2(18);
 			padding-right: vw2(18);
 		}
+
 		&:hover {
 			transition: all $tr-time;
 			background: $blueHover;
 		}
+
 		&__row {
 			svg {
 				width: vw(26);
 				height: vw(18);
+
 				use {
 					width: 100%;
 					height: 100%;
@@ -1080,6 +1235,7 @@
 				}
 			}
 		}
+
 		&__text {
 			color: #fff;
 			font-size: vw(14);
@@ -1087,13 +1243,15 @@
 			font-weight: 600;
 			line-height: normal;
 			text-transform: uppercase;
+
 			@include max(md) {
 				font-size: vw2(18);
 				line-height: 1.2;
 				margin-right: vw(20);
-			} 
+			}
 		}
 	}
+
 	&__result {
 		position: absolute;
 		top: vw(90);
@@ -1105,9 +1263,11 @@
 		background: #fff;
 		z-index: 9995;
 		flex-flow: column;
+
 		@include max(md) {
 			top: vw2(70);
 		}
+
 		&__item {
 			position: relative;
 			display: flex;
@@ -1119,18 +1279,22 @@
 			padding-left: vw(13);
 			padding-right: vw(13);
 			transition: all $tr-time;
+
 			@include max(md) {
 				padding-bottom: vw2(20);
 				padding-left: vw2(10);
 				padding-right: vw2(10);
 			}
+
 			&:last-child {
 				border: none;
 			}
+
 			&:hover {
 				transition: all $tr-time;
 				background: rgba(0, 0, 0, 0.2);
 			}
+
 			&__picture {
 				position: relative;
 				display: flex;
@@ -1139,11 +1303,13 @@
 				width: vw(129);
 				height: vw(124);
 				margin-right: vw(59);
+
 				@include max(md) {
 					width: vw2(90);
 					height: vw2(86.5);
 					margin-right: vw2(20);
 				}
+
 				img {
 					position: relative;
 					display: block;
@@ -1153,6 +1319,7 @@
 					object-position: center center;
 				}
 			}
+
 			&__desc {
 				position: relative;
 				display: flex;
@@ -1162,6 +1329,7 @@
 				flex: 1 1 auto;
 
 			}
+
 			&__title {
 				position: relative;
 				width: 100%;
@@ -1174,12 +1342,14 @@
 				line-height: 97.228%;
 				margin-bottom: vw(12);
 				max-width: vw(420);
+
 				@include max(md) {
 					font-size: vw2(18);
 					margin-bottom: vw2(12);
 					max-width: none;
-				} 	
+				}
 			}
+
 			&__art {
 				color: #151212;
 				font-size: vw(14);
@@ -1187,11 +1357,13 @@
 				font-weight: 600;
 				line-height: normal;
 				text-transform: uppercase;
+
 				@include max(md) {
 					font-size: vw2(14);
-				} 			
+				}
 			}
 		}
+
 		&__btn {
 			position: relative;
 			display: flex;
@@ -1202,9 +1374,11 @@
 			background: #07171D;
 			transition: all $tr-time;
 			width: 100%;
+
 			@include max(md) {
 				min-height: vw2(50);
-			} 	
+			}
+
 			&:hover {
 				transition: all $tr-time;
 				background: #2BAEDA;
@@ -1213,11 +1387,13 @@
 		}
 	}
 }
-.header--small .mob-menu__section{
+
+.header--small .mob-menu__section {
 	@include min(md) {
-		top:vw(70);
+		top: vw(70);
 	}
 }
+
 .mob-menu {
 	position: relative;
 	display: flex;
@@ -1231,16 +1407,19 @@
 	background: #fff;
 	height: calc(100vh - vw(90));
 	overflow-y: auto;
+
 	@include max(md) {
 		max-width: 90%;
-		padding:  vw2(20);
+		padding: vw2(20);
 		height: calc(100vh - vw2(70));
 	}
+
 	&__wrap {
 		position: relative;
 		background: #fff;
 		z-index: 9999;
 		min-height: 100%;
+
 		@include max(md) {
 			width: 75%;
 			min-height: calc(100vh - vw2(70));
@@ -1248,23 +1427,25 @@
 			height: calc(100vh - vw2(70));
 		}
 	}
+
 	&::-webkit-scrollbar {
 		width: vw(10);
 		background-color: #fff;
 	}
-	
+
 	&::-webkit-scrollbar-thumb {
 		border-radius: 0px;
 		background-color: rgba(205, 209, 210, 0.23);
 	}
-	
+
 	&::-webkit-scrollbar-track {
 		border-radius: 0px;
 		background-color: #fff;
 	}
+
 	&__section {
 		position: fixed;
-		top: vw(90);	
+		top: vw(90);
 		left: -100vw;
 		width: 0vw;
 		height: 100vh;
@@ -1274,8 +1455,9 @@
 		overflow: hidden;
 		transition: all $tr-time-slow;
 		z-index: 999;
+
 		@include max(md) {
-			top: vw2(70);	
+			top: vw2(70);
 			height: calc(100vh - vw2(70));
 		}
 
@@ -1292,18 +1474,22 @@
 			right: 0 !important;
 			top: 0;
 			bottom: 0;
+
 			&__list {
 				padding-top: vw(22);
 				margin-bottom: vw(24);
+
 				@include max(md) {
 					width: 100%;
 					padding-top: vw2(22);
 					margin-bottom: vw2(24);
 				}
 			}
+
 			&__list__title {
 				color: $blueLight;
 			}
+
 			&__list__item a,
 			&__list__item span {
 				@include max(md) {
@@ -1311,6 +1497,7 @@
 					font-size: vw2(16.25);
 				}
 			}
+
 			&__social {
 				.new-btn svg use {
 					@include max(md) {
@@ -1318,13 +1505,16 @@
 					}
 				}
 			}
-			&__callback, &__lang {
+
+			&__callback,
+			&__lang {
 				display: none;
+
 				@include max(md) {
 					display: block;
 					margin-top: vw2(30);
 					width: 100%;
-				} 	
+				}
 			}
 
 			&__callback .btn {
@@ -1346,6 +1536,7 @@
 			}
 		}
 	}
+
 	&__link {
 		position: relative;
 		display: block;
@@ -1358,15 +1549,18 @@
 		text-transform: uppercase;
 		transition: all $tr-time;
 		cursor: pointer;
-    	@include max(md) {
+
+		@include max(md) {
 			font-size: vw2(20);
 			line-height: 1.2;
 		}
+
 		&:hover {
 			transition: all $tr-time;
 			color: $blueHover;
 		}
 	}
+
 	&--close {
 		position: absolute;
 		display: flex;
@@ -1374,7 +1568,8 @@
 		align-items: center;
 		right: 10px;
 		top: 10px;
-	} 
+	}
+
 	&--overlay {
 		position: absolute;
 		left: 0;
@@ -1385,6 +1580,7 @@
 		background: rgba(7, 23, 29, 0.5);
 		z-index: 990;
 	}
+
 	&__list {
 		position: relative;
 		display: flex;
@@ -1395,14 +1591,17 @@
 		margin-bottom: vw(28);
 		padding-left: vw(8);
 		cursor: pointer;
+
 		@include max(md) {
 			margin-bottom: vw2(20);
 			padding-left: vw2(15);
 		}
+
 		&:hover {
 			transition: all $tr-time;
 			color: $blueHover;
 		}
+
 		&__item {
 			position: relative;
 			display: block;
@@ -1416,20 +1615,24 @@
 			text-decoration: none;
 			transition: all $tr-time;
 			cursor: pointer;
+
 			@include max(md) {
 				font-size: vw2(14);
 				line-height: 1.2;
 				margin-right: vw2(20);
-		} 
+			}
+
 			&:hover {
 				transition: all $tr-time;
 				color: $blueHover;
 			}
+
 			&:last-child {
 				margin-bottom: 0;
 			}
 		}
 	}
+
 	&--item {
 		position: relative;
 		display: flex;
@@ -1443,6 +1646,7 @@
 		line-height: normal;
 		letter-spacing: 0.7px;
 		text-transform: uppercase;
+
 		a {
 			position: relative;
 			display: flex;
@@ -1454,13 +1658,16 @@
 			line-height: normal;
 			letter-spacing: 0.7px;
 			text-transform: uppercase;
+
 			&:hover {
 				color: $greyBlack;
 				transition: all $tr-time;
 			}
-			text-decoration: none;		
+
+			text-decoration: none;
 		}
 	}
+
 	&__fone {
 		position: relative;
 		display: block;
@@ -1487,13 +1694,15 @@
 			letter-spacing: vw(1.1);
 			text-transform: uppercase;
 			transition: all $tr-time;
+
 			&:hover {
 				transition: all $tr-time;
 				color: $blue;
-			}		
+			}
 		}
 
 	}
+
 	&__top {
 		position: relative;
 		display: flex;
@@ -1503,6 +1712,7 @@
 		flex-flow: column nowrap;
 		margin-bottom: 32px;
 		border-bottom: 1px solid $black;
+
 		&__row {
 			position: relative;
 			display: flex;
@@ -1512,6 +1722,7 @@
 			margin-bottom: 26px;
 		}
 	}
+
 	&__bottom {
 		position: relative;
 		display: flex;
@@ -1519,15 +1730,18 @@
 		align-items: flex-start;
 		flex-flow: column nowrap;
 	}
+
 	.header__other__user {
 		svg {
 			margin-right: 10px;
 		}
 	}
+
 	.header__other__lang {
 		margin-right: 0;
 
 	}
+
 	.soc {
 		position: relative;
 		display: flex;
@@ -1538,9 +1752,11 @@
 		top: auto;
 		margin-top: vw(22);
 		margin-left: vw(-12);
+
 		&__text {
 			display: none;
 		}
+
 		&__item {
 			display: flex;
 			justify-content: center;
@@ -1557,14 +1773,17 @@
 			transition: all $tr-time;
 			border-radius: vw(7);
 			margin-left: vw(20);
+
 			&__text {
 				display: none;
 			}
+
 			&__picture {
 				position: relative;
 				width: 100%;
 				height: 100%;
 				display: block;
+
 				img {
 					position: relative;
 					display: block;
@@ -1572,6 +1791,7 @@
 					height: 100%;
 				}
 			}
+
 			&:hover {
 				transition: all $tr-time;
 				background: rgba(255, 255, 255, 0.21);
@@ -1589,11 +1809,13 @@
 		width: vw(457);
 		padding-top: vw(24);
 		z-index: 991;
+
 		@include max(md) {
 			width: 100%;
 			max-width: 100%;
-			padding-top: vw2(20);     
+			padding-top: vw2(20);
 		}
+
 		&__top {
 			position: relative;
 			display: flex;
@@ -1604,11 +1826,13 @@
 			margin-bottom: vw(24);
 			padding-left: vw(24);
 			padding-right: vw(24);
+
 			@include max(md) {
 				margin-bottom: vw2(20);
 				padding-left: vw2(20);
-				padding-right: vw2(20);  
+				padding-right: vw2(20);
 			}
+
 			&__title {
 				color: #07171D;
 				font-size: vw(32);
@@ -1616,20 +1840,24 @@
 				font-weight: 500;
 				line-height: 106%;
 				text-transform: uppercase;
+
 				@include max(md) {
 					font-size: vw2(28);
 					line-height: 1.2;
 				}
 			}
+
 			&__text {
 				font-size: vw(20);
 				margin-top: vw(36);
 				color: $fontBlack;
+
 				@include max(md) {
 					font-size: vw2(20);
 					margin-top: vw2(40);
 				}
 			}
+
 			&__close {
 				position: relative;
 				width: vw(57);
@@ -1642,21 +1870,26 @@
 				flex-shrink: 0;
 				transition: all $tr-time;
 				cursor: pointer;
+
 				@include max(md) {
 					width: vw2(40);
 					height: vw2(40);
 				}
+
 				&:hover {
 					transition: all $tr-time;
 					background: $blueHover;
 				}
+
 				svg {
 					width: vw(20);
 					height: vw(20);
+
 					@include max(md) {
 						width: vw2(20);
 						height: vw2(20);
 					}
+
 					use {
 						width: 100%;
 						height: 100%;
@@ -1665,6 +1898,7 @@
 				}
 			}
 		}
+
 		&__select {
 			position: relative;
 			display: flex;
@@ -1674,12 +1908,14 @@
 			margin-bottom: vw(28);
 			padding-left: vw(24);
 			padding-right: vw(24);
+
 			@include max(md) {
 				margin-bottom: vw2(20);
 				padding-left: vw2(20);
 				padding-right: vw2(20);
 			}
 		}
+
 		&__bottom {
 			position: relative;
 			display: flex;
@@ -1692,19 +1928,23 @@
 			padding-right: vw(24);
 			transition: all $tr-time;
 			cursor: pointer;
+
 			@include max(md) {
 				min-height: vw2(65);
 				padding-left: vw2(20);
 				padding-right: vw2(20);
 			}
+
 			&:hover {
 				transition: all $tr-time;
 				background: $blueHover;
 			}
+
 			&__row {
 				svg {
 					width: vw(14);
 					height: vw(12);
+
 					use {
 						width: 100%;
 						height: 100%;
@@ -1712,6 +1952,7 @@
 					}
 				}
 			}
+
 			&__text {
 				color: #fff;
 				font-size: vw(14);
@@ -1719,20 +1960,24 @@
 				font-weight: 600;
 				line-height: normal;
 				text-transform: uppercase;
+
 				@include max(md) {
 					font-size: vw2(20);
 					line-height: 1.2;
 					margin-right: vw(20);
-			} 
+				}
 			}
 		}
+
 		&__section {
 			transition: all $tr-time-slow;
+
 			&.active {
 				transition: all $tr-time-slow;
 			}
 		}
 	}
+
 	&__question {
 		position: relative;
 		display: flex;
@@ -1743,13 +1988,14 @@
 		width: 100%;
 		max-width: vw(665);
 		padding-top: vw(30);
-		height: 100vh;
+		height: calc(100vh - vw(65));
 		z-index: 9999;
 		overflow: auto;
+
 		@include max(md) {
 			max-width: vw2(665);
 			padding-top: vw2(30);
-			height: calc(100vh - vw2(70));   
+			height: calc(100vh - vw2(70));
 		}
 
 		&__section {
@@ -1760,18 +2006,21 @@
 			left: auto;
 			transition: all $tr-time;
 			right: -100vw;
+
 			&.active {
 				transition: all $tr-time;
 				width: 100vw;
 				height: 100vh;
 				left: auto;
 				right: 0;
+
 				@include max(md) {
 					height: calc(100vh - vw2(70));
 					overflow-y: auto;
 				}
 			}
 		}
+
 		&__top {
 			position: relative;
 			display: flex;
@@ -1781,6 +2030,7 @@
 			margin-bottom: vw(56);
 			padding-left: vw(30);
 			padding-right: vw(30);
+
 			@include max(md) {
 				margin-bottom: vw2(56);
 				padding-left: vw2(30);
@@ -1796,12 +2046,14 @@
 				font-style: normal;
 				font-weight: 500;
 				line-height: 106%;
-				text-transform: uppercase;	
+				text-transform: uppercase;
+
 				@include max(md) {
 					max-width: 100%;
-					font-size: vw2(28); 
+					font-size: vw2(28);
 				}
 			}
+
 			&__close {
 				position: relative;
 				width: vw(57);
@@ -1815,29 +2067,35 @@
 				flex-shrink: 0;
 				flex-grow: 0;
 				cursor: pointer;
+
 				@include max(md) {
 					width: vw2(40);
 					height: vw2(40);
 				}
+
 				svg {
 					width: vw(20);
 					height: vw(20);
+
 					@include max(md) {
 						width: vw2(20);
 						height: vw2(20);
 					}
+
 					use {
 						width: 100%;
 						height: 100%;
 						fill: $white;
 					}
 				}
+
 				&:hover {
 					transition: all $tr-time;
 					background: $blueHover;
 				}
 			}
 		}
+
 		&__content {
 			position: relative;
 			display: flex;
@@ -1846,6 +2104,7 @@
 			width: 100%;
 			height: 100%;
 		}
+
 		&__answer {
 			position: relative;
 			display: flex;
@@ -1859,10 +2118,12 @@
 			text-transform: uppercase;
 			margin-left: auto;
 			margin-right: auto;
+
 			@include max(md) {
-				max-width: 100%;  
+				max-width: 100%;
 			}
 		}
+
 		&__bottom {
 			position: relative;
 			display: flex;
@@ -1875,23 +2136,28 @@
 			padding-right: vw(30);
 			transition: all $tr-time;
 			cursor: pointer;
+
 			@include max(md) {
 				min-height: vw2(75);
 				padding-left: vw2(30);
 				padding-right: vw2(30);
-			} 
+			}
+
 			&:hover {
 				transition: all $tr-time;
 				background: $blueHover;
 			}
+
 			&__row {
 				svg {
 					width: vw(14);
 					height: vw(12);
+
 					@include max(md) {
 						width: vw2(14);
 						height: vw2(12);
-					} 
+					}
+
 					use {
 						width: 100%;
 						height: 100%;
@@ -1899,6 +2165,7 @@
 					}
 				}
 			}
+
 			&__text {
 				color: #fff;
 				font-size: vw(14);
@@ -1906,11 +2173,12 @@
 				font-weight: 600;
 				line-height: normal;
 				text-transform: uppercase;
+
 				@include max(md) {
 					font-size: vw2(16);
 					line-height: 1.2;
 					margin-right: vw2(16);
-				} 
+				}
 			}
 		}
 	}
@@ -1934,20 +2202,24 @@
 	height: 100%;
 	max-height: 100%;
 	min-height: 100%;
+
 	&__close {
 		position: absolute;
 		right: vw(20);
 		top: vw(20);
+
 		@include max(md) {
 			right: vw2(20);
-			top: vw2(20);  
+			top: vw2(20);
 		}
 	}
+
 	&__slider {
 		display: flex;
 		flex-direction: column;
 		min-height: 100%;
 		max-height: 100%;
+
 		.swiper-wrapper {
 			flex-basis: auto;
 			flex-grow: 1;
@@ -1956,6 +2228,7 @@
 			overflow: hidden;
 		}
 	}
+
 	&__controls {
 		display: flex;
 		align-items: stretch;
@@ -1963,11 +2236,13 @@
 		flex-shrink: 0;
 		padding-left: vw(29);
 		margin-bottom: vw(29);
+
 		@include max(md) {
 			padding-left: vw2(29);
 			margin-bottom: vw2(29);
 		}
 	}
+
 	&__control {
 		padding: vw(37);
 		font-size: vw(12);
@@ -1977,46 +2252,55 @@
 		border: 1px solid #E5E5E5;
 		cursor: pointer;
 		transition: all $tr-time-fast linear;
+
 		@include max(md) {
 			padding: vw2(37);
-			font-size: vw2(12); 
+			font-size: vw2(12);
 		}
+
 		&.swiper-button-disabled {
 			background-color: $blueLight;
 			color: $white;
 			border-color: $blueLight;
 		}
+
 		&:hover {
 			background-color: $blueHover;
 			border-color: $blueHover;
 			color: white;
 		}
 	}
+
 	&__slide.swiper-slide {
 		height: auto;
 		opacity: 0 !important;
 		z-index: -100;
+
 		&.swiper-slide-active {
 			opacity: 1 !important;
 			z-index: 1;
 		}
 	}
+
 	&__title {
 		font-size: vw(32);
 		font-weight: 500;
 		line-height: 1.06em;
 		color: $fontBlack;
 		text-transform: uppercase;
+
 		@include max(md) {
-			font-size: vw2(32); 
+			font-size: vw2(32);
 		}
 	}
+
 	.contacts__form {
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
 		padding: 0;
 		margin: 0;
+
 		&__content {
 			width: 100%;
 			padding: 0 vw(29);
@@ -2026,32 +2310,39 @@
 			overflow-y: auto;
 			scrollbar-width: thin;
 			scrollbar-color: #99c4d3 rgba(0, 0, 0, 0);
+
 			@include max(md) {
-				padding: 0 vw2(29); 
+				padding: 0 vw2(29);
 			}
+
 			&::-webkit-scrollbar {
 				height: 2px;
 				width: 2px;
 			}
+
 			&::-webkit-scrollbar-track {
 				background: rgba(0, 0, 0, 0);
 			}
+
 			&::-webkit-scrollbar-thumb {
 				background-color: #99c4d3;
 				border-radius: 10px;
 				border: none;
 			}
 		}
+
 		&__title {
 			margin-bottom: vw(30);
 			font-size: vw(32);
 			font-weight: 500;
-			line-height: 1,06em;
+			line-height: 1, 06em;
+
 			@include max(md) {
 				margin-bottom: vw2(30);
 				font-size: vw2(32);
 			}
 		}
+
 		.mob-menu__question__bottom.btn {
 			margin-top: auto;
 			max-width: 100%;
@@ -2068,54 +2359,66 @@
 		min-height: 100%;
 		max-height: 100%;
 	}
+
 	&__slide.swiper-slide {
 		height: auto;
 		opacity: 0 !important;
 		z-index: -100;
+
 		&.swiper-slide-active {
 			opacity: 1 !important;
 			z-index: 1;
-		}	
+		}
 	}
+
 	&__top {
 		display: none;
 		padding-left: vw(29);
+
 		@include max(md) {
 			padding-left: vw2(29);
 		}
+
 		&.active {
 			display: block;
 		}
 	}
+
 	&__title {
 		font-size: vw(32);
 		font-weight: 500;
 		line-height: 1.06em;
 		color: $fontBlack;
 		text-transform: uppercase;
+
 		@include max(md) {
 			font-size: vw2(32);
 		}
 	}
+
 	&__subtitle {
 		margin-top: vw(30);
 		font-size: vw(18);
 		font-weight: 400;
 		line-height: 1.4em;
+
 		@include max(md) {
 			margin-top: vw2(30);
 			font-size: vw2(18);
 		}
 	}
+
 	&__controls {
 		margin-top: vw(15);
 		display: flex;
 		gap: vw(38);
+
 		@include max(md) {
 			margin-top: vw2(15);
 			gap: vw2(38);
 		}
 	}
+
 	&__control {
 		display: flex;
 		align-items: center;
@@ -2126,11 +2429,13 @@
 		font-weight: 400;
 		line-height: 1.4em;
 		cursor: pointer;
+
 		@include max(md) {
 			height: vw2(26);
 			padding-left: vw2(38);
 			font-size: vw2(18);
 		}
+
 		&:before {
 			box-sizing: border-box;
 			content: '';
@@ -2141,11 +2446,13 @@
 			height: vw(26);
 			border: 1px solid #ccc;
 			border-radius: 100%;
+
 			@include max(md) {
 				width: vw2(26);
 				height: vw2(26);
 			}
 		}
+
 		&:after {
 			content: '';
 			position: absolute;
@@ -2156,6 +2463,7 @@
 			transition: background-color $tr-time-fast linear;
 			background-color: transparent;
 			border-radius: 100%;
+
 			@include max(md) {
 				left: vw2(5);
 				top: vw2(5);
@@ -2163,6 +2471,7 @@
 				height: vw2(16);
 			}
 		}
+
 		&.active {
 			&:after {
 				background-color: $blueLight;
@@ -2170,15 +2479,18 @@
 			}
 		}
 	}
+
 	.contacts__form {
 		&__content {
 			margin-top: vw(30);
 			padding: 0 vw(29);
+
 			@include max(md) {
 				margin-top: vw2(30);
 				padding: 0 vw2(29);
 			}
 		}
+
 		&__title {
 			margin-bottom: 0;
 		}
@@ -2190,41 +2502,50 @@
 		max-height: 100%;
 		overflow-y: auto;
 		color: $fontBlack;
+
 		@include max(md) {
 			margin-top: vw2(37);
 			padding: 0 vw2(29) vw2(35);
 		}
+
 		&__title {
 			margin-bottom: vw(28);
 			font-size: vw(32);
 			font-weight: 500;
 			line-height: 1.06em;
 			text-transform: uppercase;
+
 			@include max(md) {
 				margin-bottom: vw2(28);
 				font-size: vw2(32);
 			}
 		}
+
 		&__text {
 			font-size: vw(18);
 			font-weight: 400;
 			line-height: 1.4em;
+
 			@include max(md) {
 				font-size: vw2(18);
 			}
 		}
+
 		&__data {
 			margin-top: vw(65);
+
 			@include max(md) {
 				margin-top: vw2(65);
 			}
 		}
+
 		&__email {
 			color: $blueLight;
 			font-size: vw(32);
 			font-weight: 500;
 			line-height: 0.97em;
 			text-transform: uppercase;
+
 			@include max(md) {
 				font-size: vw2(32);
 			}
@@ -2234,7 +2555,7 @@
 
 
 
-@keyframes rotationOpenMenuSidebar  {
+@keyframes rotationOpenMenuSidebar {
 	0% {
 		transform-origin: 50% 50%;
 		transform: rotate(0deg);
@@ -2246,11 +2567,13 @@
 	}
 
 }
+
 @keyframes rotationCloseMenuSidebar {
 	0% {
 		transform-origin: 50% 50%;
 		transform: rotate(180deg);
 	}
+
 	100% {
 		transform-origin: 50% 50%;
 		transform: rotate(0deg);
