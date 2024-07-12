@@ -9,7 +9,7 @@
 
 document.addEventListener("DOMContentLoaded", () => {
     societyAwardsSliderInit();
-    lWalkSliderInit();
+    lWalkInit();
     lVacanciesSliderInit();
     careerPhotosSliderInit();
     teamPhotosSliderInit();

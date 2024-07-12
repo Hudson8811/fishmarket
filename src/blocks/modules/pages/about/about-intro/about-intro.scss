@@ -1,7 +1,7 @@
 .ap-main-screen {
-    background-image: url('../img/ap_main_screen.jpg');
     background-size: 100% 100%;
     position: relative;
+
     &::after {
         content: "";
         position: absolute;
@@ -10,21 +10,25 @@
         width: 100%;
         height: vw(268);
         background: linear-gradient(0deg, #07171D 0%, rgba(7, 23, 29, 0) 100%);
+
         @include max(md) {
             height: vw2(260);
         }
     }
+
     &__container {
         min-height: 100vh;
         padding: vw(114) 0 vw(50);
         display: flex;
         flex-direction: column;
         align-items: flex-start;
+
         @include max(md) {
             min-height: auto;
             padding: vw2(90) 0 vw2(30);
         }
     }
+
     &__title {
         margin-top: vw(-29);
         font-size: vw(419);
@@ -33,11 +37,13 @@
         color: $white;
         width: 100%;
         text-align: center;
+
         @include max(md) {
             margin-top: 0;
             font-size: vw2(118);
         }
     }
+
     &__text {
         max-width: vw(847);
         margin-top: auto;
@@ -47,6 +53,7 @@
         letter-spacing: -0.02em;
         color: $white;
         z-index: 5;
+
         @include max(md) {
             max-width: vw2(370);
             margin-top: vw2(300);

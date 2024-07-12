@@ -142,13 +142,18 @@ if( loginButtons.length > 0 && registerButton !== null) {
 let sectionCommand = document.querySelector(".js-pop-up__command");
 let sectionCommandOverlay = document.querySelector(".js-pop-up__command--overlay");
 let sectionCommandClose = document.querySelector(".js-pop-up__command--close");
-let sectionCommandButton = document.querySelector(".js-pop-up__button--command");
-if( sectionCommandButton !== null) {
-  sectionCommandButton.addEventListener("click", function () {
-   
-    sectionCommand.classList.add("active");
-    bodyNoScroll()
-  });
+let sectionCommandButtons = document.querySelectorAll(".js-pop-up__button--command");
+
+if( sectionCommandButtons.length > 0) {
+
+  sectionCommandButtons.forEach(sectionCommandButton => {
+    sectionCommandButton.addEventListener("click", function (e) {
+      e.preventDefault()
+      e.stopPropagation()
+      sectionCommand.classList.add("active");
+      bodyNoScroll()
+    });
+  })
   sectionCommandClose.addEventListener("click", function () {
     sectionCommand.classList.remove("active");
     bodyYesScroll()
@@ -231,7 +236,11 @@ mobMenuCityOk.addEventListener("click", function () {
   }
 });
 buttonQuestions.forEach(buttonQuestion => {
-  buttonQuestion.addEventListener("click", function () {
+  buttonQuestion.addEventListener("click", function (e) {
+    
+    e.preventDefault()
+    e.stopPropagation()
+
     mobMenuQuestion.classList.add("active");
     bodyNoScroll()
   });

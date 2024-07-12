@@ -98,7 +98,7 @@ mixin l-walk(props = defaultLWalkProps)
 			slides: props.slides ? props.slides : defaultLWalkProps.slides,
 		};
 
-	section.l-walk(class= checkProps.classes)
+	section.l-walk(class= checkProps.classes data-js="lWalk")
 		.container
 			.l-walk__header
 				+title("h2", checkProps.title, "l-walk__title")
@@ -107,7 +107,7 @@ mixin l-walk(props = defaultLWalkProps)
 					text: 'показать еще',
 					cMode: 'blue',
 					vMode: 'big'
-				})
+				})(data-js="openlWalkGallery")
 			.l-walk__slider(data-js="lWalkSlider")
 				.swiper-wrapper
 

@@ -12,9 +12,11 @@
 	background-position: left bottom;
 	background-repeat: repeat-x;
 	z-index: 30;
+
 	&__animation {
 		position: absolute;
 		top: vw(70);
+
 		@include max(md) {
 			position: relative;
 			flex-flow: column nowrap;
@@ -23,38 +25,46 @@
 			height: 100%;
 			top: 0
 		}
+
 		&--personally {
 			top: auto;
 			height: calc(100vh - vw(00));
 			position: relative;
 			flex-flow: column nowrap;
 			width: 100%;
+
 			@include max(md) {
 				height: 100%;
 			}
+
 			.footer__menu {
 				height: calc(100vh - vw(00));
 				padding-top: vw(96);
+
 				@include max(md) {
 					padding: vw2(20);
 					height: 100%;
 				}
 			}
+
 			.footer__logo {
 				top: vw(100);
 			}
-			.footer__title{
+
+			.footer__title {
 				top: calc(50% - vw(135));
 			}
 		}
 	}
-	&__title{
+
+	&__title {
 		position: absolute;
 		top: calc(50% - vw(170));
 		left: 50%;
 		white-space: nowrap;
 		z-index: 10;
 		color: rgba(255, 255, 255, 0.2);
+
 		@include max(md) {
 			position: relative;
 			top: auto;
@@ -65,13 +75,14 @@
 			font-size: vw2(50);
 			font-style: normal;
 			font-weight: 500;
-			line-height: 1.2; 
+			line-height: 1.2;
 			margin-bottom: vw2(40);
 			margin-right: vw2(20);
 			margin-left: vw2(20);
 			margin-top: vw2(40);
 		}
 	}
+
 	&__menu {
 		position: absolute;
 		top: 0;
@@ -86,21 +97,26 @@
 		padding-bottom: vw(25);
 		background: #fff;
 		z-index: 900;
+		z-index: 90;
 		overflow-y: auto;
 		scrollbar-width: thin;
-        scrollbar-color: #99c4d3 rgba(0, 0, 0, 0);
-        &::-webkit-scrollbar {
-            height: 2px;
-            width: 2px;
-        }
-        &::-webkit-scrollbar-track {
-            background: rgba(0, 0, 0, 0);
-        }
-        &::-webkit-scrollbar-thumb {
-            background-color: #99c4d3;
-            border-radius: 10px;
-            border: none;
-        }
+		scrollbar-color: #99c4d3 rgba(0, 0, 0, 0);
+
+		&::-webkit-scrollbar {
+			height: 2px;
+			width: 2px;
+		}
+
+		&::-webkit-scrollbar-track {
+			background: rgba(0, 0, 0, 0);
+		}
+
+		&::-webkit-scrollbar-thumb {
+			background-color: #99c4d3;
+			border-radius: 10px;
+			border: none;
+		}
+
 		@include max(md) {
 			position: relative;
 			right: auto;
@@ -111,6 +127,7 @@
 			height: 100%;
 			background: transparent;
 		}
+
 		&__list {
 			position: relative;
 			display: flex;
@@ -122,6 +139,7 @@
 			padding-top: vw(26);
 			margin-bottom: vw(30);
 			list-style-type: none;
+
 			&__item {
 				position: relative;
 				display: flex;
@@ -134,12 +152,14 @@
 				line-height: normal;
 				text-transform: uppercase;
 				margin-bottom: vw(19);
+
 				@include max(md) {
 					font-size: vw2(24);
 					line-height: 1.2;
 					color: #fff;
 					gap: vw2(5);
 				}
+
 				a {
 					position: relative;
 					text-decoration: none;
@@ -151,18 +171,21 @@
 					text-transform: uppercase;
 					transition: all $tr-time-fast;
 					cursor: pointer;
+
 					@include max(md) {
 						font-size: vw2(24);
 						line-height: 1.2;
 						color: #fff;
 						font-weight: 400;
 					}
+
 					&:hover {
 						transition: all $tr-time-fast;
-						color:$blueHover;
+						color: $blueHover;
 					}
-										
+
 				}
+
 				span {
 					position: relative;
 					color: #07171D;
@@ -171,25 +194,28 @@
 					font-weight: 600;
 					line-height: normal;
 					text-transform: uppercase;
+
 					@include max(md) {
 						font-size: vw2(24);
 						line-height: 1.2;
 						color: #fff;
 						font-weight: 400;
-					}						
+					}
 				}
 			}
+
 			&__title {
 				position: absolute;
 				top: vw(26);
 				right: vw(0);
-				color:rgba(7, 23, 29, 0.2);
+				color: rgba(7, 23, 29, 0.2);
 				font-size: vw(14);
 				font-style: normal;
 				font-weight: 600;
 				line-height: normal;
 				text-transform: uppercase;
 				margin-bottom: vw(19);
+
 				@include max(md) {
 					position: relative;
 					top: auto;
@@ -199,49 +225,60 @@
 					line-height: 1.2;
 					color: rgba(255, 255, 255, 0.2);
 					margin-bottom: vw2(20);
-				}			
+				}
 			}
 		}
+
 		&__social {
 			display: flex;
 			align-items: center;
 			margin-top: vw(30);
 			gap: vw(18);
 			flex-shrink: 0;
+
 			@include max(md) {
 				gap: vw2(18);
 				margin-top: vw2(30);
 			}
+
 			.new-btn {
 				width: vwf(20);
 				height: vwf(20);
+
 				@include max(md) {
 					width: vw2(30);
 					height: vw2(30);
 				}
+
 				&__icon {
 					width: vwf(20);
 					height: vwf(20);
+
 					@include max(md) {
 						width: vw2(30);
 						height: vw2(30);
 					}
 				}
+
 				svg {
 					width: 100%;
 					height: 100%;
+
 					@include max(md) {
 						width: 100%;
 						height: 100%;
 					}
+
 					use {
 						fill: $fontBlack;
 						stroke: none;
+
 						@include max(md) {
 							fill: $white;
 						}
 					}
 				}
+
 				&:hover {
 					svg {
 						use {
@@ -252,6 +289,7 @@
 				}
 			}
 		}
+
 		/*&__contacts {
 			margin-top: auto;
 			&.footer-contacts {
@@ -335,11 +373,13 @@
 			}
 		}*/
 	}
+
 	&__btn {
 		position: absolute;
 		bottom: vw(33);
 		left: vwf(25);
-		z-index:  20;
+		z-index: 20;
+
 		@include max(md) {
 			position: relative;
 			top: auto;
@@ -350,35 +390,40 @@
 			margin-left: vw2(20);
 		}
 	}
-	&__logo  {
+
+	&__logo {
 		position: absolute;
 		top: vw(30);
 		left: vwf(25);
 		display: none;
 		width: vw(153);
+
 		@include max(md) {
 			position: relative;
 			margin-bottom: vw2(60);
 			top: vw2(20);
 			left: vw2(20);
 			width: vw2(220);
-	}
+		}
+
 		img {
 			position: relative;
 			display: block;
 			width: 100%;
 		}
 	}
+
 	&__agreement {
 		position: absolute;
 		bottom: vw(33);
 		right: vw(503);
-		z-index:  20;
+		z-index: 20;
 		display: flex;
 		flex-flow: column nowrap;
 		justify-content: flex-start;
 		align-items: flex-end;
 		text-align: right;
+
 		@include max(md) {
 			position: relative;
 			top: auto;
@@ -391,19 +436,24 @@
 			margin-top: vw2(40);
 			margin-bottom: vw2(40);
 		}
+
 		&__date {
 			color: rgba(255, 255, 255, 0.2);
 			margin-bottom: vw(14);
+
 			@include max(md) {
 				margin-bottom: vw2(10);
 				text-align: center;
 			}
 		}
+
 		&__text {
 			transition: all $tr-time-fast;
+
 			@include max(md) {
 				text-align: center;
 			}
+
 			&:hover {
 				transition: all $tr-time-fast;
 				color: $blueHover;

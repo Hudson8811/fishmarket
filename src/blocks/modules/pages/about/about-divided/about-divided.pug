@@ -31,4 +31,4 @@ mixin ap-divided(props = defaultApDividedProps)
             .ap-divided__btns
                 +new-btn(checkProps.btns[0])
                 if (checkProps.btns[1])
-                    +new-btn(checkProps.btns[1])
+                    +new-btn(checkProps.btns[1])(data-fancybox="")
