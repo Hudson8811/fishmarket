@@ -159,5 +159,7 @@ mixin l-map(props = defaultLMapProps)
                                 .map-address__text 8 800 000-00-00
                                 .map-address__text info@fish.ru   
                                 .map-address__text Самовывоз: 8:30–17:00             
-
-        .l-map__map(data-js="lMap")
+        - if(!checkProps.controls) 
+            .l-map__map(data-js="lMap" data-coords="55.633871, 37.453720")
+        - else
+            .l-map__map(data-js="lMap")

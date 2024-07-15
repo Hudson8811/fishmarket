@@ -20,9 +20,10 @@ function lMapInit() {
                 })
             })
         } else {
+            const mapCoords = document.querySelector(['[data-js="lMap"]']).dataset.coords.split(",")
             placemarks.push({
                 id: "moscowOffice1",
-                coords: [55.633871, 37.453720]
+                coords: mapCoords
             })
         }
 
@@ -37,7 +38,7 @@ function lMapInit() {
         placemarks.forEach((placemark) => {
             let myPlacemark = new ymaps.Placemark(placemark.coords,{},{
                 iconLayout: 'default#image',
-                iconImageHref: '../img/svg/predstvo_act.svg',
+                iconImageHref: './img/svg/predstvo_act.svg',
                 iconImageSize: [30, 36],
                 iconImageOffset: [-15, -18]
             });

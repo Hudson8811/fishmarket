@@ -13,7 +13,7 @@ function MapInit() {
 			});
 			myPlacemark2 = new ymaps.Placemark(startCoords,{},{
 					iconLayout: 'default#image',
-					iconImageHref: '/img/svg/predstvo_act.svg',
+					iconImageHref: './img/svg/predstvo_act.svg',
 					iconImageSize: [30, 36],
 					iconImageOffset: [-15, -18]
 			});

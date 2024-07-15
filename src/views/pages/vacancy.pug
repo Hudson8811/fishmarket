@@ -2,100 +2,100 @@ extends ../layouts/default
 include ../helpers/mixins
 
 block variables
-	- const title = "Vacancy Page"
+    - const title = "Vacancy Page"
 
 
 block content
-	include ../../blocks/components/breadcrumbs/breadcrumbs.pug
+    include ../../blocks/components/breadcrumbs/breadcrumbs.pug
 
-	.scroll-page
-		.section.section--first.section__white.vacancy__section
-			.container
-				+breadcrumbs({
-					classes: 'vacancy__breadcrumbs',
-					items: [
-						{
-							name: 'Главная',
-							link: '#'
-						},
-						{
-							name: 'Вакансии',
-							link: '#'
-						},
-						{
-							name: 'Сортировщик',
-							link: '#'
-						}
-					]
-				})
-				.layout.layout-sticky
-					.layout__col
-						.vacancy
-							.vacancy__title.title__52
-								h1 Менеджер по продажам
-							.vacancy__description
-								.vacancy__cost.title__24 от 100 000 ₽ на руки
-								.vacancy__location
-									.vacancy__location__icon 
-										svg
-											use(xlink:href=`img/sprites/sprite.svg#header_position`)
-									.vacancy__location__text.text__18 Москва
-								.vacancy__row 
-									.vacancy__experience
-										.vacancy__experience__title.text__12 Опыт работы:
-										.vacancy__experience__text.text__18 не требуется
-									.vacancy__schedule
-										.vacancy__schedule__title.text__12 График работы:
-										.vacancy__schedule__text.text__18 понедельник- пятница с 9:00 до 18:00
-								.vacancy__list.text-block
-									h4 Обязанности
-									ul 
-										li Выстраивание долгосрочных отношений с клиентами
-										li Развитие активной клиентской базы: работа с действующими и поиск новых клиентов (действенные инструменты есть!)
-										li Проводить переговоры на уровне первых лиц компании
-										li Обеспечивать полный цикл работы с клиентами
-										li Вести отчетность в CRM системе и внутренний документооборот
-									h4 Требования:
-									ul 
-										li Высокий уровень самоорганизации и нацеленность на результат
-										li Практический опыт продаж приветствуется
-										li Навыки в поиске и привлечении новых клиентов приветствуется
-										li Навыки работы в CRM приветствуется (1С, Битрикс 24)
-										li Личные качества: отличные коммуникативные навыки (устные и письменные)
-									h4 Условия:
-									ul 
-										li Высокий уровень самоорганизации и нацеленность на результат
-										li Практический опыт продаж приветствуется
-										li Навыки в поиске и привлечении новых клиентов приветствуется
-										li Навыки работы в CRM приветствуется (1С, Битрикс 24)
-										li Личные качества: отличные коммуникативные навыки (устные и письменные)
-								.vacancy__skills
-									.vacancy__skills__title.title__24 Ключевые навыки
-									.vacancy__skills__list
-										.vacancy__skills__list__item.text__18 Активные продажи
-										.vacancy__skills__list__item.text__18 Поиск и привлечение клиентов
-										.vacancy__skills__list__item.text__18 Деловое общение
-										.vacancy__skills__list__item.text__18 Стрессоустойчивость
-										.vacancy__skills__list__item.text__18 Коммуникабельность
-										.vacancy__skills__list__item.text__18 Работа с большим объемом информации
-								.vacancy__contacts
-									.vacancy__contacts__title.title__24 Контактная информация:
-									a(href="tel:+88000000000").vacancy__contacts__link.text__18  тел.: 8 800 000-00-00
-									a(href="mailto:").vacancy__contacts__link.text__18 e-mail: info@skyfish.ru
-								.vacancy__adress 
-									.vacancy__adress__title.title__24 Адрес: 
-									.vacancy__adress__text.text__18 Москва, Новомосковский административный округ, Киевское шоссе, 21-й километр, 3с1
+    .scroll-page
+        .section.section--first.section__white.vacancy__section
+            .container
+                +breadcrumbs({
+                    classes: 'vacancy__breadcrumbs',
+                    items: [
+                        {
+                            name: 'Главная',
+                            link: '#'
+                        },
+                        {
+                            name: 'Вакансии',
+                            link: '#'
+                        },
+                        {
+                            name: 'Сортировщик',
+                            link: '#'
+                        }
+                    ]
+                })
+                .layout.layout-sticky
+                    .layout__col
+                        .vacancy
+                            .vacancy__title.title__52
+                                h1 Менеджер по продажам
+                            .vacancy__description
+                                .vacancy__cost.title__24 от 100 000 ₽ на руки
+                                .vacancy__location
+                                    .vacancy__location__icon 
+                                        svg
+                                            use(xlink:href=`img/sprites/sprite.svg#header_position`)
+                                    .vacancy__location__text.text__18 Москва
+                                .vacancy__row 
+                                    .vacancy__experience
+                                        .vacancy__experience__title.text__12 Опыт работы:
+                                        .vacancy__experience__text.text__18 не требуется
+                                    .vacancy__schedule
+                                        .vacancy__schedule__title.text__12 График работы:
+                                        .vacancy__schedule__text.text__18 понедельник- пятница с 9:00 до 18:00
+                                .vacancy__list.text-block
+                                    h4 Обязанности
+                                    ul 
+                                        li Выстраивание долгосрочных отношений с клиентами
+                                        li Развитие активной клиентской базы: работа с действующими и поиск новых клиентов (действенные инструменты есть!)
+                                        li Проводить переговоры на уровне первых лиц компании
+                                        li Обеспечивать полный цикл работы с клиентами
+                                        li Вести отчетность в CRM системе и внутренний документооборот
+                                    h4 Требования:
+                                    ul 
+                                        li Высокий уровень самоорганизации и нацеленность на результат
+                                        li Практический опыт продаж приветствуется
+                                        li Навыки в поиске и привлечении новых клиентов приветствуется
+                                        li Навыки работы в CRM приветствуется (1С, Битрикс 24)
+                                        li Личные качества: отличные коммуникативные навыки (устные и письменные)
+                                    h4 Условия:
+                                    ul 
+                                        li Высокий уровень самоорганизации и нацеленность на результат
+                                        li Практический опыт продаж приветствуется
+                                        li Навыки в поиске и привлечении новых клиентов приветствуется
+                                        li Навыки работы в CRM приветствуется (1С, Битрикс 24)
+                                        li Личные качества: отличные коммуникативные навыки (устные и письменные)
+                                .vacancy__skills
+                                    .vacancy__skills__title.title__24 Ключевые навыки
+                                    .vacancy__skills__list
+                                        .vacancy__skills__list__item.text__18 Активные продажи
+                                        .vacancy__skills__list__item.text__18 Поиск и привлечение клиентов
+                                        .vacancy__skills__list__item.text__18 Деловое общение
+                                        .vacancy__skills__list__item.text__18 Стрессоустойчивость
+                                        .vacancy__skills__list__item.text__18 Коммуникабельность
+                                        .vacancy__skills__list__item.text__18 Работа с большим объемом информации
+                                .vacancy__contacts
+                                    .vacancy__contacts__title.title__24 Контактная информация:
+                                    a(href="tel:+88000000000").vacancy__contacts__link.text__18  тел.: 8 800 000-00-00
+                                    a(href="mailto:").vacancy__contacts__link.text__18 e-mail: info@skyfish.ru
+                                .vacancy__adress 
+                                    .vacancy__adress__title.title__24 Адрес: 
+                                    .vacancy__adress__text.text__18 Москва, Новомосковский административный округ, Киевское шоссе, 21-й километр, 3с1
 
-					.layout__col.layout-sticky__block
-						.phone-call
-							.phone-call__title.title__32 
-								!="ИЩИТЕ РАБОТУ? <br>ПРИСЫЛАЙТЕ РЕЗЮМЕ"
-							a(href="#").btn--box.phone-call__btn.js-phone-call__btn.js-pop-up__button--command
-								.btn.btn--circle
-									svg
-										use(xlink:href=`img/sprites/sprite.svg#arrow_btn`)
-								.btn--box__text ОТКЛИКНУТЬСЯ
-		.contacts__map
-			#js-map.contacts__map__item(data-coords="55.672925, 37.625181")
+                    .layout__col.layout-sticky__block
+                        .phone-call
+                            .phone-call__title.title__32 
+                                !="ИЩИТЕ РАБОТУ? <br>ПРИСЫЛАЙТЕ РЕЗЮМЕ"
+                            a(href="#").btn--box.phone-call__btn.js-phone-call__btn.js-pop-up__button--command
+                                .btn.btn--circle
+                                    svg
+                                        use(xlink:href=`img/sprites/sprite.svg#arrow_btn`)
+                                .btn--box__text ОТКЛИКНУТЬСЯ
+        .contacts__map
+            #js-map.contacts__map__item(data-coords="55.672925, 37.625181")
 
-		include ../../blocks/modules/footer/footer
+        include ../../blocks/modules/footer/footer
