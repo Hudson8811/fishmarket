@@ -1,9 +1,13 @@
-.site-main, .about-page, .ap-header, .ap-footer {
+.site-main,
+.about-page,
+.ap-header,
+.ap-footer {
     .input {
         display: block;
         width: 100%;
-        border-bottom: vw(1) solid rgba(0,0,0,0.2);
+        border-bottom: vw(1) solid rgba(0, 0, 0, 0.2);
         padding: 0 0 vw(15);
+
         &__input {
             width: 100%;
             padding: 0;
@@ -14,23 +18,37 @@
             font-size: vw(18);
             line-height: 1.4;
             font-weight: 400;
+
+            @include max(md) {
+                font-size: vw2(18);
+            }
+
             &::-webkit-input-placeholder {
                 color: inherit;
             }
+
             &::-moz-placeholder {
-               color: inherit;
-               opacity: 1;
+                color: inherit;
+                opacity: 1;
             }
+
             &::-ms-input-placeholder {
-               color: inherit;
+                color: inherit;
             }
+
             &::placeholder {
-               color: inherit;
+                color: inherit;
             }
         }
+
         &._invalid {
             position: relative;
             border-bottom: vw(3) solid $red;
+
+            @include max(md) {
+                border-bottom: vw2(3) solid $red;
+            }
+
             &::after {
                 content: '';
                 position: absolute;
@@ -40,6 +58,12 @@
                 width: vw(10);
                 height: vw(10);
                 border-radius: 100%;
+
+                @include max(md) {
+                    bottom: vw2(23);
+                    width: vw2(10);
+                    height: vw2(10);
+                }
             }
         }
     }
@@ -50,7 +74,12 @@
             gap: vw(12);
             align-items: flex-start;
             cursor: pointer;
+
+            @include max(md) {
+                gap: vw2(12);
+            }
         }
+
         .input__input {
             position: relative;
             left: 0;
@@ -60,6 +89,7 @@
             opacity: 0;
             z-index: -10;
         }
+
         .input__fake {
             flex-basis: vw(28);
             flex-shrink: 0;
@@ -67,9 +97,17 @@
             position: relative;
             width: vw(28);
             height: vw(28);
-            border: 1px solid rgba(0,0,0,0.2);
+            border: 1px solid rgba(0, 0, 0, 0.2);
             border-radius: vw(4);
-            &::after{ 
+
+            @include max(md) {
+                flex-basis: vw2(28);
+                width: vw2(28);
+                height: vw2(28);
+                border-radius: vw2(4);
+            }
+
+            &::after {
                 content: "";
                 position: absolute;
                 width: vw(16);
@@ -81,19 +119,32 @@
                 background-color: $blueLight;
                 border-radius: vw(2);
                 opacity: 0;
+
+                @include max(md) {
+                    width: vw2(16);
+                    height: vw2(16);
+                    border-radius: vw2(2);
+                }
             }
+
             &:hover {
                 border-color: $blueLight;
             }
         }
-        .input__input:checked + .input__fake::after {
+
+        .input__input:checked+.input__fake::after {
             opacity: 1;
         }
+
         .input__text {
             font-size: vw(18);
             font-weight: 400;
             line-height: 1.399;
             color: $fontBlack;
+
+            @include max(md) {
+                font-size: vw2(18);
+            }
         }
     }
 }

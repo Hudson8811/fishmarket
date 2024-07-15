@@ -1395,6 +1395,12 @@
 	}
 }
 
+.header--small .mob-menu__question__section {
+	@include min(md) {
+		top: vw(0);
+	}
+}
+
 .mob-menu {
 	position: relative;
 	display: flex;
@@ -2185,10 +2191,11 @@
 	}
 }
 
+/*
 .header--small .mob-menu__section.mob-menu__section--login,
 .header--small .mob-menu__question.mob-menu__question--login {
 	height: calc(100vh - vw(70));
-}
+}*/
 
 .mob-menu__question.mob-menu__question--login {
 	@include max(md) {
