@@ -1,3 +1,13 @@
+window.imageFolderPath='../';
+if(!document.location.href.includes('localhost')){
+    if(document.location.href.includes('github')){
+
+    }
+    else{
+        window.imageFolderPath='/local/templates/skyfish/';
+    }
+}
+
 //libs
 @@include("./libs/jquery-3.7.0.min.js")
 @@include("./libs/jquery.fancybox.min.js")

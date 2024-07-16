@@ -13,11 +13,11 @@ function MapInit() {
 			});
 			myPlacemark2 = new ymaps.Placemark(startCoords,{},{
 					iconLayout: 'default#image',
-					iconImageHref: './img/svg/predstvo_act.svg',
+					iconImageHref: window.imageFolderPath+'img/svg/predstvo_act.svg',
 					iconImageSize: [30, 36],
 					iconImageOffset: [-15, -18]
 			});
-	
+
 			// Добавляем метку на карту.
 			map.geoObjects.add(myPlacemark2);
 			$(".contacts__office").on("click", function () {
@@ -31,27 +31,27 @@ function MapInit() {
 					var xy = a.split(',');
 					var x = parseFloat(xy[0]);
 					var y = parseFloat(xy[1]);
-		
-		
-					
+
+
+
 					myPlacemark2 = new ymaps.Placemark([x, y],{},{
 							iconLayout: 'default#image',
-							iconImageHref: '../img/svg/predstvo_act.svg',
+							iconImageHref: indow.imageFolderPath+'img/svg/predstvo_act.svg',
 							iconImageSize: [26, 26],
 							iconImageOffset: [-13, -13]
 					});
-		
+
 					// Добавляем метку на карту.
 					map.geoObjects.add(myPlacemark2);
 					map.setCenter([x, y]);
-		
-			}) 
+
+			})
 		})
-	
-	}	
+
+	}
 }
 	MapInit()
-	
+
 //map
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -151,7 +151,7 @@ document.addEventListener("DOMContentLoaded", () => {
 				});
 			}
 		};
-		
+
 		content.addEventListener("transitionend", transitionEndHandler);
 	});
 
@@ -198,7 +198,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 						let activeRadioGroupName = e.target.getAttribute('data-group-item');
 						let radioGroupBlocks = radioTabsGroup.querySelectorAll('[data-group-block]');
-	
+
 						radioGroupBlocks.forEach(radioGroupBlock => {
 							radioGroupBlock.classList.remove('active');
 							let radioGroupBlockFields = radioGroupBlock.querySelectorAll('.contacts__form__input-block.input');
@@ -210,10 +210,10 @@ document.addEventListener("DOMContentLoaded", () => {
 								})
 							}
 						})
-	
+
 						if(activeRadioGroupName) {
 							let radioGroupTargetBlock = radioTabsGroup.querySelector(`[data-group-block=${activeRadioGroupName}]`)
-	
+
 							if(radioGroupTargetBlock) {
 								radioGroupTargetBlock.classList.add('active')
 								let radioGroupTargetBlockFields = radioGroupTargetBlock.querySelectorAll('.contacts__form__input-block.input');
@@ -225,7 +225,7 @@ document.addEventListener("DOMContentLoaded", () => {
 								}
 							}
 						}
-						
+
 					}
 					activeRadioGroupItem = radioTabsGroup.querySelector('input:checked');
 				})

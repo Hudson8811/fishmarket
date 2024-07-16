@@ -8,7 +8,8 @@
 document.addEventListener("DOMContentLoaded", () => {
     amountInput();
     sliderPhotoInit();
-    vacancySearchInit();
+    //Переношу в бек и допиливаю там. Тут неудобно
+    //vacancySearchInit();
     inputRangeInit();
 
     //modals

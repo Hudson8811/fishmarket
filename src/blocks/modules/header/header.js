@@ -23,7 +23,7 @@ let mobMenuCitySelect = document.querySelector(".js-mob-menu__city__select");
 let mobMenuQuestion = document.querySelector(".js-mob-menu__section__question");
 let mobMenuQuestionClose = document.querySelector(".mob-menu__question__top__close");
 let mobMenuQuestionOverlay = document.querySelector(".js-mob-menu__question--overlay");
-let buttonQuestions = document.querySelectorAll(".js-button__question");
+let buttonQuestions = document.querySelectorAll('.js-button__question, a[href="#js-button__question"]');
 let humb = document.querySelector(".js-hamburger");
 let searchBtn = document.querySelector(".js-search__btn");
 let search = document.querySelector(".search");
@@ -35,21 +35,21 @@ let searchClears = document.querySelectorAll("[data-js='searchClear']");
     var tabNavs = navs;
     var tabPanes = panes;
     if(tabNavs !==null & tabPanes !==null) {
-      tabClick() 
+      tabClick()
     }
     function tabClick() {
       for (var i = 0; i < tabNavs.length; i++) {
-  
+
         tabNavs[i].addEventListener("click", function(e){
           e.preventDefault();
           var activeTabAttr = e.target.getAttribute("data-tab");
-    
+
           for (var j = 0; j < tabNavs.length; j++) {
             var contentAttr = tabPanes[j].getAttribute("data-tab-content");
-    
+
             if (activeTabAttr === contentAttr) {
               tabNavs[j].classList.add("active");
-              tabPanes[j].classList.add("active"); 
+              tabPanes[j].classList.add("active");
             } else {
               tabNavs[j].classList.remove("active");
               tabPanes[j].classList.remove("active");
@@ -110,7 +110,7 @@ if(registrationAreaSlider) {
 
 if( loginButtons.length > 0 && registerButton !== null) {
 
-  
+
   loginButtons.forEach(loginButton =>  {
     loginButton.addEventListener("click", function () {
       loginRegisterSlider.swiper.slideTo(0);
@@ -142,7 +142,7 @@ if( loginButtons.length > 0 && registerButton !== null) {
 let sectionCommand = document.querySelector(".js-pop-up__command");
 let sectionCommandOverlay = document.querySelector(".js-pop-up__command--overlay");
 let sectionCommandClose = document.querySelector(".js-pop-up__command--close");
-let sectionCommandButtons = document.querySelectorAll(".js-pop-up__button--command");
+let sectionCommandButtons = document.querySelectorAll('.js-pop-up__button--command, a[href="#js-pop-up__button--command"]');
 
 if( sectionCommandButtons.length > 0) {
 
@@ -187,11 +187,11 @@ if(sectionThanksButton !== null) {
 }
 
 //Pop-up thanks
-$(document).mouseup(function (e){ 
+$(document).mouseup(function (e){
   var search = $(".header__other__search");
-  if (!search.is(e.target) 
-      && search.has(e.target).length === 0) { 
-        search.children(".header__other__search__input").removeClass("active"); 
+  if (!search.is(e.target)
+      && search.has(e.target).length === 0) {
+        search.children(".header__other__search__input").removeClass("active");
   }
 });
 searchBtn.addEventListener("click", function () {
@@ -237,7 +237,7 @@ mobMenuCityOk.addEventListener("click", function () {
 });
 buttonQuestions.forEach(buttonQuestion => {
   buttonQuestion.addEventListener("click", function (e) {
-    
+
     e.preventDefault()
     e.stopPropagation()
 
@@ -268,11 +268,11 @@ overlayBg.addEventListener("mousemove", function () {
 
 //input file
 var dt = new DataTransfer();
- 
+
 $('.input-file input[type=file]').on('change', function(){
 	let $files_list = $(this).closest('.input-file').next();
 	$files_list.empty();
- 
+
 	for(var i = 0; i < this.files.length; i++){
 		let new_file_input = '<div class="input-file-list-item">' +
 			'<span class="input-file-list-name">' + this.files.item(i).name + '</span>' +
@@ -283,17 +283,17 @@ $('.input-file input[type=file]').on('change', function(){
 	};
 	this.files = dt.files;
 });
- 
+
 function removeFilesItem(target){
 	let name = $(target).prev().text();
-	let input = $(target).closest('.input-file-row').find('input[type=file]');	
-	$(target).closest('.input-file-list-item').remove();	
+	let input = $(target).closest('.input-file-row').find('input[type=file]');
+	$(target).closest('.input-file-list-item').remove();
 	for(let i = 0; i < dt.items.length; i++){
 		if(name === dt.items[i].getAsFile().name){
 			dt.items.remove(i);
 		}
 	}
-	input[0].files = dt.files;  
+	input[0].files = dt.files;
 }
 
 

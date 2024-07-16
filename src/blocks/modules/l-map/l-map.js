@@ -38,7 +38,7 @@ function lMapInit() {
         placemarks.forEach((placemark) => {
             let myPlacemark = new ymaps.Placemark(placemark.coords,{},{
                 iconLayout: 'default#image',
-                iconImageHref: './img/svg/predstvo_act.svg',
+                iconImageHref: indow.imageFolderPath+'img/svg/predstvo_act.svg',
                 iconImageSize: [30, 36],
                 iconImageOffset: [-15, -18]
             });
@@ -51,21 +51,21 @@ function lMapInit() {
             if(cities) {
                 const cityBtnArr = cities.querySelectorAll(".l-map__city");
                 const addressesBlocksArr = document.querySelectorAll('[data-js="lMapAddresses"]');
-    
+
                 cities.addEventListener('click', (e)=> {
                     let targetBtn = e.target.closest('.l-map__city');
                     let targetCity = targetBtn.dataset.city;
                     let targetCityCoords = placemarks.find(placemark => placemark.id === targetCity + 'Office1').coords;
-                    
+
                     cityBtnArr.forEach(item => {
                         item.classList.remove("active")
                     })
-    
+
                     targetBtn.classList.add("active");
                     lMapEx.setCenter(targetCityCoords, 13, {
                         duration: 1000
                     })
-    
+
                     addressesBlocksArr.forEach(item => {
                         item.classList.remove("active")
                         if(item.dataset.city == targetCity) {
@@ -86,7 +86,7 @@ function lMapInit() {
                     lMapEx.setCenter(targetAddressCoords, 13, {
                         duration: 500
                     })
-                    
+
                     innerAddresses.forEach(function(innerAddress) {
                         innerAddress.classList.remove("active");
                         if(innerAddress.dataset.id == targetId) {
