@@ -7,9 +7,15 @@
     margin-left: auto;
     margin-right: auto;
     gap: vw(11);
+
+    @include max(xl) {
+        gap: vwf(11);
+    }
+
     @include max(md) {
         gap: vw2(11);
     }
+
     &__page {
         display: flex;
         align-items: center;
@@ -22,30 +28,54 @@
         font-size: vw(24);
         font-weight: 600;
         line-height: 1.2;
-        transition: $tr-time-fast; 
+        transition: $tr-time-fast;
+
+        @include max(xl) {
+            width: vwf(75);
+            height: vwf(75);
+            font-size: vwf(24);
+        }
+
         @include max(md) {
             width: vw2(50);
             height: vw2(50);
             font-size: vw2(16);
         }
-        &.active, &:hover {
+
+        &.active,
+        &:hover {
             background-color: $blueHover;
             color: $white;
             border-color: $blueHover;
         }
     }
+
     &__btn {
         border: 1px solid $greyLight;
         width: vw(75);
         height: vw(75);
         border-radius: 0;
+
+        @include max(xl) {
+            width: vwf(75);
+            height: vwf(75);
+        }
+
         @include max(md) {
             width: vw2(50);
             height: vw2(50);
         }
-        .new-btn__icon, svg {
+
+        .new-btn__icon,
+        svg {
             width: vw(75);
             height: vw(75);
+
+            @include max(xl) {
+                width: vwf(75);
+                height: vwf(75);
+            }
+
             @include max(md) {
                 width: vw2(50);
                 height: vw2(50);

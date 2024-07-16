@@ -1,5 +1,10 @@
 .career-purpose {
     padding: vw(25) 0;
+
+    @include max(xl) {
+        padding: vwf(25) 0;
+    }
+
     @include max(md) {
         padding: vw2(40) 0;
     }
@@ -7,6 +12,7 @@
     &__container {
         display: flex;
         justify-content: space-between;
+
         @include max(md) {
             flex-direction: column;
         }
@@ -14,6 +20,11 @@
 
     &__left {
         flex-basis: vw(1013);
+
+        @include max(xl) {
+            flex-basis: vwf(1013);
+        }
+
         @include max(md) {
             flex-basis: auto;
         }
@@ -21,10 +32,19 @@
 
     &__title {
         font-size: vw(72);
+
+        @include max(xl) {
+            font-size: vwf(72);
+        }
     }
 
     &__right {
         flex-basis: vw(614);
+
+        @include max(xl) {
+            flex-basis: vwf(614);
+        }
+
         @include max(md) {
             flex-basis: auto;
         }
@@ -33,10 +53,16 @@
     &__img {
         width: 100%;
         height: vw(403);
+
+        @include max(xl) {
+            height: vwf(403);
+        }
+
         @include max(md) {
             height: vw2(350);
             margin-top: vw2(30);
         }
+
         img {
             width: 100%;
             height: 100%;
@@ -52,6 +78,13 @@
         line-height: 1;
         letter-spacing: -0.03em;
         color: $fontBlack;
+
+        @include max(xl) {
+            margin-top: vwf(27);
+            max-width: vwf(422);
+            font-size: vwf(32);
+        }
+
         @include max(md) {
             margin-top: vw2(30);
             max-width: 100%;

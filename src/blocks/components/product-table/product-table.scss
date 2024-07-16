@@ -9,19 +9,29 @@
         line-height: 1.25;
         text-transform: uppercase;
         color: $black;
+
+        @include max(xl) {
+            gap: vwf(10);
+            padding: vwf(3) vwf(18);
+            font-size: vwf(14);
+        }
+
         @include max(md) {
             padding: vw2(3) vw2(18);
             font-size: vw2(14);
             gap: vw2(10);
-        } 
+        }
     }
+
     &__param {
         opacity: 0.4;
     }
+
     &__value {
         text-align: right;
     }
 }
+
 .product-table__row:nth-child(odd) {
     background-color: $greyBg;
 }

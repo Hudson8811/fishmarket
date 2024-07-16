@@ -19,6 +19,10 @@
             line-height: 1.4;
             font-weight: 400;
 
+            @include max(xl) {
+                font-size: vwf(18);
+            }
+
             @include max(md) {
                 font-size: vw2(18);
             }
@@ -45,6 +49,10 @@
             position: relative;
             border-bottom: vw(3) solid $red;
 
+            @include max(xl) {
+                border-bottom: vwf(3) solid $red;
+            }
+
             @include max(md) {
                 border-bottom: vw2(3) solid $red;
             }
@@ -58,6 +66,12 @@
                 width: vw(10);
                 height: vw(10);
                 border-radius: 100%;
+
+                @include max(xl) {
+                    bottom: vwf(23);
+                    width: vwf(10);
+                    height: vwf(10);
+                }
 
                 @include max(md) {
                     bottom: vw2(23);
@@ -74,6 +88,10 @@
             gap: vw(12);
             align-items: flex-start;
             cursor: pointer;
+
+            @include max(xl) {
+                gap: vwf(12);
+            }
 
             @include max(md) {
                 gap: vw2(12);
@@ -100,6 +118,13 @@
             border: 1px solid rgba(0, 0, 0, 0.2);
             border-radius: vw(4);
 
+            @include max(xl) {
+                flex-basis: vwf(28);
+                width: vwf(28);
+                height: vwf(28);
+                border-radius: vwf(4);
+            }
+
             @include max(md) {
                 flex-basis: vw2(28);
                 width: vw2(28);
@@ -119,6 +144,12 @@
                 background-color: $blueLight;
                 border-radius: vw(2);
                 opacity: 0;
+
+                @include max(xl) {
+                    width: vwf(16);
+                    height: vwf(16);
+                    border-radius: vwf(2);
+                }
 
                 @include max(md) {
                     width: vw2(16);
@@ -141,6 +172,10 @@
             font-weight: 400;
             line-height: 1.399;
             color: $fontBlack;
+
+            @include max(xl) {
+                font-size: vwf(18);
+            }
 
             @include max(md) {
                 font-size: vw2(18);

@@ -24,6 +24,10 @@
 			scrollbar-width: thin;
 			scrollbar-color: #99c4d3 rgba(0, 0, 0, 0);
 
+			@include max(xl) {
+				padding: 0 vwf(29);
+			}
+
 			@include max(md) {
 				padding: 0 vw2(29);
 			}
@@ -50,6 +54,11 @@
 			font-weight: 500;
 			line-height: 1, 06em;
 
+			@include max(xl) {
+				margin-bottom: vwf(30);
+				font-size: vwf(32);
+			}
+
 			@include max(md) {
 				margin-bottom: vw2(30);
 				font-size: vw2(32);
@@ -70,6 +79,10 @@
 			flex-direction: column;
 			gap: vw(8);
 
+			@include max(xl) {
+				gap: vwf(8);
+			}
+
 			@include max(md) {
 				gap: vw2(8);
 			}
@@ -81,6 +94,10 @@
 			align-items: center;
 			font-size: vw(18);
 			font-weight: 400;
+
+			@include max(xl) {
+				font-size: vwf(18);
+			}
 
 			@include max(md) {
 				font-size: vw2(18);
@@ -103,6 +120,11 @@
 			font-size: vw(20);
 			font-weight: 700;
 			margin-top: vw(12);
+
+			@include max(xl) {
+				font-size: vwf(20);
+				margin-top: vwf(12);
+			}
 
 			@include max(md) {
 				font-size: vw2(20);

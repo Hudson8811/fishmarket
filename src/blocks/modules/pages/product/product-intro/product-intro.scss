@@ -1,77 +1,131 @@
 .product-intro {
     padding-top: vw(110);
     padding-bottom: vw(40);
+
+    @include max(xl) {
+        padding-top: vwf(110);
+        padding-bottom: vwf(40);
+    }
+
     @include max(md) {
         padding-top: vw2(90);
         padding-bottom: vw2(40);
     }
+
     &__content {
         display: flex;
         justify-content: space-between;
         gap: vw(20);
+
+        @include max(xl) {
+            gap: vwf(20);
+        }
+
         @include max(md) {
             flex-direction: column;
             gap: 0;
         }
     }
+
     &__photos {
         flex-basis: auto;
         padding-top: vw(6);
+
+        @include max(xl) {
+            padding-top: vwf(6);
+        }
+
         @include max(md) {
             display: contents;
         }
     }
+
     &__slider {
         margin-top: vw(40);
         max-width: vw(900);
+
+        @include max(xl) {
+            margin-top: vwf(40);
+            max-width: vwf(900);
+        }
+
         @include max(md) {
             order: 2;
             margin-top: vw2(40);
             max-width: 100%;
         }
+
         .slider-photo__thumbs {
             display: none;
         }
     }
+
     &__info {
         flex-basis: vw(917);
         flex-shrink: 0;
         flex-grow: 0;
+
+        @include max(xl) {
+            flex-basis: vwf(917);
+        }
+
         @include max(md) {
             display: contents;
         }
     }
+
     &__header {
         @include max(md) {
             order: 1;
         }
     }
+
     &__title {
         font-size: vw(40);
         text-transform: none;
+
+        @include max(xl) {
+            font-size: vwf(40);
+        }
+
         @include max(md) {
             font-size: vw2(36);
         }
     }
+
     &__vcode {
         font-size: vw(14);
         font-weight: 500;
         line-height: 1.2;
         margin-top: vw(15);
         color: $fontBlack;
+
+        @include max(xl) {
+            font-size: vwf(14);
+            margin-top: vwf(15);
+        }
+
         @include max(md) {
             font-size: vw2(12);
         }
     }
+
     &__table {
         margin-top: vw(71);
         max-width: vw(442);
+
+        @include max(xl) {
+            margin-top: vwf(71);
+            max-width: vwf(442);
+        }
+
         @include max(md) {
             order: 2;
             max-width: 100%;
             margin-top: vw2(20);
         }
     }
+
     &__controls {
         display: flex;
         justify-content: space-between;
@@ -79,17 +133,29 @@
         margin-top: vw(25);
         padding: vw(21) vw(20) vw(26) vw(26);
         border: 1px solid $greyBorder;
+
+        @include max(xl) {
+            margin-top: vwf(25);
+            padding: vwf(21) vwf(20) vwf(26) vwf(26);
+        }
+
         @include max(md) {
             order: 2;
             padding: vw2(11) vw2(10) vw2(11) vw2(13);
             margin-top: vw2(20);
         }
     }
+
     &__price {
         font-size: vw(40);
         font-weight: 500;
         line-height: 0.97;
         color: $fontBlack;
+
+        @include max(xl) {
+            font-size: vwf(40);
+        }
+
         @include max(md) {
             font-size: vw2(32);
         }
@@ -99,28 +165,39 @@
         border: 1px solid #CCCCCC;
         border-top: none;
         border-bottom: none;
+
         &:hover {
             border-color: $blueHover;
         }
+
         @include max(md) {
             order: 2;
         }
     }
+
     &__cart {
         .new-btn__icon svg use {
             fill: none;
             stroke: $white;
         }
+
         @include max(md) {
             order: 2;
         }
     }
+
     &__subtitle {
         margin-top: vw(38);
         font-size: vw(32);
         font-weight: 500;
         line-height: 0.97;
         color: $fontBlack;
+
+        @include max(xl) {
+            margin-top: vwf(38);
+            font-size: vwf(32);
+        }
+
         @include max(md) {
             order: 2;
             font-size: vw2(32);
@@ -130,15 +207,29 @@
 
     &__text {
         margin-top: vw(26);
+
+        @include max(xl) {
+            margin-top: vwf(26);
+        }
+
         &.text-block * {
             color: $greyText;
         }
-        p, li, a {
+
+        p,
+        li,
+        a {
             font-size: vw(24);
+
+            @include max(xl) {
+                font-size: vwf(24);
+            }
+
             @include max(md) {
                 font-size: vw2(18);
             }
         }
+
         @include max(md) {
             order: 2;
         }

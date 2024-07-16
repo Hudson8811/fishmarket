@@ -1,21 +1,35 @@
 .contacts-info {
     padding: vw(16) 0 vw(147);
+
+    @include max(xl) {
+        padding: vwf(16) 0 vwf(147);
+    }
+
     @include max(md) {
-        padding-top:  vw2(16) 0 vw2(75);
+        padding-top: vw2(16) 0 vw2(75);
     }
+
     &__requisites:not(:first-child) {
-        border-top: 1px solid rgba(0,0,0,0.2);
+        border-top: 1px solid rgba(0, 0, 0, 0.2);
     }
+
     .requisites {
         display: flex;
         justify-content: space-between;
         padding: vw(23) 0 vw(77);
         gap: vw(50);
+
+        @include max(xl) {
+            padding: vwf(23) 0 vwf(77);
+            gap: vwf(50);
+        }
+
         @include max(md) {
             flex-direction: column;
             padding: vw2(40) 0;
             gap: vw2(25);
         }
+
         &__title {
             flex-basis: auto;
             font-size: vw(70);
@@ -23,55 +37,89 @@
             line-height: 0.886;
             letter-spacing: -0.02em;
             color: $fontBlack;
+
             span {
                 display: block;
             }
+
+            @include max(xl) {
+                font-size: vwf(70);
+            }
+
             @include max(md) {
                 font-size: vw2(42);
             }
         }
+
         &__info {
             flex-basis: vw(948);
             flex-grow: 0;
             flex-shrink: 0;
-            > .requisites__item {
+
+            @include max(xl) {
+                flex-basis: vwf(948);
+            }
+
+            >.requisites__item {
                 display: block;
+
                 @include max(md) {
                     display: flex;
                 }
             }
+
             @include max(md) {
                 flex-basis: auto;
             }
         }
+
         &__columns {
             display: flex;
             gap: vw(48);
             margin-top: vw(24);
+
+            @include max(xl) {
+                gap: vwf(48);
+                margin-top: vwf(24);
+            }
+
             @include max(md) {
                 gap: vw2(8);
                 margin-top: vw2(8);
                 flex-direction: column;
             }
         }
+
         &__column {
             display: flex;
             flex-direction: column;
             gap: vw(8);
+
+            @include max(xl) {
+                gap: vwf(8);
+            }
+
             @include max(md) {
                 gap: vw2(8);
             }
         }
+
         &__item {
             display: flex;
             gap: vw(8);
             align-items: center;
+
+            @include max(xl) {
+                gap: vwf(8);
+            }
+
             @include max(md) {
                 column-gap: vw2(8);
                 row-gap: 0;
                 flex-wrap: wrap;
             }
         }
+
         &__name {
             flex-basis: auto;
             font-size: vw(14);
@@ -80,16 +128,27 @@
             color: $fontBlack;
             text-transform: uppercase;
             white-space: nowrap;
+
+            @include max(xl) {
+                font-size: vwf(14);
+            }
+
             @include max(md) {
                 font-size: vw2(14);
             }
         }
+
         &__value {
             flex-basis: auto;
             font-size: vw(16);
             font-weight: 300;
             line-height: 1.5;
             color: $fontBlack;
+
+            @include max(xl) {
+                font-size: vwf(16);
+            }
+
             @include max(md) {
                 font-size: vw2(16);
             }

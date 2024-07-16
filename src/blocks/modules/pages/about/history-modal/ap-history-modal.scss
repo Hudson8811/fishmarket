@@ -1,16 +1,20 @@
 .ap-history-modal {
     .l-modal__close {
         background-color: $white;
+
         svg use {
             fill: $fontBlack;
         }
     }
+
     .l-modal__close:hover {
         background-color: $fontBlack;
+
         svg use {
             stroke: $white;
         }
     }
+
     .l-modal__content {
         width: vw(1135);
         max-width: none;
@@ -23,6 +27,15 @@
         background-size: vw(401) auto;
         background-position: bottom vw(53) right vw(46);
         background-repeat: no-repeat;
+
+        @include max(xl) {
+            width: vwf(1135);
+            padding: vwf(57);
+            gap: vwf(54);
+            background-size: vwf(401) auto;
+            background-position: bottom vwf(53) right vwf(46);
+        }
+
         @include max(md) {
             width: 100%;
             padding: vw2(30) vw2(57) vw2(30) vw2(20);
@@ -31,16 +44,23 @@
             background-position: bottom vw2(53) right vw2(46);
         }
     }
+
     &__item {
         position: relative;
         display: flex;
         align-items: flex-start;
         gap: vw(35);
         color: $white;
+
+        @include max(xl) {
+            gap: vwf(35);
+        }
+
         @include max(md) {
             gap: vw2(35);
         }
     }
+
     &__item:not(:last-child)::after {
         content: "";
         position: absolute;
@@ -50,6 +70,14 @@
         height: calc(100% + vw(54));
         background-color: $white;
         z-index: 5;
+
+        @include max(xl) {
+            top: vwf(16.5);
+            left: vwf(16.5);
+            width: vwf(1);
+            height: calc(100% + vwf(54));
+        }
+
         @include max(md) {
             top: vw2(16.5);
             left: vw2(16.5);
@@ -57,6 +85,7 @@
             height: calc(100% + vw2(54));
         }
     }
+
     &__decor {
         position: relative;
         width: vw(34);
@@ -66,10 +95,17 @@
         z-index: 10;
         flex-shrink: 0;
         flex-grow: 0;
+
+        @include max(xl) {
+            width: vwf(34);
+            height: vwf(34);
+        }
+
         @include max(md) {
             width: vw2(34);
             height: vw2(34);
         }
+
         &::after {
             content: "";
             position: absolute;
@@ -80,26 +116,45 @@
             height: vw(16);
             background-color: $white;
             border-radius: 100%;
+
+            @include max(xl) {
+                width: vwf(16);
+                height: vwf(16);
+            }
+
             @include max(md) {
                 width: vw2(16);
                 height: vw2(16);
             }
         }
     }
+
     &__year {
-        font-family:'Helvetica Neue', sans-serif;
+        font-family: 'Helvetica Neue', sans-serif;
         font-size: vw(80);
         line-height: 0.97;
         font-weight: 500;
+
+        @include max(xl) {
+            font-size: vwf(80);
+        }
+
         @include max(md) {
             font-size: vw2(40);
         }
     }
+
     &__text {
         max-width: vw(682);
         font-size: vw(24);
         line-height: 1.375;
         font-weight: 400;
+
+        @include max(xl) {
+            max-width: vwf(682);
+            font-size: vwf(24);
+        }
+
         @include max(md) {
             max-width: vw2(682);
             font-size: vw2(20);

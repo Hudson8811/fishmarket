@@ -7,12 +7,19 @@
     background-color: $white;
     z-index: 40;
     max-height: vw(2700);
+
+    @include max(xl) {
+        padding: vwf(33) 0 vwf(0);
+        max-height: vwf(2700);
+    }
+
     @include max(md) {
         position: relative;
         max-height: none;
         overflow: hidden;
         padding: vw2(40) 0;
     }
+
     &__title {
         max-width: vw(680);
         font-size: vw(82);
@@ -20,13 +27,21 @@
         line-height: 0.97;
         color: $fontBlack;
         text-transform: uppercase;
+
+        @include max(xl) {
+            max-width: vwf(680);
+            font-size: vwf(82);
+        }
+
         @include max(md) {
             max-width: 100%;
         }
     }
+
     &__cards {
         display: grid;
         grid-template-columns: repeat(3, minmax(0, 1fr));
+
         @include max(md) {
             display: flex;
             align-items: center;
@@ -36,16 +51,20 @@
             padding-left: vw2(20);
         }
     }
+
     .swiper-wrapper {
         display: contents;
+
         @include max(md) {
             display: flex;
         }
     }
+
     &__column {
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
+
         @include max(md) {
             flex-basis: auto;
             width: 100%;
@@ -53,30 +72,47 @@
             background-color: transparent;
             border: none;
         }
+
         .employee-card {
             border: 1px solid rgba(7, 23, 29, 0.35);
         }
-        .employee-card + .employee-card {
+
+        .employee-card+.employee-card {
             margin-top: -1px;
         }
+
         &--1 {
             margin-bottom: vw(423);
+
+            @include max(xl) {
+                margin-bottom: vwf(423);
+            }
+
             @include max(md) {
                 margin-bottom: 0;
             }
+
             .employee-card {
                 border: 1px solid rgba(255, 255, 255, 0.32)
             }
         }
+
         &--1 {
             margin-right: -1px;
             margin-left: -1px;
         }
+
         &--3 {
             margin-bottom: vw(175);
+
+            @include max(xl) {
+                margin-bottom: vwf(175);
+            }
+
             @include max(md) {
                 margin-bottom: 0;
             }
+
             .employee-card {
                 border: 1px solid rgba(255, 255, 255, 0.32)
             }

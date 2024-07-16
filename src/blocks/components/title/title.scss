@@ -6,11 +6,17 @@
         font-weight: 500;
         line-height: 0.97;
         text-transform: uppercase;
+
+        @include max(xl) {
+            font-size: vwf(82);
+        }
+
         @include max(md) {
             font-size: vw2(50);
             line-height: 1.2;
-        } 
-    }  
+        }
+
+    }
 
     &--h2 {
         color: $fontBlack;
@@ -19,9 +25,15 @@
         font-weight: 500;
         line-height: 97.228%;
         text-transform: uppercase;
+
+
+        @include max(xl) {
+            font-size: vwf(52);
+        }
+
         @include max(md) {
             font-size: vw2(32);
             line-height: 1.2;
         }
-    } 
+    }
 }

@@ -1,10 +1,16 @@
 .career-vacancies {
     padding: vw(71) 0 vw(91);
+    @include max(xl) {
+        padding: vwf(71) 0 vwf(91);
+    }
     @include max(md) {
         padding: vw2(10) 0 vw2(45);
     }
     &__search {
         margin-top: vw(42);
+        @include max(xl) {
+            margin-top: vwf(42);
+        }
         @include max(md) {
             margin-top: vw2(42);
         } 
@@ -14,6 +20,10 @@
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: vw(17) vw(20);
         margin-top: vw(67);
+        @include max(xl) {
+            gap: vwf(17) vwf(20);
+            margin-top: vwf(67);
+        }
         @include max(md) {
             grid-template-columns: minmax(0, 1fr);
             gap: vw2(20);

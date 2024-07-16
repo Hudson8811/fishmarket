@@ -2,32 +2,57 @@
     min-height: 100vh;
     padding-top: vw(114);
     padding-bottom: vw(40);
+
+    @include max(xl) {
+        padding-top: vwf(114);
+        padding-bottom: vwf(40);
+    }
+
     @include max(md) {
         min-height: auto;
         padding-top: vw2(90);
         padding-bottom: vw2(40);
     }
+
     &__content {
         display: flex;
         justify-content: space-between;
         margin-top: vw(154);
+
+        @include max(xl) {
+            margin-top: vwf(154);
+        }
+
         @include max(md) {
             flex-direction: column;
             margin-top: vw2(50);
         }
     }
+
     &__title {
         flex-basis: vw(430);
         font-size: vw(45);
+
+        @include max(xl) {
+            flex-basis: vwf(430);
+            font-size: vwf(45);
+        }
+
         @include max(md) {
             flex-basis: auto;
         }
     }
+
     &__btns {
         display: flex;
         gap: vw(24);
         flex-wrap: wrap;
         justify-content: flex-end;
+
+        @include max(xl) {
+            gap: vwf(24);
+        }
+
         @include max(md) {
             flex-direction: column;
             flex-wrap: nowrap;
@@ -35,30 +60,49 @@
             margin-top: vw2(50);
         }
     }
+
     &__btn.new-btn {
         width: vw(432);
         height: vw(364);
+
+        @include max(xl) {
+            width: vwf(432);
+            height: vwf(364);
+        }
+
         @include max(md) {
             width: 100%;
             height: vw2(293);
         }
+
         .new-btn__icon {
             align-self: flex-start;
         }
+
         .new-btn__text {
             font-size: vw(32);
+
+            @include max(xl) {
+                font-size: vwf(32);
+            }
+
             @include max(md) {
                 font-size: vw2(28);
             }
+
             font-weight: 500;
         }
+
         &:hover {
             background-color: $blueHover;
+
             .new-btn__text {
                 color: $white;
             }
+
             .new-btn__icon {
                 background-color: $white;
+
                 svg use {
                     stroke: $fontBlack;
                     fill: none;

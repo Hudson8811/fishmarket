@@ -4,10 +4,15 @@
     display: flex;
     background-size: cover;
     background-position: center;
+
+    @include max(xl) {
+        padding: vwf(115) 0 vwf(68);
+    }
+
     @include max(md) {
         padding: vw2(100) 0 vw2(30);
         min-height: vw2(650);
-    } 
+    }
 
     &__container {
         min-height: 100%;
@@ -21,36 +26,56 @@
 
     &__breadcrumbs {
         padding-left: vw(20);
+
+        @include max(xl) {
+            padding-left: vwf(20);
+        }
+
         @include max(md) {
             padding-left: vw2(5);
-        } 
+        }
     }
 
     &__title {
         color: $white;
         font-size: vw(171);
         line-height: 0.97;
+
+        @include max(xl) {
+            font-size: vwf(171);
+        }
+
         @include max(md) {
             font-size: vw2(50)
-        } 
+        }
     }
 
     &__text {
         color: $white;
+
         * {
             color: $white !important;
         }
+
         p {
             margin-bottom: 1em;
         }
+
         &--top {
             margin-top: vw(30);
             max-width: vw(643);
+
+            @include max(xl) {
+                margin-top: vwf(30);
+                max-width: vwf(643);
+            }
+
             @include max(md) {
                 margin-top: vw2(30);
                 max-width: 100%;
-            } 
+            }
         }
+
         &--bottom {
             margin-top: auto;
             padding-top: vw(50);
@@ -59,11 +84,18 @@
             font-weight: 400;
             line-height: 0.89;
             letter-spacing: -0.02em;
+
+            @include max(xl) {
+                padding-top: vwf(50);
+                max-width: vwf(847);
+                font-size: vwf(70);
+            }
+
             @include max(md) {
                 max-width: 100%;
                 padding-top: vw2(50);
                 font-size: vw2(40);
-            } 
+            }
         }
     }
 }

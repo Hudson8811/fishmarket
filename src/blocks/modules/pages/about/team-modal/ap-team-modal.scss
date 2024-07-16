@@ -5,6 +5,13 @@
         display: flex;
         flex-direction: column;
         gap: vw(40);
+
+        @include max(xl) {
+            width: vwf(640);
+            padding: vwf(83) vwf(49) vwf(50) vwf(30);
+            gap: vwf(40);
+        }
+
         @include max(md) {
             width: 100%;
             max-width: 100%;
@@ -12,6 +19,7 @@
             gap: vw2(40);
         }
     }
+
     &__photo {
         align-self: center;
         color: $fontBlack;
@@ -19,29 +27,50 @@
         height: vw(337);
         border-radius: 100%;
         overflow: hidden;
+
+        @include max(xl) {
+            width: vwf(337);
+            height: vwf(337);
+        }
+
         img {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
     }
+
     &__title {
         max-width: vw(485);
         margin-top: vw(26);
         font-size: vw(32);
         line-height: 1.06;
         font-weight: 500;
+
+        @include max(xl) {
+            max-width: vwf(485);
+            margin-top: vwf(26);
+            font-size: vwf(32);
+        }
+
         @include max(md) {
             max-width: vw2(485);
             margin-top: vw2(26);
             font-size: vw2(32);
         }
     }
+
     &__text {
         max-width: vw(477);
         font-size: vw(18);
         line-height: 1.4;
         font-weight: 400;
+
+        @include max(xl) {
+            max-width: vwf(477);
+            font-size: vwf(18);
+        }
+
         @include max(md) {
             max-width: vw2(477);
             font-size: vw2(18);

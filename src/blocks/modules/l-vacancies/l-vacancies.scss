@@ -1,6 +1,11 @@
 .l-vacancies {
     padding: vw(37) 0 vw(30);
     overflow: hidden;
+
+    @include max(xl) {
+        padding: vwf(37) 0 vwf(30);
+    }
+
     @include max(md) {
         padding: vw2(40) 0 vw2(30);
     }
@@ -11,6 +16,12 @@
         flex-direction: column;
         min-height: vw(750);
         gap: vw(140);
+
+        @include max(xl) {
+            min-height: vwf(750);
+            gap: vwf(140);
+        }
+
         @include max(md) {
             min-height: auto;
             gap: vw2(30);
@@ -20,6 +31,7 @@
     &__header {
         display: flex;
         justify-content: space-between;
+
         @include max(md) {
             display: contents;
         }
@@ -30,6 +42,12 @@
         flex-shrink: 0;
         flex-grow: 0;
         font-size: vw(60);
+
+        @include max(xl) {
+            flex-basis: vwf(705);
+            font-size: vwf(60);
+        }
+
         @include max(md) {
             flex-basis: auto;
             width: calc(100% - vw2(140));
@@ -43,6 +61,12 @@
         flex-basis: vw(915);
         flex-shrink: 0;
         flex-grow: 0;
+
+        @include max(xl) {
+            gap: vwf(29);
+            flex-basis: vwf(915);
+        }
+
         @include max(md) {
             flex-basis: auto;
             flex-direction: column;
@@ -64,12 +88,15 @@
     &__slider {
         position: relative;
         flex-basis: 100%;
-        @include max(md) {
-        }
     }
 
     &__slide {
         width: vw(757);
+
+        @include max(xl) {
+            width: vwf(757);
+        }
+
         @include max(md) {
             width: auto;
         }
@@ -86,44 +113,74 @@
         transition: $tr-time;
         top: vw(-67);
         opacity: 1;
+
+        @include max(xl) {
+            width: vwf(59);
+            height: vwf(59);
+            top: vwf(-67);
+        }
+
         @include max(md) {
             width: vw2(50);
             height: vw2(50);
             opacity: 1;
             top: vw2(-45);
-        } 
+        }
+
         &::after {
             content: none;
         }
+
         &:hover {
             background-color: $blueHover;
         }
+
         svg {
             width: vw(11);
             height: vw(8);
+
+            @include max(xl) {
+                width: vwf(11);
+                height: vwf(8);
+            }
+
             @include max(md) {
                 width: vw2(11);
                 height: vw2(8);
-            } 
+            }
+
             use {
                 stroke: $white;
                 fill: none;
                 width: vw(11);
                 height: vw(8);
+
+                @include max(xl) {
+                    width: vwf(11);
+                    height: vwf(8);
+                }
+
                 @include max(md) {
                     width: vw2(11);
                     height: vw2(8);
-                } 
+                }
             }
-        } 
+        }
+
         &.swiper-button-prev {
             transform: rotate(180deg);
             right: vw(70);
             left: auto;
+
+            @include max(xl) {
+                right: vwf(70);
+            }
+
             @include max(md) {
                 right: vw2(70);
-            } 
+            }
         }
+
         &.swiper-button-next {
             right: 0;
         }
@@ -133,8 +190,13 @@
 .l-vacancies.production__vacancies {
     .l-vacancies__title {
         flex-basis: vw(650);
+
+        @include max(xl) {
+            flex-basis: vwf(650);
+        }
+
         @include max(md) {
             flex-basis: auto;
-        } 
+        }
     }
 }

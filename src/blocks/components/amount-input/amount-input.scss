@@ -1,13 +1,19 @@
-.amount-input{
+.amount-input {
     display: flex;
     align-items: center;
     width: vw(174);
     height: vw(57);
     border: 1px solid $greyLight;
+
+    @include max(xl) {
+        width: vwf(174);
+        height: vwf(57);
+    }
+
     @include max(md) {
         width: vw2(174);
         height: vw2(57);
-    } 
+    }
 
     &__change {
         display: flex;
@@ -18,26 +24,41 @@
         flex-grow: 0;
         height: 100%;
         cursor: pointer;
+
+        @include max(xl) {
+            flex-basis: vwf(57);
+        }
+
         @include max(md) {
             flex-basis: vw2(57);
-        } 
+        }
+
         &.min {
             pointer-events: none;
             color: $grey;
             opacity: 0.5;
         }
+
         &:hover {
             background-color: $greyHover;
         }
-        svg, use {
+
+        svg,
+        use {
             width: vw(10);
             height: vw(10);
+
+            @include max(xl) {
+                width: vwf(10);
+                height: vwf(10);
+            }
+
             @include max(md) {
                 width: vw2(10);
                 height: vw2(10);
-            } 
+            }
         }
-        
+
     }
 
     &__value {
@@ -56,11 +77,18 @@
         outline: none;
         border: none;
         background: none;
+
+        @include max(xl) {
+            flex-basis: vwf(60);
+            max-width: calc(100% - vwf(114));
+            font-size: vwf(24);
+        }
+
         @include max(md) {
             flex-basis: vw2(60);
             max-width: calc(100% - vw2(114));
             font-size: vw2(24);
-        } 
+        }
     }
 
     input[type="number"]::-webkit-outer-spin-button,

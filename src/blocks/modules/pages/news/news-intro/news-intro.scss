@@ -3,19 +3,31 @@
     padding: vw(115) 0 vw(36);
     height: auto;
     background-size: cover;
+
+    @include max(xl) {
+        padding: vwf(115) 0 vwf(36);
+    }
+
     @include max(md) {
         padding: vw2(95) 0 vw2(36);
     }
+
     &__container {
         position: relative;
         min-height: vw(708);
         display: flex;
         flex-direction: column;
         z-index: 5;
+
+        @include max(xl) {
+            min-height: vwf(708);
+        }
+
         @include max(md) {
             min-height: vw2(328);
         }
     }
+
     &__date {
         margin-top: auto;
         color: $white;
@@ -23,20 +35,33 @@
         font-weight: 600;
         line-height: 1.25;
         text-transform: uppercase;
+
+        @include max(xl) {
+            font-size: vwf(14);
+        }
+
         @include max(md) {
             font-size: vw2(14);
         }
     }
+
     &__title {
         margin-top: vw(14);
         font-size: vw(70);
         font-weight: 400;
         letter-spacing: -0.02em;
         color: $white;
+
+        @include max(xl) {
+            margin-top: vwf(14);
+            font-size: vwf(70);
+        }
+
         @include max(md) {
             margin-top: vw2(14);
         }
     }
+
     &__overlay {
         position: absolute;
         left: 0;

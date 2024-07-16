@@ -1,13 +1,20 @@
 .assortment {
 	&__breadcrumbs {
 		padding-left: vw(8);
+
+		@include max(xl) {
+			padding-left: vwf(8);
+		}
 	}
+
 	&__title {
 		color: #fff;
 		width: 110%;
+
 		span {
 			color: rgba(255, 255, 255, 0.30);
 		}
+
 		@include max(md) {
 			position: relative;
 			top: auto;
@@ -16,158 +23,217 @@
 			width: 100%;
 		}
 	}
+
 	&__section {
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100vh;
+		z-index: 25;
+		overflow: hidden;
+		background: #07171D;
+
+		@include max(md) {
+			position: relative;
+			height: auto;
+			min-height: auto;
+			top: auto;
+			left: auto;
+			padding-top: vw2(40);
+		}
+
+		&__bg {
 			position: absolute;
-			top: 0;
-			left: 0;
-			height: 100vh;
-			z-index: 25;
-			overflow: hidden;
-			background: #07171D;
-			@include max(md) {
-					position: relative;
-					height: auto;
-					min-height: auto;
-					top: auto;
-					left: auto;
-					padding-top: vw2(40);
-			}
+			display: flex;
+			justify-content: flex-start;
+			align-items: flex-start;
+			left: vwf(-30);
+			top: calc(100vh - vw(270));
+			width: vw(1456);
+			height: vw(283);
 
-			&__bg {
-					position: absolute;
-					display: flex;
-					justify-content: flex-start;
-					align-items: flex-start;
-					left: vwf(-30);
-					top: calc(100vh - vw(270));
-					width: vw(1456);
-					height: vw(283);
-					img {
-							position: relative;
-							width: 100%;
-							display: block;
-							object-fit: contain;
-							object-position: center center;
-					}
-			}
-			.layout--trio {
-					&__col {
-							flex-flow: column nowrap;
-							padding-bottom: vw(249);
-
-							&:nth-child(1) {
-									padding-top: vw(90);
-									padding-bottom: vw(90);
-									height: 100vh;
-									@include max(md) {
-										padding-top: 0;
-									}
-
-							}
-							&:nth-child(2) {
-									right: -1px;
-									@include max(md) {
-										padding-bottom: 0;
-										right: 0;
-									}
-									
-							}
-							&:nth-child(3) {
-									padding-top: vw(424);
-									@include max(md) {
-											padding-top: 0;
-											padding-bottom: 0;
-									 }
-									
-							}
-
-							.card--full-picture {
-								border: 1px solid $greyLight;
-								&:hover {
-									.btn--circle__blue {
-										background: $black;
-										transition: all $tr-time;
-									}
-								}
-								@include min(md) {
-									&:not(:first-child) {
-										border-top-width: 0;
-									}
-								}
-							}
-					}
-			}
-			.container {
-					z-index: 5;
-			}
-			&--no-animation {
+			img {
 				position: relative;
-				padding-top: vw(114);
-				left: auto;
-				height: auto;
-				@include max(md) {
-					padding-top: vw2(90);
-				} 
-				&.bg-white {
-					background: #fff;
-					.assortment__title {
-						color: #07171D;
-						@include max(md) {
-							margin-bottom: vw2(40);
-						}
-					}
+				width: 100%;
+				display: block;
+				object-fit: contain;
+				object-position: center center;
+			}
+		}
+
+		.layout--trio {
+			&__col {
+				flex-flow: column nowrap;
+				padding-bottom: vw(249);
+
+				@include max(xl) {
+					padding-bottom: vwf(249);
 				}
+
+				&:nth-child(1) {
+					padding-top: vw(90);
+					padding-bottom: vw(90);
+					height: 100vh;
+
+					@include max(xl) {
+						padding-top: vwf(90);
+						padding-bottom: vwf(90);
+					}
+
+					@include max(md) {
+						padding-top: 0;
+					}
+
+				}
+
+				&:nth-child(2) {
+					right: -1px;
+
+					@include max(md) {
+						padding-bottom: 0;
+						right: 0;
+					}
+
+				}
+
+				&:nth-child(3) {
+					padding-top: vw(424);
+
+					@include max(xl) {
+						padding-top: vwf(424);
+					}
+
+					@include max(md) {
+						padding-top: 0;
+						padding-bottom: 0;
+					}
+
+				}
+
 				.card--full-picture {
 					border: 1px solid $greyLight;
+
 					&:hover {
 						.btn--circle__blue {
 							background: $black;
-    						transition: all $tr-time;
+							transition: all $tr-time;
 						}
 					}
+
 					@include min(md) {
 						&:not(:first-child) {
 							border-top-width: 0;
 						}
 					}
-					.card__title {
-						max-width: none;
-					}
 				}
-				.layout--trio {
-					&__col {
-							flex-flow: column nowrap;
-							padding-bottom: vw(249);
-							@include max(md) {
-								padding-bottom: 0;
-								padding-top: 0;
-							}
-							&:nth-child(2) {
-								right: -1px;
-								padding-top: vw(586);
-								@include max(md) {
-									padding-bottom: 0;
-									padding-top: 0;
-									right: 0;
-								}
-							}
-							&:nth-child(3) {
-								padding-top: vw(311);
-								@include max(md) {
-									padding-bottom: 0;
-									padding-top: 0;
-								}
-							}
-					}
-				}
-				.assortment__btn {
-					display: none;
+			}
+		}
+
+		.container {
+			z-index: 5;
+		}
+
+		&--no-animation {
+			position: relative;
+			padding-top: vw(114);
+			left: auto;
+			height: auto;
+
+			@include max(xl) {
+				padding-top: vwf(114);
+			}
+
+			@include max(md) {
+				padding-top: vw2(90);
+			}
+
+			&.bg-white {
+				background: #fff;
+
+				.assortment__title {
+					color: #07171D;
+
 					@include max(md) {
-						display: none;
+						margin-bottom: vw2(40);
 					}
 				}
 			}
+
+			.card--full-picture {
+				border: 1px solid $greyLight;
+
+				&:hover {
+					.btn--circle__blue {
+						background: $black;
+						transition: all $tr-time;
+					}
+				}
+
+				@include min(md) {
+					&:not(:first-child) {
+						border-top-width: 0;
+					}
+				}
+
+				.card__title {
+					max-width: none;
+				}
+			}
+
+			.layout--trio {
+				&__col {
+					flex-flow: column nowrap;
+					padding-bottom: vw(249);
+
+					@include max(xl) {
+						padding-bottom: vwf(249);
+					}
+
+					@include max(md) {
+						padding-bottom: 0;
+						padding-top: 0;
+					}
+
+					&:nth-child(2) {
+						right: -1px;
+						padding-top: vw(586);
+
+						@include max(xl) {
+							padding-top: vwf(586);
+						}
+
+						@include max(md) {
+							padding-bottom: 0;
+							padding-top: 0;
+							right: 0;
+						}
+					}
+
+					&:nth-child(3) {
+						padding-top: vw(311);
+
+						@include max(xl) {
+							padding-top: vwf(311);
+						}
+
+						@include max(md) {
+							padding-bottom: 0;
+							padding-top: 0;
+						}
+					}
+				}
+			}
+
+			.assortment__btn {
+				display: none;
+
+				@include max(md) {
+					display: none;
+				}
+			}
+		}
 	}
+
 	&__btns {
 		display: flex;
 		flex-direction: column;
@@ -175,6 +241,11 @@
 		margin-top: auto;
 		top: auto;
 		z-index: 26;
+
+		@include max(xl) {
+			gap: vwf(30);
+		}
+
 		@include max(md) {
 			flex-direction: row-reverse;
 			justify-content: flex-end;

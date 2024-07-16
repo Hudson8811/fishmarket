@@ -1,9 +1,15 @@
 .society-info {
     display: flex;
     min-height: vw(830);
+
+    @include max(xl) {
+        min-height: vwf(830);
+    }
+
     @include max(md) {
         min-height: auto;
-    } 
+    }
+
     &__content {
         display: flex;
         flex-direction: column;
@@ -15,16 +21,29 @@
         flex-shrink: 0;
         background-repeat: no-repeat;
         background-size: vw(884) vw(284);
+
+        @include max(xl) {
+            gap: vwf(40);
+            padding: vwf(34) vwf(170) vwf(42) vwf(30);
+            background-size: vwf(884) vwf(284);
+        }
+
         @include max(md) {
             flex-basis: auto;
             gap: vw2(30);
             padding: vw2(40) vw2(20);
             background-size: 50% auto;
-        } 
+        }
     }
+
     &__title {
         font-size: vw(65);
+
+        @include max(xl) {
+            font-size: vwf(65);
+        }
     }
+
     &__img {
         background-size: cover;
         background-position: center;
@@ -32,28 +51,38 @@
         flex-basis: 50%;
         flex-grow: 0;
         flex-shrink: 0;
+
         @include max(md) {
             flex-basis: vw2(600);
-        } 
+        }
     }
 }
 
 .society-info.society-info--black {
     flex-direction: row-reverse;
     background-color: $fontBlack;
+
     @include max(md) {
         flex-direction: column;
-    } 
+    }
+
     .society-info__content {
         background-image: url("../img/society_info_bg_black.svg");
         background-position: bottom vw(105) right 0;
+
+        @include max(xl) {
+            background-position: bottom vwf(105) right 0;
+        }
+
         @include max(md) {
             background-position: bottom vw2(30) right 0;
-        } 
+        }
     }
+
     .society-info__title {
         color: $white;
     }
+
     .society-info__text {
         p {
             color: white;
@@ -64,19 +93,28 @@
 .society-info.society-info--white {
     flex-direction: row;
     background-color: $white;
+
     @include max(md) {
         flex-direction: column;
-    } 
+    }
+
     .society-info__content {
         background-image: url("../img/society_info_bg_white.svg");
         background-position: bottom vw(105) left 0;
+
+        @include max(xl) {
+            background-position: bottom vwf(105) right 0;
+        }
+
         @include max(md) {
             background-position: bottom vw2(30) right 0;
-        } 
+        }
     }
+
     .society-info__title {
         color: $fontBlack;
     }
+
     .society-info__text {
         p {
             color: $fontBlack;
