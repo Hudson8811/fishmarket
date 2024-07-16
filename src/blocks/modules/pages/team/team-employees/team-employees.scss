@@ -3,6 +3,11 @@
     background-color: $white;
     border-top: 1px solid $greyBorder;
     position: relative;
+
+    @include max(xl) {
+        padding: vwf(32) 0;
+    }
+
     @include max(md) {
         overflow: hidden;
         padding: vw2(40) 0;
@@ -15,14 +20,22 @@
         line-height: 0.97;
         color: $fontBlack;
         text-transform: uppercase;
+
+        @include max(xl) {
+            max-width: vwf(680);
+            font-size: vwf(82);
+        }
+
         @include max(md) {
             max-width: 100%;
         }
     }
+
     &__cards {
         width: 100%;
         display: flex;
         align-items: flex-end;
+
         @include max(md) {
             align-items: center;
             flex-direction: column;
@@ -31,12 +44,15 @@
             padding-left: vw2(20);
         }
     }
+
     .swiper-wrapper {
         display: contents;
+
         @include max(md) {
             display: flex;
         }
     }
+
     &__column {
         flex-basis: calc(100% / 3);
         display: flex;
@@ -46,6 +62,7 @@
         border: 1px solid #A8AEB0;
         gap: 1px;
         z-index: 5;
+
         @include max(md) {
             flex-basis: auto;
             width: 100%;
@@ -53,9 +70,11 @@
             background-color: transparent;
             border: none;
         }
+
         &--1 {
             border-right: none;
         }
+
         &--3 {
             border: none;
             background-color: $white;

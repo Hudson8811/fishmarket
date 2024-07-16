@@ -2,9 +2,11 @@
   position: relative;
   width: 100%;
   margin-bottom: 0px;
+
   @include max(sm) {
     margin-bottom: 0px;
   }
+
   h1 {
     color: $fontBlack;
     font-size: vw(82);
@@ -12,13 +14,19 @@
     font-weight: 500;
     line-height: 97.228%;
     text-transform: uppercase;
+
+    @include max(xl) {
+      font-size: vwf(82);
+    }
+
     @include max(md) {
-        font-size: vw2(50);
-        font-style: normal;
-        font-weight: 500;
-        line-height: 1.2;
-    } 
+      font-size: vw2(50);
+      font-style: normal;
+      font-weight: 500;
+      line-height: 1.2;
+    }
   }
+
   h2 {
     color: $fontBlack;
     font-size: vw(52);
@@ -26,54 +34,78 @@
     font-weight: 500;
     line-height: 97.228%;
     text-transform: uppercase;
-    
+
+    @include max(xl) {
+      font-size: vwf(52);
+    }
+
     @include max(md) {
-        font-size: vw2(32);
-        font-style: normal;
-        font-weight: 500;
-        line-height: 1.2;
-    } 
+      font-size: vw2(32);
+      font-style: normal;
+      font-weight: 500;
+      line-height: 1.2;
+    }
   }
+
   h3 {
     color: $fontBlack;
     font-size: vw(32);
     font-style: normal;
     font-weight: 400;
     line-height: 100%;
+
+    @include max(xl) {
+      font-size: vwf(32);
+    }
+
     @include max(md) {
-        font-size: vw2(32);
-        line-height: 1.2;
+      font-size: vw2(32);
+      line-height: 1.2;
     }
 
 
   }
+
   h4 {
     color: $fontBlack;
     font-size: vw(24);
     font-style: normal;
     font-weight: 500;
     line-height: 97.228%;
+
+    @include max(xl) {
+      font-size: vwf(24);
+    }
+
     @include max(md) {
-        font-size: vw2(24);
-        font-style: normal;
-        line-height: 1.2;
+      font-size: vw2(24);
+      font-style: normal;
+      line-height: 1.2;
     }
   }
+
   p {
     font-size: vw(18);
     font-style: normal;
     font-weight: 400;
     color: $fontBlack;
     line-height: 140.625%;
-    @include max(md) {
-        font-size: vw2(24);
-        font-style: normal;
-        line-height: 1.2;
+
+    @include max(xl) {
+      font-size: vwf(18);
     }
+
+    @include max(md) {
+      font-size: vw2(24);
+      font-style: normal;
+      line-height: 1.2;
+    }
+
     &:last-child {
       margin-bottom: 0;
     }
   }
+
   ul {
     position: relative;
     display: block;
@@ -87,47 +119,71 @@
     font-weight: 400;
     color: $fontBlack;
     line-height: 140.625%;
+
+    @include max(xl) {
+      padding-left: vwf(34);
+      padding-right: vwf(20);
+      font-size: vwf(18);
+    }
+
     @include max(md) {
+      font-size: vw2(24);
+      font-style: normal;
+      line-height: 1.2;
+      padding-left: vw2(25);
+      padding-right: vw2(10);
+    }
+
+    li {
+      position: relative;
+      list-style-type: none;
+      font-size: vw(18);
+      font-style: normal;
+      font-weight: 400;
+      color: $fontBlack;
+      line-height: 140.625%;
+      margin-bottom: vw(7);
+
+      @include max(xl) {
+        font-size: vwf(18);
+        margin-bottom: vwf(7);
+      }
+
+      @include max(md) {
         font-size: vw2(24);
         font-style: normal;
         line-height: 1.2;
-        padding-left: vw2(25);
-        padding-right: vw2(10);
-    } 
-    li {
-        position: relative;
-        list-style-type: none;
-        font-size: vw(18);
-        font-style: normal;
-        font-weight: 400;
-        color: $fontBlack;
-        line-height: 140.625%;
-        margin-bottom: vw(7);
+        margin-bottom: vw2(15);
+      }
+
+      &::before {
+        content: '';
+        display: block;
+        height: vw(12);
+        width: vw(12);
+        border-radius: 50%;
+        background-color: #44C8F5;
+        left: vw(-27);
+        top: vw(7);
+        position: absolute;
+
+        @include max(xl) {
+          height: vwf(12);
+          width: vwf(12);
+          left: vwf(-27);
+          top: vwf(7);
+        }
+
         @include max(md) {
-            font-size: vw2(24);
-            font-style: normal;
-            line-height: 1.2;
-            margin-bottom: vw2(15);
+          height: vw2(8);
+          width: vw2(8);
+          left: vw2(-15);
+          top: vw2(10);
         }
-        &::before {
-            content: '';
-            display: block;
-            height: vw(12);
-            width: vw(12);
-            border-radius: 50%;
-            background-color: #44C8F5;
-            left: vw(-27);
-            top: vw(7);
-            position: absolute;
-            @include max(md) {
-                height: vw2(8);
-                width: vw2(8);
-                left: vw2(-15);
-                top: vw2(10);
-            }
-        }
+      }
     }
   }
+
   a {
     cursor: pointer;
     color: $fontBlack;
@@ -136,83 +192,121 @@
     font-weight: 400;
     color: $fontBlack;
     line-height: 140.625%;
-    @include max(md) {
-        font-size: vw2(24);
-        font-style: normal;
-        line-height: 1.2;
+
+    @include max(xl) {
+      font-size: vwf(18);
     }
+
+    @include max(md) {
+      font-size: vw2(24);
+      font-style: normal;
+      line-height: 1.2;
+    }
+
     text-decoration: underline;
     transition: all $tr-time-fast;
+
     &:hover {
       transition: all $tr-time-fast;
       text-decoration: none;
     }
-    
+
   }
+
   table {
     width: 100%;
     table-layout: fixed;
     margin-bottom: vw(50);
     overflow: hidden;
     border-spacing: 0;
+
     &:last-child {
       margin-bottom: 0;
     }
-    @include max(md) {
+
+    @include max(xl) {
+      margin-bottom: vwf(50);
     }
-    th,td {
+
+    th,
+    td {
       word-wrap: break-word;
       vertical-align: top;
       padding: vw(12) vw(48) vw(27) 0;
       text-align: left;
       min-height: vw(71);
       border-bottom: 1px solid #E3E3E3;
+
+      @include max(xl) {
+        padding: vwf(12) vwf(48) vwf(27) 0;
+        min-height: vwf(71);
+      }
+
       @include max(md) {
         padding: vw2(12) vw2(48) vw2(27) 0;
         text-align: left;
         min-height: vw2(71);
       }
     }
+
     th {
       color: #000;
       font-size: vw(20);
       font-style: normal;
       font-weight: 400;
       line-height: vw(27);
+
+      @include max(xl) {
+        font-size: vwf(20);
+        line-height: vwf(27);
+      }
+
       @include max(md) {
-          font-size: vw2(22);
-          font-style: normal;
-          line-height: 1.2;
-      }  
+        font-size: vw2(22);
+        font-style: normal;
+        line-height: 1.2;
+      }
+
       &:first-child {
         font-size: vw(13);
         font-weight: 500;
-        text-transform: uppercase;       
+        text-transform: uppercase;
         letter-spacing: vw(0.325);
         line-height: normal;
+
+        @include max(xl) {
+          font-size: vwf(13);
+          letter-spacing: vwf(0.325);
+        }
+
         @include max(md) {
-          font-size: vw2(20);      
+          font-size: vw2(20);
           letter-spacing: vw2(0.325);
           line-height: 1.2;
-        }  
+        }
       }
     }
 
-    th + th +th {
+    th+th+th {
       border-right: none;
     }
+
     td {
       border-bottom: 1px solid #E3E3E3;
       border-right: 1px solid #E3E3E3;
       background: $white;
-      color:  #454545;
+      color: #454545;
     }
-    td + td + td {
+
+    td+td+td {
       border-right: none;
     }
+
     tr {
       &:last-child {
-        th,td {
+
+        th,
+        td {
           &:first-child {
             @include max(md) {
               padding: vw2(12) vw2(48) vw2(27) 0;
@@ -220,6 +314,7 @@
               border-bottom: none;
             }
           }
+
           &:last-child {
             @include max(md) {
               padding: vw2(12) vw2(48) vw2(27) 0;
@@ -243,14 +338,23 @@
     background: $grey;
     border-radius: vw(15);
     margin-bottom: vw(50);
+
+    @include max(xl) {
+      max-width: vwf(440);
+      border-radius: vwf(15);
+      margin-bottom: vwf(50);
+    }
+
     &:before {
       content: "";
       display: block;
-      padding-top: 100%;   
+      padding-top: 100%;
       position: relative;
-      
+
     }
-    img, picture {
+
+    img,
+    picture {
       position: absolute;
       top: 0;
       left: 0;

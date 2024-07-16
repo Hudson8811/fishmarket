@@ -5,15 +5,22 @@
     background-color: $fontBlack;
     z-index: 15;
     width: 100%;
+
     @include max(md) {
         position: relative;
     }
+
     &__container {
         min-height: 100vh;
         padding: vw(91) 0 vw(152);
         display: flex;
         align-items: flex-end;
         justify-content: space-between;
+
+        @include max(xl) {
+            padding: vwf(91) 0 vwf(152);
+        }
+
         @include max(md) {
             min-height: auto;
             padding: vw2(90) 0 vw2(60);
@@ -21,6 +28,7 @@
             align-items: flex-start;
         }
     }
+
     &__text {
         max-width: vw(1037);
         margin-bottom: vw(100);
@@ -29,11 +37,19 @@
         line-height: 89%;
         letter-spacing: -0.02em;
         color: $white;
+
+        @include max(xl) {
+            max-width: vwf(1037);
+            margin-bottom: vwf(100);
+            font-size: vwf(70);
+        }
+
         @include max(md) {
             max-width: vw2(470);
             margin-bottom: vw2(70);
             font-size: vw2(30);
         }
+
         span {
             opacity: 0.5;
         }

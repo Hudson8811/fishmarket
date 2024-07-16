@@ -13,9 +13,17 @@
 	background-repeat: repeat-x;
 	z-index: 30;
 
+	@include max(xl) {
+		height: calc(100vh - vwf(55));
+	}
+
 	&__animation {
 		position: absolute;
 		top: vw(70);
+
+		@include max(xl) {
+			top: vwf(55);
+		}
 
 		@include max(md) {
 			position: relative;
@@ -23,7 +31,7 @@
 			width: 100vw;
 			height: auto;
 			height: 100%;
-			top: 0
+			top: 0 !important;
 		}
 
 		&--personally {
@@ -33,6 +41,15 @@
 			flex-flow: column nowrap;
 			width: 100%;
 
+
+			@include max(xl) {
+				top: auto;
+				height: calc(100vh - vw(00));
+				position: relative;
+				flex-flow: column nowrap;
+				width: 100%;
+			}
+
 			@include max(md) {
 				height: 100%;
 			}
@@ -40,6 +57,11 @@
 			.footer__menu {
 				height: calc(100vh - vw(00));
 				padding-top: vw(96);
+
+				@include max(xl) {
+					height: calc(100vh - vw(00));
+					padding-top: vw(96);
+				}
 
 				@include max(md) {
 					padding: vw2(20);
@@ -64,6 +86,11 @@
 		white-space: nowrap;
 		z-index: 10;
 		color: rgba(255, 255, 255, 0.2);
+
+
+		@include max(xl) {
+			top: calc(50% - vw(170));
+		}
 
 		@include max(md) {
 			position: relative;
@@ -117,6 +144,13 @@
 			border: none;
 		}
 
+		@include max(xl) {
+			width: vwf(473);
+			height: calc(100vh - vwf(55));
+			padding: vwf(25) vwf(37);
+			padding-bottom: vwf(25);
+		}
+
 		@include max(md) {
 			position: relative;
 			right: auto;
@@ -140,6 +174,11 @@
 			margin-bottom: vw(30);
 			list-style-type: none;
 
+			@include max(xl) {
+				padding-top: vwf(26);
+				margin-bottom: vwf(30);
+			}
+
 			&__item {
 				position: relative;
 				display: flex;
@@ -152,6 +191,12 @@
 				line-height: normal;
 				text-transform: uppercase;
 				margin-bottom: vw(19);
+
+				@include max(xl) {
+					gap: vwf(7);
+					font-size: vwf(14);
+					margin-bottom: vwf(19);
+				}
 
 				@include max(md) {
 					font-size: vw2(24);
@@ -171,6 +216,10 @@
 					text-transform: uppercase;
 					transition: all $tr-time-fast;
 					cursor: pointer;
+
+					@include max(xl) {
+						font-size: vwf(14);
+					}
 
 					@include max(md) {
 						font-size: vw2(24);
@@ -195,6 +244,10 @@
 					line-height: normal;
 					text-transform: uppercase;
 
+					@include max(xl) {
+						font-size: vwf(14);
+					}
+
 					@include max(md) {
 						font-size: vw2(24);
 						line-height: 1.2;
@@ -216,6 +269,12 @@
 				text-transform: uppercase;
 				margin-bottom: vw(19);
 
+				@include max(xl) {
+					top: vwf(26);
+					font-size: vwf(14);
+					margin-bottom: vwf(19);
+				}
+
 				@include max(md) {
 					position: relative;
 					top: auto;
@@ -236,6 +295,11 @@
 			gap: vw(18);
 			flex-shrink: 0;
 
+			@include max(xl) {
+				margin-top: vwf(30);
+				gap: vwf(18);
+			}
+
 			@include max(md) {
 				gap: vw2(18);
 				margin-top: vw2(30);
@@ -244,6 +308,11 @@
 			.new-btn {
 				width: vwf(20);
 				height: vwf(20);
+
+				@include max(xl) {
+					width: vwf(20);
+					height: vwf(20);
+				}
 
 				@include max(md) {
 					width: vw2(30);
@@ -254,6 +323,11 @@
 					width: vwf(20);
 					height: vwf(20);
 
+					@include max(xl) {
+						width: vwf(20);
+						height: vwf(20);
+					}
+
 					@include max(md) {
 						width: vw2(30);
 						height: vw2(30);
@@ -263,6 +337,11 @@
 				svg {
 					width: 100%;
 					height: 100%;
+
+					@include max(xl) {
+						width: 100%;
+						height: 100%;
+					}
 
 					@include max(md) {
 						width: 100%;
@@ -380,6 +459,10 @@
 		left: vwf(25);
 		z-index: 20;
 
+		@include max(xl) {
+			bottom: vwf(33);
+		}
+
 		@include max(md) {
 			position: relative;
 			top: auto;
@@ -397,6 +480,11 @@
 		left: vwf(25);
 		display: none;
 		width: vw(153);
+
+		@include max(xl) {
+			top: vwf(30);
+			width: vwf(153);
+		}
 
 		@include max(md) {
 			position: relative;
@@ -424,6 +512,11 @@
 		align-items: flex-end;
 		text-align: right;
 
+		@include max(xl) {
+			bottom: vwf(33);
+			right: vwf(503);
+		}
+
 		@include max(md) {
 			position: relative;
 			top: auto;
@@ -440,6 +533,10 @@
 		&__date {
 			color: rgba(255, 255, 255, 0.2);
 			margin-bottom: vw(14);
+
+			@include max(xl) {
+				margin-bottom: vwf(14);
+			}
 
 			@include max(md) {
 				margin-bottom: vw2(10);

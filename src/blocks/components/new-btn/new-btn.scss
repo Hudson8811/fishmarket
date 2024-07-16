@@ -8,12 +8,19 @@
     transition: all $tr-time-fast linear;
     text-decoration: none;
     cursor: pointer;
+
+    @include max(xl) {
+        font-size: vwf(12);
+    }
+
     @include max(md) {
         font-size: vw2(12);
     }
+
     &--link {
         background-color: transparent;
     }
+
     &--big {
         width: vw(411);
         display: flex;
@@ -21,17 +28,27 @@
         align-items: flex-end;
         justify-content: space-between;
         font-size: vw(20);
+
+        @include max(xl) {
+            width: vwf(411);
+            padding: vwf(20) vwf(20) vwf(22);
+            font-size: vwf(20);
+        }
+
         @include max(md) {
             width: vw2(260);
             padding: vw2(20) vw2(20) vw2(22);
         }
+
         &.new-btn--blue {
             &:hover {
                 background-color: $white;
                 color: $blueLight;
+
                 .new-btn__icon {
                     background-color: $blueLight;
                     transition: all $tr-time-fast linear;
+
                     svg {
                         use {
                             transition: all $tr-time-fast linear;
@@ -42,6 +59,7 @@
                 }
             }
         }
+
         .new-btn__icon {
             display: flex;
             justify-content: center;
@@ -51,14 +69,28 @@
             background-color: $white;
             border-radius: 100%;
             margin-bottom: vw(120);
+
+            @include max(xl) {
+                width: vwf(59);
+                height: vwf(59);
+                margin-bottom: vwf(120);
+            }
+
             @include max(md) {
                 width: vw2(50);
                 height: vw2(50);
                 margin-bottom: vw2(48);
             }
+
             svg {
                 width: vw(11);
                 height: vw(8);
+
+                @include max(xl) {
+                    width: vwf(11);
+                    height: vwf(8);
+                }
+
                 @include max(md) {
                     width: vw2(11);
                     height: vw2(8);
@@ -66,6 +98,7 @@
             }
         }
     }
+
     &--small {
         width: 100%;
         display: flex;
@@ -73,9 +106,15 @@
         align-items: center;
         justify-content: space-between;
         transition: all $tr-time-fast linear;
+
+        @include max(xl) {
+            padding: vwf(30) vwf(25) vwf(30) vwf(18);
+        }
+
         @include max(md) {
             padding: vw2(30) vw2(25) vw2(30) vw2(18);
         }
+
         .new-btn__icon {
             display: flex;
             justify-content: center;
@@ -84,13 +123,26 @@
             height: vw(8);
             background-color: transparent !important;
             margin-bottom: 0;
+
+            @include max(xl) {
+                width: vwf(12);
+                height: vwf(8);
+            }
+
             @include max(md) {
                 width: vw2(12);
                 height: vw2(8);
             }
+
             svg {
                 width: vw(12);
                 height: vw(8);
+
+                @include max(xl) {
+                    width: vwf(12);
+                    height: vwf(8);
+                }
+
                 @include max(md) {
                     width: vw2(12);
                     height: vw2(8);
@@ -107,6 +159,7 @@
                     }
                 }
             }
+
             &:hover {
                 .new-btn__icon {
                     svg {
@@ -130,12 +183,15 @@
             }
         }
     }
+
     &--blue {
         background-color: $blueNtn;
         color: $white;
+
         .new-btn__icon {
             background-color: $white;
             transition: all $tr-time-fast linear;
+
             svg {
                 use {
                     transition: all $tr-time-fast linear;
@@ -144,23 +200,29 @@
                 }
             }
         }
+
         &:hover {
             background-color: $blueHover;
         }
     }
+
     &--black {
         background-color: $fontBlack;
         color: $white;
+
         .new-btn__icon {
             svg {
                 stroke: $fontBlack;
                 fill: none;
             }
         }
+
         &:hover {
             background-color: $blueHover;
+
             .new-btn__icon {
                 background-color: $white;
+
                 svg {
                     use {
                         stroke: $fontBlack;
@@ -170,12 +232,15 @@
             }
         }
     }
+
     &--white {
         background-color: $white;
         color: $black;
+
         .new-btn__icon {
             background-color: $blueNtn;
             transition: all $tr-time-fast linear;
+
             svg {
                 use {
                     transition: all $tr-time-fast linear;
@@ -184,11 +249,14 @@
                 }
             }
         }
+
         &:hover {
             background-color: $blueHover;
             color: $white;
+
             .new-btn__icon {
                 background-color: $white;
+
                 svg {
                     use {
                         stroke: $fontBlack;
@@ -209,15 +277,23 @@
         height: vw(59);
         border-radius: 100%;
         padding: 0;
+
+        @include max(xl) {
+            width: vwf(59);
+            height: vwf(59);
+        }
+
         @include max(md) {
             width: vw2(59);
             height: vw2(59);
         }
+
         &:hover {
             .new-btn__icon {
                 background-color: transparent;
             }
         }
+
         .new-btn__icon {
             display: flex;
             justify-content: center;
@@ -225,18 +301,32 @@
             width: vw(59);
             height: vw(59);
             background-color: transparent;
+
+            @include max(xl) {
+                width: vwf(59);
+                height: vwf(59);
+            }
+
             @include max(md) {
                 width: vw2(59);
                 height: vw2(59);
             }
+
             svg {
                 width: vw(11);
                 height: vw(8);
+
+                @include max(xl) {
+                    width: vwf(11);
+                    height: vwf(8);
+                }
+
                 @include max(md) {
                     width: vw2(11);
                     height: vw2(8);
                 }
             }
+
             svg use {
                 stroke: $fontBlack;
             }

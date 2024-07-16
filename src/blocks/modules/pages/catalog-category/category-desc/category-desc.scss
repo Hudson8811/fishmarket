@@ -1,17 +1,25 @@
 .category-desc {
     padding: vw(35) 0 vw(262);
     background-color: $greyBg;
+
+    @include max(xl) {
+        padding: vwf(35) 0 vwf(262);
+    }
+
     @include max(md) {
         padding: vw2(35) 0 vw2(150);
     }
+
     &__container {
         display: flex;
         justify-content: space-between;
+
         @include max(md) {
             flex-direction: column;
             gap: vw2(24);
         }
     }
+
     &__title {
         max-width: vw(575);
         font-size: vw(32);
@@ -19,27 +27,48 @@
         line-height: 1.28;
         color: $fontBlack;
         text-transform: none;
+
+        @include max(xl) {
+            max-width: vwf(575);
+            font-size: vwf(32);
+        }
+
         @include max(md) {
             max-width: 100%;
             font-size: vw2(32);
         }
     }
+
     &__text {
         max-width: vw(756);
+
+        @include max(xl) {
+            max-width: vwf(756);
+        }
+
         @include max(md) {
             max-width: 100%;
         }
+
         p+p {
             margin-top: vw(27);
+
+            @include max(xl) {
+                margin-top: vwf(27);
+            }
+
             @include max(md) {
                 margin-top: vw2(27);
             }
         }
+
         ul {
             list-style-type: none;
             padding-left: 0 !important;
+
             li {
                 margin-bottom: 0 !important;
+
                 &::before {
                     content: none !important;
                 }

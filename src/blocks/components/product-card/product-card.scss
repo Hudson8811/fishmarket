@@ -2,75 +2,122 @@
     border: 1px solid $greyLight;
     position: relative;
     background-color: $white;
+
     &__link {
         display: flex;
         flex-direction: column;
         height: 100%;
+
         @include max(md) {
             height: auto;
         }
     }
+
     &__header {
         margin: vw(21) vw(20) 0;
+
+        @include max(xl) {
+            margin: vwf(21) vwf(20) 0;
+        }
+
         @include max(md) {
             margin: vw2(21) vw2(20) 0;
-        } 
+        }
     }
+
     &__title {
         font-size: vw(24);
         font-weight: 500;
         line-height: 0.958;
         color: $fontBlack;
+
+        @include max(xl) {
+            font-size: vwf(24);
+        }
+
         @include max(md) {
             font-size: vw2(30);
-        } 
+        }
     }
+
     &__vcode {
         margin: vw(11) 0 vw(5);
         font-size: vw(14);
         font-weight: 600;
         line-height: 1.22;
         color: $black;
+
+        @include max(xl) {
+            margin: vwf(11) 0 vwf(5);
+            font-size: vwf(14);
+        }
+
         @include max(md) {
             font-size: vw2(14);
         }
     }
+
     &__photo {
         margin: auto 0 auto;
         height: vw(320);
         width: 100%;
+
         img {
             width: 100%;
             height: 100%;
             object-fit: contain;
         }
+
+        @include max(xl) {
+            height: vwf(320);
+        }
+
         @include max(md) {
             height: vw2(420);
-        } 
+        }
     }
+
     &__controls {
         display: flex;
         justify-content: space-between;
         align-items: center;
         margin: vw(5) vw(20) 0;
+
+        @include max(xl) {
+            margin: vwf(5) vwf(20) 0;
+        }
+
         @include max(md) {
             margin: vw2(5) vw2(20) 0;
-        } 
+        }
     }
+
     &__price {
         padding: vw(12) vw(26) vw(16);
         font-size: vw(24);
         font-weight: 600;
         line-height: 1.22;
-        color: $fontBlack; 
+        color: $fontBlack;
         border: 1px solid $greyLight;
+
+        @include max(xl) {
+            padding: vwf(12) vwf(26) vwf(16);
+            font-size: vwf(24);
+        }
+
         @include max(md) {
             padding: vw2(12) vw2(26) vw2(16);
             font-size: vw2(24);
-        } 
+        }
     }
+
     &__info {
         margin-top: vw(17);
+
+        @include max(xl) {
+            margin-top: vwf(17);
+        }
+
         @include max(md) {
             margin-top: vw2(17);
         }
@@ -86,10 +133,15 @@
         display: grid;
         grid-template-columns: auto vw(75);
         grid-template-areas: 'a b'
-                            'c c';
+            'c c';
         z-index: -1;
         opacity: 0;
         transition: all $tr-time linear;
+
+        @include max(xl) {
+            grid-template-columns: auto vwf(75);
+        }
+
         @include max(md) {
             position: relative;
             left: 0;
@@ -99,11 +151,13 @@
             grid-template-columns: auto vw2(75);
             z-index: 1;
             opacity: 1;
-        } 
+        }
     }
+
     &__offer.new-btn {
         grid-area: a;
     }
+
     &__cart.new-btn {
         grid-area: b;
         display: flex;
@@ -112,25 +166,42 @@
         border-radius: 0;
         width: auto;
         height: auto;
+
         .new-btn__icon {
             width: vw(32);
             height: vw(32);
+
+            @include max(xl) {
+                width: vwf(32);
+                height: vwf(32);
+            }
+
             @include max(md) {
                 width: vw2(32);
                 height: vw2(32);
             }
-            svg, svg use {
+
+            svg,
+            svg use {
                 width: vw(32);
                 height: vw(32);
+
+                @include max(xl) {
+                    width: vwf(32);
+                    height: vwf(32);
+                }
+
                 @include max(md) {
                     width: vw2(32);
                     height: vw2(32);
                 }
+
                 fill: inherit;
-                stroke: inherit;  
+                stroke: inherit;
             }
         }
     }
+
     &__more.new-btn {
         grid-area: c;
     }
@@ -148,8 +219,9 @@
     .product-card--row {
         display: flex;
         align-items: center;
-        padding: 0 vw(20) vw(11) vw(10);
-        gap: vw(50);
+        padding: 0 vwf(20) vwf(11) vwf(10);
+        gap: vwf(50);
+
         .product-card__link {
             flex-basis: auto;
             flex-shrink: 1;
@@ -158,6 +230,74 @@
             align-items: center;
             justify-content: space-between;
         }
+
+        .product-card__photo {
+            order: 0;
+            flex-basis: vwf(129);
+            flex-shrink: 0;
+            flex-grow: 0;
+            margin-right: vwf(12);
+            height: vwf(124);
+        }
+
+        .product-card__header {
+            order: 1;
+            min-width: vwf(374);
+            flex-basis: vwf(374);
+            margin: 0 0 0 vwf(47);
+        }
+
+        .product-card__info {
+            order: 2;
+            min-width: vwf(330);
+            flex-basis: vwf(330);
+            margin: 0 0 0 vwf(47);
+        }
+
+        .product-card__controls {
+            order: 3;
+            min-width: vwf(308);
+            flex-basis: auto;
+            gap: vwf(17);
+            margin: 0 0 0 auto;
+        }
+
+        .product-card__price {
+            white-space: nowrap;
+        }
+
+        .product-card__btns {
+            grid-template-areas: 'a b';
+            flex-basis: vwf(443);
+            flex-shrink: 0;
+            flex-grow: 0;
+            position: relative;
+            z-index: 1;
+            opacity: 1;
+        }
+
+        .product-card__more.new-btn {
+            display: none;
+        }
+    }
+}
+
+@include min(xl) {
+    .product-card--row {
+        display: flex;
+        align-items: center;
+        padding: 0 vw(20) vw(11) vw(10);
+        gap: vw(50);
+
+        .product-card__link {
+            flex-basis: auto;
+            flex-shrink: 1;
+            flex-grow: 1;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+
         .product-card__photo {
             order: 0;
             flex-basis: vw(129);
@@ -166,18 +306,21 @@
             margin-right: vw(12);
             height: vw(124);
         }
+
         .product-card__header {
             order: 1;
             min-width: vw(374);
             flex-basis: vw(374);
             margin: 0 0 0 vw(47);
         }
+
         .product-card__info {
             order: 2;
             min-width: vw(330);
             flex-basis: vw(330);
             margin: 0 0 0 vw(47);
         }
+
         .product-card__controls {
             order: 3;
             min-width: vw(308);
@@ -185,9 +328,11 @@
             gap: vw(17);
             margin: 0 0 0 auto;
         }
+
         .product-card__price {
             white-space: nowrap;
         }
+
         .product-card__btns {
             grid-template-areas: 'a b';
             flex-basis: vw(443);
@@ -197,6 +342,7 @@
             z-index: 1;
             opacity: 1;
         }
+
         .product-card__more.new-btn {
             display: none;
         }

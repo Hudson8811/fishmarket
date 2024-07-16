@@ -5,11 +5,18 @@
         gap: vw(24);
         border: 1px solid #CDD1D2;
         padding: vw(24) vw(26) vw(27);
+
+        @include max(xl) {
+            gap: vwf(24);
+            padding: vwf(24) vwf(26) vwf(27);
+        }
+
         @include max(md) {
             gap: vw2(24);
             padding: vw2(24) vw2(26) vw2(27);
-        } 
+        }
     }
+
     &__photo {
         width: vw(82);
         height: vw(82);
@@ -22,22 +29,36 @@
         font-weight: 500;
         line-height: 1.06em;
         color: #fff;
+
+        @include max(xl) {
+            width: vwf(82);
+            height: vwf(82);
+            font-size: vwf(32);
+        }
+
         @include max(md) {
             width: vw2(82);
             height: vw2(82);
             font-size: vw2(32);
-        } 
+        }
     }
+
     &__name {
         font-size: vw(12);
         font-weight: 600;
         line-height: 1.22em;
         color: $fontBlack;
         text-transform: uppercase;
+
+        @include max(xl) {
+            font-size: vwf(12);
+        }
+
         @include max(md) {
             font-size: vw2(12);
-        } 
+        }
     }
+
     &__links {
         display: flex;
         flex-direction: column;
@@ -45,6 +66,7 @@
         border-left: 1px solid #CDD1D2;
         border-right: 1px solid #CDD1D2;
     }
+
     &__link {
         padding: vw(35) vw(25);
         font-size: vw(12);
@@ -54,18 +76,28 @@
         text-transform: uppercase;
         border-bottom: 1px solid #CDD1D2;
         transition: all $tr-time-fast;
+
+        @include max(xl) {
+            padding: vwf(35) vwf(25);
+            font-size: vwf(12);
+        }
+
         @include max(md) {
             padding: vw2(35) vw2(25);
             font-size: vw2(12);
-        } 
-        &:hover, &--current {
+        }
+
+        &:hover,
+        &--current {
             background-color: $fontBlack;
             color: $white;
         }
+
         &--current {
             pointer-events: none;
         }
     }
+
     &__logout {
         display: block;
         font-size: vw(12);
@@ -74,10 +106,17 @@
         color: $fontBlack;
         text-transform: uppercase;
         margin: vw(36) 0 0 vw(25);
+
+        @include max(xl) {
+            font-size: vwf(12);
+            margin: vwf(36) 0 0 vwf(25);
+        }
+
         @include max(md) {
             font-size: vw2(12);
             margin: vw2(36) 0 0 vw2(25);
-        } 
+        }
+
         &:hover {
             color: $blueHover;
         }

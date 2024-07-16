@@ -5,21 +5,35 @@
     background-repeat: no-repeat;
     background-size: vw(861) auto;
     background-position: right vw(-34) top vw(170);
+
+    @include max(xl) {
+        min-height: vwf(599);
+        background-size: vwf(861) auto;
+        background-position: right vwf(-34) top vwf(170);
+    }
+
     @include max(md) {
         background-size: vw2(260) auto;
         background-position: right vw2(-34) bottom vw2(20);
     }
+
     &__container {
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
         padding: vw(20) 0;
+
+        @include max(xl) {
+            padding: vwf(20) 0;
+        }
+
         @include max(md) {
             flex-direction: column;
             gap: vw2(24);
             padding: vw2(40) 0;
         }
     }
+
     &__title {
         max-width: vw(960);
         font-size: vw(82);
@@ -27,18 +41,28 @@
         line-height: 0.97;
         text-transform: uppercase;
         color: $white;
+
+        @include max(xl) {
+            max-width: vwf(960);
+            font-size: vwf(82);
+        }
+
         @include max(md) {
             max-width: 100%;
         }
     }
+
     &__btn.new-btn {
         &:hover {
             background-color: $black;
+
             .btn--box__text {
                 color: $white;
             }
+
             .btn.btn--circle {
                 background-color: $white;
+
                 svg use {
                     stroke: $fontBlack;
                 }

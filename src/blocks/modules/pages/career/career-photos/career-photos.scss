@@ -1,6 +1,11 @@
 .career-photos {
     padding: vw(35) 0;
     overflow: hidden;
+
+    @include max(xl) {
+        padding: vwf(35) 0;
+    }
+
     @include max(md) {
         padding: vw2(105) 0 0;
     }
@@ -8,6 +13,12 @@
     &__slide {
         width: vw(653);
         height: vw(427);
+
+        @include max(xl) {
+            width: vwf(653);
+            height: vwf(427);
+        }
+
         @include max(md) {
             width: vw2(400);
             height: vw2(262);
@@ -18,6 +29,7 @@
         &:hover {
             .career-photos__control {
                 opacity: 1;
+
                 &.swiper-button-disabled {
                     opacity: 0.35;
                 }
@@ -28,6 +40,7 @@
     &__img {
         width: 100%;
         height: 100%;
+
         &::after {
             content: "";
             width: 100%;
@@ -41,11 +54,13 @@
             z-index: 5;
             transition: all $tr-time;
         }
+
         &:hover::after {
             transition: all $tr-time;
             content: url(../img/zoom.svg);
             background: rgba(27, 31, 34, 0.6);
         }
+
         img {
             width: 100%;
             height: 100%;
@@ -64,50 +79,77 @@
         transition: $tr-time;
         top: 53.5%;
         opacity: 0;
+
+        @include max(xl) {
+            width: vwf(59);
+            height: vwf(59);
+        }
+
         &.swiper-button-disabled {
             opacity: 0;
+
             @include max(md) {
                 opacity: 0.35;
             }
         }
+
         @include max(md) {
             width: vw2(50);
             height: vw2(50);
             opacity: 1;
             top: vw2(-50);
-        } 
+        }
+
         &::after {
             content: none;
         }
+
         &:hover {
             background-color: $blueHover;
         }
+
         svg {
             width: vw(11);
             height: vw(8);
+
+            @include max(xl) {
+                width: vwf(11);
+                height: vwf(8);
+            }
+
             @include max(md) {
                 width: vw2(11);
                 height: vw2(8);
-            } 
+            }
+
             use {
                 stroke: $white;
                 fill: none;
                 width: vw(11);
                 height: vw(8);
+
+                @include max(xl) {
+                    width: vwf(11);
+                    height: vwf(8);
+                }
+
                 @include max(md) {
                     width: vw2(11);
                     height: vw2(8);
-                } 
+                }
             }
-        } 
+        }
+
         &.swiper-button-prev {
             transform: rotate(180deg);
             left: 0;
+
             @include max(md) {
                 right: vw2(70);
                 left: auto;
-            } 
+            }
         }
+
         &.swiper-button-next {
             right: 0;
         }

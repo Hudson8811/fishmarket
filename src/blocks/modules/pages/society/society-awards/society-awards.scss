@@ -2,48 +2,82 @@
     overflow-x: hidden;
     background: $greyBg;
     padding: vw(25) 0 vw(100);
+
+    @include max(xl) {
+        padding: vwf(25) 0 vwf(100);
+    }
+
     @include max(md) {
         padding: vw2(40) 0 vw2(80);
-    } 
+    }
+
     &__title {
         max-width: vw(380);
         font-size: vw(60);
+
+        @include max(xl) {
+            max-width: vwf(380);
+            font-size: vwf(60);
+        }
+
         @include max(md) {
             max-width: calc(100% - vw2(150));
-        } 
+        }
     }
+
     &__slider {
         position: relative;
         margin-top: vw(60);
+
         &:hover {
             .society-awards__btn {
                 opacity: 1;
             }
+
             .society-awards__btn.swiper-button-disabled {
                 opacity: 0.35;
             }
         }
+
+        @include max(xl) {
+            margin-top: vwf(60);
+        }
+
         @include max(md) {
             margin-top: vw2(60);
-        } 
+        }
     }
+
     &__slide {
         width: fit-content;
         max-width: vw(544);
+
+        @include max(xl) {
+            max-width: vwf(544);
+        }
+
         @include max(md) {
             max-width: vw2(536);
-        } 
+        }
     }
+
     &__img {
         display: block;
         position: relative;
         max-height: vw(539);
         max-width: vw(544);
+
+        @include max(xl) {
+            max-height: vwf(539);
+            max-width: vwf(544);
+        }
+
         @include max(md) {
             max-height: vw2(530);
             width: auto;
             max-width: vw2(536);
-        } 
+        }
+
         &::after {
             content: "";
             width: 100%;
@@ -57,30 +91,45 @@
             z-index: 5;
             transition: all $tr-time;
         }
+
         &:hover::after {
             transition: all $tr-time;
             content: url(../img/zoom.svg);
             background: rgba(27, 31, 34, 0.6);
         }
+
         img {
             width: 100%;
             height: 100%;
             max-height: vw(539);
             max-width: vw(544);
             object-fit: contain;
+
+            @include max(xl) {
+                max-height: vwf(539);
+                max-width: vwf(544);
+            }
+
             @include max(md) {
                 max-height: vw2(530);
                 width: auto;
                 max-width: vw2(536);
-            } 
+            }
         }
     }
+
     &__text {
         margin-top: vw(20);
+
+        @include max(xl) {
+            margin-top: vwf(20);
+        }
+
         @include max(md) {
             margin-top: vw2(20);
-        } 
+        }
     }
+
     &__btn {
         width: vw(59);
         height: vw(59);
@@ -92,47 +141,73 @@
         transition: $tr-time;
         top: 53.5%;
         opacity: 0;
+
+        @include max(xl) {
+            width: vwf(59);
+            height: vwf(59);
+        }
+
         @include max(md) {
             width: vw2(50);
             height: vw2(50);
             opacity: 1;
             top: vw2(-70);
-        } 
+        }
+
         &.swiper-button-disabled {
             opacity: 0;
         }
+
         &::after {
             content: none;
         }
+
         &:hover {
             background-color: $blueHover;
         }
+
         svg {
             width: vw(11);
             height: vw(8);
+
+            @include max(xl) {
+                width: vwf(11);
+                height: vwf(8);
+            }
+
             @include max(md) {
                 width: vw2(11);
                 height: vw2(8);
-            } 
+            }
+
             use {
                 stroke: $white;
                 fill: none;
                 width: vw(11);
                 height: vw(8);
+
+                @include max(xl) {
+                    width: vwf(11);
+                    height: vwf(8);
+                }
+
                 @include max(md) {
                     width: vw2(11);
                     height: vw2(8);
-                } 
+                }
             }
-        } 
+        }
+
         &.swiper-button-prev {
             transform: rotate(180deg);
             left: 0;
+
             @include max(md) {
                 right: vw2(70);
                 left: auto;
-            } 
+            }
         }
+
         &.swiper-button-next {
             right: 0;
         }

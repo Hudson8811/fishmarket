@@ -6,6 +6,10 @@
     padding: vw(814) 0 vw(29);
     background-size: cover;
 
+    @include max(xl) {
+        padding: vwf(814) 0 vwf(29);
+    }
+
     @include max(md) {
         position: relative;
         padding: vw2(200) 0 vw(20);
@@ -22,6 +26,11 @@
         justify-content: space-between;
         flex-wrap: wrap;
 
+        @include max(xl) {
+            background-size: vwf(966) auto;
+            padding: vwf(30);
+        }
+
         @include max(md) {
             flex-direction: column;
             background-size: vw2(366) auto;
@@ -37,6 +46,11 @@
         color: $fontBlack;
         text-transform: uppercase;
 
+        @include max(xl) {
+            max-width: vwf(440);
+            font-size: vwf(82);
+        }
+
         @include max(md) {
             max-width: vw2(440);
             font-size: vw2(32);
@@ -46,6 +60,10 @@
     &__wrapper {
         flex-basis: 100%;
         margin-top: vw(96);
+
+        @include max(xl) {
+            margin-top: vwf(96);
+        }
 
         @include max(md) {
             flex-basis: auto;
@@ -61,6 +79,11 @@
         letter-spacing: -0.01em;
         color: $fontBlack;
         opacity: 60%;
+
+        @include max(xl) {
+            max-width: vwf(535);
+            font-size: vwf(32);
+        }
 
         @include max(md) {
             max-width: vw2(335);

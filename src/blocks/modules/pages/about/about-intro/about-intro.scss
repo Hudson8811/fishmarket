@@ -11,6 +11,10 @@
         height: vw(268);
         background: linear-gradient(0deg, #07171D 0%, rgba(7, 23, 29, 0) 100%);
 
+        @include max(xl) {
+            height: vwf(268);
+        }
+
         @include max(md) {
             height: vw2(260);
         }
@@ -22,6 +26,10 @@
         display: flex;
         flex-direction: column;
         align-items: flex-start;
+
+        @include max(xl) {
+            padding: vwf(114) 0 vwf(50);
+        }
 
         @include max(md) {
             min-height: auto;
@@ -38,6 +46,11 @@
         width: 100%;
         text-align: center;
 
+        @include max(xl) {
+            margin-top: vwf(-29);
+            font-size: vwf(419);
+        }
+
         @include max(md) {
             margin-top: 0;
             font-size: vw2(118);
@@ -53,6 +66,11 @@
         letter-spacing: -0.02em;
         color: $white;
         z-index: 5;
+
+        @include max(xl) {
+            max-width: vwf(847);
+            font-size: vwf(70);
+        }
 
         @include max(md) {
             max-width: vw2(370);

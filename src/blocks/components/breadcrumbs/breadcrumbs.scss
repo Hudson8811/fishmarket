@@ -1,6 +1,7 @@
 .breadcrumbs {
     position: relative;
     z-index: 30;
+
     &__list {
         list-style-type: none;
         display: flex;
@@ -10,23 +11,32 @@
         font-weight: 600;
         text-transform: uppercase;
         color: $fontBlack;
+
+        @include max(xl) {
+            gap: vwf(4);
+            font-size: vwf(12);
+        }
+
         @include max(md) {
             gap: vw2(4);
             font-size: vw2(12);
-        } 
+        }
     }
+
     &__item {
         a {
             transition: $tr-time-fast;
             cursor: pointer;
             color: inherit;
         }
+
         &:hover {
             a {
                 color: $blueHover;
             }
         }
     }
+
     &__item--current {
         opacity: 0.16;
         pointer-events: none;
@@ -37,6 +47,7 @@
     .breadcrumbs__list {
         color: $fontBlack;
     }
+
     .breadcrumbs__item--current {
         opacity: 0.16;
     }
@@ -46,6 +57,7 @@
     .breadcrumbs__list {
         color: $white;
     }
+
     .breadcrumbs__item--current {
         opacity: 1;
     }

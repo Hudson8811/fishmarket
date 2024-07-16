@@ -3,9 +3,15 @@
     display: flex;
     align-items: center;
     gap: vw(12);
+
+    @include max(xl) {
+        gap: vwf(12);
+    }
+
     @include max(md) {
         gap: vw2(12);
     }
+
     &__input {
         position: absolute;
         left: 0;
@@ -14,20 +20,29 @@
         height: 0;
         overflow: hidden;
         opacity: 0;
-        &:checked ~ .input-radio__fake::after {
+
+        &:checked~.input-radio__fake::after {
             opacity: 1;
         }
     }
+
     &__fake {
         position: relative;
         width: vw(26);
         height: vw(26);
         border: 1px solid $greyBorder;
         border-radius: 100%;
+
+        @include max(xl) {
+            width: vwf(26);
+            height: vwf(26);
+        }
+
         @include max(md) {
             width: vw2(26);
             height: vw2(26);
         }
+
         &::after {
             content: "";
             width: 61.5%;
@@ -39,14 +54,20 @@
             border-radius: 100%;
             background-color: $blueLight;
             opacity: 0;
-            transition: all $tr-time-fast linear; 
+            transition: all $tr-time-fast linear;
         }
     }
+
     &__text {
         font-size: vw(18);
         font-weight: 400;
         line-height: 1.4;
         color: $fontBlack;
+
+        @include max(xl) {
+            font-size: vwf(18);
+        }
+
         @include max(md) {
             font-size: vw2(18);
         }

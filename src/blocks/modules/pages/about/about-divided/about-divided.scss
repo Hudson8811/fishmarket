@@ -8,6 +8,11 @@
     min-height: 100vh;
     width: 100%;
     background-color: $white;
+
+    @include max(xl) {
+        height: vwf(800);
+    }
+
     @include max(md) {
         position: relative;
         height: auto;
@@ -15,71 +20,95 @@
         flex-direction: column;
         padding: vw2(40) vw2(20);
     }
+
     &--left {
         flex-direction: row-reverse;
         background-color: $fontBlack;
+
         .ap-divided__info {
             background-image: url("../img/ap_waves_dark.png");
             background-size: vw(728) auto;
             background-position: right 0 bottom vw(133);
             background-repeat: no-repeat;
         }
+
         .ap-divided__title {
             color: $white;
         }
+
         .ap-divided__text {
             color: $white;
             opacity: 0.4;
             letter-spacing: -0.03em;
             max-width: vw(535);
+
+            @include max(xl) {
+                max-width: vwf(535);
+            }
+
             @include max(md) {
                 max-width: vw2(350);
             }
         }
+
         .ap-divided__img {
             img {
                 object-position: right;
             }
         }
     }
+
     &.ap-divided--society .ap-divided__info {
         background-size: vw(884) auto;
+
+        @include max(xl) {
+            background-size: vwf(884) auto;
+        }
+
         @include max(md) {
             background-size: vw2(384) auto;
         }
     }
-    &.ap-divided--production  {
+
+    &.ap-divided--production {
         .new-btn.new-btn--blue:hover {
             background-color: $blueHover;
             color: $white;
+
             .new-btn__icon {
                 background-color: $white;
+
                 svg use {
                     stroke: $fontBlack;
                 }
             }
         }
     }
+
     &__img {
         flex-basis: calc(100% / 3);
         height: 100%;
         flex-grow: 0;
         flex-shrink: 0;
+
         @include max(md) {
             flex-basis: auto;
             height: vw2(350);
             margin-top: vw2(15);
         }
+
         img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             object-position: left;
+
             @include max(md) {
                 object-position: left top;
             }
         }
     }
+
     &__info {
         display: flex;
         flex-direction: column;
@@ -91,6 +120,13 @@
         background-size: vw(788) auto;
         background-position: right 0 bottom vw(95);
         background-repeat: no-repeat;
+
+        @include max(xl) {
+            padding: vwf(100) vwf(50) vwf(33);
+            background-size: vwf(788) auto;
+            background-position: right 0 bottom vwf(95);
+        }
+
         @include max(md) {
             display: contents;
             padding: vw2(45) vw2(20) vw2(30);
@@ -98,6 +134,7 @@
             background-position: right 0 bottom vw2(80);
         }
     }
+
     &__title {
         max-width: vw(743);
         font-size: vw(82);
@@ -105,12 +142,19 @@
         font-weight: 500;
         text-transform: uppercase;
         color: $fontBlack;
+
+        @include max(xl) {
+            max-width: vwf(743);
+            font-size: vwf(82);
+        }
+
         @include max(md) {
             order: -1;
             max-width: 100%;
             font-size: vw2(32);
         }
     }
+
     &__text {
         margin-top: vw(33);
         max-width: vw(436);
@@ -120,6 +164,13 @@
         font-weight: 400;
         color: $fontBlack;
         opacity: 0.6;
+
+        @include max(xl) {
+            margin-top: vwf(33);
+            max-width: vwf(436);
+            font-size: vwf(32);
+        }
+
         @include max(md) {
             order: -1;
             margin-top: vw2(25);
@@ -127,10 +178,16 @@
             font-size: vw2(20);
         }
     }
+
     &__btns {
         display: flex;
         margin-top: auto;
         gap: vw(25);
+
+        @include max(xl) {
+            gap: vwf(25);
+        }
+
         @include max(md) {
             gap: vw2(15);
             margin-top: vw2(30);

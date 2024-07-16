@@ -7,10 +7,17 @@
     border: 1px solid $greyLight;
     background-color: $white;
     transition: all $tr-time linear;
+
+    @include max(xl) {
+        min-height: vwf(288);
+        padding: vwf(21) vwf(17) vwf(28) vwf(24);
+    }
+
     @include max(md) {
         min-height: vw2(200);
-        padding: vw2(21) vw2(17) vw2(28) vw2(24);  
-    } 
+        padding: vw2(21) vw2(17) vw2(28) vw2(24);
+    }
+
     &:hover {
         background-color: #F7F7F7;
     }
@@ -29,9 +36,14 @@
         justify-content: space-between;
         align-items: flex-start;
         gap: vw(20);
+
+        @include max(xl) {
+            gap: vwf(20);
+        }
+
         @include max(md) {
-            gap: vw2(20); 
-        } 
+            gap: vw2(20);
+        }
     }
 
     &__title {
@@ -46,11 +58,18 @@
         -webkit-box-orient: vertical;
         overflow: hidden;
         text-transform: uppercase;
+
+        @include max(xl) {
+            margin-top: vwf(6);
+            max-width: vwf(580);
+            font-size: vwf(32);
+        }
+
         @include max(md) {
             margin-top: vw2(6);
             max-width: vw2(370);
             font-size: vw2(20);
-        } 
+        }
     }
 
     &__city {
@@ -62,23 +81,45 @@
         font-weight: 400;
         line-height: 1.4;
         color: $fontBlack;
+
         svg {
             width: vw(21);
             height: vw(27);
+
+            @include max(xl) {
+                width: vwf(21);
+                height: vwf(27);
+            }
+
             @include max(md) {
                 width: vw2(13);
                 height: vw2(16);
             }
+
             use {
                 width: vw(21);
                 height: vw(27);
+
+                @include max(xl) {
+                    width: vwf(21);
+                    height: vwf(27);
+                }
+
                 @include max(md) {
                     width: vw2(12);
                     height: vw2(16);
                 }
+
                 fill: $blueLight;
             }
         }
+
+        @include max(xl) {
+            gap: vwf(14);
+            margin: vwf(29) 0 0;
+            font-size: vwf(18);
+        }
+
         @include max(md) {
             gap: vw2(14);
             margin: vw2(15) 0 0;
@@ -89,15 +130,27 @@
     &__desc.text-block {
         margin-top: vw(15);
         margin-bottom: vw(30);
+
+        @include max(xl) {
+            margin-top: vwf(15);
+            margin-bottom: vwf(30);
+        }
+
         @include max(md) {
             margin-top: vw2(15);
             margin-bottom: vw2(30);
-            p, span, a, li {
+
+            p,
+            span,
+            a,
+            li {
                 font-size: vw2(16);
             }
+
             li {
                 margin-bottom: vw2(10);
             }
+
             ul {
                 padding: 0 vw2(10) 0 vw2(17);
             }
@@ -110,6 +163,11 @@
         font-weight: 500;
         line-height: 0.97;
         color: $fontBlack;
+
+        @include max(xl) {
+            font-size: vwf(24);
+        }
+
         @include max(md) {
             font-size: vw2(16);
         }
@@ -119,9 +177,10 @@
         @include max(md) {
             width: vw2(50) !important;
             height: vw2(50) !important;
+
             .new-btn__icon {
                 width: vw2(50) !important;
-                height: vw2(50) !important; 
+                height: vw2(50) !important;
             }
         }
 

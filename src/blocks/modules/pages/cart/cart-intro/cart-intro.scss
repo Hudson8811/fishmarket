@@ -2,13 +2,25 @@
     background: $greyBg;
     padding-top: vw(114);
     padding-bottom: vw(101);
+
+    @include max(xl) {
+        padding-top: vwf(114);
+        padding-bottom: vwf(101);
+    }
+
     @include max(md) {
         padding-top: vw2(90);
         padding-bottom: vw2(50);
-    } 
+    }
+
     &__breadcrumbs {
-		padding-left: vw(8);
-	}
+        padding-left: vw(8);
+
+        @include max(xl) {
+            padding-left: vwf(8);
+        }
+    }
+
     &__content {
         max-width: 100%;
         overflow: hidden;
@@ -17,26 +29,40 @@
         align-items: stretch;
         gap: vw(20);
         margin-top: vw(24);
+
+        @include max(xl) {
+            gap: vwf(20);
+            margin-top: vwf(24);
+        }
+
         @include max(md) {
             flex-direction: column;
             gap: vw2(30);
         }
     }
+
     &__body {
         flex-basis: auto;
         flex-shrink: 1;
         flex-grow: 1;
     }
+
     &__header {
         display: flex;
         justify-content: space-between;
         align-items: flex-end;
         gap: vw(50);
+
+        @include max(xl) {
+            gap: vwf(50);
+        }
+
         @include max(md) {
             gap: vw2(20);
             flex-wrap: wrap;
         }
     }
+
     &__title {
         color: $fontBlack;
         flex-basis: auto;
@@ -44,11 +70,17 @@
         flex-grow: 1;
         font-size: vw(45);
         line-height: 1;
+
+        @include max(xl) {
+            font-size: vwf(45);
+        }
+
         @include max(md) {
             max-width: 100%;
             font-size: vw2(32);
-        } 
+        }
     }
+
     &__clear {
         flex-basis: vw(105);
         flex-shrink: 0;
@@ -57,45 +89,76 @@
         font-size: vw(14);
         color: $fontBlack;
         transition: all $tr-time linear;
+
+        @include max(xl) {
+            flex-basis: vwf(105);
+            font-size: vwf(14);
+        }
+
         @include max(md) {
             flex-basis: vw2(105);
             font-size: vw2(14);
             margin-left: auto;
             padding: 0;
         }
+
         .new-btn__icon {
             width: vw(20);
             height: vw(20);
+
+            @include max(xl) {
+                width: vwf(20);
+                height: vwf(20);
+            }
+
             @include max(md) {
                 width: vw2(20);
                 height: vw2(20);
             }
-            svg, svg use {
+
+            svg,
+            svg use {
                 width: vw(20);
                 height: vw(20);
                 fill: $fontBlack !important;
                 stroke: $fontBlack !important;
                 transition: all $tr-time linear;
+
+                @include max(xl) {
+                    width: vwf(20);
+                    height: vwf(20);
+                }
+
                 @include max(md) {
                     width: vw2(20);
                     height: vw2(20);
                 }
             }
-        } 
+        }
+
         &:hover {
             color: $blueHover;
+
             .new-btn__icon {
-                svg, svg use {
+
+                svg,
+                svg use {
                     fill: $blueHover !important;
                     stroke: $blueHover !important;
                 }
             }
         }
     }
+
     &__cards {
         display: flex;
         flex-direction: column;
         margin-top: vw(24);
+
+        @include max(xl) {
+            margin-top: vwf(24);
+        }
+
         @include max(md) {
             margin-top: vw(24);
         }
@@ -108,6 +171,12 @@
         padding-top: vw(69);
         height: 100%;
         overflow: hidden;
+
+        @include max(xl) {
+            flex-basis: vwf(453);
+            padding-top: vwf(69);
+        }
+
         @include max(md) {
             flex-basis: auto;
             padding-top: 0;
@@ -117,75 +186,125 @@
 
     .cart-result {
         background-color: $white;
+
         &__info {
             padding: vw(15) vw(12);
+
+            @include max(xl) {
+                padding: vwf(15) vwf(12);
+            }
+
             @include max(md) {
                 padding: vw2(15) vw2(12);
             }
         }
+
         &__title {
             font-size: vw(18);
             font-weight: 600;
             line-height: 1.222;
             color: $fontBlack;
+
+            @include max(xl) {
+                font-size: vwf(18);
+            }
+
             @include max(md) {
                 font-size: vw2(18);
             }
         }
+
         &__summ {
             margin-top: vw(6);
             font-size: vw(40);
             font-weight: 500;
             line-height: 0.97;
             color: $fontBlack;
+
+            @include max(xl) {
+                margin-top: vwf(6);
+                font-size: vwf(40);
+            }
+
             @include max(md) {
                 margin-top: vw2(6);
                 font-size: vw2(30);
             }
         }
+
         &__vat {
             margin-top: vw(6);
             font-size: vw(14);
             font-weight: 600;
             line-height: 1.222;
             color: $greyText;
+
+            @include max(xl) {
+                margin-top: vwf(6);
+                font-size: vwf(14);
+            }
+
             @include max(md) {
                 margin-top: vw2(6);
                 font-size: vw2(14);
             }
         }
+
         &__offer {
             margin-top: vw(50);
             justify-content: flex-start;
             position: relative;
+
+            @include max(xl) {
+                margin-top: vwf(50);
+            }
+
             @include max(md) {
                 margin-top: vw2(50);
             }
+
             .new-btn__info {
                 margin-right: vw(10);
                 width: vw(17);
                 height: vw(17);
+
+                @include max(xl) {
+                    margin-right: vwf(10);
+                    width: vwf(17);
+                    height: vwf(17);
+                }
+
                 @include max(md) {
                     margin-right: vw2(10);
                     width: vw2(17);
                     height: vw2(17);
                 }
+
                 svg {
                     width: vw(17);
                     height: vw(17);
+
+                    @include max(xl) {
+                        width: vwf(17);
+                        height: vwf(17);
+                    }
+
                     @include max(md) {
                         width: vw2(17);
                         height: vw2(17);
                     }
+
                     use {
-                       color: $white;
-                   }
+                        color: $white;
+                    }
                 }
-                &:hover ~ .new-btn__desc {
+
+                &:hover~.new-btn__desc {
                     z-index: 30;
                     opacity: 1;
                 }
             }
+
             .new-btn__desc {
                 position: absolute;
                 left: 1px;
@@ -203,6 +322,14 @@
                 transition: opacity $tr-time linear;
                 text-transform: none;
                 text-align: left;
+
+                @include max(xl) {
+                    width: vwf(164);
+                    box-shadow: vwf(2) vwf(2) vwf(20) 0 #00000012;
+                    font-size: vwf(9.5);
+                    padding: vwf(11) vwf(13);
+                }
+
                 @include max(md) {
                     width: vw2(164);
                     padding: vw2(11) vw2(13);
@@ -210,9 +337,12 @@
                     font-size: vw2(9.5);
                 }
             }
+
             .new-btn__icon {
                 margin-left: auto;
-                svg, svg use {
+
+                svg,
+                svg use {
                     fill: $white;
                     stroke: $white;
                 }
@@ -224,13 +354,24 @@
     &__banner {
         margin-top: vw(17);
         max-width: 100%;
+
+        @include max(xl) {
+            margin-top: vwf(17);
+        }
+
         @include max(md) {
             margin-top: vw2(20);
         }
+
         img {
             max-width: 100%;
             max-height: vw(600);
             object-fit: contain;
+
+            @include max(xl) {
+                max-height: vwf(600);
+            }
+
             @include max(md) {
                 max-height: 80vh;
             }

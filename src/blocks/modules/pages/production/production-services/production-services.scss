@@ -3,11 +3,12 @@
     background-size: cover;
     background-position: center;
     z-index: 5;
+
     @include max(md) {
         padding: 0;
         height: auto;
         background: none !important;
-    } 
+    }
 
     &__container {
         min-height: 100%;
@@ -17,6 +18,7 @@
         display: flex;
         align-items: flex-start;
         min-height: 100%;
+
         @include max(md) {
             flex-wrap: wrap;
         }
@@ -31,6 +33,14 @@
         margin-bottom: vw(192);
         margin-left: vw(30);
         text-transform: uppercase;
+
+        @include max(xl) {
+            max-width: vwf(400);
+            font-size: vwf(32);
+            margin-bottom: vwf(192);
+            margin-left: vwf(30);
+        }
+
         @include max(md) {
             max-width: 100%;
             font-size: vw2(32);
@@ -50,64 +60,115 @@
         flex-direction: column;
         justify-content: space-between;
         z-index: 5;
+
         @include max(md) {
             flex-basis: 100%;
         }
+
         &--1 {
-            .service-card + .service-card {
+            .service-card+.service-card {
                 margin-top: vw(1000);
+
+                @include max(xl) {
+                    margin-top: vwf(1000);
+                }
+
                 @include max(md) {
                     margin-top: -1px;
                 }
             }
+
             .service-card__text {
                 max-width: vw(411);
+
+                @include max(xl) {
+                    max-width: vwf(441);
+                }
+
                 @include max(md) {
                     max-width: vw2(411);
                 }
             }
         }
+
         &--2 {
             margin-left: -1px;
             margin-right: -1px;
+
             @include max(md) {
                 margin-left: 0;
                 margin-right: 0;
                 margin-top: -1px;
             }
-            .service-card + .service-card {
+
+            .service-card+.service-card {
                 margin-top: vw(975);
+
+                @include max(xl) {
+                    margin-top: vwf(975);
+                }
+
                 @include max(md) {
                     margin-top: -1px;
                 }
             }
+
             .service-card__text {
                 max-width: vw(489);
+
+                @include max(xl) {
+                    max-width: vwf(489);
+                }
+
                 @include max(md) {
                     max-width: vw2(489);
                 }
             }
         }
+
         &--3 {
             padding-top: vw(86);
+
+            @include max(xl) {
+                padding-top: vwf(86);
+            }
+
             @include max(md) {
                 padding-top: 0;
                 margin-top: -1px;
             }
-            .service-card + .service-card {
+
+            .service-card+.service-card {
                 margin-top: vw(1010);
+
+                @include max(xl) {
+                    margin-top: vwf(1010);
+                }
+
                 @include max(md) {
                     margin-top: -1px;
                 }
+
                 .service-card__text {
                     max-width: vw(451);
+
+                    @include max(xl) {
+                        max-width: vwf(451);
+                    }
+
                     @include max(md) {
                         max-width: vw2(451);
                     }
                 }
             }
+
             .service-card__text {
                 max-width: vw(315);
+
+                @include max(xl) {
+                    max-width: vwf(315);
+                }
+
                 @include max(md) {
                     max-width: vw2(315);
                 }
@@ -125,65 +186,109 @@
         background-color: $white;
         border: 1px solid rgba(7, 23, 29, 0.35);
         color: $fontBlack;
+
+        @include max(xl) {
+            min-height: vwf(640);
+            padding: vwf(39) vwf(19);
+        }
+
         @include max(md) {
             min-height: vw2(400);
             padding: vw2(39) vw2(19);
         }
+
         &--black {
             border: 1px solid rgba(255, 255, 255, 0.32);
             background-color: $fontBlack;
             color: $white;
         }
+
         &--blue {
             border: 1px solid rgba(255, 255, 255, 0.32);
             background-color: $blueLight;
             color: $white;
         }
+
         &__text {
             font-size: vw(32);
             font-weight: 500;
             line-height: 1.09em;
             color: inherit;
             text-transform: uppercase;
+
+            @include max(xl) {
+                font-size: vwf(32);
+            }
+
             @include max(md) {
                 font-size: vw2(32);
             }
         }
+
         &:nth-child(1) {
             .service-card__text {
                 margin-bottom: vw(35);
+
+                @include max(xl) {
+                    margin-bottom: vwf(35);
+                }
+
                 @include max(md) {
                     margin-bottom: 0;
                 }
             }
         }
+
         &:nth-child(2) {
             .service-card__text {
                 margin-bottom: vw(140);
+
+                @include max(xl) {
+                    margin-bottom: vwf(140);
+                }
+
                 @include max(md) {
                     margin-bottom: 0;
                 }
             }
         }
+
         &:nth-child(3) {
             .service-card__text {
                 margin-bottom: vw(24);
+
+                @include max(xl) {
+                    margin-bottom: vwf(24);
+                }
+
                 @include max(md) {
                     margin-bottom: 0;
                 }
             }
         }
+
         &:nth-child(4) {
             .service-card__text {
                 margin-bottom: vw(94);
+
+                @include max(xl) {
+                    margin-bottom: vwf(94);
+                }
+
                 @include max(md) {
                     margin-bottom: 0;
                 }
             }
         }
+
         &:nth-child(5) {
             .service-card__text {
                 margin-bottom: vw(35);
+
+                @include max(xl) {
+                    margin-bottom: vwf(35);
+                }
+
                 @include max(md) {
                     margin-bottom: 0;
                 }

@@ -39,6 +39,11 @@
         cursor: pointer;
         z-index: 20;
 
+        @include max(xl) {
+            width: vwf(57);
+            height: vwf(57);
+        }
+
         @include max(md) {
             width: vw2(57);
             height: vw2(57);
@@ -47,6 +52,11 @@
         svg {
             width: vw(20);
             height: vw(20);
+
+            @include max(xl) {
+                width: vwf(20);
+                height: vwf(20);
+            }
 
             @include max(md) {
                 width: vw2(20);
@@ -90,6 +100,11 @@
         height: 100%;
         z-index: 99;
         overflow: auto;
+
+        @include max(xl) {
+            max-width: vwf(665);
+            padding-top: vwf(30);
+        }
 
         @include max(md) {
             max-width: 100%;
