@@ -580,7 +580,6 @@
 
 			@include max(xl) {
 				font-size: vwf(14);
-				padding-left: vwf(24);
 			}
 
 			@include max(md) {
@@ -668,12 +667,6 @@
 				padding-left: vw(26);
 				padding-right: vw(31);
 				border-right: 1px solid $grey;
-
-				@include max(xl) {
-					min-width: vwf(167);
-					padding-left: vwf(26);
-					padding-right: vwf(31);
-				}
 
 				@include max(md) {
 					max-width: vw2(230);
@@ -866,7 +859,8 @@
 
 				&__value {
 					position: absolute;
-					top: vw(25);
+					top: 50%;
+					transform: translateY(-100%);
 					right: vw(20);
 					display: flex;
 					justify-content: center;
@@ -884,7 +878,6 @@
 					text-transform: uppercase;
 
 					@include max(xl) {
-						top: vwf(25);
 						right: vwf(20);
 						width: vwf(23);
 						height: vwf(23);
@@ -1061,11 +1054,6 @@
 				padding-right: vw(31.25);
 				border-left: 1px solid $grey;
 
-				@include max(xl) {
-					padding-left: vwf(31.25);
-					padding-right: vwf(31.25);
-				}
-
 				@include max(md) {
 					display: none;
 				}
@@ -1142,10 +1130,6 @@
 		height: 100%;
 		padding: 0 vw(31.25);
 		border-right: 1px solid $grey;
-
-		@include max(xl) {
-			padding: 0 vwf(31.25);
-		}
 
 	}
 
