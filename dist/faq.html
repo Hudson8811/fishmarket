@@ -24,7 +24,7 @@
     <link rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png">
     <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
     <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
-    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/main.min.css">
   </head>
   <body>
     <div class="section preloader__section section--gray">
@@ -304,7 +304,7 @@
         </div>
       </div>
     </div>
-    <div class="mob-menu__section mob-menu__question__section js-mob-menu__section__question">
+    <div class="mob-menu__section mob-menu__section--new mob-menu__question__section js-mob-menu__section__question">
       <div class="mob-menu--overlay js-mob-menu__question--overlay"></div>
       <div class="mob-menu__question">
         <div class="mob-menu__question__top"> 
@@ -316,44 +316,43 @@
             </svg>
           </div>
         </div>
-        <form class="contacts__form" action=""> 
-          <div class="contacts__form__input-block error">
-            <input class="contacts__form__input js-mask-name text__13" type="text" name="">
-            <div class="contacts__form__input-block__name">	Имя*</div>
-            <div class="contacts__form__input-block__error">Некорректное имя</div>
+        <form class="contacts__form new-form" action="#" novalidate data-validate>
+          <div class="contacts__form__input-block input">
+            <input class="contacts__form__input text__13" type="text" name="" required data-v-name="name" data-is-name="true">
+            <div class="contacts__form__input-block__name">	Имя</div>
+            <div class="contacts__form__input-block__error">Некорректная имя</div>
           </div>
-          <div class="contacts__form__input-block error">
-            <input class="contacts__form__input js-mask-phone" type="tel" name="">
+          <div class="contacts__form__input-block input">
+            <input class="contacts__form__input" type="tel" name="" required data-is-tel="true" data-v-name="phone">
             <div class="contacts__form__input-block__name">Телефон</div>
             <div class="contacts__form__input-block__error">Некорректный телефон</div>
           </div>
-          <div class="contacts__form__input-block error">
-            <input class="contacts__form__input text__13" type="email" name="">
+          <div class="contacts__form__input-block input">                 
+            <input class="contacts__form__input text__13" type="email" name="" required data-v-name="email">
             <div class="contacts__form__input-block__name">Почта</div>
             <div class="contacts__form__input-block__error">Некорректная почта</div>
           </div>
           <div class="contacts__form__input-block">
-            <textarea class="contacts__form__input text__13" name=""></textarea>
-            <div class="contacts__form__input-block__name">Комментарий</div>
-            <div class="contacts__form__input-block__error"></div>
+            <textarea class="contacts__form__input text__13" name="" rows="3"></textarea>
+            <div class="contacts__form__input-block__name">	Комментарий</div>
           </div>
-          <div class="contacts__form__personal-data contacts__form__input-block error"> 
-            <div class="checkbox">
-              <label>
-                <input class="custom-checkbox" type="checkbox" name="personal-data" value="indigo">Согласие на обработку персональных данных
-              </label>
+          <div class="contacts__form__input-block contacts__form__input-block--last input input--checkbox">
+            <label>
+              <input class="input__input" type="checkbox" name="checkbox" data-v-name="checkbox" required>
+              <div class="input__fake"></div>
+              <div class="input__text">Согласие на обработку персональных данных</div>
+            </label>
+            <div class="contacts__form__input-block__error">Обязательно нужно согласиться</div>
+          </div>
+          <button class="btn mob-menu__question__bottom" type="submit">
+            <div class="mob-menu__question__bottom__text">Отправить</div>
+            <div class="mob-menu__question__bottom__row">
+              <svg>
+                <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
+              </svg>
             </div>
-            <div class="contacts__form__input-block__error">обязательно нужно согласиться</div>
-          </div>
+          </button>
         </form>
-        <div class="mob-menu__question__bottom">
-          <div class="mob-menu__question__bottom__text">Отправить</div>
-          <div class="mob-menu__question__bottom__row">
-            <svg>
-              <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
-            </svg>
-          </div>
-        </div>
       </div>
     </div>
     <div class="mob-menu__section mob-menu__section--login mob-menu__question__section js-pop-up__login-register">
@@ -372,7 +371,7 @@
             </div>
             <div class="swiper-wrapper"> 
               <div class="swiper-slide login-area__slide">
-                <form class="contacts__form new-form" action="#" novalidate data-validate>
+                <form class="contacts__form new-form" action="#" novalidate data-validate data-no-thanks>
                   <div class="contacts__form__content">
                     <div class="login-area__title">Авторизация</div>
                     <div class="contacts__form__input-block input">
@@ -408,7 +407,7 @@
                   </div>
                   <div class="swiper-wrapper">
                     <div class="swiper-slide registration-area__slide">
-                      <form class="contacts__form new-form" action="#" novalidate data-validate data-registration-form>
+                      <form class="contacts__form new-form" action="#" novalidate data-validate data-no-thanks data-registration-form>
                         <div class="contacts__form__content">
                           <div class="contacts__form__input-block input">
                             <input class="contacts__form__input text__13" type="text" name="" required data-v-name="inn" data-is-number="true">
@@ -431,7 +430,7 @@
                             <div class="contacts__form__input-block__error">Некорректная имя</div>
                           </div>
                           <div class="contacts__form__input-block input">
-                            <input class="contacts__form__input text__13" type="text" name="" required data-v-name="name" data-is-name="true">
+                            <input class="contacts__form__input text__13" type="text" name="" data-v-name="name" data-is-name="true">
                             <div class="contacts__form__input-block__name">	Отчество контактного лица</div>
                             <div class="contacts__form__input-block__error">Некорректное отчество</div>
                           </div>
@@ -465,6 +464,14 @@
                             </div>
                             <div class="contacts__form__input-block__error">Пароли не совпадают</div>
                           </div>
+                          <div class="contacts__form__input-block input input--checkbox">
+                            <label>
+                              <input class="input__input" type="checkbox" name="checkbox" data-v-name="checkbox" required>
+                              <div class="input__fake"></div>
+                              <div class="input__text">Согласие на обработку персональных данных</div>
+                            </label>
+                            <div class="contacts__form__input-block__error">Обязательно нужно согласиться</div>
+                          </div>
                         </div>
                         <button class="btn mob-menu__question__bottom" type="submit">
                           <div class="mob-menu__question__bottom__text">Зарегистрироваться</div>
@@ -477,10 +484,10 @@
                       </form>
                     </div>
                     <div class="swiper-slide registration-area__slide">
-                      <form class="contacts__form new-form" action="#" novalidate data-validate data-registration-form>
+                      <form class="contacts__form new-form" action="#" novalidate data-validate data-no-thanks data-registration-form>
                         <div class="contacts__form__content">
                           <div class="contacts__form__input-block input">
-                            <input class="contacts__form__input text__13" type="text" name="" required data-v-name="name" data-is-name="true">
+                            <input class="contacts__form__input text__13" type="text" name="" data-v-name="name" data-is-name="true">
                             <div class="contacts__form__input-block__name">	Фамилия</div>
                             <div class="contacts__form__input-block__error">Некорректная фамилия</div>
                           </div>
@@ -490,7 +497,7 @@
                             <div class="contacts__form__input-block__error">Некорректная имя</div>
                           </div>
                           <div class="contacts__form__input-block input">
-                            <input class="contacts__form__input text__13" type="text" name="" required data-v-name="name" data-is-name="true">
+                            <input class="contacts__form__input text__13" type="text" name="" data-v-name="name" data-is-name="true">
                             <div class="contacts__form__input-block__name">	Отчество</div>
                             <div class="contacts__form__input-block__error">Некорректное отчество</div>
                           </div>
@@ -524,6 +531,14 @@
                             </div>
                             <div class="contacts__form__input-block__error">Пароли не совпадают</div>
                           </div>
+                          <div class="contacts__form__input-block input input--checkbox">
+                            <label>
+                              <input class="input__input" type="checkbox" name="checkbox" data-v-name="checkbox" required>
+                              <div class="input__fake"></div>
+                              <div class="input__text">Согласие на обработку персональных данных</div>
+                            </label>
+                            <div class="contacts__form__input-block__error">Обязательно нужно согласиться</div>
+                          </div>
                         </div>
                         <button class="btn mob-menu__question__bottom" type="submit">
                           <div class="mob-menu__question__bottom__text">Зарегистрироваться</div>
@@ -553,7 +568,7 @@
         </div>
       </div>
     </div>
-    <div class="mob-menu__section mob-menu__question__section js-pop-up__command">
+    <div class="mob-menu__section mob-menu__section--new mob-menu__question__section js-pop-up__command">
       <div class="mob-menu--overlay js-pop-up__command--overlay"></div>
       <div class="mob-menu__question">
         <div class="mob-menu__question__top"> 
@@ -565,28 +580,27 @@
             </svg>
           </div>
         </div>
-        <form class="contacts__form" action=""> 
-          <div class="contacts__form__input-block">
-            <input class="contacts__form__input js-mask-name text__13" type="text" name="">
-            <div class="contacts__form__input-block__name">	Имя*</div>
-            <div class="contacts__form__input-block__error">Некорректное имя</div>
+        <form class="contacts__form new-form" action="#" novalidate data-validate>
+          <div class="contacts__form__input-block input">
+            <input class="contacts__form__input text__13" type="text" name="" required data-v-name="name" data-is-name="true">
+            <div class="contacts__form__input-block__name">	Имя</div>
+            <div class="contacts__form__input-block__error">Некорректная имя</div>
           </div>
-          <div class="contacts__form__input-block">
-            <input class="contacts__form__input js-mask-phone" type="tel" name="">
+          <div class="contacts__form__input-block input">
+            <input class="contacts__form__input" type="tel" name="" required data-is-tel="true" data-v-name="phone">
             <div class="contacts__form__input-block__name">Телефон</div>
             <div class="contacts__form__input-block__error">Некорректный телефон</div>
           </div>
-          <div class="contacts__form__input-block">
-            <input class="contacts__form__input text__13" type="email" name="">
+          <div class="contacts__form__input-block input">                 
+            <input class="contacts__form__input text__13" type="email" name="" required data-v-name="email">
             <div class="contacts__form__input-block__name">Почта</div>
-            <div class="contacts__form__input-block__error">Некорректная почта					</div>
+            <div class="contacts__form__input-block__error">Некорректная почта</div>
           </div>
           <div class="contacts__form__input-block">
-            <textarea class="contacts__form__input text__13" name=""></textarea>
-            <div class="contacts__form__input-block__name">Комментарий / Сопроводительное письмо</div>
-            <div class="contacts__form__input-block__error"></div>
+            <textarea class="contacts__form__input text__13" name="" rows="3"></textarea>
+            <div class="contacts__form__input-block__name">	Комментарий</div>
           </div>
-          <div class="contacts__form__input-block">
+          <div class="contacts__form__input-block input">
             <div class="input-file-row">
               <label class="input-file">
                 <input type="file" name="file[]" multiple><span>Выберите файл</span>
@@ -594,47 +608,173 @@
               <div class="input-file-list"></div>
             </div>
           </div>
-          <div class="contacts__form__personal-data contacts__form__input-block error"> 
-            <div class="checkbox">
-              <label>
-                <input class="custom-checkbox" type="checkbox" name="personal-data " value="indigo">Согласие на обработку персональных данных
-              </label>
+          <div class="contacts__form__input-block contacts__form__input-block--last input input--checkbox">
+            <label>
+              <input class="input__input" type="checkbox" name="checkbox" data-v-name="checkbox" required>
+              <div class="input__fake"></div>
+              <div class="input__text">Согласие на обработку персональных данных</div>
+            </label>
+            <div class="contacts__form__input-block__error">Обязательно нужно согласиться</div>
+          </div>
+          <button class="btn mob-menu__question__bottom" type="submit">
+            <div class="mob-menu__question__bottom__text">Отправить</div>
+            <div class="mob-menu__question__bottom__row">
+              <svg>
+                <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
+              </svg>
             </div>
-            <div class="contacts__form__input-block__error">обязательно нужно согласиться</div>
-          </div>
+          </button>
         </form>
-        <div class="mob-menu__question__bottom">
-          <div class="mob-menu__question__bottom__text">Отправить</div>
-          <div class="mob-menu__question__bottom__row">
-            <svg>
-              <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
-            </svg>
-          </div>
-        </div>
       </div>
     </div>
-    <div class="mob-menu__section mob-menu__question__section js-pop-up__thanks">
-      <div class="mob-menu--overlay js-pop-up__thanks--overlay"></div>
+    <div class="mob-menu__section cart-offer-modal mob-menu__question__section js-pop-up__offer">
+      <div class="mob-menu--overlay js-pop-up__offer--overlay"></div>
       <div class="mob-menu__question">
         <div class="mob-menu__question__top"> 
-          <div class="mob-menu__question__top__title">
+          <div class="mob-menu__question__top__title">ЗАПРОСИТЬ ПЕРСОНАЛЬНОЕ ПРЕДЛОЖЕНИЕ
           </div>
-          <div class="mob-menu__question__top__close js-pop-up__thanks--close">
+          <div class="mob-menu__question__top__close js-pop-up__offer--close">
             <svg>
               <use xlink:href="img/sprites/sprite.svg#header_close"></use>
             </svg>
           </div>
         </div>
-        <div class="mob-menu__question__content">
-          <div class="mob-menu__question__answer title__32">спасибо Ваша заявка отправлена
+        <form class="contacts__form new-form" action="#" novalidate data-validate>
+          <div class="contacts__form__content">
+            <div class="contacts__form__input-block input">
+              <input class="contacts__form__input text__13" type="text" name="" required data-v-name="name" data-is-name="true">
+              <div class="contacts__form__input-block__name">	Имя</div>
+              <div class="contacts__form__input-block__error">Некорректная имя</div>
+            </div>
+            <div class="contacts__form__input-block input">
+              <input class="contacts__form__input" type="tel" name="" required data-is-tel="true" data-v-name="phone">
+              <div class="contacts__form__input-block__name">Телефон</div>
+              <div class="contacts__form__input-block__error">Некорректный телефон</div>
+            </div>
+            <div class="contacts__form__input-block input">                 
+              <input class="contacts__form__input text__13" type="email" name="" required data-v-name="email">
+              <div class="contacts__form__input-block__name">Почта</div>
+              <div class="contacts__form__input-block__error">Некорректная почта</div>
+            </div>
+            <div class="questions contacts__form__accordions">
+              <div class="accordion contacts__form__accordion">
+                <div class="accordion__intro">
+                  <p class="title__24 accordion__intro__title">Список товаров</p>
+                  <div class="accordion__intro__img"> 
+                    <svg>
+                      <use xlink:href="img/sprites/sprite.svg#header__menu__item__arrow"></use>
+                    </svg>
+                  </div>
+                </div>
+                <div class="accordion__content">
+                  <div class="products-list">
+                    <ul class="products-list__list">
+                      <li class="products-list__item">
+                        <div class="products-list__name">Товар 1</div>
+                        <div class="products-list__count">5 шт.</div>
+                      </li>
+                      <li class="products-list__item">
+                        <div class="products-list__name">Товар 2</div>
+                        <div class="products-list__count">100 шт.</div>
+                      </li>
+                      <li class="products-list__item">
+                        <div class="products-list__name">Товар 3</div>
+                        <div class="products-list__count">1 шт.</div>
+                      </li>
+                      <li class="products-list__item">
+                        <div class="products-list__name">Товар 4</div>
+                        <div class="products-list__count">14 шт.</div>
+                      </li>
+                    </ul>
+                    <div class="products-list__result">
+                      <div class="products-list__result-title">Итого:</div>
+                      <div class="products-list__result-summ">9 999 999 ₽</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="contacts__form__inner-block">
+              <div class="contacts__form__subtitle">Способ доставки</div>
+              <div class="contacts__form__flex-block" data-group-name="receipt" data-js="formRadioTabs">
+                <div class="contacts__form__input-block input input--checkbox">
+                  <label>
+                    <input class="input__input" type="radio" name="receipt" data-group-item="selfPickup" checked>
+                    <div class="input__fake"></div>
+                    <div class="input__text">Самовывоз</div>
+                  </label>
+                </div>
+                <div class="contacts__form__input-block input input--checkbox">
+                  <label>
+                    <input class="input__input" type="radio" name="receipt" data-group-item="delivery">
+                    <div class="input__fake"></div>
+                    <div class="input__text">Служба доставки SkyFish</div>
+                  </label>
+                </div>
+                <div class="contacts__form__radio-block active" data-group-block="selfPickup">
+                  <div class="contacts__form__input-block input">
+                    <select class="contacts__form__select js-mob-menu__stock__select" name="" preloader="Склад1" data-v-name="select" required>
+                      <option> </option>
+                      <option>Склад1</option>
+                      <option>Склад2</option>
+                      <option>Склад3</option>
+                      <option>Склад4</option>
+                      <option>Склад5</option>
+                      <div class="localities-centers__select-arrow">
+                        <svg>
+                          <use xlink:href="img/sprites/sprite.svg#select_arrow"></use>
+                        </svg>
+                      </div>
+                    </select>
+                    <div class="contacts__form__input-block__error">Необходимо выбрать склад</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="contacts__form__input-block">
+              <textarea class="contacts__form__input text__13" name="" rows="3"></textarea>
+              <div class="contacts__form__input-block__name">	Комментарий</div>
+            </div>
+            <div class="contacts__form__input-block input input--checkbox">
+              <label>
+                <input class="input__input" type="checkbox" name="checkbox" data-v-name="checkbox" required>
+                <div class="input__fake"></div>
+                <div class="input__text">Согласие на обработку персональных данных</div>
+              </label>
+              <div class="contacts__form__input-block__error">Обязательно нужно согласиться</div>
+            </div>
           </div>
-        </div><a class="mob-menu__question__bottom" href="#">
-          <div class="mob-menu__question__bottom__text">На главную</div>
-          <div class="mob-menu__question__bottom__row">
-            <svg>
-              <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
-            </svg>
-          </div></a>
+          <button class="btn mob-menu__question__bottom" type="submit">
+            <div class="mob-menu__question__bottom__text">Отправить</div>
+            <div class="mob-menu__question__bottom__row">
+              <svg>
+                <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
+              </svg>
+            </div>
+          </button>
+        </form>
+      </div>
+      <div class="mob-menu__section mob-menu__section--thanks mob-menu__question__section js-pop-up__thanks">
+        <div class="mob-menu--overlay js-pop-up__thanks--overlay"></div>
+        <div class="mob-menu__question">
+          <div class="mob-menu__question__top"> 
+            <div class="mob-menu__question__top__close js-pop-up__thanks--close">
+              <svg>
+                <use xlink:href="img/sprites/sprite.svg#header_close"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="mob-menu__question__content">
+            <div class="mob-menu__question__answer title__32">спасибо Ваша заявка отправлена
+            </div>
+          </div><a class="mob-menu__question__bottom" href="#">
+            <div class="mob-menu__question__bottom__text">На главную</div>
+            <div class="mob-menu__question__bottom__row">
+              <svg>
+                <use xlink:href="img/sprites/sprite.svg#arrow_btn"></use>
+              </svg>
+            </div></a>
+        </div>
       </div>
     </div>
     <main class="site-main">
@@ -794,6 +934,6 @@
       </div>
     </main>
     <script src="https://api-maps.yandex.ru/2.1/?apikey=d30e0023-10b4-4a5c-a8fd-7e8d66094730&amp;lang=ru_RU"></script>
-    <script src="js/main.js"></script>
+    <script src="js/main.min.js"></script>
   </body>
 </html>

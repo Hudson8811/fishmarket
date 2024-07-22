@@ -138,6 +138,8 @@
         svg {
             width: vw(11);
             height: vw(8);
+            stroke: $white;
+            fill: none;
 
             @include max(xl) {
                 width: vwf(11);

@@ -11,8 +11,8 @@
     }
 
     @include max(md) {
-        height: vw(640);
-        padding: vw(26) vw(30) vw(23) vw(25);
+        height: vw2(640);
+        padding: vw2(26) vw2(30) vw2(23) vw2(25);
     }
 
     &__name {
@@ -124,6 +124,13 @@
         }
     }
 
+    &__btn.new-btn--icon {
+        .new-btn__icon svg use {
+            stroke: $white;
+            fill: none;
+        }
+    }
+
     .contact {
         display: flex;
         align-items: center;
@@ -139,13 +146,17 @@
 
         &__icon {
             height: vw(33);
+            top: vw(3);
+            position: relative;
 
             @include max(xl) {
                 height: vwf(33);
+                top: vwf(2);
             }
 
             @include max(md) {
                 height: vw2(33);
+                top: vw2(3);
             }
 
             svg {

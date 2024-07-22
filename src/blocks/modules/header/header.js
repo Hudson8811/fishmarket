@@ -136,8 +136,6 @@ if( loginButtons.length > 0 && registerButton !== null) {
   });
 }
 
-
-//Pop-up login-register
 //Pop-up Command
 let sectionCommand = document.querySelector(".js-pop-up__command");
 let sectionCommandOverlay = document.querySelector(".js-pop-up__command--overlay");
@@ -163,7 +161,32 @@ if( sectionCommandButtons.length > 0) {
     bodyYesScroll()
   });
 }
-//Pop-up Command
+
+//Pop-up Cart offer
+let sectionOffer = document.querySelector(".js-pop-up__offer");
+let sectionOfferOverlay = document.querySelector(".js-pop-up__offer--overlay");
+let sectionOfferClose = document.querySelector(".js-pop-up__offer--close");
+let sectionOfferButtons = document.querySelectorAll('.js-pop-up__button--offer');
+
+if( sectionOfferButtons.length > 0) {
+
+  sectionOfferButtons.forEach(sectionOfferButton => {
+    sectionOfferButton.addEventListener("click", function (e) {
+      e.preventDefault()
+      e.stopPropagation()
+      sectionOffer.classList.add("active");
+      bodyNoScroll()
+    });
+  })
+  sectionOfferClose.addEventListener("click", function () {
+    sectionOffer.classList.remove("active");
+    bodyYesScroll()
+  });
+  sectionOfferOverlay.addEventListener("click", function () {
+    sectionOffer.classList.remove("active");
+    bodyYesScroll()
+  });
+}
 
 //Pop-up thanks
 let sectionThanks = document.querySelector(".js-pop-up__thanks");
@@ -171,11 +194,7 @@ let sectionThanksOverlay = document.querySelector(".js-pop-up__thanks--overlay")
 let sectionThanksClose = document.querySelector(".js-pop-up__thanks--close");
 let sectionThanksButton = document.querySelector(".js-pop-up__button--thanks");
 
-if(sectionThanksButton !== null) {
-  sectionThanksButton.addEventListener("click", function () {
-    sectionThanks.classList.add("active");
-    bodyNoScroll()
-  });
+if(sectionThanks !== null) {
   sectionThanksClose.addEventListener("click", function () {
     sectionThanks.classList.remove("active");
     bodyYesScroll()

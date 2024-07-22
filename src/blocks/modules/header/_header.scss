@@ -580,7 +580,6 @@
 
 			@include max(xl) {
 				font-size: vwf(14);
-				padding-left: vwf(24);
 			}
 
 			@include max(md) {
@@ -668,12 +667,6 @@
 				padding-left: vw(26);
 				padding-right: vw(31);
 				border-right: 1px solid $grey;
-
-				@include max(xl) {
-					min-width: vwf(167);
-					padding-left: vwf(26);
-					padding-right: vwf(31);
-				}
 
 				@include max(md) {
 					max-width: vw2(230);
@@ -866,7 +859,8 @@
 
 				&__value {
 					position: absolute;
-					top: vw(25);
+					top: 50%;
+					transform: translateY(-100%);
 					right: vw(20);
 					display: flex;
 					justify-content: center;
@@ -884,7 +878,6 @@
 					text-transform: uppercase;
 
 					@include max(xl) {
-						top: vwf(25);
 						right: vwf(20);
 						width: vwf(23);
 						height: vwf(23);
@@ -1061,11 +1054,6 @@
 				padding-right: vw(31.25);
 				border-left: 1px solid $grey;
 
-				@include max(xl) {
-					padding-left: vwf(31.25);
-					padding-right: vwf(31.25);
-				}
-
 				@include max(md) {
 					display: none;
 				}
@@ -1142,10 +1130,6 @@
 		height: 100%;
 		padding: 0 vw(31.25);
 		border-right: 1px solid $grey;
-
-		@include max(xl) {
-			padding: 0 vwf(31.25);
-		}
 
 	}
 
@@ -2371,7 +2355,24 @@
 		padding-top: vw(30);
 		height: 100vh;
 		z-index: 99;
-		overflow: auto;
+		overflow-y: auto;
+		scrollbar-width: thin;
+		scrollbar-color: #99c4d3 rgba(0, 0, 0, 0);
+
+		&::-webkit-scrollbar {
+			height: 2px;
+			width: 2px;
+		}
+
+		&::-webkit-scrollbar-track {
+			background: rgba(0, 0, 0, 0);
+		}
+
+		&::-webkit-scrollbar-thumb {
+			background-color: #99c4d3;
+			border-radius: 10px;
+			border: none;
+		}
 
 		@include max(xl) {
 			max-width: vwf(665);
@@ -2614,16 +2615,190 @@
 	}
 }
 
-/*
-.header--small .mob-menu__section.mob-menu__section--login,
-.header--small .mob-menu__question.mob-menu__question--login {
-	height: calc(100vh - vw(70));
-}*/
-
 .mob-menu__question.mob-menu__question--login {
 	@include max(md) {
 		height: calc(100vh - vw2(70));
 	}
+}
+
+.mob-menu__section.mob-menu__section--thanks {
+	right: 0;
+	left: auto;
+	visibility: hidden;
+	opacity: 0;
+	width: 100vw;
+	transition: opacity $tr-time-fast;
+
+	&.active {
+		visibility: visible;
+		opacity: 1;
+	}
+
+	.mob-menu__question__top {
+		justify-content: flex-end;
+	}
+}
+
+.mob-menu__section.mob-menu__section--new {
+	.new-form {
+		margin-bottom: 0;
+
+		.btn {
+			margin-top: auto;
+			width: 100%;
+			min-width: calc(100% + vw(60));
+			margin-left: vw(-30);
+			margin-right: vw(-30);
+
+			@include max(xl) {
+				min-width: calc(100% + vwf(60));
+				margin-left: vwf(-30);
+				margin-right: vwf(-30);
+			}
+
+			@include max(md) {
+				min-width: calc(100% + vw2(48));
+				margin-left: vw2(-24);
+				margin-right: vw2(-24);
+			}
+		}
+	}
+
+}
+
+.mob-menu__section.cart-offer-modal {
+	.contacts__form {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		padding: 0;
+		margin: 0;
+
+		&__input-block {
+			border-bottom: none;
+
+			textarea {
+				min-height: auto;
+			}
+		}
+
+		&__content {
+			width: 100%;
+			padding: 0 vw(29);
+			flex-basis: auto;
+			flex-grow: 1;
+			flex-shrink: 1;
+			overflow-y: hidden;
+
+			@include max(xl) {
+				padding: 0 vwf(29);
+			}
+
+			@include max(md) {
+				padding: 0 vw2(29);
+			}
+
+			&::-webkit-scrollbar {
+				height: 2px;
+				width: 2px;
+			}
+
+			&::-webkit-scrollbar-track {
+				background: rgba(0, 0, 0, 0);
+			}
+
+			&::-webkit-scrollbar-thumb {
+				background-color: #99c4d3;
+				border-radius: 10px;
+				border: none;
+			}
+		}
+
+		&__title {
+			margin-bottom: vw(30);
+			font-size: vw(32);
+			font-weight: 500;
+			line-height: 1, 06em;
+
+			@include max(xl) {
+				margin-bottom: vwf(30);
+				font-size: vwf(32);
+			}
+
+			@include max(md) {
+				margin-bottom: vw2(30);
+				font-size: vw2(32);
+			}
+		}
+
+		.mob-menu__question__bottom.btn {
+			margin-top: auto;
+			max-width: 100%;
+			flex-grow: 0;
+			flex-shrink: 0;
+		}
+	}
+
+	.products-list {
+		&__list {
+			display: flex;
+			flex-direction: column;
+			gap: vw(8);
+
+			@include max(xl) {
+				gap: vwf(8);
+			}
+
+			@include max(md) {
+				gap: vw2(8);
+			}
+		}
+
+		&__item {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			font-size: vw(18);
+			font-weight: 400;
+
+			@include max(xl) {
+				font-size: vwf(18);
+			}
+
+			@include max(md) {
+				font-size: vw2(18);
+			}
+		}
+
+		&__name {
+			flex: 0 0 50%;
+		}
+
+		&__count {
+			flex: 0 0 50%;
+			text-align: end;
+		}
+
+		&__result {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			font-size: vw(20);
+			font-weight: 700;
+			margin-top: vw(12);
+
+			@include max(xl) {
+				font-size: vwf(20);
+				margin-top: vwf(12);
+			}
+
+			@include max(md) {
+				font-size: vw2(20);
+				margin-top: vw2(12);
+			}
+		}
+	}
+
 }
 
 .login-area {

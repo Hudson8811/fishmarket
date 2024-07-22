@@ -164,6 +164,7 @@ include ../../../blocks/modules/preloader/preloader
 							li.header__menu__list__item 
 								a(href="#") RU	
 
+//- мобильное / боковое меню
 .mob-menu__section.js-mob-menu__section
 	.mob-menu--overlay
 	.mob-menu__wrap
@@ -231,29 +232,7 @@ include ../../../blocks/modules/preloader/preloader
 				.footer__menu__callback 
 					button(type="button").btn.js-button__question заказать звонок
 
-		//-.mob-menu
-			a(href="#").mob-menu__link каталог
-			.mob-menu__list
-				a(href="#").mob-menu__list__item Рыба охлажденная
-				a(href="#").mob-menu__list__item Рыба свежемороженая
-				a(href="#").mob-menu__list__item Филе охлажденное
-				a(href="#").mob-menu__list__item Филе свежемороженое
-				a(href="#").mob-menu__list__item Морепродукты
-				a(href="#").mob-menu__list__item Субпродукты
-			a(href="#").mob-menu__link О компании
-			.mob-menu__list
-				a(href="#").mob-menu__list__item Производство
-				a(href="#").mob-menu__list__item Склад и логистика
-				a(href="#").mob-menu__list__item Мы в социуме
-				a(href="#").mob-menu__list__item Карьера в SkyFish
-				a(href="#").mob-menu__list__item Наша команда
-			a(href="#").mob-menu__link 
-			a(href="#").mob-menu__link Контакты
-			a(href="#" data-js='popUpBtnLogin').mob-menu__link Личный кабинет
-			a(href="#").mob-menu__link Документы
-			a(href="#").mob-menu__link Новости
-			a(href="#").mob-menu__link Вопросы и ответы (FAQ)
-
+//- форма выбора города
 .mob-menu__section.mob-menu__city__section.js-mob-menu__city__section
 	.mob-menu--overlay.js-mob-menu__city__top__overlay
 
@@ -280,7 +259,10 @@ include ../../../blocks/modules/preloader/preloader
 			.mob-menu__city__bottom__row
 				svg
 					use(xlink:href=`img/sprites/sprite.svg#arrow_btn`)
-.mob-menu__section.mob-menu__question__section.js-mob-menu__section__question
+
+
+//- форма обратного звонка
+.mob-menu__section.mob-menu__section--new.mob-menu__question__section.js-mob-menu__section__question
 	.mob-menu--overlay.js-mob-menu__question--overlay
 	.mob-menu__question
 		.mob-menu__question__top 
@@ -289,36 +271,36 @@ include ../../../blocks/modules/preloader/preloader
 			.mob-menu__question__top__close
 				svg
 					use(xlink:href=`img/sprites/sprite.svg#header_close`)
-
-		form(action="").contacts__form  
-			.contacts__form__input-block.error
-				input(type="text" name="").contacts__form__input.js-mask-name.text__13
-				.contacts__form__input-block__name 	Имя*
-				.contacts__form__input-block__error Некорректное имя
-			.contacts__form__input-block.error
-				input(type="tel" name="").contacts__form__input.js-mask-phone
+		form(action="#" novalidate data-validate).contacts__form.new-form
+			.contacts__form__input-block.input
+				input(type="text" name="" required data-v-name='name' data-is-name="true").contacts__form__input.text__13
+				.contacts__form__input-block__name 	Имя
+				.contacts__form__input-block__error Некорректная имя
+			.contacts__form__input-block.input
+				input(type="tel" name="" required data-is-tel="true" data-v-name='phone').contacts__form__input
 				.contacts__form__input-block__name Телефон
 				.contacts__form__input-block__error Некорректный телефон
-			.contacts__form__input-block.error
-				input(type="email" name="").contacts__form__input.text__13
+			.contacts__form__input-block.input                  
+				input(type="email" name="" required data-v-name='email').contacts__form__input.text__13
 				.contacts__form__input-block__name Почта
 				.contacts__form__input-block__error Некорректная почта
-
 			.contacts__form__input-block
-				textarea(name="").contacts__form__input.text__13
-				.contacts__form__input-block__name Комментарий
-				.contacts__form__input-block__error
-			.contacts__form__personal-data.contacts__form__input-block.error 
-				.checkbox
-					label
-						input.custom-checkbox(type="checkbox" name="personal-data" value="indigo")
-						!= "Согласие на обработку персональных данных"
-				.contacts__form__input-block__error обязательно нужно согласиться
-		.mob-menu__question__bottom
-			.mob-menu__question__bottom__text Отправить
-			.mob-menu__question__bottom__row
-				svg
-					use(xlink:href=`img/sprites/sprite.svg#arrow_btn`)
+				textarea(name="" rows="3").contacts__form__input.text__13
+				.contacts__form__input-block__name 	Комментарий
+
+			.contacts__form__input-block.contacts__form__input-block--last.input.input--checkbox
+				label
+					input.input__input(type="checkbox" name="checkbox" data-v-name="checkbox" required)
+					.input__fake
+					.input__text Согласие на обработку персональных данных
+				.contacts__form__input-block__error Обязательно нужно согласиться
+			button.btn.mob-menu__question__bottom(type='submit')
+				.mob-menu__question__bottom__text Отправить
+				.mob-menu__question__bottom__row
+					svg
+						use(xlink:href=`img/sprites/sprite.svg#arrow_btn`)
+
+//- регистрация и авторизация					
 .mob-menu__section.mob-menu__section--login.mob-menu__question__section.js-pop-up__login-register
 	.mob-menu--overlay.js-pop-up__login-register--overlay
 	.mob-menu__question.mob-menu__question--login
@@ -333,7 +315,7 @@ include ../../../blocks/modules/preloader/preloader
 					.login-area__control.login-area__control--next Регистрация
 				.swiper-wrapper 
 					.swiper-slide.login-area__slide
-						form(action="#" novalidate data-validate).contacts__form.new-form
+						form(action="#" novalidate data-validate data-no-thanks).contacts__form.new-form
 							.contacts__form__content
 								.login-area__title Авторизация
 								.contacts__form__input-block.input
@@ -360,7 +342,7 @@ include ../../../blocks/modules/preloader/preloader
 									.registration-area__control(data-js="registrationAreaTo2") Физ. лицо
 							.swiper-wrapper
 								.swiper-slide.registration-area__slide
-									form(action="#" novalidate data-validate data-registration-form).contacts__form.new-form
+									form(action="#" novalidate data-validate data-no-thanks data-registration-form).contacts__form.new-form
 										.contacts__form__content
 											.contacts__form__input-block.input
 												input(type="text" name="" required data-v-name='inn' data-is-number="true").contacts__form__input.text__13
@@ -379,7 +361,7 @@ include ../../../blocks/modules/preloader/preloader
 												.contacts__form__input-block__name 	Имя контактного лица
 												.contacts__form__input-block__error Некорректная имя
 											.contacts__form__input-block.input
-												input(type="text" name="" required data-v-name='name' data-is-name="true").contacts__form__input.text__13
+												input(type="text" name="" data-v-name='name' data-is-name="true").contacts__form__input.text__13
 												.contacts__form__input-block__name 	Отчество контактного лица
 												.contacts__form__input-block__error Некорректное отчество
 											.contacts__form__input-block.input                 
@@ -404,6 +386,12 @@ include ../../../blocks/modules/preloader/preloader
 													svg 
 														use(xlink:href=`img/sprites/sprite.svg#pass_show`)
 												.contacts__form__input-block__error Пароли не совпадают
+											.contacts__form__input-block.input.input--checkbox
+												label
+													input.input__input(type="checkbox" name="checkbox" data-v-name="checkbox" required)
+													.input__fake
+													.input__text Согласие на обработку персональных данных
+												.contacts__form__input-block__error Обязательно нужно согласиться
 
 										button.btn.mob-menu__question__bottom(type='submit')
 											.mob-menu__question__bottom__text Зарегистрироваться
@@ -411,10 +399,10 @@ include ../../../blocks/modules/preloader/preloader
 												svg
 													use(xlink:href=`img/sprites/sprite.svg#arrow_btn`)
 								.swiper-slide.registration-area__slide
-									form(action="#" novalidate data-validate data-registration-form).contacts__form.new-form
+									form(action="#" novalidate data-validate data-no-thanks data-registration-form).contacts__form.new-form
 										.contacts__form__content
 											.contacts__form__input-block.input
-												input(type="text" name="" required data-v-name='name' data-is-name="true").contacts__form__input.text__13
+												input(type="text" name="" data-v-name='name' data-is-name="true").contacts__form__input.text__13
 												.contacts__form__input-block__name 	Фамилия
 												.contacts__form__input-block__error Некорректная фамилия
 											.contacts__form__input-block.input
@@ -422,7 +410,7 @@ include ../../../blocks/modules/preloader/preloader
 												.contacts__form__input-block__name 	Имя
 												.contacts__form__input-block__error Некорректная имя
 											.contacts__form__input-block.input
-												input(type="text" name="" required data-v-name='name' data-is-name="true").contacts__form__input.text__13
+												input(type="text" name="" data-v-name='name' data-is-name="true").contacts__form__input.text__13
 												.contacts__form__input-block__name 	Отчество
 												.contacts__form__input-block__error Некорректное отчество
 											.contacts__form__input-block.input                  
@@ -447,6 +435,12 @@ include ../../../blocks/modules/preloader/preloader
 													svg 
 														use(xlink:href=`img/sprites/sprite.svg#pass_show`)
 												.contacts__form__input-block__error Пароли не совпадают
+											.contacts__form__input-block.input.input--checkbox
+												label
+													input.input__input(type="checkbox" name="checkbox" data-v-name="checkbox" required)
+													.input__fake
+													.input__text Согласие на обработку персональных данных
+												.contacts__form__input-block__error Обязательно нужно согласиться
 										button.btn.mob-menu__question__bottom(type='submit')
 											.mob-menu__question__bottom__text Зарегистрироваться
 											.mob-menu__question__bottom__row
@@ -462,8 +456,8 @@ include ../../../blocks/modules/preloader/preloader
 											.registration-confirm__email(data-js="confirmUserEmail") usermail@mail.ru
 
 
-//- На отдельной странице pop-up
-.mob-menu__section.mob-menu__question__section.js-pop-up__command
+//- форма отклика на вакансию
+.mob-menu__section.mob-menu__section--new.mob-menu__question__section.js-pop-up__command
 	.mob-menu--overlay.js-pop-up__command--overlay
 	.mob-menu__question
 		.mob-menu__question__top 
@@ -473,56 +467,154 @@ include ../../../blocks/modules/preloader/preloader
 				svg
 					use(xlink:href=`img/sprites/sprite.svg#header_close`)
 
-		form(action="").contacts__form  
-			.contacts__form__input-block
-				input(type="text" name="").contacts__form__input.js-mask-name.text__13
-				.contacts__form__input-block__name 	Имя*
-				.contacts__form__input-block__error Некорректное имя
-			.contacts__form__input-block
-				input(type="tel" name="").contacts__form__input.js-mask-phone
+		form(action="#" novalidate data-validate).contacts__form.new-form
+			.contacts__form__input-block.input
+				input(type="text" name="" required data-v-name='name' data-is-name="true").contacts__form__input.text__13
+				.contacts__form__input-block__name 	Имя
+				.contacts__form__input-block__error Некорректная имя
+			.contacts__form__input-block.input
+				input(type="tel" name="" required data-is-tel="true" data-v-name='phone').contacts__form__input
 				.contacts__form__input-block__name Телефон
 				.contacts__form__input-block__error Некорректный телефон
-			.contacts__form__input-block
-				input(type="email" name="").contacts__form__input.text__13
+			.contacts__form__input-block.input                  
+				input(type="email" name="" required data-v-name='email').contacts__form__input.text__13
 				.contacts__form__input-block__name Почта
-				.contacts__form__input-block__error Некорректная почта					
+				.contacts__form__input-block__error Некорректная почта
+			.contacts__form__input-block
+				textarea(name="" rows="3").contacts__form__input.text__13
+				.contacts__form__input-block__name 	Комментарий
 
-			.contacts__form__input-block
-				textarea(name="").contacts__form__input.text__13
-				.contacts__form__input-block__name Комментарий / Сопроводительное письмо
-				.contacts__form__input-block__error
-			.contacts__form__input-block
+			.contacts__form__input-block.input
 				.input-file-row
 					label.input-file
 						input(type="file" name="file[]" multiple)
 						span Выберите файл
 					.input-file-list
-			.contacts__form__personal-data.contacts__form__input-block.error 
-				.checkbox
-					label
-						input.custom-checkbox(type="checkbox" name="personal-data " value="indigo")
-						!= "Согласие на обработку персональных данных"
-				.contacts__form__input-block__error обязательно нужно согласиться
-		.mob-menu__question__bottom
-			.mob-menu__question__bottom__text Отправить
-			.mob-menu__question__bottom__row
-				svg
-					use(xlink:href=`img/sprites/sprite.svg#arrow_btn`)
-.mob-menu__section.mob-menu__question__section.js-pop-up__thanks
-	.mob-menu--overlay.js-pop-up__thanks--overlay
+			.contacts__form__input-block.contacts__form__input-block--last.input.input--checkbox
+				label
+					input.input__input(type="checkbox" name="checkbox" data-v-name="checkbox" required)
+					.input__fake
+					.input__text Согласие на обработку персональных данных
+				.contacts__form__input-block__error Обязательно нужно согласиться
+
+			button.btn.mob-menu__question__bottom(type='submit')
+				.mob-menu__question__bottom__text Отправить
+				.mob-menu__question__bottom__row
+					svg
+						use(xlink:href=`img/sprites/sprite.svg#arrow_btn`)
+
+.mob-menu__section.cart-offer-modal.mob-menu__question__section.js-pop-up__offer
+	.mob-menu--overlay.js-pop-up__offer--overlay
 	.mob-menu__question
 		.mob-menu__question__top 
 			.mob-menu__question__top__title
-				!=""
-			.mob-menu__question__top__close.js-pop-up__thanks--close
+				!="ЗАПРОСИТЬ ПЕРСОНАЛЬНОЕ ПРЕДЛОЖЕНИЕ"
+			.mob-menu__question__top__close.js-pop-up__offer--close
 				svg
 					use(xlink:href=`img/sprites/sprite.svg#header_close`)
 
-		.mob-menu__question__content
-			.mob-menu__question__answer.title__32
-				!="спасибо Ваша заявка отправлена"
-		a(href="#").mob-menu__question__bottom
-			.mob-menu__question__bottom__text На главную
-			.mob-menu__question__bottom__row
-				svg
-					use(xlink:href=`img/sprites/sprite.svg#arrow_btn`)
+		form(action="#" novalidate data-validate).contacts__form.new-form
+			.contacts__form__content
+				.contacts__form__input-block.input
+					input(type="text" name="" required data-v-name='name' data-is-name="true").contacts__form__input.text__13
+					.contacts__form__input-block__name 	Имя
+					.contacts__form__input-block__error Некорректная имя
+				.contacts__form__input-block.input
+					input(type="tel" name="" required data-is-tel="true" data-v-name='phone').contacts__form__input
+					.contacts__form__input-block__name Телефон
+					.contacts__form__input-block__error Некорректный телефон
+				.contacts__form__input-block.input                  
+					input(type="email" name="" required data-v-name='email').contacts__form__input.text__13
+					.contacts__form__input-block__name Почта
+					.contacts__form__input-block__error Некорректная почта
+				.questions.contacts__form__accordions
+					.accordion.contacts__form__accordion
+						.accordion__intro
+							p.title__24.accordion__intro__title Список товаров
+							.accordion__intro__img 
+								svg
+									use(xlink:href=`img/sprites/sprite.svg#header__menu__item__arrow`)
+						.accordion__content
+							.products-list
+								ul.products-list__list
+									li.products-list__item
+										.products-list__name Товар 1
+										.products-list__count 5 шт.
+									li.products-list__item
+										.products-list__name Товар 2
+										.products-list__count 100 шт.
+									li.products-list__item
+										.products-list__name Товар 3
+										.products-list__count 1 шт.
+									li.products-list__item
+										.products-list__name Товар 4
+										.products-list__count 14 шт.
+								.products-list__result
+									.products-list__result-title Итого:
+									.products-list__result-summ 9 999 999 ₽
+
+				.contacts__form__inner-block
+					.contacts__form__subtitle Способ доставки
+					.contacts__form__flex-block(data-group-name="receipt" data-js="formRadioTabs")
+
+						.contacts__form__input-block.input.input--checkbox
+							label
+								input.input__input(type="radio" name="receipt" data-group-item="selfPickup" checked)
+								.input__fake
+								.input__text!= "Самовывоз"
+
+						.contacts__form__input-block.input.input--checkbox
+							label
+								input.input__input(type="radio" name="receipt" data-group-item="delivery")
+								.input__fake
+								.input__text!= "Служба доставки SkyFish"                          
+
+						.contacts__form__radio-block.active(data-group-block="selfPickup")
+							.contacts__form__input-block.input
+								select.contacts__form__select.js-mob-menu__stock__select(name="" preloader="Склад1" data-v-name='select' required)
+									option 
+									option Склад1
+									option Склад2
+									option Склад3
+									option Склад4
+									option Склад5
+									.localities-centers__select-arrow
+										svg
+											use(xlink:href=`img/sprites/sprite.svg#select_arrow`)
+								.contacts__form__input-block__error Необходимо выбрать склад
+
+
+				.contacts__form__input-block
+					textarea(name="" rows="3").contacts__form__input.text__13
+					.contacts__form__input-block__name 	Комментарий
+
+				.contacts__form__input-block.input.input--checkbox
+					label
+						input.input__input(type="checkbox" name="checkbox" data-v-name="checkbox" required)
+						.input__fake
+						.input__text Согласие на обработку персональных данных
+					.contacts__form__input-block__error Обязательно нужно согласиться
+
+			button.btn.mob-menu__question__bottom(type='submit')
+				.mob-menu__question__bottom__text Отправить
+				.mob-menu__question__bottom__row
+					svg
+						use(xlink:href=`img/sprites/sprite.svg#arrow_btn`)
+
+	//- окно благодарности
+	.mob-menu__section.mob-menu__section--thanks.mob-menu__question__section.js-pop-up__thanks
+		.mob-menu--overlay.js-pop-up__thanks--overlay
+		.mob-menu__question
+			.mob-menu__question__top 
+				.mob-menu__question__top__close.js-pop-up__thanks--close
+					svg
+						use(xlink:href=`img/sprites/sprite.svg#header_close`)
+
+			.mob-menu__question__content
+				.mob-menu__question__answer.title__32
+					!="спасибо Ваша заявка отправлена"
+			a(href="#").mob-menu__question__bottom
+				.mob-menu__question__bottom__text На главную
+				.mob-menu__question__bottom__row
+					svg
+						use(xlink:href=`img/sprites/sprite.svg#arrow_btn`)

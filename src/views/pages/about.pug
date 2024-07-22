@@ -2,128 +2,127 @@ extends ../layouts/default
 include ../helpers/mixins
 
 block variables
-	- const title = "About"
+    - const title = "About"
 
 block content
-	include ../../blocks/modules/pages/about/about-divided/about-divided
-	include ../../blocks/components/new-btn/new-btn.pug
-	include ../../blocks/components/input/input.pug
-	include ../../blocks/modules/pages/about/team-modal/ap-team-modal.pug
+    include ../../blocks/modules/pages/about/about-divided/about-divided
+    include ../../blocks/components/new-btn/new-btn.pug
+    include ../../blocks/components/input/input.pug
+    include ../../blocks/modules/pages/about/team-modal/ap-team-modal.pug
 
-	.scroll-page(data-animation="aboutpage")
-		include ../../blocks/modules/pages/about/about-intro/about-intro
-		include ../../blocks/modules/pages/about/about-history/about-history
-		include ../../blocks/modules/pages/about/about-advantages/about-advantages
-		+ap-divided({
-			classes: 'ap-divided--production js-production-section',
-			position: 'right',
-			image: 'img/ap_production.png',
-			title: 'Наше производство',
-			text: 'Компания запустила собственное производство по&nbsp;переработке и&nbsp;фасовке рыбы в&nbsp;2007 году. Производственная мощность 350 тонн готовой продукции в&nbsp;месяц.',
-			btns: [
-				{        
-					text: 'Подробнее',
-					cMode: 'blue',
-					vMode: 'big'
-				},
-				{        
-					text: 'Посмотреть фото',
-					cMode: 'black',
-					link: 'img/ap_production.png',
-					vMode: 'big'
-				}
-			],
-		})
-		+ap-divided({
-			classes: 'js-logistics-section',
-			position: 'left',
-			image: 'img/ap_logistics.png',
-			title: 'Наша логистика',
-			text: 'Наши складские комплексы расположены в&nbsp;Москве, Калужской и Калининградской областях. Склады оснащены необходимыми морозильными камерами и&nbsp;погрузочно-разгрузочной техникой.',
-			btns: [
-				{
-					text: 'Подробнее',
-					cMode: 'blue',
-					vMode: 'big'
-				},
-				{        
-					text: 'Посмотреть фото',
-					link: 'img/ap_logistics.png',
-					cMode: 'white',
-					vMode: 'big'
-				}
-			],
-		})
-		+ap-divided({
-			classes: 'ap-divided--society js-society-section',
-			position: 'right',
-			image: 'img/ap_society.png',
-			title: 'Мы в социуме',
-			text: 'В нашей компании принято за основу - мы живем в&nbsp;социуме, ведь работаем с&nbsp;людьми. Есть мероприятия, в которых мы принимали непосредственное участие.',
-			btns: [
-				{        
-					text: 'Подробнее',
-					cMode: 'black',
-					vMode: 'big'
-				}
-			],
-		})
-		include ../../blocks/modules/pages/about/about-career/about-career
-		include ../../blocks/modules/pages/about/about-team/about-team
-		include ../../blocks/modules/pages/about/about-offer/about-offer
+    .scroll-page(data-animation="aboutpage")
+        include ../../blocks/modules/pages/about/about-intro/about-intro
+        include ../../blocks/modules/pages/about/about-history/about-history
+        include ../../blocks/modules/pages/about/about-advantages/about-advantages
+        +ap-divided({
+            classes: 'ap-divided--production js-production-section',
+            position: 'right',
+            image: 'img/ap_production.png',
+            title: 'Наше производство',
+            text: 'Компания запустила собственное производство по&nbsp;переработке и&nbsp;фасовке рыбы в&nbsp;2007 году. Производственная мощность 350 тонн готовой продукции в&nbsp;месяц.',
+            btns: [
+                {        
+                    text: 'Подробнее',
+                    cMode: 'blue',
+                    vMode: 'big'
+                },
+                {        
+                    text: 'Посмотреть фото',
+                    cMode: 'black',
+                    link: 'img/ap_production.png',
+                    vMode: 'big'
+                }
+            ],
+        })
+        +ap-divided({
+            classes: 'js-logistics-section',
+            position: 'left',
+            image: 'img/ap_logistics.png',
+            title: 'Наша логистика',
+            text: 'Наши складские комплексы расположены в&nbsp;Москве, Калужской и Калининградской областях. Склады оснащены необходимыми морозильными камерами и&nbsp;погрузочно-разгрузочной техникой.',
+            btns: [
+                {
+                    text: 'Подробнее',
+                    cMode: 'blue',
+                    vMode: 'big'
+                },
+                {        
+                    text: 'Посмотреть фото',
+                    link: 'img/ap_logistics.png',
+                    cMode: 'white',
+                    vMode: 'big'
+                }
+            ],
+        })
+        +ap-divided({
+            classes: 'ap-divided--society js-society-section',
+            position: 'right',
+            image: 'img/ap_society.png',
+            title: 'Мы в социуме',
+            text: 'В нашей компании принято за основу - мы живем в&nbsp;социуме, ведь работаем с&nbsp;людьми. Есть мероприятия, в которых мы принимали непосредственное участие.',
+            btns: [
+                {        
+                    text: 'Подробнее',
+                    cMode: 'black',
+                    vMode: 'big'
+                }
+            ],
+        })
+        include ../../blocks/modules/pages/about/about-career/about-career
+        include ../../blocks/modules/pages/about/about-team/about-team
+        include ../../blocks/modules/pages/about/about-offer/about-offer
 
-		include ../../blocks/modules/footer/footer
+        include ../../blocks/modules/footer/footer
 
-	//-modals
-	+teamModal({
-		name: 'Соловьев Владислав',
-		id: 'SolovyovVladislav',
-		photo: 'img/solovyov_vladislav.jpg',
-	})
-	+teamModal({
-		name: 'Косырева Наталья',
-		id: 'KosirevaNat',
-		photo: 'img/kosireva_nat.jpg',
-	})
-	+teamModal({
-		name: 'Кашецкий Юрий',
-		id: 'KasheczkijYurij',
-		photo: 'img/kasheczkij_yurij.jpg',
-	})
-	+teamModal({
-		name: 'Гришин Дмитрий',
-		id: 'GrishinDmitrij',
-		photo: 'img/grishin_dmitrij.jpg',
-	})
-	+teamModal({
-		name: 'Алтухов Сергей',
-		id: 'AltuxovSergey',
-		photo: 'img/francz_edvard.jpg',
-	})
-	+teamModal({
-		name: 'Лондарова Марина',
-		id: 'LondarovaMarina',
-		photo: 'img/francz_edvard.jpg',
-	})
-	+teamModal({
-		name: 'Хохлов Дмитрий',
-		id: 'XoxlovDmitrij',	
-		photo: 'img/xoxlov_dmitrij.jpg',
-	})
-	+teamModal({
-		name: 'Муравьев Павел',
-		id: 'MuravyovPavel',
-		photo: 'img/francz_edvard.jpg',
-	})
-	+teamModal({
-		name: 'Чугунов Владимир',
-		id: 'ChugunovVladimir',
-		photo: 'img/chugunov_vladimir.jpg',
-	})
-	+teamModal({
-		name: 'Бочарова Наталья',
-		id: 'BocharovaNatalya',
-		photo: 'img/bocharova_natalya.jpg',
-	})
-	include ../../blocks/modules/pages/about/history-modal/ap-history-modal
-	include ../../blocks/modules/pages/about/callback-modal/ap-callback-modal
+    //-modals
+    +teamModal({
+        name: 'Соловьев Владислав',
+        id: 'SolovyovVladislav',
+        photo: 'img/solovyov_vladislav.jpg',
+    })
+    +teamModal({
+        name: 'Косырева Наталья',
+        id: 'KosirevaNat',
+        photo: 'img/kosireva_nat.jpg',
+    })
+    +teamModal({
+        name: 'Кашецкий Юрий',
+        id: 'KasheczkijYurij',
+        photo: 'img/kasheczkij_yurij.jpg',
+    })
+    +teamModal({
+        name: 'Гришин Дмитрий',
+        id: 'GrishinDmitrij',
+        photo: 'img/grishin_dmitrij.jpg',
+    })
+    +teamModal({
+        name: 'Алтухов Сергей',
+        id: 'AltuxovSergey',
+        photo: 'img/francz_edvard.jpg',
+    })
+    +teamModal({
+        name: 'Лондарова Марина',
+        id: 'LondarovaMarina',
+        photo: 'img/francz_edvard.jpg',
+    })
+    +teamModal({
+        name: 'Хохлов Дмитрий',
+        id: 'XoxlovDmitrij',	
+        photo: 'img/xoxlov_dmitrij.jpg',
+    })
+    +teamModal({
+        name: 'Муравьев Павел',
+        id: 'MuravyovPavel',
+        photo: 'img/francz_edvard.jpg',
+    })
+    +teamModal({
+        name: 'Чугунов Владимир',
+        id: 'ChugunovVladimir',
+        photo: 'img/chugunov_vladimir.jpg',
+    })
+    +teamModal({
+        name: 'Бочарова Наталья',
+        id: 'BocharovaNatalya',
+        photo: 'img/bocharova_natalya.jpg',
+    })
+    include ../../blocks/modules/pages/about/history-modal/ap-history-modal

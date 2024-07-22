@@ -13,6 +13,11 @@ function validation() {
 
         inputMasksInit(form);
 
+        const emailInput = form.querySelector('input[type="email"]')
+        const phoneInput = form.querySelector('input[type="tel"]')
+
+        let hasContacts = emailInput && phoneInput ? true : false
+
         form.addEventListener('submit', event => {
             event.preventDefault()
 
@@ -41,6 +46,7 @@ function validation() {
                 const passField = form.querySelector("[data-v-name='pass']");
 
                 if (field.hasAttribute('required') && !field.hasAttribute('disabled')) {
+
                     if (valueField !== '') {
                         switch (name) {
                             case 'name':
@@ -56,15 +62,29 @@ function validation() {
                             case 'email':
                                 if (valueField.match(dataReqexp.email)) {
                                     error(input).remove()
+                                    if(hasContacts) {
+                                        phoneInput.removeAttribute('required')
+                                        phoneInput.closest('.input').classList.remove('error')
+                                    }
                                 } else {
                                     error(input).set()
+                                    if(hasContacts) {
+                                        phoneInput.setAttribute('required', '')
+                                    }
                                 }
                                 break
                             case 'phone':
                                 if (valueField.length === 18) {
                                     error(input).remove()
+                                    if(hasContacts) {
+                                        emailInput.removeAttribute('required')
+                                        emailInput.closest('.input').classList.remove('error')
+                                    }
                                 } else {
                                     error(input).set()
+                                    if(hasContacts) {
+                                        emailInput.setAttribute('required', '')
+                                    }
                                 }
                                 break
                             case 'kpp':
@@ -104,12 +124,8 @@ function validation() {
                                 break
                             case 'select':
                                 if (valueField.length > 0) {
-                                    console.log('селект не пустой')
-                                    console.log(valueField)
                                     error(input).remove()
                                 } else {
-                                    console.log('селект пустой')
-                                    console.log(valueField)
                                     error(input).set()
                                 }
                                 break
@@ -123,6 +139,7 @@ function validation() {
                     } else {
                         error(input).set()
                     }
+
                 }
             }
 
@@ -136,11 +153,13 @@ function validation() {
                 inputFields.forEach(input => {
                     input.addEventListener('click', () => {
                         if (form.getAttribute('data-validate')) {
-                            const field = input.querySelector('input')
+                            const field = input.querySelector('input') ? input.querySelector('input') : input.querySelector('select')
 
-                            field.addEventListener('input', () =>
-                                validateInput(input),
-                            )
+                            if(field) {
+                                field.addEventListener('input', () =>
+                                    validateInput(input),
+                                )
+                            }
                             checkFields()
                         }
                     })
@@ -158,10 +177,21 @@ function validation() {
 
                 if (errors === 0) {
                     const formData = new FormData(form)
-                    console.log(formData)
-                    formReset(form)
 
-                    if(form.hasAttribute('data-registration-form')) {
+                    if(!form.hasAttribute('data-no-thanks')) {
+                        const thanksModal = document.querySelector(".js-pop-up__thanks")
+                        thanksModal.classList.add('active')
+
+                        const parentModal = form.closest('.mob-menu__question__section')
+
+                        if(parentModal) {
+                            setTimeout(() => {
+                                parentModal.classList.remove('active')
+                            }, 200)
+                        }
+
+                   
+                    } else if(form.hasAttribute('data-registration-form')) {
                         let slider = form.closest("[data-js='registrationAreaSlider']");
                         let sliderTop = slider.querySelector("[data-js='registrationAreaTop']");
                         let userEmail = form.querySelector("[data-v-name='email']").value;
@@ -171,7 +201,16 @@ function validation() {
                         slider.swiper.slideTo(2);
                         sliderTop.classList.remove("active");
                         
+                    } else {
+                        const currentModal = form.closest('.mob-menu__section')
+                        if(currentModal) {
+                            currentModal.classList.remove('active')
+                            bodyYesScroll()
+                        }
                     }
+
+                    console.log(formData)
+                    formReset(form)
 
                 } else {
                     console.log("Есть ошибки в форме")
