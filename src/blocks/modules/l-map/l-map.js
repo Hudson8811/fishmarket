@@ -38,7 +38,7 @@ function lMapInit() {
         placemarks.forEach((placemark) => {
             let myPlacemark = new ymaps.Placemark(placemark.coords,{},{
                 iconLayout: 'default#image',
-                iconImageHref: indow.imageFolderPath+'img/svg/predstvo_act.svg',
+                iconImageHref: window.imageFolderPath+'img/svg/predstvo_act.svg',
                 iconImageSize: [30, 36],
                 iconImageOffset: [-15, -18]
             });
@@ -62,14 +62,13 @@ function lMapInit() {
                     })
 
                     targetBtn.classList.add("active");
-                    lMapEx.setCenter(targetCityCoords, 13, {
-                        duration: 1000
-                    })
 
                     addressesBlocksArr.forEach(item => {
                         item.classList.remove("active")
                         if(item.dataset.city == targetCity) {
-                            item.classList.add("active")
+                            item.classList.add("active");
+
+                            $(item).find('[data-js="lMapAddress"]').first().trigger('click');
                         }
                     })
                 })

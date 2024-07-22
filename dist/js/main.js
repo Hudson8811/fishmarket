@@ -143,7 +143,7 @@ function MapInit() {
 
 					myPlacemark2 = new ymaps.Placemark([x, y],{},{
 							iconLayout: 'default#image',
-							iconImageHref: indow.imageFolderPath+'img/svg/predstvo_act.svg',
+							iconImageHref: window.imageFolderPath+'img/svg/predstvo_act.svg',
 							iconImageSize: [26, 26],
 							iconImageOffset: [-13, -13]
 					});
@@ -1346,7 +1346,7 @@ function lMapInit() {
         placemarks.forEach((placemark) => {
             let myPlacemark = new ymaps.Placemark(placemark.coords,{},{
                 iconLayout: 'default#image',
-                iconImageHref: indow.imageFolderPath+'img/svg/predstvo_act.svg',
+                iconImageHref: window.imageFolderPath+'img/svg/predstvo_act.svg',
                 iconImageSize: [30, 36],
                 iconImageOffset: [-15, -18]
             });
@@ -1370,14 +1370,13 @@ function lMapInit() {
                     })
 
                     targetBtn.classList.add("active");
-                    lMapEx.setCenter(targetCityCoords, 13, {
-                        duration: 1000
-                    })
 
                     addressesBlocksArr.forEach(item => {
                         item.classList.remove("active")
                         if(item.dataset.city == targetCity) {
-                            item.classList.add("active")
+                            item.classList.add("active");
+
+                            $(item).find('[data-js="lMapAddress"]').first().trigger('click');
                         }
                     })
                 })
@@ -1460,15 +1459,19 @@ let dwidth = $(window).width();
 
 $(document).ready(function (){
 	initScrollAnimation();
-
 	//анимация появления шапки
-	if ($('.section__header').length > 0){
+	if ($('.section__header').length > 0 && $('.preloader__section').length > 0) {
 		gsap.to(".section__header", {
 			duration: 1,
 			top: 0,
 			delay: 2,
 			ease: "none",
 		});
+	}
+	else{
+		if(document.location.href.includes('localhost')){
+			$('.section__header').css('top','0px');
+		}
 	}
 });
 
@@ -1595,7 +1598,7 @@ function startAnimation(){
 
 					//устанавливаем высоту секции с карточками
 					let columnsHeightArr = [
-						aboutEmployeesSection.querySelector(".js-team__column--1").offsetHeight, 
+						aboutEmployeesSection.querySelector(".js-team__column--1").offsetHeight,
 						aboutEmployeesSection.querySelector(".js-team__column--2").offsetHeight,
 						aboutEmployeesSection.querySelector(".js-team__column--3").offsetHeight
 					]
@@ -1612,11 +1615,11 @@ function startAnimation(){
 					});
 				} else {
 
-					gsap.fromTo(".js-about-intro__title", 
+					gsap.fromTo(".js-about-intro__title",
 					{
 						y: "60%",
 						opacity: 0
-				
+
 					},
 					{
 						duration: 0.5,
@@ -1625,11 +1628,11 @@ function startAnimation(){
 						delay: 4,
 						ease: "none",
 					});
-					gsap.fromTo(".js-about-intro__text", 
+					gsap.fromTo(".js-about-intro__text",
 					{
 						y: "30%",
 						opacity: 0
-				
+
 					},
 					{
 						duration: 0.3,
@@ -1637,13 +1640,13 @@ function startAnimation(){
 						y: '0',
 						opacity: 1,
 						ease: "none",
-				
+
 					});
-					gsap.fromTo(".js-about-history__text", 
+					gsap.fromTo(".js-about-history__text",
 					{
 						y: "30%",
 						opacity: 0
-				
+
 					},
 					{
 						duration: 0.3,
@@ -1651,7 +1654,7 @@ function startAnimation(){
 						y: '0',
 						opacity: 1,
 						ease: "none",
-				
+
 					});
 
 					//сбрасываем высоту секции
@@ -1706,15 +1709,15 @@ function startAnimation(){
 							}
 						})
 					}
-					
+
 					//устанавливаем высоту секции с карточками
 					let columnsHeightArr = [
-						teamEmployeesSection.querySelector(".js-team-employees__column--1").offsetHeight, 
+						teamEmployeesSection.querySelector(".js-team-employees__column--1").offsetHeight,
 						teamEmployeesSection.querySelector(".js-team-employees__column--2").offsetHeight,
 						teamEmployeesSection.querySelector(".js-team-employees__column--3").offsetHeight
 					]
 					teamEmployeesSection.style.height = (Math.max(...columnsHeightArr) * 0.90) + 'px'
-					
+
 					//запускаем анимацию
 					teamPageAnimationDesktop();
 					scrollTriggerObject = ScrollTrigger.create({
@@ -1735,7 +1738,7 @@ function startAnimation(){
 					});
 
 				} else {
-					
+
 					//сбрасываем высоту секции
 					teamEmployeesSection.style.height = 'auto';
 
@@ -2166,7 +2169,7 @@ function productionPageAnimationDesktop() {
 //фунция содержащая анимацию для границы о компании - десктоп
 function aboutPageAnimationDesktop(){
 	//анимация первого экрана не привязана к таймлайну
-	gsap.fromTo(".js-about-intro__title", 
+	gsap.fromTo(".js-about-intro__title",
 	{
 		y: "60%",
 		opacity: 0
@@ -2179,7 +2182,7 @@ function aboutPageAnimationDesktop(){
 		delay: 5.5,
 		ease: "none",
 	});
-	gsap.fromTo(".js-about-intro__text", 
+	gsap.fromTo(".js-about-intro__text",
 	{
 		y: "30%",
 		opacity: 0
@@ -2198,9 +2201,9 @@ function aboutPageAnimationDesktop(){
 	//Убираем класс статики с футера
 	$('.js-footer__animation').removeClass('footer__animation--personally');
 
-	let windowHeight = window.innerHeight; 
+	let windowHeight = window.innerHeight;
 	let careerHeight = $('.js-career-section').innerHeight();
-	let teamHeight = $('.js-team-section').innerHeight();	
+	let teamHeight = $('.js-team-section').innerHeight();
 	let offerHeight = $('.js-offer-section').innerHeight();
 	let careerOffsetHeight = careerHeight - windowHeight;
 
@@ -2265,7 +2268,7 @@ function aboutPageAnimationDesktop(){
 		duration: 0,
 		ease: "none",
 	}, "<");
-	
+
 	mainTimeline.fromTo(".js-production-section", {
 		y: "100vh",
 	}, {
@@ -2300,7 +2303,7 @@ function aboutPageAnimationDesktop(){
 		ease: "none",
 	}, ">+=0.5");
 	animationSelectors.push(".js-society-section");
-	
+
 	mainTimeline.fromTo(".js-career-section", {
 		y: `${careerHeight}px`,
 	}, {
@@ -2309,7 +2312,7 @@ function aboutPageAnimationDesktop(){
 		ease: "none",
 	}, ">+=0.1");
 	animationSelectors.push(".js-career-section");
-	
+
 	mainTimeline.fromTo(".js-team-section", {
 		y: windowHeight,
 	}, {
