@@ -99,7 +99,9 @@
         padding-top: vw(30);
         height: 100%;
         z-index: 99;
-        overflow: auto;
+        overflow-y: auto;
+        scrollbar-width: thin;
+        scrollbar-color: #99c4d3 rgba(0, 0, 0, 0);
 
         @include max(xl) {
             max-width: vwf(665);

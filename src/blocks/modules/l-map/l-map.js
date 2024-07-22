@@ -38,7 +38,7 @@ function lMapInit() {
         placemarks.forEach((placemark) => {
             let myPlacemark = new ymaps.Placemark(placemark.coords,{},{
                 iconLayout: 'default#image',
-                iconImageHref: indow.imageFolderPath+'img/svg/predstvo_act.svg',
+                iconImageHref: window.imageFolderPath+'img/svg/predstvo_act.svg',
                 iconImageSize: [30, 36],
                 iconImageOffset: [-15, -18]
             });

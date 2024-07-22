@@ -20,13 +20,13 @@ include ../../../../components/slider-photo/slider-photo.pug
                     .product-intro__price 9 999 999 ₽
                     include ../../../../components/amount-input/amount-input.pug
                 +new-btn({
-                    classes: 'product-intro__offer',
+                    classes: 'product-intro__offer js-pop-up__button--offer',
                     vMode: 'small',
                     text: 'Получить предложение',
                     icon: 'true',
                     iconName: 'arrow_btn',
                     cMode: 'white',
-                })(data-modal="cartOffer")
+                })
                 +new-btn({
                     classes: 'product-intro__cart',
                     vMode: 'small',

@@ -161,8 +161,8 @@ section.team-employees(data-js='teamEmployeesSection')
                         },
                         {
                             type: 'email',
-                            value: 'Skylogistic@fishmarket.ru',
-                            link: 'mailto:Skylogistic@fishmarket.ru',
+                            value: 'skylogistic@fishmarket.ru',
+                            link: 'mailto:skylogistic@fishmarket.ru',
                             iconName: 'envelope'
                         }
                     ],			
@@ -192,7 +192,7 @@ section.team-employees(data-js='teamEmployeesSection')
                 })
         .team-employees__column.team-employees__column--3.js-team-employees__column--3(data-js="teamEmployeesSlider")
             .swiper-wrapper
-                +employee-card({
+                //-+employee-card({
                     classes: 'swiper-slide team-employees__card',
                     bgColor: "blue",
                     name: 'Муравьев Павел',
@@ -213,7 +213,7 @@ section.team-employees(data-js='teamEmployeesSection')
                             iconName: 'envelope'
                         }
                     ],
-                })
+                //-})
                 +employee-card({
                     classes: 'swiper-slide team-employees__card',
                     bgColor: "blue",
@@ -255,7 +255,7 @@ section.team-employees(data-js='teamEmployeesSection')
                     classes: 'swiper-slide team-employees__card',
                     bgColor: "blue",
                     name: 'Бочарова Наталья',
-                    position: ' Руководитель отдела кадров',
+                    position: 'Руководитель отдела кадров',
                     hasBtn: true,
                     modalId: 'BocharovaNatalya',
                     photo: 'img/bocharova_natalya.jpg',

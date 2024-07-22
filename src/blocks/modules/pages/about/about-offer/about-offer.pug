@@ -4,10 +4,10 @@ section.ap-offer.js-offer-section
     .container.ap-offer__container
         +title('h2', 'Стать частью компании SkyFish', 'ap-offer__title')
         +new-btn({ 
-            classes: 'ap-offer__btn',       
+            classes: 'ap-offer__btn js-pop-up__button--command',       
             text: 'Откликнуться',
             cMode: 'white',
             vMode: 'big'
-        })(data-modal="callbackModal")
+        })
         .ap-offer__wrapper
             .ap-offer__text Мы регулярно расширяем состав компании

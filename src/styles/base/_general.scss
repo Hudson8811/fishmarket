@@ -3150,7 +3150,8 @@ button {
         &__error {
             position: absolute;
             left: 0;
-            bottom: vw(-20);
+            top: 100%;
+            bottom: auto;
             display: none;
             width: 100%;
             color: #FF858B;
@@ -3160,12 +3161,10 @@ button {
             line-height: normal;
 
             @include max(xl) {
-                bottom: vwf(-20);
                 font-size: vwf(14);
             }
 
             @include max(md) {
-                bottom: vw2(-20);
                 font-size: vw2(14);
             }
         }
@@ -3241,6 +3240,18 @@ button {
             @include max(md) {
                 top: calc(100% + vw2(9));
                 font-size: vw2(14);
+            }
+        }
+
+        &--last {
+            margin-bottom: vw(40);
+
+            @include max(xl) {
+                margin-bottom: vwf(40);
+            }
+
+            @include max(md) {
+                margin-bottom: vw2(34);
             }
         }
 
@@ -3347,6 +3358,117 @@ button {
             top: 0;
             opacity: 0.2;
             transition: all $tr-time;
+        }
+    }
+
+    .input--checkbox {
+        padding-top: vw(20);
+
+        @include max(xl) {
+            padding-top: vwf(20);
+        }
+
+        @include max(md) {
+            padding-top: vw2(20);
+        }
+
+        label {
+            display: flex;
+            gap: vw(12);
+            align-items: flex-start;
+            cursor: pointer;
+
+            @include max(xl) {
+                gap: vwf(12);
+            }
+
+            @include max(md) {
+                gap: vw2(12);
+            }
+        }
+
+        .input__input {
+            position: absolute;
+            left: 0;
+            right: 0;
+            width: 0;
+            height: 0;
+            opacity: 0;
+            z-index: -10;
+        }
+
+        .input__fake {
+            flex-basis: vw(28);
+            flex-shrink: 0;
+            flex-grow: 0;
+            position: relative;
+            width: vw(28);
+            height: vw(28);
+            border: 1px solid rgba(0, 0, 0, 0.2);
+            border-radius: vw(4);
+
+            @include max(xl) {
+                flex-basis: vwf(28);
+                width: vwf(28);
+                height: vwf(28);
+                border-radius: vwf(4);
+            }
+
+            @include max(md) {
+                flex-basis: vw2(28);
+                width: vw2(28);
+                height: vw2(28);
+                border-radius: vw2(4);
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                width: vw(16);
+                height: vw(16);
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                transition: all $tr-time-fast linear;
+                background-color: $blueLight;
+                border-radius: vw(2);
+                opacity: 0;
+
+                @include max(xl) {
+                    width: vwf(16);
+                    height: vwf(16);
+                    border-radius: vwf(2);
+                }
+
+                @include max(md) {
+                    width: vw2(16);
+                    height: vw2(16);
+                    border-radius: vw2(2);
+                }
+            }
+
+            &:hover {
+                border-color: $blueLight;
+            }
+        }
+
+        .input__input:checked+.input__fake::after {
+            opacity: 1;
+        }
+
+        .input__text {
+            font-size: vw(18);
+            font-weight: 400;
+            line-height: 1.399;
+            color: $fontBlack;
+
+            @include max(xl) {
+                font-size: vwf(18);
+            }
+
+            @include max(md) {
+                font-size: vw2(18);
+            }
         }
     }
 
@@ -3818,6 +3940,10 @@ button {
             padding-right: vw2(18);
             padding-top: vw2(20);
         }
+    }
+
+    &--disabled {
+        pointer-events: none;
     }
 }
 

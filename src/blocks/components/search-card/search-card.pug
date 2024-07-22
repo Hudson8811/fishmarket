@@ -62,14 +62,14 @@ mixin search-card(props = defaultSearchCardProps)
 				!= "ФИЛЕ ОЧИЩЕННОЕ (без кожи и плавника), уп. 1 кг (кор. 21 кг) от 640 ₽<br>ТУШКА н/к, 2 блока * 11 кг (мешок 22 кг) от 260 ₽"
 		.search-card__btns
 			+new-btn({
-				classes: 'search-card__offer',
+				classes: 'search-card__offer js-pop-up__button--offer',
 				tag: 'button',
 				vMode: 'small',
 				text: 'Получить предложение',
 				icon: 'true',
 				iconName: 'arrow_btn',
 				cMode: 'black',
-			})(data-modal="cartOffer")
+			})
 			+new-btn({
 				classes: 'search-card__cart',
 				tag: 'button',

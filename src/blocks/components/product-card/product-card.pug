@@ -27,14 +27,14 @@ mixin product-card(props = defaultProductCardProps)
             +product-table("product-card__info")
         .product-card__btns
             +new-btn({
-                classes: 'product-card__offer',
+                classes: 'product-card__offer js-pop-up__button--offer',
                 tag: 'button',
                 vMode: 'small',
                 text: 'Получить предложение',
                 icon: 'true',
                 iconName: 'arrow_btn',
                 cMode: 'black',
-            })(data-modal="cartOffer")
+            })
             +new-btn({
                 classes: 'product-card__cart',
                 tag: 'button',

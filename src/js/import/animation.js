@@ -624,16 +624,16 @@ function teamPageAnimationDesktop() {
 
 	//анимация квадратов
 	innerTimeline.fromTo(".js-team-employees__column--1", {
-		y: "-10%",
+		y: "15%",
 	}, {
-		y: "-30%",
+		y: "-20%",
 		duration: 1,
 		ease: "none",
 	}, "<");
 	animationSelectors.push(".js-team-employees__column--1");
 
 	innerTimeline.fromTo(".js-team-employees__column--2", {
-		y: "13%",
+		y: "25%",
 	}, {
 		y: "-30%",
 		duration: 1,
@@ -644,7 +644,7 @@ function teamPageAnimationDesktop() {
 	innerTimeline.fromTo(".js-team-employees__column--3", {
 		y: "10%",
 	}, {
-		y: "-25%",
+		y: "-30%",
 		duration: 1,
 		ease: "none",
 	}, "<");
