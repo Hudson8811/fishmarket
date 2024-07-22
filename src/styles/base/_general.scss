@@ -4217,7 +4217,8 @@ button {
 
     }
 
-    &-list-item {
+    &-list-item,
+    &-list-error {
         display: flex;
         justify-content: flex-start;
         align-items: stretch;
@@ -4237,6 +4238,10 @@ button {
             font-size: vw2(18);
             margin-bottom: vw2(10);
         }
+    }
+
+    &-list-error {
+        color: $red;
     }
 
     &-list-name {

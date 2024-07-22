@@ -275,7 +275,7 @@ include ../../../blocks/modules/preloader/preloader
 			.contacts__form__input-block.input
 				input(type="text" name="" required data-v-name='name' data-is-name="true").contacts__form__input.text__13
 				.contacts__form__input-block__name 	Имя
-				.contacts__form__input-block__error Некорректная имя
+				.contacts__form__input-block__error Некорректное имя
 			.contacts__form__input-block.input
 				input(type="tel" name="" required data-is-tel="true" data-v-name='phone').contacts__form__input
 				.contacts__form__input-block__name Телефон
@@ -359,7 +359,7 @@ include ../../../blocks/modules/preloader/preloader
 											.contacts__form__input-block.input
 												input(type="text" name="" required data-v-name='name' data-is-name="true").contacts__form__input.text__13
 												.contacts__form__input-block__name 	Имя контактного лица
-												.contacts__form__input-block__error Некорректная имя
+												.contacts__form__input-block__error Некорректное имя
 											.contacts__form__input-block.input
 												input(type="text" name="" data-v-name='name' data-is-name="true").contacts__form__input.text__13
 												.contacts__form__input-block__name 	Отчество контактного лица
@@ -408,7 +408,7 @@ include ../../../blocks/modules/preloader/preloader
 											.contacts__form__input-block.input
 												input(type="text" name="" required data-v-name='name' data-is-name="true").contacts__form__input.text__13
 												.contacts__form__input-block__name 	Имя
-												.contacts__form__input-block__error Некорректная имя
+												.contacts__form__input-block__error Некорректное имя
 											.contacts__form__input-block.input
 												input(type="text" name="" data-v-name='name' data-is-name="true").contacts__form__input.text__13
 												.contacts__form__input-block__name 	Отчество
@@ -468,10 +468,11 @@ include ../../../blocks/modules/preloader/preloader
 					use(xlink:href=`img/sprites/sprite.svg#header_close`)
 
 		form(action="#" novalidate data-validate).contacts__form.new-form
+			.contacts__form__text Отклик на вакансию: Менеджер по продажам 
 			.contacts__form__input-block.input
 				input(type="text" name="" required data-v-name='name' data-is-name="true").contacts__form__input.text__13
 				.contacts__form__input-block__name 	Имя
-				.contacts__form__input-block__error Некорректная имя
+				.contacts__form__input-block__error Некорректное имя
 			.contacts__form__input-block.input
 				input(type="tel" name="" required data-is-tel="true" data-v-name='phone').contacts__form__input
 				.contacts__form__input-block__name Телефон
@@ -487,8 +488,8 @@ include ../../../blocks/modules/preloader/preloader
 			.contacts__form__input-block.input
 				.input-file-row
 					label.input-file
-						input(type="file" name="file[]" multiple)
-						span Выберите файл
+						input(type="file" name="file[]" accept=".pdf,.docx,.jpg")
+						span Прикрепить файл (.pdf / .docx / .jpg до 5 мб)
 					.input-file-list
 			.contacts__form__input-block.contacts__form__input-block--last.input.input--checkbox
 				label
@@ -518,7 +519,7 @@ include ../../../blocks/modules/preloader/preloader
 				.contacts__form__input-block.input
 					input(type="text" name="" required data-v-name='name' data-is-name="true").contacts__form__input.text__13
 					.contacts__form__input-block__name 	Имя
-					.contacts__form__input-block__error Некорректная имя
+					.contacts__form__input-block__error Некорректное имя
 				.contacts__form__input-block.input
 					input(type="tel" name="" required data-is-tel="true" data-v-name='phone').contacts__form__input
 					.contacts__form__input-block__name Телефон
