@@ -1202,7 +1202,7 @@
 		@include max(md) {
 			right: vw2(-90);
 			height: vw2(70);
-			width: 100vw;
+			width: calc(100vw - vw2(57));
 		}
 
 		.search--overlay {
@@ -1388,12 +1388,7 @@
 		display: none;
 		justify-content: flex-end;
 		align-items: center;
-		padding-right: vw(22);
 		z-index: 99;
-
-		@include max(xl) {
-			padding-right: vwf(22);
-		}
 
 		.header__other__item {
 			height: 100%;

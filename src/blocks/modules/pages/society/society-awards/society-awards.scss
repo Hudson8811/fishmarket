@@ -12,11 +12,11 @@
     }
 
     &__title {
-        max-width: vw(380);
+        max-width: vw(550);
         font-size: vw(60);
 
         @include max(xl) {
-            max-width: vwf(380);
+            max-width: vwf(550);
             font-size: vwf(60);
         }
 
