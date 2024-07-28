@@ -163,6 +163,9 @@ if( sectionCommandButtons.length > 0) {
 }
 
 //Pop-up Cart offer
+/*
+//забрал в additional
+
 let sectionOffer = document.querySelector(".js-pop-up__offer");
 let sectionOfferOverlay = document.querySelector(".js-pop-up__offer--overlay");
 let sectionOfferClose = document.querySelector(".js-pop-up__offer--close");
@@ -187,6 +190,8 @@ if( sectionOfferButtons.length > 0) {
     bodyYesScroll()
   });
 }
+*/
+
 
 //Pop-up thanks
 let sectionThanks = document.querySelector(".js-pop-up__thanks");

@@ -54,6 +54,12 @@ function MapInit() {
 
 //map
 
+
+function initPhoneMasks(){
+	$('.js-mask-phone:not(.js-mask-phone--init)').addClass('js-mask-phone--init').mask('+7(000)000-00-00');
+}
+
+
 document.addEventListener("DOMContentLoaded", () => {
 
 	$('.js-start__slider').each(function(){
@@ -93,7 +99,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		allowClear: true
 	});
 
-	$('.contacts__form__input').on('input', function (e) {
+	$(document).on('input', '.contacts__form__input', function (e) {
 		let state = e.target.value;
 		if (state.length > 0) {
 			$(this).addClass( "value" );
@@ -102,11 +108,11 @@ document.addEventListener("DOMContentLoaded", () => {
 		}
 	});
 
-	$('.js-mask-phone').mask('+7(000)000-00-00');
-	$('.js-mask-name').mask("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", {'translation': {
+	initPhoneMasks();
+	/*$('.js-mask-name').mask("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", {'translation': {
 			A: {pattern: /[а-яА-ЯёЁa-zA-Z\s]/, },
 		}
-	});
+	});*/
 
 
 	const accordions = document.querySelectorAll(".accordion");

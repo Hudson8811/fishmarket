@@ -1,5 +1,5 @@
-
-
+//Забираю в additional.js чтобы удобней допиливать по месту
+/*
 validation();
 showPassInit();
 
@@ -25,7 +25,7 @@ function validation() {
 
             const dataReqexp = {
                 email: /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/,
-                personName: /^[а-яёА-ЯЁ]+$/u,
+                personName: /^[а-яёА-ЯЁ]+$/u
             }
 
             function error(el) {
@@ -53,6 +53,15 @@ function validation() {
                                 if (
                                     valueField.length >= 2 &&
                                     valueField.match(dataReqexp.personName)
+                                ) {
+                                    error(input).remove()
+                                } else {
+                                    error(input).set()
+                                }
+                                break
+                            case 'nonEmptyText':
+                                if (
+                                    valueField.trim().length >= 2
                                 ) {
                                     error(input).remove()
                                 } else {
@@ -190,7 +199,7 @@ function validation() {
                             }, 200)
                         }
 
-                   
+
                     } else if(form.hasAttribute('data-registration-form')) {
                         let slider = form.closest("[data-js='registrationAreaSlider']");
                         let sliderTop = slider.querySelector("[data-js='registrationAreaTop']");
@@ -200,7 +209,7 @@ function validation() {
                         userEmailText.innerHTML = userEmail;
                         slider.swiper.slideTo(2);
                         sliderTop.classList.remove("active");
-                        
+
                     } else {
                         const currentModal = form.closest('.mob-menu__section')
                         if(currentModal) {
@@ -305,7 +314,7 @@ function showPassInit() {
 
 function formReset(form) {
     form.reset();
-    
+
     const selects = form.querySelectorAll('select');
     const radios = form.querySelectorAll('input:checked');
 
@@ -316,4 +325,4 @@ function formReset(form) {
     radios.forEach(radio => {
         $(radio).trigger('change');
     })
-}
+}*/
