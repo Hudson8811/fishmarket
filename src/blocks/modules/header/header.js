@@ -298,7 +298,7 @@ overlayBg.addEventListener("mousemove", function () {
 //input file
 var dt = new DataTransfer();
 
-$('.input-file input[type=file]').on('change', function(){
+$(document).on('change', '.input-file input[type=file]', function(){
 	let $files_list = $(this).closest('.input-file').next();
 	$files_list.empty();
 
