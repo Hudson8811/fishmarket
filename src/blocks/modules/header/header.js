@@ -259,6 +259,8 @@ mobMenuCityOk.addEventListener("click", function () {
     bodyYesScroll()
   }
 });
+/*
+//утащил в additional.js с допилами
 buttonQuestions.forEach(buttonQuestion => {
   buttonQuestion.addEventListener("click", function (e) {
 
@@ -268,7 +270,7 @@ buttonQuestions.forEach(buttonQuestion => {
     mobMenuQuestion.classList.add("active");
     bodyNoScroll()
   });
-})
+})*/
 mobMenuQuestionClose.addEventListener("click", function () {
   mobMenuQuestion.classList.remove("active");
   bodyYesScroll()
