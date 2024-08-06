@@ -87,6 +87,13 @@ function initScrollAnimation(){
 			}
 			dwidth = wwidth;
 		});
+
+		document.querySelectorAll('img[loading="lazy"]').forEach(function(el){
+			el.addEventListener('load',function(){
+				resetAnimation();
+				startAnimation();
+			});
+		});
 	}
 }
 
