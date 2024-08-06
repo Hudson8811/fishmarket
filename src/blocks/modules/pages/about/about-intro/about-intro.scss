@@ -1,6 +1,8 @@
 .ap-main-screen {
     background-size: 100% 100%;
     position: relative;
+    z-index: 80;
+    background-color: #fff;
 
     &::after {
         content: "";

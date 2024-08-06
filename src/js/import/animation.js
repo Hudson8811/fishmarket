@@ -171,6 +171,11 @@ function startAnimation(){
 					aboutEmployeesSection.style.height = (Math.max(...columnsHeightArr) * 0.90) + 'px'
 
 					aboutPageAnimationDesktop();
+					let aboutMainScreen = document.querySelector('.ap-main-screen.js-main-screen')
+					if(aboutMainScreen) {
+						aboutMainScreen.style.zIndex = 10
+					}
+
 					scrollTriggerObject = ScrollTrigger.create({
 						trigger: ".scroll-page",
 						pin: true,
