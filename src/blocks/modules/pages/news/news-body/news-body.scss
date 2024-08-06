@@ -37,14 +37,14 @@
         }
 
         ul {
-            margin: vw(88) 0 vw(73);
+            margin: vw(20) 0;
 
             @include max(xl) {
-                margin: vwf(88) 0 vwf(73);
+                margin: vwf(20) 0;
             }
 
             @include max(md) {
-                margin: vw2(30) 0 vw2(25);
+                margin: vw2(20) 0;
             }
         }
     }

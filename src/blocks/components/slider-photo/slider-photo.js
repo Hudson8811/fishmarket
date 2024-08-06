@@ -9,11 +9,6 @@ function sliderPhotoInit() {
     let sliderPhotoThumbsEx = new Swiper(sliderPhotoThumbs, {
         spaceBetween: 11,
         slidesPerView: 7,
-        loop: true,
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-        },
         breakpoints: {
             993: {
                 spaceBetween: 18,
@@ -24,6 +19,10 @@ function sliderPhotoInit() {
 
     let sliderPhotoSliderEx = new Swiper(sliderPhotoSlider, {
         slidesPerView: 1,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
         thumbs: {
             swiper: sliderPhotoThumbsEx,
         },

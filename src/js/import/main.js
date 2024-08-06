@@ -129,9 +129,6 @@ document.addEventListener("DOMContentLoaded", () => {
 		}
 		content.style.maxHeight = content.scrollHeight + "px";
 		ScrollTrigger.refresh();
-		/*$('html, body').stop().animate({ scrollTop:$(accordion).offset().top - accordionActiveHeaight - headerHeight}, 300, function() {
-			ScrollTrigger.refresh();
-		});*/
 	};
 	const closeAccordion = (accordion) => {
 		const content = accordion.querySelector(".accordion__content");
@@ -244,12 +241,35 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function bodyNoScroll() {
 	let bodyBodymotionless = document.querySelector('body')
+	let header = document.querySelector('.section__header')
 	bodyBodymotionless.classList.add("Bodymotionless")
+	bodyBodymotionless.style.paddingRight = getScrollbarWidth() + "px"
+	header.style.paddingRight = getScrollbarWidth() + "px"
+
 
 }
 function bodyYesScroll() {
 	let bodyBodymotionless = document.querySelector('body')
+	let header = document.querySelector('.section__header')
 	bodyBodymotionless.classList.remove("Bodymotionless")
+	bodyBodymotionless.style.paddingRight = 0
+	header.style.paddingRight = 0
+}
+
+function getScrollbarWidth() {
+	let div = document.createElement('div');
+
+	div.style.overflowY = 'scroll';
+	div.style.width = '50px';
+	div.style.height = '0';
+
+	document.body.append(div);
+	let scrollWidth = div.offsetWidth - div.clientWidth;
+	div.remove();
+
+	console.log(scrollWidth)
+
+	return scrollWidth
 }
 
 function getUserCityCookie() {
