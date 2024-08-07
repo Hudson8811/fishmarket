@@ -88,12 +88,12 @@ function initScrollAnimation(){
 			dwidth = wwidth;
 		});
 
-		document.querySelectorAll('img[loading="lazy"]').forEach(function(el){
+		/*document.querySelectorAll('img[loading="lazy"]').forEach(function(el){
 			el.addEventListener('load',function(){
 				resetAnimation();
 				startAnimation();
 			});
-		});
+		});*/
 	}
 }
 
@@ -802,7 +802,7 @@ function aboutPageAnimationDesktop(){
 		y: "0",
 		duration: 0,
 		ease: "none",
-	}, "<+30%");
+	}, "<+0.5");
 	animationSelectors.push(".js-advantages-section");
 
 	mainTimeline.fromTo(".js-advantages__title", {
@@ -935,7 +935,7 @@ function aboutPageAnimationDesktop(){
 		y: 0,
 		duration: 0,
 		ease: "none",
-	}, ">-=0.64");
+	}, ">-=1");
 	animationSelectors.push(".js-footer__animation");
 
 	mainTimeline.fromTo(".footer__menu", {
@@ -944,7 +944,7 @@ function aboutPageAnimationDesktop(){
 		right: "0%",
 		duration: 1,
 		ease: "none",
-	}, ">-=0.6");
+	}, ">");
 	animationSelectors.push(".footer__menu");
 
 	mainTimeline.fromTo(".footer__title", {
