@@ -87,13 +87,6 @@ function initScrollAnimation(){
 			}
 			dwidth = wwidth;
 		});
-
-		/*document.querySelectorAll('img[loading="lazy"]').forEach(function(el){
-			el.addEventListener('load',function(){
-				resetAnimation();
-				startAnimation();
-			});
-		});*/
 	}
 }
 
@@ -237,6 +230,10 @@ function startAnimation(){
 							if(!aboutEmployeesSlider.swiper) {
 								let aboutEmployeesSliderEx = new Swiper(aboutEmployeesSlider, {
 									slidesPerView: 'auto',
+									navigation: {
+										nextEl: '.team-control.swiper-button-next',
+										prevEl: '.team-control.swiper-button-prev',
+									},
 								});
 							}
 						})
@@ -319,6 +316,10 @@ function startAnimation(){
 							if(!teamEmployeesSlider.swiper) {
 								let teamEmployeesSliderEx = new Swiper(teamEmployeesSlider, {
 									slidesPerView: 'auto',
+									navigation: {
+										nextEl: '.team-control.swiper-button-next',
+										prevEl: '.team-control.swiper-button-prev',
+									},
 								});
 							}
 						})

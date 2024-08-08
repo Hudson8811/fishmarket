@@ -66,6 +66,7 @@
         justify-content: flex-end;
 
         @include max(md) {
+            position: relative;
             flex-basis: auto;
             width: 100%;
             display: block;
@@ -117,5 +118,57 @@
                 border: 1px solid rgba(255, 255, 255, 0.32)
             }
         }
+    }
+}
+
+.team-control {
+    position: absolute;
+    display: none;
+    width: vw2(50);
+    height: vw2(50);
+    background-color: $blueLight;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    transition: $tr-time;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 1;
+
+    &.swiper-button-disabled {
+        opacity: 0;
+    }
+
+    @include max(md) {
+        display: flex;
+    }
+
+    &::after {
+        content: none;
+    }
+
+    &:hover {
+        background-color: $blueHover;
+    }
+
+    svg {
+        width: vw2(11);
+        height: vw2(8);
+
+        use {
+            stroke: $white;
+            fill: none;
+            width: vw2(11);
+            height: vw2(8);
+        }
+    }
+
+    &.swiper-button-prev {
+        transform: translateY(-50%) rotate(180deg);
+        left: vw2(-15);
+    }
+
+    &.swiper-button-next {
+        right: vw2(15);
     }
 }

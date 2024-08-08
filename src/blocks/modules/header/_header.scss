@@ -1107,7 +1107,22 @@
 
 	&__nav {
 		@include max(md) {
-			display: none;
+			order: -1;
+			flex-grow: 1;
+
+			.header-nav__list {
+				width: 100%;
+
+				.header-nav__item {
+					display: none;
+				}
+
+				.header-nav__item:first-child {
+					display: flex;
+					width: 100%;
+				}
+			}
+
 		}
 	}
 
@@ -1130,6 +1145,15 @@
 		height: 100%;
 		padding: 0 vw(31.25);
 		border-right: 1px solid $grey;
+
+		@include max(md) {
+			padding: 0 vw2(17);
+			border-left: 1px solid rgba(7, 23, 29, 0.2);
+
+			a {
+				font-size: vw2(14);
+			}
+		}
 
 	}
 

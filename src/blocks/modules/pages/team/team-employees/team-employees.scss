@@ -64,6 +64,7 @@
         z-index: 5;
 
         @include max(md) {
+            position: relative;
             flex-basis: auto;
             width: 100%;
             display: block;
