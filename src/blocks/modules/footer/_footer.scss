@@ -126,12 +126,14 @@
 		z-index: 900;
 		z-index: 90;
 		overflow-y: auto;
-		scrollbar-width: thin;
-		scrollbar-color: #99c4d3 rgba(0, 0, 0, 0);
+		//scrollbar-width: thin;
+		//scrollbar-color: #99c4d3 rgba(0, 0, 0, 0);
 
 		&::-webkit-scrollbar {
-			height: 2px;
-			width: 2px;
+			appearance: none;
+			-webkit-appearance: none;
+			height: 4px;
+			width: 4px;
 		}
 
 		&::-webkit-scrollbar-track {

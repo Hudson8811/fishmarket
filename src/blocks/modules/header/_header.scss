@@ -97,6 +97,10 @@
 .header--small .section__header {
 	@include min(md) {
 		transition: height 0.3s;
+		height: vwf(70);
+	}
+
+	@include min(xl) {
 		height: vw(70);
 	}
 
