@@ -21,6 +21,8 @@ if(!document.location.href.includes('localhost')){
 @@include("./libs/jq-ui-touch-punch.min.js")
 @@include("./libs/select2.min.js")
 @@include("./libs/vanillaTextMask.js")
+@@include("./libs/popper.min.js")
+@@include("./libs/tippy.umd.min.js")
 //my files
 @@include("./import/main.js")
 @@include("./import/components.js")
