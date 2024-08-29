@@ -45,7 +45,7 @@ function amountInput() {
 
 		});
 
-		'blur keyup change input'.split(' ').forEach(function(evt){
+		'blur change'/*keyup input - сказано выкинуть*/.split(' ').forEach(function(evt){
 			item.querySelector('input').addEventListener(evt, function(e) {
 				let targetInput = e.target;
 				let currentValue = targetInput.value;
@@ -84,4 +84,3 @@ function getCntRatio(el_with_cnt_ratio){
 	}
 	return cnt_ratio;
 }
-
