@@ -477,4 +477,40 @@
 			}
 		}
 	}
+
+	&__developer {
+		margin-top: 8px;
+		padding-top: 8px;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+		gap: 4px;
+		border-top: 1px solid rgba(255, 255, 255, 0.2);
+
+		@include max(md) {
+			align-items: center;
+		}
+
+		.text__12 {
+			color: rgba(255, 255, 255, 0.2);
+		}
+
+		a {
+			display: block;
+			line-height: 0;
+			padding: 0;
+			margin: 0;
+		}
+
+		svg {
+			width: 100px;
+			height: 21px;
+			color: rgba(255, 255, 255, 0.2);
+
+			@include max(md) {
+				width: vw2(190);
+				height: vw2(40);
+			}
+		}
+	}
 }
